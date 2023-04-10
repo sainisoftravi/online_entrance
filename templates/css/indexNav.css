@@ -1,21 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
 *{
     margin: 0;
     padding: 0;
 }
 
+body{
+    background-color: #B4E4FF;
+}
+
 .nav-bar{
     width: 100%;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: linear-gradient(217deg, rgba(10, 87, 131, 0.8), rgba(255,0,0,0) 70.71%),
-                linear-gradient(127deg, rgba(115, 102, 226, 0.8), rgba(0,255,0,0) 70.71%),
-                linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
 }
 
-.logo img{
-    height: 100px;
+#title{
+    font-size: 50px;
+    padding-left: 30px;
+    letter-spacing: 10px;
+    font-family: 'Oswald';
 }
 
 .right-panel li{
@@ -30,12 +36,14 @@ a{
 }
 
 #login{
+    color: black;
     padding: 20px;
     font-weight: 600;
-    border: 2px solid white;
+    border-radius: 30px;
 }
 
 #sign-up{
+    border-radius: 30px;
     color: white;
     font-weight: 600;
     padding: 20px;

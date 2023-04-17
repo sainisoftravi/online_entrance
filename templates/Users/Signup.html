@@ -1,0 +1,41 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>SignUP</title>
+        <link rel="stylesheet" href="{% static 'Users/css/style.css' %}">
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    </head>
+    <body>
+        {% include 'HTML/IndexNav.html' %}
+
+        <div class="container">
+            <div class="form-container">
+                <div class="input-group">
+                    <form action="">
+                        <div class="input-field">
+                            <i class='bx bxs-user' ></i>
+                            <input type="text" class="user-name" placeholder="Username">
+                        </div>
+
+                        <div class="input-field">
+                            <i class='bx bxs-envelope'></i>
+                            <input type="email" class="user-name" placeholder="Email">
+                        </div>
+
+                        <div class="input-field">
+                            <i class='bx bxs-lock-alt' ></i>
+                            <input type="password" class="user-name" placeholder="Password">
+                        </div>
+
+                        <p class="forgot"> Lost Password ? <a href="#" class="forg-pass">Click Here!</a></p>
+
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

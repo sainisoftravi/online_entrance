@@ -1,0 +1,63 @@
+.container{
+    padding: 0;
+    margin: 0;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.form-container{
+    width: 25%;
+    padding: 50px;
+    background: #fefefe;
+}
+
+.input-group{
+    background: #fefefe;
+}
+
+.input-field{
+    border: 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #e7e7e7;
+    margin-bottom: 10px;
+}
+
+.forg-pass{
+    color: blue;
+    text-decoration: underline;
+}
+
+i{
+    padding-left: 5px;
+}
+
+input{
+    border: 0;
+    outline: 0;
+    width: 100%;
+    margin: 5px 5px 5px 0;
+    padding: 10px;
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+.forgot{
+    padding-top: 15px;
+}
+
+button{
+    width: 40%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 20px;
+    padding: 15px 30px;
+    color: whitesmoke;
+    border-radius: 25px;
+    background-color: #370d91;
+}

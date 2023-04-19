@@ -1,0 +1,1070 @@
+{
+    "BCA": {
+        "English": {
+            "An apple of discord": {
+                "answer": "cause of quarrel",
+                "choices": [
+                    "cause of wealth",
+                    "cause of illness",
+                    "cause of happiness",
+                    "cause of quarrel"
+                ]
+            },
+            "Cut both hands": {
+                "answer": "in favor of both sides",
+                "choices": [
+                    "very big oss",
+                    "very hard worker",
+                    "in favor of both sides",
+                    "against both sides"
+                ]
+            },
+            "Roots and branch": {
+                "answer": "",
+                "choices": [
+                    "entirely",
+                    "step by step",
+                    "part by part",
+                    "bare truth"
+                ]
+            },
+            "A seminar is generally from of .......... interaction.": {
+                "answer": "formal",
+                "choices": [
+                    "academic",
+                    "social",
+                    "formal",
+                    "artificial"
+                ]
+            },
+            "An archaeologist studies about the .......... of human.": {
+                "answer": "past",
+                "choices": [
+                    "rock",
+                    "history",
+                    "past",
+                    "future"
+                ]
+            },
+            "Back of beyond.": {
+                "answer": "a lonely forsaken place",
+                "choices": [
+                    "an ideal place for holidays",
+                    "place with certain memories",
+                    "a religious place",
+                    "a lonely forsaken place"
+                ]
+            },
+            "Eat humble pie.": {
+                "answer": "to apologize",
+                "choices": [
+                    "to forgive",
+                    "to apologize",
+                    "to request",
+                    "to order"
+                ]
+            },
+            "The synonym of \"SUMMIT\" is:": {
+                "answer": "peak",
+                "choices": [
+                    "base",
+                    "slope",
+                    "declivity",
+                    "peak"
+                ]
+            },
+            "Which one is appropriate synonym of \"FACULTY\"?": {
+                "answer": "branch",
+                "choices": [
+                    "privilege",
+                    "desire",
+                    "branch",
+                    "ability"
+                ]
+            },
+            "Give an exact synonym of \"RECTIFY\".": {
+                "answer": "to correct",
+                "choices": [
+                    "to command",
+                    "to correct",
+                    "to destroy",
+                    "to build"
+                ]
+            },
+            "Give the antonym  of \"FICKLE\".": {
+                "answer": "steadfast",
+                "choices": [
+                    "steadfast",
+                    "independent",
+                    "unwise",
+                    "esoteric"
+                ]
+            },
+            "The antonym of \"CONFESS\" is:": {
+                "answer": "deny",
+                "choices": [
+                    "deny",
+                    "reguse",
+                    "contest",
+                    "contend"
+                ]
+            },
+            "What is the antonym of \"BASE\"?": {
+                "answer": "top",
+                "choices": [
+                    "roof",
+                    "height",
+                    "top",
+                    "climax"
+                ]
+            },
+            "The meaning of \"palette\" is:": {
+                "answer": "artist's paint mixing board",
+                "choices": [
+                    "artist's brush keeping book",
+                    "artist's paint mixing board",
+                    "artist's drame box",
+                    "artist's planning board"
+                ]
+            },
+            "The word \"Saturated\" gives he meaning as:": {
+                "answer": "all",
+                "choices": [
+                    "drenched",
+                    "soaked",
+                    "full of",
+                    "all"
+                ]
+            },
+            "Knowledge is like a deep well fed by .......... springs, and your mind is the little bucket that you drop in it.": {
+                "answer": "perennial",
+                "choices": [
+                    "perennial",
+                    "eternal",
+                    "sterling",
+                    "immortal"
+                ]
+            },
+            "It was through to the second world war that Russia .......... herself increased .......... in power, wealth and prestige.": {
+                "answer": "witnessed, prodigiously",
+                "choices": [
+                    "saw, abundantly",
+                    "notice, gullibly",
+                    "witnessed, prodigiously",
+                    "none of these"
+                ]
+            },
+            "Those who seek .......... from others must learn to forgive and forget.": {
+                "answer": "leniency",
+                "choices": [
+                    "leniency",
+                    "clemency",
+                    "courtesy",
+                    "retribution"
+                ]
+            },
+            "His .......... of the topic was so good that students had few doubts to raise at the end.": {
+                "answer": "exposition",
+                "choices": [
+                    "exposure",
+                    "clarity",
+                    "exposition",
+                    "picturization"
+                ]
+            },
+            "The accused was released on pending hearing of his case.": {
+                "answer": "bail",
+                "choices": [
+                    "bale",
+                    "depoist",
+                    "bail",
+                    "bond"
+                ]
+            },
+            "He was killed .......... a highway man .......... a dagger.": {
+                "answer": "by; with",
+                "choices": [
+                    "by; with",
+                    "with; for",
+                    "by; or",
+                    "in; for"
+                ]
+            },
+            "Pakistan is not enamored .......... the bomb for its own sake.": {
+                "answer": "of",
+                "choices": [
+                    "of",
+                    "for",
+                    "with",
+                    "by"
+                ]
+            },
+            "He dispensed with the services .......... his honest clerk.": {
+                "answer": "of",
+                "choices": [
+                    "for",
+                    "by",
+                    "of",
+                    "to"
+                ]
+            },
+            "The teacher has no control .......... the students.": {
+                "answer": "over",
+                "choices": [
+                    "with",
+                    "at",
+                    "over",
+                    "on"
+                ]
+            },
+            "There is no hindrance .......... his going there.": {
+                "answer": "to",
+                "choices": [
+                    "to",
+                    "on",
+                    "over",
+                    "at"
+                ]
+            },
+            "I have a bistate .......... publicity": {
+                "answer": "against",
+                "choices": [
+                    "about",
+                    "at",
+                    "against",
+                    "for"
+                ]
+            },
+            "My cousin has invested a lot of money .......... farming": {
+                "answer": "in",
+                "choices": [
+                    "in",
+                    "for",
+                    "onto",
+                    "on"
+                ]
+            },
+            "Plants absorb moisture .......... the air.": {
+                "answer": "from",
+                "choices": [
+                    "for",
+                    "in",
+                    "from",
+                    "to"
+                ]
+            },
+            "It is vain to calculate .......... an uncertain result.": {
+                "answer": "for",
+                "choices": [
+                    "upon",
+                    "over",
+                    "into",
+                    "for"
+                ]
+            },
+            "Jagdish had no servant to attend .......... him.": {
+                "answer": "to",
+                "choices": [
+                    "upon",
+                    "over",
+                    "with",
+                    "to"
+                ]
+            },
+            "The word 'quest' is meant for:": {
+                "answer": "all of the above",
+                "choices": [
+                    "to seek",
+                    "to look for",
+                    "to search",
+                    "all of the above"
+                ]
+            },
+            "Go to the dogs.": {
+                "answer": "to be reuined",
+                "choices": [
+                    "to be reuined",
+                    "to be in danger",
+                    "to take risk",
+                    "to disobey elders"
+                ]
+            },
+            "Keen is meant to:": {
+                "answer": "very sensitive",
+                "choices": [
+                    "very clean",
+                    "very warm",
+                    "very dull",
+                    "very sensitive"
+                ]
+            },
+            "Well disposed to": {
+                "answer": "help to somebody",
+                "choices": [
+                    "useless",
+                    "help to somebody",
+                    "very much excited",
+                    "to be settle for less"
+                ]
+            },
+            "Pay lip service.": {
+                "answer": "pretend to regard",
+                "choices": [
+                    "false appreciation",
+                    "pretend to regard",
+                    "true relation",
+                    "false commitment"
+                ]
+            },
+            "Get on": {
+                "answer": "to step up",
+                "choices": [
+                    "to step down",
+                    "to step up",
+                    "to help",
+                    "to think"
+                ]
+            },
+            "Above Board": {
+                "answer": "honest and straightforward",
+                "choices": [
+                    "boasting person",
+                    "honest and straightforward",
+                    "a man with arrogance",
+                    "a dishonest person"
+                ]
+            },
+            "Call a spade a spade": {
+                "answer": "to speak plainly",
+                "choices": [
+                    "to disrespect",
+                    "to say in anger",
+                    "to speak plainly",
+                    "to manipulate"
+                ]
+            },
+            "Broadly speaking letters may be said to .......... Into two categories.": {
+                "answer": "fall",
+                "choices": [
+                    "belong",
+                    "fall",
+                    "split",
+                    "convert"
+                ]
+            },
+            "The last decade has been .......... for management education and development.": {
+                "answer": "outstanding",
+                "choices": [
+                    "dogmatic",
+                    "paradoxical",
+                    "praiseworthy",
+                    "outstanding"
+                ]
+            },
+            "Bandy words": {
+                "answer": "To argue",
+                "choices": [
+                    "to argue",
+                    "to request",
+                    "to give respect",
+                    "to be polite"
+                ]
+            },
+            "Ever and Anon": {
+                "answer": "sometimes",
+                "choices": [
+                    "true promise",
+                    "false promise",
+                    "frequent",
+                    "sometimes"
+                ]
+            },
+            "The synonym of \"Spurious\" is:": {
+                "answer": "false",
+                "choices": [
+                    "false",
+                    "harmful",
+                    "poisonous",
+                    "foreign"
+                ]
+            },
+            "Which one is apropriate synonym of \"Annex\"": {
+                "answer": "add",
+                "choices": [
+                    "add",
+                    "low",
+                    "copy",
+                    "initial"
+                ]
+            },
+            "GIve an exact synonym of \"Concert\".": {
+                "answer": "agreement",
+                "choices": [
+                    "beauty",
+                    "power",
+                    "agreement",
+                    "none of these"
+                ]
+            },
+            "The antonym of \"Engage\" is:": {
+                "answer": "abstain",
+                "choices": [
+                    "abstain",
+                    "liberate",
+                    "release",
+                    "join"
+                ]
+            },
+            "What is the antonym of \"Moist\"?": {
+                "answer": "dry",
+                "choices": [
+                    "parched",
+                    "dry",
+                    "hard",
+                    "crisp"
+                ]
+            },
+            "The meaning of \"shimmer\" is:": {
+                "answer": "all of the above",
+                "choices": [
+                    "to flicker like sunlight",
+                    "to shine like sunlight",
+                    "to move like sunlight",
+                    "all of the above"
+                ]
+            },
+            "THe word \"Snub\" gives meaning as:": {
+                "answer": "all of the above",
+                "choices": [
+                    "to ignore",
+                    "to avoid",
+                    "to shun",
+                    "all of the above"
+                ]
+            },
+            "The enemy paid a large sum as ..........": {
+                "answer": "compensation",
+                "choices": [
+                    "redress",
+                    "amends",
+                    "compensation",
+                    "punishment"
+                ]
+            },
+            ".......... is a person who dabbles in arts and letters.": {
+                "answer": "dilettante",
+                "choices": [
+                    "chauvinist",
+                    "connoisseur",
+                    "philistine",
+                    "dilettante"
+                ]
+            },
+            "We lost confidence on him beacuse he never .......... the grandiose prommises he made.": {
+                "answer": "delivered on",
+                "choices": [
+                    "forgot",
+                    "tired",
+                    "delivered on",
+                    "relied upon"
+                ]
+            },
+            "His .......... on his family's position is great but he does not boast about it.": {
+                "answer": "status",
+                "choices": [
+                    "status",
+                    "pride",
+                    "deceit",
+                    "presumption"
+                ]
+            },
+            "EVen when murunga's reputation was in .......... almost everyone was willing to admit that he had genius.": {
+                "answer": "eclipse",
+                "choices": [
+                    "failure",
+                    "rebuttal",
+                    "accumulation",
+                    "eclipse"
+                ]
+            },
+            "Shyam was no control .......... his temper.": {
+                "answer": "over",
+                "choices": [
+                    "after",
+                    "in",
+                    "over",
+                    "at"
+                ]
+            },
+            "She could not dissociate herself .......... what she said earlier.": {
+                "answer": "from",
+                "choices": [
+                    "of",
+                    "with",
+                    "off",
+                    "from"
+                ]
+            },
+            "We travelled .......... a boat to reach dhaka.": {
+                "answer": "by",
+                "choices": [
+                    "for",
+                    "on",
+                    "about",
+                    "by"
+                ]
+            },
+            "I am used .......... such hardship.": {
+                "answer": "to",
+                "choices": [
+                    "for",
+                    "at",
+                    "from",
+                    "to"
+                ]
+            },
+            "I was disappointed .......... not finding the doctor in his seat.": {
+                "answer": "at",
+                "choices": [
+                    "from",
+                    "on",
+                    "at",
+                    "in"
+                ]
+            },
+            "Ram is confident .......... his sucess.": {
+                "answer": "of",
+                "choices": [
+                    "for",
+                    "about",
+                    "towards",
+                    "of"
+                ]
+            },
+            "The reward was not commensurate .......... the work done by us.": {
+                "answer": "with",
+                "choices": [
+                    "on",
+                    "for",
+                    "with",
+                    "order"
+                ]
+            },
+            "The citizens must not murmur .......... new taxes.": {
+                "answer": "against",
+                "choices": [
+                    "over",
+                    "upon",
+                    "against",
+                    "with"
+                ]
+            },
+            "What do you infer .......... this boy's hesitating behaviour?": {
+                "answer": "with",
+                "choices": [
+                    "from",
+                    "for",
+                    "with",
+                    "against"
+                ]
+            },
+            "BEggar begged money .......... me.": {
+                "answer": "to",
+                "choices": [
+                    "to",
+                    "from",
+                    "by",
+                    "with"
+                ]
+            },
+            "The word 'profuse' is meant for:": {
+                "answer": "an average number",
+                "choices": [
+                    "not many",
+                    "an average number",
+                    "great abundance",
+                    "correct amount"
+                ]
+            },
+            "Give a wide berth": {
+                "answer": "to motivate",
+                "choices": [
+                    "to welcome",
+                    "to applaud",
+                    "to motivate",
+                    "to avoid"
+                ]
+            },
+            "When the church comes": {
+                "answer": "moment of decision",
+                "choices": [
+                    "moment of decision",
+                    "destination",
+                    "dotage",
+                    "win something"
+                ]
+            },
+            "benevolent is meant to:": {
+                "answer": "all of the above",
+                "choices": [
+                    "generous",
+                    "kind",
+                    "good",
+                    "all of the above"
+                ]
+            },
+            "Pyrrhic victory": {
+                "answer": "victory at all cost",
+                "choices": [
+                    "great victory",
+                    "victory with a policy",
+                    "much awaited victory",
+                    "victory at all cost"
+                ]
+            },
+            "Set people by ears.": {
+                "answer": "to incite people",
+                "choices": [
+                    "to incite people",
+                    "to listen carefully",
+                    "to give a long speech",
+                    "to abuse"
+                ]
+            },
+            "To beg the question.": {
+                "answer": "to take for granted",
+                "choices": [
+                    "to refer to",
+                    "to take for granted",
+                    "to raise objections",
+                    "to be discussed"
+                ]
+            },
+            "Cricket is a .......... game, but the destiny of the side is often shaped by a couple of individuals.": {
+                "answer": "team",
+                "choices": [
+                    "good",
+                    "team",
+                    "popular",
+                    "new"
+                ]
+            },
+            "The .......... has to be precisely stated.": {
+                "answer": "theme",
+                "choices": [
+                    "content",
+                    "criticisim",
+                    "cae",
+                    "theme"
+                ]
+            },
+            "Man worked with his small tools until the advent of modern machinery.......... by steam and electricity.": {
+                "answer": "driven",
+                "choices": [
+                    "worked",
+                    "controlled",
+                    "driven",
+                    "moved"
+                ]
+            },
+            "The rest is history.": {
+                "answer": "known to everyone",
+                "choices": [
+                    "history takes rest",
+                    "known to everyone",
+                    "to avoid historicial facts",
+                    "history repeats"
+                ]
+            },
+            "Warm as toast.": {
+                "answer": "very fresh",
+                "choices": [
+                    "cold",
+                    "very hot",
+                    "very fresh",
+                    "lukewarm"
+                ]
+            },
+            "The economy is finally ..........": {
+                "answer": "looking up",
+                "choices": [
+                    "looking in",
+                    "looking on",
+                    "looking at",
+                    "looking up"
+                ]
+            },
+            "The synonym of \"Alien\" is:": {
+                "answer": "Stranger",
+                "choices": [
+                    "Citizen",
+                    "Native",
+                    "Accustomed",
+                    "Stranger"
+                ]
+            },
+            "Which one is appropriate synonym of \"Foster\".": {
+                "answer": "Rear",
+                "choices": [
+                    "Rear",
+                    "Encourage",
+                    "Nourish",
+                    "Promote"
+                ]
+            },
+            "Give an exact synonym of \"Witty\".": {
+                "answer": "Ingenious",
+                "choices": [
+                    "Ingenious",
+                    "Speedy",
+                    "Foolish",
+                    "Awkward"
+                ]
+            },
+            "The antonym of \"Abolish\" is:": {
+                "answer": "establish",
+                "choices": [
+                    "remove",
+                    "reside",
+                    "confront",
+                    "establish"
+                ]
+            },
+            "Give the antonym of \"Salient\".": {
+                "answer": "incline",
+                "choices": [
+                    "emphatic",
+                    "striking",
+                    "important",
+                    "incline"
+                ]
+            },
+            "Demonstrating ood judgement is called:": {
+                "answer": "judicious",
+                "choices": [
+                    "insinuate",
+                    "judicious",
+                    "masterpiece",
+                    "towering"
+                ]
+            },
+            "The study of society is called:": {
+                "answer": "Sociology",
+                "choices": [
+                    "Meterology",
+                    "archeology",
+                    "Sociology",
+                    "geology"
+                ]
+            },
+            "Badminton is played on a court as wrestling in a": {
+                "answer": "arena",
+                "choices": [
+                    "court",
+                    "track",
+                    "ground",
+                    "arena"
+                ]
+            },
+            "It was the help he got from his friends which .......... him through the tragedy.": {
+                "answer": "helped",
+                "choices": [
+                    "boosted",
+                    "parked",
+                    "supported",
+                    "helped"
+                ]
+            },
+            "I never miss a cricket match. I .......... fond of cricket since childhod.": {
+                "answer": "have been",
+                "choices": [
+                    "am",
+                    "will be",
+                    "have been",
+                    "has been"
+                ]
+            },
+            "What is the opposite of \"Mute\"?": {
+                "answer": "amplify",
+                "choices": [
+                    "diversify",
+                    "quicken",
+                    "harmonize",
+                    "amplify"
+                ]
+            },
+            "The scientists made a .......... discovery for which he was honored.": {
+                "answer": "sensational",
+                "choices": [
+                    "sensual",
+                    "sensational",
+                    "sensous",
+                    "sentimental"
+                ]
+            },
+            "That charming girl was the .......... of all eyes.": {
+                "answer": "ambition",
+                "choices": [
+                    "aim",
+                    "target",
+                    "ambition",
+                    "cynosure"
+                ]
+            },
+            "He resembels .......... his mother.": {
+                "answer": "none of these",
+                "choices": [
+                    "at",
+                    "in",
+                    "with",
+                    "none of these"
+                ]
+            },
+            "A son who is unable to look his father on the face is:": {
+                "answer": "ashamed",
+                "choices": [
+                    "guilty",
+                    "arrogant",
+                    "timid",
+                    "ashamed"
+                ]
+            },
+            "The thunder was accompained .......... heavy rain.": {
+                "answer": "by",
+                "choices": [
+                    "by",
+                    "with",
+                    "through",
+                    "up"
+                ]
+            },
+            "We passed.......... a lot of beautiful towns on the way to the resort.": {
+                "answer": "across",
+                "choices": [
+                    "along",
+                    "across",
+                    "through",
+                    "all"
+                ]
+            },
+            "The child was hiding .......... the door.": {
+                "answer": "behind",
+                "choices": [
+                    "behind",
+                    "below",
+                    "among",
+                    "none"
+                ]
+            },
+            "My parents got married .......... the 1970s.": {
+                "answer": "in",
+                "choices": [
+                    "at",
+                    "in",
+                    "from",
+                    "on"
+                ]
+            },
+            "Many of us eat .......... fork and spoon.": {
+                "answer": "with",
+                "choices": [
+                    "of",
+                    "to",
+                    "on",
+                    "with"
+                ]
+            },
+            "How many people are .......... your team?": {
+                "answer": "on",
+                "choices": [
+                    "of",
+                    "on",
+                    "to",
+                    "with"
+                ]
+            }
+        },
+        "General Knowledge": {
+            "The famous Bulbul lake is situated in:": {
+                "answer": "Surkhet",
+                "choices": [
+                    "Gorkha",
+                    "Chitwan",
+                    "Tanahun",
+                    "Surkhet"
+                ]
+            },
+            "The oldest country in the world is:": {
+                "answer": "San marino",
+                "choices": [
+                    "Vatican City",
+                    "Libya",
+                    "San marino",
+                    "Denmark"
+                ]
+            },
+            "The first daily newspaper of the world is": {
+                "answer": "The Morning Post",
+                "choices": [
+                    "The Morning Post",
+                    "Sunday Times",
+                    "The New York Times",
+                    "Daily Mail"
+                ]
+            },
+            "In computer abbreviation of CAD usually means?": {
+                "answer": "Computer Aided Design",
+                "choices": [
+                    "Computer Additional Design",
+                    "Computer Aided Data",
+                    "Computer Aided Design",
+                    "Computer Assist Design"
+                ]
+            },
+            "Who is the current secretary general of the UN?": {
+                "answer": "Antonio Guterres",
+                "choices": [
+                    "Wan ki Moon",
+                    "U thant",
+                    "Antonio Guterres",
+                    "Kofi Annan"
+                ]
+            },
+            "The national game of Nepl is:": {
+                "answer": "Volleyball",
+                "choices": [
+                    "Cricket",
+                    "Volleyball",
+                    "Kabaddi",
+                    "Football"
+                ]
+            },
+            "The CEO of Google is:": {
+                "answer": "Sundar Pichai",
+                "choices": [
+                    "Satya Nadella",
+                    "Jeff Bezos",
+                    "Warren Buffet",
+                    "Sundar Pichai"
+                ]
+            },
+            "What is the capital of Canada?": {
+                "answer": "Ottawa",
+                "choices": [
+                    "Ottawa",
+                    "Canberra",
+                    "Vancouver",
+                    "Winnipeg"
+                ]
+            },
+            "Logarithm tables were invented by:": {
+                "answer": "John Napier",
+                "choices": [
+                    "Blaise Pascal",
+                    "John Napier",
+                    "Charles Babbage",
+                    "John Douglas"
+                ]
+            },
+            "Who is known as the father of Internet?": {
+                "answer": "Tim Berners-Lee",
+                "choices": [
+                    "Lawrence Roberts",
+                    "Ray Tomlinson",
+                    "Vint Cerf",
+                    "Tim Berners-Lee"
+                ]
+            },
+            "The famous Halesi Mahadev temple is situated in:": {
+                "answer": "Morang",
+                "choices": [
+                    "Taplejung",
+                    "Khotang",
+                    "Sarlahi",
+                    "Morang"
+                ]
+            },
+            "The oldest flag in the world is of:": {
+                "answer": "Denmark",
+                "choices": [
+                    "Italy",
+                    "Russia",
+                    "Denmark",
+                    "China"
+                ]
+            },
+            "The Guitar was fristly introduced from:": {
+                "answer": "Spain",
+                "choices": [
+                    "Spain",
+                    "Germany",
+                    "France",
+                    "America"
+                ]
+            },
+            "In computer abbreviation of AI usually means?": {
+                "answer": "Artificial Internet",
+                "choices": [
+                    "Art info",
+                    "Artificial Intelligence",
+                    "Artificial interest",
+                    "Artificial Internet"
+                ]
+            },
+            "Who is the current vice chancellor fo the Tribhuvan University?": {
+                "answer": "Tritha Khaniya",
+                "choices": [
+                    "Dilli Pd. Sapkota",
+                    "Shivalal BHusal",
+                    "Ram Pd. Khatiwada",
+                    "Tritha Khaniya"
+                ]
+            },
+            "The national game of Bhutan is:": {
+                "answer": "Archery",
+                "choices": [
+                    "cricket",
+                    "Archery",
+                    "Bull fighting",
+                    "Football"
+                ]
+            },
+            "The CEO of Apple is:": {
+                "answer": "Tim Cook",
+                "choices": [
+                    "Satya Nadela",
+                    "Tim Cook",
+                    "Sao Paulo",
+                    "Salvador"
+                ]
+            },
+            "What is the capital of Brazil?": {
+                "answer": "Brasilia",
+                "choices": [
+                    "Brasilia",
+                    "Rio de Janeiro",
+                    "So Paulo",
+                    "Salvador"
+                ]
+            },
+            "Who is the capatain of Nepal's National Football team?": {
+                "answer": "Kiran Chemjong",
+                "choices": [
+                    "Anil Gurung",
+                    "Bimal Gharti Magar",
+                    "Kiran Chemjong",
+                    "Biraj Maharjan"
+                ]
+            },
+            "Which country is known as 'the gift of Nile'?": {
+                "answer": "Egypt",
+                "choices": [
+                    "Iraq",
+                    "Iran",
+                    "Egypt",
+                    "Italy"
+                ]
+            }
+        }
+    }
+}

@@ -104,7 +104,7 @@
                 "answer": "deny",
                 "choices": [
                     "deny",
-                    "reguse",
+                    "refuse",
                     "contest",
                     "contend"
                 ]
@@ -123,7 +123,7 @@
                 "choices": [
                     "artist's brush keeping book",
                     "artist's paint mixing board",
-                    "artist's drame box",
+                    "artist's drama box",
                     "artist's planning board"
                 ]
             },
@@ -176,7 +176,7 @@
                 "answer": "bail",
                 "choices": [
                     "bale",
-                    "depoist",
+                    "deposit",
                     "bail",
                     "bond"
                 ]
@@ -281,9 +281,9 @@
                 ]
             },
             "Go to the dogs.": {
-                "answer": "to be reuined",
+                "answer": "to be ruined",
                 "choices": [
-                    "to be reuined",
+                    "to be ruined",
                     "to be in danger",
                     "to take risk",
                     "to disobey elders"
@@ -388,7 +388,7 @@
                     "foreign"
                 ]
             },
-            "Which one is apropriate synonym of \"Annex\"": {
+            "Which one is appropriate synonym of \"Annex\"": {
                 "answer": "add",
                 "choices": [
                     "add",
@@ -460,7 +460,7 @@
                     "dilettante"
                 ]
             },
-            "We lost confidence on him beacuse he never .......... the grandiose prommises he made.": {
+            "We lost confidence on him because he never .......... the grandiose promises he made.": {
                 "answer": "delivered on",
                 "choices": [
                     "forgot",
@@ -478,7 +478,7 @@
                     "presumption"
                 ]
             },
-            "EVen when murunga's reputation was in .......... almost everyone was willing to admit that he had genius.": {
+            "Even when murunga's reputation was in .......... almost everyone was willing to admit that he had genius.": {
                 "answer": "eclipse",
                 "choices": [
                     "failure",
@@ -532,7 +532,7 @@
                     "in"
                 ]
             },
-            "Ram is confident .......... his sucess.": {
+            "Ram is confident .......... his success.": {
                 "answer": "of",
                 "choices": [
                     "for",
@@ -559,7 +559,7 @@
                     "with"
                 ]
             },
-            "What do you infer .......... this boy's hesitating behaviour?": {
+            "What do you infer .......... this boy's hesitating behavior?": {
                 "answer": "with",
                 "choices": [
                     "from",
@@ -653,7 +653,7 @@
                 "answer": "theme",
                 "choices": [
                     "content",
-                    "criticisim",
+                    "criticism",
                     "cae",
                     "theme"
                 ]
@@ -672,7 +672,7 @@
                 "choices": [
                     "history takes rest",
                     "known to everyone",
-                    "to avoid historicial facts",
+                    "to avoid historical facts",
                     "history repeats"
                 ]
             },
@@ -751,7 +751,7 @@
             "The study of society is called:": {
                 "answer": "Sociology",
                 "choices": [
-                    "Meterology",
+                    "Meteorology",
                     "archeology",
                     "Sociology",
                     "geology"
@@ -775,7 +775,7 @@
                     "helped"
                 ]
             },
-            "I never miss a cricket match. I .......... fond of cricket since childhod.": {
+            "I never miss a cricket match. I .......... fond of cricket since childhood.": {
                 "answer": "have been",
                 "choices": [
                     "am",
@@ -798,7 +798,7 @@
                 "choices": [
                     "sensual",
                     "sensational",
-                    "sensous",
+                    "sensuous",
                     "sentimental"
                 ]
             },
@@ -811,7 +811,7 @@
                     "cynosure"
                 ]
             },
-            "He resembels .......... his mother.": {
+            "He resembles .......... his mother.": {
                 "answer": "none of these",
                 "choices": [
                     "at",
@@ -829,7 +829,7 @@
                     "ashamed"
                 ]
             },
-            "The thunder was accompained .......... heavy rain.": {
+            "The thunder was accompanied .......... heavy rain.": {
                 "answer": "by",
                 "choices": [
                     "by",
@@ -881,6 +881,357 @@
                     "on",
                     "to",
                     "with"
+                ]
+            },
+            "She is very good .......... swimming": {
+                "answer": "at",
+                "choices": [
+                    "at",
+                    "on",
+                    "of",
+                    "for"
+                ]
+            },
+            "Ravi will have arrived home .......... 8 pm tomorrow": {
+                "answer": "by",
+                "choices": [
+                    "in",
+                    "at",
+                    "by",
+                    "on"
+                ]
+            },
+            "Rita is .......... honest and diligent student.": {
+                "answer": "an",
+                "choices": [
+                    "a",
+                    "an",
+                    "this",
+                    "no article"
+                ]
+            },
+            "The passive version of \"Who did it?\" is:": {
+                "answer": "Who was it done by?",
+                "choices": [
+                    "Who was it done?",
+                    "Who was it done by?",
+                    "Who was done it?",
+                    "Who had it done by?"
+                ]
+            },
+            "We had to stop .......... the entrance for the security check.": {
+                "answer": "at",
+                "choices": [
+                    "in",
+                    "on",
+                    "at",
+                    "for"
+                ]
+            },
+            "Using a .......... cleaner is the best way for avoiding the dust pollution.": {
+                "answer": "vacuum",
+                "choices": [
+                    "vaccum",
+                    "vacume",
+                    "vacuum",
+                    "vacuume"
+                ]
+            },
+            "The plural form of \"ox\" is:": {
+                "answer": "oxen",
+                "choices": [
+                    "oxen",
+                    "oxes",
+                    "oxez",
+                    "none"
+                ]
+            },
+            "The feminine form of deer is:": {
+                "answer": "doe",
+                "choices": [
+                    "deeress",
+                    "doe",
+                    "stag",
+                    "none"
+                ]
+            },
+            "If I had know about your arrival, I .......... to receive you at the airport.": {
+                "answer": "would have come",
+                "choices": [
+                    "would come",
+                    "would came",
+                    "would have come",
+                    "had come"
+                ]
+            },
+            "At midnight, all the goats were ..........": {
+                "answer": "bleating",
+                "choices": [
+                    "bleating",
+                    "howling",
+                    "roaring",
+                    "mowing"
+                ]
+            },
+            "The question tag of \"They have already arrived,\" is:": {
+                "answer": "haven't they?",
+                "choices": [
+                    "have they?",
+                    "haven't they?",
+                    "weren't they?",
+                    "did they?"
+                ]
+            },
+            "Please .......... the cigarette. It irritates me.": {
+                "answer": "put out",
+                "choices": [
+                    "put down",
+                    "put out",
+                    "put away",
+                    "put in"
+                ]
+            },
+            "As Gretel's father could not do anything, he gave ..........": {
+                "answer": "away",
+                "choices": [
+                    "away",
+                    "out",
+                    "in",
+                    "into"
+                ]
+            },
+            "I have eaten nothing for hours. I am .......... hungry.": {
+                "answer": "quite",
+                "choices": [
+                    "quiet",
+                    "quit",
+                    "quite",
+                    "queit"
+                ]
+            },
+            "The synonym of recurring is:": {
+                "answer": "occurring repeatedly",
+                "choices": [
+                    "occurring repeatedly",
+                    "happening rarely",
+                    "occurring once a week",
+                    "occurring seldom"
+                ]
+            },
+            "The antonym of \"on\" is:": {
+                "answer": "off",
+                "choices": [
+                    "of",
+                    "un",
+                    "off",
+                    "out"
+                ]
+            },
+            ".......... he was very popular among common people, he could not win the election.": {
+                "answer": "Although",
+                "choices": [
+                    "Because",
+                    "So",
+                    "Although",
+                    "Therefore"
+                ]
+            },
+            "The indirect speech of \"Are you sure ? She said to me\", is:": {
+                "answer": "She asked me if I was sure.",
+                "choices": [
+                    "She asked me if I was sure.",
+                    "She wanted to know was I sure.",
+                    "She inquired if I am sure.",
+                    "She asked him if I was sure."
+                ]
+            },
+            "In the night bus yesterday, I had my purse ..........": {
+                "answer": "stolen",
+                "choices": [
+                    "steal",
+                    "stole",
+                    "stolen",
+                    "to steal"
+                ]
+            },
+            "I am looking forward to .......... you very soon again.": {
+                "answer": "seeing",
+                "choices": [
+                    "see",
+                    "seen",
+                    "seeing",
+                    "be seen"
+                ]
+            },
+            "I bought this pen from the .......... store.": {
+                "answer": "stationery",
+                "choices": [
+                    "stationery",
+                    "stationary",
+                    "stationnary",
+                    "stantianory"
+                ]
+            },
+            "This bed is not .......... for two people to sleep in.": {
+                "answer": "wide enough",
+                "choices": [
+                    "as wide as",
+                    "wide enough",
+                    "wider enough",
+                    "quite weaker"
+                ]
+            },
+            "The fault in the engine is .......... this time than it was the last time.": {
+                "answer": "more serious",
+                "choices": [
+                    "more serious",
+                    "seriouser",
+                    "very serious",
+                    "serious than"
+                ]
+            },
+            "You will find the photograph of mine .......... page 13.": {
+                "answer": "on",
+                "choices": [
+                    "at",
+                    "on",
+                    "of",
+                    "with"
+                ]
+            },
+            "Reeta can dance .......... of all in this class.": {
+                "answer": "the best",
+                "choices": [
+                    "the best",
+                    "better",
+                    "best",
+                    "more better"
+                ]
+            },
+            "Hurry up and use the .........., the house is on fire.": {
+                "answer": "extinguisher",
+                "choices": [
+                    "extincter",
+                    "extinguisher",
+                    "extinguishing",
+                    "extinguish"
+                ]
+            },
+            "The tag question of \"I am an engineer,\" is:": {
+                "answer": "aren't I?",
+                "choices": [
+                    "aren't I?",
+                    "am not I?",
+                    "don't I?",
+                    "ain't I?"
+                ]
+            },
+            "I am in a state of dilemma. That means I am ..........": {
+                "answer": "puzzled",
+                "choices": [
+                    "dazzled",
+                    "tired",
+                    "puzzled",
+                    "not sure"
+                ]
+            },
+            "She undergoes a strange experience of seeing something not present in front of her. In other words, she is suffering from ..........": {
+                "answer": "hallucination",
+                "choices": [
+                    "hallucination",
+                    "bronchitis",
+                    "tonsillitis",
+                    "psychosis"
+                ]
+            },
+            "She can play tennis, but she is .......... at it than her friend.": {
+                "answer": "worse",
+                "choices": [
+                    "badly",
+                    "worse",
+                    "more badly",
+                    "worsley"
+                ]
+            },
+            "Sulav sold his plot of land in the village so that he .......... buy a new house in the city.": {
+                "answer": "could",
+                "choices": [
+                    "could",
+                    "can",
+                    "need",
+                    "would"
+                ]
+            },
+            "If you teased the dog, it .......... bite you.": {
+                "answer": "might",
+                "choices": [
+                    "would",
+                    "may",
+                    "can",
+                    "might"
+                ]
+            },
+            "The synonym of purgatory is:": {
+                "answer": "heaven",
+                "choices": [
+                    "polluted city",
+                    "hell",
+                    "heaven",
+                    "sky"
+                ]
+            },
+            "The synonym of creek is:": {
+                "answer": "rivulet",
+                "choices": [
+                    "pond",
+                    "late",
+                    "rivulet",
+                    "tributary"
+                ]
+            },
+            "No sooner had I left the room, the bomb .......... exploded.": {
+                "answer": "had",
+                "choices": [
+                    "had",
+                    "could be",
+                    "would be",
+                    "none of the above"
+                ]
+            },
+            "Sarita play chess .......... than her sister": {
+                "answer": "better",
+                "choices": [
+                    "more better",
+                    "better",
+                    "well",
+                    "best"
+                ]
+            },
+            "I am looking forward to .......... you soon.": {
+                "answer": "seeing",
+                "choices": [
+                    "seeing",
+                    "see",
+                    "be seen",
+                    "seen"
+                ]
+            },
+            "Because of the heavy rain, they decided to call .......... the cricket match.": {
+                "answer": "off",
+                "choices": [
+                    "out",
+                    "up",
+                    "off",
+                    "down"
+                ]
+            },
+            "Cholera broke .......... in Jajarkot ten years ago.": {
+                "answer": "out",
+                "choices": [
+                    "out",
+                    "down",
+                    "up",
+                    "into"
                 ]
             }
         },
@@ -1063,6 +1414,539 @@
                     "Iran",
                     "Egypt",
                     "Italy"
+                ]
+            },
+            "Nepal was hit by the 7.8 magnitude Earthquake on:": {
+                "answer": "2072 Baisakh 12",
+                "choices": [
+                    "2072 Baisakh 10",
+                    "2072 Baisakh 11",
+                    "2072 Baisakh 12",
+                    "2072 Baisakh 13"
+                ]
+            },
+            "The new constitution of Nepal, \"Nepal Ko Sambidhan\" was released on:": {
+                "answer": "2072 Asoj 3",
+                "choices": [
+                    "2072 Asoj 4",
+                    "2072 Asoj 3",
+                    "2072 Asoj 2",
+                    "2072 Asoj 1"
+                ]
+            },
+            "Who is the writer of Novel Ek Chihan ?": {
+                "answer": "Hridaychandra Singh Pradhan",
+                "choices": [
+                    "Hridaychandra Singh Pradhan",
+                    "Krishnachandra Singh Pradhan",
+                    "Bijay Bahadur Malla",
+                    "Parijat"
+                ]
+            },
+            "Kusti is played on:": {
+                "answer": "Akhada",
+                "choices": [
+                    "Ground",
+                    "Court",
+                    "Ring",
+                    "Akhada"
+                ]
+            },
+            "Who is considered as the father of computer?": {
+                "answer": "Charles Babbage",
+                "choices": [
+                    "Charles Babbage",
+                    "Bill Gates",
+                    "Mark Zukerberg",
+                    "Chiris Huhes"
+                ]
+            },
+            "Which one of the following is the database program ?": {
+                "answer": "MySQL",
+                "choices": [
+                    "MySQL",
+                    "MS-Excel",
+                    "MS-Word",
+                    "MS-Outlook"
+                ]
+            },
+            "What is the full form of LCD ?": {
+                "answer": "Liquid Crystal Display",
+                "choices": [
+                    "Light and Clear Display",
+                    "Liquid Cristal Display",
+                    "Liquid Crystal Display",
+                    "Liquid Clear Display"
+                ]
+            },
+            "Which is the first bank in Nepal?": {
+                "answer": "Nepal Bank Limited",
+                "choices": [
+                    "Nepal Bank Limited",
+                    "Rastriya Banijya Bank",
+                    "Nepal Investment Bank",
+                    "Nepal Rastra Bank"
+                ]
+            },
+            "Which of the following field is not awarded by Nobel Prize?": {
+                "answer": "Computer Science",
+                "choices": [
+                    "Computer Science",
+                    "Physics",
+                    "Economics",
+                    "Literature"
+                ]
+            },
+            "How many provinces (Pradesh) are in Nepal according to the new consitution ?": {
+                "answer": "7",
+                "choices": [
+                    "5",
+                    "7",
+                    "8",
+                    "9"
+                ]
+            }
+        },
+        "Math": {
+            "Which one of the following number has a remainder of 4 when it is divided by 6?": {
+                "answer": "22",
+                "choices": [
+                    "8",
+                    "12",
+                    "22",
+                    "29"
+                ]
+            },
+            "The sum of the product and quotient of 4 and 4 is ..........": {
+                "answer": "17",
+                "choices": [
+                    "16",
+                    "15",
+                    "8",
+                    "17"
+                ]
+            },
+            "The average of all even numbers between -4 and 5 is ..........": {
+                "answer": "none of these",
+                "choices": [
+                    "1",
+                    "0.5",
+                    "-1",
+                    "none of these"
+                ]
+            },
+            "The sum of first five prime numbers is:": {
+                "answer": "28",
+                "choices": [
+                    "11",
+                    "18",
+                    "26",
+                    "28"
+                ]
+            },
+            "The value of \\(\\sum_{n=0}^{10}(-1)^{n}\\) is:": {
+                "answer": "0",
+                "choices": [
+                    "1",
+                    "-1",
+                    "10",
+                    "0"
+                ]
+            },
+            "The product of two consecutive even number is 224. Then the number are:": {
+                "answer": "14,16",
+                "choices": [
+                    "16,18",
+                    "12,14",
+                    "14,16",
+                    "18,20"
+                ]
+            },
+            "If 5 is added to the square of a number, then the result is 14. What is the value of that number?": {
+                "answer": "3",
+                "choices": [
+                    "3",
+                    "5",
+                    "7",
+                    "9"
+                ]
+            },
+            "If three spoons equals to one glass, two glasses equals to one place, then how many spoons equals to one plate?": {
+                "answer": "6",
+                "choices": [
+                    "3",
+                    "6",
+                    "9",
+                    "2"
+                ]
+            },
+            "If a matrix is of order 5 x 7, then each column will contain .......... elements.": {
+                "answer": "5",
+                "choices": [
+                    "5",
+                    "12",
+                    "35",
+                    "7"
+                ]
+            },
+            "If the equations are \\(3x + 4y = 7\\) and \\(4x - y = 3\\), after solving these equations the value of x and y will be:": {
+                "answer": "1,1",
+                "choices": [
+                    "1,1",
+                    "1,2",
+                    "2,1",
+                    "2,2"
+                ]
+            },
+            "What is the value of \\(x\\) in series 1, 9, 25, \\(x\\), 81, 121?": {
+                "answer": "49",
+                "choices": [
+                    "100",
+                    "36",
+                    "49",
+                    "64"
+                ]
+            },
+            "If \\(a + b = c\\), then what is the average value of \\(x\\), \\(b\\) and \\(c\\)?": {
+                "answer": "\\(\\frac{2c}{3}\\)",
+                "choices": [
+                    "\\(\\frac{a+b}{3}\\)",
+                    "\\(\\frac{c}{3}\\)",
+                    "\\(\\frac{2c}{3}\\)",
+                    "\\(\\frac{c}{3\\)}"
+                ]
+            },
+            "If \\(x\\) is an integer and \\(y = -2x - 8\\), what is the least value of \\(x\\) for which \\(y\\) is less than 9?": {
+                "answer": "-8",
+                "choices": [
+                    "-8",
+                    "-9",
+                    "-10",
+                    "-11"
+                ]
+            },
+            "The slope of line which equation is \\(2x - 4y = 9\\) is:": {
+                "answer": "\\(\\frac{1}{2}\\)",
+                "choices": [
+                    "2",
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(-\\frac{1}{2}\\)",
+                    "3"
+                ]
+            },
+            "What is the slope of horizontal line?": {
+                "answer": "0",
+                "choices": [
+                    ">1",
+                    "<0",
+                    "0",
+                    "1"
+                ]
+            },
+            "The difference between 3/5 of 80 and 30% of 80 is:": {
+                "answer": "24",
+                "choices": [
+                    "20",
+                    "14",
+                    "15",
+                    "24"
+                ]
+            },
+            "Gautam spent Rs. 40/-, which is 5% of his daily wage, then his total daily wage is:": {
+                "answer": "Rs. 800/-",
+                "choices": [
+                    "Rs. 400/-",
+                    "Rs. 600/-",
+                    "Rs. 800/-",
+                    "Rs. 1000/-"
+                ]
+            },
+            "If 1254376 represents the CENTURY, then what represents 735?": {
+                "answer": "RUN",
+                "choices": [
+                    "NUT",
+                    "RUT",
+                    "RUN",
+                    "YET"
+                ]
+            },
+            "Find the missing value in \\(\\begin{bmatrix}2&  7& 6\\\\9&  5&  1\\\\4&  3& ?\\end{bmatrix}\\)": {
+                "answer": "8",
+                "choices": [
+                    "5",
+                    "8",
+                    "7",
+                    "9"
+                ]
+            },
+            "There are 48 students in a computer class. If number of boys are twice than girls, then how many girls are there ?": {
+                "answer": "16",
+                "choices": [
+                    "16",
+                    "18",
+                    "32",
+                    "28"
+                ]
+            },
+            "Find the number \\(x\\), which is equal to (80% of \\(x\\)) plus 5.": {
+                "answer": "25",
+                "choices": [
+                    "20",
+                    "30",
+                    "40",
+                    "25"
+                ]
+            },
+            "If the ratio of two numbers is \\(2:3\\) and sum of these numbers is 30, then which are these numbers?": {
+                "answer": "12,18",
+                "choices": [
+                    "14,16",
+                    "10,20",
+                    "12,18",
+                    "18,12"
+                ]
+            },
+            "If the age of five girls are 15, 16, 17, 18, 19 respectively then what is the average age of girls?": {
+                "answer": "17",
+                "choices": [
+                    "15",
+                    "17",
+                    "18",
+                    "19"
+                ]
+            },
+            "What is the value of \\(cos60^{\\circ}\\)?": {
+                "answer": "\\(\\frac{1}{2}\\)",
+                "choices": [
+                    "1",
+                    "\\(\\frac{1}{2}\\)",
+                    "0",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)"
+                ]
+            },
+            "Find the value of \\(x\\) in series 1, 1, 2, 3, 5, 8, 13, \\(x\\).": {
+                "answer": "21",
+                "choices": [
+                    "21",
+                    "22",
+                    "19",
+                    "23"
+                ]
+            },
+            "if '\\(n\\)' is an integer, which of the following must be even?": {
+                "answer": "\\(2n\\)",
+                "choices": [
+                    "\\(n + 1\\)",
+                    "\\(n + 2\\)",
+                    "\\(2n + 1\\)",
+                    "\\(2n\\)"
+                ]
+            },
+            "The largest prime factor of 255 is:": {
+                "answer": "17",
+                "choices": [
+                    "45",
+                    "25",
+                    "17",
+                    "5"
+                ]
+            },
+            "The sum of first \\(n\\) natural number is:": {
+                "answer": "\\(\\frac{n(n+1}{2}\\)",
+                "choices": [
+                    "\\(\\frac{n(n+1}{2}\\)",
+                    "\\(\\frac{n(n+1)(2n+1)}{2}",
+                    "\\(\\frac{(n+1)^{2}}{2}\\)",
+                    "none of these"
+                ]
+            },
+            "The root of the equation \\(3x^{2} - 8x + 16 = 0\\) are:": {
+                "answer": "imaginary & unequal",
+                "choices": [
+                    "real & equal",
+                    "real & unequal",
+                    "imaginary & unequal",
+                    "none of these"
+                ]
+            },
+            "If \\(x + y = 12\\) and \\(x - y = 6\\) then, the value of \\(x^{2} - y^{2}\\) is:": {
+                "answer": "72",
+                "choices": [
+                    "18",
+                    "36",
+                    "60",
+                    "72"
+                ]
+            },
+            "If \\(x - 5 = 2\\), then value of \\(x + 12\\) is:": {
+                "answer": "19",
+                "choices": [
+                    "15",
+                    "17",
+                    "19",
+                    "18"
+                ]
+            },
+            "The value when simplified \\(\\frac{6^{4} - 6^{3}}{5}}\\)": {
+                "answer": "\\(6^{3}\\)",
+                "choices": [
+                    "\\(\\frac{1}{5}\\)",
+                    "\\(6^{3}\\)",
+                    "\\(\\frac{6}{5}\\)",
+                    "\\(6^{4}\\)"
+                ]
+            },
+            "If \\(\\frac{4}{a} + \\frac{4}{a} + \\frac{4}{a} + \\frac{4}{a} = 16\\) then, \\(4a\\) is:": {
+                "answer": "4",
+                "choices": [
+                    "4",
+                    "8",
+                    "12",
+                    "16"
+                ]
+            },
+            "The slope of line \\(\\frac{x}{a} + \\frac{y}{b} = 1} is:": {
+                "answer": "\\(-\\frac{b}{a}\\)",
+                "choices": [
+                    "\\(-\\frac{a}{b}\\)",
+                    "\\(-\\frac{b}{a}\\)",
+                    "\\(ab\\)",
+                    "\\(-frac{1}{ab}\\)"
+                ]
+            },
+            "If \\(x = 4y\\), what percent of \\(2x is 2y\\)?": {
+                "answer": "25%",
+                "choices": [
+                    "20%",
+                    "40%",
+                    "30%",
+                    "25%"
+                ]
+            },
+            "If the cost of 9 kg sugar is Rs. 270/-, how much sugar can be purchased for Rs. 390/-?": {
+                "answer": "13",
+                "choices": [
+                    "11",
+                    "12",
+                    "13",
+                    "14"
+                ]
+            },
+            "If 3 bananas cost 50 cents, how many bananas can be bought for 20 dollars?": {
+                "answer": "120",
+                "choices": [
+                    "120",
+                    "115",
+                    "110",
+                    "130"
+                ]
+            },
+            "If \\(5:7 = 15:x\\), then the value of \\(x\\) is:": {
+                "answer": "21",
+                "choices": [
+                    "35",
+                    "21",
+                    "27",
+                    "18"
+                ]
+            },
+            "By selling 150 apples, the seller gains the selling price of 30 apples, then gain percentage is:": {
+                "answer": "25%",
+                "choices": [
+                    "25%",
+                    "30%",
+                    "12%",
+                    "20%"
+                ]
+            },
+            "A vendor purchases lemons at Rs. 5/- per lemon, at what price vendor will sell lemon to gain 20% profit ?": {
+                "answer": "Rs. 6/-",
+                "choices": [
+                    "Rs. 4/-",
+                    "Rs. 5/-",
+                    "Rs. 6/-",
+                    "Rs. 7/-"
+                ]
+            },
+            "What is the population doubling time if population growth rate is 2% per annum ?": {
+                "answer": "none of these",
+                "choices": [
+                    "50yrs",
+                    "30yrs",
+                    "40yrs",
+                    "none of these"
+                ]
+            },
+            "The cardinal number of a vowel set \\(V = \\left\\{a, e, i, o, u \\right\\}\\) is:": {
+                "answer": "5",
+                "choices": [
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ]
+            },
+            "If \\(log_{a}81 = 4\\), then the value of '\\(a\\)' is:": {
+                "answer": "3",
+                "choices": [
+                    "4",
+                    "3",
+                    "5",
+                    "none of these"
+                ]
+            },
+            "The value of \\(\\frac{\\sqrt{18}}{\\sqrt{72}}\\) is:": {
+                "answer": "a rational number",
+                "choices": [
+                    "a rational number",
+                    "an irrational number",
+                    "an imaginary number",
+                    "none of these"
+                ]
+            },
+            "If 5/7 of a number is 1025, then 3/7 of number is:": {
+                "answer": "615",
+                "choices": [
+                    "735",
+                    "430",
+                    "615",
+                    "560"
+                ]
+            },
+            "The number of seconds in \\(1\\frac{1}{2}\\) hours is:": {
+                "answer": "5400",
+                "choices": [
+                    "5100",
+                    "5200",
+                    "5300",
+                    "5400"
+                ]
+            },
+            "The \\(4m\\) wide carpet is used for carpeting a room of \\(8m\\) long and \\(3m\\) wide, then what is the length of carpet?": {
+                "answer": "\\(6m\\)",
+                "choices": [
+                    "\\(5m\\)",
+                    "\\(6m\\)",
+                    "\\(2m\\)",
+                    "\\(3m\\)"
+                ]
+            },
+            "Hari ranks seventh from the top and twenty sixth from the bottom in a class. Then the total number of students in a class are:": {
+                "answer": "32",
+                "choices": [
+                    "35",
+                    "35",
+                    "31",
+                    "32"
+                ]
+            },
+            "The three girls write 3 pages in 3 minutes, in how many minutes can one girl write one page?": {
+                "answer": "3 min",
+                "choices": [
+                    "4 min",
+                    "5 min",
+                    "3 min",
+                    "6 min"
                 ]
             }
         }

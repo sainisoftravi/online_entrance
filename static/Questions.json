@@ -1948,6 +1948,438 @@
                     "3 min",
                     "6 min"
                 ]
+            },
+            "The slope of a vertical line is:": {
+                "answer": "not defined",
+                "choices": [
+                    "0",
+                    "more than 0",
+                    "not defined",
+                    "none of these"
+                ]
+            },
+            "If \\(P(A\\cap B)) = 0\\), two events are:": {
+                "answer": "mutually exclusive",
+                "choices": [
+                    "mutually exclusive",
+                    "equally like events",
+                    "exhaustive events",
+                    "dependent events"
+                ]
+            },
+            "Which of the following is the true statement ?": {
+                "answer": "\\(0 \\in\\left\\{0  \\right\\}\\)",
+                "choices": [
+                    "\\(0 \\in\\left\\{  \\right\\}\\)",
+                    "\\(0 \\in\\left\\{0  \\right\\}\\)",
+                    "\\(0 \\in\\left\\{1  \\right\\}\\)",
+                    "\\(0 \\subset\\left\\{ 0 \\right\\}\\)"
+                ]
+            },
+            "Each prime number has:": {
+                "answer": "only two factors",
+                "choices": [
+                    "no factor",
+                    "only one factor",
+                    "only two factors",
+                    "more than two factors"
+                ]
+            },
+            "If the function \\(f(x) = 2^{2} - 5x + 2\\), then the value of \\(\\frac{f(4 + h) - f(4)}{h}\\) is:": {
+                "answer": "none of these",
+                "choices": [
+                    "\\(11 - 2h\\)",
+                    "\\(11 + 2h\\)",
+                    "\\(2h - 11\\)",
+                    "none of these"
+                ]
+            },
+            "If the sum of three terms of an A.P is 51 and product of last and first term is 273, the numbers are:": {
+                "answer": "21,17,13",
+                "choices": [
+                    "21,15,13",
+                    "21,17,13",
+                    "19,17,13",
+                    "19,15,13"
+                ]
+            },
+            "The value of \\(cosec60^{\\circ}\\) is:": {
+                "answer": "\\(\\frac{2}{\\sqrt{3}}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{2}{\\sqrt{3}}\\)",
+                    "\\(\\sqrt{3}\\)",
+                    "1"
+                ]
+            },
+            "If \\(A = (a_{ij})_{m\\times n}\\) and \\(B = (a_{ij})_{m\\times n}\\) be any two matrices and \\(A + B\\) defined, the order of \\(A + B\\) is:": {
+                "answer": "\\(m\\times n\\)",
+                "choices": [
+                    "\\(m\\times n\\)",
+                    "\\(n\\times m\\}",
+                    "\\(m\\times m\\)",
+                    "\\(n\\times n\\)"
+                ]
+            },
+            "The area of the four wall, ceiling and floor of a room is \\(56m^{2}\\). If the room is \\(3m\\) long and \\(2m\\) wide, the height of room is:": {
+                "answer": "\\(4.4m\\)",
+                "choices": [
+                    "\\(4.9m\\)",
+                    "\\(5m\\)",
+                    "\\(4.7m\\)",
+                    "\\(4.4m\\)"
+                ]
+            },
+            "One half of a number is 17 more than one-third of that number. What is the number ?": {
+                "answer": "102",
+                "choices": [
+                    "52",
+                    "84",
+                    "102",
+                    "112"
+                ]
+            },
+            "Two numbers are respectively 20% and 50% more than the third number. What % is the first number of the second ?": {
+                "answer": "80%",
+                "choices": [
+                    "40%",
+                    "50%",
+                    "80%",
+                    "70%"
+                ]
+            },
+            "Hari spent Rs. 25 which is 15% of his monthly wage. His monthly wage is:": {
+                "answer": "Rs. \\(166\\frac{2}{3}\\)",
+                "choices": [
+                    "Rs. 80",
+                    "Rs. \\(166\\frac{2}{3}\\)",
+                    "Rs. 225",
+                    "Rs. 312.5"
+                ]
+            },
+            "Which one is perpendicular to line \\(2x + 3y = 4\\) ?": {
+                "answer": "\\(3x + 2y = 8\\)",
+                "choices": [
+                    "\\(2x - 3y = 5\\)",
+                    "\\(2x - 3y + 7 = 0\\)",
+                    "\\(3x + 2y = 8\\)",
+                    "\\(3x - 2y + 7 = 0\\)"
+                ]
+            },
+            "The interest on a sum of money of 6% for 2.5 years is Rs. 270, the amount is": {
+                "answer": "2070",
+                "choices": [
+                    "4000",
+                    "2070",
+                    "4100",
+                    "4150"
+                ]
+            },
+            "A man gains the selling price of 5 books by selling 25 books. The percentage gain is": {
+                "answer": "25%",
+                "choices": [
+                    "20%",
+                    "25%",
+                    "25.5%",
+                    "15%"
+                ]
+            },
+            "I lost 7% by selling an article for Rs. 139.50. At what price must I have sold it to have 10% gain ?": {
+                "answer": "165",
+                "choices": [
+                    "150",
+                    "165",
+                    "175",
+                    "200"
+                ]
+            },
+            "Two sides of a right-angled triangle are 12cm and 13cm. The length of third side of right-angled triangle is": {
+                "answer": "5 units",
+                "choices": [
+                    "5 units",
+                    "11 units",
+                    "12 units",
+                    "56 units"
+                ]
+            },
+            "The volume of a wall which is built by using 3000 bricks having the dimension \\(14cm\\times 10cm\\times 6cm\\) is:": {
+                "answer": "\\(2.52m^{3}\\)",
+                "choices": [
+                    "\\(2.52m^{3}\\)",
+                    "\\(2.25m^{3}\\)",
+                    "\\(3.25m^{3}\\)",
+                    "\\(3.52m^{3}\\)"
+                ]
+            },
+            "A vendor lemon at 6 for a rupee, how many for a rupee must be sold to gain 20% ?": {
+                "answer": "6",
+                "choices": [
+                    "5",
+                    "6",
+                    "8",
+                    "9"
+                ]
+            },
+            "The value of \\(sec55^{\\circ}\\) is:": {
+                "answer": "\\(\\sqrt{3}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
+                    "\\(\\sqrt{3}\\)",
+                    "\\(\\frac{1}{\\sqrt{3}}\\)"
+                ]
+            },
+            "The interest on a sum of money is 3/11 of the amounts in 3 years. The rate of interest is:": {
+                "answer": "12.5%",
+                "choices": [
+                    "13.5%",
+                    "13%",
+                    "12.5%",
+                    "12%"
+                ]
+            },
+            "Jack is now 14 years older than Bill. If in 10 years Jack will be twice as old as Bill, how old will Jack be in 5 years ?": {
+                "answer": "23",
+                "choices": [
+                    "21",
+                    "23",
+                    "25",
+                    "27"
+                ]
+            },
+            "If 2 is subtracted from the square of a number and the result is 7, the number is:": {
+                "answer": "\\(\\pm3\\)",
+                "choices": [
+                    "\\(\\pm3\\)",
+                    "\\(\\pm4\\)",
+                    "\\(\\pm5\\)",
+                    "\\(\\pm6\\)"
+                ]
+            },
+            "If the area of the square region having sides of length 6cm is equal to the area of rectangular region having width 2.5cm, then the length of the rectangle (in cm) is:": {
+                "answer": "14.4",
+                "choices": [
+                    "8.5",
+                    "12",
+                    "13",
+                    "14.4"
+                ]
+            },
+            "The solution of the set of equations \\(x - y = 2\\) & \\(2x + 3y = 9\\) is:": {
+                "answer": "3,1",
+                "choices": [
+                    "1,3",
+                    "2,1",
+                    "3,2",
+                    "3,1"
+                ]
+            },
+            "The interval satisfying \\(3\\le x-1\\le5\\) is:": {
+                "answer": "\\left[ 4,6 \\right]",
+                "choices": [
+                    "\\left[ 3,5 \\right]",
+                    "\\left[ 4,6 \\right]",
+                    "\\left[ 2,3 \\right]",
+                    "\\left[ 2,3 \\right]"
+                ]
+            },
+            "The constant function is a:": {
+                "answer": "onto",
+                "choices": [
+                    "one to one",
+                    "onto",
+                    "into",
+                    "objective"
+                ]
+            },
+            "The value of \\((2 + \\sqrt{3})(2 - \\sqrt{3})(3 + \\sqrt{5})(3 - \\sqrt{5})\\) is:": {
+                "answer": "rational number",
+                "choices": [
+                    "rational number",
+                    "irrational number",
+                    "an imaginary number",
+                    "all of above"
+                ]
+            },
+            "If \\(x + y = \\frac{4c}{5},\\space y + z = \\frac{7c}{5}\\space and \\space z + x = \\frac{9c}{5}\\), \\space the \\space value \\space of\\space \\(x + y + z\\) is Options: \\(\\frac{7c}{15}\\), \\(c\\), \\(2c\\), \\(3c\\).": {
+                "answer": "\\(2c\\)",
+                "choices": [
+                    "\\(\\frac{7c}{15}\\)",
+                    "\\(c\\)",
+                    "\\(2c\\)",
+                    "\\(3c\\)"
+                ]
+            },
+            "Divide of Rs. 750 into three parts in the ration \\(4:5:6\\) are:": {
+                "answer": "200,250,300",
+                "choices": [
+                    "200,250,300",
+                    "250,250,250",
+                    "350,250,150",
+                    "400,500,600"
+                ]
+            },
+            "The ratio \\(5:4\\) expressed as percent equals to:": {
+                "answer": "120%",
+                "choices": [
+                    "115%",
+                    "125%",
+                    "120%",
+                    "130%"
+                ]
+            },
+            "If \\(1+\\frac{1}{x}\\space=\\space2-\\frac{2}{x}\\), the value of \\(x\\) is:": {
+                "answer": "1",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "The area of rectangular courtyard is \\(63m^{2}\\) and perimeter is \\(32m\\). The length and breadth (in m) are:": {
+                "answer": "9,7",
+                "choices": [
+                    "4,3",
+                    "9,7",
+                    "29,17",
+                    "19,13"
+                ]
+            },
+            "If \\(\\frac{1}{x + 4}+\\frac{1}{x+1}=\\frac{1}{x}\\), then \\(x\\) could be": {
+                "answer": "\\(-2\\)",
+                "choices": [
+                    "\\(\\pm1\\)",
+                    "\\(\\pm2\\)",
+                    "\\(-2\\)",
+                    "\\(-4\\)"
+                ]
+            },
+            "Three sides of the triangle are in the ration \\(1:2:3\\), it is:": {
+                "answer": "none of these",
+                "choices": [
+                    "a right-angled triangle",
+                    "an isosceles triangle",
+                    "an equilateral triangle",
+                    "none of these"
+                ]
+            },
+            "If \\(x\\) is an integer and \\(y = 2x - 8\\), what is the least value of \\(x\\) for which \\(y\\) is less than 9 ?": {
+                "answer": "-8",
+                "choices": [
+                    "-9",
+                    "-8",
+                    "-7",
+                    "-6"
+                ]
+            },
+            "The sum of the series 24,3,8,1,2,7 upto \\(8^{th}\\) term is:": {
+                "answer": "\\(57\\)",
+                "choices": [
+                    "\\(57\\)",
+                    "\\(36\\frac{13}{50}\\)",
+                    "\\(36\\frac{1}{9}\\)",
+                    "\\(37\\frac{5}{9}\\)"
+                ]
+            },
+            "If \\(t_{n}\\space=\\space2n^{2}\\space+\\space3n\\), the value of \\(S_{4}\\) is:": {
+                "answer": "90",
+                "choices": [
+                    "90",
+                    "85",
+                    "80",
+                    "none"
+                ]
+            },
+            "If the \\(n^{th}\\) term of the series 3,10,17 .......... and 63,65,67 .......... are equal, the value of n is:": {
+                "answer": "13",
+                "choices": [
+                    "8",
+                    "10",
+                    "12",
+                    "13"
+                ]
+            },
+            "If the cost price of 18 pens and selling price of 20 pens are equal. The loss percentage is:": {
+                "answer": "11.11%",
+                "choices": [
+                    "10.5%",
+                    "10%",
+                    "11.11%",
+                    "13%"
+                ]
+            },
+            "A person incurs a loss of 10% by selling a toy for Rs. 10.80. At what price should he sell it to earn a profit of 20% ?": {
+                "answer": "14.4",
+                "choices": [
+                    "12",
+                    "12.96",
+                    "14.4",
+                    "none"
+                ]
+            },
+            "A machine was bought for Rs. 7540 and sold at a profit of 20%, the selling price was": {
+                "answer": "9048",
+                "choices": [
+                    "9048",
+                    "9049",
+                    "9050",
+                    "9051"
+                ]
+            },
+            "A 30% discount reduces the price of a commodity by Rs. 90. If the discount is reduced to 20% then the price of the commodity will be:": {
+                "answer": "Rs. 240",
+                "choices": [
+                    "Rs. 180",
+                    "Rs. 210",
+                    "Rs. 240",
+                    "Rs. 300"
+                ]
+            },
+            "If \\(A = \\begin{bmatrix}2&3 \\\\-5&-2\\end{bmatrix}\\), the value of \\(A^{-1}\\) is:": {
+                "answer": "\\(\\frac{1}{11}A\\)",
+                "choices": [
+                    "\\(A\\)",
+                    "\\(\\frac{1}{3}A\\)",
+                    "\\(\\frac{1}{19}A\\)",
+                    "\\(\\frac{1}{11}A\\)"
+                ]
+            },
+            "The value of \\(\\begin{bmatrix}a-6&2a \\\\-2b&a-6\\end{bmatrix}\\) equals to": {
+                "answer": "\\((a + 6)^{2}\\)",
+                "choices": [
+                    "\\(a + 6\\)",
+                    "\\(a - 6\\)",
+                    "\\((a + 6)^{2}\\)",
+                    "\\(b + a + 1\\)"
+                ]
+            },
+            "The simple interest on Rs. 400 for 1 year at 5% p.a. is:": {
+                "answer": "20",
+                "choices": [
+                    "20",
+                    "25",
+                    "16",
+                    "none"
+                ]
+            },
+            "The sum of money at the rate of 5% p.a will yield an interest of Rs. 120 in 3 years is:": {
+                "answer": "800",
+                "choices": [
+                    "800",
+                    "900",
+                    "1000",
+                    "1100"
+                ]
+            },
+            "If \\(a:b\\space=\\space2:3,\\spaceb:c\\space=\\space5:7\\), the value of \\(a:b:c\\) is": {
+                "answer": "\\(2:3:7\\)",
+                "choices": [
+                    "\\(2:3:7\\)",
+                    "\\(2:5:7\\)",
+                    "\\(10:15:21\\)",
+                    "\\(2:15:7\\)"
+                ]
             }
         }
     }

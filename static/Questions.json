@@ -654,7 +654,7 @@
                 "choices": [
                     "content",
                     "criticism",
-                    "cae",
+                    "case",
                     "theme"
                 ]
             },
@@ -1233,6 +1233,321 @@
                     "up",
                     "into"
                 ]
+            },
+            "The danger of volcanoes .......... not be taken lightly.": {
+                "answer": "must",
+                "choices": [
+                    "must",
+                    "might",
+                    "has",
+                    "have"
+                ]
+            },
+            "Ramesh .......... here for the last seven years.": {
+                "answer": "has worked",
+                "choices": [
+                    "worked",
+                    "is working",
+                    "has worked",
+                    "works"
+                ]
+            },
+            "Let us go, ..........": {
+                "answer": "shall we?",
+                "choices": [
+                    "shall we?",
+                    "will we?",
+                    "do we?",
+                    "don't we?"
+                ]
+            },
+            "Two ladies had .......... hand bags stolen at the Kathmandu Mal.": {
+                "answer": "their",
+                "choices": [
+                    "its",
+                    "her",
+                    "their",
+                    "they"
+                ]
+            },
+            "They are as lucky as ..........": {
+                "answer": "we",
+                "choices": [
+                    "we",
+                    "our",
+                    "ourselves",
+                    "us"
+                ]
+            },
+            "Sincere people abide .......... their promise.": {
+                "answer": "by",
+                "choices": [
+                    "by",
+                    "of",
+                    "at",
+                    "on"
+                ]
+            },
+            "The new manager will .......... his position on August 30.": {
+                "answer": "take over",
+                "choices": [
+                    "take of",
+                    "take out",
+                    "take over",
+                    "take after"
+                ]
+            },
+            "He got a Lion's share of profits.": {
+                "answer": "greater share of things",
+                "choices": [
+                    "no share at all",
+                    "greater share of things",
+                    "very small part",
+                    "little profit"
+                ]
+            },
+            "Neither of them .......... a problem.": {
+                "answer": "anticipates",
+                "choices": [
+                    "anticipate",
+                    "anticipates",
+                    "have anticipated",
+                    "are anticipating"
+                ]
+            },
+            "There is someone in the room .......... I certainly heard a great noise.": {
+                "answer": "for",
+                "choices": [
+                    "and",
+                    "but",
+                    "for",
+                    "so"
+                ]
+            },
+            "She is .......... obedient student.": {
+                "answer": "an",
+                "choices": [
+                    "an",
+                    "a",
+                    "the",
+                    "none of the above"
+                ]
+            },
+            "I don't think I .......... be able to go.": {
+                "answer": "will",
+                "choices": [
+                    "will",
+                    "should",
+                    "can",
+                    "could"
+                ]
+            },
+            "That which cannot be divided.": {
+                "answer": "indivisible",
+                "choices": [
+                    "indelible",
+                    "indivisible",
+                    "insoluble",
+                    "indefensible"
+                ]
+            },
+            "Which of the following is an abstract noun?": {
+                "answer": "fear",
+                "choices": [
+                    "desk",
+                    "fear",
+                    "calss",
+                    "needle"
+                ]
+            },
+            "Which of the following  words does not have a suffix?": {
+                "answer": "courage",
+                "choices": [
+                    "helpless",
+                    "goodness",
+                    "fearless",
+                    "courage"
+                ]
+            },
+            "The opposite meaning of 'accepted' is": {
+                "answer": "rejected",
+                "choices": [
+                    "liked",
+                    "noted",
+                    "provided",
+                    "rejected"
+                ]
+            },
+            "Choose the word nearest in meaning to 'emulate'.": {
+                "answer": "Imitate",
+                "choices": [
+                    "Imitate",
+                    "Deny",
+                    "Discuss",
+                    "Reject"
+                ]
+            },
+            "Raman is a versatile boy.": {
+                "answer": "gifted",
+                "choices": [
+                    "bad",
+                    "clumsy",
+                    "gifted",
+                    "lazy"
+                ]
+            },
+            "Select the correct antonym for 'segregation'.": {
+                "answer": "cohesion",
+                "choices": [
+                    "appreciation",
+                    "integration",
+                    "cohesion",
+                    "co-ordination"
+                ]
+            },
+            "The price of consumer goods \u2026\u2026\u2026. increasing.": {
+                "answer": "is",
+                "choices": [
+                    "are",
+                    "is",
+                    "were",
+                    "has been"
+                ]
+            },
+            "Which of the following sentences is incorrect in terms of subject verb agreement?": {
+                "answer": "Here is a hammer and two wrenches.",
+                "choices": [
+                    "Each of the women owns her home.",
+                    "All of the women own their own homes.",
+                    "Here are two wrenches and a hammer.",
+                    "Here is a hammer and two wrenches."
+                ]
+            },
+            "Which of the following sentences has the correct use of comma (,)?": {
+                "answer": "We were glad to see him, because he had brought gifts.",
+                "choices": [
+                    "June 27, 2018, is a day I will never forget.",
+                    "Some people who go to school, enjoy the social life.",
+                    "He was late for dinner, we decided to eat without him.",
+                    "We were glad to see him, because he had brought gifts."
+                ]
+            },
+            "Choose the part participate of the verb quit.": {
+                "answer": "quit",
+                "choices": [
+                    "quitted",
+                    "quit",
+                    "quitting",
+                    "has quit"
+                ]
+            },
+            "We spent a \u2026\u2026\u2026\u2026 evening together.": {
+                "answer": "quite",
+                "choices": [
+                    "quite",
+                    "quit",
+                    "quitting",
+                    "quitter"
+                ]
+            },
+            "Which of the following words needs capitalization?": {
+                "answer": "jewish",
+                "choices": [
+                    "winter",
+                    "ocean",
+                    "jewish",
+                    "university"
+                ]
+            },
+            "He is occurred \u2026\u2026\u2026\u2026\u2026. cheating.": {
+                "answer": "of",
+                "choices": [
+                    "for",
+                    "of",
+                    "on",
+                    "in"
+                ]
+            },
+            "He is coming here \u2026\u2026\u2026\u2026.. six o'clock": {
+                "answer": "at",
+                "choices": [
+                    "upon",
+                    "in",
+                    "at",
+                    "to"
+                ]
+            },
+            "In the good book of": {
+                "answer": "enjoying a favour of someone.",
+                "choices": [
+                    "enjoying a pleasant moment.",
+                    "enjoying a favour of someone.",
+                    "possessing a good book for reading.",
+                    "purchasing a good book."
+                ]
+            },
+            "I am \u2026\u2026\u2026\u2026 tired to go any further": {
+                "answer": "too",
+                "choices": [
+                    "to",
+                    "too",
+                    "so",
+                    "not"
+                ]
+            },
+            "Hari says, \"I am very happy\"": {
+                "answer": "Hari says he is very happy.",
+                "choices": [
+                    "Hari says he is very happy.",
+                    "Hari says he was very happy.",
+                    "Hari said he is very happy.",
+                    "Hari said he was very happy."
+                ]
+            },
+            "Select the interrogative sentence from the given options below": {
+                "answer": "Shall I see you tomorrow?",
+                "choices": [
+                    "Shall I see you tomorrow?",
+                    "He has studied English for a long time.",
+                    "They won't believe you.",
+                    "It will be dark soon."
+                ]
+            },
+            "I \u2026\u2026\u2026\u2026.. told you earlier if I had known.": {
+                "answer": "would have",
+                "choices": [
+                    "would",
+                    "would have",
+                    "had",
+                    "should"
+                ]
+            },
+            "If everybody does \u2026\u2026\u2026\u2026.. part, the game should go smoothly.": {
+                "answer": "his or her",
+                "choices": [
+                    "his",
+                    "her",
+                    "his or her",
+                    "their"
+                ]
+            },
+            "Which of the following word is an adverb?": {
+                "answer": "well",
+                "choices": [
+                    "good",
+                    "bad",
+                    "well",
+                    "melt"
+                ]
+            },
+            "Man worked with his small tools until the advent of mordern machinery .......... by steam and electricity.": {
+                "answer": "driven",
+                "choices": [
+                    "worked",
+                    "controlled",
+                    "driven",
+                    "moved"
+                ]
             }
         },
         "General Knowledge": {
@@ -1504,6 +1819,186 @@
                     "7",
                     "8",
                     "9"
+                ]
+            },
+            "When did the new constitute of Nepal \"Nepal Ko Sambidhan\" was released?": {
+                "answer": "2072 Ashoj 3",
+                "choices": [
+                    "2072 Ashoj 4",
+                    "2072 Ashoj 3",
+                    "2072 Ashoj 2 d",
+                    "2072 Ashoj 1"
+                ]
+            },
+            "Who is known as \"Father of Computer\"?": {
+                "answer": "Charles Babbage",
+                "choices": [
+                    "Charles Babbage",
+                    "Bill Gates",
+                    "Mark Zuckerberg",
+                    "John V Neumann"
+                ]
+            },
+            "Which one of the following discipline is not awarded by noble prize?": {
+                "answer": "Computer Science",
+                "choices": [
+                    "Literature",
+                    "Economics",
+                    "Physics",
+                    "Computer Science"
+                ]
+            },
+            "Which one of the following belongs to SSD?": {
+                "answer": "Mass Storage",
+                "choices": [
+                    "Cache Memory",
+                    "ROM",
+                    "RAM",
+                    "Mass Storage"
+                ]
+            },
+            "Who won the FIFA World Cup 2018 held in Russia?": {
+                "answer": "France",
+                "choices": [
+                    "England",
+                    "Coratia",
+                    "France",
+                    "Germany"
+                ]
+            },
+            "Which one of the following is not an output device?": {
+                "answer": "OCR",
+                "choices": [
+                    "OCR",
+                    "Plotter",
+                    "Monitor",
+                    "Printer"
+                ]
+            },
+            "What is the scientific name of human?": {
+                "answer": "Homosepian",
+                "choices": [
+                    "Rana Tigrina",
+                    "Homosepian",
+                    "Felis Catus",
+                    "Rattus"
+                ]
+            },
+            "Which one of the following is the deepest river of the Nepal?": {
+                "answer": "Karnali",
+                "choices": [
+                    "Karnali",
+                    "KOshi",
+                    "Mahakali",
+                    "Gandaki"
+                ]
+            },
+            "Who was the first prime minister of Nepal?": {
+                "answer": "Bhimsen Thapa",
+                "choices": [
+                    "Janga Bahadur Rana",
+                    "Matrika Prasad Koirala",
+                    "Bhimsen Thapa",
+                    "Mathabar Sing Thapa"
+                ]
+            },
+            "Who is the writer of the Nepal novel \"Basain\"?": {
+                "answer": "Lil Bahadur Kshetri",
+                "choices": [
+                    "Lil Bahadur Kshetri",
+                    "Ramlal Joshi",
+                    "Gopal Prasad Rimal",
+                    "Lokendra Bahadur Chand"
+                ]
+            },
+            "The famous Manakamana Temple is situated in:": {
+                "answer": "Gorkha",
+                "choices": [
+                    "Gorkha",
+                    "Chitwan",
+                    "Tanahun",
+                    "Dhanding"
+                ]
+            },
+            "The Effiel tower is situated is:": {
+                "answer": "Paris",
+                "choices": [
+                    "London",
+                    "Tokyo",
+                    "Paris",
+                    "Madrid"
+                ]
+            },
+            "Which of the following is not a programming langage?": {
+                "answer": "Arduino",
+                "choices": [
+                    "C#",
+                    "JAVA",
+                    "Python",
+                    "Arduino"
+                ]
+            },
+            "The largest network category based on coverage area is:": {
+                "answer": "WAN",
+                "choices": [
+                    "LAN",
+                    "WAN",
+                    "MAN",
+                    "None of these"
+                ]
+            },
+            "How many permanent members are there in security council of UN?": {
+                "answer": "5",
+                "choices": [
+                    "2",
+                    "10",
+                    "4",
+                    "5"
+                ]
+            },
+            "Rafael Nadal is associated with:": {
+                "answer": "Long Tennis",
+                "choices": [
+                    "Cricket",
+                    "Long Tennis",
+                    "HOckey",
+                    "Wrestling"
+                ]
+            },
+            "The first President of Nepal is:": {
+                "answer": "Dr. Ram Baran Yadav",
+                "choices": [
+                    "Bidhya Devi Bhandari",
+                    "Puspha Kamal Dahal",
+                    "Sher Bahadur Deuba",
+                    "Dr. Ram Baran Yadav"
+                ]
+            },
+            "The letter's in HTTPs understands for:": {
+                "answer": "Secured",
+                "choices": [
+                    "Scared",
+                    "Secured",
+                    "Shape",
+                    "Shine"
+                ]
+            },
+            "Who is the captain of Nepal's National Cricket team?": {
+                "answer": "Parash Khadka",
+                "choices": [
+                    "Anil Gurung",
+                    "Gyanendra Malla",
+                    "Rohit Poudel",
+                    "Parash Khadka"
+                ]
+            },
+            "Which city is known as 'City of Temple'?": {
+                "answer": "Kathmandu",
+                "choices": [
+                    "Phuket",
+                    "New York",
+                    "Kathmandu",
+                    "Rome"
                 ]
             }
         },

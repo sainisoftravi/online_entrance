@@ -3325,6 +3325,456 @@
                     "2835",
                     "2583"
                 ]
+            },
+            "The slope of the straight line that passes through the point (-1,0) and (3,8) is:": {
+                "answer": "2",
+                "choices": [
+                    "2",
+                    "4",
+                    "6",
+                    "8"
+                ]
+            },
+            "The probability of sample space is:": {
+                "answer": "1",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "The number of subsets of set of order 5 is:": {
+                "answer": "32",
+                "choices": [
+                    "16",
+                    "32",
+                    "8",
+                    "24"
+                ]
+            },
+            "The value of \\(\\frac{\\sqrt{3}}{\\sqrt{9}}\\) is:": {
+                "answer": "rational number",
+                "choices": [
+                    "rational number",
+                    "irrational number",
+                    "imaginary number",
+                    "none of these"
+                ]
+            },
+            "If the function \\(f(x) = x^{2} - 5,\\) then \\(f(\\sqrt{5})\\) is equal to": {
+                "answer": "0",
+                "choices": [
+                    "0",
+                    "5",
+                    "10",
+                    "none of these"
+                ]
+            },
+            "The sum of \\(1^{st} \\space n\\) natural no. of A.P. is 55, the value of \\(n\\) is:": {
+                "answer": "10",
+                "choices": [
+                    "10",
+                    "12",
+                    "14",
+                    "16"
+                ]
+            },
+            "The value of \\(tan60^{\\circ}\\) is:": {
+                "answer": "\\(\\sqrt{3}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
+                    "\\(\\sqrt{3}\\)",
+                    "1"
+                ]
+            },
+            "If A and B are arbitary square matrices of same order, then:": {
+                "answer": "\\((AB)^{'}=A^{'} B^{'}\\)",
+                "choices": [
+                    "\\((AB)^{'}=AB^{'}\\)",
+                    "\\((AB)^{'}=A^{'} B^{'}\\)",
+                    "\\(A^{'}B^{'}=B^{'}A^{'}\\)",
+                    "\\((A+B)^{'}=A^{'}-B^{'}\\)"
+                ]
+            },
+            "A room is 12m long and 10m wide. If the area of 4 walls is \\(176m^{2}\\), the height of the room is:": {
+                "answer": "\\(4m\\)",
+                "choices": [
+                    "\\(5m^{2}\\)",
+                    "\\(4m\\)",
+                    "\\(3m^{2}\\)",
+                    "\\(6m\\)"
+                ]
+            },
+            "The value of \\(2^{12}+2^{12}+2^{12}+2^{12}\\) is:": {
+                "answer": "\\(2^{14}\\)",
+                "choices": [
+                    "\\(2^{14}\\)",
+                    "\\(4^{16}\\)",
+                    "\\(2^{16}\\)",
+                    "\\(2^{48}\\)"
+                ]
+            },
+            "If A and B are the non-singular matrices, then,": {
+                "answer": "\\((AB)^{-1}=B^{-1}A^{-1}\\)",
+                "choices": [
+                    "\\((AB)^{-1} = A^{-1}B^{-1}\\)",
+                    "\\(AB=BA\\)",
+                    "\\((AB)^{1}=A^{1}B^{1}\\)",
+                    "\\((AB)^{-1}=B^{-1}A^{-1}\\)"
+                ]
+            },
+            "What is 30% of the 20% of 10% of x?": {
+                "answer": "0.006x%",
+                "choices": [
+                    "0.006x%",
+                    "0.6x%",
+                    "0.06%",
+                    "none of these"
+                ]
+            },
+            "The difference between \\(\\frac{3}{5}\\) of 80 and 30% of 80 is:": {
+                "answer": "24",
+                "choices": [
+                    "15",
+                    "10",
+                    "24",
+                    "20"
+                ]
+            },
+            "In a company with 180 employees, 108 of the employees are female. What percent of the employees of the employees are male?": {
+                "answer": "40%",
+                "choices": [
+                    "5%",
+                    "25%",
+                    "35%",
+                    "40%"
+                ]
+            },
+            "The population doubling time if the population growth rate is 2% p.a. is:": {
+                "answer": "35 yrs",
+                "choices": [
+                    "35 yrs",
+                    "70 yrs",
+                    "50 yrs",
+                    "30 yrs"
+                ]
+            },
+            "By selling 33m of cloth one gains the selling price of 11m. The gain percent is:": {
+                "answer": "50%",
+                "choices": [
+                    "20%",
+                    "40%",
+                    "50%",
+                    "22%"
+                ]
+            },
+            "Hari sold a radio for Rs. 750 with Rs. 25 loss. His loss percentage is:": {
+                "answer": "3.225%",
+                "choices": [
+                    "3.33%",
+                    "3.225%",
+                    "3.45%",
+                    "3.49%"
+                ]
+            },
+            "Area of a rectangle is 150 sq.m. It's one side is 15m, the other side of the rectangle is:": {
+                "answer": "10m",
+                "choices": [
+                    "8m",
+                    "10m",
+                    "12m",
+                    "16m"
+                ]
+            },
+            "The formula to calculate the are of kite is:": {
+                "answer": "\\(\\frac{1}{2}d_{1} \\times d_{2}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}d_{1} \\times d_{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{4a}\\)",
+                    "\\(\\sqrt{s(s-a)(s-b)(s-c)}\\)",
+                    "none of these"
+                ]
+            },
+            "A dealer altered his trade discount from 15% to 10%, what percentage was the selling price altered ?": {
+                "answer": "5.88%",
+                "choices": [
+                    "5.56%",
+                    "5.88%",
+                    "6.88%",
+                    "5.63%"
+                ]
+            },
+            "An article was sold for Rs. 415 at a loss of 17%, what would have been the sale price?": {
+                "answer": "Rs. 500",
+                "choices": [
+                    "Rs. 475",
+                    "Rs. 490",
+                    "Rs. 500",
+                    "Rs. 525"
+                ]
+            },
+            "The value of \\(sin135^{\\circ}\\) is:": {
+                "answer": "\\(\\frac{1}{\\sqrt{2}}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
+                    "\\(\\frac{1}{\\sqrt{2}}\\)",
+                    "\\(\\frac{1}{\\sqrt{3}}\\)"
+                ]
+            },
+            "The time in .......... years that the sum of money double itself at 10% per annum of interest is:": {
+                "answer": "10 yrs",
+                "choices": [
+                    "20 yrs",
+                    "10.5 yrs",
+                    "12 yrs",
+                    "10 yrs"
+                ]
+            },
+            "Today is the birthday of Rahul and he is 3 times as old as Nirmala. In 13 years, Rahul will be one year less than twice as old as Nirmala will be then. The age of Rahul today is": {
+                "answer": "36 yrs",
+                "choices": [
+                    "30 yrs",
+                    "36 yrs",
+                    "49 yrs",
+                    "30 yrs"
+                ]
+            },
+            "A number consists of two digits. The sum of its digits is 16. If 18 is subtracted from the number, the digits are interchanged. The number is:": {
+                "answer": "97",
+                "choices": [
+                    "73",
+                    "72",
+                    "97",
+                    "24"
+                ]
+            },
+            "The breadth of a room 4m high is one third of its length. If the cost of painting its wall at the rate of Rs. 5 per \\(m^{2}\\) is Rs. 640, the cost of carpeting at the rate of Rs. 250 per \\(m^{2}\\) is:": {
+                "answer": "12000",
+                "choices": [
+                    "11000",
+                    "12000",
+                    "13000",
+                    "14000"
+                ]
+            },
+            "If \\(7a-b=23\\) and \\(7b-a=31\\), the value of \\(a+b\\) is:": {
+                "answer": "7",
+                "choices": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ]
+            },
+            "The value of \\(\\left| (-2-3)-(-2-3) \\right | is:": {
+                "answer": "0",
+                "choices": [
+                    "0",
+                    "4",
+                    "3",
+                    "2"
+                ]
+            },
+            "If \\(f(x)=x^{\\frac{1}{4}}+x^{\\frac{1}{2}},\\) the value of \\(f(16)\\) is:": {
+                "answer": "6",
+                "choices": [
+                    "6",
+                    "8",
+                    "32",
+                    "64"
+                ]
+            },
+            "Which is not true?": {
+                "answer": "\\((A+B)^{T}=A^{T}B^{T}\\)",
+                "choices": [
+                    "\\((A^{T})^{T}=A\\)",
+                    "\\((A+B)^{T}=A^{T}B^{T}\\)",
+                    "\\((AB)^{T}=A^{T}B^{T}\\)",
+                    "\\((kA)^{T}=kA^{T}\\), where k is a scalar"
+                ]
+            },
+            "The system of equations \\(2x+6y=6\\) and \\(6x+9y=18\\) have:": {
+                "answer": "unique solution",
+                "choices": [
+                    "unique solution",
+                    "no solution",
+                    "infinitely many solutions",
+                    "none of these"
+                ]
+            },
+            "The ratio compounded of 4:9, the duplicate ratio of 3:4 is:": {
+                "answer": "5:6",
+                "choices": [
+                    "1:4",
+                    "1:3",
+                    "3:1",
+                    "5:6"
+                ]
+            },
+            "If \\(x:y=6:5\\), the value of \\(\\frac{5x}{3y} : (5x-3y)\\) is equal to:": {
+                "answer": "5:2",
+                "choices": [
+                    "2:1",
+                    "3:1",
+                    "5:3",
+                    "5:2"
+                ]
+            },
+            "If \\(5x+13=31\\), the value of \\(\\sqrt{5x+31}\\) is:": {
+                "answer": "7",
+                "choices": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ]
+            },
+            "The width of a rectangle is 2cm less than its length and its length and perimeter is 12cm. The area of rectangle is:": {
+                "answer": "\\(8cm^{2}\\)",
+                "choices": [
+                    "\\(12cm^{2}\\)",
+                    "\\(8cm^{2}\\)",
+                    "\\(24cm^{2}\\)",
+                    "\\(18cm^{2}\\)"
+                ]
+            },
+            "If \\(x-7=1\\), the value of \\(x+19\\) is:": {
+                "answer": "27",
+                "choices": [
+                    "19",
+                    "27",
+                    "38",
+                    "42"
+                ]
+            },
+            "The quation of the line that passes through (4, -4) and (4, 4) is:": {
+                "answer": "\\(x=4\\)",
+                "choices": [
+                    "\\(x=4\\)",
+                    "\\(y=4\\)",
+                    "\\(y=4x\\)",
+                    "\\(y=4x+4\\)"
+                ]
+            },
+            "If \\(-7 \\le x \\le 7\\) and \\(0 \\le y \\le 12\\), the greatest possible value of \\(y-x\\) is:": {
+                "answer": "5",
+                "choices": [
+                    "5",
+                    "4",
+                    "3",
+                    "2"
+                ]
+            },
+            "If \\(a,b,c\\) are in GP, then": {
+                "answer": "\\(b^{2}=ac\\)",
+                "choices": [
+                    "\\(b^{2}=ac\\)",
+                    "\\(b(a^{2}+c^{2})=a(a^{2}+b^{2})\\)",
+                    "\\(b=\\frac{(a+b)}{2}\\)",
+                    "none of these"
+                ]
+            },
+            "If \\(13,p,q,r \\space and \\space 29\\) are in AP, the value of \\(p,q \\space and \\space r\\) are:": {
+                "answer": "none of these",
+                "choices": [
+                    "17,21,25",
+                    "17,22,23",
+                    "11,19,21",
+                    "none of these"
+                ]
+            },
+            "What price should a shopkeeper marks on an article, coming him Rs. 153 to gain 20%, after allowing a discount of 15%?": {
+                "answer": "Rs. 216",
+                "choices": [
+                    "Rs. 224",
+                    "Rs. 216",
+                    "Rs. 154",
+                    "Rs. 162"
+                ]
+            },
+            "A sold an article with Rs. 250 profit which is 15% in equivalent. The cost price of the article is:": {
+                "answer": "Rs. 1666.67",
+                "choices": [
+                    "Rs. 1688.8",
+                    "Rs. 1666.67",
+                    "Rs. 1676.70",
+                    "Rs. 1677.70"
+                ]
+            },
+            "Ramita sold a skirt for Rs. 500 where she had a loss of \\(\\frac{1}{6}\\) of the cost price. The cost price of the skirt is:": {
+                "answer": "600",
+                "choices": [
+                    "605",
+                    "556",
+                    "506",
+                    "600"
+                ]
+            },
+            "A dealer marks his goods 60% above the cost price. What percent of discount must be allowed, if he makes a profit of 20% only ?": {
+                "answer": "20%",
+                "choices": [
+                    "20%",
+                    "25%",
+                    "12%",
+                    "30%"
+                ]
+            },
+            "If 20% discount was given on math books costing Rs. 250, the selling price S.P. is:": {
+                "answer": "Rs. 200",
+                "choices": [
+                    "Rs. 150",
+                    "Rs. 100",
+                    "Rs. 250",
+                    "Rs. 200"
+                ]
+            },
+            "If \\(\\begin{pmatrix}1& 0 \\\\0& 1\\end{pmatrix}\\), the value of \\(A^{5}\\) is": {
+                "answer": "\\(\\begin{pmatrix}1& 0 \\\\0& 1\\end{pmatrix}\\)",
+                "choices": [
+                    "\\(\\begin{pmatrix}1& 0 \\\\0& 1\\end{pmatrix}\\)",
+                    "\\(\\begin{pmatrix}-1& 0 \\\\0& 1\\end{pmatrix}\\)",
+                    "\\(\\begin{pmatrix}1& 0 \\\\0& -1\\end{pmatrix}\\)",
+                    "\\(\\begin{pmatrix}2& -3 \\\\4& -4\\end{pmatrix}\\)"
+                ]
+            },
+            "The number of solutions \\(2x+y=4, \\space x-2y=3, \\space 3x+5y=6\\) is:": {
+                "answer": "0",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "Shyam lost 15% by selling his old book for Rs. 170. For how much he must have sold it to gain 15%?": {
+                "answer": "Rs. 230",
+                "choices": [
+                    "Rs. 184",
+                    "Rs. 194",
+                    "Rs. 230",
+                    "Rs. 224"
+                ]
+            },
+            "If a plot is for Rs. 18,700, the owner losses 15%. Find the price at which it must be sold to gain 25%?": {
+                "answer": "Rs. 27500",
+                "choices": [
+                    "Rs. 27000",
+                    "Rs. 27500",
+                    "Rs. 29000",
+                    "Rs. 38000"
+                ]
+            },
+            "The selling price of four articles equals to cost price of 5 articles. The gain is:": {
+                "answer": "25%",
+                "choices": [
+                    "20%",
+                    "25%",
+                    "28%",
+                    "80%"
+                ]
             }
         }
     }

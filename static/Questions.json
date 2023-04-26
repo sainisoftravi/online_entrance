@@ -3777,5 +3777,499 @@
                 ]
             }
         }
+    },
+    "BIM": {
+        "Verbal Ability": {
+            "Choose the word that express the meaning of BRIEF": {
+                "answer": "Limited",
+                "choices": [
+                    "Limited",
+                    "Small",
+                    "Little",
+                    "Short"
+                ]
+            },
+            "Choose the word that express the meaning of DISTANT": {
+                "answer": "Far",
+                "choices": [
+                    "Far",
+                    "Removed",
+                    "Reserved",
+                    "Seperared"
+                ]
+            },
+            "Choose the word that express the meaning of FAKE": {
+                "answer": "Imitation",
+                "choices": [
+                    "Original",
+                    "Imitation",
+                    "Trustworthy",
+                    "Loyal"
+                ]
+            },
+            "Choose the word that express the meaning of ALERT": {
+                "answer": "Watchful",
+                "choices": [
+                    "Energetic",
+                    "Observant",
+                    "Intelligent",
+                    "Watchful"
+                ]
+            },
+            "Choose the word with the opposite meaning of the word ARTIFICIAL": {
+                "answer": "Nautral",
+                "choices": [
+                    "Red",
+                    "Natural",
+                    "Truthful",
+                    "Solid"
+                ]
+            },
+            "Choose the word with the opposite meaning of the word EXPAND": {
+                "answer": "Condense",
+                "choices": [
+                    "Condense",
+                    "Convert",
+                    "Congest",
+                    "Conclude"
+                ]
+            },
+            "Choose the word with the opposite meaning of the word BUSY": {
+                "answer": "Relaxed",
+                "choices": [
+                    "Occupied",
+                    "Engrossed",
+                    "Relaxed",
+                    "Engaged"
+                ]
+            },
+            "Choose the word with the opposite meaning of the word FRESH": {
+                "answer": "Stale",
+                "choices": [
+                    "Faulty",
+                    "Stale",
+                    "Sluggish",
+                    "Disgraceful"
+                ]
+            },
+            "The dog barked .......... the stranger.": {
+                "answer": "at",
+                "choices": [
+                    "upon",
+                    "over",
+                    "at",
+                    "to"
+                ]
+            },
+            "You must bear .......... my weakness.": {
+                "answer": "with",
+                "choices": [
+                    "up",
+                    "with",
+                    "in",
+                    "for"
+                ]
+            },
+            "A blind man is no judge .......... colours.": {
+                "answer": "of",
+                "choices": [
+                    "to",
+                    "for",
+                    "in",
+                    "of"
+                ]
+            },
+            "My friends is not accustomed .......... drinking.": {
+                "answer": "to",
+                "choices": [
+                    "with",
+                    "in",
+                    "to",
+                    "for"
+                ]
+            },
+            "List of the business or subjects to be considered at a meeting.": {
+                "answer": "Agenda",
+                "choices": [
+                    "Agenda",
+                    "Time table",
+                    "Plan",
+                    "Schedule"
+                ]
+            },
+            "Leave or remove from a place considered dangerous.": {
+                "answer": "Evacuate",
+                "choices": [
+                    "Evade",
+                    "Evacuate",
+                    "Avoid",
+                    "Exterminate"
+                ]
+            },
+            "One who possesses many talents.": {
+                "answer": "Versatile",
+                "choices": [
+                    "Gifted",
+                    "Nubile",
+                    "Exceptional",
+                    "Versatile"
+                ]
+            },
+            "Something that will last forever.": {
+                "answer": "Eternal",
+                "choices": [
+                    "Celestial",
+                    "Godly",
+                    "Eternal",
+                    "Repetitive"
+                ]
+            }
+        },
+        "General Awareness": {
+            "Where is the headquater of UNESCO?": {
+                "answer": "Paris",
+                "choices": [
+                    "New York",
+                    "New Delhi",
+                    "Nairobi",
+                    "Paris"
+                ]
+            },
+            "Highest speed of wind could be expected in case of": {
+                "answer": "Hurricane",
+                "choices": [
+                    "Strong breeze",
+                    "Strong strom",
+                    "Hurricane",
+                    "Strong gale"
+                ]
+            },
+            "The longest river of the world": {
+                "answer": "Nile",
+                "choices": [
+                    "Indus",
+                    "Nile",
+                    "Ganga",
+                    "Amazon"
+                ]
+            },
+            "Which of the following name is asociated with aircraft?": {
+                "answer": "Wirght Brothers",
+                "choices": [
+                    "Marconi",
+                    "Peter Paul",
+                    "Wirght Brothers",
+                    "James Watt"
+                ]
+            },
+            "Which of the following arilines does not have regular passenger flights to Kathmandu?": {
+                "answer": "JAL",
+                "choices": [
+                    "JAL",
+                    "Korean Air",
+                    "Bangladesh Biman",
+                    "Qatar Airways"
+                ]
+            },
+            "A websites main page is called:": {
+                "answer": "Home page",
+                "choices": [
+                    "Website page",
+                    "Home page",
+                    "Search page",
+                    "Browser page"
+                ]
+            },
+            "Mona Lisa is known for": {
+                "answer": "Painting",
+                "choices": [
+                    "Dancing",
+                    "Rafting",
+                    "Painting",
+                    "Cooking"
+                ]
+            },
+            "Data that is copied from application is stored in the": {
+                "answer": "Clipboard",
+                "choices": [
+                    "RAM",
+                    "Prompt",
+                    "Clipboard",
+                    "CPU"
+                ]
+            },
+            "Which among the following is the most common source of viruses to the hard disk of your computer?": {
+                "answer": "Incoming Email",
+                "choices": [
+                    "Incoming Email",
+                    "Outgoing Email",
+                    "CDROM",
+                    "Websites"
+                ]
+            },
+            "Bulls and bears are the terms associated with": {
+                "answer": "Stock exchange",
+                "choices": [
+                    "Parliamentary affairs",
+                    "Stock exchange",
+                    "Bull fights",
+                    "Racing"
+                ]
+            },
+            "With which of the following items is the trade name CG group of industries associated?": {
+                "answer": "Instant noodles",
+                "choices": [
+                    "Cement",
+                    "Blades",
+                    "Instant noodles",
+                    "Tractors"
+                ]
+            },
+            "Tikapur is on the bank of river": {
+                "answer": "Karnali",
+                "choices": [
+                    "Karnali",
+                    "Mahakali",
+                    "Gandaki",
+                    "Koshi"
+                ]
+            },
+            "The first man to set foot on the moon was": {
+                "answer": "Neil Armstrong",
+                "choices": [
+                    "Robert Crippen",
+                    "Alexie Leonov",
+                    "Yuri Gagarin",
+                    "Neil Armstrong"
+                ]
+            },
+            "Which of the folloiwing is not a himalayan river?": {
+                "answer": "Bagmati",
+                "choices": [
+                    "Trishuli",
+                    "Bagmati",
+                    "Kali Gandaki",
+                    "Koshi"
+                ]
+            },
+            "Siesmology refers to": {
+                "answer": "Earthquakes",
+                "choices": [
+                    "Earthquakes",
+                    "Plants",
+                    "Humidity",
+                    "Planets"
+                ]
+            },
+            "Oslo is the capital of": {
+                "answer": "Norway",
+                "choices": [
+                    "Norway",
+                    "Canada",
+                    "Yaman",
+                    "Sweden"
+                ]
+            },
+            "Silver fish is": {
+                "answer": "An insect",
+                "choices": [
+                    "A fish",
+                    "An insect",
+                    "A term used in politics",
+                    "A fish made of silver"
+                ]
+            },
+            "Which of the following place is not on the direct bus route from Bharatpur to Janakpur?": {
+                "answer": "Hetauda",
+                "choices": [
+                    "Birgunj",
+                    "Hetauda",
+                    "Nijgarh",
+                    "Bardibas"
+                ]
+            },
+            "Swargadwari Temple is situated in": {
+                "answer": "Pyuthan",
+                "choices": [
+                    "Surkhet",
+                    "Jajarkot",
+                    "Dang",
+                    "Pyuthan"
+                ]
+            },
+            "Mahabharata was written by": {
+                "answer": "Ved Vyas",
+                "choices": [
+                    "Ved Vyas",
+                    "Manu",
+                    "Surdas",
+                    "Tulsidas"
+                ]
+            }
+        },
+        "Business and Economics": {
+            "What is the full form of WTO?": {
+                "answer": "World Travel Organization",
+                "choices": [
+                    "World Travel Organization",
+                    "Wimbeldon Tennis Office",
+                    "World Trade Organization",
+                    "Women Travel Organization"
+                ]
+            },
+            "Which of the following can be considered as seasonal industry?": {
+                "answer": "Sugar",
+                "choices": [
+                    "Cement",
+                    "Sugar",
+                    "Automobile",
+                    "Power"
+                ]
+            },
+            "Which of the following is Nepal's largest trading partner?": {
+                "answer": "India",
+                "choices": [
+                    "USA",
+                    "Japan",
+                    "China",
+                    "India"
+                ]
+            },
+            "Cheap money policy is adopted generally during": {
+                "answer": "Recession",
+                "choices": [
+                    "Boom",
+                    "Hyper inflation",
+                    "Inflation",
+                    "Recession"
+                ]
+            },
+            "Which of the following will not be considered investment?": {
+                "answer": "Piling of inverstors on a trader's shelf",
+                "choices": [
+                    "Piling of inverstors on a trader's shelf",
+                    "The building of a school",
+                    "Construction of a house",
+                    "Purchase of 100 shares of Standard Chartered Bank"
+                ]
+            },
+            "The regulators authority for stock market in Nepal is": {
+                "answer": "Nepal Stock Exchange",
+                "choices": [
+                    "Nepal Stock Exchange",
+                    "Nepal Rastra Bank",
+                    "Company Registra's Office",
+                    "Ministry of Finance"
+                ]
+            },
+            "Profit margins are the lowest in": {
+                "answer": "Perfect competition",
+                "choices": [
+                    "Absolute monopoly",
+                    "Monopolistic competition",
+                    "Oligopolistic competition",
+                    "Perfect competition"
+                ]
+            },
+            "Which of the following payment instruments is known as plastic money?": {
+                "answer": "Credit cards",
+                "choices": [
+                    "Bearer cheques",
+                    "Demand drafts",
+                    "Credit cards",
+                    "Gift cheques"
+                ]
+            },
+            "VAT is a/an": {
+                "answer": "Sales tax",
+                "choices": [
+                    "Income tax",
+                    "Sales tax",
+                    "Custom duty",
+                    "Travel tax"
+                ]
+            },
+            "Globalization refers to:": {
+                "answer": "A more integrated and interdependent world",
+                "choices": [
+                    "Lower incomes worldwide",
+                    "Less foreign trade and investment",
+                    "Global warming and their effects",
+                    "A more integrated and interdependent world"
+                ]
+            },
+            "Whose signature are found on thousand rupee note of Nepal": {
+                "answer": "Governor, NRB",
+                "choices": [
+                    "Minister of finance",
+                    "Governor, NRB",
+                    "Prime Minister",
+                    "Secretary, Ministry of Finance"
+                ]
+            },
+            "Accounting is the process of matching": {
+                "answer": "Revenue and costs",
+                "choices": [
+                    "Benefits and costs",
+                    "Revenue and costs",
+                    "Cash inflow and outflows",
+                    "Potential and real performance"
+                ]
+            },
+            "Which of the following is not a characteristics of monopoly?": {
+                "answer": "Product differentiation",
+                "choices": [
+                    "Product differentiation",
+                    "Only onr producer",
+                    "Large profit margins",
+                    "Ineffiencies"
+                ]
+            },
+            "What is SWOT analysis?": {
+                "answer": "Strength, Weakness, Opportunity and Threat",
+                "choices": [
+                    "Swift Work of Tribes",
+                    "Sustainable Work of Transport",
+                    "Strength, Opportunity, Weakness and Threat",
+                    "Strength, Weakness, Opportunity and Threat"
+                ]
+            },
+            "Which of the following ratio inicates the finnancial risk of a firm?": {
+                "answer": "Debt equity ratio",
+                "choices": [
+                    "Market yeild",
+                    "Dividend cover",
+                    "Debt equity ratio",
+                    "Net profit margin"
+                ]
+            },
+            "Net worth means": {
+                "answer": "Paid up capital + free reserves - accumulated losses",
+                "choices": [
+                    "Paid up capital + free reserves",
+                    "Paid up capital",
+                    "Paid up capital - accumulated losses",
+                    "Paid up capital + free reserves - accumulated losses"
+                ]
+            },
+            "Which of the following districts of Nepal is the largest producer of coffee?": {
+                "answer": "Ilam",
+                "choices": [
+                    "Surkhet",
+                    "Gulmi",
+                    "Bhktapr",
+                    "Ilam"
+                ]
+            },
+            "Which country is known as the world's sugar bowl": {
+                "answer": "India",
+                "choices": [
+                    "Cuba",
+                    "China",
+                    "USA",
+                    "India"
+                ]
+            }
+        }
     }
 }

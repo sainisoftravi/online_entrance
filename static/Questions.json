@@ -4271,5 +4271,342 @@
                 ]
             }
         }
+    },
+    "BIT": {
+        "English": {
+            "I like .......... in my spare time.": {
+                "answer": "reading",
+                "choices": [
+                    "reading",
+                    "read",
+                    "to read",
+                    "to reading"
+                ]
+            },
+            "I went to the bookshop .......... 'Harry Potter'.": {
+                "answer": "to buy",
+                "choices": [
+                    "for buying",
+                    "to buy",
+                    "to buying",
+                    "for to buy"
+                ]
+            },
+            "He is interested .......... learning Romanian.": {
+                "answer": "in",
+                "choices": [
+                    "in",
+                    "on",
+                    "to",
+                    "for"
+                ]
+            },
+            "Would you like .......... to drink, Sir?": {
+                "answer": "anything",
+                "choices": [
+                    "anything",
+                    "anywhere",
+                    "nothing",
+                    "something"
+                ]
+            },
+            "What .......... next weekend?": {
+                "answer": "are you doing",
+                "choices": [
+                    "do you do",
+                    "are you doing",
+                    "will you do",
+                    "did you do"
+                ]
+            },
+            "How manu students in your class .......... from Bangladesh?": {
+                "answer": "come",
+                "choices": [
+                    "comes",
+                    "come",
+                    "came",
+                    "are coming"
+                ]
+            },
+            "I am hungry. I want two .......... of chicken.": {
+                "answer": "pieces",
+                "choices": [
+                    "plates",
+                    "pieces",
+                    "bowls",
+                    "gasses"
+                ]
+            },
+            "They are ugly and expensive, .......... people buy them.": {
+                "answer": "still",
+                "choices": [
+                    "although",
+                    "yet",
+                    "still",
+                    "besides"
+                ]
+            },
+            "What time ..........": {
+                "answer": "does the train leave?",
+                "choices": [
+                    "the train leaves?",
+                    "is the train leaving?",
+                    "leaves the train",
+                    "does the train leave?"
+                ]
+            },
+            "I promise I .......... study harder.": {
+                "answer": "will",
+                "choices": [
+                    "will",
+                    "am going to",
+                    "may",
+                    "must"
+                ]
+            },
+            "How long .......... English?": {
+                "answer": "have you been learning",
+                "choices": [
+                    "are you learning",
+                    "have you been learning",
+                    "do you learn",
+                    "you learn"
+                ]
+            },
+            "I hope that a school .......... for village children.": {
+                "answer": "opens",
+                "choices": [
+                    "opens",
+                    "is opened",
+                    "has to be opened",
+                    "be opened"
+                ]
+            },
+            "Closest similar meaning of word 'demolish' is": {
+                "answer": "destroy",
+                "choices": [
+                    "repair",
+                    "consume",
+                    "humiliate",
+                    "destroy"
+                ]
+            },
+            "Closest similar meaning of word 'beneficent' is": {
+                "answer": "veracity",
+                "choices": [
+                    "mandatory",
+                    "untruthfulness",
+                    "veracity",
+                    "potential"
+                ]
+            },
+            "Closest opposite meaning of word 'theocracy' is": {
+                "answer": "secularism",
+                "choices": [
+                    "secularism",
+                    "ideology",
+                    "conservative",
+                    "chruch state"
+                ]
+            },
+            "Closest similar meaning of word 'compunction' is": {
+                "answer": "remorse",
+                "choices": [
+                    "remorse",
+                    "recklessness",
+                    "merciful",
+                    "connive"
+                ]
+            },
+            "Closest opposite meaning of word 'integrate' is": {
+                "answer": "segregate",
+                "choices": [
+                    "accomodate",
+                    "segregate",
+                    "compose",
+                    "articulate"
+                ]
+            },
+            "Closest opposite meaning of word 'Calm' is": {
+                "answer": "excited",
+                "choices": [
+                    "excited",
+                    "restful",
+                    "cool",
+                    "serene"
+                ]
+            },
+            "Closest meaning of word 'wordy' is": {
+                "answer": "rambling",
+                "choices": [
+                    "rambling",
+                    "concise",
+                    "diffuse",
+                    "voluble"
+                ]
+            },
+            "A teacher needs to discuss in classes, it .......... curiosity in students.": {
+                "answer": "creates",
+                "choices": [
+                    "creates",
+                    "created",
+                    "create",
+                    "will create"
+                ]
+            },
+            "Successful people always .......... two things: one, determination and second,sincerity.": {
+                "answer": "have",
+                "choices": [
+                    "had",
+                    "doing",
+                    "did",
+                    "have"
+                ]
+            },
+            "They like swimming, whenever they have a leisure time.(which word is not a verbal noun?)": {
+                "answer": "free",
+                "choices": [
+                    "Leisure",
+                    "free",
+                    "like",
+                    "swimming"
+                ]
+            },
+            "Nobody likes heap of garbage in front of his house.(Which word is a collective noun?)": {
+                "answer": "heap of garbage",
+                "choices": [
+                    "heap of garbage",
+                    "in front",
+                    "house",
+                    "likes"
+                ]
+            },
+            "Which of the following is noun?": {
+                "answer": "reality",
+                "choices": [
+                    "real",
+                    "readable",
+                    "reliable",
+                    "reality"
+                ]
+            },
+            "English is today the third .......... native language worldwide after Chinese and Hindi with some 380 million speakers.": {
+                "answer": "most spoken",
+                "choices": [
+                    "the most spoken",
+                    "the more spoken",
+                    "much spoken",
+                    "most spoken"
+                ]
+            },
+            "We could barely get aby information at the airport .......... people seemd to have .......... idea about the flights.": {
+                "answer": "Few/no",
+                "choices": [
+                    "Many/any",
+                    "A lot of/any",
+                    "Few/no",
+                    "Only a few/some"
+                ]
+            },
+            ".......... his friends speaks any English.": {
+                "answer": "Neither of",
+                "choices": [
+                    "Some",
+                    "All",
+                    "Many",
+                    "Neither of"
+                ]
+            },
+            "These differeneces between two photographs .......... with the help of Photoshop.": {
+                "answer": "could have been remove",
+                "choices": [
+                    "should remove",
+                    "have to remove",
+                    "could have been remove",
+                    "must have removed"
+                ]
+            },
+            "New legislation .......... in congress but it .......... by any.": {
+                "answer": "was introduced/wasn't accepted",
+                "choices": [
+                    "was introduced/wasn't accepted",
+                    "was introduced/didn't accept",
+                    "is introduced/won't accept",
+                    "introduced/hadn't been accepted"
+                ]
+            },
+            "Mike has been told he will have to pay the fine .......... his high rank in the military.": {
+                "answer": "despite",
+                "choices": [
+                    "even if",
+                    "furthermore",
+                    "despite",
+                    "on purpose that"
+                ]
+            },
+            "The economy in China is booming; .......... many foreign investors are planning to enter China's market.": {
+                "answer": "so as to",
+                "choices": [
+                    "Nonetheless",
+                    "so as to",
+                    "in addition to",
+                    "that's why"
+                ]
+            },
+            "I wish you .......... making that noise. It's bothering me.": {
+                "answer": "would stop",
+                "choices": [
+                    "would stop",
+                    "are going to stop",
+                    "stop",
+                    "can stop"
+                ]
+            },
+            ".......... more help, I could call my neighbour.": {
+                "answer": "Should I need",
+                "choices": [
+                    "Needed",
+                    "Should I need",
+                    "I have needed",
+                    "I should need"
+                ]
+            },
+            "If you plan to take a long trip in the car, you must get a full tank of gas or you .......... out of gas.": {
+                "answer": "might run",
+                "choices": [
+                    "hve to run",
+                    "should have to run",
+                    "had better run",
+                    "might run"
+                ]
+            },
+            "If you want to get a good night's sleep, you .......... any tea or coffee in the evenings": {
+                "answer": "mustn't drink",
+                "choices": [
+                    "would rathe drink",
+                    "don't have to drink",
+                    "mustn't drink",
+                    "not able to drink"
+                ]
+            },
+            "It is not easy for many civil servants to .......... on their salaries as the inflation rate is extremely high.": {
+                "answer": "get by",
+                "choices": [
+                    "get by",
+                    "turn up",
+                    "wear out",
+                    "run over"
+                ]
+            },
+            "I thought the party was going to be boring, nut it .......... to be the most unforgettable evening of my life.": {
+                "answer": "turned out",
+                "choices": [
+                    "turned out",
+                    "looked around",
+                    "passed away",
+                    "fell back on"
+                ]
+            }
+        }
     }
 }

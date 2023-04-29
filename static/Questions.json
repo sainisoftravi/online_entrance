@@ -3775,6 +3775,852 @@
                     "28%",
                     "80%"
                 ]
+            },
+            "A number is divided by 10 gives a remainder 7. If the same number is divided by 5, then what will be the remainder ?": {
+                "answer": "2",
+                "choices": [
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "Which one of the following value of '\\(n\\)' gives the negative result of \\(n^{2} - 15\\)? Options: 7, 5, 3, 4.?": {
+                "answer": "3",
+                "choices": [
+                    "7",
+                    "5",
+                    "3",
+                    "4"
+                ]
+            },
+            "If '\\(n\\)' is an integer, then which one of the following expression must be even?": {
+                "answer": "\\(n(n+1)\\)",
+                "choices": [
+                    "\\(n(n+1)\\)",
+                    "\\(n^{2} + 1\\)",
+                    "\\(n(n+2)\\)",
+                    "\\(n(n+4)\\)"
+                ]
+            },
+            "Which is the sum of first five prime numbers?": {
+                "answer": "28",
+                "choices": [
+                    "18",
+                    "25",
+                    "26",
+                    "28"
+                ]
+            },
+            "If you save 1 pais today, 2 paisa next day, 4 paisa the succeeding day and so on, then what is the toal saving on the week?": {
+                "answer": "127 paisa",
+                "choices": [
+                    "127 paisa",
+                    "64 paisa",
+                    "256 paisa",
+                    "128 paisa"
+                ]
+            },
+            "If 6 is subtracted from the cube of a number and the result is 21, then what is the value of that number?": {
+                "answer": "3",
+                "choices": [
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ]
+            },
+            "If the product of two consecutive even number is 288, then what are these numbers from following?": {
+                "answer": "16,18",
+                "choices": [
+                    "14,12",
+                    "14,16",
+                    "16,18",
+                    "22,24"
+                ]
+            },
+            "The total of ages of A and B is 3:5, if B is 8 years elder to A, then what is the age of the A ?": {
+                "answer": "12 yrs",
+                "choices": [
+                    "12 yrs",
+                    "15 yrs",
+                    "18 yrs",
+                    "21 yrs"
+                ]
+            },
+            "If the root of the equation \\(x^{2}-6x+c=0\\) is 3, then what is the value of \\(c\\)?": {
+                "answer": "9",
+                "choices": [
+                    "3",
+                    "6",
+                    "8",
+                    "9"
+                ]
+            },
+            "Which one of the following is true for the roots of the equation \\(x^{2}-8x+16=0\\)?": {
+                "answer": "real & equal",
+                "choices": [
+                    "imaginary & unequal",
+                    "rational & unequal",
+                    "real & equal",
+                    "real & unequal"
+                ]
+            },
+            "If the matrix is of order \\(5 \\times 3\\), then how many elements will be single column?": {
+                "answer": "5",
+                "choices": [
+                    "5",
+                    "3",
+                    "4",
+                    "15"
+                ]
+            },
+            "If \\(x-5 = 1\\), then what is the value of \\(x+7\\)?": {
+                "answer": "13",
+                "choices": [
+                    "5",
+                    "7",
+                    "8",
+                    "13"
+                ]
+            },
+            "If \\(5x+13=31\\), what is the value of \\(\\sqrt{(5x+31)}\\) ?": {
+                "answer": "7",
+                "choices": [
+                    "5",
+                    "6",
+                    "7",
+                    "8"
+                ]
+            },
+            "What is the correct value of \\(\\frac{5^{4}-5^{3}}{4}\\).": {
+                "answer": "\\(5^{3}\\)",
+                "choices": [
+                    "\\(5^{3}\\)",
+                    "\\(\\frac{1}{5}\\)",
+                    "\\(5^{4}\\)",
+                    "\\(\\frac{5}{4}\\)"
+                ]
+            },
+            "If \\(a^{x}=b, \\space b^{y}=c \\space and \\space c^{z}=a\\), then what is the value of \\(xyz\\)?": {
+                "answer": "\\(1\\)",
+                "choices": [
+                    "\\(c\\)",
+                    "\\(a\\)",
+                    "\\(b\\)",
+                    "\\(1\\)"
+                ]
+            },
+            "If \\(p+q=r,\\) then what is the average value of \\(p, q \\space r\\)?": {
+                "answer": "\\(\\frac{2r}{3}\\)",
+                "choices": [
+                    "\\(\\frac{r}{3}\\)",
+                    "\\(\\frac{(p+q)}{3}\\)",
+                    "\\(\\frac{2r}{3}\\)",
+                    "\\(\\frac{r}{3}\\)"
+                ]
+            },
+            "What is the slope of the line whose equation is \\(2x-4y=9?\\)": {
+                "answer": "equal",
+                "choices": [
+                    "complementary",
+                    "supplementary",
+                    "adjacent",
+                    "equal"
+                ]
+            },
+            "There are 60 students in a class. If 60% of them are girls, then how many boys in the class ?": {
+                "answer": "24",
+                "choices": [
+                    "24",
+                    "36",
+                    "18",
+                    "40"
+                ]
+            },
+            "Last year Hari was 4 feet tall, and this year he is 5 feet tall. What is the percent increase of his height ?": {
+                "answer": "25%",
+                "choices": [
+                    "10%",
+                    "15%",
+                    "20%",
+                    "25%"
+                ]
+            },
+            "What is the difference between \\(\\frac{3}{5} \\space of \\space 80\\) and 30% of 80 ?": {
+                "answer": "24",
+                "choices": [
+                    "12",
+                    "18",
+                    "24",
+                    "20"
+                ]
+            },
+            "The cost of 6 pens is equal to the cost of the 10 pencils. If the cost of 4 pencils is Rs. 120, then what is the cost of 4 pens ?": {
+                "answer": "200",
+                "choices": [
+                    "100",
+                    "200",
+                    "300",
+                    "400"
+                ]
+            },
+            "If the cost of 7 kg sugar is Rs. 210, how much sugar can be purchased for Rs. 330?": {
+                "answer": "11 kg",
+                "choices": [
+                    "11 kg",
+                    "12 kg",
+                    "13 kg",
+                    "14 kg"
+                ]
+            },
+            "Ganga can read 48 pages per hour. At this rate, how many pages she can read in 80 minutes ?": {
+                "answer": "64",
+                "choices": [
+                    "60",
+                    "72",
+                    "48",
+                    "64"
+                ]
+            },
+            "Two numbers are in the ratio of 6:7 and their sum is 117, then what are these numbers?": {
+                "answer": "54,63",
+                "choices": [
+                    "56,58",
+                    "63,54",
+                    "54,63",
+                    "48,56"
+                ]
+            },
+            "If \\(5:7=15:x\\), then what is the value of \\(x\\)?": {
+                "answer": "21",
+                "choices": [
+                    "18",
+                    "21",
+                    "24",
+                    "35"
+                ]
+            },
+            "If cost price of 8 pens and selling price of 10 pens is equal, then what is loss percentage?": {
+                "answer": "20%",
+                "choices": [
+                    "20%",
+                    "15%",
+                    "10%",
+                    "25%"
+                ]
+            },
+            "If the 20% discount is given on computer book costing Rs. 300, then what will be selling price?": {
+                "answer": "Rs. 240",
+                "choices": [
+                    "Rs. 240",
+                    "Rs. 220",
+                    "Rs. 260",
+                    "Rs. 250"
+                ]
+            },
+            "A watch is bought of Rs. 250 and sold at Rs. 300, then what is the profit percentage?": {
+                "answer": "20%",
+                "choices": [
+                    "10%",
+                    "15%",
+                    "20%",
+                    "25%"
+                ]
+            },
+            "What is the population doubling time if the population growth rate is 2% per annum ?": {
+                "answer": "30 yrs",
+                "choices": [
+                    "60 yrs",
+                    "50 yrs",
+                    "40 yrs",
+                    "30 yrs"
+                ]
+            },
+            "What is the rate percentage per annum that a sum of money trebles itself in 25 years ?": {
+                "answer": "2%",
+                "choices": [
+                    "2%",
+                    "4%",
+                    "6%",
+                    "8%"
+                ]
+            },
+            "What is the cardinal number of a vowel set \\(V = \\left\\{ a,e,i,o,u \\right\\} ?": {
+                "answer": "5",
+                "choices": [
+                    "4",
+                    "5",
+                    "6",
+                    "7"
+                ]
+            },
+            "What is the minimum value of \\(n(P \\cap Q)\\)? When \\(n(U)=100, n(P)=70, \\space and \\space n(Q)=45\\)?": {
+                "answer": "15",
+                "choices": [
+                    "15",
+                    "55",
+                    "30",
+                    "45"
+                ]
+            },
+            "Which one of the following is true for prime number?": {
+                "answer": "only two factors",
+                "choices": [
+                    "no factors",
+                    "only one factor",
+                    "only two factors",
+                    "more than two factors"
+                ]
+            },
+            "Which one of the following interval notation is correct for \\(\\left\\{x:5 \\le x \\le 15 \\right\\}?": {
+                "answer": "\\(\\left [5, 15 \\right ]\\)",
+                "choices": [
+                    "\\(\\left [5, \\infty \\right ]\\)",
+                    "\\(\\left [\\infty, 14 \\right ]\\)",
+                    "\\(\\left [6, 13 \\right]\\)",
+                    "\\(\\left [5, 15 \\right ]\\)"
+                ]
+            },
+            "What is the value of '\\(x\\)' when it is multiplied by 6 and added to 3 times its own number gives 63?": {
+                "answer": "7",
+                "choices": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ]
+            },
+            "What is the value of \\((\\sqrt{5}+\\sqrt{5})^{2}\\)?": {
+                "answer": "20",
+                "choices": [
+                    "20",
+                    "25",
+                    "10",
+                    "60"
+                ]
+            },
+            "What is the number of seconds in \\(1 \\frac{1}{3}\\) hour ?": {
+                "answer": "4800 sec",
+                "choices": [
+                    "1200 sec",
+                    "2400 sec",
+                    "3600 sec",
+                    "4800 sec"
+                ]
+            },
+            "In a kilometer race A beats B by 100 meters and B beats C by 150 meters. In the same race, by how many meters does A beats C?": {
+                "answer": "250 m",
+                "choices": [
+                    "150 m",
+                    "100 m",
+                    "250 m",
+                    "200 m"
+                ]
+            },
+            "The area of 4 walls of square room is \\(120m^{2}\\). If the height is \\(5m\\), then what is the area of its floor?": {
+                "answer": "\\(36 m^{2}\\)",
+                "choices": [
+                    "\\(26 m^{2}\\)",
+                    "\\(56 m^{2}\\)",
+                    "\\(25 m^{2}\\)",
+                    "\\(36 m^{2}\\)"
+                ]
+            },
+            "What is the probability of death ?": {
+                "answer": "1",
+                "choices": [
+                    "1",
+                    "\\(\\frac{1}{2}\\)",
+                    "0",
+                    "\\(\\infty\\)"
+                ]
+            },
+            "What is the chance to give the birth by a pregnant lady on Tuesday ?": {
+                "answer": "\\(\\frac{1}{7}\\)",
+                "choices": [
+                    "\\(\\frac{3}{7}\\)",
+                    "\\(\\frac{1}{7}\\)",
+                    "1",
+                    "\\(\\frac{1}{2}\\)"
+                ]
+            },
+            "If the BACHELOR is written as 12345678, then how will BCA be written?": {
+                "answer": "132",
+                "choices": [
+                    "123",
+                    "432",
+                    "147",
+                    "132"
+                ]
+            },
+            "Saru ranks \\(8^{th}\\) from the top and \\(20^{th}\\) from the bottom in class, then how many students are there in class room ?": {
+                "answer": "27",
+                "choices": [
+                    "28",
+                    "27",
+                    "20",
+                    "29"
+                ]
+            },
+            "Find the value of '\\(x\\)' in series \\(1,1,2,3,5,8,13,x\\)?": {
+                "answer": "21",
+                "choices": [
+                    "21",
+                    "22",
+                    "23",
+                    "20"
+                ]
+            },
+            "What is the value of \\(cos0^{\\circ}\\)?": {
+                "answer": "1",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{1}{\\sqrt{2}}\\)",
+                    "0",
+                    "1"
+                ]
+            },
+            "If the slope of line joining (1,2) and (k,-5) is equally inclined with both the axes, then the value of k is": {
+                "answer": "6",
+                "choices": [
+                    "6",
+                    "-6",
+                    "3",
+                    "-2"
+                ]
+            },
+            "What is the value of \\(cot90^{\\circ}\\)?": {
+                "answer": "0",
+                "choices": [
+                    "3",
+                    "\\(\\frac{1}{2}\\)",
+                    "0",
+                    "1"
+                ]
+            },
+            "What is the probability of drawing a queen when one card is drawn randomly from a well shuffled pack of 52 cards? Find the probability of drawing a red queen?": {
+                "answer": "\\(\\frac{1}{26}\\)",
+                "choices": [
+                    "\\(\\frac{1}{26}\\)",
+                    "\\(\\frac{5}{6}\\)",
+                    "\\(\\frac{3}{4}\\)",
+                    "\\(\\frac{15}{36}\\)"
+                ]
+            },
+            "If \\(A, B, C\\) are the subsets of a universal set \\(U\\). Then \\(A-(B \\cup C)\\) is equal to,": {
+                "answer": "\\((A-B) \\cap (A-C)\\)",
+                "choices": [
+                    "\\((A-B) \\cup (A-C)\\)",
+                    "\\((A-B) \\cap (A-C)\\)",
+                    "\\((A \\cap B) - (A \\cap C)\\)",
+                    "\\((A \\cup B) - (A \\cup C)\\)"
+                ]
+            },
+            "Of a group of 120 students, 90 takes mathematics and 72 takes statistics. If 10 students neither of two, the number of student taking both subjects are:": {
+                "answer": "52",
+                "choices": [
+                    "50",
+                    "45",
+                    "52",
+                    "58"
+                ]
+            },
+            "\\(-5 \\lt x \\lt 7\\) can be written in the absolute value sign as:": {
+                "answer": "\\(\\left | x - 1 \\right | \\lt 6\\)",
+                "choices": [
+                    "\\(\\left | x -1 \\right | \\lt 7\\)",
+                    "\\(\\left | x - 1 \\right | \\lt 6\\)",
+                    "\\(\\left | x - 1 \\right | \\lt 2\\)",
+                    "\\(\\left | x - 1 \\right | \\lt -1\\)"
+                ]
+            },
+            "If the relation \\(R = \\left\\{ (1,2),(2,3),(3,4),(4,5) \\right\\} then its range is,": {
+                "answer": "\\(\\left\\{ 2,3,4,5 \\right\\}\\)",
+                "choices": [
+                    "\\(\\left\\{ 2,3,4,5 \\right\\}\\)",
+                    "\\(\\left\\{ 1,2,3,4 \\right\\}\\)",
+                    "\\(\\left\\{ 1,2,3,5 \\right\\}\\)",
+                    "\\(\\left\\{ 1,3,4,5 \\right\\}\\)"
+                ]
+            },
+            "The value of \\(tan180^{\\circ}\\) is equal to,": {
+                "answer": "0",
+                "choices": [
+                    "1",
+                    "-1",
+                    "0",
+                    "\\(\\infty\\)"
+                ]
+            },
+            "\\(1^{2}+2^{2}+3^{2}+..........+n^{2}\\) is equal to,": {
+                "answer": "\\(\\frac{n(n+1)(2n+1)}{6}\\)",
+                "choices": [
+                    "\\(\\frac{n(n+1)}{2}\\)",
+                    "\\(\\frac{n(n+1)(2n+1)}{6}\\)",
+                    "\\(\\left [\\frac{(n+1)}{2} \\right]^{2}\\)",
+                    "None of the above"
+                ]
+            },
+            "If a matrix \\(A = \\begin{pmatrix}0& 5& -6\\\\-5& 0& 2\\\\6& -2& 0\\end{pmatrix}\\), then matrix \\(A\\) is known as": {
+                "answer": "Skew-Symmetric Matrix",
+                "choices": [
+                    "Symmetric Matrix",
+                    "Skew-Symmetric Matrix",
+                    "Diagonal Matrix",
+                    "Triangular Matrix"
+                ]
+            },
+            "The radius of the circle \\(x^{2}+y^{2}=9\\) is equal to,": {
+                "answer": "3",
+                "choices": [
+                    "4",
+                    "3",
+                    "5",
+                    "9"
+                ]
+            },
+            "The value of \\(2\\sqrt{128} + \\sqrt{162}\\) is,": {
+                "answer": "\\(25 \\sqrt{2}\\)",
+                "choices": [
+                    "\\(25 \\sqrt{2}\\)",
+                    "\\(4 \\sqrt{3}\\)",
+                    "0",
+                    "60"
+                ]
+            },
+            "If \\(A = \\begin{bmatrix}1& 2\\\\3&1\\end{bmatrix}\\), then the value of \\(A^{2}-2A-5I\\) is equal to,": {
+                "answer": "0",
+                "choices": [
+                    "1",
+                    "-1",
+                    "2",
+                    "0"
+                ]
+            },
+            "What is the half of quarter of 400 ?": {
+                "answer": "50",
+                "choices": [
+                    "200",
+                    "100",
+                    "50",
+                    "90"
+                ]
+            },
+            "Half percent, written as a decimal is,": {
+                "answer": "0.005",
+                "choices": [
+                    "0.2",
+                    "0.02",
+                    "0.005",
+                    "0.05"
+                ]
+            },
+            "The true discount on Rs. 2,562 due 4 months hence is Rs. 122. The rate percent is:": {
+                "answer": "14%",
+                "choices": [
+                    "12%",
+                    "13%",
+                    "14%",
+                    "15%"
+                ]
+            },
+            "The percentage increase in the area of a rectangle, if each of its sides is increased by 20% is:": {
+                "answer": "44%",
+                "choices": [
+                    "40%",
+                    "42%",
+                    "44%",
+                    "46%"
+                ]
+            },
+            "AB and CD bisect each other at O. If AD = 6cm, BC is:": {
+                "answer": "6cm",
+                "choices": [
+                    "5.9cm",
+                    "6cm",
+                    "4.8cm",
+                    "7cm"
+                ]
+            },
+            "The compound interest on Rs. 30,000 at 7% per annum is Rs. 4347. The period (in years) is:": {
+                "answer": "3",
+                "choices": [
+                    "2",
+                    "3",
+                    "4",
+                    "8"
+                ]
+            },
+            "If a man were to sell his chair Rs. 720, he would lose 25% to gain 25%. He would sell it for:": {
+                "answer": "Rs. 1,200",
+                "choices": [
+                    "Rs. 1,200",
+                    "Rs. 1,000",
+                    "Rs. 960",
+                    "Rs. 900"
+                ]
+            },
+            "Find the percentage gain or loss when the dot pens bought for Rs. 96 per dozen were sold at the rate of 10 for Rs. 90?": {
+                "answer": "12.5%",
+                "choices": [
+                    "13%",
+                    "20%",
+                    "4%",
+                    "12.5%"
+                ]
+            },
+            "What is the value of \\(cos^{2}30^{\\circ}-sin^{2}30^{\\circ}\\)?": {
+                "answer": "\\(\\frac{\\sqrt{3}}{2}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
+                    "\\(\\frac{1}{\\sqrt{3}}\\)",
+                    "\\(\\frac{-1}{2}\\)"
+                ]
+            },
+            "How many stones each of area \\(0.16 cm^{2}\\) are required for paving a courtyard 5.5m long and 4.8m wide?": {
+                "answer": "165",
+                "choices": [
+                    "60",
+                    "100",
+                    "50",
+                    "165"
+                ]
+            },
+            "Which one is the formula for area of equilateral triangle?": {
+                "answer": "None of these",
+                "choices": [
+                    "\\(\\frac{\\sqrt{3}}{4a^{2}}\\)",
+                    "\\(\\frac{1}{2} \\times b \\times h\\)",
+                    "\\(\\sqrt{(s-a)(s-b)(s-c)}\\)",
+                    "None of these"
+                ]
+            },
+            "The commission of Rs. 5,600 at the rate of 3.5% is:": {
+                "answer": "Rs. 196",
+                "choices": [
+                    "Rs. 196",
+                    "Rs. 440",
+                    "Rs. 360",
+                    "Rs. 1,000"
+                ]
+            },
+            "The discount percent of marked price is Rs. 5,800 and discount amount is Rs. 696 then the discount percent is,": {
+                "answer": "12%",
+                "choices": [
+                    "12%",
+                    "20%",
+                    "5%",
+                    "38%"
+                ]
+            },
+            "What is the tax rate if original price is Rs. 2,000 and selling price is Rs. 2,400?": {
+                "answer": "20%",
+                "choices": [
+                    "20%",
+                    "17.39%",
+                    "35%",
+                    "10%"
+                ]
+            },
+            "The sum of the ages of father and his son is 52 years. Eight years ago the father was eight times as old as his son, the present age of son is,": {
+                "answer": "12 years",
+                "choices": [
+                    "10 years",
+                    "20 years",
+                    "12 years",
+                    "15 years"
+                ]
+            },
+            "If 4 is subtracted from a square of a number, its result is 21. The number is,": {
+                "answer": "5",
+                "choices": [
+                    "5",
+                    "4",
+                    "6",
+                    "3"
+                ]
+            },
+            "The radius of the circle \\(x^{2}+y^{2}-12x-4y=9\\) is equal to,": {
+                "answer": "7",
+                "choices": [
+                    "18",
+                    "7",
+                    "10",
+                    "2"
+                ]
+            },
+            "The system of linear equation will be consistent and independent if they have,": {
+                "answer": "exactly one solution",
+                "choices": [
+                    "exactly one solution",
+                    "more than one solution",
+                    "no solution",
+                    "none of these"
+                ]
+            },
+            "Let \\(a\\) and \\(b\\) are two numbers on the real line. If \\((a, b) = \\left\\{ x:a \\lt x \\le b \\right\\} is known as,": {
+                "answer": "open interval",
+                "choices": [
+                    "left open interval",
+                    "right open interval",
+                    "closed interval",
+                    "open interval"
+                ]
+            },
+            "Let \\(f:R \\to R \\space and \\space g(x):R \\to R\\) be defined by \\(f(x)=2x^{2}-3, \\space g(x)=3x+2\\). Then the composite functions \\(g_{\\circ}f(x)\\) is,": {
+                "answer": "\\(6x^{2}-7\\)",
+                "choices": [
+                    "\\(9x+8\\)",
+                    "\\(2x+2\\)",
+                    "\\(2x+1\\)",
+                    "\\(6x^{2}-7\\)"
+                ]
+            },
+            "A square matrix A is said to be singular if its determinant is equal to": {
+                "answer": "0",
+                "choices": [
+                    "1",
+                    "0",
+                    "-1",
+                    "None of these"
+                ]
+            },
+            "The system of equations \\(4x - 3y = -6, \\space -4x+2y=16\\) is,": {
+                "answer": "consistent and independent",
+                "choices": [
+                    "consistent and dependent",
+                    "inconsistent and independent",
+                    "inconsistent and dependent",
+                    "consistent and independent"
+                ]
+            },
+            "Ratio of 2km to 600m should be,": {
+                "answer": "10:3",
+                "choices": [
+                    "2:7",
+                    "2:8",
+                    "2:3",
+                    "10:3"
+                ]
+            },
+            "If \\(a:b=c:d\\), then \\(b\\) and \\(c\\) are called,": {
+                "answer": "extreme",
+                "choices": [
+                    "antecedent",
+                    "extreme",
+                    "consequent",
+                    "mean"
+                ]
+            },
+            "If \\(b^{2}-4ac \\lt 0\\) then the roots of \\(ax^{2}+bx+c=0\\) are:": {
+                "answer": "imaginary",
+                "choices": [
+                    "equal",
+                    "rational",
+                    "irrational",
+                    "imaginary"
+                ]
+            },
+            "A polygon having 10 sides is called,": {
+                "answer": "decagon",
+                "choices": [
+                    "decagon",
+                    "heptagon",
+                    "quadrilateral",
+                    "hexagon"
+                ]
+            },
+            "Linear equation is also known as,": {
+                "answer": "first degree equation",
+                "choices": [
+                    "simultaneous equation",
+                    "second degree equation",
+                    "first degree equation",
+                    "zero degree equation"
+                ]
+            },
+            "Two straight lines in same plane which never meet are called,": {
+                "answer": "parallel line",
+                "choices": [
+                    "angles",
+                    "transversal lines",
+                    "vertex",
+                    "parallel line"
+                ]
+            },
+            "If \\(x^{4}-3x+5\\) is divided by \\(2x-1\\), then remainder is,": {
+                "answer": "\\(\\frac{-35}{16}\\)",
+                "choices": [
+                    "\\(\\frac{35}{16}\\)",
+                    "\\(\\frac{-35}{16}\\)",
+                    "-9",
+                    "3"
+                ]
+            },
+            "If \\(A, G, H\\) are arithmetic, geometric and harmonic means between \\(a \\space and \\space b\\),": {
+                "answer": "real numbers",
+                "choices": [
+                    "in G.P.",
+                    "in A.P",
+                    "real numbers",
+                    "in H.P."
+                ]
+            },
+            "In selling an article for Rs. 76, a shopkeeper gain 53%. The gain by selling that for Rs. 74 is": {
+                "answer": "49%",
+                "choices": [
+                    "45%",
+                    "48%",
+                    "49%",
+                    "50%"
+                ]
+            },
+            "Ram bought oranges at 6 for Rs. 10 and sold them at 4 for Rs. 6, find his loss percent": {
+                "answer": "8%",
+                "choices": [
+                    "12%",
+                    "8%",
+                    "6%",
+                    "10%"
+                ]
+            },
+            "Which of the following is incorrect?": {
+                "answer": "\\(A.M = ab\\)",
+                "choices": [
+                    "\\(A.M = ab\\)",
+                    "\\(G.M = \\frac{2ab}{a+b}\\)",
+                    "\\(H.M = \\frac{a+b}{2}\\)",
+                    "None of these"
+                ]
+            },
+            "By giving a discount of 10% on the marked price of Rs. 1,100 of a mobile phone a dealer gains 10%, then the cost price is": {
+                "answer": "Rs. 900",
+                "choices": [
+                    "Rs. 950",
+                    "Rs. 900",
+                    "Rs. 1,000",
+                    "Rs. 1,050"
+                ]
+            },
+            "Rama purchased a table in Rs. 1,260 and due to some damage on its top, she had to sell it for Rs. 1,197,": {
+                "answer": "5%",
+                "choices": [
+                    "20%",
+                    "15%",
+                    "10%",
+                    "5%"
+                ]
+            },
+            "If \\(A = \\begin{pmatrix}1& 0& 0\\\\0& 1& 0\\\\0 & 0& 1\\end{pmatrix}\\), then \\(A\\) is": {
+                "answer": "unit matrix",
+                "choices": [
+                    "unit matrix",
+                    "singular matrix",
+                    "symmetric",
+                    "all of them are true"
+                ]
             }
         }
     },

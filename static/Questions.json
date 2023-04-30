@@ -3347,7 +3347,7 @@
             "The number of subsets of set of order 5 is:": {
                 "answer": "32",
                 "choices": [
-                    "16",
+                    "6",
                     "32",
                     "8",
                     "24"
@@ -3417,9 +3417,9 @@
                 ]
             },
             "If A and B are the non-singular matrices, then,": {
-                "answer": "\\((AB)^{-1}=B^{-1}A^{-1}\\)",
+                "answer": "\\((AB)^{-1}=A^{-1}B^{-1}\\)",
                 "choices": [
-                    "\\((AB)^{-1} = A^{-1}B^{-1}\\)",
+                    "\\((AB)^{-1}=A^{-1}B^{-1}\\)",
                     "\\(AB=BA\\)",
                     "\\((AB)^{1}=A^{1}B^{1}\\)",
                     "\\((AB)^{-1}=B^{-1}A^{-1}\\)"
@@ -3462,7 +3462,7 @@
                 ]
             },
             "By selling 33m of cloth one gains the selling price of 11m. The gain percent is:": {
-                "answer": "50%",
+                "answer": "40%",
                 "choices": [
                     "20%",
                     "40%",
@@ -3525,12 +3525,12 @@
                 ]
             },
             "The time in .......... years that the sum of money double itself at 10% per annum of interest is:": {
-                "answer": "10 yrs",
+                "answer": "10yrs",
                 "choices": [
-                    "20 yrs",
-                    "10.5 yrs",
-                    "12 yrs",
-                    "10 yrs"
+                    "20yrs",
+                    "10.5yrs",
+                    "12yrs",
+                    "10yrs"
                 ]
             },
             "Today is the birthday of Rahul and he is 3 times as old as Nirmala. In 13 years, Rahul will be one year less than twice as old as Nirmala will be then. The age of Rahul today is": {
@@ -3593,7 +3593,7 @@
                     "\\((A^{T})^{T}=A\\)",
                     "\\((A+B)^{T}=A^{T}B^{T}\\)",
                     "\\((AB)^{T}=A^{T}B^{T}\\)",
-                    "\\((kA)^{T}=kA^{T}\\), where k is a scalar"
+                    "\\((kA)^{T}=kA^{T}, \\space where \\space k \\space is \\space a \\space scalar\\)"
                 ]
             },
             "The system of equations \\(2x+6y=6\\) and \\(6x+9y=18\\) have:": {
@@ -4621,6 +4621,204 @@
                     "symmetric",
                     "all of them are true"
                 ]
+            },
+            "The slope of the straight line that passes through the point (-1, 0) and (3, 8) is:": {
+                "answer": "2",
+                "choices": [
+                    "2",
+                    "4",
+                    "6",
+                    "8"
+                ]
+            },
+            "If the function \\(f(x)=x^{2}-5\\), then \\(f(\\sqrt{5}\\)\\) is equal to": {
+                "answer": "0",
+                "choices": [
+                    "0",
+                    "5",
+                    "10",
+                    "None of these"
+                ]
+            },
+            "The sum of \\(1^{st} \\space n\\) natural number of A.P. is 55, the value of \\(n\\) is:": {
+                "answer": "10",
+                "choices": [
+                    "10",
+                    "12",
+                    "14",
+                    "16"
+                ]
+            },
+            "If A and B are arbitrary square matrices of same order, then:": {
+                "answer": "\\((AB)^{'}=A^{'}B^{'}\\)",
+                "choices": [
+                    "\\((AB)^{'} = AB^{'}\\)",
+                    "\\((AB)^{'}=A^{'}B^{'}\\)",
+                    "\\(A^{'}B^{'}=B^{'}A^{'}\\)",
+                    "\\((A+B)^{'}=A^{'}-B^{'}\\)"
+                ]
+            },
+            "What is 30% of the 20% of 10% of \\(x\\)?": {
+                "answer": "\\(0.6x\\%\\)",
+                "choices": [
+                    "\\(0.006x\\%\\)",
+                    "\\(0.6x\\%\\)",
+                    "\\(0.06%\\)",
+                    "None of these"
+                ]
+            },
+            "The difference between \\(\\frac{3}{5} \\space of \\space 80\\) and 30% of 80 is:": {
+                "answer": "24",
+                "choices": [
+                    "15",
+                    "10",
+                    "24",
+                    "20"
+                ]
+            },
+            "In a company with 180 employees, 108 of the employees are female. What percent of the employees are male?": {
+                "answer": "40%",
+                "choices": [
+                    "5%",
+                    "25%",
+                    "35%",
+                    "40%"
+                ]
+            },
+            "The population doubling time if the population growth rate is 2% p.a is:": {
+                "answer": "35yrs",
+                "choices": [
+                    "35yrs",
+                    "70yrs",
+                    "50yrs",
+                    "30yrs"
+                ]
+            },
+            "He sold a radio for Rs. 750 with Rs. 25 loss. His loss percentage is:": {
+                "answer": "3.225%",
+                "choices": [
+                    "3.33%",
+                    "3.225%",
+                    "3.45%",
+                    "3.49%"
+                ]
+            },
+            "Area of a rectangle is \\(150m^{2}\\). It's one side is \\(15m\\), the height of the rectangle is:": {
+                "answer": "\\(10m\\)",
+                "choices": [
+                    "\\(8m\\)",
+                    "\\(10m\\)",
+                    "\\(12m\\)",
+                    "\\(16m\\)"
+                ]
+            },
+            "The formula to calculate the area of kite is:": {
+                "answer": "\\(\\frac{1}{2} \\times d_{1} \\times d_{2}\\)",
+                "choices": [
+                    "\\(\\frac{1}{2} \\times d_{1} \\times d_{2}\\)",
+                    "\\(\\frac{\\sqrt{3}}{4a}\\)",
+                    "\\(\\sqrt{s(s-a)(s-b)(s-c)}\\)",
+                    "None of these"
+                ]
+            },
+            "Today is the birthday of Rahul and he is 3 times as old as Nirmala. In 13 years, Rahul will be one year less than twice as old as Nirmala will be then. The age of Rahul today is:": {
+                "answer": "33yrs",
+                "choices": [
+                    "33yrs",
+                    "36yrs",
+                    "49yrs",
+                    "30yrs"
+                ]
+            },
+            "The breadth of a room \\(4m\\) high is one third of its length. If the cost of painting its wall at the rate of Rs. 5 per \\(m^{2}\\) is Rs. 640, the cost of carpeting at the rate of Rs. 250 per \\(m^{2}\\) is:": {
+                "answer": "12000",
+                "choices": [
+                    "11000",
+                    "12000",
+                    "13000",
+                    "14000"
+                ]
+            },
+            "If \\(7a-b=23 \\space and \\space 7b-a=31\\), the value of \\(a+b\\) is:": {
+                "answer": "9",
+                "choices": [
+                    "6",
+                    "7",
+                    "8",
+                    "9"
+                ]
+            },
+            "The value of \\(\\left | (-2-3)-(-2-3) \\right | is:": {
+                "answer": "0",
+                "choices": [
+                    "5",
+                    "0",
+                    "3",
+                    "2"
+                ]
+            },
+            "If \\(f(x)=x^{\\frac{1}{4}}+x^{\\frac{1}{2}}\\), the value of \\(f(16)\\) is:": {
+                "answer": "6",
+                "choices": [
+                    "6",
+                    "8",
+                    "32",
+                    "64"
+                ]
+            },
+            "The system of equations \\(2x+6y=6 \\space and \\space 6x+9y=18\\) have:": {
+                "answer": "unique solution",
+                "choices": [
+                    "unique solution",
+                    "no solution",
+                    "infinitely many solutions",
+                    "none of these"
+                ]
+            },
+            "If \\(x:y=6:5\\), the value of \\((5x+3y):(5x-3y)\\) is equal to:": {
+                "answer": "(\\3:1\\)",
+                "choices": [
+                    "\\(2:1\\)",
+                    "(\\3:1\\)",
+                    "\\(5:3\\)",
+                    "\\(5:2\\)"
+                ]
+            },
+            "The equation of the line that passes through (4,-4) and (4,4) is:": {
+                "answer": "\\(x=4\\)",
+                "choices": [
+                    "\\(x=4\\)",
+                    "\\(y=4\\)",
+                    "\\(y=4x\\)",
+                    "\\(y=4x+4\\)"
+                ]
+            },
+            "If \\(-7 \\le x \\le 7 \\space and \\space 0 \\le y \\le 12\\), the greatest possible value of \\(y-x\\) is:": {
+                "answer": "19",
+                "choices": [
+                    "16",
+                    "17",
+                    "18",
+                    "19"
+                ]
+            },
+            "If \\(A = \\begin{pmatrix}1& 0\\\\0& 1\\end{pmatrix}\\), the value of \\(A^{5}\\) is": {
+                "answer": "\\begin{pmatrix}1& 0\\\\0& 1\\end{pmatrix}",
+                "choices": [
+                    "\\begin{pmatrix}1& 0\\\\0& 1\\end{pmatrix}",
+                    "\\begin{pmatrix}-1& 0\\\\0& 1\\end{pmatrix}",
+                    "\\begin{pmatrix}1& 0\\\\0& -1\\end{pmatrix}",
+                    "\\begin{pmatrix}2& -3\\\\4& -4\\end{pmatrix}"
+                ]
+            },
+            "The number of solutions of \\(2x+y=4, 3x+5y=6\\) is:": {
+                "answer": "1",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
             }
         }
     },
@@ -5451,6 +5649,350 @@
                     "looked around",
                     "passed away",
                     "fell back on"
+                ]
+            }
+        },
+        "Math": {
+            "Every rational number is also": {
+                "answer": "a real number",
+                "choices": [
+                    "a natural number",
+                    "an integer",
+                    "a whole number",
+                    "a real number"
+                ]
+            },
+            "If \\(a - ib = \\frac{3-2i}{3+2i}\\) then \\(a^{2}+b^{2} =\\)": {
+                "answer": "1",
+                "choices": [
+                    "1",
+                    "\\(\\frac{4}{3}\\)",
+                    "\\(\\frac{3}{5}\\)",
+                    "\\(\\frac{2}{9}\\)"
+                ]
+            },
+            "Given \\(U = \\left\\{1,2,3,..........,14 \\right\\}, A= \\left\\{x:x \\le 8 \\right\\}, B= \\left\\{x:x \\ge 4 \\right\\} then \\(\\overline{A \\cap B} =\\)": {
+                "answer": "None of these",
+                "choices": [
+                    "\\(\\phi\\)",
+                    "\\(U\\)",
+                    "\\(A \\cup B\\)",
+                    "None of these"
+                ]
+            },
+            "Which are the equal ordered pairs?": {
+                "answer": "\\((2,4),(4,2)\\)",
+                "choices": [
+                    "\\((2,4),(4,2)\\)",
+                    "\\((2,2),(4,4)\\)",
+                    "\\((4,2),(4,2)\\)",
+                    "All of them"
+                ]
+            },
+            "If \\(S_{\\infty}=\\frac{a}{1-r}\\), when \\(a, r & S_{\\infty}\\) denotes first term, common ratio and sum to infinity. If": {
+                "answer": "\\(\\left |r \\right | \\lt 1\\)",
+                "choices": [
+                    "\\(\\left |r \\right | \\lt 1\\)",
+                    "\\(\\left | r \\right | \\gt 1\\)",
+                    "\\(\\left |r \\right | = 1\\)",
+                    "None of these"
+                ]
+            },
+            "If \\(^{21}C_{x}=^{21}C_{y}\\) then which is true?": {
+                "answer": "\\(x \\neq y\\)",
+                "choices": [
+                    "\\(x \\neq y\\)",
+                    "\\(x = y\\)",
+                    "\\(x+y=21\\)",
+                    "either (b) or (c)"
+                ]
+            },
+            "Which is not true?": {
+                "answer": "\\((A+B)^{T}=A^{T}B^{T}\\)",
+                "choices": [
+                    "\\((A^{T})^{T}=A\\)",
+                    "\\((A+B)^{T}=A^{T}B^{T}\\)",
+                    "\\((AB)^{T}=A^{T}B^{T}\\)",
+                    "\\((AB)^{T}=B^{T}A^{T}\\)"
+                ]
+            },
+            "Which one is not true ?": {
+                "answer": "\\(\\begin{vmatrix}a_{1}& a_{2}& a_{3}\\\\0& 0& 0\\\\c_{1}& c_{2}& c_{3}\\end{vmatrix} = 0\\)",
+                "choices": [
+                    "\\(\\begin{vmatrix}a_{1}& a_{2}& a_{3}\\\\b_{1}& b_{2}& b_{3}\\\\c_{1}& c_{2}& c_{3}\\end{vmatrix} = \\begin{vmatrix}a_{1}& b_{1}& c_{1}\\\\a_{2}& b_{2}& c_{2}\\\\a_{3}& b_{3}& c_{3}\\end{vmatrix}\\)",
+                    "\\(\\begin{vmatrix}0& a_{2}& a_{3}\\\\b_{a}& 0& b_{3}\\\\c_{1}& c_{2}& 0\\end{vmatrix}=0\\)",
+                    "\\(\\begin{vmatrix}a_{1}& a_{2}& a_{3}\\\\0& 0& 0\\\\c_{1}& c_{2}& c_{3}\\end{vmatrix} = 0\\)",
+                    "\\(\\begin{vmatrix}a_{1}& b_{1}& c_{1}\\\\a_{2}& b_{2}& c_{2}\\\\a_{3}& b_{3}& c_{3}\\end{vmatrix} = \\begin{vmatrix}a_{1}+ka_{3}& b_{1}+kb_{3}& c_{1}+kc_{3}\\\\a_{2}& b_{2}& c_{2}\\\\a_{3}& b_{3}& c_{3}\\end{vmatrix}\\)"
+                ]
+            },
+            "The equation \\(x=0\\) represents": {
+                "answer": "\\(y-axis\\)",
+                "choices": [
+                    "\\(x-axis\\)",
+                    "\\(y-axis\\)",
+                    "the origin",
+                    "None of these"
+                ]
+            },
+            "The angle between the lines \\(xy=0\\) is": {
+                "answer": "\\(90^{\\circ}\\)",
+                "choices": [
+                    "\\(0^{\\circ}\\)",
+                    "\\(60^{\\circ}\\)",
+                    "\\(90^{\\circ}\\)",
+                    "\\(120^{\\circ}\\)"
+                ]
+            },
+            "Which one is correct ?": {
+                "answer": "\\(log_{10} \\space ^{10}=1\\)",
+                "choices": [
+                    "\\(log_{10} \\space ^{1}=0\\)",
+                    "\\(log_{10} \\space ^{0.1}=-1\\)",
+                    "\\(log_{10} \\space ^{10}=1\\)",
+                    "All of them"
+                ]
+            },
+            "The domain of \\(y = f(x) = \\frac{1}{x}\\) is": {
+                "answer": "\\(R - \\left\\{0 \\right\\}\\)",
+                "choices": [
+                    "\\(R - \\left\\{0 \\right\\}\\)",
+                    "\\(R\\)",
+                    "\\((-2,1)\\)",
+                    "\\((-1,1)\\)"
+                ]
+            },
+            "Let \\(f:R \\to R\\) be defined by \\(f(x)=10x-7\\) then \\(f^{-1}(x)\\)=": {
+                "answer": "\\(\\frac{x+7}{10}\\)",
+                "choices": [
+                    "\\(\\frac{1}{10x+7}\\)",
+                    "\\(\\frac{1}{10x-7}\\)",
+                    "\\(\\frac{x+7}{10}\\)",
+                    "\\(\\frac{x-7}{10}\\)"
+                ]
+            },
+            "If \\(t\\) be a positive real number then the least value of \\(t + \\frac{1}{t}\\) is:": {
+                "answer": "2",
+                "choices": [
+                    "1",
+                    "2",
+                    "4",
+                    "3"
+                ]
+            },
+            "The value of \\(\\lim_{x \\to \\infty} \\frac{\\sqrt{x+1}}{\\sqrt{x} + 1}\\) is:": {
+                "answer": "0",
+                "choices": [
+                    "0",
+                    "1",
+                    "\\(\\frac{1}{2}\\)",
+                    "-1"
+                ]
+            },
+            "The point of discontinuity of the function \\(f(x)= \\frac{x^{3} - 27}{x-3}\\) is": {
+                "answer": "3",
+                "choices": [
+                    "3",
+                    "6",
+                    "27",
+                    "0"
+                ]
+            },
+            "If \\(x+y = xy\\) then \\(\\frac{dy}{dx}=\\)": {
+                "answer": "\\(\\frac{y-1}{1-x}\\)",
+                "choices": [
+                    "\\(\\frac{x-1}{y-1}\\)",
+                    "\\(\\frac{y-1}{1-x}\\)",
+                    "\\(\\frac{1-x}{y-1}\\)",
+                    "\\(\\frac{1+y}{1-x}\\)"
+                ]
+            },
+            "If \\(x=2at, \\space y=at^{2}\\) then \\(\\frac{dy}{dx}=\\)": {
+                "answer": "\\(t\\)",
+                "choices": [
+                    "\\(t\\)",
+                    "\\(\\frac{1}{t}\\)",
+                    "\\(t^{2}\\)",
+                    "1"
+                ]
+            },
+            "If the total cost function \\(C=50x+5000\\). The marginal cost function \\(MC\\) is:": {
+                "answer": "50",
+                "choices": [
+                    "\\(50+\\frac{5000}{x}\\)",
+                    "\\(25x^{2}+5000x\\)",
+                    "50",
+                    "None of these"
+                ]
+            },
+            "The maximum value of \\(sin \\theta cos \\theta \\) is": {
+                "answer": "\\(\\frac{1}{2}\\)",
+                "choices": [
+                    "1",
+                    "\\(\\frac{1}{\\sqrt{2}}\\)",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
+                    "\\(\\frac{1}{2}\\)"
+                ]
+            },
+            "The function \\(f(x)=2-3x\\) is": {
+                "answer": "decreasing",
+                "choices": [
+                    "decreasing",
+                    "increasing",
+                    "neither decreasing nor increasing",
+                    "doesn't exist"
+                ]
+            },
+            "\\(\\int_{-2}^{2} \\left | x \\right | dx\\) is equal to": {
+                "answer": "4",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "4"
+                ]
+            },
+            "If the marginal cost of a product is given by \\(MC = 8 + 6x - 3x^{2}\\) and the fixed cost is Rs. 150. The cost function is:": {
+                "answer": "\\(8x+3x^{2}-x^{3}+150\\)",
+                "choices": [
+                    "\\(8x+6x^{x}-6x^{3}\\)",
+                    "\\(\\frac{8}{x}+6-3x\\)",
+                    "\\(8x+3x^{2}-x^{3}+150\\)",
+                    "\\(8x+3x^{2}-x^{3}-150\\)"
+                ]
+            },
+            "The area of the circle \\(x^{2}+y^{2}=16\\) is": {
+                "answer": "\\(16 \\pi \\)",
+                "choices": [
+                    "\\(4 \\pi \\)",
+                    "\\(4 \\pi ^{2}\\)",
+                    "\\(16 \\pi ^{2}\\)",
+                    "\\(16 \\pi \\)"
+                ]
+            },
+            "Which is the measure of dispersion?": {
+                "answer": "range",
+                "choices": [
+                    "mean",
+                    "median",
+                    "mode",
+                    "range"
+                ]
+            },
+            "Two brothers: Mr. X and Mr. Y appear in an interview for getting the scholarship. The scholarship can be provided for two persons. The probability of getting scholarship by Mr. X is \\(\\frac{1}{7}\\) and getting by Mr. Y is \\(\\frac{1}{5}\\). What is the probability that both of them will get scholarship?": {
+                "answer": "\\(\\frac{1}{35}\\)",
+                "choices": [
+                    "\\(\\frac{12}{35}\\)",
+                    "\\(\\frac{1}{35}\\)",
+                    "\\(\\frac{23}{35}\\)",
+                    "None of these"
+                ]
+            },
+            "The equation \\(sinx+cosx=2\\) has": {
+                "answer": "no solution",
+                "choices": [
+                    "infinite solution",
+                    "finite solution",
+                    "no solution",
+                    "unique solution"
+                ]
+            },
+            "\\(sin^{-1}x + cos^{-1}x = \\)": {
+                "answer": "None",
+                "choices": [
+                    "\\(\\frac{\\pi}{x}\\)",
+                    "\\(\\frac{-\\pi}{x}\\)",
+                    "\\(\\frac{\\pi}{x} - x\\)",
+                    "None"
+                ]
+            },
+            "The system of linear equations \\(2x+3y=5 \\space and \\space 4x+6y=9\\) are": {
+                "answer": "inconsistent & independent",
+                "choices": [
+                    "consistent & dependent",
+                    "consistent & independent",
+                    "inconsistent & independent",
+                    "inconsistent & dependent"
+                ]
+            },
+            "The degree of polynomial equation \\(ax^{2}+bx+c=0\\) is": {
+                "answer": "2",
+                "choices": [
+                    "0",
+                    "1",
+                    "2",
+                    "not define"
+                ]
+            },
+            "If one root of a quadratic equation in the real coefficient is \\(\\sqrt{2}\\) then equation is": {
+                "answer": "\\(x^{2}-2=0\\)",
+                "choices": [
+                    "\\(x^{2}+\\sqrt{2}x+2=0\\)",
+                    "\\(x^{2}+2=0\\)",
+                    "\\(x^{2}-2=0\\)",
+                    "None of these"
+                ]
+            },
+            "The equation \\(x^{2}+y^{2}=0\\) represents": {
+                "answer": "degenerate circle",
+                "choices": [
+                    "circle",
+                    "degenerate circle",
+                    "an empty set",
+                    "a straight line"
+                ]
+            },
+            "If four quantities \\(a,b,c \\space and \\space d\\) are such that \\(a:b=3:4, \\space b:c=6:7 \\space and \\space c:d=8:9\\), then the ratio between \\(a\\) and \\(d\\) is": {
+                "answer": "4:7",
+                "choices": [
+                    "3:8",
+                    "1:3",
+                    "4:7",
+                    "7:4"
+                ]
+            },
+            "By selling 175 pens, a stationary store gains the selling price of 50 pens. What is his gain percent?": {
+                "answer": "40%",
+                "choices": [
+                    "40%",
+                    "\\(28 \\frac{4}{7}\\)",
+                    "50%",
+                    "None of these"
+                ]
+            },
+            "A, B, C and D enter into a partnership. A, B, C subscribe \\(\\frac{1}{3}, \\frac{1}{4}, \\frac{1}{5}\\) of the capital respectively and D, the rest. What is the share of profit of D if the total profit is Rs. 24600?": {
+                "answer": "Rs. 5330",
+                "choices": [
+                    "Rs. 8200",
+                    "Rs. 5330",
+                    "Rs. 6150",
+                    "Rs. 4920"
+                ]
+            },
+            "If US $1 = Rs. 78.15. How many US dollars are equivalent to Rs. 10,000?": {
+                "answer": "$127.96",
+                "choices": [
+                    "$127.96",
+                    "$172.96",
+                    "$196.72",
+                    "$172.62"
+                ]
+            },
+            "The effective rate corresponding to 10% p.a. convertible quarterly is": {
+                "answer": "10.4%",
+                "choices": [
+                    "40%",
+                    "10.1%",
+                    "10.4%",
+                    "None of these"
+                ]
+            },
+            "The present value of an immediate annuity is; where symbols are there usual meaning": {
+                "answer": "\\(\\frac{p}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}\\)",
+                "choices": [
+                    "\\(\\frac{p}{i} \\left\\{(l+i)^{n} - l \\right\\}\\)",
+                    "\\(\\frac{p}{i} (l+i) \\left\\{(l+i)^{n}-l \\right\\}\\)",
+                    "\\(\\frac{p}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}\\)",
+                    "\\(\\frac{p(l+i)}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}"
                 ]
             }
         }

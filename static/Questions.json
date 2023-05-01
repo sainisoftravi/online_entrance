@@ -5650,6 +5650,339 @@
                     "passed away",
                     "fell back on"
                 ]
+            },
+            "I like reading .......... in my spare time.": {
+                "answer": "reading",
+                "choices": [
+                    "reading",
+                    "read",
+                    "to read",
+                    "to reading"
+                ]
+            },
+            "Could you .......... these paper.": {
+                "answer": "clear up",
+                "choices": [
+                    "clear out",
+                    "clear away",
+                    "clear up",
+                    "clear off"
+                ]
+            },
+            "I am going to .......... a house that I'm thinking of buying.": {
+                "answer": "look into",
+                "choices": [
+                    "look on",
+                    "look through",
+                    "look over",
+                    "look into"
+                ]
+            },
+            "You can not ride or drive safely before he has been ..........": {
+                "answer": "broken in",
+                "choices": [
+                    "break down",
+                    "break off",
+                    "broken in",
+                    "break out"
+                ]
+            },
+            "We had to .......... dried milk as fresh milk wasn't available.": {
+                "answer": "fall back on",
+                "choices": [
+                    "fall back on",
+                    "fall back",
+                    "fall in",
+                    "fall off"
+                ]
+            },
+            "He is a pleasant friendly man who .......... well with nearly everybody.": {
+                "answer": "get on",
+                "choices": [
+                    "get over",
+                    "get round",
+                    "get off",
+                    "get on"
+                ]
+            },
+            "A scientific method of photostatting is ..........": {
+                "answer": "Zeroxography",
+                "choices": [
+                    "Zeroxography",
+                    "photography",
+                    "orthography",
+                    "lithography"
+                ]
+            },
+            "Morbid fear of everything in general is ..........": {
+                "answer": "pathophobia",
+                "choices": [
+                    "pathophobia",
+                    "hippophile",
+                    "dendrophile",
+                    "xenophobia"
+                ]
+            },
+            "Lover of trees is called ..........": {
+                "answer": "dendrophile",
+                "choices": [
+                    "podophile",
+                    "hippophile",
+                    "dendrophile",
+                    "paedophile"
+                ]
+            },
+            "Hater of knowledge ..........": {
+                "answer": "misologist",
+                "choices": [
+                    "pacifist",
+                    "iconoclast",
+                    "misogynist",
+                    "misologist"
+                ]
+            },
+            "Choose the right synonym of the word \"magniloquent\"": {
+                "answer": "boastful",
+                "choices": [
+                    "boastful",
+                    "sentimental",
+                    "mournful",
+                    "venal"
+                ]
+            },
+            "Choose the right synonym of \"pellucid\"": {
+                "answer": "transparent",
+                "choices": [
+                    "dark",
+                    "transparent",
+                    "dim light",
+                    "vague"
+                ]
+            },
+            "The antonym of \"alienate\" is ..........": {
+                "answer": "reconcile",
+                "choices": [
+                    "social",
+                    "alleviate",
+                    "transfer",
+                    "reconcile"
+                ]
+            },
+            "Choose the right antonym of \"wanton\"": {
+                "answer": "retrained",
+                "choices": [
+                    "retrained",
+                    "reckless",
+                    "unruly",
+                    "vagabond"
+                ]
+            },
+            "The .......... of these roses is sweet. The .......... of burning rubber is unbearable.": {
+                "answer": "smell, stink",
+                "choices": [
+                    "scent, perfume",
+                    "perfume, scent",
+                    "smell, stink",
+                    "stink, smell"
+                ]
+            },
+            "One who plays for pleasure is ..........": {
+                "answer": "amateur",
+                "choices": [
+                    "fanatic",
+                    "amateur",
+                    "egoist",
+                    "feminist"
+                ]
+            },
+            "One who abandons his/her religious faith:": {
+                "answer": "apostate",
+                "choices": [
+                    "heuristic",
+                    "fanatic",
+                    "agnostic",
+                    "apostate"
+                ]
+            },
+            "A person who is hard to please ..........": {
+                "answer": "fastidious",
+                "choices": [
+                    "fastidious",
+                    "taciturn",
+                    "stubborn",
+                    "hednoist"
+                ]
+            },
+            "John is born .......... highly educated parents.": {
+                "answer": "of",
+                "choices": [
+                    "of",
+                    "by",
+                    "for",
+                    "from"
+                ]
+            },
+            "We can travel .......... car or walk .......... feet or go .......... horseback.": {
+                "answer": "by, on, on",
+                "choices": [
+                    "by, on, on",
+                    "for, by, on",
+                    "on, by, on",
+                    "on, on, on"
+                ]
+            },
+            "Lucky was fined .......... parking his vehicle .......... a no parking area.": {
+                "answer": "for, in",
+                "choices": [
+                    "in, for",
+                    "for, in",
+                    "ar, for",
+                    "for, with"
+                ]
+            },
+            "Nobody knew the way .......... except John.": {
+                "answer": "except",
+                "choices": [
+                    "besides",
+                    "but",
+                    "except",
+                    "beside"
+                ]
+            },
+            "He would think it .......... him to tell a lie.": {
+                "answer": "behind",
+                "choices": [
+                    "above",
+                    "beside",
+                    "behind",
+                    "opposite"
+                ]
+            },
+            ".......... doing the cooking, I help hostel boys.": {
+                "answer": "besides",
+                "choices": [
+                    "besides",
+                    "beside",
+                    "behind",
+                    "opposite"
+                ]
+            },
+            "Peter hardly goes to parties, ..........?": {
+                "answer": "does he?",
+                "choices": [
+                    "doesn't he",
+                    "does he?",
+                    "did he?",
+                    "didn't he?"
+                ]
+            },
+            "Ann'll lend it you, Oh no, ..........": {
+                "answer": "she won't",
+                "choices": [
+                    "she'll",
+                    "she can't",
+                    "she won't",
+                    "she did"
+                ]
+            },
+            "Everyone warned you, ..........?": {
+                "answer": "didn't they?",
+                "choices": [
+                    "have they?",
+                    "haven't they",
+                    "didn't they?",
+                    "did they?"
+                ]
+            },
+            "He had no qualification; .......... he got the job.": {
+                "answer": "nevertheless",
+                "choices": [
+                    "however",
+                    "in spite of",
+                    "though",
+                    "nevertheless"
+                ]
+            },
+            "What does \"be neck and neck\" stand for?": {
+                "answer": "equally good in competiton",
+                "choices": [
+                    "equally good in competiton",
+                    "be good friends",
+                    "great enemies",
+                    "ready for competition"
+                ]
+            },
+            "As a beginner in Panish class I could not stand the pace.": {
+                "answer": "maintain the level",
+                "choices": [
+                    "could not learn",
+                    "maintain the level",
+                    "very weak",
+                    "not fit for the class"
+                ]
+            },
+            "He is the friend .......... I trust most in family matters.": {
+                "answer": "whom",
+                "choices": [
+                    "who",
+                    "whom",
+                    "which",
+                    "him"
+                ]
+            },
+            "Public often .......... people who are good at sport.": {
+                "answer": "admire",
+                "choices": [
+                    "attract",
+                    "appeal",
+                    "admire",
+                    "support"
+                ]
+            },
+            "Choose the word with correct spelling:": {
+                "answer": "foreign",
+                "choices": [
+                    "forin",
+                    "foraign",
+                    "foreign",
+                    "forigin"
+                ]
+            },
+            "In the word \"transcendental\" which syllable has the primary stress:": {
+                "answer": "3rd syllable",
+                "choices": [
+                    "1st syllable",
+                    "2nd syllable",
+                    "3rd syllable",
+                    "4th syllable"
+                ]
+            },
+            "I was invited to .......... dinner given to welcome te new ambassador.": {
+                "answer": "the",
+                "choices": [
+                    "a",
+                    "the",
+                    "an",
+                    "none"
+                ]
+            },
+            "He goes to .......... temple sometimes to give lectures,": {
+                "answer": "the",
+                "choices": [
+                    "a",
+                    "the",
+                    "an",
+                    "none"
+                ]
+            },
+            "He has worked for us ever .......... he left school.": {
+                "answer": "since",
+                "choices": [
+                    "from",
+                    "during",
+                    "for",
+                    "since"
+                ]
             }
         },
         "Math": {
@@ -5993,6 +6326,352 @@
                     "\\(\\frac{p}{i} (l+i) \\left\\{(l+i)^{n}-l \\right\\}\\)",
                     "\\(\\frac{p}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}\\)",
                     "\\(\\frac{p(l+i)}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}"
+                ]
+            }
+        },
+        "General Knowledge + Logical Reasoning": {
+            "The study of sound & sound waves is known as ..........": {
+                "answer": "Acoustics",
+                "choices": [
+                    "Mechanical",
+                    "Technical",
+                    "Acoustics",
+                    "Sound waves"
+                ]
+            },
+            "A river always has": {
+                "answer": "Banks",
+                "choices": [
+                    "Delta",
+                    "Fishes",
+                    "Boats",
+                    "Banks"
+                ]
+            },
+            "Which mountain is understood by 'Killer Mountain'?": {
+                "answer": "Naga Parbat",
+                "choices": [
+                    "Manaslu",
+                    "Ama Dablam",
+                    "Naga Parbat",
+                    "Kala Patthar"
+                ]
+            },
+            "Which of the following is necessary for 'knowledge'?": {
+                "answer": "Learning",
+                "choices": [
+                    "School",
+                    "Teacher",
+                    "Text Book",
+                    "Learning"
+                ]
+            },
+            "Two concepts are related in some way; establish the same relationship on the basis of the alternatives given for UTS:FDS::WVU?": {
+                "answer": "WXY",
+                "choices": [
+                    "YWV",
+                    "WXY",
+                    "UVW",
+                    "HGF"
+                ]
+            },
+            "Insert the appropriate arithmetical signs in (?,?) to establish the relation: 9?6?3=27": {
+                "answer": "+,*",
+                "choices": [
+                    "+,*",
+                    "=,+",
+                    "/,+",
+                    "+,+"
+                ]
+            },
+            "If LIGHT is coded as GLITH, find the code for RAINY.": {
+                "answer": "ARINY",
+                "choices": [
+                    "IARYN",
+                    "ARINY",
+                    "NAIRY",
+                    "RINAY"
+                ]
+            },
+            "A,B and C are intelligent, A, D and E are laborious, D, C and E are honest and A, B, and E are ambitious. Which of the following are not honest?": {
+                "answer": "C and A",
+                "choices": [
+                    "A and B",
+                    "C and A",
+                    "A and D",
+                    "A and B"
+                ]
+            },
+            "Analog computer work on the supply of": {
+                "answer": "continous electrical pulse",
+                "choices": [
+                    "physical strength",
+                    "natural strength",
+                    "magnetic strength",
+                    "continous electrical pulse"
+                ]
+            },
+            "We can make use of the wild card entries such as.......... in Windows Explorer.": {
+                "answer": "^,*",
+                "choices": [
+                    "#,@",
+                    "^,*",
+                    "?,*",
+                    "?,#"
+                ]
+            },
+            "Which of the following is the second largest measurement of RAM?": {
+                "answer": "Gigabyte",
+                "choices": [
+                    "Megabyte",
+                    "Gigabyte",
+                    "Byte",
+                    "Terabyte"
+                ]
+            },
+            "Cache memory acts between": {
+                "answer": "CPU and RAM",
+                "choices": [
+                    "CPU and Hard disk",
+                    "RAM and ROM",
+                    "CPU and RAM",
+                    "ALl of these"
+                ]
+            },
+            "Whcih of the billionth of a sceond?": {
+                "answer": "Nanosecond",
+                "choices": [
+                    "Microsecond",
+                    "Nanosecond",
+                    "Terabyte",
+                    "Gigabyte"
+                ]
+            },
+            "The Binary Coded Decimal uses": {
+                "answer": "8 bits",
+                "choices": [
+                    "6 bits",
+                    "8 bits",
+                    "16 bits",
+                    "32 bits"
+                ]
+            },
+            "RAM is also called as": {
+                "answer": "volatile memory",
+                "choices": [
+                    "virtual memory",
+                    "volatile memory",
+                    "non volatile memory",
+                    "cache memory"
+                ]
+            },
+            "CPU stands as": {
+                "answer": "Central Processing Unit",
+                "choices": [
+                    "Central Processing Unit",
+                    "Computer Processed Unity",
+                    "Computer Pro Unit",
+                    "Cache Processing Unit"
+                ]
+            },
+            "If you want to copy a portion of the text then you need to use": {
+                "answer": "Control and C",
+                "choices": [
+                    "Control and C",
+                    "Command and C",
+                    "Contorl and V",
+                    "Control and X"
+                ]
+            },
+            "Which one is not an operating system?": {
+                "answer": "LaTex",
+                "choices": [
+                    "Windows",
+                    "Linux",
+                    "Unix",
+                    "LaTex"
+                ]
+            },
+            "Who described his policy of unification as one of 'blood and iron'?": {
+                "answer": "Bismarck",
+                "choices": [
+                    "Hitler",
+                    "Mazzini",
+                    "Napoleon",
+                    "Bismarck"
+                ]
+            },
+            "Who is known as the father of Modern Medicine?": {
+                "answer": "Hippocrates",
+                "choices": [
+                    "Eratosthenes",
+                    "Euclid",
+                    "Pythagoras",
+                    "Hippocrates"
+                ]
+            },
+            "Which of the following is the place of worship for Judaism?": {
+                "answer": "Synagogue",
+                "choices": [
+                    "Temple",
+                    "Fire Temple",
+                    "Chapel",
+                    "Synagogue"
+                ]
+            },
+            "The hottest planet of the solar system is": {
+                "answer": "Venus",
+                "choices": [
+                    "Mercury",
+                    "Venus",
+                    "Mars",
+                    "Jupiter"
+                ]
+            },
+            "The first word pronounced at the surface of the Moon during Apollo Expedition is": {
+                "answer": "OK!",
+                "choices": [
+                    "OK!",
+                    "YES!",
+                    "Hurry!",
+                    "Fine!"
+                ]
+            },
+            "The longest district of Nepal is": {
+                "answer": "Juddha Samsher",
+                "choices": [
+                    "Kavrepalanchowk",
+                    "Sindhupalchowk",
+                    "Parsa",
+                    "Juddha Samsher"
+                ]
+            },
+            "Which of the person had divided Nepal into 32 distict": {
+                "answer": "Juddha Samsher",
+                "choices": [
+                    "Chandra Samsher",
+                    "Ranoddip",
+                    "Bir Samsher",
+                    "Juddha Samsher"
+                ]
+            },
+            "The longest glacier of Nepal is": {
+                "answer": "Khumbu",
+                "choices": [
+                    "Khumbu",
+                    "Lamtang",
+                    "Upper Arun",
+                    "Kanchanjangha"
+                ]
+            },
+            "Rawan of epic Ramayana had written two books. The name of one of those books is": {
+                "answer": "Arkapakshya",
+                "choices": [
+                    "Arkapakshya",
+                    "Rawapakshya",
+                    "Manupakshya",
+                    "Kiwapakshya"
+                ]
+            },
+            "The founder of Tao Religion is": {
+                "answer": "Laotse",
+                "choices": [
+                    "Kanfusius",
+                    "Laotse",
+                    "Ding",
+                    "Fung"
+                ]
+            }
+        },
+        "IT general": {
+            "Which of the following is not a search engine?": {
+                "answer": "Altavista",
+                "choices": [
+                    "Google",
+                    "Altavista",
+                    "Yahoo",
+                    "Firefox Mozilla"
+                ]
+            },
+            "Name of the screen that recognizes touch input is:": {
+                "answer": "Touch screen",
+                "choices": [
+                    "Recog screen",
+                    "Point screen",
+                    "Touch screen",
+                    "Andriod screen"
+                ]
+            },
+            "Arranage in ascending order the units of memory TB, KB, Gb, MB": {
+                "answer": "TB>GB>MB>KB",
+                "choices": [
+                    "TB>MB>GB<KB",
+                    "MB>GB>TB>KB",
+                    "TB>GB>MB>KB",
+                    "GB>MB>KB>TB"
+                ]
+            },
+            "What is the full form of WWW?": {
+                "answer": "World Wide Web",
+                "choices": [
+                    "World Wide Web",
+                    "Wide World Web",
+                    "World Web Wide",
+                    "Wide Wide World"
+                ]
+            },
+            "Junk email is also called": {
+                "answer": "Spam",
+                "choices": [
+                    "Spam",
+                    "Spoof",
+                    "Sniffer",
+                    "Jmail"
+                ]
+            },
+            "Which of the following is used to make presentation slides?": {
+                "answer": "Powerpoint",
+                "choices": [
+                    "Powerpoint",
+                    "Word",
+                    "Excel",
+                    "Internet"
+                ]
+            },
+            "Who is the father of computer?": {
+                "answer": "Charles Babbage",
+                "choices": [
+                    "Charles Babbage",
+                    "Balise Pascal",
+                    "Garden Moore",
+                    "John Von Neumann"
+                ]
+            },
+            "Which of the following is used as a memory in computers?": {
+                "answer": "RAM",
+                "choices": [
+                    "RAM",
+                    "Keyboard",
+                    "Mouse",
+                    "Mouse"
+                ]
+            },
+            "MS-Word is an example of ..........": {
+                "answer": "Application software",
+                "choices": [
+                    "Operating system",
+                    "Application software",
+                    "Output device",
+                    "Processing device"
+                ]
+            },
+            "The printed output drom a computer is known as ..........": {
+                "answer": "Soft copy",
+                "choices": [
+                    "Soft copy",
+                    "Hard copy",
+                    "Photo copy",
+                    "Paper"
                 ]
             }
         }

@@ -102,34 +102,6 @@ textarea:focus{
     margin-left: 20%;
 }
 
-.go-to-top{
-    opacity: 0;
-    right: 5px;
-    bottom: 5px;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    position: fixed;
-    cursor: pointer;
-    border-radius: 50%;
-    align-items: center;
-    pointer-events: none;
-    transition: all 0.4s;
-    text-decoration: none;
-    background: #f4544c;
-    justify-content: center;
-}
-
-.bxs-up-arrow{
-    font-size: 30px;
-    color: whitesmoke;
-}
-
-.go-to-top.active{
-    pointer-events: auto;
-    opacity: 1;
-}
-
 .login-signup-container{
     display: flex;
     flex-direction: column;

@@ -8,14 +8,14 @@ def SignUp(request):
         'login': False
     }
 
-    return render(request, 'HTML/Signup.html', conditions)
+    return render(request, 'Signup.html', conditions)
 
 
 def Login(request):
     conditions = {
         'login': True
     }
-    return render(request, 'HTML/Signup.html', conditions)
+    return render(request, 'Signup.html', conditions)
 
 
 def Index(request):
@@ -48,4 +48,4 @@ def TakeModelTest(request):
         'questions': questions
     }
 
-    return render(request, 'HTML/ModelTest.html', values)
+    return render(request, 'ModelTest.html', values)

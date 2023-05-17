@@ -1,5 +1,6 @@
+import os
 import json
-import random
+from pathlib import Path
 from django.shortcuts import render
 
 
@@ -25,7 +26,10 @@ def Index(request):
 def TakeModelTest(request):
     questions = dict()
 
-    with open(r'C:\Users\6292s\Desktop\My Projects\nppy\OTHERS\django\ForeSight\static\Questions.json') as f:
+    BASE_DIR = Path(__file__).resolve().parent.parent
+    jsonPath = os.path.join(BASE_DIR, 'static', 'Questions.json')
+
+    with open(jsonPath) as f:
         contents = json.load(f)
 
     # all_contents = contents['BCA']['English']

@@ -1,0 +1,138 @@
+{% extends 'HTML/IndexNav.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/signup.css' %}">
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+<div class="outer-container">
+    <div class="form-outer-container">
+        {% if login == False %}
+            <div class="form-left signup-left-image">
+            </div>
+
+            {% else %}
+            <div class="form-left login-left-image">
+            </div>
+        {% endif %}
+
+        <div class="form-right">
+            <form action="">
+                {% if login == False %}
+                    <div class="form-item">
+                        <i class='bx bxs-user bx-login' ></i>
+                        <input type="text" placeholder="UserName" id="username">
+                        <small class="username-error show-error"></small>
+                    </div>
+
+                    <div class="form-item">
+                        <i class='bx bxs-envelope bx-login'></i>
+                        <input type="text" placeholder="Email" id="email">
+                        <small class="signup-email-error show-error"></small>
+                    </div>
+
+                    <div class="form-item">
+                        <i class='bx bxs-lock-alt bx-login' ></i>
+                        <input type="password" placeholder="Password" id="password">
+                        <i class='bx bxs-hide bx-login hide-password show-hide-password'></i>
+                        <i class='bx bxs-show bx-login show-password show-hide-password'></i>
+
+                        <small class="password-error show-error"></small>
+                    </div>
+
+                    <div class="dob">
+                        <p>Date of Birth</p>
+
+                        <div class="dob-inputs">
+                            <div class="dob-input-1">
+                                <input type="text" placeholder="DD" id="dob-day">
+                            </div>
+
+                            <div class="dob-input-1">
+                                <input type="text" placeholder="MM" id="dob-month">
+                            </div>
+
+                            <div class="dob-input-1 last-dob">
+                                <input type="text" placeholder="YYYY" id="dob-year">
+                            </div>
+                        </div>
+                        <small class="dob-error show-error">Invalid date of birth</small>
+                    </div>
+
+                    <div class="gender">
+                        <p>Gender</p>
+
+                        <div class="genders">
+                            <div id="male">Male</div>
+                            <div id="female">Female</div>
+                            <div id="others">Others</div>
+                        </div>
+                        <small class="gender-error show-error">Select any one option</small>
+                    </div>
+
+                    <div class="form-item submit-btn signup-submit-btn">
+                        <button onclick="return validateForm();" type="button">Sign Up</button>
+                        <p>Already a member? <a href="{% url 'login' %}">Sign In</a></p>
+                    </div>
+
+                    {% else %}
+                    <div class="form-item">
+                        <i class='bx bxs-user bx-login' ></i>
+                        <input type="text" placeholder="UserName / Email" id="Username">
+                        <small class="username-error show-error"></small>
+                    </div>
+
+                    <div class="form-item">
+                        <i class='bx bxs-lock-alt bx-login' ></i>
+                        <input type="password" placeholder="Password" id="Password">
+                        <i class='bx bxs-hide bx-login hide-password show-hide-password'></i>
+                        <i class='bx bxs-show bx-login show-password show-hide-password'></i>
+                        <small class="password-error show-error"></small>
+                    </div>
+
+                    <small class="invalid-username-password show-error"></small>
+
+                    <div class="form-item remember-me">
+                        <div class="remember-me-left">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Remember Me</label>
+                        </div>
+
+                        <div class="remember-me-right">
+                            <a href="#">Recovery Password</a>
+                        </div>
+                    </div>
+
+                    <div class="form-item submit-btn login-submit-btn">
+                        <button onclick="return validateForm();" type="button">Sign In</button>
+
+                        <a href="#">
+                            <div class="login-with-google">
+                                <img src="{% static 'images/Login-Signup/google.png' %}" alt="" class="google-img">
+                                <p>Sign in with Google</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="form-item create-account">
+                        <p>Don't have an account?</p>
+                        <a href="{% url 'signup' %}">Sign Up</a>
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</div>
+
+{% if login == False %}
+    <script src="{% static 'js/signup.js' %}"></script>
+
+{% else %}
+    <script src="{% static 'js/login.js' %}"></script>
+
+{% endif %}
+
+{% include 'footer.html' %}
+{% endblock %}

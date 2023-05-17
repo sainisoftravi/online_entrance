@@ -1,0 +1,17 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<script>
+    window.onload = function(){
+        var date = new Date();
+        year = date.getFullYear()
+
+        document.getElementById('year').innerHTML = '&copy' + year;
+    }
+</script>
+
+<div class="footer">
+    <p id="foot">
+        <span id="year"></span>
+    </p>
+</div>

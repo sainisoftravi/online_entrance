@@ -2108,7 +2108,7 @@
                     "\\(\\frac{a+b}{3}\\)",
                     "\\(\\frac{c}{3}\\)",
                     "\\(\\frac{2c}{3}\\)",
-                    "\\(\\frac{c}{3\\)}"
+                    "\\(\\frac{c}{3}\\)"
                 ]
             },
             "If \\(x\\) is an integer and \\(y = -2x - 8\\), what is the least value of \\(x\\) for which \\(y\\) is less than 9?": {
@@ -2250,7 +2250,7 @@
                 "answer": "\\(\\frac{n(n+1}{2}\\)",
                 "choices": [
                     "\\(\\frac{n(n+1}{2}\\)",
-                    "\\(\\frac{n(n+1)(2n+1)}{2}",
+                    "\\(\\frac{n(n+1)(2n+1)}{2}\\)",
                     "\\(\\frac{(n+1)^{2}}{2}\\)",
                     "none of these"
                 ]
@@ -2282,7 +2282,7 @@
                     "18"
                 ]
             },
-            "The value when simplified \\(\\frac{6^{4} - 6^{3}}{5}}\\)": {
+            "The value when simplified \\(\\frac{6^{4} - 6^{3}}{5}\\)": {
                 "answer": "\\(6^{3}\\)",
                 "choices": [
                     "\\(\\frac{1}{5}\\)",
@@ -2300,16 +2300,16 @@
                     "16"
                 ]
             },
-            "The slope of line \\(\\frac{x}{a} + \\frac{y}{b} = 1} is:": {
+            "The slope of line \\(\\frac{x}{a} + \\frac{y}{b} = 1\\) is:": {
                 "answer": "\\(-\\frac{b}{a}\\)",
                 "choices": [
                     "\\(-\\frac{a}{b}\\)",
                     "\\(-\\frac{b}{a}\\)",
                     "\\(ab\\)",
-                    "\\(-frac{1}{ab}\\)"
+                    "\\(-\\frac{1}{ab}\\)"
                 ]
             },
-            "If \\(x = 4y\\), what percent of \\(2x is 2y\\)?": {
+            "If \\(x = 4y\\), what percent of \\(2x \\space is \\space 2y\\)?": {
                 "answer": "25%",
                 "choices": [
                     "20%",
@@ -2399,7 +2399,7 @@
                     "none of these"
                 ]
             },
-            "If 5/7 of a number is 1025, then 3/7 of number is:": {
+            "If \\(\\frac{5}{7}\\) of a number is 1025, then \\(\\frac{3}{7}\\) of number is:": {
                 "answer": "615",
                 "choices": [
                     "735",
@@ -2669,13 +2669,13 @@
                     "3,1"
                 ]
             },
-            "The interval satisfying \\(3\\le x-1\\le5\\) is:": {
+            "The interval satisfying \\(3 \\le x-1 \\le 5 \\) is:": {
                 "answer": "\\left[ 4,6 \\right]",
                 "choices": [
-                    "\\left[ 3,5 \\right]",
-                    "\\left[ 4,6 \\right]",
-                    "\\left[ 2,3 \\right]",
-                    "\\left[ 2,3 \\right]"
+                    "\\(\\left[ 3,5 \\right] \\)",
+                    "\\(\\left[ 4,6 \\right] \\)",
+                    "\\(\\left[ 2,3 \\right] \\)",
+                    "\\(\\left[ 2,3 \\right ]\\)"
                 ]
             },
             "The constant function is a:": {
@@ -2696,7 +2696,7 @@
                     "all of above"
                 ]
             },
-            "If \\(x + y = \\frac{4c}{5},\\space y + z = \\frac{7c}{5}\\space and \\space z + x = \\frac{9c}{5}\\), \\space the \\space value \\space of\\space \\(x + y + z\\) is Options: \\(\\frac{7c}{15}\\), \\(c\\), \\(2c\\), \\(3c\\).": {
+            "If \\(x + y = \\frac{4c}{5},\\space y + z = \\frac{7c}{5} \\space and \\space z + x = \\frac{9c}{5}\\), \\(\\space\\) the \\(\\space\\) value \\(\\space\\) of \\(\\space\\) \\(x + y + z\\):": {
                 "answer": "\\(2c\\)",
                 "choices": [
                     "\\(\\frac{7c}{15}\\)",
@@ -2867,7 +2867,7 @@
                     "1100"
                 ]
             },
-            "If \\(a:b\\space=\\space2:3,\\spaceb:c\\space=\\space5:7\\), the value of \\(a:b:c\\) is": {
+            "If \\(a:b\\space=\\space 2:3,\\space b:c\\space=\\space 5:7\\), the value of \\(a:b:c\\) is": {
                 "answer": "\\(2:3:7\\)",
                 "choices": [
                     "\\(2:3:7\\)",
@@ -2912,7 +2912,7 @@
                     "a real number"
                 ]
             },
-            "If \\(f(u)\\space=\\space\\frac{u}{u-1}\\), then \\frac{f(a)}{f(a+1)} is:": {
+            "If \\(f(u)\\space=\\space\\frac{u}{u-1}\\), then \\(\\frac{f(a)}{f(a+1)}\\) is:": {
                 "answer": "\\(f(a^{2})\\)",
                 "choices": [
                     "\\(f(-a)\\)",
@@ -3047,7 +3047,7 @@
                     "200"
                 ]
             },
-            "The number of bricks, each \\(4cm \\times 3cm \\times 2cm\\) are required to construct a wall having the dimension \\(11cm \\times 96 \\times 64cm\\) is: Options: 281500, 281600, 218500, 218500.": {
+            "The number of bricks, each \\(4cm \\times 3cm \\times 2cm\\) are required to construct a wall having the dimension \\(11cm \\times 96 \\times 64cm\\)": {
                 "answer": "2816",
                 "choices": [
                     "2815",
@@ -3069,7 +3069,7 @@
                 "answer": "\\(2\\)",
                 "choices": [
                     "\\(\\frac{1}{2}\\)",
-                    "\\(\\frac{\\sqrt{3}}{2}",
+                    "\\(\\frac{\\sqrt{3}}{2}\\)",
                     "\\(2\\)",
                     "\\(\\frac{1}{\\sqrt{3}}\\)"
                 ]
@@ -3569,7 +3569,7 @@
                     "9"
                 ]
             },
-            "The value of \\(\\left| (-2-3)-(-2-3) \\right | is:": {
+            "The value of \\(\\left| (-2-3)-(-2-3) \\right |\\) is:": {
                 "answer": "0",
                 "choices": [
                     "0",
@@ -3605,7 +3605,7 @@
                     "none of these"
                 ]
             },
-            "The ratio compounded of 4:9, the duplicate ratio of 3:4 is:": {
+            "The ratio compounded of \\(4:9\\), the duplicate ratio of \\(3:4\\) is:": {
                 "answer": "5:6",
                 "choices": [
                     "1:4",
@@ -3785,7 +3785,7 @@
                     "4"
                 ]
             },
-            "Which one of the following value of '\\(n\\)' gives the negative result of \\(n^{2} - 15\\)? Options: 7, 5, 3, 4.?": {
+            "Which one of the following value of '\\(n\\)' gives the negative result of \\(n^{2} - 15\\)?": {
                 "answer": "3",
                 "choices": [
                     "7",
@@ -4046,7 +4046,7 @@
                     "8%"
                 ]
             },
-            "What is the cardinal number of a vowel set \\(V = \\left\\{ a,e,i,o,u \\right\\} ?": {
+            "What is the cardinal number of a vowel set \\(V = \\left\\{ a,e,i,o,u \\right\\}\\) ?": {
                 "answer": "5",
                 "choices": [
                     "4",
@@ -4073,7 +4073,7 @@
                     "more than two factors"
                 ]
             },
-            "Which one of the following interval notation is correct for \\(\\left\\{x:5 \\le x \\le 15 \\right\\}?": {
+            "Which one of the following interval notation is correct for \\(\\left\\{x:5 \\le x \\le 15 \\right\\}\\)?": {
                 "answer": "\\(\\left [5, 15 \\right ]\\)",
                 "choices": [
                     "\\(\\left [5, \\infty \\right ]\\)",
@@ -4235,7 +4235,7 @@
                     "\\(\\left | x - 1 \\right | \\lt -1\\)"
                 ]
             },
-            "If the relation \\(R = \\left\\{ (1,2),(2,3),(3,4),(4,5) \\right\\} then its range is,": {
+            "If the relation \\(R = \\left\\{ (1,2),(2,3),(3,4),(4,5) \\right\\}\\) then its range is,": {
                 "answer": "\\(\\left\\{ 2,3,4,5 \\right\\}\\)",
                 "choices": [
                     "\\(\\left\\{ 2,3,4,5 \\right\\}\\)",
@@ -4460,7 +4460,7 @@
                     "none of these"
                 ]
             },
-            "Let \\(a\\) and \\(b\\) are two numbers on the real line. If \\((a, b) = \\left\\{ x:a \\lt x \\le b \\right\\} is known as,": {
+            "Let \\(a\\) and \\(b\\) are two numbers on the real line. If \\((a, b) = \\left\\{ x:a \\lt x \\le b \\right\\}\\) is known as,": {
                 "answer": "open interval",
                 "choices": [
                     "left open interval",
@@ -4631,7 +4631,7 @@
                     "8"
                 ]
             },
-            "If the function \\(f(x)=x^{2}-5\\), then \\(f(\\sqrt{5}\\)\\) is equal to": {
+            "If the function \\(f(x)=x^{2}-5\\), then \\(f(\\sqrt{5}\\) is equal to": {
                 "answer": "0",
                 "choices": [
                     "0",
@@ -4748,7 +4748,7 @@
                     "9"
                 ]
             },
-            "The value of \\(\\left | (-2-3)-(-2-3) \\right | is:": {
+            "The value of \\(\\left |(-2-3)-(-2-3) \\right| \\) is:": {
                 "answer": "0",
                 "choices": [
                     "5",

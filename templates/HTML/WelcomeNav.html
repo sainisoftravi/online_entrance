@@ -1,23 +1,29 @@
 {% load static %}
 
+<!DOCTYPE html>
 <html>
     <head>
         <title>Foresight | Prepare for Entrance</title>
-        <link rel="stylesheet" href="{% static 'css\WelcomeNav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/WelcomeNav.css' %}">
+        <link rel="icon" href='{% static "logo2.png" %}' type="image/icon type">
     </head>
 
     <body>
         <div class="nav-bar">
             <div class="logo">
-                <a href="#">
-                    <img src="../../assets/logo.png" alt="">
+                <a href="{% url 'index' %}">
+                    <span id="title">Foresight</span>
                 </a>
             </div>
 
-            <a href="#">
-                <div class="right-panel">
-                </div>
-            </a>
+            <div class="right-panel">
+                <a href="#">
+                    <img src="{% static 'pp-female.jpg' %}" class="profile-image">
+                </a>
+            </div>
         </div>
+
+        {% block content %}
+        {% endblock %}
     </body>
 </html>

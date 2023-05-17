@@ -1,0 +1,47 @@
+{% extends 'HTML/WelcomeNav.html' %}
+{% load static %}
+
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/modeltest.css' %}">
+    <script type="text/javascript" id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+    <div class="QuestionContainer">
+        {% for question, choices in questions.items %}
+            <div class="Questions">
+                <p class="title">
+                    <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question}}</strong>
+                </p>
+
+                <div class="options">
+                    <div class="choice">
+                        <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                        <label for="firstChoice {{forloop.counter}}">{{choices.0}}</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                        <label for="secondChoice {{forloop.counter}}">{{choices.1}}</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                        <label for="thirdChoice {{forloop.counter}}">{{choices.2}}</label>
+                    </div>
+
+                    <div class="choice">
+                        <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                        <label for="fourthChoice {{forloop.counter}}">{{choices.3}}</label>
+                    </div>
+                </div>
+                <p class="correct_answer">
+                    <strong>Correct Answer: xyz</strong>
+                </p>
+            </div>
+        {% endfor %}
+    </div>
+
+{% include 'footer.html' %}
+{% endblock %}

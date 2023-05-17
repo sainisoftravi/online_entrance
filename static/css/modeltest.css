@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Carlito&family=Ubuntu:wght@300&display=swap');
+
+:root{
+    --font: 'Carlito';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+    box-sizing: border-box;
+}
+
+.QuestionContainer{
+    gap: 20px;
+    width: 100%;
+    display: flex;
+    min-height: 100px;
+    align-items: center;
+    flex-direction: column;
+    background-color: #4398b5;
+}
+
+.Questions{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: whitesmoke;
+    box-shadow: -21px 40px 45px 0px rgba(15,130,130,1);
+}
+
+.title{
+    width: 100%;
+    font-size: 20px;
+    font-family: var(--font);
+    padding: 20px 20px 0px 20px;
+    background-color: whitesmoke;
+}
+
+.options{
+    gap: 10px;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.choice{
+    gap: 10px;
+    width: 50%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.choice label{
+    font-size: 18px;
+    font-family: var(--font);
+}
+
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 2em;
+}
+
+input[type=radio],
+label{
+    cursor: pointer;
+}
+
+.correct_answer{
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    font-family: var(--font);
+}

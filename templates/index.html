@@ -1,0 +1,58 @@
+{% extends 'HTML/IndexNav.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/index/index.css' %}">
+
+<div class="quote">
+    <p>
+        "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle."
+    </p>
+    <img src="{% static 'images/index/index-main.svg' %}">
+</div>
+
+<div class="welcome">
+    <p>
+        Welcome to "Online Entrance Preparation"! We understand that getting into your desired academic program can be a challenging process, and that's why we're here to help. Our online entrance preparation courses are designed to equip you with the knowledge and skills you need to succeed in entrance exams for various academic programs, including universities, colleges, and professional courses. With our expert instructors and comprehensive study materials, you can prepare for your entrance exams from the comfort of your own home, at your own pace. Let us help you reach your academic goals with our online entrance preparation courses.
+    </p>
+
+    <img src="{% static 'images/index/welcome-image.png' %}">
+</div>
+
+<div class="contact">
+    <div class="contact-left">
+        <img src="{%static 'images/index/contact.jpg' %}" id="contact-image">
+    </div>
+    <div class="contact-right">
+        <div class="contact-form">
+            <form action="">
+                <div class="contact-form-item">
+                    <input type="Name" placeholder="Your Name" id="contact-name">
+                </div>
+
+                <div class="contact-form-item">
+                    <input type="email" placeholder="Your Email" id="contact-email">
+                </div>
+
+                <div class="contact-form-item">
+                    <textarea placeholder="Message" rows="20" id="contact-text-area"></textarea>
+                </div>
+
+                <div class="contact-form-item">
+                    <button class="send-msg">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+</div>
+<a href="#" class="go-to-top">
+    <i class='bx bxs-up-arrow'></i>
+</a>
+
+<script src="{% static 'js/index/min.js' %}"></script>
+
+{% include 'footer.html' %}
+{% endblock %}

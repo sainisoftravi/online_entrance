@@ -1,6 +1,8 @@
 const toTop = document.querySelector('.go-to-top');
 
-window.addEventListener('scroll', function(){
+window.addEventListener('scroll', scroll);
+
+function scroll(){
     if(window.scrollY > 50){
         toTop.classList.add('active');
 
@@ -14,4 +16,4 @@ window.addEventListener('scroll', function(){
     else{
         toTop.classList.remove('active');
     }
-});
+}

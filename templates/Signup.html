@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/signup.css' %}">
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -36,9 +35,7 @@
                     <div class="form-item">
                         <i class='bx bxs-lock-alt bx-login' ></i>
                         <input type="password" placeholder="Password" id="password">
-                        <i class='bx bxs-hide bx-login hide-password show-hide-password'></i>
-                        <i class='bx bxs-show bx-login show-password show-hide-password'></i>
-
+                        <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
                         <small class="password-error show-error"></small>
                     </div>
 
@@ -86,9 +83,8 @@
 
                     <div class="form-item">
                         <i class='bx bxs-lock-alt bx-login' ></i>
-                        <input type="password" placeholder="Password" id="Password">
-                        <i class='bx bxs-hide bx-login hide-password show-hide-password'></i>
-                        <i class='bx bxs-show bx-login show-password show-hide-password'></i>
+                        <input type="password" placeholder="Password" id="password">
+                        <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
                         <small class="password-error show-error"></small>
                     </div>
 
@@ -128,9 +124,11 @@
 
 {% if login == False %}
     <script src="{% static 'js/signup.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 
 {% else %}
     <script src="{% static 'js/login.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
 {% endif %}
 

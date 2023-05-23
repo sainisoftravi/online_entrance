@@ -2,8 +2,7 @@ date = new Date();
 
 password_box = document.querySelector('#password');
 error_msg = document.querySelectorAll('.show-error');
-hide_password = document.querySelector('.hide-password');
-show_password = document.querySelector('.show-password');
+password_eye = document.querySelector('.password-eye');
 
 for(em of error_msg){
     em.style.display = 'none';
@@ -27,6 +26,7 @@ gender_div.forEach((div) => {
 );
 
 function validateForm(){
+    username_regex = /^[a-z]\w+/i;
     email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
     password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
@@ -40,9 +40,9 @@ function validateForm(){
     password_error = document.querySelector('.password-error');
     email_error = document.querySelector('.signup-email-error');
 
+    password = password_box.value;
     email = document.querySelector('#email').value;
     username = document.querySelector('#username').value;
-    password = password_box.value;
 
     dob_day_value = dob_day.value;
     dob_year_value = dob_year.value;
@@ -53,19 +53,33 @@ function validateForm(){
         username_error.style.display = 'block';
     }
 
-    else{
-        username_error.style.display = 'none';
-    }
-
-    if(username.indexOf(' ') != -1 && username){
+    else if(username.indexOf(' ') != -1){
         username_error.innerHTML = "Username must not contain space(s)";
         username_error.style.display = 'block';
     }
 
-    if(email_regex.test(email) === false){
+    else if(username_regex.test(username) == false){
+        username_error.innerHTML = "Username must start with a letter";
+        username_error.style.display = 'block';
+    }
+
+    else if(username.length < 4 || username.length > 10){
+        username_error.innerHTML = "Username must be 4-10 characters long";
+        username_error.style.display = 'block';
+    }
+
+    else{
+        username_error.style.display = 'none';
+    }
+
+    if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
+        email_error.innerHTML = 'Email must not contain spaces(s)';
+        email_error.style.display = 'block';
+    }
+
+    else if(email_regex.test(email) === false){
         email_error.innerHTML = "Invalid Email";
         email_error.style.display = 'block';
-
     }
 
     else{
@@ -111,30 +125,31 @@ function validateForm(){
     }
 }
 
-hide_password.addEventListener('click', function(){
-    password_box.type = 'text';
-    hide_password.classList.add('show-hide-password');
-    show_password.classList.remove('show-hide-password');
+password_eye.addEventListener('click', (event) => {
+    if(password_box.type == 'text'){
+        password_box.type = 'password';
+        password_eye.classList.add('bxs-hide');
+        password_eye.classList.remove('bxs-show');
+    }
+
+    else{
+        password_box.type = 'text';
+        password_eye.classList.add('bxs-show');
+        password_eye.classList.remove('bxs-hide');
+    }
 });
 
 
-show_password.addEventListener('click', function(){
-    password_box.type = 'password';
-    show_password.classList.add('show-hide-password');
-    hide_password.classList.remove('show-hide-password');
-});
-
-password_box.addEventListener('keyup', (event) => {
+password_box.addEventListener('keydown', (event) => {
     values = password_box.value
 
     if(values.length >= 1){
-        if(hide_password.classList.contains('show-hide-password')){
-            hide_password.classList.remove('show-hide-password');
+        if(password_eye.classList.contains('show-hide-password')){
+            password_eye.classList.remove('show-hide-password');
         }
     }
 
     else if(values.length == 0){
-        hide_password.classList.add('show-hide-password');
-        show_password.classList.add('show-hide-password');
+        password_eye.classList.add('show-hide-password');
     }
 });

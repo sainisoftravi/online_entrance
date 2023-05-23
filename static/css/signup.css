@@ -43,10 +43,6 @@
     background-image: url('../images/Login-Signup/SignUp.jpg');
 }
 
-.login-left-image{
-    background-image: url('../images/Login-Signup/Login.jpg');
-}
-
 .form-right{
     width: 50%;
     height: 100%;
@@ -150,77 +146,6 @@ button{
     width: 70px;
 }
 
-.remember-me{
-    display: flex;
-    justify-content: space-between;
-}
-
-.remember-me-left{
-    display: flex;
-    align-items: center;
-}
-
-.remember-me-left input{
-    cursor: pointer;
-}
-
-.remember-me-left label{
-    color: silver;
-    cursor: pointer;
-    padding-left: 5px;
-    font-family: var(--font);
-}
-
-.remember-me-right a{
-    color: #088395;
-    font-family: var(--font);
-}
-
-.create-account{
-    display: flex;
-    padding-top: 15%;
-    justify-content: center;
-}
-
-.create-account p{
-    color: var(--p-color);
-    padding-right: 5px;
-}
-
-.create-account a{
-    color: #088395;
-    font-weight: bolder;
-}
-
-.login-submit-btn{
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-}
-
-.login-with-google{
-    width: 100%;
-    padding: 10px;
-    display: flex;
-    border-radius: 5px;
-    align-items: center;
-    justify-content: center;
-    justify-content: center;
-    background-color: #441d83;
-}
-
-.google-img{
-    width: 10%;
-    height: 10%;
-}
-
-.login-with-google p{
-    padding-left: 10px;
-    color: var(--p-color);
-    font-weight: bolder;
-    font-family: var(--font);
-}
-
 .signup-submit-btn{
     gap: 10px;
     display: flex;
@@ -249,8 +174,7 @@ button{
     background-color: tomato;
 }
 
-.show-password,
-.hide-password{
+.password-eye{
     left: 92%;
     cursor: pointer;
 }

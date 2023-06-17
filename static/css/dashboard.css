@@ -1,0 +1,132 @@
+:root{
+    --p-color: black;
+    --div-bg-color: whitesmoke;
+}
+
+.dashboard-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(238, 235, 235);
+}
+
+.row img{
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-email{
+    font-size: 20px;
+}
+
+label {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 0.3rem;
+    font-family: sans-serif;
+    background-color: indigo;
+  }
+
+.row{
+    width: 60%;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    background-color: var(--div-bg-color);
+}
+
+.first-row{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: space-around;
+}
+
+.row-details{
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.left-text{
+    width: 40%;
+    padding: 20px;
+    font-size: 20px;
+    color: var(--p-color);
+    text-align: center;
+    background-color: var(--div-bg-color);
+}
+
+.change-password,
+.delete-account{
+    gap: 10px;
+    flex-direction: column;
+    padding: 10px;
+
+}
+
+.change-password p{
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--p-color);
+}
+
+.input-groups{
+    width: 80%;
+}
+
+.input-groups input{
+    border: 1px solid black;
+    width: 100%;
+    outline: none;
+    padding: 10px;
+}
+
+.input-groups button{
+    border: 0;
+    padding: 20px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: var(--div-bg-color);
+    background-color: rgb(79, 0, 153);
+}
+
+.delete-account{
+    align-items: normal;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.delete-account p{
+    font-size: 30px;
+    font-weight: 600;
+    margin-left: 40px;
+    color: var(--p-color);
+}
+
+.delete-account button{
+    width: 30%;
+    padding: 15px;
+    cursor: pointer;
+    color: #a40e26;
+    margin-left: 40px;
+    border-radius: 5px;
+    border: 1px solid #a40e26;
+    background: var(--div-bg-color);
+}
+
+.delete-account button:hover{
+    color: white;
+    background-color: #a40e26;
+}

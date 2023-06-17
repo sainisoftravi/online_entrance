@@ -1,11 +1,10 @@
+email_box = document.querySelector('#email');
 form_right = document.querySelector('.form-right');
 password_box = document.querySelector('#password');
-user_email_box = document.querySelector('#Username');
+email_error = document.querySelector('.email-error');
 submit_button = document.querySelector('.submit-btn');
 password_eye = document.querySelector('.password-eye');
 password_error = document.querySelector('.password-error');
-user_email_error = document.querySelector('.username-error');
-invalid_username_email_password = document.querySelector('.invalid-username-password');
 
 password_eye.classList.add('show-hide-password');
 
@@ -18,31 +17,33 @@ else{
 }
 
 function validateForm(){
-    username_regex = /^[a-z]\w+/i;
+    success = true;
     email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
 
     password = password_box.value;
-    user_email_value = user_email_box.value;
+    email_value = email_box.value;
 
-    if(!user_email_value || user_email_value.indexOf(' ') != -1 ||
-      (user_email_value.indexOf('@') != -1 && email_regex.test(user_email_value)) ||
-      username_regex.test(user_email_value) == false){
-        user_email_error.innerHTML = 'Invalid Username or Email';
-        user_email_error.style.display = 'block';
+    if(!email_value || email_value.indexOf(' ') != -1 || (email_value.indexOf('@') != -1 && email_regex.test(email_value) == false)){
+        email_error.innerHTML = 'Invalid Email';
+        email_error.style.display = 'block';
+        success = false;
     }
 
     else{
-        user_email_error.style.display = 'none';
+        email_error.style.display = 'none';
     }
 
     if(!password){
         password_error.innerHTML = "Invalid Password"
         password_error.style.display = 'block';
+        success = false;
     }
 
     else{
         password_error.style.display = 'none';
     }
+
+    return success == true;
 }
 
 password_eye.addEventListener('click', (event) => {

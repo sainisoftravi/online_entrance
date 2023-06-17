@@ -19,6 +19,19 @@ body{
     justify-content: space-between;
 }
 
+.right-panel{
+    display: flex;
+}
+
+#take-test{
+    padding: 20px;
+    color: #ECF9FF;
+    font-weight: 600;
+    border-radius: 15px;
+    margin-right: 25px;
+    background-color: #88609b;
+}
+
 #title{
     color: #ECF9FF;
     font-size: 30px;
@@ -27,20 +40,73 @@ body{
     font-family: 'Oswald';
 }
 
-.right-panel li{
-    color: white;
-    display: inline-block;
-    padding: 10px;
-}
-
 a{
     color: black;
     text-decoration: none;
 }
 
-.profile-image{
+.profile-img{
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    cursor: pointer;
     margin-right: 10px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.drop-down-menu{
+    right: 0px;
+    max-height: 0;
+    position: absolute;
+    display: none;
+    background-color: #7bb7ca;
+    transition: max-height 5s;
+}
+
+.drop-down-menu.open-menu{
+    display: block;
+    max-height: 400px;
+}
+
+.drop-down-profile{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #ffffff;
+}
+
+.drop-down-profile-img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.drop-down-profile h3{
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.drop-down-menu hr{
+    width: 100%;
+    height: 1;
+    background: #ccc;
+}
+
+.drop-down-options{
+    display: flex;
+    padding: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.drop-down-options i{
+    color: #3a3939;
+    font-size: 40px;
+    margin-left: 5px;
+    margin-right: 25px;
+}
+
+.drop-down-options p{
+    font-size: 20px;
 }

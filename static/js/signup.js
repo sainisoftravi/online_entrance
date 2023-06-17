@@ -8,9 +8,13 @@ for(em of error_msg){
     em.style.display = 'none';
 }
 
-male_div = document.querySelector('#male');
-female_div = document.querySelector('#female');
-others_div = document.querySelector('#others');
+male_div = document.querySelector('.male-div');
+female_div = document.querySelector('.female-div');
+others_div = document.querySelector('.others-div');
+
+male_radio = document.querySelector('#male');
+female_radio = document.querySelector('#female');
+others_radio = document.querySelector('#others');
 
 gender_div = [male_div, female_div, others_div];
 
@@ -20,12 +24,26 @@ gender_div.forEach((div) => {
             sex_div.classList.remove('selected-gender');
         }
 
+        if(div == male_div){
+            male_radio.checked = true;
+        }
+
+        else if(div == female_div){
+            female_radio.checked = true;
+        }
+
+        if(div == others_div){
+            others_radio.checked = true;
+        }
+
         div.classList.add('selected-gender');
     });
 }
 );
 
+
 function validateForm(){
+    success = true;
     username_regex = /^[a-z]\w+/i;
     email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
     password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
@@ -48,24 +66,29 @@ function validateForm(){
     dob_year_value = dob_year.value;
     dob_month_value = dob_month.value;
 
+
     if(!username){
         username_error.innerHTML = "Invalid Username";
         username_error.style.display = 'block';
+        success = false;
     }
 
     else if(username.indexOf(' ') != -1){
         username_error.innerHTML = "Username must not contain space(s)";
         username_error.style.display = 'block';
+        success = false;
     }
 
     else if(username_regex.test(username) == false){
         username_error.innerHTML = "Username must start with a letter";
         username_error.style.display = 'block';
+        success = false;
     }
 
     else if(username.length < 4 || username.length > 10){
         username_error.innerHTML = "Username must be 4-10 characters long";
         username_error.style.display = 'block';
+        success = false;
     }
 
     else{
@@ -75,11 +98,13 @@ function validateForm(){
     if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
         email_error.innerHTML = 'Email must not contain spaces(s)';
         email_error.style.display = 'block';
+        success = false;
     }
 
     else if(email_regex.test(email) === false){
         email_error.innerHTML = "Invalid Email";
         email_error.style.display = 'block';
+        success = false;
     }
 
     else{
@@ -89,6 +114,7 @@ function validateForm(){
     if(password_regex.test(password) == false){
         password_error.innerHTML = "Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters"
         password_error.style.display = 'block';
+        success = false;
     }
 
     else{
@@ -101,6 +127,7 @@ function validateForm(){
        !(dob_year_value >= 1920 && dob_year_value <= date.getFullYear())){
            dob_error.innerHTML = 'Invalid Date of Birth';
            dob_error.style.display = 'block';
+           success = false;
         }
 
     else{
@@ -122,7 +149,10 @@ function validateForm(){
     else{
         gender_error.innerHTML = 'Select any one';
         gender_error.style.display = 'block';
+        success = false;
     }
+
+    return success == true;
 }
 
 password_eye.addEventListener('click', (event) => {

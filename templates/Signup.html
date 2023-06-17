@@ -18,23 +18,19 @@
         {% endif %}
 
         <div class="form-right">
-            <form action="">
+            <form action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+
                 {% if login == False %}
                     <div class="form-item">
-                        <i class='bx bxs-user bx-login' ></i>
-                        <input type="text" placeholder="UserName" id="username">
-                        <small class="username-error show-error"></small>
-                    </div>
-
-                    <div class="form-item">
                         <i class='bx bxs-envelope bx-login'></i>
-                        <input type="text" placeholder="Email" id="email">
+                        <input type="text" placeholder="Email" id="email" name="email">
                         <small class="signup-email-error show-error"></small>
                     </div>
 
                     <div class="form-item">
                         <i class='bx bxs-lock-alt bx-login' ></i>
-                        <input type="password" placeholder="Password" id="password">
+                        <input type="password" placeholder="Password" id="password" name="password">
                         <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
                         <small class="password-error show-error"></small>
                     </div>
@@ -44,15 +40,15 @@
 
                         <div class="dob-inputs">
                             <div class="dob-input-1">
-                                <input type="text" placeholder="DD" id="dob-day">
+                                <input type="text" placeholder="DD" id="dob-day" name="dob-day">
                             </div>
 
                             <div class="dob-input-1">
-                                <input type="text" placeholder="MM" id="dob-month">
+                                <input type="text" placeholder="MM" id="dob-month" name="dob-month">
                             </div>
 
                             <div class="dob-input-1 last-dob">
-                                <input type="text" placeholder="YYYY" id="dob-year">
+                                <input type="text" placeholder="YYYY" id="dob-year" name="dob-year">
                             </div>
                         </div>
                         <small class="dob-error show-error">Invalid date of birth</small>
@@ -62,37 +58,66 @@
                         <p>Gender</p>
 
                         <div class="genders">
-                            <div id="male">Male</div>
-                            <div id="female">Female</div>
-                            <div id="others">Others</div>
+                            <div class="male-div">
+                                <input type="radio" id="male" name="gen" value="male">
+                                <label for="male">Male</label>
+                            </div>
+
+                            <div class="female-div">
+                                <input type="radio" id="female" name="gen" value="female">
+                                <label for="female">Female</label>
+                            </div>
+
+                            <div class="others-div">
+                                <input type="radio" id="others" name="gen" value="others">
+                                <label for="others">Others</label>
+                            </div>
                         </div>
                         <small class="gender-error show-error">Select any one option</small>
                     </div>
 
+                    <div class="upload-profile-image-div">
+                        <p>Profile</p>
+                        <img src="{% static 'pp-female.jpg' %}" alt="" class="user-image">
+                        <input type="file" accept="image/*" name="uploaded-profile-image" class="upload-button" onchange="document.querySelector('.user-image').src = window.URL.createObjectURL(this.files[0])">
+                    </div>
+
                     <div class="form-item submit-btn signup-submit-btn">
-                        <button onclick="return validateForm();" type="button">Sign Up</button>
+                        <button onclick="return validateForm()" type="submit">Sign Up</button>
                         <p>Already a member? <a href="{% url 'login' %}">Sign In</a></p>
                     </div>
 
-                    {% else %}
+                {% else %}
                     <div class="form-item">
                         <i class='bx bxs-user bx-login' ></i>
-                        <input type="text" placeholder="UserName / Email" id="Username">
-                        <small class="username-error show-error"></small>
+                        <input type="text" placeholder="Email" id="email", name="email">
+                        <small class="email-error show-error"></small>
                     </div>
 
                     <div class="form-item">
                         <i class='bx bxs-lock-alt bx-login' ></i>
-                        <input type="password" placeholder="Password" id="password">
+                        <input type="password" placeholder="Password" id="password", name="password">
                         <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
                         <small class="password-error show-error"></small>
                     </div>
 
-                    <small class="invalid-username-password show-error"></small>
+                    <small class="invalid-email-password show-error">
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{message}}
+                            {% endfor %}
+                        {% endif %}
+
+                        <style>
+                            .invalid-email-password{
+                                display: block
+                            }
+                        </style>
+                    </small>
 
                     <div class="form-item remember-me">
                         <div class="remember-me-left">
-                            <input type="checkbox" id="remember-me">
+                            <input type="checkbox" id="remember-me", name="remember-me">
                             <label for="remember-me">Remember Me</label>
                         </div>
 
@@ -102,7 +127,7 @@
                     </div>
 
                     <div class="form-item submit-btn login-submit-btn">
-                        <button onclick="return validateForm();" type="button">Sign In</button>
+                        <button onclick="return validateForm()" type="submit">Sign In</button>
 
                         <a href="#">
                             <div class="login-with-google">

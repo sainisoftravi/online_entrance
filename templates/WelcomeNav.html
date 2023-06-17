@@ -6,6 +6,8 @@
         <title>Foresight | Prepare for Entrance</title>
         <link rel="stylesheet" href="{% static 'css/WelcomeNav.css' %}">
         <link rel="icon" href='{% static "logo2.png" %}' type="image/icon type">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
 
     <body>
@@ -17,12 +19,41 @@
             </div>
 
             <div class="right-panel">
-                <a href="#">
-                    <img src="{% static 'pp-female.jpg' %}" class="profile-image">
-                </a>
+                <a href="#" id="take-test">Take a Test</a>
+
+                <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
             </div>
         </div>
 
+        <div class="drop-down-menu">
+            <div class="drop-down-profile">
+                <img src="{{ request.user.ProfileImage.url }}" alt="" class="drop-down-profile-img">
+                <h3>{{ request.user.email }}</h3>
+            </div>
+
+            <a href="#">
+                <div class="drop-down-options">
+                    <i class='bx bxs-user-circle'></i>
+                    <p>Profile</p>
+                </div>
+            </a>
+
+            <a href="#">
+                <div class="drop-down-options">
+                    <i class='bx bx-history'></i>
+                    <p>History</p>
+                </div>
+            </a>
+
+            <a href="{% url 'logout' %}">
+                <div class="drop-down-options">
+                    <i class='bx bx-log-out' ></i>
+                    <p>Logout</p>
+                </div>
+            </a>
+        </div>
+
+        <script src="{% static 'js/WelcomeNav.js' %}"></script>
         {% block content %}
         {% endblock %}
     </body>

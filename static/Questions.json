@@ -6675,5 +6675,234 @@
                 ]
             }
         }
+    },
+    "BScsIT": {
+        "English": {
+            ".......... his project was not completed, he was given permission to leave.": {
+                "answer": "Although",
+                "choices": [
+                    "Although",
+                    "in spite of",
+                    "as it",
+                    "despite"
+                ]
+            },
+            "Rajendra is .......... had working and friendly.": {
+                "answer": "but also",
+                "choices": [
+                    "but also",
+                    "both",
+                    "as well as",
+                    "not only"
+                ]
+            },
+            "More than one hundred people .......... to the meeting.": {
+                "answer": "have come",
+                "choices": [
+                    "have come",
+                    "has come",
+                    "is coming",
+                    "was coming"
+                ]
+            },
+            "Mr. Thakuri speaks both Nepali .......... Maithali very prefectly": {
+                "answer": "as well as",
+                "choices": [
+                    "as well as",
+                    "and also",
+                    "and",
+                    "with"
+                ]
+            },
+            "Reading, observing, teaching and .......... are good ways to gain knowledge.": {
+                "answer": "discussion",
+                "choices": [
+                    "discussion",
+                    "discussing",
+                    "to discuss",
+                    "discusing"
+                ]
+            },
+            "The river Narayani flow thorugh .......... Narayanghat.": {
+                "answer": "no article",
+                "choices": [
+                    "an",
+                    "a",
+                    "the",
+                    "no article"
+                ]
+            },
+            "In recent years people have been more concerned .......... quality of driking water.": {
+                "answer": "of",
+                "choices": [
+                    "with",
+                    "for",
+                    "about",
+                    "of"
+                ]
+            },
+            "She was killed .......... a robber .......... A gun.": {
+                "answer": "by; with",
+                "choices": [
+                    "by; for",
+                    "by; with",
+                    "in; for",
+                    "with; for"
+                ]
+            },
+            "The fear of rape and robbing .......... caused many people run away from the cities.": {
+                "answer": "has",
+                "choices": [
+                    "has",
+                    "have",
+                    "was",
+                    "has been"
+                ]
+            },
+            "The grass needs ..........": {
+                "answer": "to be cut",
+                "choices": [
+                    "cutting",
+                    "to cut",
+                    "to be cut",
+                    "both a and b"
+                ]
+            },
+            ".......... this evidence, I know, he is in the right.": {
+                "answer": "from",
+                "choices": [
+                    "at",
+                    "from",
+                    "by",
+                    "in"
+                ]
+            },
+            "I object .......... your propos": {
+                "answer": "to",
+                "choices": [
+                    "at",
+                    "about",
+                    "in",
+                    "to"
+                ]
+            },
+            "I have worked .......... the answer.": {
+                "answer": "out",
+                "choices": [
+                    "about",
+                    "over",
+                    "among",
+                    "out"
+                ]
+            },
+            "Which word doesn't take .......... is suffix?": {
+                "answer": "history",
+                "choices": [
+                    "history",
+                    "athlete",
+                    "artist",
+                    "success"
+                ]
+            },
+            "Which of the following does not take a prefix?": {
+                "answer": "provided",
+                "choices": [
+                    "provided",
+                    "poisonous",
+                    "protected",
+                    "detected"
+                ]
+            },
+            "Which of the following is a verb?": {
+                "answer": "spectacular",
+                "choices": [
+                    "spectacular",
+                    "marvel",
+                    "comparable",
+                    "fancy"
+                ]
+            },
+            "We shall finish worked before he ..........": {
+                "answer": "will come",
+                "choices": [
+                    "will come",
+                    "would come",
+                    "could come",
+                    "comes"
+                ]
+            },
+            "The memoranda .......... approved.": {
+                "answer": "is",
+                "choices": [
+                    "is",
+                    "was",
+                    "has been",
+                    "have been"
+                ]
+            },
+            "Which is incorrect?": {
+                "answer": "forceps",
+                "choices": [
+                    "scissors",
+                    "tweezers",
+                    "forceps",
+                    "pincers"
+                ]
+            },
+            "Lack of blood ..........": {
+                "answer": "anemia",
+                "choices": [
+                    "amnesia",
+                    "insomnia",
+                    "anemia",
+                    "epicurean"
+                ]
+            },
+            "A well experienced person is ..........": {
+                "answer": "lawyer",
+                "choices": [
+                    "lawyer",
+                    "cosmopolitian",
+                    "veteran",
+                    "teacher"
+                ]
+            },
+            "The doubt .......... Gita will come.": {
+                "answer": "if",
+                "choices": [
+                    "that",
+                    "if",
+                    "when",
+                    "why"
+                ]
+            },
+            "They walk very fast. The underlined work is..........": {
+                "answer": "adverb",
+                "choices": [
+                    "adverb",
+                    "adjective",
+                    "preposition",
+                    "demonstrative adjective"
+                ]
+            },
+            "The passiven of: They heard me sing a song.": {
+                "answer": "I washeard singing a song",
+                "choices": [
+                    "I was heard to sing a song",
+                    "I was heard sing a song",
+                    "I washeard singing a song",
+                    "I was heard to sing a song by them"
+                ]
+            },
+            "The indirect of: He said, 'Congratulation'.": {
+                "answer": "He sai that congratulations.",
+                "choices": [
+                    "He sai that congratulations.",
+                    "he congratulated me",
+                    "he congratulated that I passed.",
+                    "He said that i deserved congratulations."
+                ]
+            }
+        }
     }
 }

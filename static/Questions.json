@@ -6902,6 +6902,195 @@
                     "he congratulated that I passed.",
                     "He said that i deserved congratulations."
                 ]
+            },
+            "The word \"education\" has the stress on the .......... syllable.": {
+                "answer": "first",
+                "choices": [
+                    "first",
+                    "second",
+                    "thord",
+                    "fourth"
+                ]
+            },
+            "Select the rght synonym to the word \"adrous\"": {
+                "answer": "Simple",
+                "choices": [
+                    "Simple",
+                    "Difficult",
+                    "easy",
+                    "strange"
+                ]
+            },
+            "Give the opposite meaning of \"obscure\"": {
+                "answer": "Pedantic",
+                "choices": [
+                    "Pedantic",
+                    "impllicit",
+                    "expilict",
+                    "obnoxious"
+                ]
+            },
+            "The initial consonant sound of \"chef\" is the same as that of ..........": {
+                "answer": "Chute",
+                "choices": [
+                    "Chute",
+                    "chess",
+                    "child",
+                    "cheap"
+                ]
+            },
+            "I completely differ .......... you .......... this point.": {
+                "answer": "From: at",
+                "choices": [
+                    "From: at",
+                    "from: in",
+                    "from: on",
+                    "to:at"
+                ]
+            },
+            "We feel sympathy .......... the poor.": {
+                "answer": "to",
+                "choices": [
+                    "to",
+                    "with",
+                    "about",
+                    "for"
+                ]
+            },
+            "He insisted .......... leaving immediately.": {
+                "answer": "at",
+                "choices": [
+                    "at",
+                    "in",
+                    "on",
+                    "over"
+                ]
+            },
+            "Food that agree to one's taste is ..........": {
+                "answer": "pungent",
+                "choices": [
+                    "pungent",
+                    "edible",
+                    "palatable",
+                    "suspicious"
+                ]
+            },
+            "The word \"pleased\" takes the prefix ..........": {
+                "answer": "un-",
+                "choices": [
+                    "un-",
+                    "mis-",
+                    "dis-",
+                    "none-"
+                ]
+            },
+            "Fear of food is called as ..........": {
+                "answer": "Sitophobia",
+                "choices": [
+                    "Sitophobia",
+                    "ergophobia",
+                    "Panthophobia",
+                    "hyctophobia"
+                ]
+            },
+            "A funeral bell is called": {
+                "answer": "call",
+                "choices": [
+                    "call",
+                    "knell",
+                    "replica",
+                    "invitation"
+                ]
+            },
+            "People .......... a large number of computers now, because prices are getting low.": {
+                "answer": "must buy",
+                "choices": [
+                    "must buy",
+                    "must have bought",
+                    "must be buying",
+                    "must buying"
+                ]
+            },
+            "Although they are similar, chipmunks are .......... most other ground squirrels.": {
+                "answer": "alike",
+                "choices": [
+                    "alike",
+                    "like as",
+                    "like to",
+                    "like"
+                ]
+            },
+            "She .......... the whole day long.": {
+                "answer": "Has been working",
+                "choices": [
+                    "Has been working",
+                    "works had worked",
+                    "works",
+                    "worked"
+                ]
+            },
+            "Now a days Shyam is .......... busy to take care of his health.": {
+                "answer": "very",
+                "choices": [
+                    "very",
+                    "to",
+                    "so",
+                    "extremely"
+                ]
+            },
+            "She demanded .......... her status.": {
+                "answer": "know",
+                "choices": [
+                    "know",
+                    "knwoing",
+                    "to know",
+                    "to be known"
+                ]
+            },
+            "The mail comes ar ten O'clock everday .......... saturday.": {
+                "answer": "But also",
+                "choices": [
+                    "But also",
+                    "and",
+                    "also",
+                    "but"
+                ]
+            },
+            "In my office, salary is paid by .......... month.": {
+                "answer": "the",
+                "choices": [
+                    "the",
+                    "a",
+                    "an",
+                    "some"
+                ]
+            },
+            "Ever boy and every girl .......... very responsible.": {
+                "answer": "are",
+                "choices": [
+                    "are",
+                    "is",
+                    "has",
+                    "have"
+                ]
+            },
+            "Which of the following is an adjective?": {
+                "answer": "sympathize",
+                "choices": [
+                    "sympathize",
+                    "lighten",
+                    "preception",
+                    "moral"
+                ]
+            },
+            "Which of the following is accepted?": {
+                "answer": "Some of rice is still left",
+                "choices": [
+                    "Some of rice is still left",
+                    "Time and tide wait for none",
+                    "She absents herself from the college today",
+                    "None of the squares was properly drawn"
+                ]
             }
         }
     }

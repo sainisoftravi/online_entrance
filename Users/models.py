@@ -44,7 +44,7 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser):
     username = None
 
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4().hex, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
     email = models.EmailField(_('email address'), unique=True)
     Gender = models.CharField(
@@ -76,3 +76,99 @@ class CustomUser(AbstractUser):
     REQUIRED_FIELDS = []
 
     objects = CustomUserManager()
+
+
+class Programme(models.Model):
+    class Meta:
+        verbose_name_plural = "Programme"
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    Name = models.CharField(
+            null = False,
+            blank = False,
+            max_length = 10
+        )
+
+
+class Subject(models.Model):
+    class Meta:
+        verbose_name_plural = "Subject"
+
+    ProgrammeID = models.ForeignKey(
+            "Programme",
+            on_delete = models.CASCADE
+        )
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    Name = models.CharField(
+            null = False,
+            blank = False,
+            max_length = 50
+        )
+
+    TotalQuestionsToSelect = models.SmallIntegerField(
+            null = False,
+            blank = False,
+            default=1
+        )
+
+
+class Questions(models.Model):
+    class Meta:
+        verbose_name_plural = "Questions"
+
+    SubjectID = models.ForeignKey(
+            'Subject',
+            on_delete = models.CASCADE
+        )
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    Title = models.TextField(
+                null = False,
+                blank = False
+        )
+
+    Answer = models.CharField(
+                null = False,
+                blank = False,
+                max_length = 20
+        )
+
+    OptionOne = models.CharField(
+                    null = False,
+                    blank = False,
+                    max_length = 20
+        )
+
+    OptionTwo = models.CharField(
+                    null = False,
+                    blank = False,
+                    max_length = 20
+        )
+
+    OptionThree = models.CharField(
+                    null = False,
+                    blank = False,
+                    max_length = 20
+        )
+
+    OptionFour = models.CharField(
+                    null = False,
+                    blank = False,
+                    max_length = 20
+        )

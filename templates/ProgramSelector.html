@@ -1,0 +1,19 @@
+{% extends 'WelcomeNav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/ProgramSelector.css'%} ">
+    <div class="outer-div">
+        <div class="search-container">
+            <i class='bx bx-search-alt-2 search-icon'></i>
+            <input type="text" placeholder="Select Program (BCA, BIT, etc.)">
+        </div>
+
+        <div class="program-container">
+            {% for program in programs %}
+                <a href="{% url 'modeltest' program=program %}" class="program">{{ program }}</a>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}

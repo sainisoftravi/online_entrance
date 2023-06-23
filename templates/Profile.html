@@ -1,0 +1,100 @@
+{% extends "WelcomeNav.html" %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+    <div class="profile-container">
+        <div class="row-1">
+            <div class="inner-row-1">
+                <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
+
+                <div class="row-1-details">
+                    <p class="user-email">{{ request.user.email }}</p>
+
+                    <form action="{% url 'updateprofile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
+                        {% csrf_token %}
+
+                        <input type="file" accept="image/*" id="changeProfileButton" name="uploaded-profile-image" hidden/>
+                        <label for="changeProfileButton">Choose File</label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="inner-row-2">
+                <p id="gender-label" class="left-text">Gender</p>
+                <p class="right-text">{{ request.user.Gender.upper }}</p>
+            </div>
+
+            <div class="inner-row-3">
+                <p class="left-text">DOB</p>
+                <p class="right-text">{{ request.user.DOB }}</p>
+            </div>
+
+            <div class="inner-row-4">
+                <p class="left-text">Member Since</p>
+                <p class="right-text">{{ request.user.MemberSince }}</p>
+            </div>
+        </div>
+
+        <div class="row-2">
+            <form action="{% url 'updatepassword' %}" method="POST" id="changePasswordForm">
+                {% csrf_token %}
+
+                <p>Change Password</p>
+
+                <div class="input-groups">
+                    <input type="password" placeholder="Old Password" name="OldPassword" id="OldPassword">
+                    {% if messages%}
+                        {% for message in messages %}
+                            {% if message.level == 40 %}
+                                <small class="old-password-error show-password-error">
+                                    {{message}}
+                                </small>
+                            {% endif %}
+                        {% endfor %}
+
+                    {% else %}
+                        <small class="old-password-error remove-error-message"></small>
+
+                    {% endif %}
+                </div>
+
+                <div class="input-groups">
+                    <input type="password" placeholder="New Password" name="NewPassword" id="NewPassword">
+                    <small class="new-password-error remove-error-message"></small>
+                </div>
+
+                <div class="input-groups">
+                    <input type="password" placeholder="New Password Again" name="NewPasswordAgain" id="NewPasswordAgain">
+                    <small class="new-password-again-error remove-error-message"></small>
+                </div>
+
+                <div class="input-groups">
+                    <button type="submit" id="changePasswordButton" onclick="return changePassword()">Change Password</button>
+                </div>
+
+                {% if messages %}
+                    <div class="success-message-div">
+                        {% for message in messages %}
+                            {% if message.level == 25 %}
+                                <small class="success-message">{{ message }}</small>
+                                <i class='bx bx-x cross-close'></i>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </form>
+        </div>
+
+        <div class="row-3">
+            <p>Danger Zone</p>
+
+            <form action="{% url 'deleteaccount' %}">
+                <button type="submit">Delete Account</button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/Profile.js' %}"></script>
+    {% include 'footer.html' %}
+{% endblock %}

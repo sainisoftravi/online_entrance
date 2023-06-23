@@ -1,8 +1,9 @@
 # Register your models here.
 from django.contrib import admin
+from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
-from django.contrib.auth import get_user_model
+from .models import Programme, Subject, Questions
 
 
 class CustomUserAdmin(UserAdmin):
@@ -24,4 +25,19 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('email',)
 
 
+class ProgrammeAdmin(admin.ModelAdmin):
+    list_display = ('ID', 'Name')
+
+
+class SubjectAdmin(admin.ModelAdmin):
+    list_display = ('ID', 'ProgrammeID', 'Name')
+
+
+class QuestionsAdmin(admin.ModelAdmin):
+    list_display = ('ID', 'SubjectID', 'Title', 'Answer', 'OptionOne', 'OptionTwo', 'OptionThree', 'OptionFour')
+
+
+admin.site.register(Subject, SubjectAdmin)
+admin.site.register(Programme, ProgrammeAdmin)
+admin.site.register(Questions, QuestionsAdmin)
 admin.site.register(get_user_model(), CustomUserAdmin)

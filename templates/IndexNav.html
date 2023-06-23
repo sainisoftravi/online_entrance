@@ -7,21 +7,20 @@
         <link rel="stylesheet" href="{% static 'css/nav.css' %}">
         <link rel="icon" href='{% static "logo2.png" %}' type="image/icon type">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     </head>
 
     <body>
         <div class="nav-bar">
             <div class="logo">
                 <a href="{% url 'index' %}">
-                    <span id="title">Foresight</span>
+                    <span id="title">Online Entrance Preparation</span>
                 </a>
             </div>
 
             <div class="right-panel">
                 <ul>
                     <li><a href="{% url 'login' %}" id="login">Login</a></li>
-                    <li><a href="#" id="sign-up">Take a Test</a></li>
+                    <li><a href="{% url 'programselector' %}" id="sign-up">Take a Test</a></li>
                 </ul>
             </div>
         </div>

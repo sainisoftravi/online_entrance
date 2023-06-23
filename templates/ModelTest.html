@@ -6,49 +6,58 @@
     <link rel="stylesheet" href="{% static 'css/modeltest.css' %}">
     <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
-    <div class="QuestionContainer">
-        {% for question, choices in questions.items %}
-            <div class="Questions">
-                <p class="title">
-                    <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question}}</strong>
-                </p>
-
-                <div class="options">
-                    <div class="choice">
-                        <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                        <label for="firstChoice {{forloop.counter}}">{{choices.0}}</label>
-                    </div>
-
-                    <div class="choice">
-                        <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                        <label for="secondChoice {{forloop.counter}}">{{choices.1}}</label>
-                    </div>
-
-                    <div class="choice">
-                        <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                        <label for="thirdChoice {{forloop.counter}}">{{choices.2}}</label>
-                    </div>
-
-                    <div class="choice">
-                        <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                        <label for="fourthChoice {{forloop.counter}}">{{choices.3}}</label>
-                    </div>
-                </div>
-                <p class="correct_answer">
-                    <strong>Correct Answer: xyz</strong>
-                </p>
-            </div>
-        {% endfor %}
+    <div class="timer">
+        <p id="timer-text"></p>
     </div>
+
+    <form action="">
+        <div class="QuestionContainer">
+            {% for question, choices in questions.items %}
+                <div class="Questions">
+                    <p class="title">
+                        <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question}}</strong>
+                    </p>
+
+                    <div class="options">
+                        <div class="choice">
+                            <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                            <label for="firstChoice {{forloop.counter}}">{{choices.0}}</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                            <label for="secondChoice {{forloop.counter}}">{{choices.1}}</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                            <label for="thirdChoice {{forloop.counter}}">{{choices.2}}</label>
+                        </div>
+
+                        <div class="choice">
+                            <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
+                            <label for="fourthChoice {{forloop.counter}}">{{choices.3}}</label>
+                        </div>
+                    </div>
+
+                    <p class="error-message">
+                        <strong>Must select any one</strong>
+                    </p>
+                </div>
+            {% endfor %}
+
+            <button type="submit" id="submit-button" onclick="return checkForSubmission()">Submit</button>
+
+        </div>
+    </form>
 
     <a href="#" class="go-to-top">
         <i class='bx bx-up-arrow-alt up-arrow'></i>
     </a>
 
     <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/ModelTest.js' %}"></script>
 
 {% include 'footer.html' %}
 {% endblock %}

@@ -76,7 +76,7 @@
                     <div class="upload-profile-image-div">
                         <p>Profile</p>
                         <img src="{% static 'pp-female.jpg' %}" alt="" class="user-image">
-                        <input type="file" accept="image/*" name="uploaded-profile-image" class="upload-button" onchange="document.querySelector('.user-image').src = window.URL.createObjectURL(this.files[0])">
+                        <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
                     </div>
 
                     <div class="form-item submit-btn signup-submit-btn">

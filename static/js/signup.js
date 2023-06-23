@@ -42,9 +42,27 @@ gender_div.forEach((div) => {
 );
 
 
+var selectedFile;
+var input = document.querySelector("#upload-profile-button");
+input.addEventListener('change', updateImageDisplay);
+
+function updateImageDisplay() {
+    if(input.files.length != 0){
+        document.querySelector('.user-image').src = window.URL.createObjectURL(input.files[0])
+    }
+
+    if(input.files.length==0) {
+        input.files = selectedFile;
+   }
+
+   else {
+       selectedFile = input.files;
+   }
+}
+
+
 function validateForm(){
     success = true;
-    username_regex = /^[a-z]\w+/i;
     email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
     password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
@@ -54,55 +72,24 @@ function validateForm(){
 
     dob_error = document.querySelector('.dob-error');
     gender_error = document.querySelector('.gender-error');
-    username_error = document.querySelector('.username-error');
     password_error = document.querySelector('.password-error');
     email_error = document.querySelector('.signup-email-error');
 
     password = password_box.value;
     email = document.querySelector('#email').value;
-    username = document.querySelector('#username').value;
 
     dob_day_value = dob_day.value;
     dob_year_value = dob_year.value;
     dob_month_value = dob_month.value;
 
-
-    if(!username){
-        username_error.innerHTML = "Invalid Username";
-        username_error.style.display = 'block';
-        success = false;
-    }
-
-    else if(username.indexOf(' ') != -1){
-        username_error.innerHTML = "Username must not contain space(s)";
-        username_error.style.display = 'block';
-        success = false;
-    }
-
-    else if(username_regex.test(username) == false){
-        username_error.innerHTML = "Username must start with a letter";
-        username_error.style.display = 'block';
-        success = false;
-    }
-
-    else if(username.length < 4 || username.length > 10){
-        username_error.innerHTML = "Username must be 4-10 characters long";
-        username_error.style.display = 'block';
-        success = false;
-    }
-
-    else{
-        username_error.style.display = 'none';
-    }
-
     if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
-        email_error.innerHTML = 'Email must not contain spaces(s)';
+        email_error.innerText = 'Email must not contain spaces(s)';
         email_error.style.display = 'block';
         success = false;
     }
 
     else if(email_regex.test(email) === false){
-        email_error.innerHTML = "Invalid Email";
+        email_error.innerText = "Invalid Email";
         email_error.style.display = 'block';
         success = false;
     }
@@ -112,7 +99,7 @@ function validateForm(){
     }
 
     if(password_regex.test(password) == false){
-        password_error.innerHTML = "Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters"
+        password_error.innerText = "Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters"
         password_error.style.display = 'block';
         success = false;
     }
@@ -125,7 +112,7 @@ function validateForm(){
        isNaN(parseInt(dob_day_value)) || isNaN(parseInt(dob_month_value)) || isNaN(parseInt(dob_year_value)) ||
        !(dob_day_value > 0 && dob_day_value < 32) || !(dob_month_value > 0 && dob_month_value < 13) ||
        !(dob_year_value >= 1920 && dob_year_value <= date.getFullYear())){
-           dob_error.innerHTML = 'Invalid Date of Birth';
+           dob_error.innerText = 'Invalid Date of Birth';
            dob_error.style.display = 'block';
            success = false;
         }
@@ -147,7 +134,7 @@ function validateForm(){
     }
 
     else{
-        gender_error.innerHTML = 'Select any one';
+        gender_error.innerText = 'Select any one';
         gender_error.style.display = 'block';
         success = false;
     }

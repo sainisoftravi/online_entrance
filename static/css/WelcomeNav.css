@@ -21,6 +21,8 @@ body{
 
 .right-panel{
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #take-test{

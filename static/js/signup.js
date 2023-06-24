@@ -5,7 +5,7 @@ error_msg = document.querySelectorAll('.show-error');
 password_eye = document.querySelector('.password-eye');
 
 for(em of error_msg){
-    em.style.display = 'none';
+    em.classList.remove('show-error');
 }
 
 male_div = document.querySelector('.male-div');
@@ -83,42 +83,42 @@ function validateForm(){
     dob_month_value = dob_month.value;
 
     if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
-        email_error.innerText = 'Email must not contain spaces(s)';
-        email_error.style.display = 'block';
         success = false;
+        email_error.classList.add('show-error');
+        email_error.innerText = 'Email must not contain spaces(s)';
     }
 
     else if(email_regex.test(email) === false){
-        email_error.innerText = "Invalid Email";
-        email_error.style.display = 'block';
         success = false;
+        email_error.classList.add('show-error');
+        email_error.innerText = "Invalid Email";
     }
 
     else{
-        email_error.style.display = 'none';
+        email_error.classList.remove('show-error');
     }
 
     if(password_regex.test(password) == false){
-        password_error.innerText = "Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters"
-        password_error.style.display = 'block';
         success = false;
+        password_error.classList.add('show-error');
+        password_error.innerText = "Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters"
     }
 
     else{
-        password_error.style.display = 'none';
+        password_error.classList.remove('show-error');
     }
 
     if(!dob_day_value || !dob_month_value || !dob_year_value ||
        isNaN(parseInt(dob_day_value)) || isNaN(parseInt(dob_month_value)) || isNaN(parseInt(dob_year_value)) ||
        !(dob_day_value > 0 && dob_day_value < 32) || !(dob_month_value > 0 && dob_month_value < 13) ||
        !(dob_year_value >= 1920 && dob_year_value <= date.getFullYear())){
-           dob_error.innerText = 'Invalid Date of Birth';
-           dob_error.style.display = 'block';
            success = false;
+           dob_error.classList.add('show-error');
+           dob_error.innerText = 'Invalid Date of Birth';
         }
 
     else{
-        dob_error.style.display = 'none';
+        dob_error.classList.remove('show-error');
     }
 
     selected_gender = '';
@@ -130,13 +130,13 @@ function validateForm(){
     }
 
     if(selected_gender){
-        gender_error.style.display = 'none';
+        gender_error.classList.remove('show-error');
     }
 
     else{
-        gender_error.innerText = 'Select any one';
-        gender_error.style.display = 'block';
         success = false;
+        gender_error.classList.add('show-error');
+        gender_error.innerText = 'Select any one';
     }
 
     return success == true;

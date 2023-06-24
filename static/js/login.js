@@ -24,23 +24,23 @@ function validateForm(){
     email_value = email_box.value;
 
     if(!email_value || email_value.indexOf(' ') != -1 || (email_value.indexOf('@') != -1 && email_regex.test(email_value) == false)){
-        email_error.innerHTML = 'Invalid Email';
-        email_error.style.display = 'block';
         success = false;
+        email_error.innerHTML = 'Invalid Email';
+        email_error.classList.add('show-error');
     }
 
     else{
-        email_error.style.display = 'none';
+        email_error.classList.remove('show-error');
     }
 
     if(!password){
-        password_error.innerHTML = "Invalid Password"
-        password_error.style.display = 'block';
         success = false;
+        password_error.innerHTML = "Invalid Password"
+        password_error.classList.add('show-error');
     }
 
     else{
-        password_error.style.display = 'none';
+        password_error.classList.remove('show-error');
     }
 
     return success == true;

@@ -1,0 +1,14 @@
+small{
+    display: none;
+}
+
+small.show-error,
+small.sho-error{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 15px;
+    color: #fcf2f2;
+    font-weight: bolder;
+    background-color: #e44944;
+}

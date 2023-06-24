@@ -4,6 +4,8 @@
 {% block content %}
 
 <div class="outer-container">
+    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+
     <div class="form-outer-container">
         {% if login == False %}
             <div class="form-left signup-left-image">
@@ -22,14 +24,24 @@
                     <div class="form-item">
                         <i class='bx bxs-envelope bx-login'></i>
                         <input type="text" placeholder="Email" id="email" name="email">
-                        <small class="signup-email-error show-error"></small>
+
+                        {% if messages %}
+                            {% for message in messages %}
+                                <small class="signup-email-error sho-error">
+                                    {{message}}
+                                </small>
+                            {% endfor %}
+
+                        {% else %}
+                            <small class="signup-email-error"></small>
+                        {% endif %}
                     </div>
 
                     <div class="form-item">
                         <i class='bx bxs-lock-alt bx-login' ></i>
                         <input type="password" placeholder="Password" id="password" name="password">
                         <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
-                        <small class="password-error show-error"></small>
+                        <small class="password-error"></small>
                     </div>
 
                     <div class="dob">
@@ -48,7 +60,7 @@
                                 <input type="text" placeholder="YYYY" id="dob-year" name="dob-year">
                             </div>
                         </div>
-                        <small class="dob-error show-error">Invalid date of birth</small>
+                        <small class="dob-error">Invalid date of birth</small>
                     </div>
 
                     <div class="gender">
@@ -70,7 +82,7 @@
                                 <label for="others">Others</label>
                             </div>
                         </div>
-                        <small class="gender-error show-error">Select any one option</small>
+                        <small class="gender-error">Select any one option</small>
                     </div>
 
                     <div class="upload-profile-image-div">
@@ -85,32 +97,28 @@
                     </div>
 
                 {% else %}
-                    <div class="form-item">
+                    <div class="form-item text-input-groups">
                         <i class='bx bxs-user bx-login' ></i>
                         <input type="text" placeholder="Email" id="email", name="email">
-                        <small class="email-error show-error"></small>
+                        <small class="email-error"></small>
                     </div>
 
-                    <div class="form-item">
+                    <div class="form-item text-input-groups">
                         <i class='bx bxs-lock-alt bx-login' ></i>
                         <input type="password" placeholder="Password" id="password", name="password">
                         <i class='bx bxs-hide bx-login password-eye show-hide-password'></i>
-                        <small class="password-error show-error"></small>
-                    </div>
 
-                    <small class="invalid-email-password show-error">
                         {% if messages %}
                             {% for message in messages %}
-                                {{message}}
+                                <small class="password-error show-error">
+                                    {{message}}
+                                </small>
                             {% endfor %}
-                        {% endif %}
 
-                        <style>
-                            .invalid-email-password{
-                                display: block
-                            }
-                        </style>
-                    </small>
+                        {% else %}
+                            <small class="password-error"></small>
+                        {% endif %}
+                    </div>
 
                     <div class="form-item remember-me">
                         <div class="remember-me-left">

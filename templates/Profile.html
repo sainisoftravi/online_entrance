@@ -3,8 +3,20 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <div class="profile-container">
+        {% if messages %}
+        <div class="success-message-div">
+            {% for message in messages %}
+                {% if message.level == 25 %}
+                    <small class="success-message">{{ message }}</small>
+                {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
         <div class="row-1">
             <div class="inner-row-1">
                 <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
@@ -48,42 +60,33 @@
                     {% if messages%}
                         {% for message in messages %}
                             {% if message.level == 40 %}
-                                <small class="old-password-error show-password-error">
+                                <small class="old-password-error show-error">
                                     {{message}}
                                 </small>
+                            {% else %}
+                                <small class="old-password-error">This field must not be empty</small>
                             {% endif %}
                         {% endfor %}
 
                     {% else %}
-                        <small class="old-password-error remove-error-message"></small>
+                        <small class="old-password-error">This field must not be empty</small>
 
                     {% endif %}
                 </div>
 
                 <div class="input-groups">
                     <input type="password" placeholder="New Password" name="NewPassword" id="NewPassword">
-                    <small class="new-password-error remove-error-message"></small>
+                    <small class="new-password-error">This field must not be empty</small>
                 </div>
 
                 <div class="input-groups">
                     <input type="password" placeholder="New Password Again" name="NewPasswordAgain" id="NewPasswordAgain">
-                    <small class="new-password-again-error remove-error-message"></small>
+                    <small class="new-password-again-error">This field must not be empty</small>
                 </div>
 
                 <div class="input-groups">
                     <button type="submit" id="changePasswordButton" onclick="return changePassword()">Change Password</button>
                 </div>
-
-                {% if messages %}
-                    <div class="success-message-div">
-                        {% for message in messages %}
-                            {% if message.level == 25 %}
-                                <small class="success-message">{{ message }}</small>
-                                <i class='bx bx-x cross-close'></i>
-                            {% endif %}
-                        {% endfor %}
-                    </div>
-                {% endif %}
             </form>
         </div>
 

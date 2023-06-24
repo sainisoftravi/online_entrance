@@ -11,33 +11,35 @@
         <p id="timer-text"></p>
     </div>
 
-    <form action="">
+    <form action="{% url 'getresult' %}" method="POST">
+        {% csrf_token %}
+
         <div class="QuestionContainer">
-            {% for question, choices in questions.items %}
+            {% for question in questions %}
                 <div class="Questions">
                     <p class="title">
-                        <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question}}</strong>
+                        <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question.title}}</strong>
                     </p>
 
                     <div class="options">
                         <div class="choice">
-                            <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                            <label for="firstChoice {{forloop.counter}}">{{choices.0}}</label>
+                            <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="1">
+                            <label for="firstChoice {{forloop.counter}}">{{question.choices.0}}</label>
                         </div>
 
                         <div class="choice">
-                            <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                            <label for="secondChoice {{forloop.counter}}">{{choices.1}}</label>
+                            <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="2">
+                            <label for="secondChoice {{forloop.counter}}">{{question.choices.1}}</label>
                         </div>
 
                         <div class="choice">
-                            <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                            <label for="thirdChoice {{forloop.counter}}">{{choices.2}}</label>
+                            <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="3">
+                            <label for="thirdChoice {{forloop.counter}}">{{question.choices.2}}</label>
                         </div>
 
                         <div class="choice">
-                            <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}">
-                            <label for="fourthChoice {{forloop.counter}}">{{choices.3}}</label>
+                            <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="4">
+                            <label for="fourthChoice {{forloop.counter}}">{{question.choices.3}}</label>
                         </div>
                     </div>
 

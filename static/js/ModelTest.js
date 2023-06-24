@@ -1,6 +1,7 @@
 var remainingTime;
 var first_clicked = false;
 var timer_div = document.querySelector('.timer');
+var submit_button = document.querySelector('#submit-button');
 
 
 function showErrorMessage(){
@@ -45,26 +46,28 @@ function checkForSubmission(){
         isFinished = true;
     }
 
-    for(radio_counter=1; radio_counter <= 100; radio_counter++){
-        if(isAllRadioButtonsSelected(radio_counter) == true){
-            isFinished = false;
-            break
+    else{
+        for(radio_counter=1; radio_counter <= 100; radio_counter++){
+            if(isAllRadioButtonsSelected(radio_counter) == true){
+                isFinished = false;
+                break
+            }
+        }
+
+        if(isFinished == false){
+            showErrorMessage();
+            return false;
         }
     }
 
-    if(isFinished == false){
-        showErrorMessage();
-        return false;
-    }
-
-    return true;
+    return isFinished;
 }
 
 document.addEventListener("click", () => {
         if(first_clicked == false){
             first_clicked = true;
             const startTime = Date.now();
-            const countdownDuration = 2 * 60 * 60 * 1000;
+            const countdownDuration = 500000 // 2 * 60 * 60 * 1000;
 
             const endTime = startTime + countdownDuration;
             timer_text = document.querySelector('#timer-text');
@@ -72,10 +75,11 @@ document.addEventListener("click", () => {
 
             function updateCountdown() {
                 const currentTime = Date.now();
-                const remainingTime = endTime - currentTime;
+                remainingTime = endTime - currentTime;
 
                 if (remainingTime <= 0) {
                     clearInterval(countdownInterval);
+                    submit_button.click();
                     return true;
                 }
 

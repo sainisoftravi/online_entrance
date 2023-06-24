@@ -1,7 +1,6 @@
 import random
 import datetime
 from .models import CustomUser
-from django.conf import Settings
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import check_password
@@ -16,6 +15,11 @@ def SignUp(request):
 
     if request.method == 'POST':
         email = request.POST['email']
+
+        if CustomUser.objects.filter(email=email):
+            messages.error(request, 'Email already exists')
+            return redirect('signup')
+
         password = request.POST['password']
 
         dob_year = int(request.POST['dob-year'])
@@ -82,6 +86,7 @@ def Login(request):
 
             else:
                 messages.error(request, 'Email and Password did not match')
+                return redirect('login')
 
     else:
         return redirect('/profile')
@@ -107,8 +112,9 @@ def Index(request):
 
 
 def TakeModelTest(request, program):
-    tests = []
-    values = dict()
+    global values
+
+    values = []
     programme = Programme.objects.filter(Name=program)[0]
 
     for subject in Subject.objects.filter(ProgrammeID=programme):
@@ -124,13 +130,12 @@ def TakeModelTest(request, program):
             details = {
                 'id': question.ID,
                 'title': question.Title,
-                'choices': choices
+                'choices': choices,
+                'answer': question.Answer,
+                'checked': False
             }
 
-            tests.append(details)
-
-    for test in tests:
-        values[test['title']] = test['choices']
+            values.append(details)
 
     return render(request, 'ModelTest.html', {'questions': values})
 
@@ -150,7 +155,6 @@ def ProgramSelector(request):
 
 
 def Profile(request):
-    print(request.user.ProfileImage)
     if request.user.id:
         return render(request, 'Profile.html')
 
@@ -181,7 +185,7 @@ def UpdatePassword(request):
     else:
         messages.error(request, 'Old Password did not matched')
 
-    return redirect('profile')
+    return redirect('/profile')
 
 
 def Logout(request):
@@ -198,3 +202,29 @@ def DeleteAccount(request):
     logout(request)
 
     return redirect('index')
+
+
+def GetResult(request):
+    for value in values:
+        value['checked'] = True
+
+    if request.method == 'POST':
+        QuestionNumber = [int(choice[-1]) - 1 for choice in request.method.keys() if choice.startswith('choices')]
+
+        for qn in QuestionNumber:
+            option = int(request.POST[f'choices {qn + 1}'])
+
+            user_answer = values[qn][option - 1]
+            values[QuestionNumber]['UserAnswer'] = user_answer
+
+            if user_answer == values[qn]['Answer']:
+                values[qn]['is_correct'] = True
+
+            else:
+                values[qn]['is_correct'] = False
+
+        remaining = set(range(1, len(values))) - set(QuestionNumber)
+
+        for rem in remaining:
+            values[rem]['UserAnswer'] = '-'
+            values[rem]['is_correct'] = False

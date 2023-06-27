@@ -7,14 +7,19 @@
     <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <div class="timer">
-        <p id="timer-text"></p>
-    </div>
-
     <form action="{% url 'getresult' %}" method="POST">
         {% csrf_token %}
 
+        <div class="marks {% if questions.0.checked == False %}hide-marks{% endif %}">
+            <p class="obtained-marks">{{questions.0.CorrectCounter}}</p>
+            <p class="total-marks">100</p>
+        </div>
+
         <div class="QuestionContainer">
+            <div class="timer {% if questions.0.checked %}hide-timer{% endif %}">
+                <p id="timer-text">02 : 00 : 00</p>
+            </div>
+
             {% for question in questions %}
                 <div class="Questions">
                     <p class="title">
@@ -22,26 +27,39 @@
                     </p>
 
                     <div class="options">
-                        <div class="choice">
-                            <input type="radio" id="firstChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="1">
-                            <label for="firstChoice {{forloop.counter}}">{{question.choices.0}}</label>
-                        </div>
+                        {% for choice in question.choices %}
+                            {% if question.checked %}
+                                {% if question.UserAnswer == '-' %}
+                                    <div class="choice">
 
-                        <div class="choice">
-                            <input type="radio" id="secondChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="2">
-                            <label for="secondChoice {{forloop.counter}}">{{question.choices.1}}</label>
-                        </div>
+                                {% elif choice == question.UserAnswer %}
+                                    {% if question.is_correct %}
+                                        <div class="choice correct-div">
 
-                        <div class="choice">
-                            <input type="radio" id="thirdChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="3">
-                            <label for="thirdChoice {{forloop.counter}}">{{question.choices.2}}</label>
-                        </div>
+                                    {% else %}
+                                        <div class="choice wrong-div">
 
-                        <div class="choice">
-                            <input type="radio" id="fourthChoice {{forloop.counter}}" name="choices {{forloop.counter}}" value="4">
-                            <label for="fourthChoice {{forloop.counter}}">{{question.choices.3}}</label>
-                        </div>
+                                    {% endif %}
+
+                                {% else %}
+                                    <div class="choice">
+
+                                {% endif %}
+
+                            {% else %}
+                                <div class="choice">
+
+                            {% endif %}
+
+                                <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
+                                <label class="option-labels" for="{{forloop.parentloop.counter}}{{forloop.counter}}">{{choice}}</label>
+                            </div>
+                        {% endfor %}
                     </div>
+
+                    {% if question.checked %}
+                        <p class="correct-answer">{{question.answer}}</p>
+                    {% endif %}
 
                     <p class="error-message">
                         <strong>Must select any one</strong>
@@ -58,6 +76,9 @@
         <i class='bx bx-up-arrow-alt up-arrow'></i>
     </a>
 
+    <script>
+        var is_checked = '{% if questions.0.checked == True %}true{% else %}false{% endif %}';
+    </script>
     <script src="{% static 'js/scroll.js' %}"></script>
     <script src="{% static 'js/ModelTest.js' %}"></script>
 

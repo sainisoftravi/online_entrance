@@ -60,8 +60,8 @@ a{
 .drop-down-menu{
     right: 0px;
     max-height: 0;
-    position: absolute;
     display: none;
+    position: absolute;
     background-color: #7bb7ca;
     transition: max-height 5s;
 }

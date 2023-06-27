@@ -12,19 +12,24 @@
 }
 
 .timer{
-    right: 3px;
-    padding: 15px;
-    display: none;
-    position: fixed;
+    top: 0;
+    padding: 20px;
+    position: sticky;
     width: fit-content;
-    background-color: blueviolet;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #4398b5;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #timer-text{
-    font-size: 20px;
+    font-size: 40px;
+    text-align: center;
     font-weight: bolder;
     color: whitesmoke;
+}
+
+.hide-timer{
+    display: none;
 }
 
 .QuestionContainer{
@@ -62,7 +67,7 @@
     width: 100%;
     padding: 20px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
 }
 
 .choice{
@@ -76,6 +81,7 @@
     justify-content: flex-start;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
+
 .choice label{
     font-size: 18px;
     font-family: var(--font);
@@ -122,4 +128,57 @@ label{
     background-color: rgba(0, 109, 172, 0.562);
     margin-bottom: 30px;
 
+}
+
+.choice.wrong-div{
+    color: white;
+    background-color: rgb(199, 34, 5);
+}
+
+.choice.correct-div{
+    color: white;
+    background-color: darkcyan;
+}
+
+.radio-choices:disabled{
+    cursor: not-allowed;
+}
+
+.correct-answer{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    background-color: darkgreen;
+}
+
+.marks{
+    top: 90px;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    border-radius: 50%;
+    position: absolute;
+    align-items: center;
+    color: whitesmoke;
+    flex-direction: column;
+    justify-content: center;
+    transform: rotate(-15deg);
+    background-color: #af0404;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.hide-marks{
+    display: none;
+}
+
+.obtained-marks{
+    cursor: default;
+    font-size: 45px;
+}
+
+.total-marks{
+    cursor: default;
+    font-size: 45px;
+    border-top: 5px solid whitesmoke;
 }

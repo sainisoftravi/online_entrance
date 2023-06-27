@@ -1,8 +1,27 @@
 var remainingTime;
 var first_clicked = false;
 var timer_div = document.querySelector('.timer');
+var choice_divs = document.getElementsByClassName('choice');
+var wrong_div = document.getElementsByClassName('wrong-div');
 var submit_button = document.querySelector('#submit-button');
+var correct_div = document.getElementsByClassName('correct-div');
+var radio_buttons = document.getElementsByClassName('radio-choices');
+var option_labels = document.getElementsByClassName('option-labels');
 
+
+if(wrong_div.length > 0 || correct_div.length > 0){
+    for(radio of radio_buttons){
+        radio.disabled = true;
+    }
+
+    for(choice_div of choice_divs){
+        choice_div.style.cursor = 'not-allowed';
+    }
+
+    for(option_label of option_labels){
+        option_label.style.cursor = 'not-allowed'
+    }
+}
 
 function showErrorMessage(){
     scrolled = false;
@@ -63,15 +82,18 @@ function checkForSubmission(){
     return isFinished;
 }
 
-document.addEventListener("click", () => {
+
+
+document.body.addEventListener("click", () => {
+    if(is_checked == 'false'){
         if(first_clicked == false){
             first_clicked = true;
             const startTime = Date.now();
-            const countdownDuration = 500000 // 2 * 60 * 60 * 1000;
+            const countdownDuration = 2 * 60 * 60 * 1000;
 
             const endTime = startTime + countdownDuration;
             timer_text = document.querySelector('#timer-text');
-            const countdownInterval = setInterval(updateCountdown, 1000);
+            const countdownInterval = setInterval(updateCountdown, 50);
 
             function updateCountdown() {
                 const currentTime = Date.now();
@@ -92,11 +114,7 @@ document.addEventListener("click", () => {
                 seconds = seconds.toString().padStart(2, "0");
 
                 timer_text.innerText = `${hours} : ${minutes} : ${seconds}`;
-
-                if(timer_div.style.display == ''){
-                    timer_div.style.display = 'block';
-                }
             }
         }
     }
-);
+});

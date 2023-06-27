@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import check_password
 from django.contrib.auth import authenticate, login, logout
-from .models import Programme, Subject, Questions, CustomUser
+from .models import Programme, Subject, Questions, CustomUser, Results, ResultDetails
 
 
 def SignUp(request):
@@ -125,14 +125,13 @@ def TakeModelTest(request, program):
 
         for question in questions:
             choices = [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
-            random.shuffle(choices)
-
             details = {
                 'id': question.ID,
                 'title': question.Title,
                 'choices': choices,
                 'answer': question.Answer,
-                'checked': False
+                'checked': False,
+                'program': program
             }
 
             values.append(details)
@@ -205,26 +204,100 @@ def DeleteAccount(request):
 
 
 def GetResult(request):
+    correct_counter = 0
+
     for value in values:
         value['checked'] = True
 
     if request.method == 'POST':
-        QuestionNumber = [int(choice[-1]) - 1 for choice in request.method.keys() if choice.startswith('choices')]
+        UserObj = CustomUser.objects.get(id=request.user.id)
+        ResultObj = Results(UserID=UserObj, ProgrammeName=values[0]['program'])
+        ResultObj.save()
+
+        QuestionNumber = [int(choice.split()[-1]) - 1 for choice in request.POST.keys() if choice.startswith('choices')]
 
         for qn in QuestionNumber:
-            option = int(request.POST[f'choices {qn + 1}'])
+            option = int(request.POST[f'choices {qn + 1}']) - 1
 
-            user_answer = values[qn][option - 1]
-            values[QuestionNumber]['UserAnswer'] = user_answer
+            userAnswer = values[qn]['choices'][option]
+            values[qn]['UserAnswer'] = userAnswer
 
-            if user_answer == values[qn]['Answer']:
+            ResultDetailsObj = ResultDetails(
+                                    ResultID = ResultObj,
+                                    QuestionID = Questions.objects.get(ID=values[qn]['id']),
+                                    UserAnswer = userAnswer
+                                )
+            ResultDetailsObj.save()
+
+            if userAnswer == values[qn]['answer']:
+                correct_counter += 1
                 values[qn]['is_correct'] = True
 
             else:
                 values[qn]['is_correct'] = False
 
+        ResultObj.CorrectCounter = correct_counter
+        ResultObj.save()
+
         remaining = set(range(1, len(values))) - set(QuestionNumber)
 
         for rem in remaining:
-            values[rem]['UserAnswer'] = '-'
+            userAnswer = '-'
             values[rem]['is_correct'] = False
+            values[rem]['UserAnswer'] = userAnswer
+
+            ResultDetailsObj = ResultDetails(
+                                    ResultID = ResultObj,
+                                    QuestionID = Questions.objects.get(ID=values[rem]['id']),
+                                    UserAnswer = userAnswer
+                                )
+            ResultDetailsObj.save()
+
+        return render(request, 'ModelTest.html', {'questions': values})
+
+
+def ShowHistory(request):
+    results = []
+
+    for counter, result in enumerate(Results.objects.all()):
+        res = {
+            'Date': result.Date,
+            'Slug': result.Slug,
+            'Counter': counter + 1,
+            'Program': result.ProgrammeName
+        }
+
+        results.append(res)
+
+    return render(request, 'History.html', {'results': results})
+
+
+def DetailedHistory(request, slug):
+    values = []
+    Result = Results.objects.get(Slug=slug)
+    ResultDetail = ResultDetails.objects.filter(ResultID=Result)
+
+    for res in ResultDetail:
+        Question = res.QuestionID
+        Choices = [Question.OptionOne, Question.OptionTwo, Question.OptionThree, Question.OptionFour]
+
+        userAnswer = res.UserAnswer
+
+        details = {
+            'checked': True,
+            'choices': Choices,
+            'title': Question.Title,
+            'UserAnswer': userAnswer,
+            'answer': Question.Answer
+        }
+
+        values.append(details)
+
+        if userAnswer == details['answer']:
+            details['is_correct'] = True
+
+        else:
+            details['is_correct'] = False
+
+    values[0]['CorrectCounter'] = Result.CorrectCounter
+    return render(request, 'ModelTest.html', {'questions': values})

@@ -1,0 +1,30 @@
+{% extends 'WelcomeNav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/history.css' %}">
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
+
+    <div class="history-container">
+        <div class="histories">
+            {% for result in results %}
+                <a href="{% url 'detailed-history' result.Slug %}">
+                    <div class="history">
+                        <p id="counter">#{{result.Counter}}</p>
+                        <p id="programme">{{result.Program}}</p>
+                        <p id="date">{{result.Date}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="#" class="go-to-top">
+        <i class='bx bx-up-arrow-alt up-arrow'></i>
+    </a>
+
+    <script src="{% static 'js/scroll.js' %}"></script>
+
+    {% include 'footer.html' %}
+
+{% endblock %}

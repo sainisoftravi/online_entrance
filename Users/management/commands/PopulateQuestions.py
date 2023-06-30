@@ -4,7 +4,7 @@ from django.core.management.base import BaseCommand
 from Users.models import Programme, Subject, Questions
 
 
-class SaveIntoDB:
+class PopulateQuestions:
     def __init__(self):
         self.BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
         self.JSON_FILE = self.BASE_DIR / 'static' / 'Questions.json'
@@ -57,7 +57,7 @@ class Command(BaseCommand):
     help = 'our help string comes here'
 
     def _create_tags(self):
-        SaveIntoDB().Action()
+        PopulateQuestions().Action()
 
     def handle(self, *args, **options):
         self._create_tags()

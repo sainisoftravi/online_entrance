@@ -56,7 +56,7 @@
                 <p>Change Password</p>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="Old Password" name="OldPassword" id="OldPassword">
+                    <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
                     {% if messages%}
                         {% for message in messages %}
                             {% if message.level == 40 %}
@@ -75,12 +75,12 @@
                 </div>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="New Password" name="NewPassword" id="NewPassword">
+                    <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
                     <small class="new-password-error">This field must not be empty</small>
                 </div>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="New Password Again" name="NewPasswordAgain" id="NewPasswordAgain">
+                    <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
                     <small class="new-password-again-error">This field must not be empty</small>
                 </div>
 

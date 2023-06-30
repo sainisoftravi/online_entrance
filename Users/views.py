@@ -3,7 +3,8 @@ import datetime
 from .models import CustomUser
 from django.contrib import messages
 from django.shortcuts import render, redirect
-from django.contrib.auth.hashers import check_password
+from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth import authenticate, login, logout
 from .models import Programme, Subject, Questions, CustomUser, Results, ResultDetails
 
@@ -170,21 +171,19 @@ def UpdateProfile(request):
 
 
 def UpdatePassword(request):
-    user = CustomUser.objects.get(id=request.user.id)
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
 
-    old_password_encrypted = user.password
-    old_password = request.POST['OldPassword']
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
 
-    if check_password(old_password, old_password_encrypted):
-        new_password = request.POST['NewPassword']
-        user.set_password(new_password)
+            messages.success(request, 'Password Changed Successfully')
 
-        messages.success(request, 'Password Changed Successfully')
+        else:
+            messages.error(request, 'Old Password did not matched')
 
-    else:
-        messages.error(request, 'Old Password did not matched')
-
-    return redirect('/profile')
+        return redirect('/profile')
 
 
 def Logout(request):

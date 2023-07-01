@@ -1,27 +1,24 @@
-{% extends 'WelcomeNav.html' %}
 {% load static %}
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/history.css' %}">
     <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
 
-    <div class="history-container">
-        <div class="histories">
-            {% if results %}
-                {% for result in results %}
-                <a href="{% url 'detailed-history' result.Slug %}">
-                    <div class="history">
-                        <p id="counter">#{{result.Counter}}</p>
-                        <p id="programme">{{result.Program}}</p>
-                        <p id="date">{{result.Date}}</p>
-                    </div>
-                </a>
-                {% endfor %}
+    <div class="histories">
+        {% if results %}
+            {% for result in results %}
+            <a href="{% url 'detailed-history' result.Slug %}">
+                <div class="history">
+                    <p id="counter">#{{result.Counter}}</p>
+                    <p id="programme">{{result.Program}}</p>
+                    <p id="date">{{result.Date}}</p>
+                </div>
+            </a>
+            {% endfor %}
 
-            {% else %}
-                <p class="no-records">You have no records to display</p>
-            {% endif %}
-        </div>
+        {% else %}
+            <p class="no-records">You have no records to display</p>
+        {% endif %}
     </div>
 
     <a href="#" class="go-to-top">
@@ -29,7 +26,5 @@
     </a>
 
     <script src="{% static 'js/scroll.js' %}"></script>
-
-    {% include 'footer.html' %}
 
 {% endblock %}

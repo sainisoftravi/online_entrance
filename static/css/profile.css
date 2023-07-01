@@ -3,8 +3,8 @@
 :root{
     --p-color: black;
     --font-family: "Pavanam";
-    --div-bg-color: rgba(44, 178, 211, 0.603);
-    --separate-by-color: rgb(0, 113, 148);
+    --div-bg-color: whitesmoke;
+    --separate-by-color: rgb(163, 163, 163);
 }
 
 .profile-container{
@@ -14,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(41, 147, 179, 0.712);
+    background-color: white;
 }
 
 .row-1{

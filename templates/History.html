@@ -7,7 +7,8 @@
 
     <div class="history-container">
         <div class="histories">
-            {% for result in results %}
+            {% if results %}
+                {% for result in results %}
                 <a href="{% url 'detailed-history' result.Slug %}">
                     <div class="history">
                         <p id="counter">#{{result.Counter}}</p>
@@ -15,7 +16,11 @@
                         <p id="date">{{result.Date}}</p>
                     </div>
                 </a>
-            {% endfor %}
+                {% endfor %}
+
+            {% else %}
+                <p class="no-records">You have no records to display</p>
+            {% endif %}
         </div>
     </div>
 

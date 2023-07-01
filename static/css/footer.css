@@ -4,11 +4,10 @@
     font-size: 20px;
     align-items: center;
     color: whitesmoke;
-    padding: 30px 0 30px 0;
     flex-direction: column;
     justify-content: center;
-    background-color: #007399;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #4398b5;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 18px;
 
 }
 
@@ -20,12 +19,14 @@
 }
 
 .links{
+    width: 70px;
+    height: 70px;
     display: flex;
-    padding: 10px;
+    margin-top: 20px;
     border-radius: 50%;
-    background: white;
     align-items: center;
     justify-content: center;
+    background: whitesmoke;
 }
 
 .bxl-instagram-alt{
@@ -50,4 +51,9 @@
 .bxl-facebook-circle:hover,
 .bxl-twitter:hover{
     transform: translateY(-3px);
+}
+
+#footer-year{
+    font-weight: bolder;
+    margin-bottom: 20px;
 }

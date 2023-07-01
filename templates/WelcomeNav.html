@@ -19,36 +19,12 @@
 
             <div class="right-panel">
                 <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
-                <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
-            </div>
-        </div>
 
-        <div class="drop-down-menu">
-            <div class="drop-down-profile">
-                <img src="{{ request.user.ProfileImage.url }}" alt="" class="drop-down-profile-img">
-                <h3>{{ request.user.email }}</h3>
+                <a href="{% url 'dashboard' %}">
+                    <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
+                </a>
             </div>
 
-            <a href="{% url 'profile' %}">
-                <div class="drop-down-options">
-                    <i class='bx bxs-user-circle'></i>
-                    <p>Profile</p>
-                </div>
-            </a>
-
-            <a href="{% url 'history' %}">
-                <div class="drop-down-options">
-                    <i class='bx bx-history'></i>
-                    <p>History</p>
-                </div>
-            </a>
-
-            <a href="{% url 'logout' %}">
-                <div class="drop-down-options">
-                    <i class='bx bx-log-out' ></i>
-                    <p>Logout</p>
-                </div>
-            </a>
         </div>
 
         <script src="{% static 'js/WelcomeNav.js' %}"></script>

@@ -1,6 +1,6 @@
+import json
 import random
 import datetime
-from .models import CustomUser
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
@@ -51,7 +51,7 @@ def SignUp(request):
         user = authenticate(request, email=email, password=password)
         login(request, user)
 
-        return redirect('/profile')
+        return redirect('/')
 
     return render(request, 'Signup.html', conditions)
 
@@ -78,7 +78,7 @@ def Login(request):
                 if user.is_superuser:
                     return redirect('/admin')
 
-                redirect_url = request.session.get('next', '/')
+                redirect_url = request.session.get('next', 'dashboard')
 
                 if 'next' in request.session:
                     del request.session['next'] # Clear the session variable
@@ -88,9 +88,6 @@ def Login(request):
             else:
                 messages.error(request, 'Email and Password did not match')
                 return redirect('login')
-
-    else:
-        return redirect('/profile')
 
     return render(request, 'Signup.html', conditions)
 
@@ -151,14 +148,7 @@ def ProgramSelector(request):
 
     else:
         request.session['next'] = 'programselector'
-        return redirect('login')
 
-
-def Profile(request):
-    if request.user.id:
-        return render(request, 'Profile.html')
-
-    else:
         return redirect('login')
 
 
@@ -167,7 +157,9 @@ def UpdateProfile(request):
     user.ProfileImage = request.FILES['uploaded-profile-image']
     user.save()
 
-    return redirect('/profile')
+    request.user.ProfileImage = CustomUser.objects.filter(id=request.user.id)[0].ProfileImage
+
+    return RedirectFromDashboard(request, 'profile')
 
 
 def UpdatePassword(request):
@@ -183,7 +175,7 @@ def UpdatePassword(request):
         else:
             messages.error(request, 'Old Password did not matched')
 
-        return redirect('/profile')
+        return RedirectFromDashboard(request, 'profile')
 
 
 def Logout(request):
@@ -255,22 +247,6 @@ def GetResult(request):
         return render(request, 'ModelTest.html', {'questions': values})
 
 
-def ShowHistory(request):
-    results = []
-
-    for counter, result in enumerate(Results.objects.all()):
-        res = {
-            'Date': result.Date,
-            'Slug': result.Slug,
-            'Counter': counter + 1,
-            'Program': result.ProgrammeName
-        }
-
-        results.append(res)
-
-    return render(request, 'History.html', {'results': results})
-
-
 def DetailedHistory(request, slug):
     values = []
     Result = Results.objects.get(Slug=slug)
@@ -299,4 +275,79 @@ def DetailedHistory(request, slug):
             details['is_correct'] = False
 
     values[0]['CorrectCounter'] = Result.CorrectCounter
+
     return render(request, 'ModelTest.html', {'questions': values})
+
+
+def Dashboard(request):
+    return RedirectFromDashboard(request, 'dashboard')
+
+
+def GetHistories(id):
+    results = []
+
+    for counter, result in enumerate(Results.objects.filter(UserID=id)):
+        res = {
+            'Date': result.Date,
+            'Slug': result.Slug,
+            'Counter': counter + 1,
+            'Program': result.ProgrammeName
+        }
+
+        results.append(res)
+
+    return results
+
+
+def RedirectFromDashboard(request, redirect_to):
+    redirects = {
+        'dashboard': 'dashboard',
+        'profile': 'profile',
+        'history': 'history'
+    }
+
+    redirects['redirect_to'] = redirect_to
+    id = CustomUser.objects.filter(id=request.user.id)[0]
+
+    if redirect_to == 'history':
+        redirects['results'] = GetHistories(id)
+
+    elif redirect_to == 'dashboard':
+        redirects.update(GetWrongRights(id))
+
+    return render(request, 'Dashboard.html', {'to': redirects})
+
+
+def GetWrongRights(id):
+    values = dict()
+    results = Results.objects.filter(UserID=id)
+
+    correct_answers = []
+    incorrect_answers = []
+
+    for result in results:
+        correct_counter = result.CorrectCounter
+
+        correct_answers.append(correct_counter)
+        incorrect_answers.append(100 - correct_counter)
+
+    values.update(
+            {
+                'Pie-Chart-correct-vs-incorrect': {
+                    'title': 'Overall Correct v/s Incorrect Answer',
+                    'data': [sum(correct_answers), sum(incorrect_answers)],
+                    'labels': ['Correct Answer', 'Incorrect Answer'],
+                },
+
+                'Stacked-Bar-Chart-Results': {
+                    'correct': correct_answers,
+                    'incorrect': [-ans for ans in incorrect_answers],
+                    'title': 'Correct v/s Incorrect Answer Per Result',
+                    'x-axis-labels': [f'#{i + 1}' for i in range(len(correct_answers))],
+                }
+            }
+    )
+
+    return {
+        'data': json.dumps(values)
+    }

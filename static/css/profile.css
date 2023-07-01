@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
+
 :root{
     --p-color: black;
-    --div-bg-color: whitesmoke;
-    --separate-by-color: rgb(224, 224, 224);
+    --font-family: "Pavanam";
+    --div-bg-color: rgba(44, 178, 211, 0.603);
+    --separate-by-color: rgb(0, 113, 148);
 }
 
 .profile-container{
@@ -11,7 +14,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(238, 235, 235);
+    background-color: rgba(41, 147, 179, 0.712);
 }
 
 .row-1{
@@ -53,8 +56,9 @@ label {
     cursor: pointer;
     text-align: center;
     border-radius: 0.3rem;
-    font-family: sans-serif;
     background-color: indigo;
+    font-size: 20px;
+    font-family: var(--font-family);
   }
 
 .inner-row-2,
@@ -135,10 +139,12 @@ label {
     padding: 20px;
     outline: none;
     cursor: pointer;
+    font-size: 17px;
     margin-top: 10px;
     border-radius: 5px;
     font-weight: bolder;
-    color: var(--div-bg-color);
+    color: whitesmoke;
+    font-family: var(--font-family);
     background-color: rgb(79, 0, 153);
 }
 
@@ -162,19 +168,23 @@ label {
 }
 
 .row-3 button{
+    border: 0;
     width: 30%;
-    padding: 15px;
+    outline: none;
+    padding: 20px;
     cursor: pointer;
-    color: #a40e26;
+    font-size: 17px;
     margin-left: 40px;
     border-radius: 5px;
-    border: 1px solid #a40e26;
-    background: var(--div-bg-color);
+    color: whitesmoke;
+    font-weight: bolder;
+    border-radius: 10px;
+    background-color: #a40e26;
+    font-family: var(--font-family);
 }
 
 .row-3 button:hover{
-    color: white;
-    background-color: #a40e26;
+    background-color: #c01330;
 }
 
 .success-message-div{
@@ -201,4 +211,8 @@ small.success-message{
 
 .success-message-div.remove{
     display: none;
+}
+
+p{
+    font-family: var(--font-family);
 }

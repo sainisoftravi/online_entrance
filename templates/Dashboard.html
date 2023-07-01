@@ -1,0 +1,57 @@
+{% extends 'WelcomeNav.html' %}
+{% load static %}
+
+{% block content %}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
+
+    <div class="dashboard-container">
+        <div class="left-container">
+            <a class='left-links' href="{% url 'from-dashboard' to.dashboard %}">
+                Dashboard
+            </a>
+
+            <a class='left-links' href="{% url 'from-dashboard' to.profile %}">
+                Profile
+                </a>
+
+            <a class='left-links' href="{% url 'from-dashboard' to.history %}">
+                History
+            </a>
+
+            <a href="{% url 'logout' %}" class="left-links logout-link">
+                Logout
+            </a>
+
+        </div>
+
+        <div class="right-container">
+            {% if to.redirect_to %}
+                {% if to.redirect_to == 'profile' %}
+                    {% include 'profile.html' %}
+
+                {% elif to.redirect_to == 'history' %}
+                    {% include 'history.html' with results=to.results %}
+
+                {% else %}
+                    <script>
+                        data = JSON.parse('{{to.data|escapejs}}');
+                    </script>
+
+                    <div class="chart-div">
+                        <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
+                    </div>
+
+                    <div class="chart-div">
+                        <canvas id="Stacked-Bar-Chart-Results"></canvas>
+                    </div>
+                {% endif %}
+
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="{% static 'js/dashboard.js' %}"></script>
+    {% include 'footer.html' %}
+
+{% endblock %}

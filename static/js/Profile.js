@@ -53,17 +53,21 @@ function changePassword(){
         newPasswordError.classList.remove('show-error');
     }
 
-    if(newPassword && newPasswordAgain){
-        if(newPassword != newPasswordAgain){
-            success = false;
-            newPasswordAgainError.innerText = 'New Passwords did not match';
-            newPasswordAgainError.classList.add('show-error');
-        }
+    if(newPassword != newPasswordAgain){
+        success = false;
+        newPasswordAgainError.innerText = 'New Passwords did not match';
+        newPasswordAgainError.classList.add('show-error');
+    }
 
-        else{
-            success = true;
-            newPasswordError.classList.remove('show-error');
-        }
+    else if(oldPassword == newPassword){
+        success = false;
+        newPasswordAgainError.innerText = 'Old and New Password must not be same';
+        newPasswordAgainError.classList.add('show-error');
+    }
+
+    else{
+        success = true;
+        newPasswordError.classList.remove('show-error');
     }
 
     return success == true;

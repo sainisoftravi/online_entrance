@@ -7,15 +7,15 @@
 
     <div class="dashboard-container">
         <div class="left-container">
-            <a class='left-links' href="{% url 'from-dashboard' to.dashboard %}">
+            <a class='left-links' href="{% url 'go_to' 'dashboard' %}">
                 Dashboard
             </a>
 
-            <a class='left-links' href="{% url 'from-dashboard' to.profile %}">
+            <a class='left-links' href="{% url 'go_to' 'profile' %}">
                 Profile
                 </a>
 
-            <a class='left-links' href="{% url 'from-dashboard' to.history %}">
+            <a class='left-links' href="{% url 'go_to' 'history' %}">
                 History
             </a>
 
@@ -45,13 +45,15 @@
                     <div class="chart-div">
                         <canvas id="Stacked-Bar-Chart-Results"></canvas>
                     </div>
+
+                    <script src="{% static 'js/dashboard.js' %}"></script>
+
                 {% endif %}
 
             {% endif %}
         </div>
     </div>
 
-    <script src="{% static 'js/dashboard.js' %}"></script>
     {% include 'footer.html' %}
 
 {% endblock %}

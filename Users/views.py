@@ -78,12 +78,14 @@ def Login(request):
                 if user.is_superuser:
                     return redirect('/admin')
 
-                redirect_url = request.session.get('next', 'dashboard')
+                redirect_url = request.session.get('next')
 
                 if 'next' in request.session:
                     del request.session['next'] # Clear the session variable
 
-                return redirect(redirect_url)
+                    return redirect(redirect_url)
+
+                return redirect('go_to', redirect_to='dashboard')
 
             else:
                 messages.error(request, 'Email and Password did not match')
@@ -159,7 +161,7 @@ def UpdateProfile(request):
 
     request.user.ProfileImage = CustomUser.objects.filter(id=request.user.id)[0].ProfileImage
 
-    return RedirectFromDashboard(request, 'profile')
+    return redirect('go_to', redirect_to='profile')
 
 
 def UpdatePassword(request):
@@ -175,7 +177,7 @@ def UpdatePassword(request):
         else:
             messages.error(request, 'Old Password did not matched')
 
-        return RedirectFromDashboard(request, 'profile')
+        return redirect('go_to', redirect_to='profile')
 
 
 def Logout(request):
@@ -280,7 +282,7 @@ def DetailedHistory(request, slug):
 
 
 def Dashboard(request):
-    return RedirectFromDashboard(request, 'dashboard')
+    return GoTo(request, 'dashboard')
 
 
 def GetHistories(id):
@@ -299,23 +301,19 @@ def GetHistories(id):
     return results
 
 
-def RedirectFromDashboard(request, redirect_to):
-    redirects = {
-        'dashboard': 'dashboard',
-        'profile': 'profile',
-        'history': 'history'
-    }
+def GoTo(request, redirect_to):
+    data = dict()
+    data['redirect_to'] = redirect_to
 
-    redirects['redirect_to'] = redirect_to
     id = CustomUser.objects.filter(id=request.user.id)[0]
 
     if redirect_to == 'history':
-        redirects['results'] = GetHistories(id)
+        data['results'] = GetHistories(id)
 
     elif redirect_to == 'dashboard':
-        redirects.update(GetWrongRights(id))
+        data.update(GetWrongRights(id))
 
-    return render(request, 'Dashboard.html', {'to': redirects})
+    return render(request, 'Dashboard.html', {'to': data})
 
 
 def GetWrongRights(id):

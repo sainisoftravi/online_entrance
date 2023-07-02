@@ -20,7 +20,7 @@
             <div class="right-panel">
                 <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
 
-                <a href="{% url 'dashboard' %}">
+                <a href="{% url 'go_to' 'dashboard' %}">
                     <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
                 </a>
             </div>

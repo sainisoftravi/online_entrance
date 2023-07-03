@@ -6,7 +6,6 @@ urlpatterns = [
     path('login/', views.Login, name='login'),
     path('signup/', views.SignUp, name='signup'),
     path('logout/', views.Logout, name='logout'),
-    path('<str:redirect_to>/', views.GoTo, name='go_to'),
     path('getresult/', views.GetResult, name='getresult'),
     path('deleteaccount/', views.DeleteAccount, name='deleteaccount'),
     path('updateprofile/', views.UpdateProfile, name='updateprofile'),
@@ -14,4 +13,5 @@ urlpatterns = [
     path('updatepassword/', views.UpdatePassword, name='updatepassword'),
     path('programselector/', views.ProgramSelector, name='programselector'),
     path('detailed-result/<slug:slug>', views.DetailedHistory, name='detailed-history'),
+    path('<str:redirect_to>/', views.GoTo, name='go_to'),
 ]

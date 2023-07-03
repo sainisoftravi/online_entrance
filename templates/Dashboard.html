@@ -3,6 +3,7 @@
 
 {% block content %}
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
 
     <div class="dashboard-container">
@@ -53,6 +54,12 @@
             {% endif %}
         </div>
     </div>
+
+    <a href="#" class="go-to-top">
+        <i class='bx bx-up-arrow-alt up-arrow'></i>
+    </a>
+
+    <script src="{% static 'js/scroll.js' %}"></script>
 
     {% include 'footer.html' %}
 

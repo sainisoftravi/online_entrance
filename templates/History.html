@@ -2,7 +2,6 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/history.css' %}">
-    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
 
     <div class="histories">
         {% if results %}
@@ -20,11 +19,5 @@
             <p class="no-records">You have no records to display</p>
         {% endif %}
     </div>
-
-    <a href="#" class="go-to-top">
-        <i class='bx bx-up-arrow-alt up-arrow'></i>
-    </a>
-
-    <script src="{% static 'js/scroll.js' %}"></script>
 
 {% endblock %}

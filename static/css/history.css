@@ -14,7 +14,7 @@
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 10px;
-    background-color: rgb(0, 88, 139);
+    background-color: rgb(1, 134, 79);
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .history:hover{
-    box-shadow: rgb(3, 66, 70) 0px -50px 36px -28px inset;
+    box-shadow: rgb(0, 73, 43) 0px -50px 36px -28px inset;
 }
 
 .no-records{

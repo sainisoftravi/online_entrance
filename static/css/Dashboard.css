@@ -12,7 +12,7 @@
     padding-top: 20px;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(240, 237, 237);
+    background-color: rgba(212, 212, 212, 0.555);
 }
 
 .right-container{
@@ -20,7 +20,7 @@
     width: 80%;
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgb(233, 233, 233);
 }
 
 .left-links{
@@ -33,11 +33,11 @@
     align-items: center;
     text-decoration: none;
     justify-content: center;
-    background-color: rgba(0, 59, 114, 0.753);
+    background-color: rgb(9, 59, 78);
 }
 
 .left-links:not(:last-child):hover{
-    background-color: rgba(0, 59, 114, 0.925);
+    background-color: rgb(22, 84, 109);
 }
 
 .chart-div{
@@ -50,9 +50,9 @@
 }
 
 .logout-link{
-    background-color: rgb(89, 0, 161);
+    background-color: rgb(64, 1, 116);
 }
 
 .logout-link:hover{
-    background-color: rgb(68, 1, 122);
+    background-color: rgb(85, 3, 153);
 }

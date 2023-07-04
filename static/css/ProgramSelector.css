@@ -19,30 +19,36 @@
 
 .search-icon{
     font-size: 25px;
-    padding-left: 3px;
+    padding-left: 10px;
     position: absolute;
 }
 
 .search-container input{
-    width: 100%;
     border: 0;
+    width: 100%;
     outline: none;
-    padding: 10px;
-    padding-left: 30px;
+    font-size: 17px;
+    padding-top: 20px;
+    padding-left: 40px;
+    padding-right: 10px;
+    border-radius: 30px;
+    padding-bottom: 20px;
 }
 
 .program-container{
     width: 50%;
-    gap: 20px;
+    gap: 32px;
     display: flex;
     flex-wrap: wrap;
 }
 
 .program{
     width: 30%;
-    padding: 20px;
+    padding: 25px;
+    font-size: 20px;
     text-align: center;
     color: whitesmoke;
+    border-radius: 10px;
     background-color: rgb(1, 119, 139);
 }
 

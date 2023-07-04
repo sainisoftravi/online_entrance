@@ -9,7 +9,6 @@ new Chart(Pie_Chart, {
             labels: data['Pie-Chart-correct-vs-incorrect']['labels'],
             datasets: [
                 {
-                    borderWidth: 5,
                     data: data['Pie-Chart-correct-vs-incorrect']['data'],
                     backgroundColor: ["green", "red"],
                 }

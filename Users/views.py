@@ -346,6 +346,11 @@ def GetWrongRights(id):
             }
     )
 
+    if correct_answers:
+        return {
+            'data': json.dumps(values)
+        }
+
     return {
-        'data': json.dumps(values)
+        'data': None
     }

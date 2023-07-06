@@ -35,19 +35,25 @@
                     {% include 'history.html' with results=to.results %}
 
                 {% else %}
-                    <script>
-                        data = JSON.parse('{{to.data|escapejs}}');
-                    </script>
+                    {% if to.data %}
+                        <script>
+                            data = JSON.parse('{{to.data|escapejs}}');
+                        </script>
 
-                    <div class="chart-div">
-                        <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
-                    </div>
+                        <div class="chart-div">
+                            <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
+                        </div>
 
-                    <div class="chart-div">
-                        <canvas id="Stacked-Bar-Chart-Results"></canvas>
-                    </div>
+                        <div class="chart-div">
+                            <canvas id="Stacked-Bar-Chart-Results"></canvas>
+                        </div>
 
-                    <script src="{% static 'js/dashboard.js' %}"></script>
+                        <script src="{% static 'js/dashboard.js' %}"></script>
+
+                    {% else %}
+                        <p class="no-records">You have no records to display</p>
+
+                    {% endif %}
 
                 {% endif %}
 

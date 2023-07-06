@@ -61,7 +61,8 @@ input::placeholder{
     justify-content: flex-end;
 }
 
-a{
+#cancel-button,
+#search-button{
     border: 0;
     outline: none;
     cursor: pointer;

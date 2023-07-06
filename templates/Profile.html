@@ -55,7 +55,10 @@
                 <p>Change Password</p>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
+                    <div class="password-div">
+                        <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
+                        <i class='bx bxs-hide bxs-show pass-eye0'></i>
+                    </div>
                     {% if messages%}
                         {% for message in messages %}
                             {% if message.level == 40 %}
@@ -74,12 +77,20 @@
                 </div>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
+                    <div class="password-div">
+                        <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
+                        <i class='bx bxs-hide bxs-show pass-eye1'></i>
+                    </div>
+
                     <small class="new-password-error">This field must not be empty</small>
                 </div>
 
                 <div class="input-groups">
-                    <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
+                    <div class="password-div">
+                        <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
+                        <i class='bx bxs-hide bxs-show pass-eye2'></i>
+                    </div>
+
                     <small class="new-password-again-error">This field must not be empty</small>
                 </div>
 
@@ -98,4 +109,6 @@
         </div>
     </div>
     <script src="{% static 'js/Profile.js' %}"></script>
+    <script src="{% static 'js/togglePassword.js' %}"></script>
+
 {% endblock %}

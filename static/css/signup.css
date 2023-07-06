@@ -65,6 +65,7 @@ form{
     display: flex;
     padding: 10px;
     position: relative;
+    justify-content: center;
     flex-direction: column;
 }
 
@@ -187,13 +188,17 @@ button{
     background-color: tomato;
 }
 
-.password-eye{
-    left: 92%;
+.pass-eye1{
+    top: 23px;
+    right: 12px;
+    display: none;
+    font-size: 20px;
     cursor: pointer;
+    position: absolute;
 }
 
-.show-hide-password{
-    visibility: hidden;
+i.show-eye{
+    display: flex;
 }
 
 .upload-profile-image-div{

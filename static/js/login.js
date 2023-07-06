@@ -3,10 +3,7 @@ form_right = document.querySelector('.form-right');
 password_box = document.querySelector('#password');
 email_error = document.querySelector('.email-error');
 submit_button = document.querySelector('.submit-btn');
-password_eye = document.querySelector('.password-eye');
 password_error = document.querySelector('.password-error');
-
-password_eye.classList.add('show-hide-password');
 
 if(submit_button.value == 'Sign Up'){
     form_right.style = 'none;';
@@ -45,32 +42,3 @@ function validateForm(){
 
     return success == true;
 }
-
-password_eye.addEventListener('click', (event) => {
-    if(password_box.type == 'text'){
-        password_box.type = 'password';
-        password_eye.classList.add('bxs-hide');
-        password_eye.classList.remove('bxs-show');
-    }
-
-    else{
-        password_box.type = 'text';
-        password_eye.classList.add('bxs-show');
-        password_eye.classList.remove('bxs-hide');
-    }
-});
-
-
-password_box.addEventListener('keydown', (event) => {
-    values = password_box.value
-
-    if(values.length >= 1){
-        if(password_eye.classList.contains('show-hide-password')){
-            password_eye.classList.remove('show-hide-password');
-        }
-    }
-
-    else if(values.length == 0){
-        password_eye.classList.add('show-hide-password');
-    }
-});

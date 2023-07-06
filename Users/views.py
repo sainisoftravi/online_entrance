@@ -21,7 +21,7 @@ def SignUp(request):
             messages.error(request, 'Email already exists')
             return redirect('signup')
 
-        password = request.POST['password']
+        password = request.POST['new_password1']
 
         dob_year = int(request.POST['dob-year'])
         dob_month = int(request.POST['dob-month'])
@@ -64,7 +64,7 @@ def Login(request):
 
         if request.method == 'POST':
             email = request.POST['email']
-            password = request.POST['password']
+            password = request.POST['new_password1']
             remember_me = request.POST.get('remember-me', False)
 
             user = authenticate(request, email=email, password=password)

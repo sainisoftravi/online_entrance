@@ -139,6 +139,9 @@ class Results(models.Model):
 
         super(Results, self).save(*args, **kwargs)
 
+    def __str__(self):
+        return str(self.ID)
+
 
 class ResultDetails(models.Model):
     class Meta:
@@ -183,6 +186,9 @@ class Programme(models.Model):
             max_length = 10
         )
 
+    def __str__(self):
+        return self.Name
+
 
 class Subject(models.Model):
     class Meta:
@@ -210,6 +216,9 @@ class Subject(models.Model):
             blank = False,
             default=1
         )
+
+    def __str__(self):
+        return self.Name
 
 
 class Questions(models.Model):
@@ -261,3 +270,6 @@ class Questions(models.Model):
                     blank = False,
                     max_length = 20
                 )
+
+    def __str__(self):
+        return str(self.ID)

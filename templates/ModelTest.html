@@ -50,8 +50,14 @@
                                 <div class="choice">
 
                             {% endif %}
+                                {% if choice == question.UserAnswer and question.checked %}
+                                    <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" checked>
 
-                                <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
+                                {% else %}
+                                    <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
+
+                                {% endif %}
+
                                 <label class="option-labels" for="{{forloop.parentloop.counter}}{{forloop.counter}}">{{choice}}</label>
                             </div>
                         {% endfor %}

@@ -12,44 +12,40 @@ class PopulateQuestions:
         with open(self.JSON_FILE, 'r') as f:
             self.Contents = json.load(f)
 
-    def GetSubjects(self, programme):
-        return list(self.Contents[programme].keys())
-
     def Action(self):
-        for programme, _ in self.Contents.items():
-            ProgramObj = Programme.objects.filter(Name=programme)
+        for content in self.Contents:
+            answer = content['answer']
+            choices = content['choices']
+            subject = content['subject']
+            question = content['question']
+            programme = content['programme']
 
-            if ProgramObj:
-                ProgramObj = ProgramObj[0]
+            programmeObj = Programme.objects.filter(Name=programme)
+
+            if programmeObj:
+                programmeObj = programmeObj.first()
 
             else:
-                ProgramObj = Programme(Name=programme)
-                ProgramObj.save()
+                programmeObj = Programme(Name=programme)
+                programmeObj.save()
 
-            subjects = self.GetSubjects(programme)
+            subjectObj = Subject.objects.filter(ProgrammeID=programmeObj, Name=subject)
 
-            for subject in subjects:
-                SubjectObj = Subject.objects.filter(ProgrammeID=ProgramObj, Name=subject)
+            if subjectObj:
+                subjectObj = subjectObj.first()
 
-                if SubjectObj:
-                    SubjectObj = SubjectObj[0]
+            else:
+                subjectObj = Subject(ProgrammeID=programmeObj, Name=subject)
+                subjectObj.save()
 
-                else:
-                    SubjectObj = Subject(ProgrammeID=ProgramObj, Name=subject)
-                    SubjectObj.save()
+            if not Questions.objects.filter(SubjectID=subjectObj, Title=question, Answer=answer):
+                questionObj = Questions(
+                                    SubjectID=subjectObj, Title=question, Answer=answer,
+                                    OptionOne=choices[0], OptionTwo=choices[1],
+                                    OptionThree=choices[2], OptionFour=choices[3]
+                                )
 
-                for question, question_values in self.Contents[programme][subject].items():
-                    if not Questions.objects.filter(SubjectID=SubjectObj, Title=question):
-                        answer = question_values['answer']
-                        choices = question_values['choices']
-
-                        new_question = Questions(
-                                            SubjectID=SubjectObj, Title=question, Answer=answer,
-                                            OptionOne=choices[0], OptionTwo=choices[1],
-                                            OptionThree=choices[2], OptionFour=choices[3]
-                                        )
-
-                        new_question.save()
+                questionObj.save()
 
 
 class Command(BaseCommand):

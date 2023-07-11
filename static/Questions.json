@@ -10138,5 +10138,113 @@
             "She absents herself from the college today",
             "None of the squares was properly drawn"
         ]
+    },
+    {
+        "subject": "Verbal Ability",
+        "question": "Which of the following words is a synonym for \"exquisite\" ?",
+        "programme": "BIM",
+        "answer": "Beautiful",
+        "choices": [
+            "Beautiful",
+            "Mediocre",
+            "Ugly",
+            "Average"
+        ]
+    },
+    {
+        "subject": "Verbal Ability",
+        "question": "Choose the word that is most opposite in meaning to \"brave\":",
+        "programme": "BIM",
+        "answer": "Timid",
+        "choices": [
+            "Timid",
+            "Fearless",
+            "Bold",
+            "Valiant"
+        ]
+    },
+    {
+        "subject": "Verbal Ability",
+        "question": "Identify the correctly spelled word:",
+        "programme": "BIM",
+        "answer": "Conscious",
+        "choices": [
+            "Consciouss",
+            "Consciouos",
+            "Conscious",
+            "Consciuos"
+        ]
+    },
+    {
+        "subject": "Verbal Ability",
+        "question": "She was .......... to attend the party because she had a prior commitment.",
+        "programme": "BIM",
+        "answer": "Unable",
+        "choices": [
+            "Eligible",
+            "Unable",
+            "Willing",
+            "Obligated"
+        ]
+    },
+    {
+        "subject": "Logical Reasoning",
+        "question": "John is taller than Mark, and Mark is taller than Tim. Who among them is the shortest ?",
+        "programme": "BIM",
+        "answer": "Insufficient information",
+        "choices": [
+            "John",
+            "Mark",
+            "Tim",
+            "Insufficient information"
+        ]
+    },
+    {
+        "subject": "Logical Reasoning",
+        "question": "All cats are mammals, and all mammals have four legs. What can we conclude from these statements ?",
+        "programme": "BIM",
+        "answer": "All cats have four legs",
+        "choices": [
+            "All cats have four legs",
+            "All animals with four legs are cats",
+            "Some mammals have four legs",
+            "Some cats are not mammals"
+        ]
+    },
+    {
+        "subject": "Logical Reasoning",
+        "question": "A company conducted a survey to determine the popularity of its products among different age groups. The results showed that 60% of respondents were aged between 18 and 35, and the remaining respondents were aged 36 or above. If the company received a total of 500 responses, how many respondents were aged 36 or above ?",
+        "programme": "BIM",
+        "answer": "300",
+        "choices": [
+            "200",
+            "250",
+            "300",
+            "350"
+        ]
+    },
+    {
+        "subject": "Logical Reasoning",
+        "question": "If it rains, then the ground is wet.\nWhich of the following can be concluded from the statement ?",
+        "programme": "BIM",
+        "answer": "If the ground is wet, then it must have rained.",
+        "choices": [
+            "If the ground is wet, then it is raining.",
+            "If it is not raining, then the ground is not wet.",
+            "If the ground is wet, then it must have rained.",
+            "If it is not raining, then the ground is wet."
+        ]
+    },
+    {
+        "subject": "Logical Reasoning",
+        "question": "If it snows, then the temperature is below freezing. \nWhich of the following statements can be logically inferred from the given statement ?",
+        "programme": "BIM",
+        "answer": "If the temperature is above freezing, then it is not snowing.",
+        "choices": [
+            "If the temperature is above freezing, then it is not snowing.",
+            "If it is snowing, then the temperature is below freezing.",
+            "If the temperature is below freezing, then it is snowing.",
+            "If it is not snowing, then the temperature is above freezing."
+        ]
     }
 ]

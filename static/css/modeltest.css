@@ -28,10 +28,6 @@
     color: whitesmoke;
 }
 
-.hide-timer{
-    display: none;
-}
-
 .QuestionContainer{
     gap: 20px;
     width: 100%;
@@ -181,4 +177,8 @@ label{
     cursor: default;
     font-size: 45px;
     border-top: 5px solid whitesmoke;
+}
+
+#read-only-form{
+    margin-bottom: 50px;
 }

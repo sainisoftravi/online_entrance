@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-    <form action="{% url 'getresult' %}" method="POST">
+    {% if questions.0.checked %}
+        <form action="#" id="read-only-form">
+
+    {% else %}
+        <form action="{% url 'getresult' %}" method="POST">
+
+    {% endif %}
         {% csrf_token %}
 
         <div class="marks {% if questions.0.checked == False %}hide-marks{% endif %}">
@@ -16,9 +22,12 @@
         </div>
 
         <div class="QuestionContainer">
-            <div class="timer {% if questions.0.checked %}hide-timer{% endif %}">
-                <p id="timer-text">02 : 00 : 00</p>
-            </div>
+            {% if questions.0.checked is False %}
+                <div class="timer">
+                    <p id="timer-text">02 : 00 : 00</p>
+                </div>
+
+            {% endif %}
 
             {% for question in questions %}
                 <div class="Questions">
@@ -73,7 +82,9 @@
                 </div>
             {% endfor %}
 
-            <button type="submit" id="submit-button" onclick="return checkForSubmission()">Submit</button>
+            {% if questions.0.checked is False %}
+                <button type="submit" id="submit-button" onclick="return checkForSubmission()">Submit</button>
+            {% endif %}
 
         </div>
     </form>

@@ -10246,5 +10246,29 @@
             "If the temperature is below freezing, then it is snowing.",
             "If it is not snowing, then the temperature is above freezing."
         ]
+    },
+    {
+        "subject": "Math",
+        "question": "If the sum of two angles is \\(90^{\\circ}\\) and one angle is \\(35^{\\circ}\\), what is the measure of the other angle ?",
+        "programme": "BIT",
+        "answer": "\\(45^{\\circ}\\)",
+        "choices": [
+            "\\(45^{\\circ}\\)",
+            "\\(55^{\\circ}\\)",
+            "\\(65^{\\circ}\\)",
+            "\\(80^{\\circ}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "If a triangle has sides of lengths 5, 12, and 13, what type of triangle is it ?",
+        "programme": "BIT",
+        "answer": "Right triangle",
+        "choices": [
+            "Equilateral triangle",
+            "Isosceles triangle",
+            "Scalene triangle",
+            "Right triangle"
+        ]
     }
 ]

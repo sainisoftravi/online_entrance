@@ -15,6 +15,7 @@ body{
     width: 100%;
     height: 80px;
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -57,61 +58,34 @@ a{
     object-fit: cover;
 }
 
-.drop-down-menu{
-    right: 0px;
-    max-height: 0;
+.hide-logout-link{
     display: none;
-    position: absolute;
-    transition: max-height 5s;
-    background-color: #d4e1e69d;
 }
 
-.drop-down-menu.open-menu{
-    display: block;
-    margin-top: 5px;
-    margin-right: 5px;
-    max-height: 400px;
-}
-
-.drop-down-profile{
+.show-logout-link{
+    top: 82px;
+    right: 2px;
+    width: 10%;
     display: flex;
-    align-items: center;
-    border-bottom: 2px solid #272727;
-}
-
-.drop-down-profile-img{
-    width: 30px;
-    height: 30px;
-    margin-left: 5px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.drop-down-profile h3{
-    padding: 10px;
-    color: rgb(39, 34, 34);
-}
-
-.drop-down-options{
-    display: flex;
-    padding: 5px;
     cursor: pointer;
+    position: absolute;
     align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 116, 161);
 }
 
-.drop-down-options i{
-    color: #3a3939;
-    font-size: 40px;
-    margin-left: 5px;
-    margin-right: 15px;
-}
-
-.drop-down-options p{
+.bx-log-out-circle{
     font-size: 20px;
+    height: 100%;
+    padding: 10px;
+    color: whitesmoke;
 }
 
-.drop-down-options p:hover,
-.drop-down-options:hover,
-.drop-down-options i:hover ~ p{
-    color: rgba(245, 245, 245, 0.897);
+.logout-link p{
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
 }

@@ -31,22 +31,28 @@
 
             {% for question in questions %}
                 <div class="Questions">
-                    <p class="title">
-                        <strong>{{forloop.counter}}.&nbsp;&nbsp;{{question.title}}</strong>
-                    </p>
+                    <p class="question-number">{{forloop.counter}}.</p>
 
-                    <div class="options">
-                        {% for choice in question.choices %}
-                            {% if question.checked %}
-                                {% if question.UserAnswer == '-' %}
-                                    <div class="choice">
+                    <div class="question-details">
+                        <p class="question-title">{{question.title}}</p>
 
-                                {% elif choice == question.UserAnswer %}
-                                    {% if question.is_correct %}
-                                        <div class="choice correct-div">
+                        <div class="options">
+                            {% for choice in question.choices %}
+                                {% if question.checked %}
+                                    {% if question.UserAnswer == '-' %}
+                                        <div class="choice">
+
+                                    {% elif choice == question.UserAnswer %}
+                                        {% if question.is_correct %}
+                                            <div class="choice correct-div">
+
+                                        {% else %}
+                                            <div class="choice wrong-div">
+
+                                        {% endif %}
 
                                     {% else %}
-                                        <div class="choice wrong-div">
+                                        <div class="choice">
 
                                     {% endif %}
 
@@ -54,31 +60,28 @@
                                     <div class="choice">
 
                                 {% endif %}
+                                    {% if choice == question.UserAnswer and question.checked %}
+                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" checked>
 
-                            {% else %}
-                                <div class="choice">
+                                    {% else %}
+                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
 
-                            {% endif %}
-                                {% if choice == question.UserAnswer and question.checked %}
-                                    <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" checked>
+                                    {% endif %}
 
-                                {% else %}
-                                    <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
+                                    <label class="option-labels" for="{{forloop.parentloop.counter}}{{forloop.counter}}">{{choice}}</label>
+                                </div>
+                            {% endfor %}
 
+                            {% if question.checked %}
+                                {% if question.is_correct is False %}
+                                    <p class="correct-answer">{{question.answer}}</p>
                                 {% endif %}
 
-                                <label class="option-labels" for="{{forloop.parentloop.counter}}{{forloop.counter}}">{{choice}}</label>
-                            </div>
-                        {% endfor %}
+                            {% else %}
+                                <small class="error-message">Must select any one</small>
+                            {% endif %}
+                        </div>
                     </div>
-
-                    {% if question.checked %}
-                        <p class="correct-answer">{{question.answer}}</p>
-                    {% endif %}
-
-                    <p class="error-message">
-                        <strong>Must select any one</strong>
-                    </p>
                 </div>
             {% endfor %}
 

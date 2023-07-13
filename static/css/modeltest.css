@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Carlito&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&display=swap');
 
 :root{
-    --font: 'Carlito';
+    --font: 'Quicksand';
 }
 
 * {
@@ -16,16 +16,17 @@
     padding: 20px;
     position: sticky;
     width: fit-content;
-    background-color: #4398b5;
     border-radius: 12px;
+    background-color: #4398b5;
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 #timer-text{
     font-size: 40px;
     text-align: center;
-    font-weight: bolder;
+    font-weight: bold;
     color: whitesmoke;
+    font-family: var(--font);
 }
 
 .QuestionContainer{
@@ -40,7 +41,7 @@
 }
 
 .Questions{
-    width: 80%;
+    width: 65%;
     height: 30%;
     display: flex;
     justify-content: center;
@@ -51,7 +52,8 @@
 .question-number,
 .question-title{
     font-size: 20px;
-    font-weight: bolder;
+    font-weight: 700;
+    text-align: justify;
     font-family: var(--font);
     padding: 20px 20px 0px 20px;
     background-color: whitesmoke;
@@ -62,7 +64,7 @@
 }
 
 .question-number{
-    width: 5%;
+    width: 8%;
 }
 
 .options{
@@ -132,6 +134,7 @@ label{
     font-weight: bolder;
     border-radius: 10px;
     margin-bottom: 30px;
+    font-family: var(--font);
     background-color: rgb(51, 0, 99);
 
 }
@@ -160,7 +163,8 @@ label{
 }
 
 .marks{
-    top: 90px;
+    left:20px;
+    top: 100px;
     width: 125px;
     height: 125px;
     display: flex;

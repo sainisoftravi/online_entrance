@@ -2,6 +2,16 @@
 
 :root{
     --font: 'Quicksand';
+    --wrong-font-color: #e44944;
+    --timer-text-color: whitesmoke;
+    --common-background-color: #4398b5;
+    --questions-options-font-color: black;
+    --error-message-font-color: whitesmoke;
+    --submit-button-font-color: whitesmoke;
+    --obtained-marks-font-color: whitesmoke;
+    --common-div-background-color: whitesmoke;
+    --obtained-marks-background-color: #af0404;
+    --checked-questions-font-color: whitesmoke;
 }
 
 * {
@@ -15,9 +25,8 @@
     top: 0;
     padding: 20px;
     position: sticky;
-    width: fit-content;
     border-radius: 12px;
-    background-color: #4398b5;
+    background-color: var(--common-background-color);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
@@ -25,8 +34,8 @@
     font-size: 40px;
     text-align: center;
     font-weight: bold;
-    color: whitesmoke;
     font-family: var(--font);
+    color: var(--timer-text-color);
 }
 
 .QuestionContainer{
@@ -37,7 +46,7 @@
     min-height: 100px;
     align-items: center;
     flex-direction: column;
-    background-color: #4398b5;
+    background-color: var(--common-background-color);
 }
 
 .Questions{
@@ -45,7 +54,7 @@
     height: 30%;
     display: flex;
     justify-content: center;
-    background-color: whitesmoke;
+    background-color: var(--common-div-background-color);
     box-shadow: -21px 40px 45px 0px rgba(15,130,130,1);
 }
 
@@ -56,7 +65,8 @@
     text-align: justify;
     font-family: var(--font);
     padding: 20px 20px 0px 20px;
-    background-color: whitesmoke;
+    color: var(--questions-options-font-color);
+    background-color: var(--common-div-background-color);
 }
 
 .question-details{
@@ -83,6 +93,7 @@
     padding: 10px;
     cursor: pointer;
     align-items: center;
+    color: var(--questions-options-font-color);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
@@ -112,11 +123,11 @@ label{
     display: none;
     padding: 10px;
     font-size: 20px;
-    color: #fcf2f2;
     font-weight: bolder;
     margin-bottom: 10px;
     font-family: var(--font);
-    background-color: #e44944;
+    color: var(--error-message-font-color);
+    background-color: var(--wrong-font-color);
 }
 
 .show-error-message{
@@ -130,23 +141,22 @@ label{
     padding: 30px;
     cursor: pointer;
     font-size: 1.2rem;
-    color: whitesmoke;
-    font-weight: bolder;
     border-radius: 10px;
     margin-bottom: 30px;
     font-family: var(--font);
     background-color: rgb(51, 0, 99);
+    color: var(--submit-button-font-color);
 
 }
 
 .choice.wrong-div{
-    color: white;
-    background-color: rgb(199, 34, 5);
+    background-color: var(--wrong-font-color);
+    color: var(--checked-questions-font-color);
 }
 
 .choice.correct-div{
-    color: white;
     background-color: darkcyan;
+    color: var(--checked-questions-font-color);
 }
 
 .radio-choices:disabled{
@@ -157,9 +167,10 @@ label{
     width: 60%;
     padding: 10px;
     font-size: 1.5rem;
-    color: whitesmoke;
     margin-bottom: 10px;
+    font-family: var(--font);
     background-color: rgb(2, 173, 79);
+    color: var(--checked-questions-font-color);
 }
 
 .marks{
@@ -171,11 +182,11 @@ label{
     border-radius: 50%;
     position: absolute;
     align-items: center;
-    color: whitesmoke;
     flex-direction: column;
     justify-content: center;
     transform: rotate(-15deg);
-    background-color: #af0404;
+    color: var(--obtained-marks-font-color);
+    background-color: var(--obtained-marks-background-color);
     box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
@@ -191,7 +202,7 @@ label{
 .total-marks{
     cursor: default;
     font-size: 45px;
-    border-top: 5px solid whitesmoke;
+    border-top: 5px solid var(--obtained-marks-font-color);
 }
 
 #read-only-form{

@@ -163,16 +163,6 @@ label{
     cursor: not-allowed;
 }
 
-.correct-answer{
-    width: 60%;
-    padding: 10px;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    font-family: var(--font);
-    background-color: rgb(2, 173, 79);
-    color: var(--checked-questions-font-color);
-}
-
 .marks{
     left:20px;
     top: 100px;

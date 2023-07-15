@@ -39,10 +39,7 @@
                         <div class="options">
                             {% for choice in question.choices %}
                                 {% if question.checked %}
-                                    {% if question.UserAnswer == '-' %}
-                                        <div class="choice">
-
-                                    {% elif choice == question.UserAnswer %}
+                                    {% if choice == question.UserAnswer %}
                                         {% if question.is_correct %}
                                             <div class="choice correct-div">
 
@@ -52,7 +49,13 @@
                                         {% endif %}
 
                                     {% else %}
-                                        <div class="choice">
+                                        {% if choice == question.answer and question.is_correct is False %}
+                                            <div class="choice correct-div">
+
+                                        {% else %}
+                                            <div class="choice">
+
+                                        {% endif %}
 
                                     {% endif %}
 
@@ -72,14 +75,7 @@
                                 </div>
                             {% endfor %}
 
-                            {% if question.checked %}
-                                {% if question.is_correct is False %}
-                                    <p class="correct-answer">{{question.answer}}</p>
-                                {% endif %}
-
-                            {% else %}
-                                <small class="error-message">Must select any one</small>
-                            {% endif %}
+                            <small class="error-message">Must select any one</small>
                         </div>
                     </div>
                 </div>

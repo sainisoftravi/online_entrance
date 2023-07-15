@@ -61,6 +61,8 @@ def SignUp(request):
 
 
 def Login(request):
+    redirect_url = request.session.get('next')
+
     if request.user.is_superuser:
         return redirect('/admin')
 
@@ -85,17 +87,14 @@ def Login(request):
                 if user.is_superuser:
                     return redirect('/admin')
 
-                redirect_url = request.session.get('next')
-
-                if 'next' in request.session:
+                if redirect_url:
                     del request.session['next'] # Clear the session variable
-
-                    return redirect(redirect_url)
+                    return redirect('go_to', redirect_to=redirect_url)
 
                 elif 'detailed-history-slug' in request.session:
                     slug = request.session['detailed-history-slug']
-                    del request.session['detailed-history-slug']
 
+                    del request.session['detailed-history-slug']
                     return redirect('detailed-history', slug=slug)
 
                 return redirect('go_to', redirect_to='dashboard')
@@ -103,6 +102,9 @@ def Login(request):
             else:
                 messages.error(request, 'Email and Password did not match')
                 return redirect('login')
+
+    else:
+        return redirect('go_to', redirect_to=redirect_url)
 
     return render(request, 'Signup.html', conditions)
 
@@ -348,7 +350,11 @@ def GoTo(request, redirect_to):
     data = dict()
     data['redirect_to'] = redirect_to
 
-    id = CustomUser.objects.filter(id=request.user.id)[0]
+    id = CustomUser.objects.filter(id=request.user.id).first()
+
+    if id is None:
+        request.session['next'] = redirect_to
+        return redirect('login')
 
     if redirect_to == 'history':
         data['results'] = GetHistories(id)

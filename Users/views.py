@@ -304,7 +304,8 @@ def DetailedHistory(request, slug):
             'choices': Choices,
             'title': Question.Title,
             'UserAnswer': userAnswer,
-            'answer': Question.Answer
+            'answer': Question.Answer,
+            'question_id': Question.ID
         }
 
         values.append(details)

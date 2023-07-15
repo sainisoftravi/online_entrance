@@ -1,6 +1,7 @@
 import json
 import random
 import datetime
+from django.http import Http404
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
@@ -10,6 +11,9 @@ from .models import Programme, Subject, Questions, CustomUser, Results, ResultDe
 
 
 def SignUp(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     conditions = {
         'login': False
     }
@@ -57,6 +61,9 @@ def SignUp(request):
 
 
 def Login(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     if request.user.id is None:
         conditions = {
             'login': True
@@ -84,6 +91,12 @@ def Login(request):
                     del request.session['next'] # Clear the session variable
 
                     return redirect(redirect_url)
+
+                elif 'detailed-history-slug' in request.session:
+                    slug = request.session['detailed-history-slug']
+                    del request.session['detailed-history-slug']
+
+                    return redirect('detailed-history', slug=slug)
 
                 return redirect('go_to', redirect_to='dashboard')
 
@@ -114,6 +127,9 @@ def Index(request):
 def TakeModelTest(request, program):
     global values
 
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     values = []
     programme = Programme.objects.filter(Name=program)[0]
 
@@ -140,6 +156,9 @@ def TakeModelTest(request, program):
 
 
 def ProgramSelector(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     if request.user.is_authenticated:
         allPrograms = []
 
@@ -155,6 +174,9 @@ def ProgramSelector(request):
 
 
 def UpdateProfile(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     user = CustomUser.objects.get(id=request.user.id)
     user.ProfileImage = request.FILES['uploaded-profile-image']
     user.save()
@@ -165,6 +187,9 @@ def UpdateProfile(request):
 
 
 def UpdatePassword(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
 
@@ -187,6 +212,9 @@ def Logout(request):
 
 
 def DeleteAccount(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     user = CustomUser.objects.get(id=request.user.id)
     user.is_active = False
     user.save()
@@ -250,8 +278,17 @@ def GetResult(request):
 
 
 def DetailedHistory(request, slug):
+    if request.user.is_authenticated is False:
+        request.session['detailed-history-slug'] = slug
+
+        return redirect('login')
+
     values = []
-    Result = Results.objects.get(Slug=slug)
+    Result = Results.objects.filter(Slug=slug, UserID=request.user).first()
+
+    if Result is None:
+        raise Http404('Result Not Found')
+
     ResultDetail = ResultDetails.objects.filter(ResultID=Result)
 
     for res in ResultDetail:
@@ -282,6 +319,9 @@ def DetailedHistory(request, slug):
 
 
 def Dashboard(request):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     return GoTo(request, 'dashboard')
 
 
@@ -302,6 +342,9 @@ def GetHistories(id):
 
 
 def GoTo(request, redirect_to):
+    if request.user.is_superuser:
+        return redirect('/admin')
+
     data = dict()
     data['redirect_to'] = redirect_to
 

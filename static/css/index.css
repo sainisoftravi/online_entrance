@@ -3,9 +3,14 @@
     src: url("../fonts/Courgette-Regular.ttf");
 }
 
+.quote{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .quote p{
     width: 50%;
-    margin: auto;
     padding-top: 50px;
     font-family: Courgette;
     text-align: center;
@@ -19,19 +24,21 @@
 }
 
 .welcome{
+    padding: 20px;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     justify-content: center;
 }
 
 .welcome img{
     width: 50%;
-    padding: 20px;
 }
+
 .welcome p{
     width: 50%;
     padding: 20px;
-    font-size: 26px;
+    font-size: 25px;
     color: #ECF9FF;
     text-align: justify;
 }
@@ -39,34 +46,40 @@
 .contact{
     gap: 5px;
     display: flex;
+    margin-top: 20px;
     align-items: center;
     margin-bottom: 30px;
     justify-content: center;
 }
 
 #contact-image{
-    width: 80%;
+    width: 75%;
 }
 
 .contact-left{
-    flex: 1;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .contact-right{
-    flex: 1;
+    width: 50%;
+}
+
+form{
+    gap: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-form-item input,
 textarea{
     width: 80%;
-    margin-top: 10px;
     padding: 10px;
     outline: none;
     color: #bed7e7;
-    box-sizing: border-box;
     border: 1px solid #bed7e7;
     background: transparent;
 }
@@ -91,157 +104,4 @@ textarea:focus{
     outline: none;
     padding: 20px;
     cursor: pointer;
-    margin-top: 10px;
-}
-
-.to-top-img{
-    width: 50px;
-    height: 50px;
-}
-
-.contact-form{
-    margin-left: 20%;
-}
-
-.login-signup-container{
-    display: flex;
-    flex-direction: column;
-}
-
-.login-signup-buttons{
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.login-signup-buttons p{
-    cursor: pointer;
-    padding: 30px 100px;
-    border-radius: 30px;
-}
-
-.login-toggle-button{
-    color: whitesmoke;
-    display: inline-block;
-    background-color: #101b4f;
-}
-
-.signup-toggle-button{
-    color: black;
-    display: inline-block;
-    background-color: whitesmoke;
-}
-
-.signup-form-container,
-.login-form-container{
-    display: flex;
-    align-items: center;
-}
-
-.form-left{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-right{
-    flex: 1;
-}
-
-.form-left img{
-    width: 60%;
-}
-
-.form-right .form-field input::placeholder{
-    color: #d0d6d5;
-}
-
-.form-right .form-field{
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.bx-login{
-    left: 1px;
-    top: 15px;
-    position: absolute;
-}
-
-.form-right .form-field input{
-    width: 50%;
-    border: 0px;
-    outline: none;
-    color: white;
-    background: transparent;
-    padding: 15px 15px 15px 25px;
-    border-bottom: 1px solid thistle;
-}
-.form-right .form-field input:focus{
-    border-bottom: 1px solid white;
-}
-#select-months,
-#select-dates,
-#select-years{
-    width: 13.5%;
-    height: 36px;
-    margin: 10px;
-    outline: none;
-    font-size: 15px;
-    border-radius: 4px;
-}
-
-.form-button{
-    outline: 0;
-    border: 0;
-    width: 30%;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    background: linear-gradient(0.3turn, #d0dbe5, #9ac4d7, #3295be, #067cba, #006cb0);
-}
-
-#forgotPass{
-    width: 32%;
-    display: block;
-    text-align: right;
-}
-
-.male,
-.female,
-.others{
-    width: 15%;
-    margin: 5px;
-    padding:20px;
-    cursor: pointer;
-    text-align: center;
-    border-radius: 15px;
-    display: inline-block;
-    background-color: wheat;
-}
-
-.sex-show-border{
-    border: 1px solid black;
-}
-
-.form-hide{
-    display: none;
-}
-
-.form-close{
-    left: 95%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    position: relative;
-}
-
-.form-close p{
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
-    cursor: pointer;
-    position: absolute;
-    color: whitesmoke;
-    transform: translate(-50%, -50%);
 }

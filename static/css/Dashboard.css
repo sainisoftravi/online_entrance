@@ -2,7 +2,7 @@
     display: flex;
     min-width: 100wh;
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: #e9e9e9;
 }
 
 .left-container{
@@ -67,4 +67,28 @@
     font-weight: bolder;
     justify-content: center;
     color: rgba(8, 0, 27, 0.692);
+}
+
+i.bx-menu,
+i.bx-x{
+    display: none;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
+}
+
+
+@media screen and (max-width: 700px) {
+    .right-container{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .left-container{
+        display: none;
+    }
+
+    i.bx-menu{
+        display: block;
+    }
 }

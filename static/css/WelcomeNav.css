@@ -89,3 +89,24 @@ a{
     color: whitesmoke;
     text-decoration: none;
 }
+
+@media screen and (max-width: 736px) {
+    #login{
+        display: none;
+    }
+
+    #title{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    #title{
+        font-size: 15px;
+    }
+
+    #login{
+        display: none;
+    }
+}

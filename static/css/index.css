@@ -24,7 +24,6 @@
 }
 
 .welcome{
-    padding: 20px;
     display: flex;
     margin-top: 20px;
     align-items: center;
@@ -47,9 +46,7 @@
     gap: 5px;
     display: flex;
     margin-top: 20px;
-    align-items: center;
     margin-bottom: 30px;
-    justify-content: center;
 }
 
 #contact-image{
@@ -61,6 +58,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.contact-left p{
+    display: none;
 }
 
 .contact-right{
@@ -104,4 +105,82 @@ textarea:focus{
     outline: none;
     padding: 20px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1150px) {
+    .quote p{
+        font-size: 35px;
+    }
+
+    .welcome{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .welcome p{
+        width: 80%;
+        font-size: 30px;
+    }
+
+    .welcome img{
+        flex: 1;
+        width: 80%;
+    }
+
+    .contact{
+        gap: 20px;
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .contact img{
+        display: none;
+    }
+
+    .contact-left{
+        justify-content: left;
+        width: 80%;
+    }
+
+    .contact-left p{
+        width: 80%;
+        padding: 10px;
+        display: block;
+        font-size: 30px;
+        font-weight: bolder;
+        color: rgb(236, 236, 236);
+    }
+
+    .contact-right{
+        width: 80%;
+        display: flex;
+        justify-content: right;
+    }
+
+    form{
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 745px) {
+    .welcome p{
+        font-size: 22px;
+    }
+}
+
+
+@media screen and (max-width: 655px) {
+    .quote p{
+        font-size: 27px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .welcome p{
+        font-size: 20px;
+    }
 }

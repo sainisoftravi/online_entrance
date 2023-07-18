@@ -87,3 +87,14 @@ input::placeholder{
 #search-button:hover{
     background-color: #1876f2de;
 }
+
+
+@media screen and (max-width: 1150px) {
+    .outer-container{
+        height: 90vh;
+    }
+
+    .container{
+        width: 70%;
+    }
+}

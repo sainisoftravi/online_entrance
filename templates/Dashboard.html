@@ -7,7 +7,11 @@
     <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
 
     <div class="dashboard-container">
+        <i class="bx bx-menu"></i>
+
         <div class="left-container">
+            <i class='bx bx-x'></i>
+
             <a class='left-links' href="{% url 'go_to' 'dashboard' %}">
                 Dashboard
             </a>
@@ -66,6 +70,7 @@
     </a>
 
     <script src="{% static 'js/scroll.js' %}"></script>
+    <script src="{% static 'js/toggleMenu.js' %}"></script>
 
     {% include 'footer.html' %}
 

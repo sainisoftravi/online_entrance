@@ -198,3 +198,46 @@ label{
 #read-only-form{
     margin-bottom: 50px;
 }
+
+@media screen and (max-width: 900px) {
+    .question-title{
+        font-size: 15px;
+    }
+
+    label.option-labels{
+        font-size: 13px;
+    }
+
+    .choice{
+        width: 65%;
+    }
+
+    .obtained-marks,
+    .total-marks{
+        font-size: 30px;
+    }
+
+    .marks{
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .obtained-marks,
+    .total-marks{
+        font-size: 25px;
+    }
+
+    .marks{
+        width: 75px;
+        height: 75px;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .marks{
+        left: 5px;
+    }
+}

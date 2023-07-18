@@ -28,6 +28,10 @@ body{
     font-family: 'Pavanam';
 }
 
+i.bx-menu{
+    display: none;
+}
+
 .right-panel li{
     color: white;
     display: inline-block;
@@ -52,4 +56,25 @@ a{
     font-weight: 600;
     padding: 20px;
     background-color: #88609b;
+}
+
+@media screen and (max-width: 736px) {
+    #login{
+        display: none;
+    }
+
+    #title{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+    #title{
+        font-size: 15px;
+    }
+
+    #login{
+        display: none;
+    }
 }

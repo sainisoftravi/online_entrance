@@ -1,9 +1,8 @@
 .outer-div{
-    height: 80vh;
     width: 100wh;
     display: flex;
     overflow: hidden;
-    min-height: 10vh;
+    min-height: 80vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -40,6 +39,7 @@
     gap: 32px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .program{
@@ -52,7 +52,31 @@
     background-color: rgb(1, 119, 139);
 }
 
+.search-container input::placeholder{
+    color: grey;
+}
+
 .program:hover{
     color: rgb(191, 245, 236);
     background-color: rgb(20, 137, 158);
+}
+
+@media screen and (max-width: 736px) {
+    .outer-div{
+        justify-content: none;
+    }
+
+    .search-container input{
+        font-size: 12px;
+    }
+
+    .program-container{
+        flex-direction: column;
+    }
+
+    .program{
+        width: 100%;
+        font-size: 15px;
+    }
+
 }

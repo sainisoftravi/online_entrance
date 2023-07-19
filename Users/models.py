@@ -273,3 +273,33 @@ class Questions(models.Model):
 
     def __str__(self):
         return str(self.ID)
+
+
+class FeedBack(models.Model):
+    class Meta:
+        verbose_name_plural = "FeedBack"
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    Name = models.CharField(
+            null = False,
+            blank = False,
+            max_length = 100
+        )
+
+    Email = models.EmailField(
+            null=False,
+            blank=False
+        )
+
+    Message = models.TextField(
+            null=False,
+            blank=False
+        )
+
+    def __str__(self):
+        return str(self.ID)

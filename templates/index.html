@@ -3,8 +3,18 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/scroll.css' %}">
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/scroll.css' %}">
+<link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+{% for message in messages %}
+    {% if message %}
+        <p class="show-success-feedback-message">{{message}}</p>
+    {% endif %}
+{% endfor %}
+
+    {{message}}
 
 <div class="quote">
     <p>
@@ -28,21 +38,35 @@
     </div>
 
     <div class="contact-right">
-        <form action="">
+        <form action="{% url 'index' %}" method="POST">
+            {% csrf_token %}
+
             <div class="contact-form-item">
-                <input type="Name" placeholder="Your Name" id="contact-name">
+                <input type="Name" placeholder="Your Name" id="contact-name" name="contact-name">
+
+                <div class="error">
+                    <small class="name-error"></small>
+                </div>
             </div>
 
             <div class="contact-form-item">
-                <input type="email" placeholder="Your Email" id="contact-email">
+                <input type="email" placeholder="Your Email" id="contact-email" name="contact-email">
+
+                <div class="error">
+                    <small class="email-error"></small>
+                </div>
             </div>
 
             <div class="contact-form-item">
-                <textarea placeholder="Message" rows="20" id="contact-text-area"></textarea>
+                <textarea placeholder="Message" rows="20" id="contact-message" name="contact-message"></textarea>
+
+                <div class="error">
+                    <small class="message-error"></small>
+                </div>
             </div>
 
             <div class="contact-form-item">
-                <button class="send-msg">Send</button>
+                <button class="send-msg"  type="submit" onclick="return validateFeedBackForm()">Send</button>
             </div>
         </form>
     </div>
@@ -54,6 +78,7 @@
 </a>
 
 <script src="{% static 'js/scroll.js' %}"></script>
+<script src="{% static 'js/feedback.js' %}"></script>
 
 {% include 'footer.html' %}
 {% endblock %}

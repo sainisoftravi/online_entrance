@@ -10270,5 +10270,1061 @@
             "Scalene triangle",
             "Right triangle"
         ]
+    },
+    {
+        "subject": "Math",
+        "question": "Number of non-empty singleton subsets from the elements of the set \\(\\left\\{1, \\space m, \\space n, \\space p \\right\\} is",
+        "programme": "BScsIT",
+        "answer": "4",
+        "choices": [
+            "4",
+            "3",
+            "2",
+            "1"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "Left \\(f: A \\to B \\), then \\(f\\) is invertible if",
+        "programme": "BScsIT",
+        "answer": "\\(f\\) is both one-one and onto",
+        "choices": [
+            "\\(f\\) is one-one",
+            "\\(f\\) is onto",
+            "\\(f\\) is both one-one and onto",
+            "\\(f\\) is one-one into"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "Let \\(f: R \\to R\\) be defined by \\(f(x) = 3x-4\\), then \\(f^{-1}(x)\\) is",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{x+4}{3}\\)",
+        "choices": [
+            "\\(\\frac{x+4}{3}\\)",
+            "\\(\\frac{x-4}{3}\\)",
+            "\\(x+4\\)",
+            "\\(x-4\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "\\(\\lim_{x \\to \\infty} \\left( 1+\\frac{3}{x} \\right)^{x}\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\(e^{3}\\)",
+        "choices": [
+            "\\(e^{3}\\)",
+            "\\(3e\\)",
+            "\\(3e^{3}\\)",
+            "\\(\\frac{1}{e^{3}}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "\\(\\frac{d}{dx}(log \\abs{x}\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{1}{x}\\)",
+        "choices": [
+            "\\(\\frac{1}{\\abs{x}}\\)",
+            "\\(\\pm \\frac{1}{x}\\)",
+            "\\(\\frac{1}{x}\\)",
+            "\\(\\frac{1}{x^{3}}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "Derivative of \\(\\sin^{x}\\) w.r.t. \\(\\cos^{3}x\\) is",
+        "programme": "BScsIT",
+        "answer": "None of these options",
+        "choices": [
+            "\\(\\tan x\\)",
+            "\\(-\\tan x\\)",
+            "\\(\\tan^{3}x\\)",
+            "None of these options"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "If \\(f(x)=\\log (\\log x)\\), then \\(f{-1}(e)\\)",
+        "programme": "BScsIT",
+        "answer": "\\(e^{e}\\)",
+        "choices": [
+            "\\(e\\)",
+            "\\(\\frac{1}{e}\\)",
+            "\\(e^{e}\\)",
+            "-1"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The minimum value of \\(f(x)=\\sin x. \\cos x\\) is",
+        "programme": "BScsIT",
+        "answer": "\\(-\\frac{1}{2}\\)",
+        "choices": [
+            "\\(-\\frac{1}{2}\\)",
+            "\\(\\frac{1}{2}\\)",
+            "0",
+            "1"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "\\(\\int_{}{\\log x dx}\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\((x(\\log x-x)+C\\)",
+        "choices": [
+            "\\((\\log x-1)+C\\)",
+            "\\((x(\\log x-x)+C\\)",
+            "\\((x \\log x + 1)+C\\)",
+            "\\((x (\\log x - 1) + C\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "\\(\\int_{0}^{\\frac{\\sqrt{3}}{2}}\\frac{dx}{\\sqrt{1}-x^{2}}\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{\\pi}{3}\\)",
+        "choices": [
+            "\\(\\frac{\\pi}{3}\\)",
+            "\\(\\frac{\\pi}{6}\\)",
+            "\\(\\frac{\\pi}{4}\\)",
+            "\\(\\frac{\\pi}{2}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The area bounded by the parabola \\(y^{2}=x\\), the line \\(y=4\\) and y-axis is",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{64}{3}\\)",
+        "choices": [
+            "\\(\\frac{16}{3}\\)",
+            "\\(\\frac{32}{3}\\)",
+            "\\(\\frac{64}{3}\\)",
+            "\\(\\frac{128}{3}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The modulus of\\( \\(\\frac{(1-i)^{3}}{1-i^{3}}\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\(\\sqrt{2}\\)",
+        "choices": [
+            "-1",
+            "\\(i\\)",
+            "\\(\\sqrt{2}\\)",
+            "-2"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The roots of the equation \\(2x^{2}-3x+1=0\\) are",
+        "programme": "BScsIT",
+        "answer": "real, unequal",
+        "choices": [
+            "real, unequal",
+            "real, equal",
+            "perfect square, equal",
+            "unequal, imaginary"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "If \\(A = \\begin{pmatrix}1 & 2 \\\\ 3 & 4 \\end{pmatrix} \\) and \\(B = \\begin{pmatrix}5 & 6 \\\\ 7 & 8 \\end{pmatrix}\\), then \\((AB)^{'}\\) is",
+        "programme": "BScsIT",
+        "answer": "\\(\\begin{pmatrix}19 & 43 \\\\ 22 & 50 \\end{pmatrix} \\)",
+        "choices": [
+            "\\(\\begin{pmatrix}1 & 0 \\\\ 0 & 1 \\end{pmatrix} \\)",
+            "\\(\\begin{pmatrix}19 & 43 \\\\ 22 & 50 \\end{pmatrix} \\)",
+            "\\(\\begin{pmatrix}19 & 22 \\\\ 43 & 50 \\end{pmatrix} \\)",
+            "\\(\\begin{pmatrix}22 & 50 \\\\ 43 & 19 \\end{pmatrix} \\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The two lines of the system \\(6x-4y=10\\), \\(3x-2y=5\\) are",
+        "programme": "BScsIT",
+        "answer": "parallel",
+        "choices": [
+            "parallel",
+            "intersecting",
+            "coincident",
+            "independent"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "If the A.M. and G.M. between two given numbers are 81 and 18, respectively, then H.M. is",
+        "programme": "BScsIT",
+        "answer": "4",
+        "choices": [
+            "99",
+            "49.5",
+            "4.5",
+            "4"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The most general value of \\(\\theta\\) satisfying the equation \\(3\\tan^{2}\\theta = 1\\) is",
+        "programme": "BScsIT",
+        "answer": "\\(n \\pi \\pm \\frac{\\pi}{6}\\)",
+        "choices": [
+            "\\(n \\pi + \\frac{\\pi}{6}\\)",
+            "\\(n \\pi \\pm \\frac{\\pi}{6}\\)",
+            "\\(2n \\pi \\pm \\frac{\\pi}{6}\\)",
+            "\\((-1)^{3}\\alpha + \\frac{\\pi}{6}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "\\(\\tan^{-1}x + \\tan^{-1}\\left(\\frac{1}{x}\\right)\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "Depends on \\(x\\)",
+        "choices": [
+            "1",
+            "\\(\\frac{\\pi}{2}\\)",
+            "\\(\\frac{\\pi}{4}\\)",
+            "Depends on \\(x\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "In a \\(\\Delta ABC, \\space r\\) is equal to",
+        "programme": "BScsIT",
+        "answer": "\\((S-a)\\tan \\frac{A}{2}\\)",
+        "choices": [
+            "\\((S-a)\\tan \\frac{A}{2}\\)",
+            "\\((S-b) tan \\frac{A}{2}\\)",
+            "\\((S-c) \\tan \\frac{A}{2}\\)",
+            "\\((S-a) \\tan \\frac{B}{2}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The distance between the two lines \\(3x+4y=6\\) and \\(6x + 8y=15\\) is",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{3}{10} \\space units\\)",
+        "choices": [
+            "\\(\\frac{2}{3} \\space units\\)",
+            "\\(\\frac{2}{5} \\space units\\)",
+            "\\(\\frac{10}{3} \\space units\\}",
+            "\\(\\frac{3}{10} \\space units\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "For what value of \\(\\lambda\\) does the equation \\(12x^{2}-10xy+2y^{2}+11x-5y+\\lambda = 0\\) represents a line pair?",
+        "programme": "BScsIT",
+        "answer": "4",
+        "choices": [
+            "1",
+            "2",
+            "3",
+            "4"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "Equation of the circle having ends of its diameter at |(\\left( 1,-1 \\right)\\) and \\(\\left( 0,2 \\right)\\)",
+        "programme": "BScsIT",
+        "answer": "\\(x^{2}+y^{2}-x-y-2=0\\)",
+        "choices": [
+            "\\(x^{2}+y^{2}-x-y-2=0\\)",
+            "\\(x^{2}+y^{2}+x+y-2=0\\)",
+            "\\(x^{2}+y^{2}-x-2y+2=0\\)",
+            "\\(x^{2}+y^{2}-x+2y-2=0\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "The direction cosines of a line equally inclined to the axes are",
+        "programme": "BScsIT",
+        "answer": "\\(\\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}\\)",
+        "choices": [
+            "\\(\\frac{1}{2}, \\frac{1}{2}, \\frac{1}{2}\\)",
+            "\\(\\frac{1}{3}, \\frac{1}{3}, \\frac{1}{3}\\)",
+            "\\(\\pm \\frac{1}{2}, \\pm \\frac{1}{\\sqrt{2}}, \\pm \\frac{1}{\\sqrt{2}}\\)",
+            "\\(\\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "Which of the following pair have same dimension?",
+        "programme": "BScsIT",
+        "answer": "\\(LR \\space and \\space CR\\)",
+        "choices": [
+            "\\(\\frac{L}{R} \\space and \\space CR\\)",
+            "\\(LR \\space and \\space CR\\)",
+            "\\(\\frac{R}{L} \\space and \\space \\left[ LC \\right]^{\\frac{1}{2}}\\)",
+            "\\(CR \\space and \\space \\frac{1}{LC}\\)"
+        ]
+    },
+    {
+        "subject": "Math",
+        "question": "A bullet fired into a fixed target loses half of its velocity after penetrating 3 cm, the further distance travelled before coming to the rest is",
+        "programme": "BScsIT",
+        "answer": "1 cm",
+        "choices": [
+            "4 cm",
+            "2 cm",
+            "3 cm",
+            "1 cm"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The horizontal range is \\(4\\sqrt{3}\\) times the maximum height in a projectile motion. The angle of projection is",
+        "programme": "BScsIT",
+        "answer": "\\(45^{\\circ}\\)",
+        "choices": [
+            "\\(15^{\\circ}\\)",
+            "\\(45^{\\circ}\\)",
+            "\\(30^{\\circ}\\)",
+            "\\(60^{\\circ}\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The 'net force acting on a body is zero' then the wrong statement is",
+        "programme": "BScsIT",
+        "answer": "Acceleration should be zero",
+        "choices": [
+            "Body is at rest",
+            "Acceleration is not zero",
+            "Body is in motion",
+            "Acceleration should be zero"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "If length of wire is doubled keeping the diameter constant, it's Young's modulus will",
+        "programme": "BScsIT",
+        "answer": "remain same",
+        "choices": [
+            "increases",
+            "decreases",
+            "remain same",
+            "depend upon nature of matter"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The work done to blow a soap bubble of radius 'R' is W, then work done to increase the radius from R to 3R is",
+        "programme": "BScsIT",
+        "answer": "8 W",
+        "choices": [
+            "2 W",
+            "8 W",
+            "4 W",
+            "9 W"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A metallic ball is immersed in alcohol. The coefficient of cubical expansion of metal is less than that of alcohol. When the system is heated weight of ball is",
+        "programme": "BScsIT",
+        "answer": "decreases",
+        "choices": [
+            "increases",
+            "remains unchanged",
+            "decreases",
+            "first increases and then decreases"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "Latent heat of a substance is zero at",
+        "programme": "BScsIT",
+        "answer": "critical temperature",
+        "choices": [
+            "boiling point",
+            "critical temperature",
+            "melting point",
+            "freezing point"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The average Kinetic Energy per degree of freedom per molecule of an ideal gas is",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{1}{2}KT\\)",
+        "choices": [
+            "KT",
+            "2KT",
+            "\\(\\frac{1}{2}KT\\)",
+            "\\(\\frac{3}{4}KT\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "Two spheres of same material have radii in the ration \\(3:2\\). The heat radiated by them at the same temperature will be",
+        "programme": "BScsIT",
+        "answer": "\\(9:4\\)",
+        "choices": [
+            "\\(1:1\\)",
+            "\\(4:9\\)",
+            "\\(9:4\\)",
+            "\\(3:2\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "Light of wavelength 550 nm falls normally on a slit of width \\(22 \\times 10^{-7}m\\), the angular position of second minima from central maxima will be",
+        "programme": "BScsIT",
+        "answer": "\\(14.5^{\\circ}\\)",
+        "choices": [
+            "\\(14.5^{\\circ}\\)",
+            "\\(30^{\\circ}\\)",
+            "\\(42^{\\circ}\\)",
+            "\\(62^{\\circ}\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A person is in a room whose ceiling and two adjacent walls are mirrors. Number of images formed of an object is",
+        "programme": "BScsIT",
+        "answer": "7",
+        "choices": [
+            "5",
+            "7",
+            "6",
+            "8"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The refractive index is 1.414 and refracting angle is \\(60^{\\circ}\\), then minimum deviation of light will be",
+        "programme": "BScsIT",
+        "answer": "\\(60^{\\circ}\\)",
+        "choices": [
+            "\\(60^{\\circ}\\)",
+            "\\(30^{\\circ}\\)",
+            "\\(45^{\\circ}\\)",
+            "\\(72^{\\circ}\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A sound wave has frequency 500 Hz and velocity 360 m/s. What is the distance between 2 particles having phase difference \\(60^{\\circ}\\)?",
+        "programme": "BScsIT",
+        "answer": "12 cm",
+        "choices": [
+            "0.7 cm",
+            "70 cm",
+            "1.2 cm",
+            "12 cm"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "Two fixed charges \\(q\\) and \\(4q\\) are at \\(r\\) distance apart. What will be position of third charge to be placed so that the system will be in equilibrium ?",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{r}{2} \\space from \\space 4q\\)",
+        "choices": [
+            "\\(\\frac{2r}{3} \\space from \\space 4q\\)",
+            "\\(2r \\space from \\space q\\)",
+            "\\(\\frac{r}{2} \\space from \\space q\\)",
+            "\\(\\frac{r}{2} \\space from \\space 4q\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "n-equal capacitors are first connected in series and then in parallel. The ratio of maximum to minimum capacitance is",
+        "programme": "BScsIT",
+        "answer": "\\(n^{2}\\)",
+        "choices": [
+            "\\(n^{2}\\)",
+            "\\(\\frac{1}{n^{2}}\\)",
+            "\\(n\\)",
+            "\\(\\frac{1}{n}\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A heater coil is cut into two equal parts and only one part is used in the heater. How will the heat generated vary?",
+        "programme": "BScsIT",
+        "answer": "halved",
+        "choices": [
+            "one-fourth",
+            "doubled",
+            "halved",
+            "four times"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A 50 V battery is connected across 10 \\Omega resistor. The current in the circuit is 4.5 A. The internal resistance of the battery should be",
+        "programme": "BScsIT",
+        "answer": "\\(1.1 \\Omega\\)",
+        "choices": [
+            "\\(0 \\Omega\\)",
+            "\\(5 \\Omega\\)",
+            "\\(0.5 \\Omega\\)",
+            "\\(1.1 \\Omega\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A magnetic needle kept in a non-uniform magnetic field. It experiences",
+        "programme": "BScsIT",
+        "answer": "a force and a torque",
+        "choices": [
+            "a torque but not a force",
+            "a force and a torque",
+            "neither a force nor a torque",
+            "a force but not a torque"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "In LCR circuit, the inductive reactance at resonance frequency is 100 Hz and resistance is \\(5 \\Omega\\), the quality factor of the circuit is",
+        "programme": "BScsIT",
+        "answer": "20",
+        "choices": [
+            "5000",
+            "500",
+            "20",
+            "95"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "A circuit contains a capacitor of 420 Pf and an inductance L. The value of 'L' to broadcast on Radio at 1020 kHz is",
+        "programme": "BScsIT",
+        "answer": "\\(2.8 \\times 10^{-5} H\\)",
+        "choices": [
+            "\\(2.8 \\times 10^{-5} H\\)",
+            "\\(7.6 \\times 10^{-5} H\\)",
+            "\\(5.8 \\times 10^{-5} H\\)",
+            "\\(9.6 \\times 10^{-6} H\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "Electron accelerated from rest to a potential difference of 100 V, its final velocity will be",
+        "programme": "BScsIT",
+        "answer": "\\(6 \\times 10^{6} m/s\\)",
+        "choices": [
+            "\\(5 \\times 10^{5} m/s\\)",
+            "\\(3 \\times 10^{6} m/s\\)",
+            "\\(4 \\times 10^{5} m/s\\)",
+            "\\(6 \\times 10^{6} m/s\\)"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "When a proton collides with an electron, which of the following characteristics of proton increases?",
+        "programme": "BScsIT",
+        "answer": "Impulse",
+        "choices": [
+            "Energy",
+            "Wavelength",
+            "Frequency",
+            "Impulse"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The half life of a radioactive sample is 10 years. Its mean life is",
+        "programme": "BScsIT",
+        "answer": "14.43 years",
+        "choices": [
+            "12.43 years",
+            "16.43 years",
+            "14.43 years",
+            "Same as half life"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "NPN transistors are most preferred than that of PNP transistor. It is because of",
+        "programme": "BScsIT",
+        "answer": "None of the above",
+        "choices": [
+            "Low cost",
+            "Capable of handling low power",
+            "Low dissipation of energy",
+            "None of the above"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Azimuthal quantum number describes",
+        "programme": "BScsIT",
+        "answer": "orbital shape",
+        "choices": [
+            "orbital size",
+            "orbital orientation",
+            "orbital shape",
+            "nuclear stability"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The radioactive rays having highest penetrating power is",
+        "programme": "BScsIT",
+        "answer": "\\(\\Upsilon \\space rays\\)",
+        "choices": [
+            "\\(\\alpha \\space rays\\)",
+            "\\(\\beta \\space rays\\)",
+            "\\(\\Upsilon \\space rays\\)",
+            "all have equal penetrating power"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Which of the following has an electrovalent linkage?",
+        "programme": "BScsIT",
+        "answer": "\\(MgCl_{2}\\)",
+        "choices": [
+            "\\(MgCl_{2}\\)",
+            "\\(CH_{4}\\)",
+            "\\(SiCl_{4}\\)",
+            "\\(CCl_{4}\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The element having highest value of electronegativity is",
+        "programme": "BScsIT",
+        "answer": "Fluorine",
+        "choices": [
+            "Chlorine",
+            "Fluorine",
+            "Bromine",
+            "Iodine"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Oxidation number of chromium in \\(Cr_{2}O_{7}\\space^{2-}\\) is",
+        "programme": "BScsIT",
+        "answer": "+6",
+        "choices": [
+            "+6",
+            "+5",
+            "+4",
+            "+3"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Which of the following is an amphoteric oxide?",
+        "programme": "BScsIT",
+        "answer": "\\(CuO\\)",
+        "choices": [
+            "\\(CaO\\)",
+            "\\(MgO\\)",
+            "\\(CuO\\)",
+            "\\(ZnO\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The structure of Buckminister fullerene contains",
+        "programme": "BScsIT",
+        "answer": "12 six member rings and 20 five member rings",
+        "choices": [
+            "20 six member rings and 12 five member rings",
+            "12 six member rings and 20 five member rings",
+            "12 six member rings and 10 five member rings",
+            "12 six member rings and 8 five member rings"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Down's process is used for the extraction of",
+        "programme": "BScsIT",
+        "answer": "sodium",
+        "choices": [
+            "ammonia",
+            "nitric acid",
+            "sodium",
+            "sulphuric acid"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The IUPAC name of iso-butane is",
+        "programme": "BScsIT",
+        "answer": "2-methylpropane",
+        "choices": [
+            "2-methylpropane",
+            "2,2-dimethylpropane",
+            "2-methylpropene",
+            "2-methylbutane"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "An alkaline \\(KMnO_{4}\\) solution is known as",
+        "programme": "BScsIT",
+        "answer": "Baeyer's reagent",
+        "choices": [
+            "Tollen's reagent",
+            "Baeyer's reagent",
+            "Fehling's reagent",
+            "Grignard reagent"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "When haloalkane solution is treated with metallic sodium in presence of dry ether, respective alkane is obtained. This reaction is known as",
+        "programme": "BScsIT",
+        "answer": "Wurtz reaction",
+        "choices": [
+            "Wurtz reaction",
+            "Wolf-Kishner reduction",
+            "Cannizzaro's reaction",
+            "Reimer-Tiemann reaction"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The general formula of alkanes is",
+        "programme": "BScsIT",
+        "answer": "\\(C_{n}H_{2n+2}\\)",
+        "choices": [
+            "\\(C_{n}H_{2n}\\)",
+            "\\(C_{n}H_{2n+2}\\)",
+            "\\(C_{n}H_{2n-2}\\)",
+            "None of the above"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Detection of nitrogen, sulphur and halogens in organic compounds is done by",
+        "programme": "BScsIT",
+        "answer": "Lassaigne's test",
+        "choices": [
+            "Lassaigne's test",
+            "Lucas test",
+            "Victor meyer test",
+            "Carbylamine test"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The structure of methane is",
+        "programme": "BScsIT",
+        "answer": "tetrahedral",
+        "choices": [
+            "trigonal planar",
+            "linear",
+            "tetrahedral",
+            "square planar"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Equivalent weight of potassium dichromate in an acidic medium is equal to its",
+        "programme": "BScsIT",
+        "answer": "\\(\\frac{mol. wt.}{6}\\)",
+        "choices": [
+            "\\(\\frac{mol. wt.}{6}\\)",
+            "\\(\\frac{mol. wt.}{3}\\)",
+            "\\(\\frac{mol. wt.}{4}\\)",
+            "\\(\\frac{mol. wt.}{2}\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "An example of Lewis base is",
+        "programme": "BScsIT",
+        "answer": "\\(NH_{3}\\)",
+        "choices": [
+            "\\(BF_{3}\\)",
+            "\\(AlCl_{3}\\)",
+            "\\(FeCl_{3}\\)",
+            "\\(NH_{3}\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "A device which can generate electricity by means of a redox reaction is called",
+        "programme": "BScsIT",
+        "answer": "All of the above",
+        "choices": [
+            "Electrochemical Cell",
+            "Galvanic Cell",
+            "Voltaic Cell",
+            "All of the above"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "1 calorie is equal to",
+        "programme": "BScsIT",
+        "answer": "4.184 joules",
+        "choices": [
+            "4.184 joules",
+            "5.184 joules",
+            "3.184 joules",
+            "2.184 joules"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The rate of a reaction depends on",
+        "programme": "BScsIT",
+        "answer": "All of the above",
+        "choices": [
+            "Concentration of reacting species",
+            "Temperature",
+            "Surface area of the reactants",
+            "All of the above"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Each carbon atom of benzene is",
+        "programme": "BScsIT",
+        "answer": "\\(sp^{2} \\space hydridized\\)",
+        "choices": [
+            "\\(sp^{3} \\space hybridized\\)",
+            "\\(sp^{2} \\space hydridized\\)",
+            "\\(sp \\space hybridized\\)",
+            "\\(sp^{3}d \\space hydridized\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Which is correct for the reaction of Lucas reagent with tertiary alcohol ?",
+        "programme": "BScsIT",
+        "answer": "turbidity appears immediately",
+        "choices": [
+            "no turbidity occurs at room temperature",
+            "turbidity appears within five minutes",
+            "turbidity appears immediately",
+            "turbidity appears within ten minutes"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Fat is a",
+        "programme": "BScsIT",
+        "answer": "lipid",
+        "choices": [
+            "lipid",
+            "carbohydrate",
+            "protein",
+            "amino acid"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Bakelite is made by the action of",
+        "programme": "BScsIT",
+        "answer": "phenol on formaldehyde",
+        "choices": [
+            "phenol on formaldehyde",
+            "urea on formaldehyde",
+            "melamine on formaldehyde",
+            "ethylene glycol on phthalic acid"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Which of the following compound in called corrosive sublimate?",
+        "programme": "BScsIT",
+        "answer": "\\(HgCl_{2}\\)",
+        "choices": [
+            "\\(Hg_{2}Cl_{2}\\)",
+            "\\(HgCl_{2}\\)",
+            "\\(K_{2}[HgI_{4}]\\)",
+            "\\(HgI_{2}\\)"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Haematite is an ore of",
+        "programme": "BScsIT",
+        "answer": "Iron",
+        "choices": [
+            "Iron",
+            "Copper",
+            "Mercury",
+            "Silver"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "The word \"permissible\" is accented on its .......... syllable.",
+        "programme": "BScsIT",
+        "answer": "\\(2^{nd}\\)",
+        "choices": [
+            "\\(1^{st}\\)",
+            "\\(2^{nd}\\)",
+            "\\(3^{rd}\\)",
+            "None of the above"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Which of the following word gets stress on the first syllable?",
+        "programme": "BScsIT",
+        "answer": "Perish",
+        "choices": [
+            "Perish",
+            "Incredible",
+            "Incur",
+            "Temerity"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "I shall be glad .......... your help in my business.",
+        "programme": "BScsIT",
+        "answer": "of",
+        "choices": [
+            "in",
+            "by",
+            "of",
+            "with"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "An addicted person is the slave .......... to his drug habit.",
+        "programme": "BScsIT",
+        "answer": "to",
+        "choices": [
+            "to",
+            "for",
+            "on",
+            "by"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Give an appropriate synonym to the word \"vendetta\".",
+        "programme": "BScsIT",
+        "answer": "feud",
+        "choices": [
+            "pleasant",
+            "secret",
+            "promise",
+            "feud"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Give us appropriate synonym to the word \"acerbity\".",
+        "programme": "BScsIT",
+        "answer": "acrimony",
+        "choices": [
+            "mildness",
+            "acrimony",
+            "unsuitable",
+            "extravagant"
+        ]
+    },
+    {
+        "subject": "Chemistry",
+        "question": "Give opposite meaning word to \"replete\".",
+        "programme": "BScsIT",
+        "answer": "empty",
+        "choices": [
+            "empty",
+            "alarm",
+            "full",
+            "stuff"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "Give opposite meaning word to \"quell\".",
+        "programme": "BScsIT",
+        "answer": "encourage",
+        "choices": [
+            "encourage",
+            "stop",
+            "crush",
+            "promote"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "A disease that can be spread by touch is ..........",
+        "programme": "BScsIT",
+        "answer": "contagious",
+        "choices": [
+            "pandemic",
+            "infectious",
+            "endemic",
+            "contagious"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "Pick the odd word out",
+        "programme": "BScsIT",
+        "answer": "venison",
+        "choices": [
+            "lamb",
+            "pork",
+            "mutton",
+            "venison"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "What is the right meaning of the Latin word \"ad nauseam\"?",
+        "programme": "BScsIT",
+        "answer": "to a disgusting degree",
+        "choices": [
+            "to a disgusting degree",
+            "regularly",
+            "on duty",
+            "rarely"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "I think she will succeed, ..........?",
+        "programme": "BScsIT",
+        "answer": "won't she?",
+        "choices": [
+            "shan't she?",
+            "won't she?",
+            "would she?",
+            "doesn't she?"
+        ]
+    },
+    {
+        "subject": "English",
+        "question": "Which of the following is the adjective?",
+        "programme": "BScsIT",
+        "answer": "autumnal",
+        "choices": [
+            "width",
+            "autumnal",
+            "advantage",
+            "arrogant"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "On heating a liquid, the refractive index generally",
+        "programme": "BScsIT",
+        "answer": "decreases",
+        "choices": [
+            "does not change",
+            "decreases",
+            "increases",
+            "May increase or decrease depending on the rate of heating"
+        ]
+    },
+    {
+        "subject": "Physics",
+        "question": "The torque on an electric dipole of moment \\(\\overrightarrow{p}\\) when placed in an electric field \\(\\overrightarrow{E}\\) is proportional to",
+        "programme": "BScsIT",
+        "answer": "\\(PE \\sin \\theta\\)",
+        "choices": [
+            "\\(\\frac{P}{E}\\)",
+            "\\(\\frac{E}{P}\\)",
+            "\\(P.E\\)",
+            "\\(PE \\sin \\theta\\)"
+        ]
     }
 ]

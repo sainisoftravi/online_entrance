@@ -3,7 +3,7 @@ from django.contrib import admin
 from django.contrib.auth import get_user_model
 from django.contrib.auth.admin import UserAdmin
 from django.utils.translation import gettext_lazy as _
-from .models import Programme, Subject, Questions, Results, ResultDetails
+from .models import Programme, Subject, Questions, Results, ResultDetails, FeedBack
 
 
 class CustomUserAdmin(UserAdmin):
@@ -45,8 +45,13 @@ class ResultsDetailsAdmin(admin.ModelAdmin):
     list_display = ('ID', 'ResultID', 'QuestionID', 'UserAnswer')
 
 
+class FeedBackAdmin(admin.ModelAdmin):
+    list_display = ('ID', 'Name', 'Email')
+
+
 admin.site.register(Results, ResultsAdmin)
 admin.site.register(Subject, SubjectAdmin)
+admin.site.register(FeedBack, FeedBackAdmin)
 admin.site.register(Programme, ProgrammeAdmin)
 admin.site.register(Questions, QuestionsAdmin)
 admin.site.register(get_user_model(), CustomUserAdmin)

@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth import authenticate, login, logout
-from .models import Programme, Subject, Questions, CustomUser, Results, ResultDetails
+from .models import Programme, Subject, Questions, CustomUser, Results, ResultDetails, FeedBack
 
 
 def SignUp(request):
@@ -116,6 +116,23 @@ def Index(request):
 
     if request.user.is_superuser:
         return redirect('/admin')
+
+    elif request.method == 'POST':
+        name = request.POST['contact-name']
+        email = request.POST['contact-email']
+        message = request.POST['contact-message']
+
+        feedback = FeedBack(
+                        Name=name,
+                        Email=email,
+                        Message=message
+                    )
+
+        feedback.save()
+
+        messages.success(request, 'Thank you for your feedback')
+
+        return redirect('index')
 
     elif request.user.id:
         details.update({'nav_template': 'WelcomeNav.html'})

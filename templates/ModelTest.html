@@ -49,7 +49,10 @@
                                         {% endif %}
 
                                     {% else %}
-                                        {% if choice == question.answer and question.is_correct is False %}
+                                        {% if question.UserAnswer == '-' and choice == question.answer%}
+                                            <div class="choice correct-div">
+
+                                        {% elif choice == question.answer %}
                                             <div class="choice correct-div">
 
                                         {% else %}

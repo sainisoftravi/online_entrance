@@ -293,6 +293,8 @@ def GetResult(request):
                                 )
             ResultDetailsObj.save()
 
+        values[0]['CorrectCounter'] = correct_counter
+
         return render(request, 'ModelTest.html', {'questions': values})
 
 

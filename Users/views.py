@@ -423,3 +423,34 @@ def GetWrongRights(id):
     return {
         'data': None
     }
+
+
+def GetSpecificQuestions(request, programme, subject):
+    global values
+
+    values = []
+    programme = Programme.objects.filter(Name=programme).first()
+    subject = Subject.objects.filter(ProgrammeID=programme, Name=subject).first()
+    questions = list(Questions.objects.filter(SubjectID=subject))
+
+    random.shuffle(questions)
+
+    questions = questions[:100]
+
+    for question in questions:
+        for question in questions:
+            choices = [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
+
+            random.shuffle(choices)
+
+            details = {
+                'id': question.ID,
+                'title': question.Title,
+                'choices': choices,
+                'answer': question.Answer,
+                'checked': False,
+            }
+
+            values.append(details)
+
+    return render(request, 'ModelTest.html', {'questions': values})

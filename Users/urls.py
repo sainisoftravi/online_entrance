@@ -18,5 +18,6 @@ urlpatterns = [
     path('reset_password_sent/', auth_views.PasswordResetView.as_view(template_name='ResetPasswordSent.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='NewPassword.html'), name='password_reset_confirm'),
     path('reset_password_complete/', auth_views.PasswordResetCompleteView.as_view(template_name='RecoverPasswordComplete.html'), name='password_reset_complete'),
+    path('<str:programme>/<str:subject>', views.GetSpecificQuestions),
     path('<str:redirect_to>/', views.GoTo, name='go_to'),
 ]

@@ -1,6 +1,4 @@
 var remainingTime;
-var first_clicked = false;
-var timer_div = document.querySelector('.timer');
 var choice_divs = document.getElementsByClassName('choice');
 var wrong_div = document.getElementsByClassName('wrong-div');
 var submit_button = document.querySelector('#submit-button');
@@ -84,37 +82,51 @@ function checkForSubmission(){
 
 
 
-document.body.addEventListener("click", () => {
-    if(is_checked == 'false'){
-        if(first_clicked == false){
-            first_clicked = true;
-            const startTime = Date.now();
-            const countdownDuration = 2 * 60 * 60 * 1000;
+window.addEventListener("load", () => {
+    priorDuration = 5 * 1000;
+    priorEndTime = Date.now() + priorDuration;
 
-            const endTime = startTime + countdownDuration;
-            timer_text = document.querySelector('#timer-text');
-            const countdownInterval = setInterval(updateCountdown, 50);
+    examEndTime = 0;
+    examCountDownDuration = 0;
+    examCountDownInterval = 0;
 
-            function updateCountdown() {
-                const currentTime = Date.now();
-                remainingTime = endTime - currentTime;
+    timer_text = document.querySelector('#timer-text');
+    priorCountDownInterval = setInterval(priorTime, 50);
 
-                if (remainingTime <= 0) {
-                    clearInterval(countdownInterval);
-                    submit_button.click();
-                    return true;
-                }
+    function priorTime(){
+        remainingTime = priorEndTime - Date.now();
+        seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-                hours = Math.floor(remainingTime / (1000 * 60 * 60));
-                minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-                seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+        if(remainingTime <= 1300){
+            clearInterval(priorCountDownInterval);
 
-                hours = hours.toString().padStart(2, "0");
-                minutes = minutes.toString().padStart(2, "0");
-                seconds = seconds.toString().padStart(2, "0");
-
-                timer_text.innerText = `${hours} : ${minutes} : ${seconds}`;
-            }
+            examCountDownDuration = 2 * 60 * 60 * 1000;
+            examEndTime = Date.now() + examCountDownDuration + 1000;
+            examCountDownInterval = setInterval(startExamTime, 50);
         }
+
+        else{
+            timer_text.innerText = `Starts at: ${seconds}`;
+        }
+    }
+
+    function startExamTime() {
+        remainingTime = examEndTime - Date.now();
+
+        if (remainingTime <= 0) {
+            clearInterval(examCountDownInterval);
+            submit_button.click();
+            return true;
+        }
+
+        hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        hours = hours.toString().padStart(2, "0");
+        minutes = minutes.toString().padStart(2, "0");
+        seconds = seconds.toString().padStart(2, "0");
+
+        timer_text.innerText = `${hours} : ${minutes} : ${seconds}`;
     }
 });

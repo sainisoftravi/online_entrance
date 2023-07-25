@@ -9,7 +9,8 @@
             "cause of illness",
             "cause of happiness",
             "cause of quarrel"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -21,7 +22,8 @@
             "very hard worker",
             "in favor of both sides",
             "against both sides"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -33,7 +35,8 @@
             "step by step",
             "part by part",
             "bare truth"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -45,7 +48,8 @@
             "social",
             "formal",
             "artificial"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -57,7 +61,8 @@
             "history",
             "past",
             "future"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -69,7 +74,8 @@
             "place with certain memories",
             "a religious place",
             "a lonely forsaken place"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -81,7 +87,8 @@
             "to apologize",
             "to request",
             "to order"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -93,7 +100,8 @@
             "slope",
             "declivity",
             "peak"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -105,7 +113,8 @@
             "desire",
             "branch",
             "ability"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -117,7 +126,8 @@
             "to correct",
             "to destroy",
             "to build"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -129,7 +139,8 @@
             "independent",
             "unwise",
             "esoteric"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -141,7 +152,8 @@
             "refuse",
             "contest",
             "contend"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -153,7 +165,8 @@
             "height",
             "top",
             "climax"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -165,7 +178,8 @@
             "artist's paint mixing board",
             "artist's drama box",
             "artist's planning board"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -177,7 +191,8 @@
             "soaked",
             "full of",
             "all"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -189,7 +204,8 @@
             "eternal",
             "sterling",
             "immortal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -201,7 +217,8 @@
             "notice, gullibly",
             "witnessed, prodigiously",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -213,7 +230,8 @@
             "clemency",
             "courtesy",
             "retribution"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -225,7 +243,8 @@
             "clarity",
             "exposition",
             "picturization"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -237,7 +256,8 @@
             "deposit",
             "bail",
             "bond"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -249,7 +269,8 @@
             "with; for",
             "by; or",
             "in; for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -261,7 +282,8 @@
             "for",
             "with",
             "by"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -273,7 +295,8 @@
             "by",
             "of",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -285,7 +308,8 @@
             "at",
             "over",
             "on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -297,7 +321,8 @@
             "on",
             "over",
             "at"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -309,7 +334,8 @@
             "at",
             "against",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -321,7 +347,8 @@
             "for",
             "onto",
             "on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -333,7 +360,8 @@
             "in",
             "from",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -345,7 +373,8 @@
             "over",
             "into",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -357,7 +386,8 @@
             "over",
             "with",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -369,7 +399,8 @@
             "to look for",
             "to search",
             "all of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -381,7 +412,8 @@
             "to be in danger",
             "to take risk",
             "to disobey elders"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -393,7 +425,8 @@
             "very warm",
             "very dull",
             "very sensitive"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -405,7 +438,8 @@
             "help to somebody",
             "very much excited",
             "to be settle for less"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -417,7 +451,8 @@
             "pretend to regard",
             "true relation",
             "false commitment"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -429,7 +464,8 @@
             "to step up",
             "to help",
             "to think"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -441,7 +477,8 @@
             "honest and straightforward",
             "a man with arrogance",
             "a dishonest person"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -453,7 +490,8 @@
             "to say in anger",
             "to speak plainly",
             "to manipulate"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -465,7 +503,8 @@
             "fall",
             "split",
             "convert"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -477,7 +516,8 @@
             "paradoxical",
             "praiseworthy",
             "outstanding"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -489,7 +529,8 @@
             "to request",
             "to give respect",
             "to be polite"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -501,7 +542,8 @@
             "false promise",
             "frequent",
             "sometimes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -513,7 +555,8 @@
             "harmful",
             "poisonous",
             "foreign"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -525,7 +568,8 @@
             "low",
             "copy",
             "initial"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -537,7 +581,8 @@
             "power",
             "agreement",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -549,7 +594,8 @@
             "liberate",
             "release",
             "join"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -561,7 +607,8 @@
             "dry",
             "hard",
             "crisp"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -573,7 +620,8 @@
             "to shine like sunlight",
             "to move like sunlight",
             "all of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -585,7 +633,8 @@
             "to avoid",
             "to shun",
             "all of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -597,7 +646,8 @@
             "amends",
             "compensation",
             "punishment"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -609,7 +659,8 @@
             "connoisseur",
             "philistine",
             "dilettante"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -621,7 +672,8 @@
             "tired",
             "delivered on",
             "relied upon"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -633,7 +685,8 @@
             "pride",
             "deceit",
             "presumption"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -645,7 +698,8 @@
             "rebuttal",
             "accumulation",
             "eclipse"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -657,7 +711,8 @@
             "in",
             "over",
             "at"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -669,7 +724,8 @@
             "with",
             "off",
             "from"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -681,7 +737,8 @@
             "on",
             "about",
             "by"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -693,7 +750,8 @@
             "at",
             "from",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -705,7 +763,8 @@
             "on",
             "at",
             "in"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -717,7 +776,8 @@
             "about",
             "towards",
             "of"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -729,7 +789,8 @@
             "for",
             "with",
             "order"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -741,7 +802,8 @@
             "upon",
             "against",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -753,7 +815,8 @@
             "for",
             "with",
             "against"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -765,7 +828,8 @@
             "from",
             "by",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -777,7 +841,8 @@
             "an average number",
             "great abundance",
             "correct amount"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -789,7 +854,8 @@
             "to applaud",
             "to motivate",
             "to avoid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -801,7 +867,8 @@
             "destination",
             "dotage",
             "win something"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -813,7 +880,8 @@
             "kind",
             "good",
             "all of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -825,7 +893,8 @@
             "victory with a policy",
             "much awaited victory",
             "victory at all cost"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -837,7 +906,8 @@
             "to listen carefully",
             "to give a long speech",
             "to abuse"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -849,7 +919,8 @@
             "to take for granted",
             "to raise objections",
             "to be discussed"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -861,7 +932,8 @@
             "team",
             "popular",
             "new"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -873,7 +945,8 @@
             "criticism",
             "case",
             "theme"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -885,7 +958,8 @@
             "controlled",
             "driven",
             "moved"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -897,7 +971,8 @@
             "known to everyone",
             "to avoid historical facts",
             "history repeats"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -909,7 +984,8 @@
             "very hot",
             "very fresh",
             "lukewarm"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -921,7 +997,8 @@
             "looking on",
             "looking at",
             "looking up"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -933,7 +1010,8 @@
             "Native",
             "Accustomed",
             "Stranger"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -945,7 +1023,8 @@
             "Encourage",
             "Nourish",
             "Promote"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -957,7 +1036,8 @@
             "Speedy",
             "Foolish",
             "Awkward"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -969,7 +1049,8 @@
             "reside",
             "confront",
             "establish"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -981,7 +1062,8 @@
             "striking",
             "important",
             "incline"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -993,7 +1075,8 @@
             "judicious",
             "masterpiece",
             "towering"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1005,7 +1088,8 @@
             "archeology",
             "Sociology",
             "geology"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1017,7 +1101,8 @@
             "track",
             "ground",
             "arena"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1029,7 +1114,8 @@
             "parked",
             "supported",
             "helped"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1041,7 +1127,8 @@
             "will be",
             "have been",
             "has been"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1053,7 +1140,8 @@
             "quicken",
             "harmonize",
             "amplify"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1065,7 +1153,8 @@
             "sensational",
             "sensuous",
             "sentimental"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1077,7 +1166,8 @@
             "target",
             "ambition",
             "cynosure"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1089,7 +1179,8 @@
             "in",
             "with",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1101,7 +1192,8 @@
             "arrogant",
             "timid",
             "ashamed"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1113,7 +1205,8 @@
             "with",
             "through",
             "up"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1125,7 +1218,8 @@
             "across",
             "through",
             "all"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1137,7 +1231,8 @@
             "below",
             "among",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1149,7 +1244,8 @@
             "in",
             "from",
             "on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1161,7 +1257,8 @@
             "to",
             "on",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1173,7 +1270,8 @@
             "on",
             "to",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1185,7 +1283,8 @@
             "on",
             "of",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1197,7 +1296,8 @@
             "at",
             "by",
             "on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1209,7 +1309,8 @@
             "an",
             "this",
             "no article"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1221,7 +1322,8 @@
             "Who was it done by?",
             "Who was done it?",
             "Who had it done by?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1233,7 +1335,8 @@
             "on",
             "at",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1245,7 +1348,8 @@
             "vacume",
             "vacuum",
             "vacuume"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1257,7 +1361,8 @@
             "oxes",
             "oxez",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1269,7 +1374,8 @@
             "doe",
             "stag",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1281,7 +1387,8 @@
             "would came",
             "would have come",
             "had come"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1293,7 +1400,8 @@
             "howling",
             "roaring",
             "mowing"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1305,7 +1413,8 @@
             "haven't they?",
             "weren't they?",
             "did they?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1317,7 +1426,8 @@
             "put out",
             "put away",
             "put in"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1329,7 +1439,8 @@
             "out",
             "in",
             "into"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1341,7 +1452,8 @@
             "quit",
             "quite",
             "queit"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1353,7 +1465,8 @@
             "happening rarely",
             "occurring once a week",
             "occurring seldom"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1365,7 +1478,8 @@
             "un",
             "off",
             "out"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1377,7 +1491,8 @@
             "So",
             "Although",
             "Therefore"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1389,7 +1504,8 @@
             "She wanted to know was I sure.",
             "She inquired if I am sure.",
             "She asked him if I was sure."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1401,7 +1517,8 @@
             "stole",
             "stolen",
             "to steal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1413,7 +1530,8 @@
             "seen",
             "seeing",
             "be seen"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1425,7 +1543,8 @@
             "stationary",
             "stationnary",
             "stantianory"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1437,7 +1556,8 @@
             "wide enough",
             "wider enough",
             "quite weaker"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1449,7 +1569,8 @@
             "seriouser",
             "very serious",
             "serious than"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1461,7 +1582,8 @@
             "on",
             "of",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1473,7 +1595,8 @@
             "better",
             "best",
             "more better"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1485,7 +1608,8 @@
             "extinguisher",
             "extinguishing",
             "extinguish"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1497,7 +1621,8 @@
             "am not I?",
             "don't I?",
             "ain't I?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1509,7 +1634,8 @@
             "tired",
             "puzzled",
             "not sure"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1521,7 +1647,8 @@
             "bronchitis",
             "tonsillitis",
             "psychosis"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1533,7 +1660,8 @@
             "worse",
             "more badly",
             "worsley"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1545,7 +1673,8 @@
             "can",
             "need",
             "would"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1557,7 +1686,8 @@
             "may",
             "can",
             "might"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1569,7 +1699,8 @@
             "hell",
             "heaven",
             "sky"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1581,7 +1712,8 @@
             "late",
             "rivulet",
             "tributary"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1593,7 +1725,8 @@
             "could be",
             "would be",
             "none of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1605,7 +1738,8 @@
             "better",
             "well",
             "best"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1617,7 +1751,8 @@
             "see",
             "be seen",
             "seen"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1629,7 +1764,8 @@
             "up",
             "off",
             "down"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1641,7 +1777,8 @@
             "down",
             "up",
             "into"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1653,7 +1790,8 @@
             "might",
             "has",
             "have"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1665,7 +1803,8 @@
             "is working",
             "has worked",
             "works"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1677,7 +1816,8 @@
             "will we?",
             "do we?",
             "don't we?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1689,7 +1829,8 @@
             "her",
             "their",
             "they"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1701,7 +1842,8 @@
             "our",
             "ourselves",
             "us"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1713,7 +1855,8 @@
             "of",
             "at",
             "on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1725,7 +1868,8 @@
             "take out",
             "take over",
             "take after"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1737,7 +1881,8 @@
             "greater share of things",
             "very small part",
             "little profit"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1749,7 +1894,8 @@
             "anticipates",
             "have anticipated",
             "are anticipating"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1761,7 +1907,8 @@
             "but",
             "for",
             "so"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1773,7 +1920,8 @@
             "a",
             "the",
             "none of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1785,7 +1933,8 @@
             "should",
             "can",
             "could"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1797,7 +1946,8 @@
             "indivisible",
             "insoluble",
             "indefensible"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1809,7 +1959,8 @@
             "fear",
             "calss",
             "needle"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1821,7 +1972,8 @@
             "goodness",
             "fearless",
             "courage"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1833,7 +1985,8 @@
             "noted",
             "provided",
             "rejected"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1845,7 +1998,8 @@
             "Deny",
             "Discuss",
             "Reject"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1857,7 +2011,8 @@
             "clumsy",
             "gifted",
             "lazy"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1869,7 +2024,8 @@
             "integration",
             "cohesion",
             "co-ordination"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1881,7 +2037,8 @@
             "is",
             "were",
             "has been"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1893,7 +2050,8 @@
             "All of the women own their own homes.",
             "Here are two wrenches and a hammer.",
             "Here is a hammer and two wrenches."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1905,7 +2063,8 @@
             "Some people who go to school, enjoy the social life.",
             "He was late for dinner, we decided to eat without him.",
             "We were glad to see him, because he had brought gifts."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1917,7 +2076,8 @@
             "quit",
             "quitting",
             "has quit"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1929,7 +2089,8 @@
             "quit",
             "quitting",
             "quitter"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1941,7 +2102,8 @@
             "ocean",
             "jewish",
             "university"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1953,7 +2115,8 @@
             "of",
             "on",
             "in"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1965,7 +2128,8 @@
             "in",
             "at",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1977,7 +2141,8 @@
             "enjoying a favour of someone.",
             "possessing a good book for reading.",
             "purchasing a good book."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -1989,7 +2154,8 @@
             "too",
             "so",
             "not"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2001,7 +2167,8 @@
             "Hari says he was very happy.",
             "Hari said he is very happy.",
             "Hari said he was very happy."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2013,7 +2180,8 @@
             "He has studied English for a long time.",
             "They won't believe you.",
             "It will be dark soon."
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2025,7 +2193,8 @@
             "would have",
             "had",
             "should"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2037,7 +2206,8 @@
             "her",
             "his or her",
             "their"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2049,7 +2219,8 @@
             "bad",
             "well",
             "melt"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -2061,7 +2232,8 @@
             "controlled",
             "driven",
             "moved"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "General Knowledge",
@@ -2073,7 +2245,8 @@
             "Chitwan",
             "Tanahun",
             "Surkhet"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2085,7 +2258,8 @@
             "Libya",
             "San marino",
             "Denmark"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2097,7 +2271,8 @@
             "Sunday Times",
             "The New York Times",
             "Daily Mail"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2109,7 +2284,8 @@
             "Computer Aided Data",
             "Computer Aided Design",
             "Computer Assist Design"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2121,7 +2297,8 @@
             "U thant",
             "Antonio Guterres",
             "Kofi Annan"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2133,7 +2310,8 @@
             "Volleyball",
             "Kabaddi",
             "Football"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2145,7 +2323,8 @@
             "Jeff Bezos",
             "Warren Buffet",
             "Sundar Pichai"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2157,7 +2336,8 @@
             "Canberra",
             "Vancouver",
             "Winnipeg"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2169,7 +2349,8 @@
             "John Napier",
             "Charles Babbage",
             "John Douglas"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2181,7 +2362,8 @@
             "Ray Tomlinson",
             "Vint Cerf",
             "Tim Berners-Lee"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2193,7 +2375,8 @@
             "Khotang",
             "Sarlahi",
             "Morang"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2205,7 +2388,8 @@
             "Russia",
             "Denmark",
             "China"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2217,7 +2401,8 @@
             "Germany",
             "France",
             "America"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2229,7 +2414,8 @@
             "Artificial Intelligence",
             "Artificial interest",
             "Artificial Internet"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2241,7 +2427,8 @@
             "Shivalal BHusal",
             "Ram Pd. Khatiwada",
             "Tritha Khaniya"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2253,7 +2440,8 @@
             "Archery",
             "Bull fighting",
             "Football"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2265,7 +2453,8 @@
             "Tim Cook",
             "Sao Paulo",
             "Salvador"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2277,7 +2466,8 @@
             "Rio de Janeiro",
             "So Paulo",
             "Salvador"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2289,7 +2479,8 @@
             "Bimal Gharti Magar",
             "Kiran Chemjong",
             "Biraj Maharjan"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2301,7 +2492,8 @@
             "Iran",
             "Egypt",
             "Italy"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2313,7 +2505,8 @@
             "2072 Baisakh 11",
             "2072 Baisakh 12",
             "2072 Baisakh 13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2325,7 +2518,8 @@
             "2072 Asoj 3",
             "2072 Asoj 2",
             "2072 Asoj 1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2337,7 +2531,8 @@
             "Krishnachandra Singh Pradhan",
             "Bijay Bahadur Malla",
             "Parijat"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2349,7 +2544,8 @@
             "Court",
             "Ring",
             "Akhada"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2361,7 +2557,8 @@
             "Bill Gates",
             "Mark Zukerberg",
             "Chiris Huhes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2373,7 +2570,8 @@
             "MS-Excel",
             "MS-Word",
             "MS-Outlook"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2385,7 +2583,8 @@
             "Liquid Cristal Display",
             "Liquid Crystal Display",
             "Liquid Clear Display"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2397,7 +2596,8 @@
             "Rastriya Banijya Bank",
             "Nepal Investment Bank",
             "Nepal Rastra Bank"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2409,7 +2609,8 @@
             "Physics",
             "Economics",
             "Literature"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2421,7 +2622,8 @@
             "7",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2433,7 +2635,8 @@
             "2072 Ashoj 3",
             "2072 Ashoj 2 d",
             "2072 Ashoj 1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2445,7 +2648,8 @@
             "Bill Gates",
             "Mark Zuckerberg",
             "John V Neumann"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2457,7 +2661,8 @@
             "Economics",
             "Physics",
             "Computer Science"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2469,7 +2674,8 @@
             "ROM",
             "RAM",
             "Mass Storage"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2481,7 +2687,8 @@
             "Coratia",
             "France",
             "Germany"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2493,7 +2700,8 @@
             "Plotter",
             "Monitor",
             "Printer"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2505,7 +2713,8 @@
             "Homosepian",
             "Felis Catus",
             "Rattus"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2517,7 +2726,8 @@
             "KOshi",
             "Mahakali",
             "Gandaki"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2529,7 +2739,8 @@
             "Matrika Prasad Koirala",
             "Bhimsen Thapa",
             "Mathabar Sing Thapa"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2541,7 +2752,8 @@
             "Ramlal Joshi",
             "Gopal Prasad Rimal",
             "Lokendra Bahadur Chand"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2553,7 +2765,8 @@
             "Chitwan",
             "Tanahun",
             "Dhanding"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2565,7 +2778,8 @@
             "Tokyo",
             "Paris",
             "Madrid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2577,7 +2791,8 @@
             "JAVA",
             "Python",
             "Arduino"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2589,7 +2804,8 @@
             "WAN",
             "MAN",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2601,7 +2817,8 @@
             "10",
             "4",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2613,7 +2830,8 @@
             "Long Tennis",
             "HOckey",
             "Wrestling"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2625,7 +2843,8 @@
             "Puspha Kamal Dahal",
             "Sher Bahadur Deuba",
             "Dr. Ram Baran Yadav"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2637,7 +2856,8 @@
             "Secured",
             "Shape",
             "Shine"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2649,7 +2869,8 @@
             "Gyanendra Malla",
             "Rohit Poudel",
             "Parash Khadka"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge",
@@ -2661,7 +2882,8 @@
             "New York",
             "Kathmandu",
             "Rome"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "Math",
@@ -2673,7 +2895,8 @@
             "12",
             "22",
             "29"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2685,7 +2908,8 @@
             "15",
             "8",
             "17"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2697,7 +2921,8 @@
             "0.5",
             "-1",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2709,7 +2934,8 @@
             "18",
             "26",
             "28"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2721,7 +2947,8 @@
             "-1",
             "10",
             "0"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2733,7 +2960,8 @@
             "12,14",
             "14,16",
             "18,20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2745,7 +2973,8 @@
             "5",
             "7",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2757,7 +2986,8 @@
             "6",
             "9",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2769,7 +2999,8 @@
             "12",
             "35",
             "7"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2781,7 +3012,8 @@
             "1,2",
             "2,1",
             "2,2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2793,7 +3025,8 @@
             "36",
             "49",
             "64"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2805,7 +3038,8 @@
             "\\(\\frac{c}{3}\\)",
             "\\(\\frac{2c}{3}\\)",
             "\\(\\frac{c}{3}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2817,7 +3051,8 @@
             "-9",
             "-10",
             "-11"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2829,7 +3064,8 @@
             "\\(\\frac{1}{2}\\)",
             "\\(-\\frac{1}{2}\\)",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2841,7 +3077,8 @@
             "<0",
             "0",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2853,7 +3090,8 @@
             "14",
             "15",
             "24"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2865,7 +3103,8 @@
             "Rs. 600/-",
             "Rs. 800/-",
             "Rs. 1000/-"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2877,7 +3116,8 @@
             "RUT",
             "RUN",
             "YET"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2889,7 +3129,8 @@
             "8",
             "7",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2901,7 +3142,8 @@
             "18",
             "32",
             "28"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2913,7 +3155,8 @@
             "30",
             "40",
             "25"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2925,7 +3168,8 @@
             "10,20",
             "12,18",
             "18,12"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2937,7 +3181,8 @@
             "17",
             "18",
             "19"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2949,7 +3194,8 @@
             "\\(\\frac{1}{2}\\)",
             "0",
             "\\(\\frac{\\sqrt{3}}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2961,7 +3207,8 @@
             "22",
             "19",
             "23"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2973,7 +3220,8 @@
             "\\(n + 2\\)",
             "\\(2n + 1\\)",
             "\\(2n\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2985,7 +3233,8 @@
             "25",
             "17",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -2997,7 +3246,8 @@
             "\\(\\frac{n(n+1)(2n+1)}{2}\\)",
             "\\(\\frac{(n+1)^{2}}{2}\\)",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3009,7 +3259,8 @@
             "real & unequal",
             "imaginary & unequal",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3021,7 +3272,8 @@
             "36",
             "60",
             "72"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3033,7 +3285,8 @@
             "17",
             "19",
             "18"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3045,7 +3298,8 @@
             "\\(6^{3}\\)",
             "\\(\\frac{6}{5}\\)",
             "\\(6^{4}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3057,7 +3311,8 @@
             "8",
             "12",
             "16"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3069,7 +3324,8 @@
             "\\(-\\frac{b}{a}\\)",
             "\\(ab\\)",
             "\\(-\\frac{1}{ab}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3081,7 +3337,8 @@
             "40%",
             "30%",
             "25%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3093,7 +3350,8 @@
             "12",
             "13",
             "14"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3105,7 +3363,8 @@
             "115",
             "110",
             "130"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3117,7 +3376,8 @@
             "21",
             "27",
             "18"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3129,7 +3389,8 @@
             "30%",
             "12%",
             "20%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3141,7 +3402,8 @@
             "Rs. 5/-",
             "Rs. 6/-",
             "Rs. 7/-"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3153,7 +3415,8 @@
             "30yrs",
             "40yrs",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3165,7 +3428,8 @@
             "5",
             "6",
             "7"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3177,7 +3441,8 @@
             "3",
             "5",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3189,7 +3454,8 @@
             "an irrational number",
             "an imaginary number",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3201,7 +3467,8 @@
             "430",
             "615",
             "560"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3213,7 +3480,8 @@
             "5200",
             "5300",
             "5400"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3225,7 +3493,8 @@
             "\\(6m\\)",
             "\\(2m\\)",
             "\\(3m\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3237,7 +3506,8 @@
             "35",
             "31",
             "32"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3249,7 +3519,8 @@
             "5 min",
             "3 min",
             "6 min"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3261,7 +3532,8 @@
             "more than 0",
             "not defined",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3273,7 +3545,8 @@
             "equally like events",
             "exhaustive events",
             "dependent events"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3285,7 +3558,8 @@
             "\\(0 \\in\\left\\{0  \\right\\}\\)",
             "\\(0 \\in\\left\\{1  \\right\\}\\)",
             "\\(0 \\subset\\left\\{ 0 \\right\\}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3297,7 +3571,8 @@
             "only one factor",
             "only two factors",
             "more than two factors"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3309,7 +3584,8 @@
             "\\(11 + 2h\\)",
             "\\(2h - 11\\)",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3321,7 +3597,8 @@
             "21,17,13",
             "19,17,13",
             "19,15,13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3333,7 +3610,8 @@
             "\\(\\frac{2}{\\sqrt{3}}\\)",
             "\\(\\sqrt{3}\\)",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3345,7 +3623,8 @@
             "\\(n\\times m\\}",
             "\\(m\\times m\\)",
             "\\(n\\times n\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3357,7 +3636,8 @@
             "\\(5m\\)",
             "\\(4.7m\\)",
             "\\(4.4m\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3369,7 +3649,8 @@
             "84",
             "102",
             "112"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3381,7 +3662,8 @@
             "50%",
             "80%",
             "70%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3393,7 +3675,8 @@
             "Rs. \\(166\\frac{2}{3}\\)",
             "Rs. 225",
             "Rs. 312.5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3405,7 +3688,8 @@
             "\\(2x - 3y + 7 = 0\\)",
             "\\(3x + 2y = 8\\)",
             "\\(3x - 2y + 7 = 0\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3417,7 +3701,8 @@
             "2070",
             "4100",
             "4150"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3429,7 +3714,8 @@
             "25%",
             "25.5%",
             "15%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3441,7 +3727,8 @@
             "165",
             "175",
             "200"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3453,7 +3740,8 @@
             "11 units",
             "12 units",
             "56 units"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3465,7 +3753,8 @@
             "\\(2.25m^{3}\\)",
             "\\(3.25m^{3}\\)",
             "\\(3.52m^{3}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3477,7 +3766,8 @@
             "6",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3489,7 +3779,8 @@
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(\\sqrt{3}\\)",
             "\\(\\frac{1}{\\sqrt{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3501,7 +3792,8 @@
             "13%",
             "12.5%",
             "12%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3513,7 +3805,8 @@
             "23",
             "25",
             "27"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3525,7 +3818,8 @@
             "\\(\\pm4\\)",
             "\\(\\pm5\\)",
             "\\(\\pm6\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3537,7 +3831,8 @@
             "12",
             "13",
             "14.4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3549,7 +3844,8 @@
             "2,1",
             "3,2",
             "3,1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3561,7 +3857,8 @@
             "\\(\\left[ 4,6 \\right] \\)",
             "\\(\\left[ 2,3 \\right] \\)",
             "\\(\\left[ 2,3 \\right ]\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3573,7 +3870,8 @@
             "onto",
             "into",
             "objective"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3585,7 +3883,8 @@
             "irrational number",
             "an imaginary number",
             "all of above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3597,7 +3896,8 @@
             "\\(c\\)",
             "\\(2c\\)",
             "\\(3c\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3609,7 +3909,8 @@
             "250,250,250",
             "350,250,150",
             "400,500,600"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3621,7 +3922,8 @@
             "125%",
             "120%",
             "130%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3633,7 +3935,8 @@
             "1",
             "2",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3645,7 +3948,8 @@
             "9,7",
             "29,17",
             "19,13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3657,7 +3961,8 @@
             "\\(\\pm2\\)",
             "\\(-2\\)",
             "\\(-4\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3669,7 +3974,8 @@
             "an isosceles triangle",
             "an equilateral triangle",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3681,7 +3987,8 @@
             "-8",
             "-7",
             "-6"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3693,7 +4000,8 @@
             "\\(36\\frac{13}{50}\\)",
             "\\(36\\frac{1}{9}\\)",
             "\\(37\\frac{5}{9}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3705,7 +4013,8 @@
             "85",
             "80",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3717,7 +4026,8 @@
             "10",
             "12",
             "13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3729,7 +4039,8 @@
             "10%",
             "11.11%",
             "13%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3741,7 +4052,8 @@
             "12.96",
             "14.4",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3753,7 +4065,8 @@
             "9049",
             "9050",
             "9051"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3765,7 +4078,8 @@
             "Rs. 210",
             "Rs. 240",
             "Rs. 300"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3777,7 +4091,8 @@
             "\\(\\frac{1}{3}A\\)",
             "\\(\\frac{1}{19}A\\)",
             "\\(\\frac{1}{11}A\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3789,7 +4104,8 @@
             "\\(a - 6\\)",
             "\\((a + 6)^{2}\\)",
             "\\(b + a + 1\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3801,7 +4117,8 @@
             "25",
             "16",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3813,7 +4130,8 @@
             "900",
             "1000",
             "1100"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3825,7 +4143,8 @@
             "\\(2:5:7\\)",
             "\\(10:15:21\\)",
             "\\(2:15:7\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3837,7 +4156,8 @@
             "4",
             "3",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3849,7 +4169,8 @@
             "equally likely events",
             "exhaustive events",
             "dependent events"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3861,7 +4182,8 @@
             "\\(\\left\\{-1, \\sqrt{3} \\right\\}\\)",
             "\\(\\left\\{ \\right\\}\\)",
             "\\((-1,0)\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3873,7 +4195,8 @@
             "a whole number",
             "an integer number",
             "a real number"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3885,7 +4208,8 @@
             "\\(f(\\frac{1}{a})\\)",
             "\\(f(a^{2})\\)",
             "\\(f(\\frac{-a}{a+1})\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3897,7 +4221,8 @@
             "1600",
             "300",
             "1750"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3909,7 +4234,8 @@
             "\\(\\frac{2}{\\sqrt{3}}\\)",
             "\\(\\sqrt{3}\\)",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3921,7 +4247,8 @@
             "\\(A_{32},\\space B_{23},\\space C_{32}\\)",
             "\\(A_{32},\\space B_{23},\\space C_{33}\\)",
             "\\(A_{33},\\space B_{23},\\space C_{33}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3933,7 +4260,8 @@
             "\\(36m^{2}\\)",
             "\\(46m^{2}\\)",
             "\\(26m^{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3945,7 +4273,8 @@
             "84",
             "102",
             "150"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3957,7 +4286,8 @@
             "2",
             "0",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3969,7 +4299,8 @@
             "25%",
             "0.25%",
             "2.5%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3981,7 +4312,8 @@
             "20%",
             "25%",
             "26%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -3993,7 +4325,8 @@
             "35%",
             "24%",
             "30%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4005,7 +4338,8 @@
             "\\(2x-y=4\\)",
             "\\(x+2y=8\\)",
             "\\(x-2y=4\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4017,7 +4351,8 @@
             "1635",
             "1640",
             "1652"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4029,7 +4364,8 @@
             "25%",
             "20%",
             "16%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4041,7 +4377,8 @@
             "40.5%",
             "45%",
             "49%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4053,7 +4390,8 @@
             "5000",
             "400",
             "200"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4065,7 +4403,8 @@
             "2816",
             "2185",
             "2185"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4077,7 +4416,8 @@
             "50%",
             "60%",
             "70%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4089,7 +4429,8 @@
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(2\\)",
             "\\(\\frac{1}{\\sqrt{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4101,7 +4442,8 @@
             "10%",
             "4%",
             "8%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4113,7 +4455,8 @@
             "6",
             "7",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4125,7 +4468,8 @@
             "\\(\\pm6\\)",
             "\\(\\pm7\\)",
             "\\(\\pm9\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4137,7 +4481,8 @@
             "12",
             "13",
             "14"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4149,7 +4494,8 @@
             "-4",
             "4",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4161,7 +4507,8 @@
             "\\(-6 \\lt x \\lt 1\\)",
             "\\(-7\\le x\\le 5\\)",
             "\\(-6 \\le x \\le 1\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4173,7 +4520,8 @@
             "3",
             "4",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4185,7 +4533,8 @@
             "always a rational number",
             "always a real number",
             "All of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4197,7 +4546,8 @@
             "4",
             "6",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4209,7 +4559,8 @@
             "2",
             "7",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4221,7 +4572,8 @@
             "18",
             "36",
             "72"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4233,7 +4585,8 @@
             "no solution",
             "infinitely many solutions",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4245,7 +4598,8 @@
             "9,7",
             "29,17",
             "19,13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4257,7 +4611,8 @@
             "1",
             "both",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4269,7 +4624,8 @@
             "an isosceles triangle",
             "an equilateral triangle",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4281,7 +4637,8 @@
             "\\(1 \\lt x \\lt 3\\)",
             "\\(0 \\lt x \\lt 2\\)",
             "\\(4 \\lt x \\lt 3\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4293,7 +4650,8 @@
             "10",
             "6",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4305,7 +4663,8 @@
             "40",
             "45",
             "50"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4317,7 +4676,8 @@
             "500",
             "450",
             "1000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4329,7 +4689,8 @@
             "55.63",
             "55",
             "56.32"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4341,7 +4702,8 @@
             "10%",
             "25%",
             "50%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4353,7 +4715,8 @@
             "20%",
             "50%",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4365,7 +4728,8 @@
             "20%",
             "25%",
             "40%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4377,7 +4741,8 @@
             "2",
             "0",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4389,7 +4754,8 @@
             "\\(\\frac{1}{2}\\)",
             "\\(\\frac{-1}{3}\\",
             "\\(\\frac{-1}{4}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4401,7 +4767,8 @@
             "1000",
             "500",
             "625"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4413,7 +4780,8 @@
             "11.5%",
             "12.5%",
             "13.5%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4425,7 +4793,8 @@
             "2538",
             "2835",
             "2583"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4437,7 +4806,8 @@
             "4",
             "6",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4449,7 +4819,8 @@
             "1",
             "2",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4461,7 +4832,8 @@
             "32",
             "8",
             "24"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4473,7 +4845,8 @@
             "irrational number",
             "imaginary number",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4485,7 +4858,8 @@
             "5",
             "10",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4497,7 +4871,8 @@
             "12",
             "14",
             "16"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4509,7 +4884,8 @@
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(\\sqrt{3}\\)",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4521,7 +4897,8 @@
             "\\((AB)^{'}=A^{'} B^{'}\\)",
             "\\(A^{'}B^{'}=B^{'}A^{'}\\)",
             "\\((A+B)^{'}=A^{'}-B^{'}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4533,7 +4910,8 @@
             "\\(4m\\)",
             "\\(3m^{2}\\)",
             "\\(6m\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4545,7 +4923,8 @@
             "\\(4^{16}\\)",
             "\\(2^{16}\\)",
             "\\(2^{48}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4557,7 +4936,8 @@
             "\\(AB=BA\\)",
             "\\((AB)^{1}=A^{1}B^{1}\\)",
             "\\((AB)^{-1}=B^{-1}A^{-1}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4569,7 +4949,8 @@
             "0.6x%",
             "0.06%",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4581,7 +4962,8 @@
             "10",
             "24",
             "20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4593,7 +4975,8 @@
             "25%",
             "35%",
             "40%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4605,7 +4988,8 @@
             "70 yrs",
             "50 yrs",
             "30 yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4617,7 +5001,8 @@
             "40%",
             "50%",
             "22%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4629,7 +5014,8 @@
             "3.225%",
             "3.45%",
             "3.49%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4641,7 +5027,8 @@
             "10m",
             "12m",
             "16m"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4653,7 +5040,8 @@
             "\\(\\frac{\\sqrt{3}}{4a}\\)",
             "\\(\\sqrt{s(s-a)(s-b)(s-c)}\\)",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4665,7 +5053,8 @@
             "5.88%",
             "6.88%",
             "5.63%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4677,7 +5066,8 @@
             "Rs. 490",
             "Rs. 500",
             "Rs. 525"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4689,7 +5079,8 @@
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(\\frac{1}{\\sqrt{2}}\\)",
             "\\(\\frac{1}{\\sqrt{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4701,7 +5092,8 @@
             "10.5yrs",
             "12yrs",
             "10yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4713,7 +5105,8 @@
             "36 yrs",
             "49 yrs",
             "30 yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4725,7 +5118,8 @@
             "72",
             "97",
             "24"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4737,7 +5131,8 @@
             "12000",
             "13000",
             "14000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4749,7 +5144,8 @@
             "7",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4761,7 +5157,8 @@
             "4",
             "3",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4773,7 +5170,8 @@
             "8",
             "32",
             "64"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4785,7 +5183,8 @@
             "\\((A+B)^{T}=A^{T}B^{T}\\)",
             "\\((AB)^{T}=A^{T}B^{T}\\)",
             "\\((kA)^{T}=kA^{T}, \\space where \\space k \\space is \\space a \\space scalar\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4797,7 +5196,8 @@
             "no solution",
             "infinitely many solutions",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4809,7 +5209,8 @@
             "1:3",
             "3:1",
             "5:6"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4821,7 +5222,8 @@
             "3:1",
             "5:3",
             "5:2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4833,7 +5235,8 @@
             "6",
             "7",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4845,7 +5248,8 @@
             "\\(8cm^{2}\\)",
             "\\(24cm^{2}\\)",
             "\\(18cm^{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4857,7 +5261,8 @@
             "27",
             "38",
             "42"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4869,7 +5274,8 @@
             "\\(y=4\\)",
             "\\(y=4x\\)",
             "\\(y=4x+4\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4881,7 +5287,8 @@
             "4",
             "3",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4893,7 +5300,8 @@
             "\\(b(a^{2}+c^{2})=a(a^{2}+b^{2})\\)",
             "\\(b=\\frac{(a+b)}{2}\\)",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4905,7 +5313,8 @@
             "17,22,23",
             "11,19,21",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4917,7 +5326,8 @@
             "Rs. 216",
             "Rs. 154",
             "Rs. 162"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4929,7 +5339,8 @@
             "Rs. 1666.67",
             "Rs. 1676.70",
             "Rs. 1677.70"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4941,7 +5352,8 @@
             "556",
             "506",
             "600"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4953,7 +5365,8 @@
             "25%",
             "12%",
             "30%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4965,7 +5378,8 @@
             "Rs. 100",
             "Rs. 250",
             "Rs. 200"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4977,7 +5391,8 @@
             "\\(\\begin{pmatrix}-1& 0 \\\\0& 1\\end{pmatrix}\\)",
             "\\(\\begin{pmatrix}1& 0 \\\\0& -1\\end{pmatrix}\\)",
             "\\(\\begin{pmatrix}2& -3 \\\\4& -4\\end{pmatrix}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -4989,7 +5404,8 @@
             "1",
             "2",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5001,7 +5417,8 @@
             "Rs. 194",
             "Rs. 230",
             "Rs. 224"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5013,7 +5430,8 @@
             "Rs. 27500",
             "Rs. 29000",
             "Rs. 38000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5025,7 +5443,8 @@
             "25%",
             "28%",
             "80%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5037,7 +5456,8 @@
             "2",
             "3",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5049,7 +5469,8 @@
             "5",
             "3",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5061,7 +5482,8 @@
             "\\(n^{2} + 1\\)",
             "\\(n(n+2)\\)",
             "\\(n(n+4)\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5073,7 +5495,8 @@
             "25",
             "26",
             "28"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5085,7 +5508,8 @@
             "64 paisa",
             "256 paisa",
             "128 paisa"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5097,7 +5521,8 @@
             "3",
             "4",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5109,7 +5534,8 @@
             "14,16",
             "16,18",
             "22,24"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5121,7 +5547,8 @@
             "15 yrs",
             "18 yrs",
             "21 yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5133,7 +5560,8 @@
             "6",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5145,7 +5573,8 @@
             "rational & unequal",
             "real & equal",
             "real & unequal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5157,7 +5586,8 @@
             "3",
             "4",
             "15"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5169,7 +5599,8 @@
             "7",
             "8",
             "13"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5181,7 +5612,8 @@
             "6",
             "7",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5193,7 +5625,8 @@
             "\\(\\frac{1}{5}\\)",
             "\\(5^{4}\\)",
             "\\(\\frac{5}{4}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5205,7 +5638,8 @@
             "\\(a\\)",
             "\\(b\\)",
             "\\(1\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5217,7 +5651,8 @@
             "\\(\\frac{(p+q)}{3}\\)",
             "\\(\\frac{2r}{3}\\)",
             "\\(\\frac{r}{3}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5229,7 +5664,8 @@
             "supplementary",
             "adjacent",
             "equal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5241,7 +5677,8 @@
             "36",
             "18",
             "40"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5253,7 +5690,8 @@
             "15%",
             "20%",
             "25%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5265,7 +5703,8 @@
             "18",
             "24",
             "20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5277,7 +5716,8 @@
             "200",
             "300",
             "400"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5289,7 +5729,8 @@
             "12 kg",
             "13 kg",
             "14 kg"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5301,7 +5742,8 @@
             "72",
             "48",
             "64"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5313,7 +5755,8 @@
             "63,54",
             "54,63",
             "48,56"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5325,7 +5768,8 @@
             "21",
             "24",
             "35"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5337,7 +5781,8 @@
             "15%",
             "10%",
             "25%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5349,7 +5794,8 @@
             "Rs. 220",
             "Rs. 260",
             "Rs. 250"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5361,7 +5807,8 @@
             "15%",
             "20%",
             "25%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5373,7 +5820,8 @@
             "50 yrs",
             "40 yrs",
             "30 yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5385,7 +5833,8 @@
             "4%",
             "6%",
             "8%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5397,7 +5846,8 @@
             "5",
             "6",
             "7"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5409,7 +5859,8 @@
             "55",
             "30",
             "45"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5421,7 +5872,8 @@
             "only one factor",
             "only two factors",
             "more than two factors"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5433,7 +5885,8 @@
             "\\(\\left [\\infty, 14 \\right ]\\)",
             "\\(\\left [6, 13 \\right]\\)",
             "\\(\\left [5, 15 \\right ]\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5445,7 +5898,8 @@
             "7",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5457,7 +5911,8 @@
             "25",
             "10",
             "60"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5469,7 +5924,8 @@
             "2400 sec",
             "3600 sec",
             "4800 sec"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5481,7 +5937,8 @@
             "100 m",
             "250 m",
             "200 m"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5493,7 +5950,8 @@
             "\\(56 m^{2}\\)",
             "\\(25 m^{2}\\)",
             "\\(36 m^{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5505,7 +5963,8 @@
             "\\(\\frac{1}{2}\\)",
             "0",
             "\\(\\infty\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5517,7 +5976,8 @@
             "\\(\\frac{1}{7}\\)",
             "1",
             "\\(\\frac{1}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5529,7 +5989,8 @@
             "432",
             "147",
             "132"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5541,7 +6002,8 @@
             "27",
             "20",
             "29"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5553,7 +6015,8 @@
             "22",
             "23",
             "20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5565,7 +6028,8 @@
             "\\(\\frac{1}{\\sqrt{2}}\\)",
             "0",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5577,7 +6041,8 @@
             "-6",
             "3",
             "-2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5589,7 +6054,8 @@
             "\\(\\frac{1}{2}\\)",
             "0",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5601,7 +6067,8 @@
             "\\(\\frac{5}{6}\\)",
             "\\(\\frac{3}{4}\\)",
             "\\(\\frac{15}{36}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5613,7 +6080,8 @@
             "\\((A-B) \\cap (A-C)\\)",
             "\\((A \\cap B) - (A \\cap C)\\)",
             "\\((A \\cup B) - (A \\cup C)\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5625,7 +6093,8 @@
             "45",
             "52",
             "58"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5637,7 +6106,8 @@
             "\\(\\left | x - 1 \\right | \\lt 6\\)",
             "\\(\\left | x - 1 \\right | \\lt 2\\)",
             "\\(\\left | x - 1 \\right | \\lt -1\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5649,7 +6119,8 @@
             "\\(\\left\\{ 1,2,3,4 \\right\\}\\)",
             "\\(\\left\\{ 1,2,3,5 \\right\\}\\)",
             "\\(\\left\\{ 1,3,4,5 \\right\\}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5661,7 +6132,8 @@
             "-1",
             "0",
             "\\(\\infty\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5673,7 +6145,8 @@
             "\\(\\frac{n(n+1)(2n+1)}{6}\\)",
             "\\(\\left [\\frac{(n+1)}{2} \\right]^{2}\\)",
             "None of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5685,7 +6158,8 @@
             "Skew-Symmetric Matrix",
             "Diagonal Matrix",
             "Triangular Matrix"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5697,7 +6171,8 @@
             "3",
             "5",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5709,7 +6184,8 @@
             "\\(4 \\sqrt{3}\\)",
             "0",
             "60"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5721,7 +6197,8 @@
             "-1",
             "2",
             "0"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5733,7 +6210,8 @@
             "100",
             "50",
             "90"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5745,7 +6223,8 @@
             "0.02",
             "0.005",
             "0.05"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5757,7 +6236,8 @@
             "13%",
             "14%",
             "15%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5769,7 +6249,8 @@
             "42%",
             "44%",
             "46%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5781,7 +6262,8 @@
             "6cm",
             "4.8cm",
             "7cm"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5793,7 +6275,8 @@
             "3",
             "4",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5805,7 +6288,8 @@
             "Rs. 1,000",
             "Rs. 960",
             "Rs. 900"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5817,7 +6301,8 @@
             "20%",
             "4%",
             "12.5%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5829,7 +6314,8 @@
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(\\frac{1}{\\sqrt{3}}\\)",
             "\\(\\frac{-1}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5841,7 +6327,8 @@
             "100",
             "50",
             "165"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5853,7 +6340,8 @@
             "\\(\\frac{1}{2} \\times b \\times h\\)",
             "\\(\\sqrt{(s-a)(s-b)(s-c)}\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5865,7 +6353,8 @@
             "Rs. 440",
             "Rs. 360",
             "Rs. 1,000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5877,7 +6366,8 @@
             "20%",
             "5%",
             "38%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5889,7 +6379,8 @@
             "17.39%",
             "35%",
             "10%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5901,7 +6392,8 @@
             "20 years",
             "12 years",
             "15 years"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5913,7 +6405,8 @@
             "4",
             "6",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5925,7 +6418,8 @@
             "7",
             "10",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5937,7 +6431,8 @@
             "more than one solution",
             "no solution",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5949,7 +6444,8 @@
             "right open interval",
             "closed interval",
             "open interval"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5961,7 +6457,8 @@
             "\\(2x+2\\)",
             "\\(2x+1\\)",
             "\\(6x^{2}-7\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5973,7 +6470,8 @@
             "0",
             "-1",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5985,7 +6483,8 @@
             "inconsistent and independent",
             "inconsistent and dependent",
             "consistent and independent"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -5997,7 +6496,8 @@
             "2:8",
             "2:3",
             "10:3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6009,7 +6509,8 @@
             "extreme",
             "consequent",
             "mean"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6021,7 +6522,8 @@
             "rational",
             "irrational",
             "imaginary"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6033,7 +6535,8 @@
             "heptagon",
             "quadrilateral",
             "hexagon"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6045,7 +6548,8 @@
             "second degree equation",
             "first degree equation",
             "zero degree equation"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6057,7 +6561,8 @@
             "transversal lines",
             "vertex",
             "parallel line"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6069,7 +6574,8 @@
             "\\(\\frac{-35}{16}\\)",
             "-9",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6081,7 +6587,8 @@
             "in A.P",
             "real numbers",
             "in H.P."
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6093,7 +6600,8 @@
             "48%",
             "49%",
             "50%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6105,7 +6613,8 @@
             "8%",
             "6%",
             "10%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6117,7 +6626,8 @@
             "\\(G.M = \\frac{2ab}{a+b}\\)",
             "\\(H.M = \\frac{a+b}{2}\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6129,7 +6639,8 @@
             "Rs. 900",
             "Rs. 1,000",
             "Rs. 1,050"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6141,7 +6652,8 @@
             "15%",
             "10%",
             "5%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6153,7 +6665,8 @@
             "singular matrix",
             "symmetric",
             "all of them are true"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6165,7 +6678,8 @@
             "4",
             "6",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6177,7 +6691,8 @@
             "5",
             "10",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6189,7 +6704,8 @@
             "12",
             "14",
             "16"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6201,7 +6717,8 @@
             "\\((AB)^{'}=A^{'}B^{'}\\)",
             "\\(A^{'}B^{'}=B^{'}A^{'}\\)",
             "\\((A+B)^{'}=A^{'}-B^{'}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6213,7 +6730,8 @@
             "\\(0.6x\\%\\)",
             "\\(0.06%\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6225,7 +6743,8 @@
             "10",
             "24",
             "20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6237,7 +6756,8 @@
             "25%",
             "35%",
             "40%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6249,7 +6769,8 @@
             "70yrs",
             "50yrs",
             "30yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6261,7 +6782,8 @@
             "3.225%",
             "3.45%",
             "3.49%"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6273,7 +6795,8 @@
             "\\(10m\\)",
             "\\(12m\\)",
             "\\(16m\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6285,7 +6808,8 @@
             "\\(\\frac{\\sqrt{3}}{4a}\\)",
             "\\(\\sqrt{s(s-a)(s-b)(s-c)}\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6297,7 +6821,8 @@
             "36yrs",
             "49yrs",
             "30yrs"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6309,7 +6834,8 @@
             "12000",
             "13000",
             "14000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6321,7 +6847,8 @@
             "7",
             "8",
             "9"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6333,7 +6860,8 @@
             "0",
             "3",
             "2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6345,7 +6873,8 @@
             "8",
             "32",
             "64"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6357,7 +6886,8 @@
             "no solution",
             "infinitely many solutions",
             "none of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6369,7 +6899,8 @@
             "(\\3:1\\)",
             "\\(5:3\\)",
             "\\(5:2\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6381,7 +6912,8 @@
             "\\(y=4\\)",
             "\\(y=4x\\)",
             "\\(y=4x+4\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6393,7 +6925,8 @@
             "17",
             "18",
             "19"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6405,7 +6938,8 @@
             "\\begin{pmatrix}-1& 0\\\\0& 1\\end{pmatrix}",
             "\\begin{pmatrix}1& 0\\\\0& -1\\end{pmatrix}",
             "\\begin{pmatrix}2& -3\\\\4& -4\\end{pmatrix}"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Math",
@@ -6417,7 +6951,8 @@
             "1",
             "2",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 50
     },
     {
         "subject": "Verbal Ability",
@@ -6429,7 +6964,8 @@
             "Small",
             "Little",
             "Short"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6441,7 +6977,8 @@
             "Removed",
             "Reserved",
             "Seperared"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6453,7 +6990,8 @@
             "Imitation",
             "Trustworthy",
             "Loyal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6465,7 +7003,8 @@
             "Observant",
             "Intelligent",
             "Watchful"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6477,7 +7016,8 @@
             "Natural",
             "Truthful",
             "Solid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6489,7 +7029,8 @@
             "Convert",
             "Congest",
             "Conclude"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6501,7 +7042,8 @@
             "Engrossed",
             "Relaxed",
             "Engaged"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6513,7 +7055,8 @@
             "Stale",
             "Sluggish",
             "Disgraceful"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6525,7 +7068,8 @@
             "over",
             "at",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6537,7 +7081,8 @@
             "with",
             "in",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6549,7 +7094,8 @@
             "for",
             "in",
             "of"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6561,7 +7107,8 @@
             "in",
             "to",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6573,7 +7120,8 @@
             "Time table",
             "Plan",
             "Schedule"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6585,7 +7133,8 @@
             "Evacuate",
             "Avoid",
             "Exterminate"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6597,7 +7146,8 @@
             "Nubile",
             "Exceptional",
             "Versatile"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -6609,7 +7159,8 @@
             "Godly",
             "Eternal",
             "Repetitive"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6621,7 +7172,8 @@
             "New Delhi",
             "Nairobi",
             "Paris"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6633,7 +7185,8 @@
             "Strong storm",
             "Hurricane",
             "Strong gale"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6645,7 +7198,8 @@
             "Nile",
             "Ganga",
             "Amazon"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6657,7 +7211,8 @@
             "Peter Paul",
             "Wirght Brothers",
             "James Watt"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6669,7 +7224,8 @@
             "Korean Air",
             "Bangladesh Biman",
             "Qatar Airways"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6681,7 +7237,8 @@
             "Home page",
             "Search page",
             "Browser page"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6693,7 +7250,8 @@
             "Cooking",
             "Rafting",
             "Painting"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6705,7 +7263,8 @@
             "Prompt",
             "Clipboard",
             "CPU"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6717,7 +7276,8 @@
             "Outgoing Email",
             "CDROM",
             "Websites"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6729,7 +7289,8 @@
             "Stock exchange",
             "Bull fights",
             "Racing"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6741,7 +7302,8 @@
             "Blades",
             "Instant noodles",
             "Tractors"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6753,7 +7315,8 @@
             "Mahakali",
             "Gandaki",
             "Koshi"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6765,7 +7328,8 @@
             "Alexei Leonov",
             "Yuri Gagarin",
             "Neil Armstrong"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6777,7 +7341,8 @@
             "Bagmati",
             "Kali Gandaki",
             "Koshi"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6789,7 +7354,8 @@
             "Plants",
             "Humidity",
             "Planets"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6801,7 +7367,8 @@
             "Canada",
             "Yaman",
             "Sweden"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6813,7 +7380,8 @@
             "An insect",
             "A term used in politics",
             "A fish made of silver"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6825,7 +7393,8 @@
             "Hetauda",
             "Nijgarh",
             "Bardibas"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6837,7 +7406,8 @@
             "Jajarkot",
             "Dang",
             "Pyuthan"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6849,7 +7419,8 @@
             "Manu",
             "Surdas",
             "Tulsidas"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6861,7 +7432,8 @@
             "New Delhi",
             "Nairobi",
             "Paris"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6873,7 +7445,8 @@
             "Nile",
             "Ganga",
             "Amazon"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6885,7 +7458,8 @@
             "Korean Air",
             "Bangladesh Biman",
             "Qatar Airways"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6897,7 +7471,8 @@
             "Peter Paul",
             "Wright brothers",
             "James Watt"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6909,7 +7484,8 @@
             "Home page",
             "Search page",
             "Browser page"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6921,7 +7497,8 @@
             "Outgoing Email",
             "CD-ROM",
             "Websites"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6933,7 +7510,8 @@
             "Blades",
             "Instant noodles",
             "Tractors"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6945,7 +7523,8 @@
             "Mahakali",
             "Gandaki",
             "Koshi"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6957,7 +7536,8 @@
             "Bagmati",
             "Kali Gandaki",
             "Koshi"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6969,7 +7549,8 @@
             "Plants",
             "Humidity",
             "Planets"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "General Awareness",
@@ -6981,7 +7562,8 @@
             "Hetauda",
             "Nijgrah",
             "Bardibas"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -6993,7 +7575,8 @@
             "Wimbeldon Tennis Office",
             "World Trade Organization",
             "Women Travel Organization"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7005,7 +7588,8 @@
             "Sugar",
             "Automobile",
             "Power"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7017,7 +7601,8 @@
             "Japan",
             "China",
             "India"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7029,7 +7614,8 @@
             "Hyper inflation",
             "Inflation",
             "Recession"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7041,7 +7627,8 @@
             "The building of a school",
             "Construction of a house",
             "Purchase of 100 shares of Standard Chartered Bank"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7053,7 +7640,8 @@
             "Nepal Rastra Bank",
             "Company Registra's Office",
             "Ministry of Finance"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7065,7 +7653,8 @@
             "Monopolistic competition",
             "Oligopolistic competition",
             "Perfect competition"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7077,7 +7666,8 @@
             "Demand drafts",
             "Credit cards",
             "Gift cheques"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7089,7 +7679,8 @@
             "Sales tax",
             "Custom duty",
             "Travel tax"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7101,7 +7692,8 @@
             "Less foreign trade and investment",
             "Global warming and their effects",
             "A more integrated and interdependent world"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7113,7 +7705,8 @@
             "Governor, NRB",
             "Prime Minister",
             "Secretary, Ministry of Finance"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7125,7 +7718,8 @@
             "Revenue and costs",
             "Cash inflow and outflows",
             "Potential and real performance"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7137,7 +7731,8 @@
             "Only onr producer",
             "Large profit margins",
             "Ineffiencies"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7149,7 +7744,8 @@
             "Sustainable Work of Transport",
             "Strength, Opportunity, Weakness and Threat",
             "Strength, Weakness, Opportunity and Threat"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7161,7 +7757,8 @@
             "Dividend cover",
             "Debt equity ratio",
             "Net profit margin"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7173,7 +7770,8 @@
             "Paid up capital",
             "Paid up capital - accumulated losses",
             "Paid up capital + free reserves - accumulated losses"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7185,7 +7783,8 @@
             "Gulmi",
             "Bhktapr",
             "Ilam"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7197,7 +7796,8 @@
             "China",
             "USA",
             "India"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7209,7 +7809,8 @@
             "Wembledon Tennis Office",
             "World Trade Organization",
             "Women Travel Organization"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7221,7 +7822,8 @@
             "Sugar",
             "Automobile",
             "Power"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7233,7 +7835,8 @@
             "Japan",
             "China",
             "India"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7245,7 +7848,8 @@
             "Nepal Rastra Bank",
             "Ministry of Finance",
             "Company Registrar's Office"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7257,7 +7861,8 @@
             "Governor, NRB",
             "Prime Minister",
             "Secretary, Ministry of Finance"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7269,7 +7874,8 @@
             "Revenue and costs",
             "Cash inflows and outflows",
             "Potential and real performance"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7281,7 +7887,8 @@
             "Only one producer",
             "Large profit margins",
             "Inefficiencies"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7293,7 +7900,8 @@
             "Sustainable Work of Transport",
             "Strength, Opportunity, Weakness and Threat",
             "Strength, Weakness, Opportunity and Threat"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7305,7 +7913,8 @@
             "Dividend cover",
             "Debt equity ratio",
             "Net profit margin"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7317,7 +7926,8 @@
             "High inflation rate",
             "High industrial production",
             "a & b"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7329,7 +7939,8 @@
             "Variance",
             "Standard Deviation",
             "Total returns"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Business and Economics",
@@ -7341,7 +7952,8 @@
             "Gulmi",
             "Bhaktapur",
             "Illam"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7353,7 +7965,8 @@
             "4",
             "5",
             "6"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7365,7 +7978,8 @@
             "7755",
             "7766",
             "7744"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7377,7 +7991,8 @@
             "One",
             "Two",
             "Three"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7389,7 +8004,8 @@
             "10",
             "15",
             "20"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7401,7 +8017,8 @@
             "Rs 44000",
             "Rs 42000",
             "Rs 40000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7413,7 +8030,8 @@
             "72",
             "75",
             "80"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7425,7 +8043,8 @@
             "10010",
             "10100",
             "11000"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7437,7 +8056,8 @@
             "88",
             "108",
             "120"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7449,7 +8069,8 @@
             "20",
             "25",
             "30"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7461,7 +8082,8 @@
             "0.50",
             "50",
             "500"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7473,7 +8095,8 @@
             "Rs 120",
             "Rs 300",
             "Rs 400"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7485,7 +8108,8 @@
             "4",
             "5",
             "6"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7497,7 +8121,8 @@
             "10",
             "9",
             "25"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7509,7 +8134,8 @@
             "90",
             "92",
             "100"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7521,7 +8147,8 @@
             "8",
             "6",
             "5"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7533,7 +8160,8 @@
             "Rs 21.80",
             "Rs 36",
             "Rs 18"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7545,7 +8173,8 @@
             "12",
             "18",
             "36"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7557,7 +8186,8 @@
             "45",
             "54",
             "75"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7569,7 +8199,8 @@
             "17",
             "14",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Quantitative Ability",
@@ -7581,7 +8212,8 @@
             "23",
             "25",
             "36"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7593,7 +8225,8 @@
             "CDO : Criminal",
             "Forest : Trees",
             "Gentlemen : Meeting"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7605,7 +8238,8 @@
             "Butter : Cow",
             "Attack : Fail",
             "Wine : Grapes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7617,7 +8251,8 @@
             "Butwal : Bhairahawa",
             "Birgunj : Parsa",
             "Bharatpur : Ratnanagar"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7629,7 +8264,8 @@
             "Dog : Tail",
             "Chalk : Blackboard",
             "Speak : Sing"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7641,7 +8277,8 @@
             "Patient : Medicine",
             "Medicine : Fee",
             "Patient : Client"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7653,7 +8290,8 @@
             "River : Stream",
             "Mouse : Hole",
             "Fry : Cook"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7665,7 +8303,8 @@
             "333",
             "556",
             "777"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7677,7 +8316,8 @@
             "Lecturer",
             "Headmaster",
             "Principal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7689,7 +8329,8 @@
             "Dhangadi",
             "Nepalgunj",
             "Nagarkot"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7701,7 +8342,8 @@
             "Quarter",
             "One-third",
             "Six"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7713,7 +8355,8 @@
             "New York",
             "Colombo",
             "Jakarta"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7725,7 +8368,8 @@
             "112",
             "135",
             "154"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7737,7 +8381,8 @@
             "Careful",
             "Skillful",
             "Hopeful"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7749,7 +8394,8 @@
             "NIGH",
             "HIGH",
             "THAT"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7761,7 +8407,8 @@
             "TRST",
             "RSTR",
             "SRTS"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7773,7 +8420,8 @@
             "6767",
             "2428",
             "2824"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -7785,7 +8433,8 @@
             "FAITH",
             "TRUTH",
             "TREES"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "English",
@@ -7797,7 +8446,8 @@
             "read",
             "to read",
             "to reading"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7809,7 +8459,8 @@
             "to buy",
             "to buying",
             "for to buy"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7821,7 +8472,8 @@
             "on",
             "to",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7833,7 +8485,8 @@
             "anywhere",
             "nothing",
             "something"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7845,7 +8498,8 @@
             "are you doing",
             "will you do",
             "did you do"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7857,7 +8511,8 @@
             "come",
             "came",
             "are coming"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7869,7 +8524,8 @@
             "pieces",
             "bowls",
             "gasses"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7881,7 +8537,8 @@
             "yet",
             "still",
             "besides"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7893,7 +8550,8 @@
             "is the train leaving?",
             "leaves the train",
             "does the train leave?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7905,7 +8563,8 @@
             "am going to",
             "may",
             "must"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7917,7 +8576,8 @@
             "have you been learning",
             "do you learn",
             "you learn"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7929,7 +8589,8 @@
             "is opened",
             "has to be opened",
             "be opened"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7941,7 +8602,8 @@
             "consume",
             "humiliate",
             "destroy"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7953,7 +8615,8 @@
             "untruthfulness",
             "veracity",
             "potential"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7965,7 +8628,8 @@
             "ideology",
             "conservative",
             "chruch state"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7977,7 +8641,8 @@
             "recklessness",
             "merciful",
             "connive"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -7989,7 +8654,8 @@
             "segregate",
             "compose",
             "articulate"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8001,7 +8667,8 @@
             "restful",
             "cool",
             "serene"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8013,7 +8680,8 @@
             "concise",
             "diffuse",
             "voluble"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8025,7 +8693,8 @@
             "created",
             "create",
             "will create"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8037,7 +8706,8 @@
             "doing",
             "did",
             "have"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8049,7 +8719,8 @@
             "free",
             "like",
             "swimming"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8061,7 +8732,8 @@
             "in front",
             "house",
             "likes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8073,7 +8745,8 @@
             "readable",
             "reliable",
             "reality"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8085,7 +8758,8 @@
             "the more spoken",
             "much spoken",
             "most spoken"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8097,7 +8771,8 @@
             "A lot of/any",
             "Few/no",
             "Only a few/some"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8109,7 +8784,8 @@
             "All",
             "Many",
             "Neither of"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8121,7 +8797,8 @@
             "have to remove",
             "could have been remove",
             "must have removed"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8133,7 +8810,8 @@
             "was introduced/didn't accept",
             "is introduced/won't accept",
             "introduced/hadn't been accepted"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8145,7 +8823,8 @@
             "furthermore",
             "despite",
             "on purpose that"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8157,7 +8836,8 @@
             "so as to",
             "in addition to",
             "that's why"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8169,7 +8849,8 @@
             "are going to stop",
             "stop",
             "can stop"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8181,7 +8862,8 @@
             "Should I need",
             "I have needed",
             "I should need"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8193,7 +8875,8 @@
             "should have to run",
             "had better run",
             "might run"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8205,7 +8888,8 @@
             "don't have to drink",
             "mustn't drink",
             "not able to drink"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8217,7 +8901,8 @@
             "turn up",
             "wear out",
             "run over"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8229,7 +8914,8 @@
             "looked around",
             "passed away",
             "fell back on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8241,7 +8927,8 @@
             "read",
             "to read",
             "to reading"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8253,7 +8940,8 @@
             "clear away",
             "clear up",
             "clear off"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8265,7 +8953,8 @@
             "look through",
             "look over",
             "look into"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8277,7 +8966,8 @@
             "break off",
             "broken in",
             "break out"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8289,7 +8979,8 @@
             "fall back",
             "fall in",
             "fall off"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8301,7 +8992,8 @@
             "get round",
             "get off",
             "get on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8313,7 +9005,8 @@
             "photography",
             "orthography",
             "lithography"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8325,7 +9018,8 @@
             "hippophile",
             "dendrophile",
             "xenophobia"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8337,7 +9031,8 @@
             "hippophile",
             "dendrophile",
             "paedophile"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8349,7 +9044,8 @@
             "iconoclast",
             "misogynist",
             "misologist"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8361,7 +9057,8 @@
             "sentimental",
             "mournful",
             "venal"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8373,7 +9070,8 @@
             "transparent",
             "dim light",
             "vague"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8385,7 +9083,8 @@
             "alleviate",
             "transfer",
             "reconcile"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8397,7 +9096,8 @@
             "reckless",
             "unruly",
             "vagabond"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8409,7 +9109,8 @@
             "perfume, scent",
             "smell, stink",
             "stink, smell"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8421,7 +9122,8 @@
             "amateur",
             "egoist",
             "feminist"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8433,7 +9135,8 @@
             "fanatic",
             "agnostic",
             "apostate"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8445,7 +9148,8 @@
             "taciturn",
             "stubborn",
             "hednoist"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8457,7 +9161,8 @@
             "by",
             "for",
             "from"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8469,7 +9174,8 @@
             "for, by, on",
             "on, by, on",
             "on, on, on"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8481,7 +9187,8 @@
             "for, in",
             "ar, for",
             "for, with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8493,7 +9200,8 @@
             "but",
             "except",
             "beside"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8505,7 +9213,8 @@
             "beside",
             "behind",
             "opposite"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8517,7 +9226,8 @@
             "beside",
             "behind",
             "opposite"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8529,7 +9239,8 @@
             "does he?",
             "did he?",
             "didn't he?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8541,7 +9252,8 @@
             "she can't",
             "she won't",
             "she did"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8553,7 +9265,8 @@
             "haven't they",
             "didn't they?",
             "did they?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8565,7 +9278,8 @@
             "in spite of",
             "though",
             "nevertheless"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8577,7 +9291,8 @@
             "be good friends",
             "great enemies",
             "ready for competition"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8589,7 +9304,8 @@
             "maintain the level",
             "very weak",
             "not fit for the class"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8601,7 +9317,8 @@
             "whom",
             "which",
             "him"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8613,7 +9330,8 @@
             "appeal",
             "admire",
             "support"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8625,7 +9343,8 @@
             "foraign",
             "foreign",
             "forigin"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8637,7 +9356,8 @@
             "2nd syllable",
             "3rd syllable",
             "4th syllable"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8649,7 +9369,8 @@
             "the",
             "an",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8661,7 +9382,8 @@
             "the",
             "an",
             "none"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "English",
@@ -8673,7 +9395,8 @@
             "during",
             "for",
             "since"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8685,7 +9408,8 @@
             "an integer",
             "a whole number",
             "a real number"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8697,7 +9421,8 @@
             "\\(\\frac{4}{3}\\)",
             "\\(\\frac{3}{5}\\)",
             "\\(\\frac{2}{9}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8709,7 +9434,8 @@
             "\\(U\\)",
             "\\(A \\cup B\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8721,7 +9447,8 @@
             "\\((2,2),(4,4)\\)",
             "\\((4,2),(4,2)\\)",
             "All of them"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8733,7 +9460,8 @@
             "\\(\\left | r \\right | \\gt 1\\)",
             "\\(\\left |r \\right | = 1\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8745,7 +9473,8 @@
             "\\(x = y\\)",
             "\\(x+y=21\\)",
             "either (b) or (c)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8757,7 +9486,8 @@
             "\\((A+B)^{T}=A^{T}B^{T}\\)",
             "\\((AB)^{T}=A^{T}B^{T}\\)",
             "\\((AB)^{T}=B^{T}A^{T}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8769,7 +9499,8 @@
             "\\(\\begin{vmatrix}0& a_{2}& a_{3}\\\\b_{a}& 0& b_{3}\\\\c_{1}& c_{2}& 0\\end{vmatrix}=0\\)",
             "\\(\\begin{vmatrix}a_{1}& a_{2}& a_{3}\\\\0& 0& 0\\\\c_{1}& c_{2}& c_{3}\\end{vmatrix} = 0\\)",
             "\\(\\begin{vmatrix}a_{1}& b_{1}& c_{1}\\\\a_{2}& b_{2}& c_{2}\\\\a_{3}& b_{3}& c_{3}\\end{vmatrix} = \\begin{vmatrix}a_{1}+ka_{3}& b_{1}+kb_{3}& c_{1}+kc_{3}\\\\a_{2}& b_{2}& c_{2}\\\\a_{3}& b_{3}& c_{3}\\end{vmatrix}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8781,7 +9512,8 @@
             "\\(y-axis\\)",
             "the origin",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8793,7 +9525,8 @@
             "\\(60^{\\circ}\\)",
             "\\(90^{\\circ}\\)",
             "\\(120^{\\circ}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8805,7 +9538,8 @@
             "\\(log_{10} \\space ^{0.1}=-1\\)",
             "\\(log_{10} \\space ^{10}=1\\)",
             "All of them"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8817,7 +9551,8 @@
             "\\(R\\)",
             "\\((-2,1)\\)",
             "\\((-1,1)\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8829,7 +9564,8 @@
             "\\(\\frac{1}{10x-7}\\)",
             "\\(\\frac{x+7}{10}\\)",
             "\\(\\frac{x-7}{10}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8841,7 +9577,8 @@
             "2",
             "4",
             "3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8853,7 +9590,8 @@
             "1",
             "\\(\\frac{1}{2}\\)",
             "-1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8865,7 +9603,8 @@
             "6",
             "27",
             "0"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8877,7 +9616,8 @@
             "\\(\\frac{y-1}{1-x}\\)",
             "\\(\\frac{1-x}{y-1}\\)",
             "\\(\\frac{1+y}{1-x}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8889,7 +9629,8 @@
             "\\(\\frac{1}{t}\\)",
             "\\(t^{2}\\)",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8901,7 +9642,8 @@
             "\\(25x^{2}+5000x\\)",
             "50",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8913,7 +9655,8 @@
             "\\(\\frac{1}{\\sqrt{2}}\\)",
             "\\(\\frac{\\sqrt{3}}{2}\\)",
             "\\(\\frac{1}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8925,7 +9668,8 @@
             "increasing",
             "neither decreasing nor increasing",
             "doesn't exist"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8937,7 +9681,8 @@
             "1",
             "2",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8949,7 +9694,8 @@
             "\\(\\frac{8}{x}+6-3x\\)",
             "\\(8x+3x^{2}-x^{3}+150\\)",
             "\\(8x+3x^{2}-x^{3}-150\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8961,7 +9707,8 @@
             "\\(4 \\pi ^{2}\\)",
             "\\(16 \\pi ^{2}\\)",
             "\\(16 \\pi \\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8973,7 +9720,8 @@
             "median",
             "mode",
             "range"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8985,7 +9733,8 @@
             "\\(\\frac{1}{35}\\)",
             "\\(\\frac{23}{35}\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -8997,7 +9746,8 @@
             "finite solution",
             "no solution",
             "unique solution"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9009,7 +9759,8 @@
             "\\(\\frac{-\\pi}{x}\\)",
             "\\(\\frac{\\pi}{x} - x\\)",
             "None"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9021,7 +9772,8 @@
             "consistent & independent",
             "inconsistent & independent",
             "inconsistent & dependent"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9033,7 +9785,8 @@
             "1",
             "2",
             "not define"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9045,7 +9798,8 @@
             "\\(x^{2}+2=0\\)",
             "\\(x^{2}-2=0\\)",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9057,7 +9811,8 @@
             "degenerate circle",
             "an empty set",
             "a straight line"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9069,7 +9824,8 @@
             "1:3",
             "4:7",
             "7:4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9081,7 +9837,8 @@
             "\\(28 \\frac{4}{7}\\)",
             "50%",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9093,7 +9850,8 @@
             "Rs. 5330",
             "Rs. 6150",
             "Rs. 4920"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9105,7 +9863,8 @@
             "$172.96",
             "$196.72",
             "$172.62"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9117,7 +9876,8 @@
             "10.1%",
             "10.4%",
             "None of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -9129,7 +9889,8 @@
             "\\(\\frac{p}{i} (l+i) \\left\\{(l+i)^{n}-l \\right\\}\\)",
             "\\(\\frac{p}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}\\)",
             "\\(\\frac{p(l+i)}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9141,7 +9902,8 @@
             "Technical",
             "Acoustics",
             "Sound waves"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9153,7 +9915,8 @@
             "Fishes",
             "Boats",
             "Banks"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9165,7 +9928,8 @@
             "Ama Dablam",
             "Naga Parbat",
             "Kala Patthar"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9177,7 +9941,8 @@
             "Teacher",
             "Text Book",
             "Learning"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9189,7 +9954,8 @@
             "WXY",
             "UVW",
             "HGF"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9201,7 +9967,8 @@
             "=,+",
             "/,+",
             "+,+"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9213,7 +9980,8 @@
             "ARINY",
             "NAIRY",
             "RINAY"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9225,7 +9993,8 @@
             "C and A",
             "A and D",
             "A and B"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9237,7 +10006,8 @@
             "natural strength",
             "magnetic strength",
             "continous electrical pulse"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9249,7 +10019,8 @@
             "^,*",
             "?,*",
             "?,#"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9261,7 +10032,8 @@
             "Gigabyte",
             "Byte",
             "Terabyte"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9273,7 +10045,8 @@
             "RAM and ROM",
             "CPU and RAM",
             "ALl of these"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9285,7 +10058,8 @@
             "Nanosecond",
             "Terabyte",
             "Gigabyte"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9297,7 +10071,8 @@
             "8 bits",
             "16 bits",
             "32 bits"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9309,7 +10084,8 @@
             "volatile memory",
             "non volatile memory",
             "cache memory"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9321,7 +10097,8 @@
             "Computer Processed Unity",
             "Computer Pro Unit",
             "Cache Processing Unit"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9333,7 +10110,8 @@
             "Command and C",
             "Contorl and V",
             "Control and X"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9345,7 +10123,8 @@
             "Linux",
             "Unix",
             "LaTex"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9357,7 +10136,8 @@
             "Mazzini",
             "Napoleon",
             "Bismarck"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9369,7 +10149,8 @@
             "Euclid",
             "Pythagoras",
             "Hippocrates"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9381,7 +10162,8 @@
             "Fire Temple",
             "Chapel",
             "Synagogue"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9393,7 +10175,8 @@
             "Venus",
             "Mars",
             "Jupiter"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9405,7 +10188,8 @@
             "YES!",
             "Hurry!",
             "Fine!"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9417,7 +10201,8 @@
             "Sindhupalchowk",
             "Parsa",
             "Juddha Samsher"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9429,7 +10214,8 @@
             "Ranoddip",
             "Bir Samsher",
             "Juddha Samsher"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9441,7 +10227,8 @@
             "Lamtang",
             "Upper Arun",
             "Kanchanjangha"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9453,7 +10240,8 @@
             "Rawapakshya",
             "Manupakshya",
             "Kiwapakshya"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "General Knowledge + Logical Reasoning",
@@ -9465,7 +10253,8 @@
             "Laotse",
             "Ding",
             "Fung"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9477,7 +10266,8 @@
             "Altavista",
             "Yahoo",
             "Firefox Mozilla"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9489,7 +10279,8 @@
             "Point screen",
             "Touch screen",
             "Andriod screen"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9501,7 +10292,8 @@
             "MB>GB>TB>KB",
             "TB>GB>MB>KB",
             "GB>MB>KB>TB"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9513,7 +10305,8 @@
             "Wide World Web",
             "World Web Wide",
             "Wide Wide World"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9525,7 +10318,8 @@
             "Spoof",
             "Sniffer",
             "Jmail"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9537,7 +10331,8 @@
             "Word",
             "Excel",
             "Internet"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9549,7 +10344,8 @@
             "Balise Pascal",
             "Garden Moore",
             "John Von Neumann"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9561,7 +10357,8 @@
             "Keyboard",
             "Mouse",
             "Mouse"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9573,7 +10370,8 @@
             "Application software",
             "Output device",
             "Processing device"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "IT general",
@@ -9585,7 +10383,8 @@
             "Hard copy",
             "Photo copy",
             "Paper"
-        ]
+        ],
+        "TotalQuestionsToSelect": 10
     },
     {
         "subject": "English",
@@ -9597,7 +10396,8 @@
             "in spite of",
             "as it",
             "despite"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9609,7 +10409,8 @@
             "both",
             "as well as",
             "not only"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9621,7 +10422,8 @@
             "has come",
             "is coming",
             "was coming"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9633,7 +10435,8 @@
             "and also",
             "and",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9645,7 +10448,8 @@
             "discussing",
             "to discuss",
             "discusing"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9657,7 +10461,8 @@
             "a",
             "the",
             "no article"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9669,7 +10474,8 @@
             "for",
             "about",
             "of"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9681,7 +10487,8 @@
             "by; with",
             "in; for",
             "with; for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9693,7 +10500,8 @@
             "have",
             "was",
             "has been"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9705,7 +10513,8 @@
             "to cut",
             "to be cut",
             "both a and b"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9717,7 +10526,8 @@
             "from",
             "by",
             "in"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9729,7 +10539,8 @@
             "about",
             "in",
             "to"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9741,7 +10552,8 @@
             "over",
             "among",
             "out"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9753,7 +10565,8 @@
             "athlete",
             "artist",
             "success"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9765,7 +10578,8 @@
             "poisonous",
             "protected",
             "detected"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9777,7 +10591,8 @@
             "marvel",
             "comparable",
             "fancy"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9789,7 +10604,8 @@
             "would come",
             "could come",
             "comes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9801,7 +10617,8 @@
             "was",
             "has been",
             "have been"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9813,7 +10630,8 @@
             "tweezers",
             "forceps",
             "pincers"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9825,7 +10643,8 @@
             "insomnia",
             "anemia",
             "epicurean"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9837,7 +10656,8 @@
             "cosmopolitian",
             "veteran",
             "teacher"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9849,7 +10669,8 @@
             "if",
             "when",
             "why"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9861,7 +10682,8 @@
             "adjective",
             "preposition",
             "demonstrative adjective"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9873,7 +10695,8 @@
             "I was heard sing a song",
             "I washeard singing a song",
             "I was heard to sing a song by them"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9885,7 +10708,8 @@
             "he congratulated me",
             "he congratulated that I passed.",
             "He said that i deserved congratulations."
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9897,7 +10721,8 @@
             "second",
             "thord",
             "fourth"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9909,7 +10734,8 @@
             "Difficult",
             "easy",
             "strange"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9921,7 +10747,8 @@
             "impllicit",
             "expilict",
             "obnoxious"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9933,7 +10760,8 @@
             "chess",
             "child",
             "cheap"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9945,7 +10773,8 @@
             "from: in",
             "from: on",
             "to:at"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9957,7 +10786,8 @@
             "with",
             "about",
             "for"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9969,7 +10799,8 @@
             "in",
             "on",
             "over"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9981,7 +10812,8 @@
             "edible",
             "palatable",
             "suspicious"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -9993,7 +10825,8 @@
             "mis-",
             "dis-",
             "none-"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10005,7 +10838,8 @@
             "ergophobia",
             "Panthophobia",
             "hyctophobia"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10017,7 +10851,8 @@
             "knell",
             "replica",
             "invitation"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10029,7 +10864,8 @@
             "must have bought",
             "must be buying",
             "must buying"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10041,7 +10877,8 @@
             "like as",
             "like to",
             "like"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10053,7 +10890,8 @@
             "works had worked",
             "works",
             "worked"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10065,7 +10903,8 @@
             "to",
             "so",
             "extremely"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10077,7 +10916,8 @@
             "knwoing",
             "to know",
             "to be known"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10089,7 +10929,8 @@
             "and",
             "also",
             "but"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10101,7 +10942,8 @@
             "a",
             "an",
             "some"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10113,7 +10955,8 @@
             "is",
             "has",
             "have"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10125,7 +10968,8 @@
             "lighten",
             "preception",
             "moral"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -10137,7 +10981,8 @@
             "Time and tide wait for none",
             "She absents herself from the college today",
             "None of the squares was properly drawn"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Verbal Ability",
@@ -10149,7 +10994,8 @@
             "Mediocre",
             "Ugly",
             "Average"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -10161,7 +11007,8 @@
             "Fearless",
             "Bold",
             "Valiant"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -10173,7 +11020,8 @@
             "Consciouos",
             "Conscious",
             "Consciuos"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Verbal Ability",
@@ -10185,7 +11033,8 @@
             "Unable",
             "Willing",
             "Obligated"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -10197,7 +11046,8 @@
             "Mark",
             "Tim",
             "Insufficient information"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -10209,7 +11059,8 @@
             "All animals with four legs are cats",
             "Some mammals have four legs",
             "Some cats are not mammals"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -10221,7 +11072,8 @@
             "250",
             "300",
             "350"
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -10233,7 +11085,8 @@
             "If it is not raining, then the ground is not wet.",
             "If the ground is wet, then it must have rained.",
             "If it is not raining, then the ground is wet."
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Logical Reasoning",
@@ -10245,7 +11098,8 @@
             "If it is snowing, then the temperature is below freezing.",
             "If the temperature is below freezing, then it is snowing.",
             "If it is not snowing, then the temperature is above freezing."
-        ]
+        ],
+        "TotalQuestionsToSelect": 20
     },
     {
         "subject": "Math",
@@ -10257,7 +11111,8 @@
             "\\(55^{\\circ}\\)",
             "\\(65^{\\circ}\\)",
             "\\(80^{\\circ}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -10269,7 +11124,8 @@
             "Isosceles triangle",
             "Scalene triangle",
             "Right triangle"
-        ]
+        ],
+        "TotalQuestionsToSelect": 40
     },
     {
         "subject": "Math",
@@ -10281,7 +11137,8 @@
             "3",
             "2",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10293,7 +11150,8 @@
             "\\(f\\) is onto",
             "\\(f\\) is both one-one and onto",
             "\\(f\\) is one-one into"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10305,7 +11163,8 @@
             "\\(\\frac{x-4}{3}\\)",
             "\\(x+4\\)",
             "\\(x-4\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10317,7 +11176,8 @@
             "\\(3e\\)",
             "\\(3e^{3}\\)",
             "\\(\\frac{1}{e^{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10329,7 +11189,8 @@
             "\\(\\pm \\frac{1}{x}\\)",
             "\\(\\frac{1}{x}\\)",
             "\\(\\frac{1}{x^{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10341,7 +11202,8 @@
             "\\(-\\tan x\\)",
             "\\(\\tan^{3}x\\)",
             "None of these options"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10353,7 +11215,8 @@
             "\\(\\frac{1}{e}\\)",
             "\\(e^{e}\\)",
             "-1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10365,7 +11228,8 @@
             "\\(\\frac{1}{2}\\)",
             "0",
             "1"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10377,7 +11241,8 @@
             "\\((x(\\log x-x)+C\\)",
             "\\((x \\log x + 1)+C\\)",
             "\\((x (\\log x - 1) + C\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10389,7 +11254,8 @@
             "\\(\\frac{\\pi}{6}\\)",
             "\\(\\frac{\\pi}{4}\\)",
             "\\(\\frac{\\pi}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10401,7 +11267,8 @@
             "\\(\\frac{32}{3}\\)",
             "\\(\\frac{64}{3}\\)",
             "\\(\\frac{128}{3}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10413,7 +11280,8 @@
             "\\(i\\)",
             "\\(\\sqrt{2}\\)",
             "-2"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10425,7 +11293,8 @@
             "real, equal",
             "perfect square, equal",
             "unequal, imaginary"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10437,7 +11306,8 @@
             "\\(\\begin{pmatrix}19 & 43 \\\\ 22 & 50 \\end{pmatrix} \\)",
             "\\(\\begin{pmatrix}19 & 22 \\\\ 43 & 50 \\end{pmatrix} \\)",
             "\\(\\begin{pmatrix}22 & 50 \\\\ 43 & 19 \\end{pmatrix} \\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10449,7 +11319,8 @@
             "intersecting",
             "coincident",
             "independent"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10461,7 +11332,8 @@
             "49.5",
             "4.5",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10473,7 +11345,8 @@
             "\\(n \\pi \\pm \\frac{\\pi}{6}\\)",
             "\\(2n \\pi \\pm \\frac{\\pi}{6}\\)",
             "\\((-1)^{3}\\alpha + \\frac{\\pi}{6}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10485,7 +11358,8 @@
             "\\(\\frac{\\pi}{2}\\)",
             "\\(\\frac{\\pi}{4}\\)",
             "Depends on \\(x\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10497,7 +11371,8 @@
             "\\((S-b) tan \\frac{A}{2}\\)",
             "\\((S-c) \\tan \\frac{A}{2}\\)",
             "\\((S-a) \\tan \\frac{B}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10509,7 +11384,8 @@
             "\\(\\frac{2}{5} \\space units\\)",
             "\\(\\frac{10}{3} \\space units\\}",
             "\\(\\frac{3}{10} \\space units\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10521,7 +11397,8 @@
             "2",
             "3",
             "4"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10533,7 +11410,8 @@
             "\\(x^{2}+y^{2}+x+y-2=0\\)",
             "\\(x^{2}+y^{2}-x-2y+2=0\\)",
             "\\(x^{2}+y^{2}-x+2y-2=0\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10545,7 +11423,8 @@
             "\\(\\frac{1}{3}, \\frac{1}{3}, \\frac{1}{3}\\)",
             "\\(\\pm \\frac{1}{2}, \\pm \\frac{1}{\\sqrt{2}}, \\pm \\frac{1}{\\sqrt{2}}\\)",
             "\\(\\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}, \\pm \\frac{1}{\\sqrt{3}}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10557,7 +11436,8 @@
             "\\(LR \\space and \\space CR\\)",
             "\\(\\frac{R}{L} \\space and \\space \\left[ LC \\right]^{\\frac{1}{2}}\\)",
             "\\(CR \\space and \\space \\frac{1}{LC}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Math",
@@ -10569,7 +11449,8 @@
             "2 cm",
             "3 cm",
             "1 cm"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10581,7 +11462,8 @@
             "\\(45^{\\circ}\\)",
             "\\(30^{\\circ}\\)",
             "\\(60^{\\circ}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10593,7 +11475,8 @@
             "Acceleration is not zero",
             "Body is in motion",
             "Acceleration should be zero"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10605,7 +11488,8 @@
             "decreases",
             "remain same",
             "depend upon nature of matter"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10617,7 +11501,8 @@
             "8 W",
             "4 W",
             "9 W"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10629,7 +11514,8 @@
             "remains unchanged",
             "decreases",
             "first increases and then decreases"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10641,7 +11527,8 @@
             "critical temperature",
             "melting point",
             "freezing point"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10653,7 +11540,8 @@
             "2KT",
             "\\(\\frac{1}{2}KT\\)",
             "\\(\\frac{3}{4}KT\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10665,7 +11553,8 @@
             "\\(4:9\\)",
             "\\(9:4\\)",
             "\\(3:2\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10677,7 +11566,8 @@
             "\\(30^{\\circ}\\)",
             "\\(42^{\\circ}\\)",
             "\\(62^{\\circ}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10689,7 +11579,8 @@
             "7",
             "6",
             "8"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10701,7 +11592,8 @@
             "\\(30^{\\circ}\\)",
             "\\(45^{\\circ}\\)",
             "\\(72^{\\circ}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10713,7 +11605,8 @@
             "70 cm",
             "1.2 cm",
             "12 cm"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10725,7 +11618,8 @@
             "\\(2r \\space from \\space q\\)",
             "\\(\\frac{r}{2} \\space from \\space q\\)",
             "\\(\\frac{r}{2} \\space from \\space 4q\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10737,7 +11631,8 @@
             "\\(\\frac{1}{n^{2}}\\)",
             "\\(n\\)",
             "\\(\\frac{1}{n}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10749,7 +11644,8 @@
             "doubled",
             "halved",
             "four times"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10761,7 +11657,8 @@
             "\\(5 \\Omega\\)",
             "\\(0.5 \\Omega\\)",
             "\\(1.1 \\Omega\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10773,7 +11670,8 @@
             "a force and a torque",
             "neither a force nor a torque",
             "a force but not a torque"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10785,7 +11683,8 @@
             "500",
             "20",
             "95"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10797,7 +11696,8 @@
             "\\(7.6 \\times 10^{-5} H\\)",
             "\\(5.8 \\times 10^{-5} H\\)",
             "\\(9.6 \\times 10^{-6} H\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10809,7 +11709,8 @@
             "\\(3 \\times 10^{6} m/s\\)",
             "\\(4 \\times 10^{5} m/s\\)",
             "\\(6 \\times 10^{6} m/s\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10821,7 +11722,8 @@
             "Wavelength",
             "Frequency",
             "Impulse"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10833,7 +11735,8 @@
             "16.43 years",
             "14.43 years",
             "Same as half life"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -10845,7 +11748,8 @@
             "Capable of handling low power",
             "Low dissipation of energy",
             "None of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10857,7 +11761,8 @@
             "orbital orientation",
             "orbital shape",
             "nuclear stability"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10869,7 +11774,8 @@
             "\\(\\beta \\space rays\\)",
             "\\(\\Upsilon \\space rays\\)",
             "all have equal penetrating power"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10881,7 +11787,8 @@
             "\\(CH_{4}\\)",
             "\\(SiCl_{4}\\)",
             "\\(CCl_{4}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10893,7 +11800,8 @@
             "Fluorine",
             "Bromine",
             "Iodine"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10905,7 +11813,8 @@
             "+5",
             "+4",
             "+3"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10917,7 +11826,8 @@
             "\\(MgO\\)",
             "\\(CuO\\)",
             "\\(ZnO\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10929,7 +11839,8 @@
             "12 six member rings and 20 five member rings",
             "12 six member rings and 10 five member rings",
             "12 six member rings and 8 five member rings"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10941,7 +11852,8 @@
             "nitric acid",
             "sodium",
             "sulphuric acid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10953,7 +11865,8 @@
             "2,2-dimethylpropane",
             "2-methylpropene",
             "2-methylbutane"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10965,7 +11878,8 @@
             "Baeyer's reagent",
             "Fehling's reagent",
             "Grignard reagent"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10977,7 +11891,8 @@
             "Wolf-Kishner reduction",
             "Cannizzaro's reaction",
             "Reimer-Tiemann reaction"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -10989,7 +11904,8 @@
             "\\(C_{n}H_{2n+2}\\)",
             "\\(C_{n}H_{2n-2}\\)",
             "None of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11001,7 +11917,8 @@
             "Lucas test",
             "Victor meyer test",
             "Carbylamine test"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11013,7 +11930,8 @@
             "linear",
             "tetrahedral",
             "square planar"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11025,7 +11943,8 @@
             "\\(\\frac{mol. wt.}{3}\\)",
             "\\(\\frac{mol. wt.}{4}\\)",
             "\\(\\frac{mol. wt.}{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11037,7 +11956,8 @@
             "\\(AlCl_{3}\\)",
             "\\(FeCl_{3}\\)",
             "\\(NH_{3}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11049,7 +11969,8 @@
             "Galvanic Cell",
             "Voltaic Cell",
             "All of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11061,7 +11982,8 @@
             "5.184 joules",
             "3.184 joules",
             "2.184 joules"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11073,7 +11995,8 @@
             "Temperature",
             "Surface area of the reactants",
             "All of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11085,7 +12008,8 @@
             "\\(sp^{2} \\space hydridized\\)",
             "\\(sp \\space hybridized\\)",
             "\\(sp^{3}d \\space hydridized\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11097,7 +12021,8 @@
             "turbidity appears within five minutes",
             "turbidity appears immediately",
             "turbidity appears within ten minutes"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11109,7 +12034,8 @@
             "carbohydrate",
             "protein",
             "amino acid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11121,7 +12047,8 @@
             "urea on formaldehyde",
             "melamine on formaldehyde",
             "ethylene glycol on phthalic acid"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11133,7 +12060,8 @@
             "\\(HgCl_{2}\\)",
             "\\(K_{2}[HgI_{4}]\\)",
             "\\(HgI_{2}\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11145,7 +12073,8 @@
             "Copper",
             "Mercury",
             "Silver"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11157,7 +12086,8 @@
             "\\(2^{nd}\\)",
             "\\(3^{rd}\\)",
             "None of the above"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11169,7 +12099,8 @@
             "Incredible",
             "Incur",
             "Temerity"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11181,7 +12112,8 @@
             "by",
             "of",
             "with"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11193,7 +12125,8 @@
             "for",
             "on",
             "by"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11205,7 +12138,8 @@
             "secret",
             "promise",
             "feud"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11217,7 +12151,8 @@
             "acrimony",
             "unsuitable",
             "extravagant"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Chemistry",
@@ -11229,7 +12164,8 @@
             "alarm",
             "full",
             "stuff"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11241,7 +12177,8 @@
             "stop",
             "crush",
             "promote"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11253,7 +12190,8 @@
             "infectious",
             "endemic",
             "contagious"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11265,7 +12203,8 @@
             "pork",
             "mutton",
             "venison"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11277,7 +12216,8 @@
             "regularly",
             "on duty",
             "rarely"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11289,7 +12229,8 @@
             "won't she?",
             "would she?",
             "doesn't she?"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "English",
@@ -11301,7 +12242,8 @@
             "autumnal",
             "advantage",
             "arrogant"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -11313,7 +12255,8 @@
             "decreases",
             "increases",
             "May increase or decrease depending on the rate of heating"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     },
     {
         "subject": "Physics",
@@ -11325,6 +12268,7 @@
             "\\(\\frac{E}{P}\\)",
             "\\(P.E\\)",
             "\\(PE \\sin \\theta\\)"
-        ]
+        ],
+        "TotalQuestionsToSelect": 25
     }
 ]

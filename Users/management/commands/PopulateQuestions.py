@@ -19,6 +19,7 @@ class PopulateQuestions:
             subject = content['subject']
             question = content['question']
             programme = content['programme']
+            TotalQuestionsToSelect = content['TotalQuestionsToSelect']
 
             programmeObj = Programme.objects.filter(Name=programme)
 
@@ -36,6 +37,10 @@ class PopulateQuestions:
 
             else:
                 subjectObj = Subject(ProgrammeID=programmeObj, Name=subject)
+                subjectObj.save()
+
+            if subjectObj.TotalQuestionsToSelect == 1:
+                subjectObj.TotalQuestionsToSelect = TotalQuestionsToSelect
                 subjectObj.save()
 
             if not Questions.objects.filter(SubjectID=subjectObj, Title=question, Answer=answer):

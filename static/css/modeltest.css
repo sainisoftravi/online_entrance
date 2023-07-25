@@ -23,6 +23,7 @@
 
 .timer{
     top: 0;
+    width: 20%;
     padding: 20px;
     position: sticky;
     border-radius: 12px;
@@ -97,9 +98,9 @@
 
 .choice label{
     display: flex;
-    padding: 10px;
-    font-size: 18px;
+    font-size: 20px;
     font-family: var(--font);
+    padding: 15px 15px 15px 10px;
 }
 
 input[type=radio] {

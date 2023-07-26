@@ -438,19 +438,18 @@ def GetSpecificQuestions(request, programme, subject):
     questions = questions[:100]
 
     for question in questions:
-        for question in questions:
-            choices = [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
+        choices = [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
 
-            random.shuffle(choices)
+        random.shuffle(choices)
 
-            details = {
-                'id': question.ID,
-                'title': question.Title,
-                'choices': choices,
-                'answer': question.Answer,
-                'checked': False,
-            }
+        details = {
+            'id': question.ID,
+            'title': question.Title,
+            'choices': choices,
+            'answer': question.Answer,
+            'checked': False,
+        }
 
-            values.append(details)
+        values.append(details)
 
     return render(request, 'ModelTest.html', {'questions': values})

@@ -10,7 +10,10 @@ from .utils import GenerateRandomURL
 def user_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/user_<id>/<filename>
 
-    return f'{instance.id}/profile/{filename}'
+    extension = filename.split('.')[-1]
+    new_file_name = f'{uuid.uuid4().hex}.{extension}'
+
+    return f'{instance.id}/profile/{new_file_name}'
 
 
 class CustomUserManager(BaseUserManager):

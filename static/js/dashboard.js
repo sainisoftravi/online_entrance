@@ -1,5 +1,6 @@
 const Pie_Chart = document.getElementById('Pie-Chart-correct-vs-incorrect');
 const Stacked_Bar_Chart = document.getElementById('Stacked-Bar-Chart-Results');
+const Pie_Chart_Each_Programme = document.getElementById('Pie-Chart-each-programme');
 
 
 new Chart(Pie_Chart, {
@@ -46,6 +47,52 @@ new Chart(Pie_Chart, {
             }
         }
     }
+);
+
+
+new Chart(Pie_Chart_Each_Programme, {
+    type: 'pie',
+
+    data: {
+        labels: data['Pie-Chart-each-programme']['labels'],
+        datasets: [
+            {
+                data: data['Pie-Chart-each-programme']['data'],
+            }
+        ]
+    },
+
+    options: {
+        plugins: {
+            legend: {
+              position: 'top',
+              align: 'middle',
+            },
+
+            title: {
+                display: true,
+                position:'top',
+                align:'center',
+                fullSize: false,
+                text: data['Pie-Chart-each-programme']['title'],
+
+                font: {
+                    size: 20,
+                }
+            }
+        },
+
+        scales: {
+            x: {
+                display: false,
+            },
+
+            y: {
+                display: false,
+            }
+        }
+    }
+}
 );
 
 

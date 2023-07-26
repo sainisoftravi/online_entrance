@@ -40,6 +40,10 @@
     background-color: rgb(22, 84, 109);
 }
 
+.pie-charts{
+    display: flex;
+}
+
 .chart-div{
     width: 100%;
     display: flex;
@@ -77,6 +81,13 @@ i.bx-x{
     color: rgb(0, 0, 0);
 }
 
+
+@media screen and (max-width: 1276px) {
+    .pie-charts{
+        gap: 20px;
+        flex-direction: column;
+    }
+}
 
 @media screen and (max-width: 700px) {
     .right-container{

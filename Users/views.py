@@ -380,17 +380,18 @@ def GoTo(request, redirect_to):
         data['results'] = GetHistories(id)
 
     elif redirect_to == 'dashboard':
-        data.update(GetWrongRights(id))
+        data.update(GetGraphsData(id))
 
     return render(request, 'Dashboard.html', {'to': data})
 
 
-def GetWrongRights(id):
+def GetGraphsData(id):
     values = dict()
     results = Results.objects.filter(UserID=id)
 
     correct_answers = []
     incorrect_answers = []
+    program_counter = dict()
 
     for result in results:
         correct_counter = result.CorrectCounter
@@ -398,12 +399,26 @@ def GetWrongRights(id):
         correct_answers.append(correct_counter)
         incorrect_answers.append(100 - correct_counter)
 
+        programme = result.ProgrammeName
+
+        if programme in program_counter:
+            program_counter[programme] += 1
+
+        else:
+            program_counter[programme] = 1
+
     values.update(
             {
                 'Pie-Chart-correct-vs-incorrect': {
                     'title': 'Overall Correct v/s Incorrect Answer',
                     'data': [sum(correct_answers), sum(incorrect_answers)],
                     'labels': ['Correct Answer', 'Incorrect Answer'],
+                },
+
+                'Pie-Chart-each-programme': {
+                    'title': 'Test taken per programme',
+                    'data': list(program_counter.values()),
+                    'labels': list(program_counter.keys())
                 },
 
                 'Stacked-Bar-Chart-Results': {

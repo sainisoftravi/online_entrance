@@ -2939,7 +2939,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(\\sum_{n=0}^{10}(-1)^{n}\\) is:",
+        "question": "The value of \\(\\sum_{n=0}^{10} \\left( -1 \\right)^{n}\\) is:",
         "programme": "BCA",
         "answer": "0",
         "choices": [
@@ -3035,7 +3035,7 @@
         "answer": "\\(\\frac{2c}{3}\\)",
         "choices": [
             "\\(\\frac{a+b}{3}\\)",
-            "\\(\\frac{c}{3}\\)",
+            "\\(\\frac{a+b+c}{3}\\)",
             "\\(\\frac{2c}{3}\\)",
             "\\(\\frac{c}{3}\\)"
         ],
@@ -3602,7 +3602,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(cosec60^{\\circ}\\) is:",
+        "question": "The value of \\(\\cosec60^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(\\frac{2}{\\sqrt{3}}\\)",
         "choices": [
@@ -3620,7 +3620,7 @@
         "answer": "\\(m\\times n\\)",
         "choices": [
             "\\(m\\times n\\)",
-            "\\(n\\times m\\}",
+            "\\(n\\times m\\)",
             "\\(m\\times m\\)",
             "\\(n\\times n\\)"
         ],
@@ -3771,7 +3771,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(sec55^{\\circ}\\) is:",
+        "question": "The value of \\(\\sec55^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(\\sqrt{3}\\)",
         "choices": [
@@ -3903,12 +3903,12 @@
         "subject": "Math",
         "question": "Divide of Rs. 750 into three parts in the ration \\(4:5:6\\) are:",
         "programme": "BCA",
-        "answer": "200,250,300",
+        "answer": "200, 250, 300",
         "choices": [
-            "200,250,300",
-            "250,250,250",
-            "350,250,150",
-            "400,500,600"
+            "200, 250, 300",
+            "250, 250, 250",
+            "350, 250, 150",
+            "400, 500, 600"
         ],
         "TotalQuestionsToSelect": 50
     },
@@ -4161,7 +4161,7 @@
     },
     {
         "subject": "Math",
-        "question": "If \\(P(A\\cup B)\\space=\\space1\\), two events \\(a\\) and (\\b\\) are",
+        "question": "If \\(P(A\\cup B)\\space=\\space1\\), two events \\(a\\) and \\(b\\) are",
         "programme": "BCA",
         "answer": "exhaustive events",
         "choices": [
@@ -4226,7 +4226,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(cot30^{\\circ}\\) is:",
+        "question": "The value of \\(\\cot30^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(\\sqrt{3}\\)",
         "choices": [
@@ -4421,7 +4421,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(sec60^{0}\\) is:",
+        "question": "The value of \\(\\sec60^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(2\\)",
         "choices": [
@@ -4752,7 +4752,7 @@
         "choices": [
             "\\(frac{-1}{2}\\)",
             "\\(\\frac{1}{2}\\)",
-            "\\(\\frac{-1}{3}\\",
+            "\\(\\frac{-1}{3}\\)",
             "\\(\\frac{-1}{4}\\)"
         ],
         "TotalQuestionsToSelect": 50
@@ -4876,7 +4876,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(tan60^{\\circ}\\) is:",
+        "question": "The value of \\(\\tan60^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(\\sqrt{3}\\)",
         "choices": [
@@ -5071,7 +5071,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(sin135^{\\circ}\\) is:",
+        "question": "The value of \\(\\sin135^{\\circ}\\) is:",
         "programme": "BCA",
         "answer": "\\(\\frac{1}{\\sqrt{2}}\\)",
         "choices": [
@@ -5309,9 +5309,9 @@
         "programme": "BCA",
         "answer": "none of these",
         "choices": [
-            "17,21,25",
-            "17,22,23",
-            "11,19,21",
+            "17, 21, 25",
+            "17, 22, 23",
+            "11, 19, 21",
             "none of these"
         ],
         "TotalQuestionsToSelect": 50
@@ -5528,12 +5528,12 @@
         "subject": "Math",
         "question": "If the product of two consecutive even number is 288, then what are these numbers from following?",
         "programme": "BCA",
-        "answer": "16,18",
+        "answer": "16, 18",
         "choices": [
-            "14,12",
-            "14,16",
-            "16,18",
-            "22,24"
+            "14, 12",
+            "14, 16",
+            "16, 18",
+            "22, 24"
         ],
         "TotalQuestionsToSelect": 50
     },
@@ -5643,7 +5643,7 @@
     },
     {
         "subject": "Math",
-        "question": "If \\(p+q=r,\\) then what is the average value of \\(p, q \\space r\\)?",
+        "question": "If \\(p+q=r,\\) then what is the average value of \\(p, q, \\space r\\)?",
         "programme": "BCA",
         "answer": "\\(\\frac{2r}{3}\\)",
         "choices": [
@@ -5749,12 +5749,12 @@
         "subject": "Math",
         "question": "Two numbers are in the ratio of 6:7 and their sum is 117, then what are these numbers?",
         "programme": "BCA",
-        "answer": "54,63",
+        "answer": "54, 63",
         "choices": [
-            "56,58",
-            "63,54",
-            "54,63",
-            "48,56"
+            "56, 58",
+            "63, 54",
+            "54, 63",
+            "48, 56"
         ],
         "TotalQuestionsToSelect": 50
     },
@@ -6020,7 +6020,7 @@
     },
     {
         "subject": "Math",
-        "question": "What is the value of \\(cos0^{\\circ}\\)?",
+        "question": "What is the value of \\(\\cos0^{\\circ}\\)?",
         "programme": "BCA",
         "answer": "1",
         "choices": [
@@ -6046,7 +6046,7 @@
     },
     {
         "subject": "Math",
-        "question": "What is the value of \\(cot90^{\\circ}\\)?",
+        "question": "What is the value of \\(\\cot90^{\\circ}\\)?",
         "programme": "BCA",
         "answer": "0",
         "choices": [
@@ -6124,7 +6124,7 @@
     },
     {
         "subject": "Math",
-        "question": "The value of \\(tan180^{\\circ}\\) is equal to,",
+        "question": "The value of \\(\\tan180^{\\circ}\\) is equal to,",
         "programme": "BCA",
         "answer": "0",
         "choices": [
@@ -6306,7 +6306,7 @@
     },
     {
         "subject": "Math",
-        "question": "What is the value of \\(cos^{2}30^{\\circ}-sin^{2}30^{\\circ}\\)?",
+        "question": "What is the value of \\(\\cos^{2}30^{\\circ}-\\sin^{2}30^{\\circ}\\)?",
         "programme": "BCA",
         "answer": "\\(\\frac{\\sqrt{3}}{2}\\)",
         "choices": [
@@ -6893,7 +6893,7 @@
         "subject": "Math",
         "question": "If \\(x:y=6:5\\), the value of \\((5x+3y):(5x-3y)\\) is equal to:",
         "programme": "BCA",
-        "answer": "(\\3:1\\)",
+        "answer": "\\(3:1\\)",
         "choices": [
             "\\(2:1\\)",
             "(\\3:1\\)",
@@ -9426,7 +9426,7 @@
     },
     {
         "subject": "Math",
-        "question": "Given \\(U = \\left\\{1,2,3,..........,14 \\right\\}, A= \\left\\{x:x \\le 8 \\right\\}, B= \\left\\{x:x \\ge 4 \\right\\} then \\(\\overline{A \\cap B} =\\)",
+        "question": "\\(Given \\space U = \\left\\{1,2,3,..........,14 \\right\\}, \\space A= \\left\\{x:x \\le 8 \\right\\}, \\space B= \\left\\{x:x \\ge 4 \\right\\} \\space then \\space \\overline{A \\cap B} =\\)",
         "programme": "BIT",
         "answer": "None of these",
         "choices": [
@@ -9452,7 +9452,7 @@
     },
     {
         "subject": "Math",
-        "question": "If \\(S_{\\infty}=\\frac{a}{1-r}\\), when \\(a, r & S_{\\infty}\\) denotes first term, common ratio and sum to infinity. If",
+        "question": "If \\(S_{\\infty}=\\frac{a}{1-r}\\), when \\(a, \\space r \\space \\& \\space S_{\\infty}\\) denotes first term, common ratio and sum to infinity. If",
         "programme": "BIT",
         "answer": "\\(\\left |r \\right | \\lt 1\\)",
         "choices": [
@@ -9647,7 +9647,7 @@
     },
     {
         "subject": "Math",
-        "question": "The maximum value of \\(sin \\theta cos \\theta \\) is",
+        "question": "The maximum value of \\(\\sin \\theta cos \\theta \\) is",
         "programme": "BIT",
         "answer": "\\(\\frac{1}{2}\\)",
         "choices": [
@@ -9673,7 +9673,7 @@
     },
     {
         "subject": "Math",
-        "question": "\\(\\int_{-2}^{2} \\left | x \\right | dx\\) is equal to",
+        "question": "\\(\\int_{-2}^{2} \\left| \\space x \\space \right|\\space dx\\) is equal to",
         "programme": "BIT",
         "answer": "4",
         "choices": [
@@ -9738,7 +9738,7 @@
     },
     {
         "subject": "Math",
-        "question": "The equation \\(sinx+cosx=2\\) has",
+        "question": "The equation \\(\\sinx+\\cosx=2\\) has",
         "programme": "BIT",
         "answer": "no solution",
         "choices": [
@@ -9751,7 +9751,7 @@
     },
     {
         "subject": "Math",
-        "question": "\\(sin^{-1}x + cos^{-1}x = \\)",
+        "question": "\\(\\sin^{-1}x + \\cos^{-1}x = \\)",
         "programme": "BIT",
         "answer": "None",
         "choices": [
@@ -9816,7 +9816,7 @@
     },
     {
         "subject": "Math",
-        "question": "If four quantities \\(a,b,c \\space and \\space d\\) are such that \\(a:b=3:4, \\space b:c=6:7 \\space and \\space c:d=8:9\\), then the ratio between \\(a\\) and \\(d\\) is",
+        "question": "If four quantities \\(a, \\space b, \\space c \\space and \\space d\\) are such that \\(a:b=3:4, \\space b:c=6:7 \\space and \\space c:d=8:9\\), then the ratio between \\(a\\) and \\(d\\) is",
         "programme": "BIT",
         "answer": "4:7",
         "choices": [
@@ -9888,7 +9888,7 @@
             "\\(\\frac{p}{i} \\left\\{(l+i)^{n} - l \\right\\}\\)",
             "\\(\\frac{p}{i} (l+i) \\left\\{(l+i)^{n}-l \\right\\}\\)",
             "\\(\\frac{p}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}\\)",
-            "\\(\\frac{p(l+i)}{i} \\left\\{l - \\frac{l}{(l+i)^{n}} \\right\\}"
+            "\\(\\frac{p(l+i)}{i}\\left\\{ l \\space - \\frac{l}{\\left( l+i \\right)^{n}} \\right\\}\\)"
         ],
         "TotalQuestionsToSelect": 40
     },
@@ -11129,7 +11129,7 @@
     },
     {
         "subject": "Math",
-        "question": "Number of non-empty singleton subsets from the elements of the set \\(\\left\\{1, \\space m, \\space n, \\space p \\right\\} is",
+        "question": "Number of non-empty singleton subsets from the elements of the set \\(\\left\\{ 1, \\space m, \\space n, \\space p \\right\\} is",
         "programme": "BScsIT",
         "answer": "4",
         "choices": [
@@ -11168,7 +11168,7 @@
     },
     {
         "subject": "Math",
-        "question": "\\(\\lim_{x \\to \\infty} \\left( 1+\\frac{3}{x} \\right)^{x}\\) is equal to",
+        "question": "\\(\\lim_{x\\to\\infty}\\left( 1+\\frac{3}{x} \\right)^{x}\\) is equal to",
         "programme": "BScsIT",
         "answer": "\\(e^{3}\\)",
         "choices": [
@@ -11181,7 +11181,7 @@
     },
     {
         "subject": "Math",
-        "question": "\\(\\frac{d}{dx}(log \\abs{x}\\) is equal to",
+        "question": "\\(\\frac{d}{dx}\\left( \\log\\left| \\space x \\space \\right| \\right)\\) is equal to",
         "programme": "BScsIT",
         "answer": "\\(\\frac{1}{x}\\)",
         "choices": [
@@ -11194,7 +11194,7 @@
     },
     {
         "subject": "Math",
-        "question": "Derivative of \\(\\sin^{x}\\) w.r.t. \\(\\cos^{3}x\\) is",
+        "question": "Derivative of \\(\\sin^{3}x\\) w.r.t. \\(\\cos^{3}x\\) is",
         "programme": "BScsIT",
         "answer": "None of these options",
         "choices": [
@@ -11207,7 +11207,7 @@
     },
     {
         "subject": "Math",
-        "question": "If \\(f(x)=\\log (\\log x)\\), then \\(f{-1}(e)\\)",
+        "question": "If \\(f(x)=\\log (\\log x)\\), then \\(f^{-1}(e)\\)",
         "programme": "BScsIT",
         "answer": "\\(e^{e}\\)",
         "choices": [
@@ -11246,7 +11246,7 @@
     },
     {
         "subject": "Math",
-        "question": "\\(\\int_{0}^{\\frac{\\sqrt{3}}{2}}\\frac{dx}{\\sqrt{1}-x^{2}}\\) is equal to",
+        "question": "\\(\\int_{0}^{\\frac{\\sqrt{3}}{2}}\\frac{dx}{\\sqrt{1} - x^{2}}\\) is equal to",
         "programme": "BScsIT",
         "answer": "\\(\\frac{\\pi}{3}\\)",
         "choices": [
@@ -11272,7 +11272,7 @@
     },
     {
         "subject": "Math",
-        "question": "The modulus of\\( \\(\\frac{(1-i)^{3}}{1-i^{3}}\\) is equal to",
+        "question": "The modulus of \\(\\frac{(1-i)^{3}}{1-i^{3}}\\) is equal to",
         "programme": "BScsIT",
         "answer": "\\(\\sqrt{2}\\)",
         "choices": [
@@ -11382,7 +11382,7 @@
         "choices": [
             "\\(\\frac{2}{3} \\space units\\)",
             "\\(\\frac{2}{5} \\space units\\)",
-            "\\(\\frac{10}{3} \\space units\\}",
+            "\\(\\frac{10}{3} \\space units\\)",
             "\\(\\frac{3}{10} \\space units\\)"
         ],
         "TotalQuestionsToSelect": 25
@@ -11402,7 +11402,7 @@
     },
     {
         "subject": "Math",
-        "question": "Equation of the circle having ends of its diameter at |(\\left( 1,-1 \\right)\\) and \\(\\left( 0,2 \\right)\\)",
+        "question": "Equation of the circle having ends of its diameter at \\(\\left( -1, \\space 1 \right)\\) and \\(\\left( 0,2 \\right)\\)",
         "programme": "BScsIT",
         "answer": "\\(x^{2}+y^{2}-x-y-2=0\\)",
         "choices": [

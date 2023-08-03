@@ -101,5 +101,9 @@
     <script src="{% static 'js/scroll.js' %}"></script>
     <script src="{% static 'js/ModelTest.js' %}"></script>
 
-{% include 'footer.html' %}
+{% if request.user.is_superuser is False %}
+    {% include 'footer.html' %}
+
+{% endif %}
+
 {% endblock %}

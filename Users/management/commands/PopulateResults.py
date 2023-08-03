@@ -1,6 +1,6 @@
 import random
 from django.core.management.base import BaseCommand
-from Users.models import CustomUser, Programme, Subject, Questions, Results, ResultDetails
+from Users.models import CustomUser, Programme, Subject, Questions, Exams, ResultDetails
 
 
 class PopulateResults:
@@ -26,7 +26,7 @@ class PopulateResults:
         for _ in range(self.NumberOfResultsToGenerate):
             correct_counter = 0
 
-            results = Results(UserID=self.UsersObj, ProgrammeName=self.Programme)
+            results = Exams(UserID=self.UsersObj, ProgrammeName=self.Programme)
             results.save()
 
             for subject in allSubjects:

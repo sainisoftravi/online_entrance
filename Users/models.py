@@ -97,9 +97,9 @@ class CustomUser(AbstractUser):
     objects = CustomUserManager()
 
 
-class Results(models.Model):
+class Exams(models.Model):
     class Meta:
-        verbose_name_plural = "Results"
+        verbose_name_plural = "Exams"
 
     UserID = models.ForeignKey(
             "CustomUser",
@@ -140,7 +140,7 @@ class Results(models.Model):
     def save(self, *args, **kwargs):
         self.Slug = GenerateRandomURL('Result')
 
-        super(Results, self).save(*args, **kwargs)
+        super(Exams, self).save(*args, **kwargs)
 
     def __str__(self):
         return str(self.ID)
@@ -151,7 +151,7 @@ class ResultDetails(models.Model):
         verbose_name_plural = "ResultDetails"
 
     ResultID = models.ForeignKey(
-            "Results",
+            "Exams",
             on_delete = models.CASCADE
         )
 

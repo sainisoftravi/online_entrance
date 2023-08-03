@@ -1,0 +1,12 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/admin/side-bar.css' %}">
+
+<div class="side-bar">
+    <a href="{% url 'getUserDetails' %}" class="side-bar-items">Users</a>
+    <a href="{% url 'getExamDetails' %}" class="side-bar-items">Exams</a>
+    <a href="{% url 'getProgrammeDetails' %}" class="side-bar-items">Programme</a>
+    <a href="{% url 'getSubjectDetails' %}" class="side-bar-items">Subject</a>
+    <a href="{% url 'getQuestionDetails' %}" class="side-bar-items">Questions</a>
+
+</div>

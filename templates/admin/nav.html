@@ -1,0 +1,36 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Admin</title>
+        <link rel="stylesheet" href="{% static 'css/admin/nav.css' %}">
+        <link rel="icon" href='{% static "images/admin/icon.png" %}' type="image/icon type">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="left-nav">
+                    <a href="{% url 'AdminIndex' %}">ADMIN</a>
+                </div>
+
+                <div class="right-nav">
+                    <a href="{% url 'admin-change-password' %}">Change password </a>
+
+                    <p class="separator">|</p>
+                    <a href="{% url 'AddNewQuestion' %}">Add Questions </a>
+
+                    <p class="separator">|</p>
+                    <a href="{% url 'logout' %}">Logout </a>
+
+                </div>
+
+            </div>
+
+            <div class="block-content">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root{
+    --td-color: "Nunito";
+}
+
+.right-container{
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+}
+
+.set-text-to-center{
+    text-align: center;
+}
+
+.custom-right-container{
+    height: 87%;
+}
+
+.message-div{
+    margin: 2px;
+    padding: 20px;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.message-div p{
+    letter-spacing: 0.1cm;
+    color: whitesmoke;
+    font-family: var(--td-color);
+}
+
+.message-div i{
+    font-size: 30px;
+    cursor: pointer;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+.error-message{
+    background-color: #dd4a4a;
+}
+
+.success-message{
+    background-color: #01987a;
+}

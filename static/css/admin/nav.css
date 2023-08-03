@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+
+:root{
+    --font-family: "Poor Story";
+    --admin-font-family: "Rubik Vinyl";
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100wh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.nav-bar{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkslateblue;
+}
+
+.block-content{
+    height: 100%;
+    min-height: 10vh;
+    display: flex;
+}
+
+.left-nav a{
+    padding: 10px;
+    font-size: 40px;
+    text-decoration: none;
+    color: rgb(226, 226, 226);
+    font-family: var(--admin-font-family);
+}
+
+.right-nav{
+    gap: 15px;
+    color: white;
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+}
+
+.right-nav a{
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: var(--font-family);
+}

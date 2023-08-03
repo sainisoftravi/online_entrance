@@ -1,0 +1,31 @@
+th{
+    padding: 20px;
+    color: whitesmoke;
+    font-family: var(--td-color);
+    background-color: #01987a;
+}
+
+table{
+    width: 100%;
+}
+
+td{
+    padding: 10px;
+    font-family: var(--td-color);
+}
+
+td a{
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+table tr:nth-child(even) td{
+    background-color: #f3f3f3;
+}
+
+table thead th {
+    top: 0;
+    left: 0;
+    position: sticky;
+  }
+

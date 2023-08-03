@@ -1,0 +1,29 @@
+td:nth-child(3),
+td:nth-child(7){
+    white-space:nowrap;
+}
+
+.bx-check,
+.bx-x{
+    padding: 2px;
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 50%;
+    font-weight: bolder;
+}
+
+.bx-check{
+    background-color: #01987a;
+}
+
+.bx-x{
+    background-color: #dd4a4a;
+}
+
+.bx-center,
+td:nth-child(3),
+td:nth-child(4),
+td:nth-child(5),
+td:nth-child(10){
+    text-align: center;
+}

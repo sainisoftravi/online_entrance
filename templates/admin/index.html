@@ -1,0 +1,372 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content%}
+<link rel="stylesheet" href="{% static 'css/admin/index.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin/table.css' %}">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+{% include 'admin/side-bar.html' %}
+
+<div class="right-container">
+
+    {% for message in messages %}
+        {% if message %}
+            {% if message.tags == 'success' %}
+                <div class="message-div success-message">
+                    <p>{{message}}</p>
+                    <i class='bx bx-x'></i>
+                </div>
+
+            {% else %}
+                <div class="message-div error-message">
+                    <p>{{message}}</p>
+                    <i class='bx bx-x'></i>
+                </div>
+
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    {% if data.0.template_type == 'template::users' %}
+        <link rel="stylesheet" href="{% static 'css/admin/UserTable.css' %}">
+
+        <table>
+            <thead>
+                <tr>
+                    {% for title in data.0.keys %}
+                        {% if title != "template_type" %}
+                            <th>{{title}}</th>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        {% for key, value in item.items %}
+                            {% if value != "template::users" %}
+                                {% if key == "Profile Image" %}
+                                    <td>
+                                        <a href="{{value.url}}">{{value}}</a>
+                                    </td>
+
+                                {% elif key == "ID" %}
+                                    <td>
+                                        <a href="edit-user/{{value}}">{{value}}</a>
+                                    </td>
+
+                                {% elif key == "Admin" %}
+                                    <td class="bx-center">
+                                        {% if value %}
+                                            <i class='bx bx-check'></i>
+
+                                        {% else %}
+                                            <i class='bx bx-x bx-check-x'></i>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                {% elif key == "Active" %}
+                                    <td class="bx-center">
+                                        {% if value %}
+                                            <i class='bx bx-check'></i>
+
+                                        {% else %}
+                                            <i class='bx bx-x bx-xx'></i>
+
+                                        {% endif %}
+
+                                    </td>
+
+                                {% else %}
+                                    <td>{{value}}</td>
+
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% elif data.0.template_type == 'template::exams' %}
+        <table>
+            <thead>
+                <tr>
+                    {% for title in data.0.keys %}
+                        {% if title != "template_type" and title != "UserID" %}
+                            <th>{{title}}</th>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        {% for key, value in item.items %}
+                            {% if value != "template::exams" %}
+                                <td class="set-text-to-center">
+                                    {% if key == "ID" %}
+                                        <a href="{% url 'detailed-history' value.1 %}">{{value.0}}</a>
+
+                                    {% elif key == "User" %}
+                                        <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
+
+                                    {% else %}
+                                        {{value}}
+
+                                    {% endif %}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    {% elif data.0.template_type == 'template::programmes' %}
+        <table>
+            <thead>
+                <tr>
+                    {% for title in data.0.keys %}
+                        {% if title != "template_type" %}
+                            <th>{{title}}</th>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        {% for key, value in item.items %}
+                            {% if value != "template::programmes" %}
+                                <td class="set-text-to-center">
+                                    {% if key == "ID" %}
+                                        <a href="">{{value}}</a>
+
+                                    {% else %}
+                                        {{value}}
+
+                                    {% endif %}
+                                </td>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% elif data.0.template_type == 'template::subjects' %}
+            <table>
+                <thead>
+                    <tr>
+                        {% for title in data.0.keys %}
+                            {% if title != "template_type" %}
+                                <th>{{title}}</th>
+                            {% endif %}
+                        {% endfor %}
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for item in data %}
+                        <tr>
+                            {% for key, value in item.items %}
+                                {% if value != "template::subjects" %}
+                                    {% if key == "ID" %}
+                                        <td>
+                                            <a href="">{{value}}</a>
+                                        </td>
+
+                                    {% else %}
+                                        <td class="set-text-to-center">{{value}}</td>
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            {% elif data.0.template_type == 'template::questions' %}
+                <link rel="stylesheet" href="{% static 'css/admin/QuestionTable.css' %}">
+                <table>
+                    <thead>
+                        <tr>
+                            {% for title in data.0.keys %}
+                                {% if title != "template_type" %}
+                                    <th>{{title}}</th>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                {% for key, value in item.items %}
+                                    {% if value != "template::questions" %}
+                                        {% if key == "ID" %}
+                                            <td>
+                                                <a href="edit-question/{{value}}">{{value}}</a>
+                                            </td>
+
+                                        {% else %}
+                                            <td class="set-text-to-center">{{value}}</td>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% elif data.0.template_type == 'template::change-password' %}
+                <link rel="stylesheet" href="{% static 'css/admin/change-password.css' %}">
+
+                <div class="input-groups">
+                    <form action="#" method="POST">
+                        {% csrf_token %}
+
+                        <div class="input-group">
+                            <input type="password" placeholder="Old Password" name="old_password">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" placeholder="New Password" name="new_password1">
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" placeholder="Confirm New Password" name="new_password2">
+                        </div>
+
+                        <input type="submit" value="Change Password">
+                    </form>
+                </div>
+
+            {% elif data.0.template_type == 'template::edit-question' or data.0.template_type == 'template::add-new-question' %}
+                <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+                <div class="input-groups">
+                    <form action="#" method="POST">
+                        {% csrf_token %}
+
+                        {% for key, value in data.0.items %}
+                            {% if key != 'template_type' %}
+                                {% if key == 'Title' %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+                                            <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
+                                            <small class="{{key}}-error"></small>
+                                        </div>
+                                    </div>
+
+                                    {% elif key == 'ID' %}
+                                    <div class="row id-row">
+                                        <p>{{value}}</p>
+                                    </div>
+
+                                    {% else %}
+                                        <div class="row">
+                                            <div class="row-left-container">
+                                                <label for="{{key}}">{{key}} :</label>
+                                            </div>
+
+                                            <div class="row-right-container">
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                                                <small class="{{key}}-error"></small>
+                                            </div>
+                                        </div>
+
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+
+            {% elif data.0.template_type == 'template::edit-user' %}
+                <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+                <div class="input-groups">
+                    <form action="#" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+
+                        {% for key, value in data.0.items %}
+                            {% if key != 'template_type' %}
+                                {% if key == 'ID' %}
+                                    <div class="row id-row">
+                                        <p>{{value}}</p>
+                                    </div>
+
+                                {% elif key == 'DOB' %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-date-container">
+                                            <input type="date" value="{{value}}" name="DOB">
+                                        </div>
+                                    </div>
+
+                                {% elif key == 'ProfileImage' %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+                                            <div class="upload-profile-image-div">
+                                                <img src="{{value.url}}" alt="" class="user-image">
+                                                <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                {% else %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+
+                                            {% if key == 'Member Since' %}
+                                                <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                            {% else %}
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                            {% endif %}
+
+                                        </div>
+                                    </div>
+
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+
+                        <button type="submit">Save</button>
+                    </form>
+                </div>
+
+                <script src="{% static 'js/admin/change-user.js' %}"></script>
+
+    {% else %}
+
+    {% endif %}
+</div>
+
+<script src="{% static 'js/admin/index.js' %}"></script>
+
+{% endblock %}

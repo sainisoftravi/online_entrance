@@ -5,15 +5,12 @@ from django.http import Http404
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
-from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth import authenticate, login, logout
-from .models import Programme, Subject, Questions, CustomUser, Results, ResultDetails, FeedBack
+from django.contrib.auth import update_session_auth_hash, get_user_model
+from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, FeedBack
 
 
 def SignUp(request):
-    if request.user.is_superuser:
-        return redirect('/admin')
-
     conditions = {
         'login': False
     }
@@ -64,7 +61,7 @@ def Login(request):
     redirect_url = request.session.get('next')
 
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     if request.user.id is None:
         conditions = {
@@ -85,7 +82,7 @@ def Login(request):
                     request.session.set_expiry(0)
 
                 if user.is_superuser:
-                    return redirect('/admin')
+                    return redirect('getUserDetails')
 
                 if redirect_url:
                     del request.session['next'] # Clear the session variable
@@ -115,7 +112,7 @@ def Index(request):
     }
 
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     elif request.method == 'POST':
         name = request.POST['contact-name']
@@ -147,7 +144,7 @@ def TakeModelTest(request, program):
     global values
 
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     values = []
     programme = Programme.objects.filter(Name=program)[0]
@@ -176,7 +173,7 @@ def TakeModelTest(request, program):
 
 def ProgramSelector(request):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     if request.user.is_authenticated:
         allPrograms = []
@@ -194,7 +191,7 @@ def ProgramSelector(request):
 
 def UpdateProfile(request):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.ProfileImage = request.FILES['uploaded-profile-image']
@@ -207,7 +204,7 @@ def UpdateProfile(request):
 
 def UpdatePassword(request):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
@@ -232,7 +229,7 @@ def Logout(request):
 
 def DeleteAccount(request):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.is_active = False
@@ -251,7 +248,7 @@ def GetResult(request):
 
     if request.method == 'POST':
         UserObj = CustomUser.objects.get(id=request.user.id)
-        ResultObj = Results(UserID=UserObj, ProgrammeName=values[0]['program'])
+        ResultObj = Exams(UserID=UserObj, ProgrammeName=values[0]['program'])
         ResultObj.save()
 
         QuestionNumber = [int(choice.split()[-1]) - 1 for choice in request.POST.keys() if choice.startswith('choices')]
@@ -305,7 +302,12 @@ def DetailedHistory(request, slug):
         return redirect('login')
 
     values = []
-    Result = Results.objects.filter(Slug=slug, UserID=request.user).first()
+
+    if request.user.is_superuser:
+        Result = Exams.objects.filter(Slug=slug).first()
+
+    else:
+        Result = Exams.objects.filter(Slug=slug, UserID=request.user).first()
 
     if Result is None:
         raise Http404('Result Not Found')
@@ -342,7 +344,7 @@ def DetailedHistory(request, slug):
 
 def Dashboard(request):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     return GoTo(request, 'dashboard')
 
@@ -350,7 +352,7 @@ def Dashboard(request):
 def GetHistories(id):
     results = []
 
-    for counter, result in enumerate(Results.objects.filter(UserID=id)):
+    for counter, result in enumerate(Exams.objects.filter(UserID=id)):
         res = {
             'Date': result.Date,
             'Slug': result.Slug,
@@ -365,7 +367,7 @@ def GetHistories(id):
 
 def GoTo(request, redirect_to):
     if request.user.is_superuser:
-        return redirect('/admin')
+        return redirect('getUserDetails')
 
     data = dict()
     data['redirect_to'] = redirect_to
@@ -387,7 +389,7 @@ def GoTo(request, redirect_to):
 
 def GetGraphsData(id):
     values = dict()
-    results = Results.objects.filter(UserID=id)
+    results = Exams.objects.filter(UserID=id)
 
     correct_answers = []
     incorrect_answers = []
@@ -468,3 +470,256 @@ def GetSpecificQuestions(request, programme, subject):
         values.append(details)
 
     return render(request, 'ModelTest.html', {'questions': values})
+
+
+def GetUserLists(request):
+    userDetails = []
+
+    for user in CustomUser.objects.all():
+        id = user.id
+        dob = user.DOB
+        email = user.email
+        gender = user.Gender
+        password = user.password
+        memberSince = user.MemberSince
+        is_user_active = user.is_active
+        is_user_super = user.is_superuser
+        profileImagePath = user.ProfileImage
+
+        if dob is None:
+            dob = '-'
+
+        if gender is None:
+            gender = '-'
+
+        else:
+            gender = gender[0].upper()
+
+        userDetails.append(
+            {
+                'ID': id,
+                'Email': email,
+                'DOB': dob,
+                'Gender': gender,
+                'Profile Image': profileImagePath,
+                'Password': password,
+                'Member Since': memberSince,
+                'template_type': 'template::users',
+                'Admin': is_user_super,
+                'Active': is_user_active,
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': userDetails})
+
+
+def GetExamsLists(request):
+    exam_details = []
+    exams = Exams.objects.all()
+
+    for exam in exams:
+        id = exam.ID
+        user = exam.UserID,
+        programme_name = exam.ProgrammeName
+        correct_counter = exam.CorrectCounter
+        date = exam.Date
+
+        exam_details.append(
+            {
+                'ID': (id, exam.Slug),
+                'User': (user[0].email, user[0].id),
+                'Programme Name': programme_name,
+                'Total Correct Answered': correct_counter,
+                'Date': date,
+                'template_type': 'template::exams'
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': exam_details})
+
+
+def GetProgrammeLists(request):
+    programmeLists = []
+
+    for programme in Programme.objects.all():
+        id = programme.ID
+        name = programme.Name
+
+        programmeLists.append(
+            {
+                'ID': id,
+                'Name': name,
+                'template_type': 'template::programmes',
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': programmeLists})
+
+
+def GetSubjectLists(request):
+    subjectLists = []
+
+    for subject in Subject.objects.all():
+        id = subject.ID
+        name = subject.Name
+        programmeName = subject.ProgrammeID.Name
+
+        subjectLists.append(
+            {
+                'ID': id,
+                'Programme Name': programmeName,
+                'Subject Name': name,
+                'Total Questions To Select': subject.TotalQuestionsToSelect,
+                'template_type': 'template::subjects',
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': subjectLists})
+
+
+def GetQuestionLists(request):
+    questionsLists = []
+
+    for question in Questions.objects.all():
+        id = question.ID
+        title = question.Title
+        answer = question.Answer
+        OptionOne = question.OptionOne
+        OptionTwo = question.OptionTwo
+        OptionThree = question.OptionThree
+        OptionFour = question.OptionFour
+        subjectName = question.SubjectID.Name
+
+        questionsLists.append(
+            {
+                'ID': id,
+                'Subject Name': subjectName,
+                'Title': title,
+                'Answer': answer,
+                'Option One': OptionOne,
+                'Option Two': OptionTwo,
+                'Option Three': OptionThree,
+                'Option Four': OptionFour,
+                'template_type': 'template::questions',
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': questionsLists})
+
+
+def AdminChangePassword(request):
+    data = [
+        {
+            'template_type': 'template::change-password'
+        }
+    ]
+
+    if request.method == 'POST':
+        old_password = request.POST['old_password']
+        new_password = request.POST['new_password1']
+
+        user = get_user_model().objects.get(email=request.user)
+
+        if user.check_password(old_password):
+            user.set_password(new_password)
+            user.save()
+
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Password Changed Successfully')
+
+        else:
+            messages.error(request, 'Old Password did not match')
+
+    return render(request, 'admin/index.html', {'data': data})
+
+
+def EditQuestions(request, id):
+    question = Questions.objects.filter(ID=id).first()
+
+    if request.method == 'POST':
+        question.Title = request.POST['Title']
+        question.Answer = request.POST['Answer']
+        question.OptionOne = request.POST['Option One']
+        question.OptionTwo = request.POST['Option Two']
+        question.OptionThree = request.POST['Option Three']
+        question.OptionFour = request.POST['Option Four']
+
+        question.save()
+
+        messages.success(request, 'Edit Successful')
+
+    data = [
+        {
+            'ID': question.ID,
+            'Title': question.Title,
+            'Answer': question.Answer,
+            'Option One': question.OptionOne,
+            'Option Two': question.OptionTwo,
+            'Option Three': question.OptionThree,
+            'Option Four': question.OptionFour,
+            'template_type': 'template::edit-question',
+        }
+    ]
+
+    return render(request, 'admin/index.html', {'data': data})
+
+
+def EditUsers(request, id):
+    user = CustomUser.objects.filter(id=id).first()
+
+    if request.method == 'POST':
+        user.email = request.POST['Email']
+
+        if user.Gender is not None:
+            user.Gender = request.POST['Gender']
+
+        if user.DOB is not None:
+            user.DOB = datetime.datetime.strptime(request.POST['DOB'], '%Y-%m-%d').date()
+
+        if 'uploaded-profile-image' in request.FILES:
+            user.ProfileImage = request.FILES['uploaded-profile-image']
+
+        user.save()
+
+        messages.success(request, 'Edit Successful')
+
+    data = [
+        {
+            'ID': user.id,
+            'Email': user.email,
+            'Gender': user.Gender if user.Gender else '-',
+            'DOB': user.DOB.strftime("%Y-%m-%d") if user.DOB else '-',
+            'ProfileImage': user.ProfileImage,
+            'Member Since': str(user.MemberSince).split('+')[0][:-3],
+            'template_type': 'template::edit-user',
+        }
+    ]
+
+    return render(request, 'admin/index.html', {'data': data})
+
+def AddNewQuestion(request):
+    if request.method == 'POST':
+        question = Questions()
+        question.Title = request.POST['Title']
+        question.Answer = request.POST['Answer']
+        question.OptionOne = request.POST['Option One']
+        question.OptionTwo = request.POST['Option Two']
+        question.OptionThree = request.POST['Option Three']
+        question.OptionFour = request.POST['Option Four']
+
+        question.save()
+        messages.success(request, 'Question Added Successful')
+
+    data = [
+        {
+            'Title': '',
+            'Answer': '',
+            'Option One': '',
+            'Option Two': '',
+            'Option Three': '',
+            'Option Four': '',
+            'template_type': 'template::add-new-question',
+        }
+    ]
+
+    return render(request, 'admin/index.html', {'data': data})

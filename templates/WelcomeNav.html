@@ -18,12 +18,14 @@
             </div>
 
             <div class="right-panel">
-                <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
+                    {% if request.user.is_superuser is False %}
+                        <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
+                    {% endif %}
 
-                <a href="{% url 'go_to' 'dashboard' %}">
-                    <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
-                </a>
-            </div>
+                    <a href="{% url 'go_to' 'dashboard' %}">
+                        <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
+                    </a>
+                </div>
 
             <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
                 <i class='bx bx-log-out-circle'></i>

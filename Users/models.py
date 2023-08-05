@@ -304,5 +304,18 @@ class FeedBack(models.Model):
             blank=False
         )
 
+    IsMarked = models.BooleanField(
+            null=False,
+            blank=False,
+            default=False
+        )
+
+    Date = models.DateTimeField(
+                null=False,
+                blank=False,
+                default=now,
+                editable=False
+            )
+
     def __str__(self):
         return str(self.ID)

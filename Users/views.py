@@ -697,9 +697,11 @@ def EditUsers(request, id):
 
     return render(request, 'admin/index.html', {'data': data})
 
+
 def AddNewQuestion(request):
     if request.method == 'POST':
         question = Questions()
+
         question.Title = request.POST['Title']
         question.Answer = request.POST['Answer']
         question.OptionOne = request.POST['Option One']
@@ -723,3 +725,56 @@ def AddNewQuestion(request):
     ]
 
     return render(request, 'admin/index.html', {'data': data})
+
+
+def GetFeedbackLists(request):
+    feedbackLists = []
+    feedbacks = FeedBack.objects.all()
+
+    for feedback in feedbacks:
+        data = {
+                'ID': feedback.ID,
+                'Name': feedback.Name,
+                'Email': feedback.Email,
+                'Message': feedback.Message,
+                'Date': feedback.Date,
+                'Completed': feedback.IsMarked,
+                'template_type': 'template::feedbacks',
+            }
+
+        feedbackLists.append(data)
+
+    return render(request, 'admin/index.html', {'data': feedbackLists})
+
+
+def EditFeedback(request, id):
+    feedback = FeedBack.objects.filter(ID=id).first()
+
+    if request.method == 'POST':
+        feedback.Name = request.POST['Name']
+        feedback.Email = request.POST['Email']
+        feedback.Message = request.POST['Message']
+
+        feedback.save()
+
+    data = [
+        {
+            'ID': feedback.ID,
+            'Name': feedback.Name,
+            'Email': feedback.Email,
+            'Message': feedback.Message,
+            'Date': feedback.Date,
+            'IsMarked': feedback.IsMarked,
+            'template_type': 'template::edit-feedbacks',
+        }
+    ]
+
+    return render(request, 'admin/index.html', {'data': data})
+
+
+def MarkFeedBack(request, id):
+    feedback = FeedBack.objects.filter(ID=id).first()
+    feedback.IsMarked = True
+    feedback.save()
+
+    return redirect('edit-feedback', id=id)

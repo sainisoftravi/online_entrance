@@ -1,6 +1,11 @@
-td:nth-child(3),
-td:nth-child(7){
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(5){
     white-space:nowrap;
+}
+
+.bx-center{
+    text-align: center;
 }
 
 .bx-check,
@@ -18,17 +23,4 @@ td:nth-child(7){
 
 .bx-x{
     background-color: #dd4a4a;
-}
-
-.bx-center,
-td:nth-child(2),
-td:nth-child(3),
-td:nth-child(4),
-td:nth-child(5),
-td:nth-child(10){
-    text-align: center;
-}
-
-td:nth-child(1){
-white-space:nowrap;
 }

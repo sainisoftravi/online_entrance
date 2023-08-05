@@ -308,6 +308,18 @@
                                         <p>{{value}}</p>
                                     </div>
 
+                                {% elif key == 'Email' or key == 'Gender' %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                                            <small class="{{key}}-error"></small>
+                                        </div>
+                                    </div>
+
                                 {% elif key == 'DOB' %}
                                     <div class="row">
                                         <div class="row-left-container">
@@ -340,14 +352,7 @@
                                         </div>
 
                                         <div class="row-right-container">
-
-                                            {% if key == 'Member Since' %}
-                                                <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                            {% else %}
-                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-
-                                            {% endif %}
+                                            <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" {% if key == 'Member Since' %} readonly {% endif %}>
 
                                         </div>
                                     </div>
@@ -362,8 +367,115 @@
 
                 <script src="{% static 'js/admin/change-user.js' %}"></script>
 
-    {% else %}
+                {% elif data.0.template_type == 'template::feedbacks' %}
+                    <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
 
+                    <table>
+                        <thead>
+                            <tr>
+                                {% for title in data.0.keys %}
+                                    {% if title != "template_type" %}
+                                        <th>{{title}}</th>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for item in data %}
+                                <tr>
+                                    {% for key, value in item.items %}
+                                        {% if value != "template::feedbacks" %}
+                                            {% if key == "ID" %}
+                                                <td>
+                                                    <a href="edit-feedback/{{value}}">{{value}}</a>
+                                                </td>
+
+                                            {% elif key == "Completed" %}
+                                                <td class="bx-center">
+                                                    {% if value %}
+                                                        <i class='bx bx-check'></i>
+
+                                                    {% else %}
+                                                        <i class='bx bx-x bx-check-x'></i>
+
+                                                    {% endif %}
+                                                </td>
+
+                                            {% else %}
+                                                <td class="set-text-to-center">{{value}}</td>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+
+                {% elif data.0.template_type == 'template::edit-feedbacks' %}
+                    <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+                    <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
+
+                    <div class="input-groups">
+                        <form action="#" method="POST">
+                            {% csrf_token %}
+
+                            {% for key, value in data.0.items %}
+                                {% if key != 'template_type' and key != 'IsMarked' %}
+                                    {% if key == 'Message' %}
+                                        <div class="row">
+                                            <div class="row-left-container">
+                                                <label for="{{key}}">{{key}} :</label>
+                                            </div>
+
+                                            <div class="row-right-container">
+                                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
+                                                <small class="{{key}}-error"></small>
+                                            </div>
+                                        </div>
+
+                                    {% elif key == 'ID' %}
+                                        <div class="row id-row">
+                                            <p>{{value}}</p>
+                                        </div>
+
+                                    {% else %}
+                                        <div class="row">
+                                            <div class="row-left-container">
+                                                <label for="{{key}}">{{key}} :</label>
+                                            </div>
+
+                                            <div class="row-right-container">
+                                                {% if key == 'Date'%}
+                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                                {% else %}
+                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                                {% endif %}
+
+                                                <small class="{{key}}-error"></small>
+                                            </div>
+                                        </div>
+
+                                    {% endif %}
+                                {% endif %}
+                            {% endfor %}
+
+                            <div class="buttons">
+                                <button type="submit">Save</button>
+
+                                {% if data.0.IsMarked %}
+                                    <a href="#" class="FeedbackMarked">Marked</a>
+
+                                {% else %}
+                                    <a href="{% url 'mark-feedback' data.0.ID %}">Marks As Read</a>
+
+                                {% endif %}
+
+                            </div>
+                        </form>
+                    </div>
     {% endif %}
 </div>
 

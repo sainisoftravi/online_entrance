@@ -5,11 +5,9 @@
 }
 
 .side-bar{
-    gap: 22px;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     background-color: rgb(80, 33, 155);
 }
 

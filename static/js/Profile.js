@@ -1,14 +1,32 @@
 changeProfileForm = document.getElementById('changeProfileForm');
 successMessageDiv = document.querySelector('.success-message-div');
 changeProfileButton = document.getElementById('changeProfileButton');
+var profile_image_error = document.querySelector('.profile-image-error');
+
 
 setTimeout(function() {
     $(successMessageDiv).fadeOut('fast');
-}, 1500); // <-- time in milliseconds
+}, 1500);
+
 
 changeProfileButton.addEventListener('change', () => {
+    imageExtension = ['jpg', 'jpeg', 'png'];
+    extension = changeProfileButton.files[0]['name'].split('.')[1];
+
+    if(!imageExtension.includes(extension)){
+        console.log('Error shown');
+        changeProfileButton.value = null;
+        profile_image_error.classList.add('show-error');
+
+        setTimeout(function() {
+            $(profile_image_error).removeClass('show-error');
+
+        }, 2000);
+    }
+
     if(changeProfileButton.files.length != 0){
         changeProfileForm.submit();
+        profile_image_error.classList.remove('show-error');
     }
 });
 

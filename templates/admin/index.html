@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="{% static 'css/admin/index.css' %}">
 <link rel="stylesheet" href="{% static 'css/admin/table.css' %}">
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 {% include 'admin/side-bar.html' %}
 
@@ -295,6 +296,7 @@
                 </div>
 
             {% elif data.0.template_type == 'template::edit-user' %}
+                <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
                 <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
 
                 <div class="input-groups">
@@ -341,6 +343,7 @@
                                             <div class="upload-profile-image-div">
                                                 <img src="{{value.url}}" alt="" class="user-image">
                                                 <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                                                <small class="profile-image-error">Invalid image file</small>
                                             </div>
                                         </div>
                                     </div>

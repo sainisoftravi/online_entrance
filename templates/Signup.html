@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <div class="outer-container">
     <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
@@ -89,6 +90,7 @@
                         <p>Profile</p>
                         <img src="{% static 'pp-female.jpg' %}" alt="" class="user-image">
                         <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                        <small class="profile-image-error">Invalid image file</small>
                     </div>
 
                     <div class="form-item submit-btn signup-submit-btn">

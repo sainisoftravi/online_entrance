@@ -61,7 +61,7 @@ def Login(request):
     redirect_url = request.session.get('next')
 
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     if request.user.id is None:
         conditions = {
@@ -82,7 +82,7 @@ def Login(request):
                     request.session.set_expiry(0)
 
                 if user.is_superuser:
-                    return redirect('getUserDetails')
+                    return redirect('AdminIndex')
 
                 if redirect_url:
                     del request.session['next'] # Clear the session variable
@@ -112,7 +112,7 @@ def Index(request):
     }
 
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     elif request.method == 'POST':
         name = request.POST['contact-name']
@@ -144,7 +144,7 @@ def TakeModelTest(request, program):
     global values
 
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     values = []
     programme = Programme.objects.filter(Name=program)[0]
@@ -173,7 +173,7 @@ def TakeModelTest(request, program):
 
 def ProgramSelector(request):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     if request.user.is_authenticated:
         allPrograms = []
@@ -191,7 +191,7 @@ def ProgramSelector(request):
 
 def UpdateProfile(request):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.ProfileImage = request.FILES['uploaded-profile-image']
@@ -204,7 +204,7 @@ def UpdateProfile(request):
 
 def UpdatePassword(request):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
@@ -229,7 +229,7 @@ def Logout(request):
 
 def DeleteAccount(request):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.is_active = False
@@ -344,7 +344,7 @@ def DetailedHistory(request, slug):
 
 def Dashboard(request):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     return GoTo(request, 'dashboard')
 
@@ -367,7 +367,7 @@ def GetHistories(id):
 
 def GoTo(request, redirect_to):
     if request.user.is_superuser:
-        return redirect('getUserDetails')
+        return redirect('AdminIndex')
 
     data = dict()
     data['redirect_to'] = redirect_to

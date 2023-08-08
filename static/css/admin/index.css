@@ -47,3 +47,8 @@
 .success-message{
     background-color: #01987a;
 }
+
+input[readonly],
+textarea[readonly]{
+    pointer-events: none;
+}

@@ -27,4 +27,8 @@ table thead th {
     top: 0;
     left: 0;
     position: sticky;
-  }
+}
+
+td:nth-child(1){
+    text-align: center;
+}

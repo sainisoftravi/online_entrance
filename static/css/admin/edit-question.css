@@ -44,6 +44,7 @@ form{
 textarea{
     width: 100%;
     resize: none;
+    margin-bottom: 3px;
 }
 
 .id-row{
@@ -104,25 +105,37 @@ input[type=file]::file-selector-button {
     transition: .5s;
   }
 
-  input[type=file]::file-selector-button:hover {
+input[type=file]::file-selector-button:hover {
     background-color: #eee;
     border: 0px;
     border-right: 1px solid #e5e5e5;
-  }
+}
 
-  .row-right-date-container{
+.row-right-date-container{
     width: 50%;
     display: flex;
     position: relative;
     align-items: center;
-  }
+}
 
-  .row-right-date-container label{
+.row-right-date-container label{
     right: 0;
     padding: 0;
     position: absolute;
-  }
+}
 
-  .row-right-date-container i{
+.row-right-date-container i{
     font-size: 30px;
-  }
+}
+
+.row-right-container input{
+    margin-bottom: 3px;
+}
+
+#select-gender{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+}

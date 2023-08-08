@@ -66,12 +66,7 @@ function changePassword(){
         newPasswordAgainError.classList.add('show-error');
     }
 
-    else{
-        success = true;
-        newPasswordError.classList.remove('show-error');
-    }
-
-    if(newPassword != newPasswordAgain){
+    else if(newPassword != newPasswordAgain){
         success = false;
         newPasswordAgainError.innerText = 'New Passwords did not match';
         newPasswordAgainError.classList.add('show-error');

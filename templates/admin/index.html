@@ -227,22 +227,27 @@
                 </table>
 
             {% elif data.0.template_type == 'template::change-password' %}
+                <script src="{% static 'js/admin/changePassword.js' %}"></script>
+                <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
                 <link rel="stylesheet" href="{% static 'css/admin/change-password.css' %}">
 
                 <div class="input-groups">
-                    <form action="#" method="POST">
+                    <form onsubmit="return changePassword();" action="#" method="POST">
                         {% csrf_token %}
 
                         <div class="input-group">
                             <input type="password" placeholder="Old Password" name="old_password">
+                            <small class="old-password-error">This field must not be empty</small>
                         </div>
 
                         <div class="input-group">
                             <input type="password" placeholder="New Password" name="new_password1">
+                            <small class="new-password-error">This field must not be empty</small>
                         </div>
 
                         <div class="input-group">
                             <input type="password" placeholder="Confirm New Password" name="new_password2">
+                            <small class="new-password-again-error">This field must not be empty</small>
                         </div>
 
                         <input type="submit" value="Change Password">
@@ -250,10 +255,12 @@
                 </div>
 
             {% elif data.0.template_type == 'template::edit-question' or data.0.template_type == 'template::add-new-question' %}
+                <script src="{% static 'js/admin/edit-question.js' %}"></script>
+                <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
                 <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
 
                 <div class="input-groups">
-                    <form action="#" method="POST">
+                    <form onsubmit="return validateForm();" action="#" method="POST">
                         {% csrf_token %}
 
                         {% for key, value in data.0.items %}
@@ -266,7 +273,7 @@
 
                                         <div class="row-right-container">
                                             <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
-                                            <small class="{{key}}-error"></small>
+                                            <small class="{{key}}-error">This file must not be empty</small>
                                         </div>
                                     </div>
 
@@ -283,7 +290,7 @@
 
                                             <div class="row-right-container">
                                                 <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-                                                <small class="{{key}}-error"></small>
+                                                <small class="{{key}}-error">This file must not be empty</small>
                                             </div>
                                         </div>
 
@@ -304,20 +311,49 @@
                         {% csrf_token %}
 
                         {% for key, value in data.0.items %}
-                            {% if key != 'template_type' %}
+                            {% if key != 'template_type' and key != 'is_superuser' %}
                                 {% if key == 'ID' %}
                                     <div class="row id-row">
                                         <p>{{value}}</p>
                                     </div>
 
-                                {% elif key == 'Email' or key == 'Gender' %}
+                                {% elif key == 'Email' %}
                                     <div class="row">
                                         <div class="row-left-container">
                                             <label for="{{key}}">{{key}} :</label>
                                         </div>
 
                                         <div class="row-right-container">
-                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                                            {% if data.0.is_superuser %}
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                            {% else %}
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                            {% endif %}
+
+                                            <small class="{{key}}-error"></small>
+                                        </div>
+                                    </div>
+
+                                {% elif key == 'Gender' %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+                                            {% if data.0.is_superuser %}
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                            {% else %}
+                                                <select name="{{key}}" id="select-gender">
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Others">Others</option>
+                                                </select>
+                                            {% endif %}
+
                                             <small class="{{key}}-error"></small>
                                         </div>
                                     </div>
@@ -328,9 +364,18 @@
                                             <label for="{{key}}">{{key}} :</label>
                                         </div>
 
-                                        <div class="row-right-date-container">
-                                            <input type="date" value="{{value}}" name="DOB">
+                                        <div class="row-right-container">
+                                            {% if data.0.is_superuser %}
+                                                <input type="date" value="{{value}}" name="DOB" readonly>
+
+                                            {% else %}
+                                                <input type="date" value="{{value}}" name="DOB">
+
+                                            {% endif %}
+
+                                            <small class="{{key}}-error"></small>
                                         </div>
+
                                     </div>
 
                                 {% elif key == 'ProfileImage' %}
@@ -356,19 +401,31 @@
 
                                         <div class="row-right-container">
                                             <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" {% if key == 'Member Since' %} readonly {% endif %}>
-
                                         </div>
+
+                                        <small class="{{key}}-error"></small>
                                     </div>
 
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
 
-                        <button type="submit">Save</button>
+                        {% if data.0.is_superuser %}
+                            <script>
+                                is_superuser = true;
+                            </script>
+
+                        {% else %}
+                            <script>
+                                is_superuser = false;
+                            </script>
+
+                        {% endif %}
+
+                        <script src="{% static 'js/admin/change-user.js' %}"></script>
+                        <button type="submit" onclick="return validateForm()">Save</button>
                     </form>
                 </div>
-
-                <script src="{% static 'js/admin/change-user.js' %}"></script>
 
                 {% elif data.0.template_type == 'template::feedbacks' %}
                     <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
@@ -432,7 +489,7 @@
                                             </div>
 
                                             <div class="row-right-container">
-                                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
+                                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
                                                 <small class="{{key}}-error"></small>
                                             </div>
                                         </div>
@@ -449,14 +506,7 @@
                                             </div>
 
                                             <div class="row-right-container">
-                                                {% if key == 'Date'%}
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                                {% else %}
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-
-                                                {% endif %}
-
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
                                                 <small class="{{key}}-error"></small>
                                             </div>
                                         </div>
@@ -466,13 +516,11 @@
                             {% endfor %}
 
                             <div class="buttons">
-                                <button type="submit">Save</button>
-
                                 {% if data.0.IsMarked %}
                                     <a href="#" class="FeedbackMarked">Marked</a>
 
                                 {% else %}
-                                    <a href="{% url 'mark-feedback' data.0.ID %}">Marks As Read</a>
+                                    <a href="{% url 'mark-feedback' data.0.ID %}">Mark As Read</a>
 
                                 {% endif %}
 

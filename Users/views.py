@@ -593,7 +593,8 @@ def GetQuestionLists(request):
         questionsLists.append(
             {
                 'ID': id,
-                'Subject Name': subjectName,
+                'Subject': subjectName,
+                'Programme': question.SubjectID.ProgrammeID.Name,
                 'Title': title,
                 'Answer': answer,
                 'Option One': OptionOne,
@@ -661,6 +662,9 @@ def EditQuestions(request, id):
         }
     ]
 
+    if request.method == "POST":
+        return redirect('edit-question', id=question.ID)
+
     return render(request, 'admin/index.html', {'data': data})
 
 
@@ -692,8 +696,12 @@ def EditUsers(request, id):
             'ProfileImage': user.ProfileImage,
             'Member Since': str(user.MemberSince).split('+')[0][:-3],
             'template_type': 'template::edit-user',
+            'is_superuser': user.is_superuser,
         }
     ]
+
+    if request.method == 'POST':
+        return redirect('edit-user', id=id)
 
     return render(request, 'admin/index.html', {'data': data})
 

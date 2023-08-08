@@ -1,0 +1,39 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Admin</title>
+        <script src="{% static 'js/admin/login.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/admin/login.css' %}">
+        <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+        <link rel="icon" href='{% static "images/admin/icon.png" %}' type="image/icon type">
+
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="form-container">
+                <div class="login-image">
+                </div>
+
+                <form onsubmit="return validateForm()" action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+
+                    <div class="input-groups">
+                        <label id="email">Email address</label>
+                        <input type="text" id="email" name="email">
+                        <small class="email-error"></small>
+                    </div>
+
+                    <div class="input-groups">
+                        <label id="pass">Password</label>
+                        <input type="password" id="pass" name="new_password1">
+                        <small class="password-error"></small>
+                    </div>
+
+                    <button onclick="return validateForm()">Log In</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

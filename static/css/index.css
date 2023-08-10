@@ -1,6 +1,7 @@
-@font-face {
-    font-family: Courgette;
-    src: url("../fonts/Courgette-Regular.ttf");
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+:root{
+    --quote-font-family: "Courgette";
 }
 
 .show-success-feedback-message{
@@ -19,10 +20,10 @@
 .quote p{
     width: 50%;
     padding-top: 50px;
-    font-family: Courgette;
     text-align: center;
     font-size: 45px;
     color: #ECF9FF;
+    font-family: var(--quote-font-family);
 }
 
 .quote img{

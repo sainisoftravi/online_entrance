@@ -37,6 +37,7 @@
     width: 100%;
     display: flex;
     padding: 30px;
+    align-items: center;
     justify-content: space-around;
     border-bottom: 3px solid var(--separate-by-color);
 }
@@ -63,7 +64,8 @@ label {
 
 .inner-row-2,
 .inner-row-3,
-.inner-row-4{
+.inner-row-4,
+.inner-row-5{
     width: 100%;
     display: flex;
     align-items: center;
@@ -71,7 +73,7 @@ label {
     border-bottom: 3px solid var(--separate-by-color);
 }
 
-.inner-row-4{
+.inner-row-5{
     border-bottom: none;
 }
 

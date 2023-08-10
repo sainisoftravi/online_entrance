@@ -21,8 +21,6 @@
                 <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
 
                 <div class="row-1-details">
-                    <p class="user-email">{{ request.user.email }}</p>
-
                     <form action="{% url 'updateprofile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
                         {% csrf_token %}
 
@@ -35,16 +33,21 @@
             </div>
 
             <div class="inner-row-2">
+                <p class="left-text">Email</p>
+                <p class="right-text">{{ request.user.email }}</p>
+            </div>
+
+            <div class="inner-row-3">
                 <p id="gender-label" class="left-text">Gender</p>
                 <p class="right-text">{{ request.user.Gender.upper }}</p>
             </div>
 
-            <div class="inner-row-3">
+            <div class="inner-row-4">
                 <p class="left-text">DOB</p>
                 <p class="right-text">{{ request.user.DOB }}</p>
             </div>
 
-            <div class="inner-row-4">
+            <div class="inner-row-5">
                 <p class="left-text">Member Since</p>
                 <p class="right-text">{{ request.user.MemberSince }}</p>
             </div>

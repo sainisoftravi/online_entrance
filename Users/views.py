@@ -502,7 +502,6 @@ def GetUserLists(request):
                 'DOB': dob,
                 'Gender': gender,
                 'Profile Image': profileImagePath,
-                'Password': password,
                 'Member Since': memberSince,
                 'template_type': 'template::users',
                 'Admin': is_user_super,

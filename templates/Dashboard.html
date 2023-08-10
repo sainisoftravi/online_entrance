@@ -12,21 +12,43 @@
         <div class="left-container">
             <i class='bx bx-x'></i>
 
-            <a class='left-links' href="{% url 'go_to' 'dashboard' %}">
-                Dashboard
-            </a>
+            {% if to.redirect_to == 'dashboard' %}
+                <div class="left-links selected-left-link">
 
-            <a class='left-links' href="{% url 'go_to' 'profile' %}">
-                Profile
-                </a>
+            {% else %}
+                <div class="left-links">
 
-            <a class='left-links' href="{% url 'go_to' 'history' %}">
-                History
-            </a>
+            {% endif %}
+                <i class='bx bxs-dashboard' ></i>
+                <a href="{% url 'go_to' 'dashboard' %}">Dashboard</a>
+            </div>
 
-            <a href="{% url 'logout' %}" class="left-links logout-link">
-                Logout
-            </a>
+            {% if to.redirect_to == 'profile' %}
+                <div class="left-links selected-left-link">
+
+            {% else %}
+                <div class="left-links">
+
+            {% endif %}
+                <i class='bx bx-user'></i>
+                <a href="{% url 'go_to' 'profile' %}">Profile</a>
+            </div>
+
+            {% if to.redirect_to == 'history' %}
+                <div class="left-links selected-left-link">
+
+            {% else %}
+                <div class="left-links">
+
+            {% endif %}
+                <i class='bx bx-history' ></i>
+                <a href="{% url 'go_to' 'history' %}">History</a>
+            </div>
+
+            <div class="left-links">
+                <i class='bx bx-log-out'></i>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
 
         </div>
 

@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root{
+    --side-bar-font-family: "Nunito";
+}
+
 .dashboard-container{
     display: flex;
     min-width: 100wh;
@@ -6,39 +12,50 @@
 }
 
 .left-container{
-    gap: 20px;
-    width: 20%;
+    gap: 10px;
+    width: 15%;
     display: flex;
-    padding-top: 20px;
-    align-items: center;
     flex-direction: column;
-    background-color: rgba(212, 212, 212, 0.555);
+    background-color: #1f5d84;
+
 }
 
 .right-container{
     gap: 50px;
-    width: 80%;
+    width: 85%;
     display: flex;
     flex-direction: column;
     background-color: rgb(233, 233, 233);
 }
 
 .left-links{
-    width: 85%;
+    gap: 10px;
+    display: flex;
     padding: 20px;
-    font-size: 20px;
-    text-align: center;
-    color: whitesmoke;
-    border-radius: 10px;
     align-items: center;
-    text-decoration: none;
-    justify-content: center;
-    background-color: rgb(9, 59, 78);
 }
 
-.left-links:not(:last-child):hover{
-    background-color: rgb(22, 84, 109);
+.left-links a{
+    font-size: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: var(--side-bar-font-family);
 }
+
+.left-links i{
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.selected-left-link{
+    background-color: whitesmoke;
+}
+
+.selected-left-link a,
+.selected-left-link i{
+    color: black;
+}
+
 
 .pie-charts{
     display: flex;
@@ -73,14 +90,20 @@
     color: rgba(8, 0, 27, 0.692);
 }
 
-i.bx-menu,
-i.bx-x{
+i.bx-menu{
     display: none;
     font-size: 50px;
     font-weight: bolder;
     color: rgb(0, 0, 0);
 }
 
+i.bx-x{
+    width: 100%;
+    display: none;
+    font-size: 50px;
+    font-weight: bolder;
+    color: whitesmoke;
+}
 
 @media screen and (max-width: 1276px) {
     .pie-charts{

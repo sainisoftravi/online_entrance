@@ -8,16 +8,33 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(80, 33, 155);
+    background-color: #1f5d84;
 }
 
 .side-bar a{
-    padding: 30px;
-    font-size: 25px;
-    text-align: center;
-    align-self: stretch;
+    font-size: large;
     color: whitesmoke;
     text-decoration: none;
-    border-bottom: 1px solid white;
     font-family: var(--side-bar-font-family);
+}
+
+.side-bar-option{
+    gap: 5px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar-option i{
+    font-size: large;
+    color: whitesmoke;
+}
+
+.selected-side-bar-option{
+    background-color: whitesmoke;
+}
+
+.selected-side-bar-option a,
+.selected-side-bar-option i{
+    color: black;
 }

@@ -369,6 +369,9 @@ def GoTo(request, redirect_to):
     if request.user.is_superuser:
         return redirect('AdminIndex')
 
+    if redirect_to not in ['profile', 'history', 'dashboard']:
+        raise Http404
+
     data = dict()
     data['redirect_to'] = redirect_to
 

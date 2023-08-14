@@ -9,12 +9,17 @@
 
     <div class="form-outer-container">
         {% if login == False %}
+            <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+
             <div class="form-left signup-left-image">
             </div>
 
-            {% else %}
+        {% else %}
+            <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
             <div class="form-left login-left-image">
             </div>
+
         {% endif %}
 
         <div class="form-right">
@@ -149,13 +154,11 @@
 
 {% if login == False %}
     <script src="{% static 'js/signup.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
 
 {% else %}
     <script src="{% static 'js/login.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
-    {% endif %}
+{% endif %}
 
 <script src="{% static 'js/togglePassword.js' %}"></script>
 

@@ -852,7 +852,7 @@ def EditReports(request, id):
             'ID': reportedQuestion.ID,
             'User': reportedQuestion.UserID.email,
             'Issue': reportedQuestion.Issue,
-            'Question': reportedQuestion.QuestionID.Title,
+            'Question': (reportedQuestion.QuestionID, reportedQuestion.QuestionID.Title),
             'Date': reportedQuestion.Date,
             'Fixed': reportedQuestion.IsMarked,
             'template_type': 'template::edit-reports',

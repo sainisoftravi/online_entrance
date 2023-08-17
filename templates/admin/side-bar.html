@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{% static 'css/admin/side-bar.css' %}">
 
 <div class="side-bar">
-    {% if data.0.template_type == 'template::users' %}
+    {% if data.0.template_type == 'template::users' or data.0.template_type == 'template::edit-user' %}
         <div class="side-bar-option selected-side-bar-option">
 
     {% else %}
@@ -47,7 +47,7 @@
         <a href="{% url 'getSubjectDetails' %}" class="side-bar-items">Subject</a>
     </div>
 
-    {% if data.0.template_type == 'template::questions' %}
+    {% if data.0.template_type == 'template::questions' or data.0.template_type == 'template::edit-question' %}
         <div class="side-bar-option selected-side-bar-option">
 
     {% else %}
@@ -58,7 +58,18 @@
         <a href="{% url 'getQuestionDetails' %}" class="side-bar-items">Questions</a>
     </div>
 
-    {% if data.0.template_type == 'template::feedbacks' %}
+    {% if data.0.template_type == 'template::reports' or data.0.template_type == 'template::edit-reports' %}
+        <div class="side-bar-option selected-side-bar-option">
+
+    {% else %}
+        <div class="side-bar-option">
+
+    {% endif %}
+        <i class='bx bxs-flag-alt'></i>
+        <a href="{% url 'getReportsLists' %}" class="side-bar-items">Report</a>
+    </div>
+
+    {% if data.0.template_type == 'template::feedbacks' or data.0.template_type == 'template::edit-feedbacks' %}
         <div class="side-bar-option selected-side-bar-option">
 
     {% else %}

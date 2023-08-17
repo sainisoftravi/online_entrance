@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import update_session_auth_hash, get_user_model
-from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, FeedBack
+from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
 
 
 def SignUp(request):
@@ -321,6 +321,7 @@ def DetailedHistory(request, slug):
         userAnswer = res.UserAnswer
 
         details = {
+            'id': Question.ID,
             'checked': True,
             'choices': Choices,
             'title': Question.Title,
@@ -475,6 +476,43 @@ def GetSpecificQuestions(request, programme, subject):
     return render(request, 'ModelTest.html', {'questions': values})
 
 
+def ReportQuestions(request, id):
+    question = Questions.objects.filter(ID=id).first()
+
+    if request.method == 'POST':
+        reportQuestion = ReportQuestion(
+            UserID = request.user,
+            QuestionID = question,
+            Details = request.POST['message']
+        )
+
+        reportQuestion.save()
+
+        messages.success(request, 'Sent your report to the developer(s)')
+        return redirect('report-question-added', id=reportQuestion.ID)
+
+    data = {
+        'id': id,
+        'editable': True,
+        'title': question.Title
+    }
+
+    return render(request, 'ReportQuestion.html', {'data': data})
+
+
+def DisplayReportedQuestion(request, id):
+    reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
+
+    data = {
+        'editable': False,
+        'id': reportedQuestion.ID,
+        'Message': reportedQuestion.Issue,
+        'title': reportedQuestion.QuestionID.Title
+    }
+
+    return render(request, 'ReportQuestion.html', {'data': data})
+
+
 def GetUserLists(request):
     userDetails = []
 
@@ -483,7 +521,6 @@ def GetUserLists(request):
         dob = user.DOB
         email = user.email
         gender = user.Gender
-        password = user.password
         memberSince = user.MemberSince
         is_user_active = user.is_active
         is_user_super = user.is_superuser
@@ -577,6 +614,31 @@ def GetSubjectLists(request):
         )
 
     return render(request, 'admin/index.html', {'data': subjectLists})
+
+
+def GetReportsLists(request):
+    reportsLists = []
+
+    for report in ReportQuestion.objects.all():
+        id = report.ID
+        user = report.UserID
+        issue = report.Issue
+        questionID = report.QuestionID
+        date = report.Date
+
+        reportsLists.append(
+            {
+                'ID': id,
+                'User': (user.email, user.id),
+                'Question': (questionID.Title, questionID.ID),
+                'Issue': issue,
+                'Date': date,
+                'Fixed': report.IsMarked,
+                'template_type': 'template::reports'
+            }
+        )
+
+    return render(request, 'admin/index.html', {'data': reportsLists})
 
 
 def GetQuestionLists(request):
@@ -780,6 +842,32 @@ def EditFeedback(request, id):
     ]
 
     return render(request, 'admin/index.html', {'data': data})
+
+
+def EditReports(request, id):
+    reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
+
+    data = [
+        {
+            'ID': reportedQuestion.ID,
+            'User': reportedQuestion.UserID.email,
+            'Issue': reportedQuestion.Issue,
+            'Question': reportedQuestion.QuestionID.Title,
+            'Date': reportedQuestion.Date,
+            'Fixed': reportedQuestion.IsMarked,
+            'template_type': 'template::edit-reports',
+        }
+    ]
+
+    return render(request, 'admin/index.html', {'data': data})
+
+
+def MarkReport(request, id):
+    reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
+    reportedQuestion.IsMarked = True
+    reportedQuestion.save()
+
+    return redirect('edit-report', id=id)
 
 
 def MarkFeedBack(request, id):

@@ -4,6 +4,7 @@
 }
 
 .buttons a{
+    border: 0;
     width: 20%;
     padding: 10px;
     color: black;
@@ -17,13 +18,11 @@
 }
 
 .buttons a:hover{
-    border: 0;
     color: whitesmoke;
     background-color: rgb(21, 184, 75);
 }
 
-a.FeedbackMarked{
-    border: 0;
+a.Marked{
     color: whitesmoke;
     cursor: not-allowed;
     pointer-events: none;

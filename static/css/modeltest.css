@@ -78,6 +78,15 @@
     width: 8%;
 }
 
+.Question{
+    display: flex;
+    justify-content: space-between;
+}
+
+.bxs-flag-alt{
+    padding: 20px 20px 0px 20px;
+}
+
 .options{
     gap: 10px;
     width: 100%;

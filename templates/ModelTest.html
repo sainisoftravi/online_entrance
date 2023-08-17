@@ -34,7 +34,12 @@
                     <p class="question-number">{{forloop.counter}}.</p>
 
                     <div class="question-details">
-                        <p class="question-title">{{question.title}}</p>
+                        <div class="Question">
+                            <p class="question-title">{{question.title}}</p>
+                            <a href="{% url 'report-question' question.id %}" target="_blank">
+                                <i class='bx bxs-flag-alt' title="Report"></i>
+                            </a>
+                        </div>
 
                         <div class="options">
                             {% for choice in question.choices %}

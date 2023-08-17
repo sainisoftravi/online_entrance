@@ -44,6 +44,7 @@ form{
 textarea{
     width: 100%;
     resize: none;
+    padding: 10px;
     margin-bottom: 3px;
 }
 

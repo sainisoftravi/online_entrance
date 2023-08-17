@@ -1,0 +1,24 @@
+td:nth-child(1),
+td:nth-child(2),
+td:nth-child(3),
+td:nth-child(5)
+{
+    white-space:nowrap;
+}
+
+i.bx-check,
+i.bx-x{
+    padding: 2px;
+    font-size: 20px;
+    color: whitesmoke;
+    border-radius: 50%;
+    font-weight: bolder;
+}
+
+i.bx-check{
+    background-color: #01987a;
+}
+
+i.bx-x{
+    background-color: #dd4a4a;
+}

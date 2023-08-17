@@ -1,0 +1,53 @@
+{% extends 'WelcomeNav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ReportQuestion.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <div class="outer-container">
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {% for message in messages %}
+                {% if message %}
+                    <p class="backend-message">{{message}}</p>
+                {% endif %}
+            {% endfor %}
+
+            <div class="row first-row">
+                <p id="row-id">{{data.id}}</p>
+            </div>
+
+            <div class="row second-row">
+                <p>{{data.title}}</p>
+            </div>
+
+            <div class="row third-row">
+                {% if data.editable %}
+                    <textarea placeholder="What's your issue ? Issue must have at least 50 words" name="message" id="message" cols="40" rows="15"></textarea>
+
+                {% else %}
+                    <textarea name="message" id="message" cols="40" rows="15" readonly>{{data.Message}}</textarea>
+
+                {% endif %}
+                <small class="error-message"></small>
+            </div>
+
+            <script src="{% static 'js/ReportQuestion.js' %}"></script>
+
+            {% if data.editable %}
+                <button onclick="return validateForm()" class="not-reported">Report</button>
+
+            {% else%}
+                <button class="reported">Reported</button>
+
+            {% endif %}
+
+        </form>
+    </div>
+    {% include 'footer.html' %}
+
+{% endblock %}

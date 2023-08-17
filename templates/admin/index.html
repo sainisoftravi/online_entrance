@@ -581,6 +581,7 @@
                         </div>
 
                     {% elif data.0.template_type == 'template::edit-reports' %}
+                        <link rel="stylesheet" href="{% static 'css/admin/edit-report.css' %}">
                         <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
                         <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
 
@@ -589,7 +590,7 @@
                                 {% csrf_token %}
 
                                 {% for key, value in data.0.items %}
-                                    {% if key != "template_type" %}
+                                    {% if key != "template_type" and key != "Fixed" %}
                                         {% if key == 'ID' %}
                                             <div class="row id-row">
                                                 <p>{{value}}</p>
@@ -613,7 +614,13 @@
                                                 </div>
 
                                                 <div class="row-right-container">
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+                                                    {% if key == 'Question' %}
+                                                        <a href="{% url 'edit-question' value.0 %}" target="_blank">{{value.1}}</a>
+
+                                                    {% else %}
+                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                                    {% endif %}
                                                     <small class="{{key}}-error"></small>
                                                 </div>
                                             </div>

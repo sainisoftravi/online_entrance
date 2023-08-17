@@ -278,6 +278,45 @@ class Questions(models.Model):
         return str(self.ID)
 
 
+class ReportQuestion(models.Model):
+    class Meta:
+        verbose_name_plural = 'ReportQuestion'
+
+    UserID = models.ForeignKey(
+            "CustomUser",
+            on_delete = models.CASCADE
+        )
+
+    QuestionID = models.ForeignKey(
+                    "Questions",
+                    on_delete = models.CASCADE
+                )
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    Issue = models.TextField(
+                null=False,
+                blank=False
+            )
+
+    IsMarked = models.BooleanField(
+            null=False,
+            blank=False,
+            default=False
+        )
+
+    Date = models.DateField(
+                null=False,
+                blank=False,
+                editable=False,
+                default=datetime.date.today
+            )
+
+
 class FeedBack(models.Model):
     class Meta:
         verbose_name_plural = "FeedBack"

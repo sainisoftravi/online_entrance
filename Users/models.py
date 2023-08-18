@@ -1,7 +1,9 @@
 import uuid
 import datetime
 from django.db import models
+from django.dispatch import receiver
 from django.utils.timezone import now
+from django.db.models.signals import pre_save
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.utils.translation import gettext_lazy as _
 from .utils import GenerateRandomURL
@@ -358,3 +360,9 @@ class FeedBack(models.Model):
 
     def __str__(self):
         return str(self.ID)
+
+
+@receiver(pre_save, sender=CustomUser)
+def set_default_profile_picture(sender, instance, **kwargs):
+    if instance.Gender == 'male':
+        instance.ProfileImage = 'pp-male.jpg'

@@ -25,6 +25,7 @@ urlpatterns = [
     path('modeltest/<str:programme>/<str:subject>', views.GetSpecificQuestions),
     path('getSubjectDetails/', views.GetSubjectLists, name='getSubjectDetails'),
     path('getUserDetails/edit-user/<str:id>', views.EditUsers, name="edit-user"),
+    path('subject/edit-subject/<str:id>', views.EditSubject, name='edit-subject'),
     path('getQuestionDetails/', views.GetQuestionLists, name='getQuestionDetails'),
     path('report-question/<str:id>', views.ReportQuestions, name='report-question'),
     path('feedback/edit-feedback/<str:id>', views.EditFeedback, name='edit-feedback'),

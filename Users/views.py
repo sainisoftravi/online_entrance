@@ -751,6 +751,8 @@ def EditUsers(request, id):
 
         messages.success(request, 'Edit Successful')
 
+        return redirect('edit-user', id=id)
+
     data = [
         {
             'ID': user.id,
@@ -764,8 +766,29 @@ def EditUsers(request, id):
         }
     ]
 
+    return render(request, 'admin/index.html', {'data': data})
+
+
+def EditSubject(request, id):
+    subject = Subject.objects.filter(ID=id).first()
+
     if request.method == 'POST':
-        return redirect('edit-user', id=id)
+        subject.TotalQuestionsToSelect = request.POST['Total Questions To Select']
+        subject.save()
+
+        messages.success(request, 'Edit Successful')
+
+        return redirect('edit-subject', id=id)
+
+    data = [
+        {
+            'ID': subject.ID,
+            'Programme': subject.ProgrammeID,
+            'Subject': subject.Name,
+            'Total Questions To Select': subject.TotalQuestionsToSelect,
+            'template_type': 'template::edit-subject'
+        }
+    ]
 
     return render(request, 'admin/index.html', {'data': data})
 

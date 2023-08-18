@@ -56,7 +56,7 @@
 
                                     {% elif key == "ID" %}
                                         <td>
-                                            <a href="edit-user/{{value}}">{{value}}</a>
+                                            <a href="{% url 'edit-user' value %}">{{value}}</a>
                                         </td>
 
                                     {% elif key == "Admin" %}
@@ -182,7 +182,7 @@
                                     {% if value != "template::subjects" %}
                                         {% if key == "ID" %}
                                             <td>
-                                                <a href="">{{value}}</a>
+                                                <a href="{% url 'edit-subject' value %}">{{value}}</a>
                                             </td>
 
                                         {% else %}
@@ -478,6 +478,45 @@
                             <button type="submit" onclick="return validateForm()">Save</button>
                         </form>
                     </div>
+
+                    {% elif data.0.template_type == 'template::edit-subject' %}
+                        <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+                        <div class="input-groups">
+                            <form action="#" method="POST">
+                                {% csrf_token %}
+
+                                {% for key, value in data.0.items %}
+                                    {% if key != 'template_type' %}
+                                        {% if key == 'ID' %}
+                                            <div class="row id-row">
+                                                <p>{{value}}</p>
+                                            </div>
+
+                                        {% else %}
+                                            <div class="row">
+                                                <div class="row-left-container">
+                                                    <label for="{{key}}">{{key}} :</label>
+                                                </div>
+
+                                                <div class="row-right-container">
+                                                    {% if key == 'Total Questions To Select' %}
+                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                                    {% else %}
+                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                                    {% endif %}
+
+                                                    <small class="{{key}}-error"></small>
+                                                </div>
+                                            </div>
+
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+
+                                <button>Save</button>
 
                     {% elif data.0.template_type == 'template::feedbacks' %}
                         <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">

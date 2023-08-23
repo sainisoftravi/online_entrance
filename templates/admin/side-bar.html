@@ -36,7 +36,7 @@
         <a href="{% url 'getProgrammeDetails' %}" class="side-bar-items">Programme</a>
     </div>
 
-    {% if data.0.template_type == 'template::subjects' %}
+    {% if data.0.template_type == 'template::subjects' or data.0.template_type == 'template::edit-subject'%}
         <div class="side-bar-option selected-side-bar-option">
 
     {% else %}

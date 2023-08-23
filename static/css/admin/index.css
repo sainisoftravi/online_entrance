@@ -55,5 +55,5 @@ textarea[readonly]{
 
 td a{
     font-family: var(--td-color);
-    color: rgb(0, 139, 163);
+    color: #2600ff;
 }

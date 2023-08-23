@@ -13,43 +13,42 @@
             <i class='bx bx-x'></i>
 
             {% if to.redirect_to == 'dashboard' %}
-                <div class="left-links selected-left-link">
+                <a class="left-links selected-left-link" href="{% url 'go_to' 'dashboard' %}">
 
             {% else %}
-                <div class="left-links">
+                <a class="left-links" href="{% url 'go_to' 'dashboard' %}">
 
             {% endif %}
-                <i class='bx bxs-dashboard' ></i>
-                <a href="{% url 'go_to' 'dashboard' %}">Dashboard</a>
-            </div>
+                <i class='bx bxs-dashboard'></i>
+                <p>Dashboard</p>
+            </a>
 
             {% if to.redirect_to == 'profile' %}
-                <div class="left-links selected-left-link">
+                <a class="left-links selected-left-link" href="{% url 'go_to' 'profile' %}">
 
             {% else %}
-                <div class="left-links">
+                <a class="left-links" href="{% url 'go_to' 'profile' %}">
 
             {% endif %}
                 <i class='bx bx-user'></i>
-                <a href="{% url 'go_to' 'profile' %}">Profile</a>
-            </div>
+                <p>Profile</p>
+            </a>
 
             {% if to.redirect_to == 'history' %}
-                <div class="left-links selected-left-link">
+                <a class="left-links selected-left-link" href="{% url 'go_to' 'history' %}">
 
             {% else %}
-                <div class="left-links">
+                <a class="left-links" href="{% url 'go_to' 'history' %}">
 
             {% endif %}
                 <i class='bx bx-history' ></i>
-                <a href="{% url 'go_to' 'history' %}">History</a>
-            </div>
+                <p>History</p>
+            </a>
 
-            <div class="left-links">
+            <a class="left-links" href="{% url 'logout' %}">
                 <i class='bx bx-log-out'></i>
-                <a href="{% url 'logout' %}">Logout</a>
-            </div>
-
+                <p>Logout</p>
+            </a>
         </div>
 
         <div class="right-container">

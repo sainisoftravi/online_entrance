@@ -35,7 +35,7 @@
     align-items: center;
 }
 
-.left-links a{
+.left-links p{
     font-size: 20px;
     color: whitesmoke;
     text-decoration: none;
@@ -48,10 +48,13 @@
 }
 
 .selected-left-link{
+    margin: 5px 0 5px 5px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
     background-color: whitesmoke;
 }
 
-.selected-left-link a,
+.selected-left-link p,
 .selected-left-link i{
     color: black;
 }

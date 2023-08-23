@@ -9,7 +9,8 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #1f5d84;
+    background-color: #504099;
+    border-end-end-radius: 50px;
 }
 
 a{

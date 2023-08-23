@@ -4,80 +4,80 @@
 
 <div class="side-bar">
     {% if data.0.template_type == 'template::users' or data.0.template_type == 'template::edit-user' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getUserDetails' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getUserDetails' %}">
 
     {% endif %}
         <i class='bx bx-group'></i>
-        <a href="{% url 'getUserDetails' %}" class="side-bar-items">Users</a>
-    </div>
+        <p class="side-bar-items">Users</p>
+    </a>
 
     {% if data.0.template_type == 'template::exams' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getExamDetails' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getExamDetails' %}">
 
     {% endif %}
         <i class='bx bx-edit-alt'></i>
-        <a href="{% url 'getExamDetails' %}" class="side-bar-items">Exams</a>
-    </div>
+        <p class="side-bar-items">Exams</p>
+    </a>
 
     {% if data.0.template_type == 'template::programmes' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getProgrammeDetails' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getProgrammeDetails' %}">
 
     {% endif %}
         <i class='bx bx-library'></i>
-        <a href="{% url 'getProgrammeDetails' %}" class="side-bar-items">Programme</a>
-    </div>
+        <p class="side-bar-items">Programme</p>
+    </a>
 
     {% if data.0.template_type == 'template::subjects' or data.0.template_type == 'template::edit-subject'%}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getSubjectDetails' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getSubjectDetails' %}">
 
     {% endif %}
         <i class='bx bxs-book-alt'></i>
-        <a href="{% url 'getSubjectDetails' %}" class="side-bar-items">Subject</a>
-    </div>
+        <p class="side-bar-items">Subject</p>
+    </a>
 
     {% if data.0.template_type == 'template::questions' or data.0.template_type == 'template::edit-question' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getQuestionDetails' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getQuestionDetails' %}">
 
     {% endif %}
         <i class='bx bx-data'></i>
-        <a href="{% url 'getQuestionDetails' %}" class="side-bar-items">Questions</a>
-    </div>
+        <p class="side-bar-items">Questions</p>
+    </a>
 
     {% if data.0.template_type == 'template::reports' or data.0.template_type == 'template::edit-reports' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'getReportsLists' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'getReportsLists' %}">
 
     {% endif %}
         <i class='bx bxs-flag-alt'></i>
-        <a href="{% url 'getReportsLists' %}" class="side-bar-items">Report</a>
-    </div>
+        <p class="side-bar-items">Report</p>
+    </a>
 
     {% if data.0.template_type == 'template::feedbacks' or data.0.template_type == 'template::edit-feedbacks' %}
-        <div class="side-bar-option selected-side-bar-option">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'feedback' %}">
 
     {% else %}
-        <div class="side-bar-option">
+        <a class="side-bar-option" href="{% url 'feedback' %}">
 
     {% endif %}
         <i class='bx bx-comment-detail'></i>
-        <a href="{% url 'feedback' %}" class="side-bar-items">FeedBack</a>
-    </div>
+        <p class="side-bar-items">FeedBack</p>
+    </a>
 
 </div>

@@ -57,3 +57,7 @@ td a{
     font-family: var(--td-color);
     color: #2600ff;
 }
+
+td:nth-child(2){
+white-space:nowrap;
+}

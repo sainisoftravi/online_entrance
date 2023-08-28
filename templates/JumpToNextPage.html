@@ -1,0 +1,35 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/admin/jump-to-page.css' %}">
+
+
+{% if "prev_page_index" in request.session %}
+    <div class="jump-to-page">
+
+    {% if request.session.prev_page_index == 0 %}
+        <a href="#" class="prev-page-link readonly-link">
+
+    {% else %}
+        <a href="{% url 'next-page' data.0.not_show.jump_to_url request.session.prev_page_index %}" class="prev-page-link">
+
+    {% endif %}
+        <i class='bx bx-left-arrow-alt' ></i>
+        <p>Previous</p>
+    </a>
+
+    {% if request.session.disable_next %}
+        <a href="#" class="next-page-link readonly-link">
+
+    {% else %}
+        <a href="{% url 'next-page' data.0.not_show.jump_to_url request.session.prev_page_index|add:2 %}" class="next-page-link">
+
+    {% endif %}
+        <p>Next</p>
+        <i class='bx bx-right-arrow-alt'></i>
+    </a>
+
+{% else %}
+    <div class="jump-to-page hide-jump-to-page">
+
+{% endif %}
+    </div>

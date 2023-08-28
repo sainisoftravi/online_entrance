@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{% static 'css/admin/side-bar.css' %}">
 
 <div class="side-bar">
-    {% if data.0.template_type == 'template::users' or data.0.template_type == 'template::edit-user' %}
+    {% if data.0.not_show.template_type == 'template::users' or data.0.template_type == 'template::edit-user' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getUserDetails' %}">
 
     {% else %}
@@ -14,7 +14,7 @@
         <p class="side-bar-items">Users</p>
     </a>
 
-    {% if data.0.template_type == 'template::exams' %}
+    {% if data.0.not_show.template_type == 'template::exams' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getExamDetails' %}">
 
     {% else %}
@@ -25,7 +25,7 @@
         <p class="side-bar-items">Exams</p>
     </a>
 
-    {% if data.0.template_type == 'template::programmes' %}
+    {% if data.0.not_show.template_type == 'template::programmes' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getProgrammeDetails' %}">
 
     {% else %}
@@ -36,7 +36,7 @@
         <p class="side-bar-items">Programme</p>
     </a>
 
-    {% if data.0.template_type == 'template::subjects' or data.0.template_type == 'template::edit-subject'%}
+    {% if data.0.not_show.template_type == 'template::subjects' or data.0.template_type == 'template::edit-subject'%}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getSubjectDetails' %}">
 
     {% else %}
@@ -47,7 +47,7 @@
         <p class="side-bar-items">Subject</p>
     </a>
 
-    {% if data.0.template_type == 'template::questions' or data.0.template_type == 'template::edit-question' %}
+    {% if data.0.not_show.template_type == 'template::questions' or data.0.template_type == 'template::edit-question' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getQuestionDetails' %}">
 
     {% else %}
@@ -58,7 +58,7 @@
         <p class="side-bar-items">Questions</p>
     </a>
 
-    {% if data.0.template_type == 'template::reports' or data.0.template_type == 'template::edit-reports' %}
+    {% if data.0.not_show.template_type == 'template::reports' or data.0.template_type == 'template::edit-reports' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'getReportsLists' %}">
 
     {% else %}
@@ -69,7 +69,7 @@
         <p class="side-bar-items">Report</p>
     </a>
 
-    {% if data.0.template_type == 'template::feedbacks' or data.0.template_type == 'template::edit-feedbacks' %}
+    {% if data.0.not_show.template_type == 'template::feedbacks' or data.0.template_type == 'template::edit-feedbacks' %}
         <a class="side-bar-option selected-side-bar-option" href="{% url 'feedback' %}">
 
     {% else %}

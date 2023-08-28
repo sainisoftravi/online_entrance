@@ -1,3 +1,4 @@
+import math
 import json
 import random
 import datetime
@@ -8,6 +9,8 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import update_session_auth_hash, get_user_model
 from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
+
+DATA = []
 
 
 def SignUp(request):
@@ -513,10 +516,12 @@ def DisplayReportedQuestion(request, id):
     return render(request, 'ReportQuestion.html', {'data': data})
 
 
-def GetUserLists(request):
-    userDetails = []
+def GetUserLists(request, page_index=None):
+    global DATA
 
-    for user in CustomUser.objects.all():
+    DATA = []
+
+    for sn, user in enumerate(CustomUser.objects.all()):
         id = user.id
         dob = user.DOB
         email = user.email
@@ -535,116 +540,114 @@ def GetUserLists(request):
         else:
             gender = gender[0].upper()
 
-        userDetails.append(
+        DATA.append(
             {
+                'SN': sn + 1,
                 'ID': id,
                 'Email': email,
                 'DOB': dob,
                 'Gender': gender,
                 'Profile Image': profileImagePath,
                 'Member Since': memberSince,
-                'template_type': 'template::users',
                 'Admin': is_user_super,
                 'Active': is_user_active,
+                'not_show': {
+                    'jump_to_url': 'getUserDetails',
+                    'template_type': 'template::users'
+                },
             }
         )
 
-    return render(request, 'admin/index.html', {'data': userDetails})
+    return ShowTableLists(request, page_index)
 
 
-def GetExamsLists(request):
-    exam_details = []
-    exams = Exams.objects.all()
+def GetExamsLists(request, page_index=None):
+    global DATA
 
-    for exam in exams:
+    DATA = []
+
+    for sn, exam in enumerate(Exams.objects.all()):
         id = exam.ID
         user = exam.UserID,
         programme_name = exam.ProgrammeName
         correct_counter = exam.CorrectCounter
         date = exam.Date
 
-        exam_details.append(
+        DATA.append(
             {
+                'SN': sn + 1,
                 'ID': (id, exam.Slug),
                 'User': (user[0].email, user[0].id),
                 'Programme Name': programme_name,
                 'Total Correct Answered': correct_counter,
                 'Date': date,
-                'template_type': 'template::exams'
+                'not_show': {
+                    'jump_to_url': 'getExamDetails',
+                    'template_type': 'template::exams'
+                },
             }
         )
 
-    return render(request, 'admin/index.html', {'data': exam_details})
+    return ShowTableLists(request, page_index)
 
 
-def GetProgrammeLists(request):
-    programmeLists = []
+def GetProgrammeLists(request, page_index=None):
+    global DATA
 
-    for programme in Programme.objects.all():
+    DATA = []
+
+    for sn, programme in enumerate(Programme.objects.all()):
         id = programme.ID
         name = programme.Name
 
-        programmeLists.append(
+        DATA.append(
             {
+                'SN': sn + 1,
                 'ID': id,
                 'Name': name,
-                'template_type': 'template::programmes',
+                'not_show': {
+                    'jump_to_url': 'getProgrammeDetails',
+                    'template_type': 'template::programmes'
+                },
             }
         )
 
-    return render(request, 'admin/index.html', {'data': programmeLists})
+    return ShowTableLists(request, page_index)
 
 
-def GetSubjectLists(request):
-    subjectLists = []
+def GetSubjectLists(request, page_index=None):
+    global DATA
 
-    for subject in Subject.objects.all():
+    DATA = []
+
+    for sn, subject in enumerate(Subject.objects.all()):
         id = subject.ID
         name = subject.Name
         programmeName = subject.ProgrammeID.Name
 
-        subjectLists.append(
+        DATA.append(
             {
+                'SN': sn + 1,
                 'ID': id,
                 'Programme Name': programmeName,
                 'Subject Name': name,
                 'Total Questions To Select': subject.TotalQuestionsToSelect,
-                'template_type': 'template::subjects',
+                'not_show': {
+                    'jump_to_url': 'getSubjectDetails',
+                    'template_type': 'template::subjects'
+                },
             }
         )
 
-    return render(request, 'admin/index.html', {'data': subjectLists})
+    return ShowTableLists(request, page_index)
 
 
-def GetReportsLists(request):
-    reportsLists = []
+def GetQuestionLists(request, page_index=None):
+    global DATA
 
-    for report in ReportQuestion.objects.all():
-        id = report.ID
-        user = report.UserID
-        issue = report.Issue
-        questionID = report.QuestionID
-        date = report.Date
+    DATA = []
 
-        reportsLists.append(
-            {
-                'ID': id,
-                'User': (user.email, user.id),
-                'Question': (questionID.Title, questionID.ID),
-                'Issue': issue,
-                'Date': date,
-                'Fixed': report.IsMarked,
-                'template_type': 'template::reports'
-            }
-        )
-
-    return render(request, 'admin/index.html', {'data': reportsLists})
-
-
-def GetQuestionLists(request):
-    questionsLists = []
-
-    for question in Questions.objects.all():
+    for sn, question in enumerate(Questions.objects.all()):
         id = question.ID
         title = question.Title
         answer = question.Answer
@@ -654,8 +657,9 @@ def GetQuestionLists(request):
         OptionFour = question.OptionFour
         subjectName = question.SubjectID.Name
 
-        questionsLists.append(
+        DATA.append(
             {
+                'SN': sn + 1,
                 'ID': id,
                 'Subject': subjectName,
                 'Programme': question.SubjectID.ProgrammeID.Name,
@@ -665,11 +669,118 @@ def GetQuestionLists(request):
                 'Option Two': OptionTwo,
                 'Option Three': OptionThree,
                 'Option Four': OptionFour,
-                'template_type': 'template::questions',
+                'not_show': {
+                    'jump_to_url': 'getQuestionDetails',
+                    'template_type': 'template::questions'
+                },
             }
         )
 
-    return render(request, 'admin/index.html', {'data': questionsLists})
+    return ShowTableLists(request, page_index)
+
+
+def GetFeedbackLists(request, page_index=None):
+    global DATA
+
+    DATA = []
+
+    for sn, feedback in enumerate(FeedBack.objects.all()):
+        DATA.append(
+            {
+                'SN': sn + 1,
+                'ID': feedback.ID,
+                'Name': feedback.Name,
+                'Email': feedback.Email,
+                'Message': feedback.Message,
+                'Date': feedback.Date,
+                'Completed': feedback.IsMarked,
+                'not_show': {
+                    'jump_to_url': 'getFeedbacks',
+                    'template_type': 'template::feedbacks'
+                }
+            }
+        )
+
+    return ShowTableLists(request, page_index)
+
+
+def GetReportsLists(request, page_index=None):
+    global DATA
+
+    DATA = []
+
+    for sn, report in enumerate(ReportQuestion.objects.all()):
+        id = report.ID
+        user = report.UserID
+        issue = report.Issue
+        questionID = report.QuestionID
+        date = report.Date
+
+        DATA.append(
+            {
+                'SN': sn + 1,
+                'ID': id,
+                'User': (user.email, user.id),
+                'Question': (questionID.Title, questionID.ID),
+                'Issue': issue,
+                'Date': date,
+                'Fixed': report.IsMarked,
+                'not_show': {
+                    'jump_to_url': 'getReportsLists',
+                    'template_type': 'template::reports'
+                },
+            }
+        )
+
+    return ShowTableLists(request, page_index)
+
+
+def ShowTableLists(request, page_index=None):
+    total_items = math.ceil(len(DATA) / 100)
+
+    if page_index and total_items < page_index:
+        raise Http404
+
+    if total_items > 1:
+        request.session['prev_page_index'] = 0
+        request.session['total_next_index'] = total_items
+
+    else:
+        if 'prev_page_index' in request.session:
+            del request.session['prev_page_index']
+
+    request.session['disable_next'] = False
+
+    if page_index is None:
+        page_index = 0
+
+    return render(request, 'admin/index.html', {'data': DATA[page_index * 100:page_index * 100 + 100]})
+
+
+def NextPage(request, page, index):
+    if not DATA:
+        get_jump_data = {
+            'getUserDetails': lambda: GetUserLists(request, index),
+            'getExamDetails': lambda: GetExamsLists(request, index),
+            'getQuestionDetails': lambda: GetQuestionLists(request, index),
+        }
+
+        return get_jump_data[page]()
+
+    if index > math.ceil(len(DATA) / 100):
+        raise Http404
+
+    next_page_index = index - 1
+    request.session['prev_page_index'] = next_page_index
+
+    if index == request.session['total_next_index']:
+        request.session['disable_next'] = True
+
+    else:
+        if request.session.get('disable_next', None):
+            del request.session['disable_next']
+
+    return render(request, 'admin/index.html', {'data': DATA[next_page_index * 100:next_page_index * 100 + 100]})
 
 
 def AdminChangePassword(request):
@@ -820,26 +931,6 @@ def AddNewQuestion(request):
     ]
 
     return render(request, 'admin/index.html', {'data': data})
-
-
-def GetFeedbackLists(request):
-    feedbackLists = []
-    feedbacks = FeedBack.objects.all()
-
-    for feedback in feedbacks:
-        data = {
-                'ID': feedback.ID,
-                'Name': feedback.Name,
-                'Email': feedback.Email,
-                'Message': feedback.Message,
-                'Date': feedback.Date,
-                'Completed': feedback.IsMarked,
-                'template_type': 'template::feedbacks',
-            }
-
-        feedbackLists.append(data)
-
-    return render(request, 'admin/index.html', {'data': feedbackLists})
 
 
 def EditFeedback(request, id):

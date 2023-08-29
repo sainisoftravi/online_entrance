@@ -124,9 +124,12 @@ label {
 .input-groups{
     width: 80%;
     display: flex;
-    align-items: start;
     justify-content: center;
     flex-direction: column;
+}
+
+.input-groups:last-child{
+    align-items: start;
 }
 
 .password-div{

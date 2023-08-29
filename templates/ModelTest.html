@@ -36,9 +36,13 @@
                     <div class="question-details">
                         <div class="Question">
                             <p class="question-title">{{question.title}}</p>
-                            <a href="{% url 'report-question' question.id %}" target="_blank">
-                                <i class='bx bxs-flag-alt' title="Report"></i>
-                            </a>
+
+                            {% if request.user.is_superuser is False %}
+                                <a href="{% url 'report-question' question.id %}" target="_blank">
+                                    <i class='bx bxs-flag-alt' title="Report"></i>
+                                </a>
+                            {% endif %}
+
                         </div>
 
                         <div class="options">

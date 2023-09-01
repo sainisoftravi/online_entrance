@@ -9,24 +9,34 @@ class PopulateResults:
         self.Programme = Prog
         self.NumberOfResultsToGenerate = NumberOfResultsToGenerate
 
-        self.ProgrammeObj = Programme.objects.filter(Name=self.Programme).first()
         self.UsersObj = CustomUser.objects.filter(email=self.Email).first()
 
-    def GetSubjects(self):
+    def GetSubjects(self, programme):
         SubjectsID = []
+        ProgrammeObj = Programme.objects.filter(Name=programme).first()
 
-        for id in Subject.objects.filter(ProgrammeID=self.ProgrammeObj):
+        for id in Subject.objects.filter(ProgrammeID=ProgrammeObj):
             SubjectsID.append(id)
 
         return SubjectsID
 
     def Action(self):
-        allSubjects = self.GetSubjects()
+        if self.Programme == 'Random':
+            all_programmes = Programme.objects.all()
+            programmes = [random.choice(all_programmes) for _ in range(self.NumberOfResultsToGenerate)]
 
-        for _ in range(self.NumberOfResultsToGenerate):
+        else:
+            programme = self.Programme
+            allSubjects = self.GetSubjects(self.Programme)
+
+        for i in range(self.NumberOfResultsToGenerate):
             correct_counter = 0
 
-            results = Exams(UserID=self.UsersObj, ProgrammeName=self.Programme)
+            if self.Programme == 'Random':
+                programme = programmes[i].Name
+                allSubjects = self.GetSubjects(programme)
+
+            results = Exams(UserID=self.UsersObj, ProgrammeName=programme)
             results.save()
 
             for subject in allSubjects:
@@ -64,13 +74,61 @@ class PopulateResults:
 
 
 class Command(BaseCommand):
-    args = '<foo bar ...>'
-    help = 'our help string comes here'
+    def GetAllProgrammes(self):
+        programmes = dict()
+
+        for index, programme in enumerate(Programme.objects.all()):
+            programmes.update({
+                str(index + 1): programme
+            })
+
+        programmes[str(index + 2)] = 'Random'
+
+        return programmes
+
+    def GetEmail(self):
+        while True:
+            email = input("Enter user's email: ")
+
+            if CustomUser.objects.filter(email=email):
+                return email
+
+            else:
+                print('\nEmail not found ...\n')
+
+    def GetProgramme(self):
+        menu_list = ''
+        ProgramMaps = self.GetAllProgrammes()
+
+        for key, value in ProgramMaps.items():
+            menu_list += f'\t{key}. {value}\n'
+
+        while True:
+            print("Choose any one of the following: ")
+            print(menu_list)
+
+            programme = input("Enter Options: ")
+
+            if programme in ProgramMaps:
+                return ProgramMaps[programme]
+
+            else:
+                print('\nInvalid option ...\n')
+
+    def GetNumberOfResults(self):
+        while True:
+            numberOfResults = input("Enter the number of results to generate: ")
+
+            if numberOfResults.isdigit() is False:
+                print('Number was expected ...\n')
+
+            else:
+                return int(numberOfResults)
 
     def _create_tags(self):
-        email = input("Enter user's email: ")
-        programme = input("Enter programme: ")
-        numberOfResults = int(input("Enter the number of results to generate: "))  # 40
+        email = self.GetEmail()
+        programme = self.GetProgramme()
+        numberOfResults = self.GetNumberOfResults()
 
         PopulateResults(programme, email, numberOfResults).Action()
 

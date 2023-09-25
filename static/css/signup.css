@@ -1,12 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@500&display=swap');
 
 
 :root{
---font: "Anek Gujarati";
---p-color: whitesmoke;
---placeholder-color: #cccccc;
---button-color: rgb(72, 46, 145);
---form-right-color: rgb(34, 2, 95);
+    --error-font: "Nunito";
+    --p-color: whitesmoke;
+    --font: "Anek Gujarati";
+    --placeholder-color: #cccccc;
+    --button-color: rgb(72, 46, 145);
+    --form-right-color: rgb(34, 2, 95);
 }
 
 
@@ -181,7 +183,8 @@ button{
 }
 
 .show-error{
-    font-family: var(--font);
+    font-size: 20px;
+    font-family: var(--error-font);
 }
 
 .selected-gender{

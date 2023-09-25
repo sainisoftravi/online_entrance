@@ -906,7 +906,10 @@ def EditSubject(request, id):
 
 def AddNewQuestion(request):
     if request.method == 'POST':
-        question = Questions()
+        programmeID = Programme.objects.filter(Name=request.POST['Programme']).first()
+        SubjectID = Subject.objects.filter(ProgrammeID=programmeID, Name=request.POST['Subject']).first()
+
+        question = Questions(SubjectID=SubjectID)
 
         question.Title = request.POST['Title']
         question.Answer = request.POST['Answer']
@@ -918,8 +921,16 @@ def AddNewQuestion(request):
         question.save()
         messages.success(request, 'Question Added Successful')
 
+    select_options = dict()
+
+    for head in Programme.objects.all():
+        tails = [tail.Name for tail in Subject.objects.filter(ProgrammeID=head)]
+        select_options[head.Name] = tails
+
+    select_options = json.dumps(select_options)
     data = [
         {
+            'SelectOptions': select_options,
             'Title': '',
             'Answer': '',
             'Option One': '',

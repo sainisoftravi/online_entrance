@@ -29,3 +29,10 @@ td:nth-child(6),
 td:nth-child(11){
     text-align: center;
 }
+
+.profile-image{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}

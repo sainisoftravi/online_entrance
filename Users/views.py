@@ -521,7 +521,7 @@ def GetUserLists(request, page_index=None):
 
     DATA = []
 
-    for sn, user in enumerate(CustomUser.objects.all()):
+    for user in CustomUser.objects.all():
         id = user.id
         dob = user.DOB
         email = user.email
@@ -542,7 +542,6 @@ def GetUserLists(request, page_index=None):
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': id,
                 'Email': email,
                 'DOB': dob,
@@ -566,7 +565,7 @@ def GetExamsLists(request, page_index=None):
 
     DATA = []
 
-    for sn, exam in enumerate(Exams.objects.all()):
+    for exam in Exams.objects.all():
         id = exam.ID
         user = exam.UserID,
         programme_name = exam.ProgrammeName
@@ -575,7 +574,6 @@ def GetExamsLists(request, page_index=None):
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': (id, exam.Slug),
                 'User': (user[0].email, user[0].id),
                 'Programme Name': programme_name,
@@ -596,13 +594,12 @@ def GetProgrammeLists(request, page_index=None):
 
     DATA = []
 
-    for sn, programme in enumerate(Programme.objects.all()):
+    for programme in Programme.objects.all():
         id = programme.ID
         name = programme.Name
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': id,
                 'Name': name,
                 'not_show': {
@@ -620,14 +617,13 @@ def GetSubjectLists(request, page_index=None):
 
     DATA = []
 
-    for sn, subject in enumerate(Subject.objects.all()):
+    for subject in Subject.objects.all():
         id = subject.ID
         name = subject.Name
         programmeName = subject.ProgrammeID.Name
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': id,
                 'Programme Name': programmeName,
                 'Subject Name': name,
@@ -647,7 +643,7 @@ def GetQuestionLists(request, page_index=None):
 
     DATA = []
 
-    for sn, question in enumerate(Questions.objects.all()):
+    for question in Questions.objects.all():
         id = question.ID
         title = question.Title
         answer = question.Answer
@@ -659,7 +655,6 @@ def GetQuestionLists(request, page_index=None):
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': id,
                 'Subject': subjectName,
                 'Programme': question.SubjectID.ProgrammeID.Name,
@@ -684,10 +679,9 @@ def GetFeedbackLists(request, page_index=None):
 
     DATA = []
 
-    for sn, feedback in enumerate(FeedBack.objects.all()):
+    for feedback in FeedBack.objects.all():
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': feedback.ID,
                 'Name': feedback.Name,
                 'Email': feedback.Email,
@@ -709,7 +703,7 @@ def GetReportsLists(request, page_index=None):
 
     DATA = []
 
-    for sn, report in enumerate(ReportQuestion.objects.all()):
+    for report in ReportQuestion.objects.all():
         id = report.ID
         user = report.UserID
         issue = report.Issue
@@ -718,7 +712,6 @@ def GetReportsLists(request, page_index=None):
 
         DATA.append(
             {
-                'SN': sn + 1,
                 'ID': id,
                 'User': (user.email, user.id),
                 'Question': (questionID.Title, questionID.ID),

@@ -1,6 +1,8 @@
-td:nth-child(2),
-td:nth-child(4),
-td:nth-child(7){
+th:nth-child(1),
+th:nth-child(2),
+th:nth-child(3),
+th:nth-child(5),
+th:nth-child(6){
     white-space:nowrap;
 }
 
@@ -22,11 +24,7 @@ td:nth-child(7){
 }
 
 .bx-center,
-td:nth-child(3),
-td:nth-child(4),
-td:nth-child(5),
-td:nth-child(6),
-td:nth-child(11){
+td{
     text-align: center;
 }
 

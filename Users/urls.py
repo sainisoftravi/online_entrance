@@ -35,6 +35,7 @@ urlpatterns = [
     path('admin-change-password/', views.AdminChangePassword, name='admin-change-password'),
     path('getQuestionDetails/edit-question/<str:id>', views.EditQuestions, name="edit-question"),
     path('report-question/<str:id>/added', views.DisplayReportedQuestion, name='report-question-added'),
+    path('getQuestionDetails/edit-question/<str:id>/delete', views.DeleteQuestion, name="delete-question"),
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='FindAccount.html'), name='reset_password'),
     path('reset_password_sent/', auth_views.PasswordResetView.as_view(template_name='ResetPasswordSent.html'), name='password_reset_done'),
     path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(template_name='NewPassword.html'), name='password_reset_confirm'),

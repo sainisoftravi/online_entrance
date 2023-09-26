@@ -843,6 +843,22 @@ def EditQuestions(request, id):
     return render(request, 'admin/index.html', {'data': data})
 
 
+def DeleteQuestion(request, id):
+    for data in DATA[:]:
+        ID = str(data['ID'])
+
+        if ID == id:
+            DATA.remove(data)
+
+    question = Questions.objects.filter(ID=id).first()
+    question.delete()
+
+    current_page = request.session.get('prev_page_index', 1) + 1
+    messages.success(request, 'Question deleted successfully')
+
+    return redirect('next-page', 'getQuestionDetails', current_page)
+
+
 def EditUsers(request, id):
     user = CustomUser.objects.filter(id=id).first()
 

@@ -52,7 +52,8 @@ textarea{
     padding: 20px;
 }
 
-button{
+button,
+#delete_button{
     width: 15%;
     padding: 10px;
     cursor: pointer;
@@ -65,11 +66,13 @@ button{
     font-family: var(--td-color);
 }
 
-button{
+button,
+#delete-button{
     width: 15%;
     padding: 10px;
     font-size: 15px;
     border-radius: 5px;
+    text-align: center;
     font-family: var(--td-color);
     border: 1px solid #8f8f9d;
     background-color: #e9e9ed;
@@ -145,4 +148,15 @@ input[type=file]::file-selector-button:hover {
     width: 100%;
     padding: 10px;
     margin-bottom: 3px;
+}
+
+.buttons{
+    gap: 30px;
+    display: flex;
+}
+
+#delete-button:hover{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(204, 53, 26)
 }

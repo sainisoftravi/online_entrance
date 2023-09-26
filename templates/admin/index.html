@@ -446,7 +446,14 @@
                                 {% endif %}
                             {% endfor %}
 
-                            <button type="submit">Save</button>
+                            <div class="buttons">
+                                <button type="submit">Save</button>
+
+                                {% if data.0.template_type == "template::edit-question" %}
+                                    <a href="{% url 'delete-question' data.0.ID %}" id="delete-button">Delete</a>
+                                {% endif %}
+
+                            </div>
                         </form>
                     </div>
 

@@ -1,0 +1,24 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+<script src="{% static data.0.not_show.js_path %}"></script>
+<link rel="stylesheet" href="{% static 'css/admin/Users.css' %}">
+
+<form action="{% url data.0.not_show.search_form_url %}" id="searching-form" method="GET" onsubmit="return validateForm()">
+    {% csrf_token %}
+
+    <div class="search-form-row">
+        <input type="text" placeholder="Search ....." id="search-by-input", name="search-value">
+
+        <select name="search-type" id="search-by">
+            <option selected disabled hidden>Search by</option>
+
+            {% for value in data.0.not_show.drop_down_options %}
+                <option>{{value}}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="Search" id="form-submit-button">
+    </div>
+
+    <small class="error-message">Error</small>
+</form>

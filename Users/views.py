@@ -9,6 +9,7 @@ from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import update_session_auth_hash, get_user_model
 from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
+from .search import *
 
 DATA = []
 
@@ -516,12 +517,31 @@ def DisplayReportedQuestion(request, id):
     return render(request, 'ReportQuestion.html', {'data': data})
 
 
-def GetUserLists(request, page_index=None):
+def GetUserLists(request, page_index=None, users=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['Email', 'DOB', 'Gender', 'Member Since', 'Admin', 'Non-Admin', 'Active', 'Non-Active']
 
-    for user in CustomUser.objects.all():
+    if users is None:
+        users = CustomUser.objects.all()
+
+    elif len(users) == 0:
+        data = [
+            {
+                'not_show': {
+                    'js_path': 'js/admin/UserSearch.js',
+                    'search_form_url': 'user-search',
+                    'template_type': 'template::users',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for user in users:
         id = user.id
         dob = user.DOB
         email = user.email
@@ -551,8 +571,11 @@ def GetUserLists(request, page_index=None):
                 'Admin': is_user_super,
                 'Active': is_user_active,
                 'not_show': {
+                    'search_form_url': 'user-search',
                     'jump_to_url': 'getUserDetails',
-                    'template_type': 'template::users'
+                    'template_type': 'template::users',
+                    'js_path': 'js/admin/UserSearch.js',
+                    'drop_down_options': drop_down_options
                 },
             }
         )
@@ -560,12 +583,31 @@ def GetUserLists(request, page_index=None):
     return ShowTableLists(request, page_index)
 
 
-def GetExamsLists(request, page_index=None):
+def GetExamsLists(request, page_index=None, exams=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['User', 'Programme Name', 'Total Correct Answered', 'Date']
 
-    for exam in Exams.objects.all():
+    if exams is None:
+        exams = Exams.objects.all()
+
+    elif len(exams) == 0:
+        data = [
+            {
+                'not_show': {
+                    'search_form_url': 'exam-search',
+                    'template_type': 'template::exams',
+                    'js_path': 'js/admin/ExamSearch.js',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for exam in exams:
         id = exam.ID
         user = exam.UserID,
         programme_name = exam.ProgrammeName
@@ -581,7 +623,10 @@ def GetExamsLists(request, page_index=None):
                 'Date': date,
                 'not_show': {
                     'jump_to_url': 'getExamDetails',
-                    'template_type': 'template::exams'
+                    'search_form_url': 'exam-search',
+                    'template_type': 'template::exams',
+                    'js_path': 'js/admin/ExamSearch.js',
+                    'drop_down_options': drop_down_options,
                 },
             }
         )
@@ -612,12 +657,31 @@ def GetProgrammeLists(request, page_index=None):
     return ShowTableLists(request, page_index)
 
 
-def GetSubjectLists(request, page_index=None):
+def GetSubjectLists(request, page_index=None, subjects=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['Programme Name', 'Subject Name', 'Total Questions To Select']
 
-    for subject in Subject.objects.all():
+    if subjects is None:
+        subjects = Subject.objects.all()
+
+    elif len(subjects) == 0:
+        data = [
+            {
+                'not_show': {
+                    'search_form_url': 'subject-search',
+                    'template_type': 'template::subjects',
+                    'js_path': 'js/admin/SubjectSearch.js',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for subject in subjects:
         id = subject.ID
         name = subject.Name
         programmeName = subject.ProgrammeID.Name
@@ -630,7 +694,11 @@ def GetSubjectLists(request, page_index=None):
                 'Total Questions To Select': subject.TotalQuestionsToSelect,
                 'not_show': {
                     'jump_to_url': 'getSubjectDetails',
-                    'template_type': 'template::subjects'
+                    'search_form_url': 'subject-search',
+                    'template_type': 'template::subjects',
+                    'drop_down_options': drop_down_options,
+                    'js_path': 'js/admin/SubjectSearch.js',
+
                 },
             }
         )
@@ -638,12 +706,31 @@ def GetSubjectLists(request, page_index=None):
     return ShowTableLists(request, page_index)
 
 
-def GetQuestionLists(request, page_index=None):
+def GetQuestionLists(request, page_index=None, questions=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['Subject', 'Programme', 'Title', 'Answer', 'Options']
 
-    for question in Questions.objects.all():
+    if questions is None:
+        questions = Questions.objects.all()
+
+    elif len(questions) == 0:
+        data = [
+            {
+                'not_show': {
+                    'search_form_url': 'question-search',
+                    'template_type': 'template::questions',
+                    'js_path': 'js/admin/QuestionSearch.js',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for question in questions:
         id = question.ID
         title = question.Title
         answer = question.Answer
@@ -666,7 +753,11 @@ def GetQuestionLists(request, page_index=None):
                 'Option Four': OptionFour,
                 'not_show': {
                     'jump_to_url': 'getQuestionDetails',
-                    'template_type': 'template::questions'
+                    'search_form_url': 'question-search',
+                    'template_type': 'template::questions',
+                    'js_path': 'js/admin/QuestionSearch.js',
+                    'drop_down_options': drop_down_options
+
                 },
             }
         )
@@ -674,12 +765,31 @@ def GetQuestionLists(request, page_index=None):
     return ShowTableLists(request, page_index)
 
 
-def GetFeedbackLists(request, page_index=None):
+def GetFeedbackLists(request, page_index=None, feedbacks=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['Name', 'Email', 'Date', 'Message', 'Marked', 'Not-Marked']
 
-    for feedback in FeedBack.objects.all():
+    if feedbacks is None:
+        feedbacks = FeedBack.objects.all()
+
+    elif len(feedbacks) == 0:
+        data = [
+            {
+                'not_show': {
+                    'search_form_url': 'feedback-search',
+                    'template_type': 'template::feedbacks',
+                    'js_path': 'js/admin/FeedbackSearch.js',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for feedback in feedbacks:
         DATA.append(
             {
                 'ID': feedback.ID,
@@ -690,7 +800,10 @@ def GetFeedbackLists(request, page_index=None):
                 'Completed': feedback.IsMarked,
                 'not_show': {
                     'jump_to_url': 'getFeedbacks',
-                    'template_type': 'template::feedbacks'
+                    'search_form_url': 'feedback-search',
+                    'template_type': 'template::feedbacks',
+                    'js_path': 'js/admin/FeedbackSearch.js',
+                    'drop_down_options': drop_down_options
                 }
             }
         )
@@ -698,12 +811,31 @@ def GetFeedbackLists(request, page_index=None):
     return ShowTableLists(request, page_index)
 
 
-def GetReportsLists(request, page_index=None):
+def GetReportsLists(request, page_index=None, reports=None):
     global DATA
 
     DATA = []
+    drop_down_options = ['User', 'Issue', 'Date', 'Question', 'Marked', 'Not-Marked']
 
-    for report in ReportQuestion.objects.all():
+    if reports is None:
+        reports = ReportQuestion.objects.all()
+
+    elif len(reports) == 0:
+        data = [
+            {
+                'not_show': {
+                    'search_form_url': 'report-search',
+                    'template_type': 'template::reports',
+                    'js_path': 'js/admin/ReportSearch.js',
+                    'drop_down_options': drop_down_options
+                },
+                'data_details': 'No data found',
+            }
+        ]
+
+        return render(request, 'admin/index.html', {'data': data})
+
+    for report in reports:
         id = report.ID
         user = report.UserID
         issue = report.Issue
@@ -720,7 +852,11 @@ def GetReportsLists(request, page_index=None):
                 'Fixed': report.IsMarked,
                 'not_show': {
                     'jump_to_url': 'getReportsLists',
-                    'template_type': 'template::reports'
+                    'search_form_url': 'report-search',
+                    'template_type': 'template::reports',
+                    'js_path': 'js/admin/ReportSearch.js',
+                    'drop_down_options': drop_down_options
+
                 },
             }
         )
@@ -1010,3 +1146,137 @@ def MarkFeedBack(request, id):
     feedback.save()
 
     return redirect('edit-feedback', id=id)
+
+
+def UserSearch(request):
+    searching_type = request.GET.get('search-type')
+    searching_value = request.GET.get('search-value')
+
+    usrSearch = UserFilter(searching_value)
+
+    maps = {
+        'dob': lambda: usrSearch.SearchByDOB(),
+        'email': lambda: usrSearch.SearchByEmail(),
+        'admin': lambda: usrSearch.SearchByAdmin(),
+        'gender': lambda: usrSearch.SearchByGender(),
+        'active': lambda: usrSearch.SearchByActive(),
+        'member since': lambda: usrSearch.SearchByMemberSince(),
+        'non-admin': lambda: usrSearch.SearchByAdmin(is_admin=False),
+        'non-active': lambda: usrSearch.SearchByActive(is_active=False),
+    }
+
+    users = maps.get(searching_type.lower(), None)
+
+    if users:
+        users = users()
+
+    return GetUserLists(request, users=users)
+
+
+def ExamSearch(request):
+    searching_type = request.GET.get('search-type')
+    searching_value = request.GET.get('search-value')
+
+    examSearch = ExamFilter(searching_value)
+
+    maps = {
+        'date': lambda: examSearch.SearchByDate(),
+        'user': lambda: examSearch.SearchByUser(),
+        'programme name': lambda: examSearch.SearchByProgrammeName(),
+        'total correct answered': lambda: examSearch.SearchByTotalCorrectAnswer(),
+    }
+
+    exams = maps.get(searching_type.lower(), None)
+
+    if exams:
+        exams = exams()
+
+    return GetExamsLists(request, exams=exams)
+
+
+def SubjectSearch(request):
+    searching_type = request.GET.get('search-type')
+    searching_value = request.GET.get('search-value')
+
+    subjectSearch = SubjectFilter(searching_value)
+
+    maps = {
+        'subject name': lambda: subjectSearch.SearchBySubjectName(),
+        'programme name': lambda: subjectSearch.SearchByProgrammeName(),
+        'total questions to select': lambda: subjectSearch.SearchByTotalQuestionsToSelect()
+    }
+
+    subjects = maps.get(searching_type.lower(), None)
+
+    if subjects:
+        subjects = subjects()
+
+    return GetSubjectLists(request, subjects=subjects)
+
+
+def QuestionSearch(request):
+    searching_type = request.GET.get('search-type').strip()
+    searching_value = request.GET.get('search-value').strip()
+
+    questionSearch = QuestionFilter(searching_value)
+
+    maps = {
+        'subject': lambda: questionSearch.SearchBySubject(),
+        'programme': lambda: questionSearch.SearchByProgramme(),
+        'title': lambda: questionSearch.SearchByTitle(),
+        'answer': lambda: questionSearch.SearchByAnswer(),
+        'options': lambda: questionSearch.SearchByOptions()
+    }
+
+    questions = maps.get(searching_type.lower(), None)
+
+    if questions:
+        questions = questions()
+
+    return GetQuestionLists(request, questions=questions)
+
+
+def ReportSearch(request):
+    searching_type = request.GET.get('search-type').strip()
+    searching_value = request.GET.get('search-value').strip()
+
+    reportSearch = ReportFilter(searching_value)
+
+    maps = {
+        'user': lambda: reportSearch.SearchByUser(),
+        'date': lambda: reportSearch.SearchByDate(),
+        'issue': lambda: reportSearch.SearchByIssue(),
+        'marked': lambda: reportSearch.SearchByMarked(),
+        'question': lambda: reportSearch.SearchByQuestion(),
+        'not-marked': lambda: reportSearch.SearchByMarked(is_marked=False),
+    }
+
+    reports = maps.get(searching_type.lower(), None)
+
+    if reports:
+        reports = reports()
+
+    return GetReportsLists(request, reports=reports)
+
+
+def FeedbackSearch(request):
+    searching_type = request.GET.get('search-type').strip()
+    searching_value = request.GET.get('search-value').strip()
+
+    feedbackSearch = FeedbackFilter(searching_value)
+
+    maps = {
+        'name': lambda: feedbackSearch.SearchByName(),
+        'date': lambda: feedbackSearch.SearchByDate(),
+        'email': lambda: feedbackSearch.SearchByEmail(),
+        'marked': lambda: feedbackSearch.SearchByMarked(),
+        'message': lambda: feedbackSearch.SearchByMessage(),
+        'not-marked': lambda: feedbackSearch.SearchByMarked(is_marked=False),
+    }
+
+    feedbacks = maps.get(searching_type.lower(), None)
+
+    if feedbacks:
+        feedbacks = feedbacks()
+
+    return GetFeedbackLists(request, feedbacks=feedbacks)

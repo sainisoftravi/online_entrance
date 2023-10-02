@@ -4,7 +4,9 @@ error_message = document.querySelector('.error-message');
 success_message = document.querySelector('.success-message');
 
 if(error_message || success_message){
-    bx_x.addEventListener('click', (Event) => {
-        message_div.style.display = 'none';
-    })
+    if(bx_x){
+        bx_x.addEventListener('click', (Event) => {
+            message_div.style.display = 'none';
+        });
+    }
 }

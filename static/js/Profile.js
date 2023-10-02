@@ -14,7 +14,6 @@ changeProfileButton.addEventListener('change', () => {
     extension = changeProfileButton.files[0]['name'].split('.')[1];
 
     if(!imageExtension.includes(extension)){
-        console.log('Error shown');
         changeProfileButton.value = null;
         profile_image_error.classList.add('show-error');
 

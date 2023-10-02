@@ -53,6 +53,5 @@ function validateFeedBackForm(){
         message_error.classList.remove('sho-error')
     }
 
-    console.log(success);
     return success == true;
 }

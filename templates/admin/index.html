@@ -30,110 +30,127 @@
         {% endfor %}
 
         {% if data.0.not_show.template_type == 'template::users' %}
+            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/UserTable.css' %}">
 
-            <table>
-                <thead>
-                    <tr>
-                        {% for title in data.0.keys %}
-                            {% if title != "not_show" %}
-                                <th>{{title}}</th>
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                </thead>
+            {% include 'admin/search.html' %}
 
-                <tbody>
-                    {% for item in data %}
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
+
+            {% else %}
+                <table>
+                    <thead>
                         <tr>
-                            {% for key, value in item.items %}
-                                {% if key != "not_show" %}
-                                    {% if key == "Profile Image" %}
-                                        <td>
-                                            <img src="{{value.url}}" alt="user-profile-image" class="profile-image">
-                                        </td>
-
-                                    {% elif key == "ID" %}
-                                        <td>
-                                            <a href="{% url 'edit-user' value %}">{{value}}</a>
-                                        </td>
-
-                                    {% elif key == "Admin" %}
-                                        <td class="bx-center">
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
-
-                                            {% else %}
-                                                <i class='bx bx-x bx-check-x'></i>
-
-                                            {% endif %}
-
-                                        </td>
-
-                                    {% elif key == "Active" %}
-                                        <td class="bx-center">
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
-
-                                            {% else %}
-                                                <i class='bx bx-x bx-xx'></i>
-
-                                            {% endif %}
-
-                                        </td>
-
-                                    {% else %}
-                                        <td>{{value}}</td>
-
-                                    {% endif %}
+                            {% for title in data.0.keys %}
+                                {% if title != "not_show" %}
+                                    <th>{{title}}</th>
                                 {% endif %}
                             {% endfor %}
                         </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    </thead>
 
-            {% include 'JumpToNextPage.html' %}
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                {% for key, value in item.items %}
+                                    {% if key != "not_show" %}
+                                        {% if key == "Profile Image" %}
+                                            <td>
+                                                <img src="{{value.url}}" alt="user-profile-image" class="profile-image">
+                                            </td>
+
+                                        {% elif key == "ID" %}
+                                            <td>
+                                                <a href="{% url 'edit-user' value %}">{{value}}</a>
+                                            </td>
+
+                                        {% elif key == "Admin" %}
+                                            <td class="bx-center">
+                                                {% if value %}
+                                                    <i class='bx bx-check'></i>
+
+                                                {% else %}
+                                                    <i class='bx bx-x bx-check-x'></i>
+
+                                                {% endif %}
+
+                                            </td>
+
+                                        {% elif key == "Active" %}
+                                            <td class="bx-center">
+                                                {% if value %}
+                                                    <i class='bx bx-check'></i>
+
+                                                {% else %}
+                                                    <i class='bx bx-x bx-xx'></i>
+
+                                                {% endif %}
+
+                                            </td>
+
+                                        {% else %}
+                                            <td>{{value}}</td>
+
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% include 'JumpToNextPage.html' %}
+
+            {% endif %}
 
         {% elif data.0.not_show.template_type == 'template::exams' %}
             <link rel="stylesheet" href="{% static 'css/admin/exams.css' %}">
 
-            <table>
-                <thead>
-                    <tr>
-                        {% for title in data.0.keys %}
-                            {% if title != "not_show" and title != "UserID" %}
-                                <th>{{title}}</th>
-                            {% endif %}
-                        {% endfor %}
-                    </tr>
-                </thead>
+            {% include 'admin/search.html' %}
 
-                <tbody>
-                    {% for item in data %}
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
+
+            {% else %}
+                <table>
+                    <thead>
                         <tr>
-                            {% for key, value in item.items %}
-                                {% if key != "not_show" %}
-                                    <td class="set-text-to-center">
-                                        {% if key == "ID" %}
-                                            <a href="{% url 'detailed-history' value.1 %}">{{value.0}}</a>
-
-                                        {% elif key == "User" %}
-                                            <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
-
-                                        {% else %}
-                                            {{value}}
-
-                                        {% endif %}
-                                    </td>
+                            {% for title in data.0.keys %}
+                                {% if title != "not_show" and title != "UserID" %}
+                                    <th>{{title}}</th>
                                 {% endif %}
                             {% endfor %}
                         </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    </thead>
 
-            {% include 'JumpToNextPage.html' %}
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                {% for key, value in item.items %}
+                                    {% if key != "not_show" %}
+                                        <td class="set-text-to-center">
+                                            {% if key == "ID" %}
+                                                <a href="{% url 'detailed-history' value.1 %}">{{value.0}}</a>
+
+                                            {% elif key == "User" %}
+                                                <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
+
+                                            {% else %}
+                                                {{value}}
+
+                                            {% endif %}
+                                        </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% include 'JumpToNextPage.html' %}
+
+            {% endif %}
 
         {% elif data.0.not_show.template_type == 'template::programmes' %}
             <table>
@@ -170,9 +187,15 @@
 
             {% include 'JumpToNextPage.html' %}
 
-            {% elif data.0.not_show.template_type == 'template::subjects' %}
-                <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
+        {% elif data.0.not_show.template_type == 'template::subjects' %}
+            <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
 
+            {% include 'admin/search.html' %}
+
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
+
+            {% else %}
                 <table>
                     <thead>
                         <tr>
@@ -206,536 +229,563 @@
 
                 {% include 'JumpToNextPage.html' %}
 
-                {% elif data.0.not_show.template_type == 'template::questions' %}
-                    <link rel="stylesheet" href="{% static 'css/admin/QuestionTable.css' %}">
-                    <table>
-                        <thead>
-                            <tr>
-                                {% for title in data.0.keys %}
-                                    {% if title != "not_show" %}
-                                        <th>{{title}}</th>
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        </thead>
+            {% endif %}
 
-                        <tbody>
-                            {% for item in data %}
-                                <tr>
-                                    {% for key, value in item.items %}
-                                        {% if key != "not_show" %}
-                                            {% if key == "ID" %}
-                                                <td>
-                                                    <a href="{% url 'edit-question' value %}">{{value}}</a>
-                                                </td>
+        {% elif data.0.not_show.template_type == 'template::questions' %}
+            <link rel="stylesheet" href="{% static 'css/admin/QuestionTable.css' %}">
 
-                                            {% else %}
-                                                {% if key == 'Title' %}
-                                                    <td>{{value}}</td>
+            {% include 'admin/search.html' %}
 
-                                                {% else %}
-                                                    <td class="set-text-to-center">{{value}}</td>
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
 
-                                                {% endif %}
-                                            {% endif %}
-                                        {% endif %}
-                                    {% endfor %}
-                                </tr>
+            {% else %}
+                <table>
+                    <thead>
+                        <tr>
+                            {% for title in data.0.keys %}
+                                {% if title != "not_show" %}
+                                    <th>{{title}}</th>
+                                {% endif %}
                             {% endfor %}
-                        </tbody>
-                    </table>
+                        </tr>
+                    </thead>
 
-                    {% include 'JumpToNextPage.html' %}
-
-                {% elif data.0.not_show.template_type == 'template::reports' %}
-                    <link rel="stylesheet" href="{% static 'css/admin/reportQuestion.css' %}">
-
-                    <table>
-                        <thead>
+                    <tbody>
+                        {% for item in data %}
                             <tr>
-                                {% for title in data.0.keys %}
-                                    {% if title != "not_show" %}
-                                        <th>{{title}}</th>
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {% for item in data %}
-                                <tr>
-                                    {% for key, value in item.items %}
-                                        {% if key != "not_show" %}
-                                            <td class="set-text-to-center">
-                                                {% if key == "ID" %}
-                                                    <a href="{% url 'edit-report' value %}">{{value}}</a>
-
-                                                {% elif key == "User" %}
-                                                    <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
-
-                                                {% elif key == 'Question' %}
-                                                    <a href="{% url 'edit-question' value.1 %}">{{value.0}}</a>
-
-                                                {% elif key == "Fixed" %}
-                                                    {% if value %}
-                                                        <i class='bx bx-check'></i>
-
-                                                    {% else %}
-                                                        <i class='bx bx-x bx-check-x'></i>
-
-                                                    {% endif %}
-
-                                                {% else %}
-                                                    {{value}}
-
-                                                {% endif %}
+                                {% for key, value in item.items %}
+                                    {% if key != "not_show" %}
+                                        {% if key == "ID" %}
+                                            <td>
+                                                <a href="{% url 'edit-question' value %}">{{value}}</a>
                                             </td>
-                                        {% endif %}
-                                    {% endfor %}
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
 
-                {% elif data.0.not_show.template_type == 'template::feedbacks' %}
-                    <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
-
-                    <table>
-                        <thead>
-                            <tr>
-                                {% for title in data.0.keys %}
-                                    {% if title != "not_show" %}
-                                        <th>{{title}}</th>
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {% for item in data %}
-                                <tr>
-                                    {% for key, value in item.items %}
-                                        {% if key != "not_show" %}
-                                            {% if key == "ID" %}
-                                                <td>
-                                                    <a href="{% url 'edit-feedback' value %}">{{value}}</a>
-                                                </td>
-
-                                            {% elif key == "Completed" %}
-                                                <td class="bx-center">
-                                                    {% if value %}
-                                                        <i class='bx bx-check'></i>
-
-                                                    {% else %}
-                                                        <i class='bx bx-x bx-check-x'></i>
-
-                                                    {% endif %}
-                                                </td>
+                                        {% else %}
+                                            {% if key == 'Title' %}
+                                                <td>{{value}}</td>
 
                                             {% else %}
                                                 <td class="set-text-to-center">{{value}}</td>
+
                                             {% endif %}
                                         {% endif %}
-                                    {% endfor %}
-                                </tr>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% include 'JumpToNextPage.html' %}
+
+            {% endif %}
+
+        {% elif data.0.not_show.template_type == 'template::reports' %}
+            <link rel="stylesheet" href="{% static 'css/admin/reportQuestion.css' %}">
+
+            {% include 'admin/search.html' %}
+
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
+
+            {% else %}
+                <table>
+                    <thead>
+                        <tr>
+                            {% for title in data.0.keys %}
+                                {% if title != "not_show" %}
+                                    <th>{{title}}</th>
+                                {% endif %}
                             {% endfor %}
-                        </tbody>
-                    </table>
+                        </tr>
+                    </thead>
 
-                    {% include 'JumpToNextPage.html' %}
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                {% for key, value in item.items %}
+                                    {% if key != "not_show" %}
+                                        <td class="set-text-to-center">
+                                            {% if key == "ID" %}
+                                                <a href="{% url 'edit-report' value %}">{{value}}</a>
 
-                {% elif data.0.template_type == 'template::change-password' %}
-                    <script src="{% static 'js/admin/changePassword.js' %}"></script>
-                    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-                    <link rel="stylesheet" href="{% static 'css/admin/change-password.css' %}">
+                                            {% elif key == "User" %}
+                                                <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
 
-                    <div class="input-groups">
-                        <form onsubmit="return changePassword();" action="#" method="POST">
-                            {% csrf_token %}
+                                            {% elif key == 'Question' %}
+                                                <a href="{% url 'edit-question' value.1 %}">{{value.0}}</a>
 
-                            <div class="input-group">
-                                <input type="password" placeholder="Old Password" name="old_password">
-                                <small class="old-password-error">This field must not be empty</small>
-                            </div>
+                                            {% elif key == "Fixed" %}
+                                                {% if value %}
+                                                    <i class='bx bx-check'></i>
 
-                            <div class="input-group">
-                                <input type="password" placeholder="New Password" name="new_password1">
-                                <small class="new-password-error">This field must not be empty</small>
-                            </div>
+                                                {% else %}
+                                                    <i class='bx bx-x bx-check-x'></i>
 
-                            <div class="input-group">
-                                <input type="password" placeholder="Confirm New Password" name="new_password2">
-                                <small class="new-password-again-error">This field must not be empty</small>
-                            </div>
+                                                {% endif %}
 
-                            <input type="submit" value="Change Password">
-                        </form>
+                                            {% else %}
+                                                {{value}}
+
+                                            {% endif %}
+                                        </td>
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% endif %}
+
+        {% elif data.0.not_show.template_type == 'template::feedbacks' %}
+            <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
+
+            {% include 'admin/search.html' %}
+
+            {% if 'data_details' in data.0 %}
+                <p class="no-data">{{data.0.data_details}}</p>
+
+            {% else %}
+                <table>
+                    <thead>
+                        <tr>
+                            {% for title in data.0.keys %}
+                                {% if title != "not_show" %}
+                                    <th>{{title}}</th>
+                                {% endif %}
+                            {% endfor %}
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in data %}
+                            <tr>
+                                {% for key, value in item.items %}
+                                    {% if key != "not_show" %}
+                                        {% if key == "ID" %}
+                                            <td>
+                                                <a href="{% url 'edit-feedback' value %}">{{value}}</a>
+                                            </td>
+
+                                        {% elif key == "Completed" %}
+                                            <td class="bx-center">
+                                                {% if value %}
+                                                    <i class='bx bx-check'></i>
+
+                                                {% else %}
+                                                    <i class='bx bx-x bx-check-x'></i>
+
+                                                {% endif %}
+                                            </td>
+
+                                        {% else %}
+                                            <td class="set-text-to-center">{{value}}</td>
+                                        {% endif %}
+                                    {% endif %}
+                                {% endfor %}
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+                {% include 'JumpToNextPage.html' %}
+
+            {% endif %}
+
+        {% elif data.0.template_type == 'template::change-password' %}
+            <script src="{% static 'js/admin/changePassword.js' %}"></script>
+            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/change-password.css' %}">
+
+            <div class="input-groups">
+                <form onsubmit="return changePassword();" action="#" method="POST">
+                    {% csrf_token %}
+
+                    <div class="input-group">
+                        <input type="password" placeholder="Old Password" name="old_password">
+                        <small class="old-password-error">This field must not be empty</small>
                     </div>
 
-                {% elif data.0.template_type == 'template::edit-question' or data.0.template_type == 'template::add-new-question' %}
-                    <script src="{% static 'js/admin/edit-question.js' %}"></script>
-                    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-                    <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+                    <div class="input-group">
+                        <input type="password" placeholder="New Password" name="new_password1">
+                        <small class="new-password-error">This field must not be empty</small>
+                    </div>
 
-                    <div class="input-groups">
+                    <div class="input-group">
+                        <input type="password" placeholder="Confirm New Password" name="new_password2">
+                        <small class="new-password-again-error">This field must not be empty</small>
+                    </div>
+
+                    <input type="submit" value="Change Password">
+                </form>
+            </div>
+
+        {% elif data.0.template_type == 'template::edit-question' or data.0.template_type == 'template::add-new-question' %}
+            <script src="{% static 'js/admin/edit-question.js' %}"></script>
+            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+            <div class="input-groups">
+                <script>
+                    select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
+                </script>
+
+                <form onsubmit="return validateForm();" action="#" method="POST">
+                    {% csrf_token %}
+
+                    {% for key, value in data.0.items %}
+                        {% if key != 'template_type' %}
+                            {% if key == 'SelectOptions' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label>Programme</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        <select name="Programme" class="selection-select" id="programme-select" onchange="onProgrammeChange()">
+                                            <option id="programme-default">Select Programme</option>
+                                        </select>
+                                        <small class="programme-error">Must select any programme</small>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label>Subjects</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        <select name="Subject" class="selection-select" id="subject-select" onchange="onSubjectChange()">
+                                            <option id="subject-default">Select Subject</option>
+                                        </select>
+                                        <small class="subject-error">Must select any subject</small>
+                                    </div>
+                                </div>
+
+                            {% elif key == 'Title' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
+                                        <small class="{{key}}-error">This file must not be empty</small>
+                                    </div>
+                                </div>
+
+                                {% elif key == 'ID' %}
+                                <div class="row id-row">
+                                    <p>{{value}}</p>
+                                </div>
+
+                                {% else %}
+                                    <div class="row">
+                                        <div class="row-left-container">
+                                            <label for="{{key}}">{{key}} :</label>
+                                        </div>
+
+                                        <div class="row-right-container">
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                                            <small class="{{key}}-error">This file must not be empty</small>
+                                        </div>
+                                    </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="buttons">
+                        <button type="submit">Save</button>
+
+                        {% if data.0.template_type == "template::edit-question" %}
+                            <a href="{% url 'delete-question' data.0.ID %}" id="delete-button">Delete</a>
+                        {% endif %}
+
+                    </div>
+                </form>
+            </div>
+
+        {% elif data.0.template_type == 'template::edit-user' %}
+            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+            <div class="input-groups">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+
+                    {% for key, value in data.0.items %}
+                        {% if key != 'template_type' and key != 'is_superuser' %}
+                            {% if key == 'ID' %}
+                                <div class="row id-row">
+                                    <p>{{value}}</p>
+                                </div>
+
+                            {% elif key == 'Email' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        {% if data.0.is_superuser %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                        {% else %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                        {% endif %}
+
+                                        <small class="{{key}}-error"></small>
+                                    </div>
+                                </div>
+
+                            {% elif key == 'Gender' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        {% if data.0.is_superuser %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                        {% else %}
+                                            <select name="{{key}}" id="select-gender">
+                                                <option value="Male">Male</option>
+                                                <option value="Female">Female</option>
+                                                <option value="Others">Others</option>
+                                            </select>
+                                        {% endif %}
+
+                                        <small class="{{key}}-error"></small>
+                                    </div>
+                                </div>
+
+                            {% elif key == 'DOB' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        {% if data.0.is_superuser %}
+                                            <input type="date" value="{{value}}" name="DOB" readonly>
+
+                                        {% else %}
+                                            <input type="date" value="{{value}}" name="DOB">
+
+                                        {% endif %}
+
+                                        <small class="{{key}}-error"></small>
+                                    </div>
+
+                                </div>
+
+                            {% elif key == 'ProfileImage' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        <div class="upload-profile-image-div">
+                                            <img src="{{value.url}}" alt="" class="user-image">
+                                            <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                                            <small class="profile-image-error">Invalid image file</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            {% else %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" {% if key == 'Member Since' %} readonly {% endif %}>
+                                    </div>
+
+                                    <small class="{{key}}-error"></small>
+                                </div>
+
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    {% if data.0.is_superuser %}
                         <script>
-                            select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
+                            is_superuser = true;
                         </script>
 
-                        <form onsubmit="return validateForm();" action="#" method="POST">
+                    {% else %}
+                        <script>
+                            is_superuser = false;
+                        </script>
+
+                    {% endif %}
+
+                    <script src="{% static 'js/admin/change-user.js' %}"></script>
+                    <button type="submit" onclick="return validateForm()">Save</button>
+                </form>
+            </div>
+
+        {% elif data.0.template_type == 'template::edit-subject' %}
+            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+
+            <div class="input-groups">
+                <form action="#" method="POST">
+                    {% csrf_token %}
+
+                    {% for key, value in data.0.items %}
+                        {% if key != 'template_type' %}
+                            {% if key == 'ID' %}
+                                <div class="row id-row">
+                                    <p>{{value}}</p>
+                                </div>
+
+                            {% else %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
+
+                                    <div class="row-right-container">
+                                        {% if key == 'Total Questions To Select' %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+
+                                        {% else %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                        {% endif %}
+
+                                        <small class="{{key}}-error"></small>
+                                    </div>
+                                </div>
+
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <button>Save</button>
+
+                {% elif data.0.template_type == 'template::edit-feedbacks' %}
+                    <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+                    <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
+
+                    <div class="input-groups">
+                        <form action="#" method="POST">
                             {% csrf_token %}
 
                             {% for key, value in data.0.items %}
-                                {% if key != 'template_type' %}
-                                    {% if key == 'SelectOptions' %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label>Programme</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                <select name="Programme" class="selection-select" id="programme-select" onchange="onProgrammeChange()">
-                                                    <option id="programme-default">Select Programme</option>
-                                                </select>
-                                                <small class="programme-error">Must select any programme</small>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label>Subjects</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                <select name="Subject" class="selection-select" id="subject-select" onchange="onSubjectChange()">
-                                                    <option id="subject-default">Select Subject</option>
-                                                </select>
-                                                <small class="subject-error">Must select any subject</small>
-                                            </div>
-                                        </div>
-
-                                    {% elif key == 'Title' %}
+                                {% if key != 'template_type' and key != 'IsMarked' %}
+                                    {% if key == 'Message' %}
                                         <div class="row">
                                             <div class="row-left-container">
                                                 <label for="{{key}}">{{key}} :</label>
                                             </div>
 
                                             <div class="row-right-container">
-                                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
-                                                <small class="{{key}}-error">This file must not be empty</small>
+                                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
+                                                <small class="{{key}}-error"></small>
                                             </div>
                                         </div>
 
-                                        {% elif key == 'ID' %}
+                                    {% elif key == 'ID' %}
                                         <div class="row id-row">
                                             <p>{{value}}</p>
                                         </div>
 
-                                        {% else %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-                                                    <small class="{{key}}-error">This file must not be empty</small>
-                                                </div>
+                                    {% else %}
+                                        <div class="row">
+                                            <div class="row-left-container">
+                                                <label for="{{key}}">{{key}} :</label>
                                             </div>
+
+                                            <div class="row-right-container">
+                                                <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+                                                <small class="{{key}}-error"></small>
+                                            </div>
+                                        </div>
+
                                     {% endif %}
                                 {% endif %}
                             {% endfor %}
 
                             <div class="buttons">
-                                <button type="submit">Save</button>
+                                {% if data.0.IsMarked %}
+                                    <a href="#" class="Marked">Marked</a>
 
-                                {% if data.0.template_type == "template::edit-question" %}
-                                    <a href="{% url 'delete-question' data.0.ID %}" id="delete-button">Delete</a>
+                                {% else %}
+                                    <a href="{% url 'mark-feedback' data.0.ID %}">Mark As Read</a>
+
                                 {% endif %}
 
                             </div>
                         </form>
                     </div>
 
-                {% elif data.0.template_type == 'template::edit-user' %}
-                    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-                    <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+        {% elif data.0.template_type == 'template::edit-reports' %}
+            <link rel="stylesheet" href="{% static 'css/admin/edit-report.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
 
-                    <div class="input-groups">
-                        <form action="#" method="POST" enctype="multipart/form-data">
-                            {% csrf_token %}
+            <div class="input-groups">
+                <form action="#" method="POST">
+                    {% csrf_token %}
 
-                            {% for key, value in data.0.items %}
-                                {% if key != 'template_type' and key != 'is_superuser' %}
-                                    {% if key == 'ID' %}
-                                        <div class="row id-row">
-                                            <p>{{value}}</p>
-                                        </div>
+                    {% for key, value in data.0.items %}
+                        {% if key != "template_type" and key != "Fixed" %}
+                            {% if key == 'ID' %}
+                                <div class="row id-row">
+                                    <p>{{value}}</p>
+                                </div>
 
-                                    {% elif key == 'Email' %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
-                                            </div>
+                            {% elif key == 'Issue' %}
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
 
-                                            <div class="row-right-container">
-                                                {% if data.0.is_superuser %}
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                                {% else %}
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-
-                                                {% endif %}
-
-                                                <small class="{{key}}-error"></small>
-                                            </div>
-                                        </div>
-
-                                    {% elif key == 'Gender' %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                {% if data.0.is_superuser %}
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                                {% else %}
-                                                    <select name="{{key}}" id="select-gender">
-                                                        <option value="Male">Male</option>
-                                                        <option value="Female">Female</option>
-                                                        <option value="Others">Others</option>
-                                                    </select>
-                                                {% endif %}
-
-                                                <small class="{{key}}-error"></small>
-                                            </div>
-                                        </div>
-
-                                    {% elif key == 'DOB' %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                {% if data.0.is_superuser %}
-                                                    <input type="date" value="{{value}}" name="DOB" readonly>
-
-                                                {% else %}
-                                                    <input type="date" value="{{value}}" name="DOB">
-
-                                                {% endif %}
-
-                                                <small class="{{key}}-error"></small>
-                                            </div>
-
-                                        </div>
-
-                                    {% elif key == 'ProfileImage' %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                <div class="upload-profile-image-div">
-                                                    <img src="{{value.url}}" alt="" class="user-image">
-                                                    <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
-                                                    <small class="profile-image-error">Invalid image file</small>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    {% else %}
-                                        <div class="row">
-                                            <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
-                                            </div>
-
-                                            <div class="row-right-container">
-                                                <input type="datetime-local" id="{{key}}" value="{{value}}" name="{{key}}" {% if key == 'Member Since' %} readonly {% endif %}>
-                                            </div>
-
-                                            <small class="{{key}}-error"></small>
-                                        </div>
-
-                                    {% endif %}
-                                {% endif %}
-                            {% endfor %}
-
-                            {% if data.0.is_superuser %}
-                                <script>
-                                    is_superuser = true;
-                                </script>
+                                    <div class="row-right-container">
+                                        <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
+                                    </div>
+                                </div>
 
                             {% else %}
-                                <script>
-                                    is_superuser = false;
-                                </script>
+                                <div class="row">
+                                    <div class="row-left-container">
+                                        <label for="{{key}}">{{key}} :</label>
+                                    </div>
 
+                                    <div class="row-right-container">
+                                        {% if key == 'Question' %}
+                                            <a href="{% url 'edit-question' value.0 %}" target="_blank">{{value.1}}</a>
+
+                                        {% else %}
+                                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                        {% endif %}
+                                        <small class="{{key}}-error"></small>
+                                    </div>
+                                </div>
                             {% endif %}
+                        {% endif %}
+                    {% endfor %}
 
-                            <script src="{% static 'js/admin/change-user.js' %}"></script>
-                            <button type="submit" onclick="return validateForm()">Save</button>
-                        </form>
+                    <div class="buttons">
+                        {% if data.0.Fixed %}
+                            <a href="#" class="Marked">Fixed</a>
+
+                        {% else %}
+                            <a href="{% url 'mark-report' data.0.ID %}">Mark As Fixed</a>
+
+                        {% endif %}
                     </div>
-
-                    {% elif data.0.template_type == 'template::edit-subject' %}
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
-
-                        <div class="input-groups">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-
-                                {% for key, value in data.0.items %}
-                                    {% if key != 'template_type' %}
-                                        {% if key == 'ID' %}
-                                            <div class="row id-row">
-                                                <p>{{value}}</p>
-                                            </div>
-
-                                        {% else %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    {% if key == 'Total Questions To Select' %}
-                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-
-                                                    {% else %}
-                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                                    {% endif %}
-
-                                                    <small class="{{key}}-error"></small>
-                                                </div>
-                                            </div>
-
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-
-                                <button>Save</button>
-
-                    {% elif data.0.template_type == 'template::edit-feedbacks' %}
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
-
-                        <div class="input-groups">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-
-                                {% for key, value in data.0.items %}
-                                    {% if key != 'template_type' and key != 'IsMarked' %}
-                                        {% if key == 'Message' %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
-                                                    <small class="{{key}}-error"></small>
-                                                </div>
-                                            </div>
-
-                                        {% elif key == 'ID' %}
-                                            <div class="row id-row">
-                                                <p>{{value}}</p>
-                                            </div>
-
-                                        {% else %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-                                                    <small class="{{key}}-error"></small>
-                                                </div>
-                                            </div>
-
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-
-                                <div class="buttons">
-                                    {% if data.0.IsMarked %}
-                                        <a href="#" class="Marked">Marked</a>
-
-                                    {% else %}
-                                        <a href="{% url 'mark-feedback' data.0.ID %}">Mark As Read</a>
-
-                                    {% endif %}
-
-                                </div>
-                            </form>
-                        </div>
-
-                    {% elif data.0.template_type == 'template::edit-reports' %}
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-report.css' %}">
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
-                        <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
-
-                        <div class="input-groups">
-                            <form action="#" method="POST">
-                                {% csrf_token %}
-
-                                {% for key, value in data.0.items %}
-                                    {% if key != "template_type" and key != "Fixed" %}
-                                        {% if key == 'ID' %}
-                                            <div class="row id-row">
-                                                <p>{{value}}</p>
-                                            </div>
-
-                                        {% elif key == 'Issue' %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
-                                                </div>
-                                            </div>
-
-                                        {% else %}
-                                            <div class="row">
-                                                <div class="row-left-container">
-                                                    <label for="{{key}}">{{key}} :</label>
-                                                </div>
-
-                                                <div class="row-right-container">
-                                                    {% if key == 'Question' %}
-                                                        <a href="{% url 'edit-question' value.0 %}" target="_blank">{{value.1}}</a>
-
-                                                    {% else %}
-                                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
-
-                                                    {% endif %}
-                                                    <small class="{{key}}-error"></small>
-                                                </div>
-                                            </div>
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-
-                                <div class="buttons">
-                                    {% if data.0.Fixed %}
-                                        <a href="#" class="Marked">Fixed</a>
-
-                                    {% else %}
-                                        <a href="{% url 'mark-report' data.0.ID %}">Mark As Fixed</a>
-
-                                    {% endif %}
-                                </div>
-                            </form>
-                    {% endif %}
+                </form>
+        {% endif %}
     </div>
 
     <script src="{% static 'js/admin/index.js' %}"></script>

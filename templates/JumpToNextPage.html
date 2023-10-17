@@ -3,25 +3,25 @@
 <link rel="stylesheet" href="{% static 'css/admin/jump-to-page.css' %}">
 
 
-{% if "prev_page_index" in request.session %}
+{% if paginator.num_pages > 1 %}
     <div class="jump-to-page">
 
-    {% if request.session.prev_page_index == 0 %}
+    {% if prev_page_index == 0 %}
         <a href="#" class="prev-page-link readonly-link">
 
     {% else %}
-        <a href="{% url 'next-page' data.0.not_show.jump_to_url request.session.prev_page_index %}" class="prev-page-link">
+        <a href="?pages={{prev_page_index}}" class="prev-page-link">
 
     {% endif %}
         <i class='bx bx-left-arrow-alt' ></i>
         <p>Previous</p>
     </a>
 
-    {% if request.session.disable_next %}
+    {% if next_page_index > paginator.num_pages %}
         <a href="#" class="next-page-link readonly-link">
 
     {% else %}
-        <a href="{% url 'next-page' data.0.not_show.jump_to_url request.session.prev_page_index|add:2 %}" class="next-page-link">
+        <a href="?pages={{next_page_index}}" class="next-page-link">
 
     {% endif %}
         <p>Next</p>

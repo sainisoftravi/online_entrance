@@ -1,4 +1,3 @@
-import math
 import json
 import random
 import datetime
@@ -7,11 +6,28 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
 from django.contrib.auth import authenticate, login, logout
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth import update_session_auth_hash, get_user_model
 from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
 from .search import *
 
-DATA = []
+
+def PaginatePage(request, data, number_of_data=100):
+    page = int(request.GET.get('pages', 1))
+    paginator = Paginator(data, number_of_data)
+
+    try:
+        data = paginator.page(page)
+
+    except PageNotAnInteger:
+        page = 1
+        data = paginator.page(page)
+
+    except EmptyPage:
+        page = paginator.num_pages
+        data = paginator.page(paginator.num_pages)
+
+    return paginator, data, page
 
 
 def SignUp(request):
@@ -517,9 +533,7 @@ def DisplayReportedQuestion(request, id):
     return render(request, 'ReportQuestion.html', {'data': data})
 
 
-def GetUserLists(request, page_index=None, users=None):
-    global DATA
-
+def GetUserLists(request, users=None):
     DATA = []
     drop_down_options = ['Email', 'DOB', 'Gender', 'Member Since', 'Admin', 'Non-Admin', 'Active', 'Non-Active']
 
@@ -527,19 +541,15 @@ def GetUserLists(request, page_index=None, users=None):
         users = CustomUser.objects.all()
 
     elif len(users) == 0:
-        data = [
-            {
-                'not_show': {
-                    'js_path': 'js/admin/UserSearch.js',
-                    'search_form_url': 'user-search',
-                    'template_type': 'template::users',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'js_path': 'js/admin/UserSearch.js',
+                            'search_form_url': 'user-search',
+                            'template_type': 'template::users',
+                            'drop_down_options': drop_down_options,
+                            'data_details': 'No data found',
+                        }
+                )
 
     for user in users:
         id = user.id
@@ -570,22 +580,27 @@ def GetUserLists(request, page_index=None, users=None):
                 'Member Since': memberSince,
                 'Admin': is_user_super,
                 'Active': is_user_active,
-                'not_show': {
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'search_form_url': 'user-search',
                     'jump_to_url': 'getUserDetails',
                     'template_type': 'template::users',
                     'js_path': 'js/admin/UserSearch.js',
                     'drop_down_options': drop_down_options
-                },
-            }
-        )
-
-    return ShowTableLists(request, page_index)
+                }
+            )
 
 
-def GetExamsLists(request, page_index=None, exams=None):
-    global DATA
-
+def GetExamsLists(request, exams=None):
     DATA = []
     drop_down_options = ['User', 'Programme Name', 'Total Correct Answered', 'Date']
 
@@ -593,19 +608,15 @@ def GetExamsLists(request, page_index=None, exams=None):
         exams = Exams.objects.all()
 
     elif len(exams) == 0:
-        data = [
-            {
-                'not_show': {
-                    'search_form_url': 'exam-search',
-                    'template_type': 'template::exams',
-                    'js_path': 'js/admin/ExamSearch.js',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'data_details': 'No data found',
+                            'search_form_url': 'exam-search',
+                            'template_type': 'template::exams',
+                            'js_path': 'js/admin/ExamSearch.js',
+                            'drop_down_options': drop_down_options
+                        }
+                    )
 
     for exam in exams:
         id = exam.ID
@@ -621,22 +632,27 @@ def GetExamsLists(request, page_index=None, exams=None):
                 'Programme Name': programme_name,
                 'Total Correct Answered': correct_counter,
                 'Date': date,
-                'not_show': {
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'jump_to_url': 'getExamDetails',
                     'search_form_url': 'exam-search',
                     'template_type': 'template::exams',
                     'js_path': 'js/admin/ExamSearch.js',
                     'drop_down_options': drop_down_options,
-                },
-            }
-        )
-
-    return ShowTableLists(request, page_index)
+                }
+            )
 
 
-def GetProgrammeLists(request, page_index=None):
-    global DATA
-
+def GetProgrammeLists(request):
     DATA = []
 
     for programme in Programme.objects.all():
@@ -647,19 +663,24 @@ def GetProgrammeLists(request, page_index=None):
             {
                 'ID': id,
                 'Name': name,
-                'not_show': {
-                    'jump_to_url': 'getProgrammeDetails',
-                    'template_type': 'template::programmes'
-                },
             }
         )
 
-    return ShowTableLists(request, page_index)
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'jump_to_url': 'getProgrammeDetails',
+                    'template_type': 'template::programmes'
+                }
+            )
 
 
-def GetSubjectLists(request, page_index=None, subjects=None):
-    global DATA
-
+def GetSubjectLists(request, subjects=None):
     DATA = []
     drop_down_options = ['Programme Name', 'Subject Name', 'Total Questions To Select']
 
@@ -667,19 +688,15 @@ def GetSubjectLists(request, page_index=None, subjects=None):
         subjects = Subject.objects.all()
 
     elif len(subjects) == 0:
-        data = [
-            {
-                'not_show': {
-                    'search_form_url': 'subject-search',
-                    'template_type': 'template::subjects',
-                    'js_path': 'js/admin/SubjectSearch.js',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'data_details': 'No data found',
+                            'search_form_url': 'subject-search',
+                            'template_type': 'template::subjects',
+                            'js_path': 'js/admin/SubjectSearch.js',
+                            'drop_down_options': drop_down_options
+                        }
+                )
 
     for subject in subjects:
         id = subject.ID
@@ -691,24 +708,28 @@ def GetSubjectLists(request, page_index=None, subjects=None):
                 'ID': id,
                 'Programme Name': programmeName,
                 'Subject Name': name,
-                'Total Questions To Select': subject.TotalQuestionsToSelect,
-                'not_show': {
+                'Total Questions To Select': subject.TotalQuestionsToSelect
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'jump_to_url': 'getSubjectDetails',
                     'search_form_url': 'subject-search',
                     'template_type': 'template::subjects',
                     'drop_down_options': drop_down_options,
                     'js_path': 'js/admin/SubjectSearch.js',
-
-                },
-            }
-        )
-
-    return ShowTableLists(request, page_index)
+                }
+            )
 
 
-def GetQuestionLists(request, page_index=None, questions=None):
-    global DATA
-
+def GetQuestionLists(request, questions=None):
     DATA = []
     drop_down_options = ['Subject', 'Programme', 'Title', 'Answer', 'Options']
 
@@ -716,19 +737,15 @@ def GetQuestionLists(request, page_index=None, questions=None):
         questions = Questions.objects.all()
 
     elif len(questions) == 0:
-        data = [
-            {
-                'not_show': {
-                    'search_form_url': 'question-search',
-                    'template_type': 'template::questions',
-                    'js_path': 'js/admin/QuestionSearch.js',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'data_details': 'No data found',
+                            'search_form_url': 'question-search',
+                            'template_type': 'template::questions',
+                            'js_path': 'js/admin/QuestionSearch.js',
+                            'drop_down_options': drop_down_options
+                        }
+                )
 
     for question in questions:
         id = question.ID
@@ -750,24 +767,28 @@ def GetQuestionLists(request, page_index=None, questions=None):
                 'Option One': OptionOne,
                 'Option Two': OptionTwo,
                 'Option Three': OptionThree,
-                'Option Four': OptionFour,
-                'not_show': {
+                'Option Four': OptionFour
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'jump_to_url': 'getQuestionDetails',
                     'search_form_url': 'question-search',
                     'template_type': 'template::questions',
                     'js_path': 'js/admin/QuestionSearch.js',
                     'drop_down_options': drop_down_options
-
-                },
-            }
-        )
-
-    return ShowTableLists(request, page_index)
+                }
+            )
 
 
-def GetFeedbackLists(request, page_index=None, feedbacks=None):
-    global DATA
-
+def GetFeedbackLists(request, feedbacks=None):
     DATA = []
     drop_down_options = ['Name', 'Email', 'Date', 'Message', 'Marked', 'Not-Marked']
 
@@ -775,19 +796,15 @@ def GetFeedbackLists(request, page_index=None, feedbacks=None):
         feedbacks = FeedBack.objects.all()
 
     elif len(feedbacks) == 0:
-        data = [
-            {
-                'not_show': {
-                    'search_form_url': 'feedback-search',
-                    'template_type': 'template::feedbacks',
-                    'js_path': 'js/admin/FeedbackSearch.js',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'data_details': 'No data found',
+                            'search_form_url': 'feedback-search',
+                            'template_type': 'template::feedbacks',
+                            'js_path': 'js/admin/FeedbackSearch.js',
+                            'drop_down_options': drop_down_options
+                        }
+                )
 
     for feedback in feedbacks:
         DATA.append(
@@ -798,22 +815,27 @@ def GetFeedbackLists(request, page_index=None, feedbacks=None):
                 'Message': feedback.Message,
                 'Date': feedback.Date,
                 'Completed': feedback.IsMarked,
-                'not_show': {
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'jump_to_url': 'getFeedbacks',
                     'search_form_url': 'feedback-search',
                     'template_type': 'template::feedbacks',
                     'js_path': 'js/admin/FeedbackSearch.js',
                     'drop_down_options': drop_down_options
                 }
-            }
-        )
-
-    return ShowTableLists(request, page_index)
+            )
 
 
-def GetReportsLists(request, page_index=None, reports=None):
-    global DATA
-
+def GetReportsLists(request, reports=None):
     DATA = []
     drop_down_options = ['User', 'Issue', 'Date', 'Question', 'Marked', 'Not-Marked']
 
@@ -821,19 +843,15 @@ def GetReportsLists(request, page_index=None, reports=None):
         reports = ReportQuestion.objects.all()
 
     elif len(reports) == 0:
-        data = [
-            {
-                'not_show': {
-                    'search_form_url': 'report-search',
-                    'template_type': 'template::reports',
-                    'js_path': 'js/admin/ReportSearch.js',
-                    'drop_down_options': drop_down_options
-                },
-                'data_details': 'No data found',
-            }
-        ]
-
-        return render(request, 'admin/index.html', {'data': data})
+        return render(request, 'admin/index.html',
+                        {
+                            'data_details': 'No data found',
+                            'search_form_url': 'report-search',
+                            'template_type': 'template::reports',
+                            'js_path': 'js/admin/ReportSearch.js',
+                            'drop_down_options': drop_down_options
+                        }
+                )
 
     for report in reports:
         id = report.ID
@@ -850,75 +868,27 @@ def GetReportsLists(request, page_index=None, reports=None):
                 'Issue': issue,
                 'Date': date,
                 'Fixed': report.IsMarked,
-                'not_show': {
+            }
+        )
+
+    paginator, data, page = PaginatePage(request, DATA)
+
+    return render(request, 'admin/index.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
                     'jump_to_url': 'getReportsLists',
                     'search_form_url': 'report-search',
                     'template_type': 'template::reports',
                     'js_path': 'js/admin/ReportSearch.js',
                     'drop_down_options': drop_down_options
-
-                },
-            }
-        )
-
-    return ShowTableLists(request, page_index)
-
-
-def ShowTableLists(request, page_index=None):
-    total_items = math.ceil(len(DATA) / 100)
-
-    if page_index and total_items < page_index:
-        raise Http404
-
-    if total_items > 1:
-        request.session['prev_page_index'] = 0
-        request.session['total_next_index'] = total_items
-
-    else:
-        if 'prev_page_index' in request.session:
-            del request.session['prev_page_index']
-
-    request.session['disable_next'] = False
-
-    if page_index is None:
-        page_index = 0
-
-    return render(request, 'admin/index.html', {'data': DATA[page_index * 100:page_index * 100 + 100]})
-
-
-def NextPage(request, page, index):
-    if not DATA:
-        get_jump_data = {
-            'getUserDetails': lambda: GetUserLists(request, index),
-            'getExamDetails': lambda: GetExamsLists(request, index),
-            'getQuestionDetails': lambda: GetQuestionLists(request, index),
-        }
-
-        return get_jump_data[page]()
-
-    if index > math.ceil(len(DATA) / 100):
-        raise Http404
-
-    next_page_index = index - 1
-    request.session['prev_page_index'] = next_page_index
-
-    if index == request.session['total_next_index']:
-        request.session['disable_next'] = True
-
-    else:
-        if request.session.get('disable_next', None):
-            del request.session['disable_next']
-
-    return render(request, 'admin/index.html', {'data': DATA[next_page_index * 100:next_page_index * 100 + 100]})
+                }
+            )
 
 
 def AdminChangePassword(request):
-    data = [
-        {
-            'template_type': 'template::change-password'
-        }
-    ]
-
     if request.method == 'POST':
         old_password = request.POST['old_password']
         new_password = request.POST['new_password1']
@@ -935,7 +905,7 @@ def AdminChangePassword(request):
         else:
             messages.error(request, 'Old Password did not match')
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html', {'template_type': 'template::change-password'})
 
 
 def EditQuestions(request, id):
@@ -962,30 +932,26 @@ def EditQuestions(request, id):
             'Option Two': question.OptionTwo,
             'Option Three': question.OptionThree,
             'Option Four': question.OptionFour,
-            'template_type': 'template::edit-question',
         }
     ]
 
     if request.method == "POST":
         return redirect('edit-question', id=question.ID)
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type': 'template::edit-question',
+                    }
+
+            )
 
 
 def DeleteQuestion(request, id):
-    for data in DATA[:]:
-        ID = str(data['ID'])
-
-        if ID == id:
-            DATA.remove(data)
-
     question = Questions.objects.filter(ID=id).first()
     question.delete()
 
-    current_page = request.session.get('prev_page_index', 1) + 1
-    messages.success(request, 'Question deleted successfully')
-
-    return redirect('next-page', 'getQuestionDetails', current_page)
+    return redirect('getQuestionDetails')
 
 
 def EditUsers(request, id):
@@ -1017,12 +983,16 @@ def EditUsers(request, id):
             'DOB': user.DOB.strftime("%Y-%m-%d") if user.DOB else '-',
             'ProfileImage': user.ProfileImage,
             'Member Since': str(user.MemberSince).split('+')[0][:-3],
-            'template_type': 'template::edit-user',
             'is_superuser': user.is_superuser,
         }
     ]
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type': 'template::edit-user',
+                    }
+            )
 
 
 def EditSubject(request, id):
@@ -1041,12 +1011,17 @@ def EditSubject(request, id):
             'ID': subject.ID,
             'Programme': subject.ProgrammeID,
             'Subject': subject.Name,
-            'Total Questions To Select': subject.TotalQuestionsToSelect,
-            'template_type': 'template::edit-subject'
+            'Total Questions To Select': subject.TotalQuestionsToSelect
         }
     ]
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type':
+                        'template::edit-subject'
+                    }
+            )
 
 
 def AddNewQuestion(request):
@@ -1081,12 +1056,16 @@ def AddNewQuestion(request):
             'Option One': '',
             'Option Two': '',
             'Option Three': '',
-            'Option Four': '',
-            'template_type': 'template::add-new-question',
+            'Option Four': ''
         }
     ]
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                  {
+                      'data': data,
+                      'template_type': 'template::add-new-question',
+                  }
+            )
 
 
 def EditFeedback(request, id):
@@ -1107,11 +1086,15 @@ def EditFeedback(request, id):
             'Message': feedback.Message,
             'Date': feedback.Date,
             'IsMarked': feedback.IsMarked,
-            'template_type': 'template::edit-feedbacks',
         }
     ]
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type': 'template::edit-feedbacks'
+                    }
+                )
 
 
 def EditReports(request, id):
@@ -1125,11 +1108,15 @@ def EditReports(request, id):
             'Question': (reportedQuestion.QuestionID, reportedQuestion.QuestionID.Title),
             'Date': reportedQuestion.Date,
             'Fixed': reportedQuestion.IsMarked,
-            'template_type': 'template::edit-reports',
         }
     ]
 
-    return render(request, 'admin/index.html', {'data': data})
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type': 'template::edit-reports',
+                    }
+                )
 
 
 def MarkReport(request, id):

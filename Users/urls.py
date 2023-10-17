@@ -13,7 +13,6 @@ urlpatterns = [
     path('exam-search/', views.ExamSearch, name='exam-search'),
     path('getFeedbacks/', views.GetFeedbackLists, name='feedback'),
     path('report-search/', views.ReportSearch, name='report-search'),
-    path('<str:page>/<int:index>/', views.NextPage, name='next-page'),
     path('deleteaccount/', views.DeleteAccount, name='deleteaccount'),
     path('updateprofile/', views.UpdateProfile, name='updateprofile'),
     path('getUserDetails/', views.GetUserLists, name='getUserDetails'),

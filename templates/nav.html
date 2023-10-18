@@ -4,7 +4,7 @@
 <html>
     <head>
         <title>Online Entrance Preparation</title>
-        <link rel="stylesheet" href="{% static 'css/WelcomeNav.css' %}">
+        <link rel="stylesheet" href="{% static 'css/nav.css' %}">
         <link rel="icon" href='{% static "logo2.png" %}' type="image/icon type">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
@@ -13,33 +13,36 @@
         <div class="nav-bar">
             <div class="logo">
                 <a href="{% url 'index' %}">
-                    {% if request.user.is_superuser %}
-                        <span id="admin-title">ADMIN</span>
-
-                    {% else %}
-                        <span id="title">Online Entrance Preparation</span>
-                    {% endif %}
+                    <span id="title">Online Entrance Preparation</span>
                 </a>
             </div>
 
             <div class="right-panel">
-                    {% if request.user.is_superuser is False %}
-                        <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
-                    {% endif %}
+                {% if request.user.is_superuser is False %}
+                    <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
+                {% endif %}
 
+                {% if request.user.is_authenticated %}
                     <a href="{% url 'go_to' 'dashboard' %}">
                         <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
                     </a>
-                </div>
+
+                {% else %}
+                    {% if request.user.is_superuser is False %}
+                        <a href="{% url 'login' %}" id="login">Login</a>
+                    {% endif %}
+
+                {% endif %}
+            </div>
 
             <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
                 <i class='bx bx-log-out-circle'></i>
                 <p>Logout</p>
             </a>
-
         </div>
 
-        <script src="{% static 'js/WelcomeNav.js' %}"></script>
+        <script src="{% static 'js/nav.js' %}"></script>
+
         {% block content %}
         {% endblock %}
     </body>

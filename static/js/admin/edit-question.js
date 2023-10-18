@@ -91,6 +91,16 @@ function validateForm(){
         fourError.classList.remove('show-error');
     }
 
+    if(![oneAreaValue, twoAreaValue, fourAreaValue, threeAreaValue].includes(answerAreaValue)){
+        success = false;
+        answerError.innerText = 'Answer must be within the given options'
+        answerError.classList.add('show-error');
+    }
+
+    else{
+        answerError.classList.remove('show-error');
+    }
+
     return success == true;
 }
 

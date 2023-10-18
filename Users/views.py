@@ -151,12 +151,6 @@ def Index(request):
 
         return redirect('index')
 
-    elif request.user.id:
-        details.update({'nav_template': 'WelcomeNav.html'})
-
-    else:
-        details.update({'nav_template': 'IndexNav.html'})
-
     return render(request, 'index.html', details)
 
 

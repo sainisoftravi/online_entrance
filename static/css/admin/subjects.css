@@ -1,3 +1,12 @@
-th{
-    white-space: nowrap;
+.inner-wrapper-left{
+    width: 50%;
+}
+
+.inner-wrapper-right{
+    gap: 5px;
+    flex-direction: column;
+}
+
+.inner-wrapper{
+    height: 100px;
 }

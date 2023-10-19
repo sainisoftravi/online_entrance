@@ -245,19 +245,30 @@ input[type=file]::file-selector-button {
     border-right: 1px solid #e5e5e5;
   }
 
-  @media screen and (max-width: 1150px) {
+@media screen and (max-width: 600px) {
+    .form-outer-container{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+      }
+
     .form-left{
         display: none;
     }
 
     .form-right{
-        width: 100%;
-        min-height: 80vh;
+        width: 95%;
     }
-}
 
-@media screen and (max-width: 600px) {
+    form{
+        width: 95%;
+    }
+
     .genders{
         flex-direction: column;
+    }
+
+    input[type="radio"]{
+        visibility: hidden;
     }
 }

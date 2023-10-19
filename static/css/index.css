@@ -126,80 +126,60 @@ textarea:focus{
     cursor: pointer;
 }
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 600px){
     .quote p{
-        font-size: 35px;
+        width: 70%;
+        font-size: 30px;
     }
 
     .welcome{
-        width: 100%;
         flex-direction: column;
     }
 
     .welcome p{
-        width: 80%;
-        font-size: 30px;
+        width: 100%;
+        font-size: 20px;
     }
 
     .welcome img{
-        flex: 1;
-        width: 80%;
+        width: 90%;
+        height: 100%;
     }
 
     .contact{
-        gap: 20px;
-        width: 100%;
+        flex-direction: column;
         margin-top: 20px;
         align-items: center;
-        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-left{
+        width: 100%;
+    }
+
+    .contact-right{
+        width: 90%;
     }
 
     .contact img{
         display: none;
     }
 
-    .contact-left{
-        justify-content: left;
-        width: 80%;
-    }
-
     .contact-left p{
-        width: 80%;
-        padding: 10px;
+        width: 90%;
         display: block;
         font-size: 30px;
-        font-weight: bolder;
         color: rgb(236, 236, 236);
+        padding: 10px 10px 10px 0;
     }
 
-    .contact-right{
-        width: 80%;
-        display: flex;
-        justify-content: right;
-    }
-
-    form{
+    .contact-right form input,
+    .contact-right form textarea{
         width: 100%;
     }
-}
 
-
-@media screen and (max-width: 745px) {
-    .welcome p{
-        font-size: 22px;
+    .error{
+        width: 100%;
     }
-}
 
-
-@media screen and (max-width: 655px) {
-    .quote p{
-        font-size: 27px;
-    }
-}
-
-
-@media screen and (max-width: 576px) {
-    .welcome p{
-        font-size: 20px;
-    }
 }

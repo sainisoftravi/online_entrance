@@ -61,22 +61,22 @@
     background-color: rgb(20, 137, 158);
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
     .outer-div{
-        justify-content: none;
+        min-height: 60vh;
+        justify-content: normal;
     }
 
-    .search-container input{
-        font-size: 12px;
+    .search-container{
+        width: 95%;
     }
 
     .program-container{
-        flex-direction: column;
+        width: 95%;
+        gap: 20px;
     }
 
     .program{
-        width: 100%;
-        font-size: 15px;
+        width: fit-content;
     }
-
 }

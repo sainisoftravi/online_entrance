@@ -39,7 +39,8 @@
     color: var(--timer-text-color);
 }
 
-.QuestionContainer{
+.QuestionContainer,
+.QuestionAnotherContainer{
     gap: 20px;
     width: 100%;
     display: flex;
@@ -209,45 +210,65 @@ label{
     margin-bottom: 50px;
 }
 
-@media screen and (max-width: 900px) {
-    .question-title{
-        font-size: 15px;
+@media screen and (max-width: 600px) {
+    .QuestionContainer{
+        overflow: hidden;
     }
 
-    label.option-labels{
-        font-size: 13px;
+    .QuestionAnotherContainer{
+        margin-top: 25px;
+    }
+
+    .Questions{
+        width: 90%
     }
 
     .choice{
-        width: 65%;
+        width: 100%;
     }
 
-    .obtained-marks,
+    p.question-title,
+    label.option-labels{
+        font-size: 15px;
+    }
+
+    p.question-number{
+        font-size: 15px;
+        width: fit-content;
+        padding: 20px 0 0 5px;
+    }
+
+    .marks{
+        top: 80px;
+        width: 60px;
+        height: 60px;
+    }
+    .obtained-marks{
+        font-size: 20px;
+    }
+
     .total-marks{
+        font-size: 20px;
+        border-top: 2px solid var(--obtained-marks-font-color)
+    }
+
+    .timer{
+        width: fit-content;
+    }
+
+    #timer-text{
         font-size: 30px;
     }
 
-    .marks{
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media screen and (max-width: 736px) {
-    .obtained-marks,
-    .total-marks{
-        font-size: 25px;
+    #submit-button{
+        width: 50%;
     }
 
-    .marks{
-        width: 75px;
-        height: 75px;
+    .go-to-top{
+        overflow: hidden;
     }
-}
 
-
-@media screen and (max-width: 576px) {
-    .marks{
-        left: 5px;
+    .error-message{
+        width: 100%;
     }
 }

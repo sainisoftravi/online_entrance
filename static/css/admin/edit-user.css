@@ -1,35 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
 .input-groups{
+    gap: 20px;
     width: 100%;
     display: flex;
-    margin-top: 5px;
+    min-height: 10vh;
     align-items: center;
     justify-content: center;
 }
 
 form{
     gap: 20px;
-    width: 80%;
+    width: 60%;
+    padding: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.input-group{
+.row{
+    width: 100%;
     display: flex;
-}
-
-.left-group{
-    width: 50%;
-    padding: 20px;
-    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    border-bottom: 2px solid #f5f5f5;
 }
 
-.right-group{
+.row-left-container,
+.row-right-container{
     width: 50%;
+}
+
+.row label,
+.row input{
+    padding: 10px;
+}
+
+.row input{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.id-row{
+    padding: 20px;
+}
+
+.row label,
+.row p{
+    font-weight: 600;
+    font-size: 18px;
+    font-family: var(--td-color);
+}
+
+.bottom-button{
+    width: 30%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: var(--td-color);
+    border: 1px solid #8f8f9d;
+    background-color: #e9e9ed;
+}
+
+.upload-profile-image-div{
+    gap: 20px;
     display: flex;
-    justify-content: center;
+    padding: 10px;
+    margin-bottom: 10px;
     flex-direction: column;
+}
+
+.upload-profile-image-div img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 input[type=file]{
@@ -48,17 +101,92 @@ input[type=file]::file-selector-button {
     transition: .5s;
   }
 
-.profile{
-    gap: 10px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+input[type=file]::file-selector-button:hover {
+    background-color: #eee;
+    border: 0px;
+    border-right: 1px solid #e5e5e5;
 }
 
-.profile img{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+.row-right-date-container{
+    width: 50%;
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.row-right-date-container label{
+    right: 0;
+    padding: 0;
+    position: absolute;
+}
+
+.row-right-date-container i{
+    font-size: 30px;
+}
+
+.row-right-container input{
+    margin-bottom: 3px;
+}
+
+#select-gender{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid black;
+    background-color: white;
+}
+
+.selection-select{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 3px;
+}
+
+.buttons{
+    gap: 20px;
+    display: flex;
+}
+
+#delete-button:hover{
+    cursor: pointer;
+    color: whitesmoke;
+    background-color: rgb(204, 53, 26)
+}
+
+a.bottom-button,
+a.bottom-button:visited{
+    color: black;
+}
+
+.bottom-button-fifteen-percent{
+    width: 15%;
+}
+
+.bottom-button-twenty-percent{
+    width: 20%;
+}
+
+@media screen and (max-width: 600px){
+    form{
+        width: 95%;
+    }
+
+    .id-row p{
+        font-size: 16px;
+    }
+
+    .row{
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-left-container,
+    .row-right-container{
+        width: 100%;
+    }
+
+    .bottom-button-twenty-percent{
+        width: 30%;
+    }
 }

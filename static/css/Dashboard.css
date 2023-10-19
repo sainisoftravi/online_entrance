@@ -108,24 +108,42 @@ i.bx-x{
     color: whitesmoke;
 }
 
-@media screen and (max-width: 1276px) {
-    .pie-charts{
-        gap: 20px;
-        flex-direction: column;
+@media screen and (max-width: 600px) {
+    i.bx-menu{
+        left: 5px;
+        display: block;
+        position: absolute;
+        height: fit-content;
+        font-size: 25px;
     }
-}
 
-@media screen and (max-width: 700px) {
-    .right-container{
-        width: 100%;
-        justify-content: center;
+    .dashboard-container{
+        position: relative;
     }
 
     .left-container{
         display: none;
     }
 
-    i.bx-menu{
-        display: block;
+    .right-container{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    .pie-charts{
+        flex-direction: column;
+    }
+
+    .chart-div{
+        align-items: normal;
+    }
+
+    .left-links{
+        padding: 10px;
+    }
+
+    i.bx-x{
+        font-size: 30px;
+        margin-left: 5px;
     }
 }

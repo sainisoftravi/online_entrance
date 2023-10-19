@@ -252,39 +252,35 @@ i.show-eye{
     display: flex;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .row-1,
     .row-2,
     .row-3{
-        width: 80%;
+        width: 95%;
+    }
+
+    .left-text{
+        width: 45%
+    }
+
+    .right-text{
+        width: 55%;
+    }
+
+    .row-2 .input-groups{
+        width: 100%;
+    }
+
+    #changePasswordForm{
+        width: 100%;
     }
 
     .row-3 button{
-        width: 40%;
+        width: 45%;
     }
-}
 
-
-@media screen and (max-width: 1100px){
-    .row-1,
-    .row-2,
-    .row-3{
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 950px){
-    .row-1,
-    .row-2,
-    .row-3{
-        width: 75%;
-    }
-}
-
-@media screen and (max-width: 720px){
-    .row-1,
-    .row-2,
-    .row-3{
-        width: 80%;
+    .row-3 p,
+    .row-3 button{
+        margin-left: 11px;
     }
 }

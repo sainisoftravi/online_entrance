@@ -1,7 +1,7 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
 <script src="{% static js_path %}"></script>
-<link rel="stylesheet" href="{% static 'css/admin/Users.css' %}">
+<link rel="stylesheet" href="{% static 'css/admin/search.css' %}">
 
 <form action="{% url search_form_url %}" id="searching-form" method="GET" onsubmit="return validateForm()">
     {% csrf_token %}

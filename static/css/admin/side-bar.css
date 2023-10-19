@@ -50,3 +50,31 @@ a.selected-side-bar-option{
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
+@media screen and (max-width: 600px) {
+    .side-bar{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+        flex-direction: row;
+        border-end-end-radius: 0;
+        background-color: #504099;
+        justify-content: space-around;
+    }
+
+    .side-bar-option{
+        gap: 0;
+        padding: 10px;
+    }
+
+    .side-bar-option i,
+    .side-bar-option p{
+        font-size: 15px;
+    }
+
+    a.selected-side-bar-option{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

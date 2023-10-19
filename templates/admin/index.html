@@ -3,7 +3,6 @@
 
 {% block content%}
     <link rel="stylesheet" href="{% static 'css/admin/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/admin/table.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -31,7 +30,8 @@
 
         {% if template_type == 'template::users' %}
             <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/UserTable.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/User.css' %}">
 
             {% include 'admin/search.html' %}
 
@@ -39,62 +39,39 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
+                <div class="wrapper">
+                    {% for user in data %}
+                        <a class="inner-wrapper" href="{% url 'edit-user' user.ID %}">
+                            <div class="inner-wrapper-left">
+                                <p>{{user.Email}}</p>
 
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    {% if key == "Profile Image" %}
-                                        <td>
-                                            <img src="{{value.url}}" alt="user-profile-image" class="profile-image">
-                                        </td>
+                                {% if user.Gender is not None %}
+                                    <p>{{user.Gender | capfirst}}</p>
+                                {% endif %}
 
-                                    {% elif key == "ID" %}
-                                        <td>
-                                            <a href="{% url 'edit-user' value %}">{{value}}</a>
-                                        </td>
+                                {% if user.Admin %}
+                                    <p class="yes-admin">Admin</p>
 
-                                    {% elif key == "Admin" %}
-                                        <td class="bx-center">
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
+                                {% else %}
+                                    <p class="no-admin">Non-Admin</p>
 
-                                            {% else %}
-                                                <i class='bx bx-x bx-check-x'></i>
+                                {% endif %}
 
-                                            {% endif %}
+                                {% if user.Active %}
+                                    <p class="yes-active">Active</p>
 
-                                        </td>
+                                {% else %}
+                                    <p class="no-active">In-Active</p>
+                                {% endif %}
 
-                                    {% elif key == "Active" %}
-                                        <td class="bx-center">
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
+                            </div>
 
-                                            {% else %}
-                                                <i class='bx bx-x bx-xx'></i>
-
-                                            {% endif %}
-
-                                        </td>
-
-                                    {% else %}
-                                        <td>{{value}}</td>
-
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                            <div class="inner-wrapper-right">
+                                <img src="{{user.ProfileImage.url}}" alt="">
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
                 {% include 'JumpToNextPage.html' %}
 
@@ -102,6 +79,7 @@
 
         {% elif template_type == 'template::exams' %}
             <link rel="stylesheet" href="{% static 'css/admin/exams.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
 
             {% include 'admin/search.html' %}
 
@@ -109,73 +87,46 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
+                <div class="wrapper">
+                    {% for exam in data %}
+                        <a class="inner-wrapper" href="{% url 'detailed-history' exam.examSlug %}">
+                            <div class="inner-wrapper-left">
+                                <p>{{exam.email}}</p>
+                                <p>{{exam.programme}}</p>
+                                <p>{{exam.date}}</p>
 
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    <td class="set-text-to-center">
-                                        {% if key == "ID" %}
-                                            <a href="{% url 'detailed-history' value.1 %}">{{value.0}}</a>
+                            </div>
 
-                                        {% elif key == "User" %}
-                                            <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
-
-                                        {% else %}
-                                            {{value}}
-
-                                        {% endif %}
-                                    </td>
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                            <div class="inner-wrapper-right">
+                                <p>{{exam.correct_counter}}</p>
+                                <p>100</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
                 {% include 'JumpToNextPage.html' %}
 
             {% endif %}
 
         {% elif template_type == 'template::programmes' %}
-            <table>
-                <thead>
-                    <tr>
-                        {% for title in data.0.keys %}
-                            <th>{{title}}</th>
-                        {% endfor %}
-                    </tr>
-                </thead>
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/programme.css' %}">
 
-                <tbody>
-                    {% for item in data %}
-                        <tr>
-                            {% for key, value in item.items %}
-                                <td class="set-text-to-center">
-                                    {% if key == "ID" %}
-                                        <p>{{value}}</p>
-
-                                    {% else %}
-                                        {{value}}
-
-                                    {% endif %}
-                                </td>
-                            {% endfor %}
-                        </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            <div class="wrapper">
+                {% for programme in data %}
+                    <div class="inner-wrapper">
+                        <div class="inner-wrapper-left">
+                            <p>{{programme.Name}}</p>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
 
             {% include 'JumpToNextPage.html' %}
 
         {% elif template_type == 'template::subjects' %}
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
 
             {% include 'admin/search.html' %}
@@ -184,39 +135,29 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
+                <div class="wrapper">
+                    {% for subject in data %}
+                        <a class="inner-wrapper" href="{% url 'edit-subject' subject.ID %}">
+                            <div class="inner-wrapper-left">
+                                <p>{{subject.programme}}</p>
+                                <p>{{subject.subject}}</p>
+                            </div>
 
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    {% if key == "ID" %}
-                                        <td>
-                                            <a href="{% url 'edit-subject' value %}">{{value}}</a>
-                                        </td>
-
-                                    {% else %}
-                                        <td class="set-text-to-center">{{value}}</td>
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                            <div class="inner-wrapper-right">
+                                <p>Total Question</p>
+                                <p>{{subject.total_question}}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
                 {% include 'JumpToNextPage.html' %}
 
             {% endif %}
 
         {% elif template_type == 'template::questions' %}
-            <link rel="stylesheet" href="{% static 'css/admin/QuestionTable.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/Questions.css' %}">
 
             {% include 'admin/search.html' %}
 
@@ -224,44 +165,33 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
+                <div class="wrapper">
+                    {% for question in data %}
+                        <a href="{% url 'edit-question' question.ID %}" class="inner-wrapper">
+                            <div class="inner-wrapper-left">
+                                <p>{{question.programme}}</p>
+                                <p>{{question.subject}}</p>
+                            </div>
 
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    {% if key == "ID" %}
-                                        <td>
-                                            <a href="{% url 'edit-question' value %}">{{value}}</a>
-                                        </td>
+                            <div class="inner-wrapper-right">
+                                <p class="inner-wrapper-right-question">{{question.title}}</p>
 
-                                    {% else %}
-                                        {% if key == 'Title' %}
-                                            <td>{{value}}</td>
-
-                                        {% else %}
-                                            <td class="set-text-to-center">{{value}}</td>
-
-                                        {% endif %}
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                                <div class="inner-wrapper-right-options">
+                                    {% for option in question.options %}
+                                        <p class="{% if option == question.answer %}correct-answer{% endif %}">{{option}}</p>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
                 {% include 'JumpToNextPage.html' %}
 
             {% endif %}
 
         {% elif template_type == 'template::reports' %}
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/reportQuestion.css' %}">
 
             {% include 'admin/search.html' %}
@@ -270,52 +200,23 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    <td class="set-text-to-center">
-                                        {% if key == "ID" %}
-                                            <a href="{% url 'edit-report' value %}">{{value}}</a>
-
-                                        {% elif key == "User" %}
-                                            <a href="{% url 'edit-user' value.1 %}">{{value.0}}</a>
-
-                                        {% elif key == 'Question' %}
-                                            <a href="{% url 'edit-question' value.1 %}">{{value.0}}</a>
-
-                                        {% elif key == "Fixed" %}
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
-
-                                            {% else %}
-                                                <i class='bx bx-x bx-check-x'></i>
-
-                                            {% endif %}
-
-                                        {% else %}
-                                            {{value}}
-
-                                        {% endif %}
-                                    </td>
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <div class="wrapper">
+                    {% for report in data %}
+                        <a class="inner-wrapper" href="{% url 'edit-report' report.ID %}">
+                            <div class="inner-wrapper-left">
+                                <p id="report-email">{{report.user}}</p>
+                                <p id="report-issue">{{report.issue}}</p>
+                                <p id="report-date">{{report.date}}</p>
+                                <p></p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
             {% endif %}
 
         {% elif template_type == 'template::feedbacks' %}
+            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
 
             {% include 'admin/search.html' %}
@@ -324,43 +225,18 @@
                 <p class="no-data">{{data_details}}</p>
 
             {% else %}
-                <table>
-                    <thead>
-                        <tr>
-                            {% for title in data.0.keys %}
-                                <th>{{title}}</th>
-                            {% endfor %}
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        {% for item in data %}
-                            <tr>
-                                {% for key, value in item.items %}
-                                    {% if key == "ID" %}
-                                        <td>
-                                            <a href="{% url 'edit-feedback' value %}">{{value}}</a>
-                                        </td>
-
-                                    {% elif key == "Completed" %}
-                                        <td class="bx-center">
-                                            {% if value %}
-                                                <i class='bx bx-check'></i>
-
-                                            {% else %}
-                                                <i class='bx bx-x bx-check-x'></i>
-
-                                            {% endif %}
-                                        </td>
-
-                                    {% else %}
-                                        <td class="set-text-to-center">{{value}}</td>
-                                    {% endif %}
-                                {% endfor %}
-                            </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+                <div class="wrapper">
+                    {% for feedback in data %}
+                        <a class="inner-wrapper" href="{% url 'edit-feedback' feedback.ID %}">
+                            <div class="inner-wrapper-left">
+                                <p id="feedback-name">{{feedback.name}}</p>
+                                <p id="feedback-email">{{feedback.email}}</p>
+                                <p id="feedback-msg">{{feedback.message}}</p>
+                                <p id="feedback-date">{{feedback.date}}</p>
+                            </div>
+                        </a>
+                    {% endfor %}
+                </div>
 
                 {% include 'JumpToNextPage.html' %}
 
@@ -397,12 +273,15 @@
         {% elif template_type == 'template::edit-question' or template_type == 'template::add-new-question' %}
             <script src="{% static 'js/admin/edit-question.js' %}"></script>
             <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
+
 
             <div class="input-groups">
-                <script>
-                    select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
-                </script>
+                {% if data.0.SelectOptions %}
+                    <script>
+                        select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
+                    </script>
+                {% endif %}
 
                 <form onsubmit="return validateForm();" action="#" method="POST">
                     {% csrf_token %}
@@ -438,7 +317,7 @@
                         {% elif key == 'Title' %}
                             <div class="row">
                                 <div class="row-left-container">
-                                    <label for="{{key}}">{{key}} :</label>
+                                    <label for="{{key}}">{{key}}</label>
                                 </div>
 
                                 <div class="row-right-container">
@@ -447,30 +326,30 @@
                                 </div>
                             </div>
 
-                            {% elif key == 'ID' %}
+                        {% elif key == 'ID' %}
                             <div class="row id-row">
                                 <p>{{value}}</p>
                             </div>
 
-                            {% else %}
-                                <div class="row">
-                                    <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
-                                    </div>
-
-                                    <div class="row-right-container">
-                                        <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
-                                        <small class="{{key}}-error">This file must not be empty</small>
-                                    </div>
+                        {% else %}
+                            <div class="row">
+                                <div class="row-left-container">
+                                    <label for="{{key}}">{{key}}</label>
                                 </div>
+
+                                <div class="row-right-container">
+                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                                    <small class="{{key}}-error">This file must not be empty</small>
+                                </div>
+                            </div>
                         {% endif %}
                     {% endfor %}
 
                     <div class="buttons">
-                        <button type="submit">Save</button>
+                        <button type="submit" class="bottom-button bottom-button-fifteen-percent">Save</button>
 
                         {% if template_type == "template::edit-question" %}
-                            <a href="{% url 'delete-question' data.0.ID %}" id="delete-button">Delete</a>
+                            <a href="{% url 'delete-question' data.0.ID %}" class="bottom-button bottom-button-fifteen-percent">Delete</a>
                         {% endif %}
 
                     </div>
@@ -479,10 +358,10 @@
 
         {% elif template_type == 'template::edit-user' %}
             <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
 
             <div class="input-groups">
-                <form action="#" method="POST" enctype="multipart/form-data">
+                <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
                     {% csrf_token %}
 
                     {% for key, value in data.0.items %}
@@ -495,7 +374,7 @@
                             {% elif key == 'Email' %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -514,7 +393,7 @@
                             {% elif key == 'Gender' %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -536,7 +415,7 @@
                             {% elif key == 'DOB' %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -556,7 +435,7 @@
                             {% elif key == 'ProfileImage' %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -571,7 +450,7 @@
                             {% else %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -598,12 +477,12 @@
                     {% endif %}
 
                     <script src="{% static 'js/admin/change-user.js' %}"></script>
-                    <button type="submit" onclick="return validateForm()">Save</button>
+                    <button type="submit" class="bottom-button bottom-button-fifteen-percent" onclick="return validateForm()">Save</button>
                 </form>
             </div>
 
         {% elif template_type == 'template::edit-subject' %}
-            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
 
             <div class="input-groups">
                 <form action="#" method="POST">
@@ -618,7 +497,7 @@
                         {% else %}
                             <div class="row">
                                 <div class="row-left-container">
-                                    <label for="{{key}}">{{key}} :</label>
+                                    <label for="{{key}}">{{key}}</label>
                                 </div>
 
                                 <div class="row-right-container">
@@ -637,11 +516,10 @@
                         {% endif %}
                     {% endfor %}
 
-                    <button>Save</button>
+                    <button class="bottom-button bottom-button-fifteen-percent">Save</button>
 
                 {% elif template_type == 'template::edit-feedbacks' %}
-                    <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
-                    <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
+                    <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
 
                     <div class="input-groups">
                         <form action="#" method="POST">
@@ -652,7 +530,7 @@
                                     {% if key == 'Message' %}
                                         <div class="row">
                                             <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
+                                                <label for="{{key}}">{{key}}</label>
                                             </div>
 
                                             <div class="row-right-container">
@@ -669,7 +547,7 @@
                                     {% else %}
                                         <div class="row">
                                             <div class="row-left-container">
-                                                <label for="{{key}}">{{key}} :</label>
+                                                <label for="{{key}}">{{key}}</label>
                                             </div>
 
                                             <div class="row-right-container">
@@ -684,10 +562,10 @@
 
                             <div class="buttons">
                                 {% if data.0.IsMarked %}
-                                    <a href="#" class="Marked">Marked</a>
+                                    <a href="#" class="Marked" class="bottom-button bottom-button-twenty-percent">Marked</a>
 
                                 {% else %}
-                                    <a href="{% url 'mark-feedback' data.0.ID %}">Mark As Read</a>
+                                    <a href="{% url 'mark-feedback' data.0.ID %}" class="bottom-button bottom-button-twenty-percent">Mark As Read</a>
 
                                 {% endif %}
 
@@ -696,9 +574,7 @@
                     </div>
 
         {% elif 'template::edit-reports' %}
-            <link rel="stylesheet" href="{% static 'css/admin/edit-report.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-question.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-feedbacks.css' %}">
+            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
 
             <div class="input-groups">
                 <form action="#" method="POST">
@@ -714,7 +590,7 @@
                             {% elif key == 'Issue' %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -725,7 +601,7 @@
                             {% else %}
                                 <div class="row">
                                     <div class="row-left-container">
-                                        <label for="{{key}}">{{key}} :</label>
+                                        <label for="{{key}}">{{key}}</label>
                                     </div>
 
                                     <div class="row-right-container">
@@ -745,10 +621,10 @@
 
                     <div class="buttons">
                         {% if data.0.Fixed %}
-                            <a href="#" class="Marked">Fixed</a>
+                            <a href="#" class="Marked bottom-button bottom-button-twenty-percent">Fixed</a>
 
                         {% else %}
-                            <a href="{% url 'mark-report' data.0.ID %}">Mark As Fixed</a>
+                            <a href="{% url 'mark-report' data.0.ID %}" class="bottom-button bottom-button-twenty-percent">Mark As Fixed</a>
 
                         {% endif %}
                     </div>

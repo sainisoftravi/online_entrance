@@ -1,3 +1,11 @@
-td:nth-child(6){
-    white-space: nowrap;
+.inner-wrapper-right{
+    flex-direction: column;
+}
+
+.inner-wrapper-right p{
+    font-size: 22px;
+}
+
+.inner-wrapper-right p:nth-child(2){
+    border-top: 2px solid black;
 }

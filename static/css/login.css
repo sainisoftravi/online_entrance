@@ -177,13 +177,22 @@ i.show-eye{
 }
 
 
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 600px) {
+    .form-outer-container{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+      }
+
     .form-left{
         display: none;
     }
 
     .form-right{
-        width: 100%;
-        min-height: 80vh;
+        width: 95%;
+    }
+
+    form{
+        width: 95%;
     }
 }

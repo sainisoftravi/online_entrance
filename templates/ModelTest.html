@@ -21,7 +21,13 @@
             <p class="total-marks">100</p>
         </div>
 
-        <div class="QuestionContainer">
+        {% if questions.0.checked %}
+            <div class="QuestionContainer">
+
+        {% else %}
+            <div class="QuestionAnotherContainer taking-test">
+
+        {% endif %}
             {% if questions.0.checked is False %}
                 <div class="timer">
                     <p id="timer-text">Starts at: 5</p>

@@ -52,3 +52,15 @@ a.readonly-link{
 div.hide-jump-to-page{
     display: none;
 }
+
+@media screen and (max-width: 600px){
+    .jump-to-page{
+        gap: 10px;
+        margin: 20px 0 20px 0;
+        flex-direction: column;
+    }
+
+    .jump-to-page a{
+        width: 50%;
+    }
+}

@@ -57,3 +57,18 @@
     text-decoration: none;
     font-family: var(--font-family);
 }
+
+@media screen and (max-width: 600px){
+    .left-nav a{
+        font-size: 20px;
+    }
+
+    .right-nav a{
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .block-content{
+        flex-direction: column;
+    }
+}

@@ -111,23 +111,28 @@ a{
     text-decoration: none;
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 600px) {
+    #title{
+        font-size: 12px;
+        padding-left: 5px;
+        letter-spacing: 2px;
+    }
+
+    .right-panel{
+        gap: 0px;
+    }
+
     #login{
         display: none;
     }
 
-    #title{
-        font-size: 20px;
+    #take-test{
+        padding: 15px;
+        font-size: 12px;
+        margin-right: 10px;
     }
 
-}
-
-@media screen and (max-width: 576px) {
-    #title{
-        font-size: 15px;
-    }
-
-    #login{
-        display: none;
+    .go-to-top{
+        overflow: hidden;
     }
 }

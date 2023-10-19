@@ -6,11 +6,17 @@
     <div class="histories">
         {% if results %}
             {% for result in results %}
-            <a href="{% url 'detailed-history' result.Slug %}">
+            <a href="{% url 'detailed-history' result.Slug %}" class="each-history">
                 <div class="history">
-                    <p id="counter">#{{result.Counter}}</p>
-                    <p id="programme">{{result.Program}}</p>
-                    <p id="date">{{result.Date}}</p>
+                    <div class="marks-left-container">
+                        <p id="programme">{{result.Program}}</p>
+                        <p id="date">{{result.Date}}</p>
+                    </div>
+
+                    <div class="marks-right-container">
+                        <p class="obtained-marks">{{result.mark}}</p>
+                        <p class="total-marks">100</p>
+                    </div>
                 </div>
             </a>
             {% endfor %}

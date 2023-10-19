@@ -1,0 +1,14 @@
+.wrapper{
+    margin-top: 10px;
+}
+
+.inner-wrapper-left p{
+    font-size: 30px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px){
+    .inner-wrapper-left p{
+        font-size: 40px;
+    }
+}

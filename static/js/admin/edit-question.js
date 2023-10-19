@@ -147,12 +147,14 @@ function onProgrammeChange(){
 }
 
 window.onload = function(){
-    select_element = document.querySelector('#programme-select');
+    select_element = document.getElementById('programme-select');
 
-    for(select_option in select_options){
-        newOption = document.createElement("option");
-        newOption.text = select_option;
+    if(select_element){
+        for(select_option in select_options){
+            newOption = document.createElement("option");
+            newOption.text = select_option;
 
-        select_element.add(newOption);
+            select_element.add(newOption);
+        }
     }
 };

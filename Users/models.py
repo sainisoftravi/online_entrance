@@ -364,5 +364,5 @@ class FeedBack(models.Model):
 
 @receiver(pre_save, sender=CustomUser)
 def set_default_profile_picture(sender, instance, **kwargs):
-    if instance.Gender == 'male':
+    if instance.Gender == 'male' and not instance.ProfileImage:
         instance.ProfileImage = 'pp-male.jpg'

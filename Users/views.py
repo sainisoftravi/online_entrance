@@ -367,11 +367,11 @@ def Dashboard(request):
 def GetHistories(id):
     results = []
 
-    for counter, result in enumerate(Exams.objects.filter(UserID=id)):
+    for result in Exams.objects.filter(UserID=id):
         res = {
             'Date': result.Date,
             'Slug': result.Slug,
-            'Counter': counter + 1,
+            'mark': result.CorrectCounter,
             'Program': result.ProgrammeName
         }
 
@@ -508,7 +508,8 @@ def ReportQuestions(request, id):
     data = {
         'id': id,
         'editable': True,
-        'title': question.Title
+        'title': question.Title,
+        'options': [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
     }
 
     return render(request, 'ReportQuestion.html', {'data': data})
@@ -547,31 +548,18 @@ def GetUserLists(request, users=None):
 
     for user in users:
         id = user.id
-        dob = user.DOB
         email = user.email
         gender = user.Gender
-        memberSince = user.MemberSince
         is_user_active = user.is_active
         is_user_super = user.is_superuser
         profileImagePath = user.ProfileImage
-
-        if dob is None:
-            dob = '-'
-
-        if gender is None:
-            gender = '-'
-
-        else:
-            gender = gender[0].upper()
 
         DATA.append(
             {
                 'ID': id,
                 'Email': email,
-                'DOB': dob,
                 'Gender': gender,
-                'Profile Image': profileImagePath,
-                'Member Since': memberSince,
+                'ProfileImage': profileImagePath,
                 'Admin': is_user_super,
                 'Active': is_user_active,
             }
@@ -613,19 +601,13 @@ def GetExamsLists(request, exams=None):
                     )
 
     for exam in exams:
-        id = exam.ID
-        user = exam.UserID,
-        programme_name = exam.ProgrammeName
-        correct_counter = exam.CorrectCounter
-        date = exam.Date
-
         DATA.append(
             {
-                'ID': (id, exam.Slug),
-                'User': (user[0].email, user[0].id),
-                'Programme Name': programme_name,
-                'Total Correct Answered': correct_counter,
-                'Date': date,
+                'date': exam.Date,
+                'examSlug': exam.Slug,
+                'email': exam.UserID.email,
+                'programme': exam.ProgrammeName,
+                'correct_counter': exam.CorrectCounter,
             }
         )
 
@@ -693,16 +675,12 @@ def GetSubjectLists(request, subjects=None):
                 )
 
     for subject in subjects:
-        id = subject.ID
-        name = subject.Name
-        programmeName = subject.ProgrammeID.Name
-
         DATA.append(
             {
-                'ID': id,
-                'Programme Name': programmeName,
-                'Subject Name': name,
-                'Total Questions To Select': subject.TotalQuestionsToSelect
+                'ID': subject.ID,
+                'subject': subject.Name,
+                'programme': subject.ProgrammeID.Name,
+                'total_question': subject.TotalQuestionsToSelect
             }
         )
 
@@ -742,26 +720,14 @@ def GetQuestionLists(request, questions=None):
                 )
 
     for question in questions:
-        id = question.ID
-        title = question.Title
-        answer = question.Answer
-        OptionOne = question.OptionOne
-        OptionTwo = question.OptionTwo
-        OptionThree = question.OptionThree
-        OptionFour = question.OptionFour
-        subjectName = question.SubjectID.Name
-
         DATA.append(
             {
-                'ID': id,
-                'Subject': subjectName,
-                'Programme': question.SubjectID.ProgrammeID.Name,
-                'Title': title,
-                'Answer': answer,
-                'Option One': OptionOne,
-                'Option Two': OptionTwo,
-                'Option Three': OptionThree,
-                'Option Four': OptionFour
+                'ID': question.ID,
+                'title': question.Title,
+                'answer': question.Answer,
+                'subject': question.SubjectID.Name,
+                'programme': question.SubjectID.ProgrammeID.Name,
+                'options': [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour],
             }
         )
 
@@ -804,11 +770,11 @@ def GetFeedbackLists(request, feedbacks=None):
         DATA.append(
             {
                 'ID': feedback.ID,
-                'Name': feedback.Name,
-                'Email': feedback.Email,
-                'Message': feedback.Message,
-                'Date': feedback.Date,
-                'Completed': feedback.IsMarked,
+                'name': feedback.Name,
+                'date': feedback.Date,
+                'email': feedback.Email,
+                'message': feedback.Message,
+                'completed': feedback.IsMarked,
             }
         )
 
@@ -848,20 +814,14 @@ def GetReportsLists(request, reports=None):
                 )
 
     for report in reports:
-        id = report.ID
-        user = report.UserID
-        issue = report.Issue
-        questionID = report.QuestionID
-        date = report.Date
-
         DATA.append(
             {
-                'ID': id,
-                'User': (user.email, user.id),
-                'Question': (questionID.Title, questionID.ID),
-                'Issue': issue,
-                'Date': date,
-                'Fixed': report.IsMarked,
+                'ID': report.ID,
+                'date': report.Date,
+                'issue': report.Issue,
+                'fixed': report.IsMarked,
+                'user': report.UserID.email,
+                'question': report.QuestionID.Title
             }
         )
 

@@ -10,14 +10,6 @@
     overflow-x: auto;
 }
 
-.set-text-to-center{
-    text-align: center;
-}
-
-.custom-right-container{
-    height: 87%;
-}
-
 .message-div{
     margin: 2px;
     padding: 20px;
@@ -51,13 +43,4 @@
 input[readonly],
 textarea[readonly]{
     pointer-events: none;
-}
-
-td a{
-    font-family: var(--td-font);
-    color: #2600ff;
-}
-
-td:nth-child(2){
-white-space:nowrap;
 }

@@ -2,6 +2,14 @@
     margin-top: 10px;
 }
 
+.inner-wrapper{
+    width: 30%;
+}
+
+.inner-wrapper-left{
+    width: 100%;
+}
+
 .inner-wrapper-left p{
     font-size: 30px;
     text-align: center;

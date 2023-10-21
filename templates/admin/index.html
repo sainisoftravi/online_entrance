@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content%}
+    <link rel="stylesheet" href="{% static 'css/admin/edit.css' %}">
     <link rel="stylesheet" href="{% static 'css/admin/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
+    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -29,8 +32,6 @@
         {% endfor %}
 
         {% if template_type == 'template::users' %}
-            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/User.css' %}">
 
             {% include 'admin/search.html' %}
@@ -42,32 +43,36 @@
                 <div class="wrapper">
                     {% for user in data %}
                         <a class="inner-wrapper" href="{% url 'edit-user' user.ID %}">
-                            <div class="inner-wrapper-left">
-                                <p>{{user.Email}}</p>
-
-                                {% if user.Gender is not None %}
-                                    <p>{{user.Gender | capfirst}}</p>
-                                {% endif %}
-
-                                {% if user.Admin %}
-                                    <p class="yes-admin">Admin</p>
-
-                                {% else %}
-                                    <p class="no-admin">Non-Admin</p>
-
-                                {% endif %}
-
-                                {% if user.Active %}
-                                    <p class="yes-active">Active</p>
-
-                                {% else %}
-                                    <p class="no-active">In-Active</p>
-                                {% endif %}
-
+                            <div class="inner-wrapper-top">
+                                <p class="user-email">{{user.Email}}</p>
                             </div>
 
-                            <div class="inner-wrapper-right">
-                                <img src="{{user.ProfileImage.url}}" alt="">
+                            <div class="inner-wrapper-bottom">
+                                <div class="inner-wrapper-left">
+                                    {% if user.Gender is not None %}
+                                        <p class="user-gender">{{user.Gender | capfirst}}</p>
+                                    {% endif %}
+
+                                    {% if user.Admin %}
+                                        <p class="yes-admin">Admin</p>
+
+                                    {% else %}
+                                        <p class="no-admin">Non-Admin</p>
+
+                                    {% endif %}
+
+                                    {% if user.Active %}
+                                        <p class="yes-active">Active</p>
+
+                                    {% else %}
+                                        <p class="no-active">In-Active</p>
+                                    {% endif %}
+
+                                </div>
+
+                                <div class="inner-wrapper-right">
+                                    <img src="{{user.ProfileImage.url}}" alt="">
+                                </div>
                             </div>
                         </a>
                     {% endfor %}
@@ -79,7 +84,6 @@
 
         {% elif template_type == 'template::exams' %}
             <link rel="stylesheet" href="{% static 'css/admin/exams.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
 
             {% include 'admin/search.html' %}
 
@@ -110,7 +114,6 @@
             {% endif %}
 
         {% elif template_type == 'template::programmes' %}
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/programme.css' %}">
 
             <div class="wrapper">
@@ -123,10 +126,10 @@
                 {% endfor %}
             </div>
 
+            <script src="{% static 'js/admin/resize-div-height.js' %}"></script>
             {% include 'JumpToNextPage.html' %}
 
         {% elif template_type == 'template::subjects' %}
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
 
             {% include 'admin/search.html' %}
@@ -156,7 +159,6 @@
             {% endif %}
 
         {% elif template_type == 'template::questions' %}
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/Questions.css' %}">
 
             {% include 'admin/search.html' %}
@@ -191,7 +193,6 @@
             {% endif %}
 
         {% elif template_type == 'template::reports' %}
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/reportQuestion.css' %}">
 
             {% include 'admin/search.html' %}
@@ -216,7 +217,6 @@
             {% endif %}
 
         {% elif template_type == 'template::feedbacks' %}
-            <link rel="stylesheet" href="{% static 'css/admin/global.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
 
             {% include 'admin/search.html' %}
@@ -244,7 +244,6 @@
 
         {% elif template_type == 'template::change-password' %}
             <script src="{% static 'js/admin/changePassword.js' %}"></script>
-            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
             <link rel="stylesheet" href="{% static 'css/admin/change-password.css' %}">
 
             <div class="input-groups">
@@ -272,9 +271,6 @@
 
         {% elif template_type == 'template::edit-question' or template_type == 'template::add-new-question' %}
             <script src="{% static 'js/admin/edit-question.js' %}"></script>
-            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
-
 
             <div class="input-groups">
                 {% if data.0.SelectOptions %}
@@ -357,9 +353,6 @@
             </div>
 
         {% elif template_type == 'template::edit-user' %}
-            <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
-
             <div class="input-groups">
                 <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
                     {% csrf_token %}
@@ -482,8 +475,6 @@
             </div>
 
         {% elif template_type == 'template::edit-subject' %}
-            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
-
             <div class="input-groups">
                 <form action="#" method="POST">
                     {% csrf_token %}
@@ -519,8 +510,6 @@
                     <button class="bottom-button bottom-button-fifteen-percent">Save</button>
 
                 {% elif template_type == 'template::edit-feedbacks' %}
-                    <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
-
                     <div class="input-groups">
                         <form action="#" method="POST">
                             {% csrf_token %}
@@ -574,8 +563,6 @@
                     </div>
 
         {% elif 'template::edit-reports' %}
-            <link rel="stylesheet" href="{% static 'css/admin/edit-user.css' %}">
-
             <div class="input-groups">
                 <form action="#" method="POST">
                     {% csrf_token %}

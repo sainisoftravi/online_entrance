@@ -1,3 +1,30 @@
 .inner-wrapper{
     height: 180px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.inner-wrapper-top p{
+    word-wrap: break-word;
+}
+
+.inner-wrapper-bottom{
+    display: flex;
+}
+
+.user-email{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.user-gender,
+.yes-admin,
+.no-admin,
+.yes-active,
+.no-active{
+    font-size: 14px;
+}
+
+.inner-wrapper-right{
+    margin-top: 10px;
 }

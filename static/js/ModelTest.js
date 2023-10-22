@@ -81,7 +81,6 @@ function checkForSubmission(){
 }
 
 
-
 window.addEventListener("load", () => {
     priorDuration = 5 * 1000;
     priorEndTime = Date.now() + priorDuration;
@@ -91,7 +90,10 @@ window.addEventListener("load", () => {
     examCountDownInterval = 0;
 
     timer_text = document.querySelector('#timer-text');
-    priorCountDownInterval = setInterval(priorTime, 50);
+
+    if(timer_text){
+        priorCountDownInterval = setInterval(priorTime, 50);
+    }
 
     function priorTime(){
         remainingTime = priorEndTime - Date.now();

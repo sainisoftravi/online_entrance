@@ -1,5 +1,22 @@
+.inner-wrapper{
+    flex-direction: column;
+}
+
+.inner-wrapper-bottom{
+    display: flex;
+}
+
+.inner-wrapper-top p{
+    word-break: break-word;
+}
+
+.inner-wrapper-left{
+    gap: 0;
+}
+
 .inner-wrapper-right{
     flex-direction: column;
+    padding-left: 120px;
 }
 
 .inner-wrapper-right p{
@@ -8,4 +25,17 @@
 
 .inner-wrapper-right p:nth-child(2){
     border-top: 2px solid black;
+}
+
+.exam-user{
+    font-size: 17px;
+    font-weight: bolder;
+}
+
+.exam-programme{
+    font-size: small;
+}
+
+.exam-date{
+    font-size: smaller;
 }

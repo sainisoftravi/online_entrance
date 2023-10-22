@@ -1,10 +1,9 @@
-{% extends 'nav.html' %}
+{% extends nav_template %}
 {% load static %}
 
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/modeltest.css' %}">
-    <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     {% if questions.0.checked %}
@@ -106,15 +105,22 @@
         </div>
     </form>
 
-    <a href="#" class="go-to-top">
-        <i class='bx bx-up-arrow-alt up-arrow'></i>
-    </a>
+    {% if request.user.is_superuser is False %}
+        <a href="#" class="go-to-top">
+            <i class='bx bx-up-arrow-alt up-arrow'></i>
+        </a>
 
-    <script>
-        var is_checked = '{% if questions.0.checked == True %}true{% else %}false{% endif %}';
-    </script>
-    <script src="{% static 'js/scroll.js' %}"></script>
-    <script src="{% static 'js/ModelTest.js' %}"></script>
+        <script>
+            var is_checked = '{% if questions.0.checked == True %}true{% else %}false{% endif %}';
+        </script>
+
+        <script src="{% static 'js/scroll.js' %}"></script>
+        <script src="{% static 'js/ModelTest.js' %}"></script>
+        <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
+
+    {% else %}
+        <link rel="stylesheet" href="{% static 'css/admin/modeltest.css' %}">
+    {% endif %}
 
 {% if request.user.is_superuser is False %}
     {% include 'footer.html' %}

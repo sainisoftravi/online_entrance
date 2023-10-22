@@ -56,7 +56,7 @@ small.error-message{
     font-size: 40px;
     font-weight: bold;
     justify-content: center;
-    font-family: var(--td-font);
+    font-family: var(--global-font);
 }
 
 @media screen and (max-width: 600px){

@@ -94,16 +94,20 @@
                 <div class="wrapper">
                     {% for exam in data %}
                         <a class="inner-wrapper" href="{% url 'detailed-history' exam.examSlug %}">
-                            <div class="inner-wrapper-left">
-                                <p>{{exam.email}}</p>
-                                <p>{{exam.programme}}</p>
-                                <p>{{exam.date}}</p>
-
+                            <div class="inner-wrapper-top">
+                                <p class="exam-user">{{exam.email}}</p>
                             </div>
 
-                            <div class="inner-wrapper-right">
-                                <p>{{exam.correct_counter}}</p>
-                                <p>100</p>
+                            <div class="inner-wrapper-bottom">
+                                <div class="inner-wrapper-left">
+                                    <p class="exam-programme">{{exam.programme}}</p>
+                                    <p class="exam-date">{{exam.date}}</p>
+                                </div>
+
+                                <div class="inner-wrapper-right">
+                                    <p>{{exam.correct_counter}}</p>
+                                    <p>100</p>
+                                </div>
                             </div>
                         </a>
                     {% endfor %}
@@ -171,17 +175,19 @@
                     {% for question in data %}
                         <a href="{% url 'edit-question' question.ID %}" class="inner-wrapper">
                             <div class="inner-wrapper-left">
-                                <p>{{question.programme}}</p>
-                                <p>{{question.subject}}</p>
+                                <p class="question-programme">{{question.programme}}</p>
+                                <p class="question-subject">{{question.subject}}</p>
                             </div>
 
                             <div class="inner-wrapper-right">
                                 <p class="inner-wrapper-right-question">{{question.title}}</p>
 
                                 <div class="inner-wrapper-right-options">
-                                    {% for option in question.options %}
-                                        <p class="{% if option == question.answer %}correct-answer{% endif %}">{{option}}</p>
-                                    {% endfor %}
+                                    <ol type="a">
+                                        {% for option in question.options %}
+                                            <li class="{% if option == question.answer %}correct-answer{% endif %} question-option">{{option}}</li>
+                                        {% endfor %}
+                                    </ol>
                                 </div>
                             </div>
                         </a>

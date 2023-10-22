@@ -1,20 +1,26 @@
-.inner-wrapper{
-    gap: 20px;
+.wrapper{
     flex-direction: column;
 }
 
-.inner-wrapper-left,
-.inner-wrapper-right{
-    width: 100%;
+.inner-wrapper{
+    gap: 20px;
+    width: 70%;
+    flex-direction: column;
 }
 
 .inner-wrapper-left{
+    width: 100%;
     flex-direction: row;
     justify-content: space-between;
 }
 
+.inner-wrapper-left p{
+    font-size: small;
+}
+
 .inner-wrapper-right{
     gap: 10px;
+    width: 100%;
     align-items: normal;
     justify-content: left;
     flex-direction: column;
@@ -22,10 +28,15 @@
 
 .inner-wrapper-right-question{
     font-weight: bold;
+    font-size: larger;
 }
 
-.inner-wrapper-right-options p{
-    padding: 5px;
+.inner-wrapper-right-options{
+    padding-left: 17px;
+}
+
+.question-option{
+    font-size: 16px;
 }
 
 .correct-answer{
@@ -34,12 +45,9 @@
     color: rgb(43, 184, 0);
 }
 
-.wrapper{
-    flex-direction: column;
-}
-
-.inner-wrapper{
-    width: 70%;
+p,
+li{
+    font-family: var(--global-font);
 }
 
 @media screen and (max-width: 600px) {

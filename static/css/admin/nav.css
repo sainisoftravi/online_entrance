@@ -15,10 +15,10 @@
 
 .container{
     width: 100wh;
-    height: 100vh;
     display: flex;
-    flex-direction: column;
+    height: 100vh;
     overflow: hidden;
+    flex-direction: column;
 }
 
 .nav-bar{
@@ -31,8 +31,9 @@
 
 .block-content{
     height: 100%;
-    min-height: 10vh;
     display: flex;
+    min-height: 10vh;
+    overflow: scroll;
 }
 
 .left-nav a{

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
 :root{
-    --td-font: "Nunito";
+    --global-font: "Nunito";
 }
 
 .right-container{
@@ -22,7 +22,7 @@
 .message-div p{
     letter-spacing: 0.1cm;
     color: whitesmoke;
-    font-family: var(--td-font);
+    font-family: var(--global-font);
 }
 
 .message-div i{

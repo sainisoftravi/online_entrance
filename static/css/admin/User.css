@@ -12,16 +12,18 @@
     display: flex;
 }
 
+.inner-wrapper-right{
+    justify-content: flex-end;
+}
+
 .user-email{
     font-size: 20px;
     font-weight: bold;
 }
 
 .user-gender,
-.yes-admin,
-.no-admin,
-.yes-active,
-.no-active{
+.user-admin,
+.user-active{
     font-size: 14px;
 }
 

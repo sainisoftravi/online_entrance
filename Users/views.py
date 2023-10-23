@@ -1,6 +1,7 @@
 import json
 import random
 import datetime
+import requests
 from django.http import Http404
 from django.contrib import messages
 from django.shortcuts import render, redirect
@@ -545,7 +546,6 @@ def DisplayReportedQuestion(request, id):
 
 
 def GetUserLists(request, users=None):
-    DATA = []
     drop_down_options = ['Email', 'DOB', 'Gender', 'Member Since', 'Admin', 'Non-Admin', 'Active', 'Non-Active']
 
     if users is None:
@@ -562,25 +562,7 @@ def GetUserLists(request, users=None):
                         }
                 )
 
-    for user in users:
-        id = user.id
-        email = user.email
-        gender = user.Gender
-        is_user_active = user.is_active
-        is_user_super = user.is_superuser
-        profileImagePath = user.ProfileImage
-
-        DATA.append(
-            {
-                'ID': id,
-                'Email': email,
-                'Gender': gender,
-                'ProfileImage': profileImagePath,
-                'Admin': is_user_super,
-                'Active': is_user_active,
-            }
-        )
-
+    DATA = requests.get(f'http://{request.get_host()}/api/users').json()
     paginator, data, page = PaginatePage(request, DATA)
 
     return render(request, 'admin/index.html',
@@ -599,11 +581,10 @@ def GetUserLists(request, users=None):
 
 
 def GetExamsLists(request, exams=None):
-    DATA = []
     drop_down_options = ['User', 'Programme Name', 'Total Correct Answered', 'Date']
 
     if exams is None:
-        exams = Exams.objects.all()
+        exams = requests.get(f'http://{request.get_host()}/api/exams').json()
 
     elif len(exams) == 0:
         return render(request, 'admin/index.html',
@@ -616,18 +597,7 @@ def GetExamsLists(request, exams=None):
                         }
                     )
 
-    for exam in exams:
-        DATA.append(
-            {
-                'date': exam.Date,
-                'examSlug': exam.Slug,
-                'email': exam.UserID.email,
-                'programme': exam.ProgrammeName,
-                'correct_counter': exam.CorrectCounter,
-            }
-        )
-
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, exams)
 
     return render(request, 'admin/index.html',
                 {
@@ -645,19 +615,7 @@ def GetExamsLists(request, exams=None):
 
 
 def GetProgrammeLists(request):
-    DATA = []
-
-    for programme in Programme.objects.all():
-        id = programme.ID
-        name = programme.Name
-
-        DATA.append(
-            {
-                'ID': id,
-                'Name': name,
-            }
-        )
-
+    DATA = requests.get(f'http://{request.get_host()}/api/programmes').json()
     paginator, data, page = PaginatePage(request, DATA)
 
     return render(request, 'admin/index.html',
@@ -673,11 +631,10 @@ def GetProgrammeLists(request):
 
 
 def GetSubjectLists(request, subjects=None):
-    DATA = []
     drop_down_options = ['Programme Name', 'Subject Name', 'Total Questions To Select']
 
     if subjects is None:
-        subjects = Subject.objects.all()
+        subjects = requests.get(f'http://{request.get_host()}/api/subjects').json()
 
     elif len(subjects) == 0:
         return render(request, 'admin/index.html',
@@ -690,17 +647,7 @@ def GetSubjectLists(request, subjects=None):
                         }
                 )
 
-    for subject in subjects:
-        DATA.append(
-            {
-                'ID': subject.ID,
-                'subject': subject.Name,
-                'programme': subject.ProgrammeID.Name,
-                'total_question': subject.TotalQuestionsToSelect
-            }
-        )
-
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, subjects)
 
     return render(request, 'admin/index.html',
                 {
@@ -718,11 +665,10 @@ def GetSubjectLists(request, subjects=None):
 
 
 def GetQuestionLists(request, questions=None):
-    DATA = []
     drop_down_options = ['Subject', 'Programme', 'Title', 'Answer', 'Options']
 
     if questions is None:
-        questions = Questions.objects.all()
+        questions = requests.get(f'http://{request.get_host()}/api/questions').json()
 
     elif len(questions) == 0:
         return render(request, 'admin/index.html',
@@ -735,19 +681,7 @@ def GetQuestionLists(request, questions=None):
                         }
                 )
 
-    for question in questions:
-        DATA.append(
-            {
-                'ID': question.ID,
-                'title': question.Title,
-                'answer': question.Answer,
-                'subject': question.SubjectID.Name,
-                'programme': question.SubjectID.ProgrammeID.Name,
-                'options': [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour],
-            }
-        )
-
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, questions)
 
     return render(request, 'admin/index.html',
                 {
@@ -765,11 +699,10 @@ def GetQuestionLists(request, questions=None):
 
 
 def GetFeedbackLists(request, feedbacks=None):
-    DATA = []
     drop_down_options = ['Name', 'Email', 'Date', 'Message', 'Marked', 'Not-Marked']
 
     if feedbacks is None:
-        feedbacks = FeedBack.objects.all()
+        feedbacks = requests.get(f'http://{request.get_host()}/api/feedbacks').json()
 
     elif len(feedbacks) == 0:
         return render(request, 'admin/index.html',
@@ -782,19 +715,7 @@ def GetFeedbackLists(request, feedbacks=None):
                         }
                 )
 
-    for feedback in feedbacks:
-        DATA.append(
-            {
-                'ID': feedback.ID,
-                'name': feedback.Name,
-                'date': feedback.Date,
-                'email': feedback.Email,
-                'message': feedback.Message,
-                'completed': feedback.IsMarked,
-            }
-        )
-
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, feedbacks)
 
     return render(request, 'admin/index.html',
                 {
@@ -812,11 +733,10 @@ def GetFeedbackLists(request, feedbacks=None):
 
 
 def GetReportsLists(request, reports=None):
-    DATA = []
     drop_down_options = ['User', 'Issue', 'Date', 'Question', 'Marked', 'Not-Marked']
 
     if reports is None:
-        reports = ReportQuestion.objects.all()
+        reports = requests.get(f'http://{request.get_host()}/api/reports').json()
 
     elif len(reports) == 0:
         return render(request, 'admin/index.html',
@@ -829,19 +749,7 @@ def GetReportsLists(request, reports=None):
                         }
                 )
 
-    for report in reports:
-        DATA.append(
-            {
-                'ID': report.ID,
-                'date': report.Date,
-                'issue': report.Issue,
-                'fixed': report.IsMarked,
-                'user': report.UserID.email,
-                'question': report.QuestionID.Title
-            }
-        )
-
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, reports)
 
     return render(request, 'admin/index.html',
                 {
@@ -945,17 +853,10 @@ def EditUsers(request, id):
 
         return redirect('edit-user', id=id)
 
-    data = [
-        {
-            'ID': user.id,
-            'Email': user.email,
-            'Gender': user.Gender if user.Gender else '-',
-            'DOB': user.DOB.strftime("%Y-%m-%d") if user.DOB else '-',
-            'ProfileImage': user.ProfileImage,
-            'Member Since': str(user.MemberSince).split('+')[0][:-3],
-            'is_superuser': user.is_superuser,
-        }
-    ]
+    DATA = requests.get(f'http://{request.get_host()}/api/users/{id}').json()
+
+    for data in DATA:
+        data['MemberSince'] = datetime.datetime.strptime(data['MemberSince'], '%Y-%m-%dT%H:%M:%S.%fZ').strftime("%d %b %Y, %I:%M %p")
 
     return render(request, 'admin/index.html',
                     {
@@ -976,12 +877,13 @@ def EditSubject(request, id):
 
         return redirect('edit-subject', id=id)
 
+    data = requests.get(f'http://{request.get_host()}/api/subjects/{id}').json()[0]
     data = [
         {
-            'ID': subject.ID,
-            'Programme': subject.ProgrammeID,
-            'Subject': subject.Name,
-            'Total Questions To Select': subject.TotalQuestionsToSelect
+            'ID': data['ID'],
+            'Programme': data['programme_name'],
+            'Subject':data['Name'],
+            'Total Questions To Select': data['TotalQuestionsToSelect']
         }
     ]
 
@@ -1068,18 +970,7 @@ def EditFeedback(request, id):
 
 
 def EditReports(request, id):
-    reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
-
-    data = [
-        {
-            'ID': reportedQuestion.ID,
-            'User': reportedQuestion.UserID.email,
-            'Issue': reportedQuestion.Issue,
-            'Question': (reportedQuestion.QuestionID, reportedQuestion.QuestionID.Title),
-            'Date': reportedQuestion.Date,
-            'Fixed': reportedQuestion.IsMarked,
-        }
-    ]
+    data = requests.get(f'http://{request.get_host()}/api/reports/{id}').json()[0]
 
     return render(request, 'admin/index.html',
                     {

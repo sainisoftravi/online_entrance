@@ -1,13 +1,13 @@
 function validateForm(){
     success = true;
 
-    titleAreaValue = document.querySelector('#Title').value.trim();
-    answerAreaValue = document.querySelector('#Answer').value.trim();
-    oneAreaValue = document.getElementById('Option One').value.trim();
-    twoAreaValue = document.getElementById('Option Two').value.trim();
-    fourAreaValue = document.getElementById('Option Four').value.trim();
-    threeAreaValue = document.getElementById('Option Three').value.trim();
+    titleValue = document.querySelector('#Title').value.trim();
+    answerValue = document.getElementsByName('Answer')[0].value.trim();
+    optionOneValue = document.getElementById('Option One').value.trim();
+    optionTwoValue = document.getElementById('Option Two').value.trim();
+    optionFourValue = document.getElementById('Option Four').value.trim();
     subjectValue = document.querySelector('#subject-select').value.trim();
+    optionThreeValue = document.getElementById('Option Three').value.trim();
     programmeValue = document.querySelector('#programme-select').value.trim();
 
     oneError = document.querySelector('.one-error');
@@ -37,7 +37,7 @@ function validateForm(){
         subjectError.classList.remove('show-error');
     }
 
-    if(!titleAreaValue){
+    if(!titleValue){
         success = false;
         titleError.classList.add('show-error');
     }
@@ -46,16 +46,16 @@ function validateForm(){
         titleError.classList.remove('show-error');
     }
 
-    if(!answerAreaValue){
+    if(!answerValue){
         success = false;
-        answerError.classList.add('show-error');
+        answerError.classList.add('sho-error');
     }
 
     else{
-        answerError.classList.remove('show-error');
+        answerError.classList.remove('sho-error');
     }
 
-    if(!oneAreaValue){
+    if(!optionOneValue){
         success = false;
         oneError.classList.add('show-error');
     }
@@ -64,7 +64,7 @@ function validateForm(){
         oneError.classList.remove('show-error');
     }
 
-    if(!twoAreaValue){
+    if(!optionTwoValue){
         success = false;
         twoError.classList.add('show-error');
     }
@@ -73,7 +73,7 @@ function validateForm(){
         twoError.classList.remove('show-error');
     }
 
-    if(!threeAreaValue){
+    if(!optionThreeValue){
         success = false;
         threeError.classList.add('show-error');
     }
@@ -82,7 +82,7 @@ function validateForm(){
         threeError.classList.remove('show-error');
     }
 
-    if(!fourAreaValue){
+    if(!optionFourValue){
         success = false;
         fourError.classList.add('show-error');
     }
@@ -91,7 +91,7 @@ function validateForm(){
         fourError.classList.remove('show-error');
     }
 
-    if(![oneAreaValue, twoAreaValue, fourAreaValue, threeAreaValue].includes(answerAreaValue)){
+    if(![optionOneValue, optionTwoValue, optionFourValue, optionThreeValue].includes(answerValue)){
         success = false;
         answerError.innerText = 'Answer must be within the given options'
         answerError.classList.add('show-error');

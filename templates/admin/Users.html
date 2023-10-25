@@ -1,0 +1,44 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/admin/User.css' %}">
+
+    <div class="wrapper">
+        {% for user in data %}
+            <a class="inner-wrapper" href="{% url 'edit-user' user.id %}">
+                <div class="inner-wrapper-top">
+                    <p class="user-email">{{user.email}}</p>
+                </div>
+
+                <div class="inner-wrapper-bottom">
+                    <div class="inner-wrapper-left">
+                        {% if user.Gender is not None %}
+                            <p class="user-gender">{{user.Gender | capfirst}}</p>
+                        {% endif %}
+
+                        {% if user.is_superuser %}
+                            <p class="user-admin">Admin</p>
+
+                        {% else %}
+                            <p class="user-admin">Non-Admin</p>
+                        {% endif %}
+
+                        {% if user.is_active %}
+                            <p class="user-active">Active</p>
+
+                        {% else %}
+                            <p class="user-active">In-Active</p>
+                        {% endif %}
+                    </div>
+
+                    <div class="inner-wrapper-right">
+                        <img src="{{user.ProfileImage}}" alt="">
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

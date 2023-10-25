@@ -1,0 +1,60 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="input-groups">
+        <form action="#" method="POST">
+            {% csrf_token %}
+
+            {% for key, value in data.items %}
+                {% if key != "IsMarked" and key != 'QuestionID' %}
+                    {% if key == 'ID' %}
+                        <div class="row id-row">
+                            <p>{{value}}</p>
+                        </div>
+
+                    {% elif key == 'Issue' %}
+                        <div class="row">
+                            <div class="row-left-container">
+                                <label for="{{key}}">{{key}}</label>
+                            </div>
+
+                            <div class="row-right-container">
+                                <textarea name="{{key}}" id="{{key}}" cols="40" rows="10" readonly>{{value}}</textarea>
+                            </div>
+                        </div>
+
+                    {% else %}
+                        <div class="row">
+                            <div class="row-left-container">
+                                <label for="{{key}}">{{key}}</label>
+                            </div>
+
+                            <div class="row-right-container">
+                                {% if key == 'Question' %}
+                                    <a href="{% url 'edit-question' data.QuestionID %}" target="_blank">{{value}}</a>
+
+                                {% else %}
+                                    <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" readonly>
+
+                                {% endif %}
+                                <small class="{{key}}-error"></small>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+
+            <div class="buttons">
+                {% if data.IsMarked %}
+                    <a href="#" class="Marked bottom-button bottom-button-twenty-percent">Fixed</a>
+
+                {% else %}
+                    <a href="{% url 'mark-report' data.ID %}" class="bottom-button bottom-button-twenty-percent">Mark As Fixed</a>
+
+                {% endif %}
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/admin/exams.css' %}">
+
+    <div class="wrapper">
+        {% for exam in data %}
+            <a class="inner-wrapper" href="{% url 'detailed-history' exam.Slug %}">
+                <div class="inner-wrapper-top">
+                    <p class="exam-user">{{exam.user_email}}</p>
+                </div>
+
+                <div class="inner-wrapper-bottom">
+                    <div class="inner-wrapper-left">
+                        <p class="exam-programme">{{exam.ProgrammeName}}</p>
+                        <p class="exam-date">{{exam.Date}}</p>
+                    </div>
+
+                    <div class="inner-wrapper-right">
+                        <p>{{exam.CorrectCounter}}</p>
+                        <p>100</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

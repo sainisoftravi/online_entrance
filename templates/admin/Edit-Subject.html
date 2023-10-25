@@ -1,0 +1,37 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <script src="{% static 'js/admin/edit-subject.js' %}"></script>
+
+    <div class="input-groups">
+        <form action="#" method="POST">
+            {% csrf_token %}
+
+            {% for key, value in data.0.items %}
+                {% if key == 'ID' %}
+                    <div class="row id-row">
+                        <p>{{value}}</p>
+                    </div>
+
+                {% else %}
+                    <div class="row">
+                        <div class="row-left-container">
+                            <label for="{{key}}">{{key}}</label>
+                        </div>
+
+                        <div class="row-right-container">
+                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}" {% if key != 'Total Questions To Select' %}readonly{%endif%}>
+                            <small class="{{key}}-error"></small>
+                        </div>
+                    </div>
+
+                {% endif %}
+            {% endfor %}
+
+            <button class="bottom-button bottom-button-fifteen-percent">Save</button>
+        </form>
+    </div>
+
+{% endblock %}

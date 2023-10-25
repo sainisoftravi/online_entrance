@@ -1,0 +1,87 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <script src="{% static 'js/admin/edit-question.js' %}"></script>
+
+    <div class="input-groups">
+        {% if data.0.SelectOptions %}
+            <script>
+                select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
+            </script>
+        {% endif %}
+
+        <form onsubmit="return validateForm();" action="#" method="POST">
+            {% csrf_token %}
+
+            {% for key, value in data.0.items %}
+                {% if key == 'SelectOptions' %}
+                    <div class="row">
+                        <div class="row-left-container">
+                            <label>Programme</label>
+                        </div>
+
+                        <div class="row-right-container">
+                            <select name="Programme" class="selection-select" id="programme-select" onchange="onProgrammeChange()">
+                                <option id="programme-default">Select Programme</option>
+                            </select>
+                            <small class="programme-error">Must select any programme</small>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="row-left-container">
+                            <label>Subjects</label>
+                        </div>
+
+                        <div class="row-right-container">
+                            <select name="Subject" class="selection-select" id="subject-select" onchange="onSubjectChange()">
+                                <option id="subject-default">Select Subject</option>
+                            </select>
+                            <small class="subject-error">Must select any subject</small>
+                        </div>
+                    </div>
+
+                {% elif key == 'Title' %}
+                    <div class="row">
+                        <div class="row-left-container">
+                            <label for="{{key}}">{{key}}</label>
+                        </div>
+
+                        <div class="row-right-container">
+                            <textarea name="{{key}}" id="{{key}}" cols="40" rows="10">{{value}}</textarea>
+                            <small class="{{key}}-error">This file must not be empty</small>
+                        </div>
+                    </div>
+
+                {% elif key == 'ID' %}
+                    <div class="row id-row">
+                        <p>{{value}}</p>
+                    </div>
+
+                {% else %}
+                    <div class="row">
+                        <div class="row-left-container">
+                            <label for="{{key}}">{{key}}</label>
+                        </div>
+
+                        <div class="row-right-container">
+                            <input type="text" id="{{key}}" value="{{value}}" name="{{key}}">
+                            <small class="{{key}}-error">This file must not be empty</small>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+
+            <div class="buttons">
+                <button type="submit" class="bottom-button bottom-button-fifteen-percent">Save</button>
+
+                {% if template_type == "template::edit-question" %}
+                    <a href="{% url 'delete-question' data.0.ID %}" class="bottom-button bottom-button-fifteen-percent">Delete</a>
+                {% endif %}
+
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

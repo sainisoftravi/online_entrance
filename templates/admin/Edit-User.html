@@ -1,0 +1,100 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <div class="input-groups">
+        <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
+            {% csrf_token %}
+
+            <div class="row id-row">
+                <p>{{data.id}}</p>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="row-right-container">
+                    <input type="text" id=email" value="{{data.email}}" name="email" {% if data.is_superuser %}readonly{% endif %}>
+                    <small class="email-error"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
+                    <label for="gender">Gender</label>
+                </div>
+
+                <div class="row-right-container">
+                    {% if data.is_superuser %}
+                        <input type="text" id="gender" value="-" name="-" readonly>
+
+                    {% else %}
+                        <select name="gender" id="select-gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Others">Others</option>
+                        </select>
+                    {% endif %}
+
+                    <small class="gender-error"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
+                    <label for="dob">DOB</label>
+                </div>
+
+                <div class="row-right-container">
+                    <input type="date" value="{{data.DOB}}" name="DOB" id="dob" {% if data.is_superuser %}readonly{% endif %}>
+                    <small class="dob-error"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
+                    <label for="profileImage">ProfileImage</label>
+                </div>
+
+                <div class="row-right-container">
+                    <div class="upload-profile-image-div">
+                        <img src="{{data.ProfileImage}}" alt="" class="user-image">
+                        <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                        <small class="profile-image-error">Invalid image file</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
+                    <label for="memberSince">Member Since</label>
+                </div>
+
+                <div class="row-right-container">
+                    <input type="input" id="memberSince" value="{{data.MemberSince}}" name="MemberSince" readonly>
+                </div>
+
+                <small class="member-since-error"></small>
+            </div>
+
+            {% if data.0.is_superuser %}
+                <script>
+                    is_superuser = true;
+                </script>
+
+            {% else %}
+                <script>
+                    is_superuser = false;
+                </script>
+
+            {% endif %}
+
+            <script src="{% static 'js/admin/change-user.js' %}"></script>
+            <button type="submit" class="bottom-button bottom-button-fifteen-percent" onclick="return validateForm()">Save</button>
+        </form>
+    </div>
+
+{% endblock %}

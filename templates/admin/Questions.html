@@ -1,0 +1,31 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/admin/Questions.css' %}">
+
+    <div class="wrapper">
+        {% for question in data %}
+            <a href="{% url 'edit-question' question.ID %}" class="inner-wrapper">
+                <div class="inner-wrapper-left">
+                    <p class="question-programme">{{question.Programme}}</p>
+                    <p class="question-subject">{{question.Subject}}</p>
+                </div>
+
+                <div class="inner-wrapper-right">
+                    <p class="inner-wrapper-right-question">{{question.Title}}</p>
+
+                    <div class="inner-wrapper-right-options">
+                        <ol type="a">
+                            {% for option in question.Options %}
+                                <li class="{% if option == question.Answer %}correct-answer{% endif %} question-option">{{option}}</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

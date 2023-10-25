@@ -1,0 +1,23 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+
+    <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
+    <div class="wrapper">
+        {% for subject in data %}
+            <a class="inner-wrapper" href="{% url 'edit-subject' subject.ID %}">
+                <div class="inner-wrapper-left">
+                    <p>{{subject.programme_name}}</p>
+                    <p>{{subject.Name}}</p>
+                </div>
+
+                <div class="inner-wrapper-right">
+                    <p>Total Question</p>
+                    <p>{{subject.TotalQuestionsToSelect}}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

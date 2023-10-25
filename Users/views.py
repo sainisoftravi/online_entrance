@@ -783,7 +783,18 @@ def AdminChangePassword(request):
         else:
             messages.error(request, 'Old Password did not match')
 
-    return render(request, 'admin/index.html', {'template_type': 'template::change-password'})
+    data = {
+        'Old Password': 'old_password',
+        'New Password': 'new_password1',
+        'Confirm New Password': 'new_password2'
+    }
+
+    return render(request, 'admin/index.html',
+                    {
+                        'data': data,
+                        'template_type': 'template::change-password'
+                    }
+            )
 
 
 def EditQuestions(request, id):

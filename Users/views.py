@@ -82,7 +82,7 @@ def Login(request):
     redirect_url = request.session.get('next')
 
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     if request.user.id is None:
         conditions = {
@@ -103,7 +103,7 @@ def Login(request):
                     request.session.set_expiry(0)
 
                 if user.is_superuser:
-                    return redirect('AdminIndex')
+                    return redirect('admin-index')
 
                 if redirect_url:
                     del request.session['next'] # Clear the session variable
@@ -133,7 +133,7 @@ def Index(request):
     }
 
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     elif request.method == 'POST':
         name = request.POST['contact-name']
@@ -159,7 +159,7 @@ def TakeModelTest(request, program):
     global values
 
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     values = []
     programme = Programme.objects.filter(Name=program)[0]
@@ -193,7 +193,7 @@ def TakeModelTest(request, program):
 
 def ProgramSelector(request):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     if request.user.is_authenticated:
         allPrograms = []
@@ -204,14 +204,14 @@ def ProgramSelector(request):
         return render(request, 'ProgramSelector.html', {'programs': allPrograms})
 
     else:
-        request.session['next'] = 'programselector'
+        request.session['next'] = 'program-selector'
 
         return redirect('login')
 
 
 def UpdateProfile(request):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.ProfileImage = request.FILES['uploaded-profile-image']
@@ -224,7 +224,7 @@ def UpdateProfile(request):
 
 def UpdatePassword(request):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
@@ -249,7 +249,7 @@ def Logout(request):
 
 def DeleteAccount(request):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     user = CustomUser.objects.get(id=request.user.id)
     user.is_active = False
@@ -376,7 +376,7 @@ def DetailedHistory(request, slug):
 
 def Dashboard(request):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     return GoTo(request, 'dashboard')
 
@@ -399,7 +399,7 @@ def GetHistories(id):
 
 def GoTo(request, redirect_to):
     if request.user.is_superuser:
-        return redirect('AdminIndex')
+        return redirect('admin-index')
 
     if redirect_to not in ['profile', 'history', 'dashboard']:
         raise Http404
@@ -552,9 +552,9 @@ def GetUserLists(request, users=None):
         users = CustomUser.objects.all()
 
     elif len(users) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Users.html',
                         {
-                            'js_path': 'js/admin/UserSearch.js',
+                            'data_details': 'No data found',
                             'search_form_url': 'user-search',
                             'template_type': 'template::users',
                             'drop_down_options': drop_down_options,
@@ -565,7 +565,7 @@ def GetUserLists(request, users=None):
     DATA = requests.get(f'http://{request.get_host()}/api/users').json()
     paginator, data, page = PaginatePage(request, DATA)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Users.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -587,7 +587,7 @@ def GetExamsLists(request, exams=None):
         exams = requests.get(f'http://{request.get_host()}/api/exams').json()
 
     elif len(exams) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Exams.html',
                         {
                             'data_details': 'No data found',
                             'search_form_url': 'exam-search',
@@ -599,7 +599,7 @@ def GetExamsLists(request, exams=None):
 
     paginator, data, page = PaginatePage(request, exams)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Exams.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -618,7 +618,7 @@ def GetProgrammeLists(request):
     DATA = requests.get(f'http://{request.get_host()}/api/programmes').json()
     paginator, data, page = PaginatePage(request, DATA)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Programmes.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -637,7 +637,7 @@ def GetSubjectLists(request, subjects=None):
         subjects = requests.get(f'http://{request.get_host()}/api/subjects').json()
 
     elif len(subjects) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Subjects.html',
                         {
                             'data_details': 'No data found',
                             'search_form_url': 'subject-search',
@@ -649,7 +649,7 @@ def GetSubjectLists(request, subjects=None):
 
     paginator, data, page = PaginatePage(request, subjects)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Subjects.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -671,7 +671,7 @@ def GetQuestionLists(request, questions=None):
         questions = requests.get(f'http://{request.get_host()}/api/questions').json()
 
     elif len(questions) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Questions.html',
                         {
                             'data_details': 'No data found',
                             'search_form_url': 'question-search',
@@ -683,7 +683,7 @@ def GetQuestionLists(request, questions=None):
 
     paginator, data, page = PaginatePage(request, questions)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Questions.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -705,7 +705,7 @@ def GetFeedbackLists(request, feedbacks=None):
         feedbacks = requests.get(f'http://{request.get_host()}/api/feedbacks').json()
 
     elif len(feedbacks) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Feedbacks.html',
                         {
                             'data_details': 'No data found',
                             'search_form_url': 'feedback-search',
@@ -717,7 +717,7 @@ def GetFeedbackLists(request, feedbacks=None):
 
     paginator, data, page = PaginatePage(request, feedbacks)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Feedbacks.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -739,7 +739,7 @@ def GetReportsLists(request, reports=None):
         reports = requests.get(f'http://{request.get_host()}/api/reports').json()
 
     elif len(reports) == 0:
-        return render(request, 'admin/index.html',
+        return render(request, 'admin/Reports.html',
                         {
                             'data_details': 'No data found',
                             'search_form_url': 'report-search',
@@ -751,7 +751,7 @@ def GetReportsLists(request, reports=None):
 
     paginator, data, page = PaginatePage(request, reports)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Reports.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -789,7 +789,7 @@ def AdminChangePassword(request):
         'Confirm New Password': 'new_password2'
     }
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/ChangePassword.html',
                     {
                         'data': data,
                         'template_type': 'template::change-password'
@@ -827,7 +827,7 @@ def EditQuestions(request, id):
     if request.method == "POST":
         return redirect('edit-question', id=question.ID)
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Add-Edit-Questions.html',
                     {
                         'data': data,
                         'template_type': 'template::edit-question',
@@ -840,7 +840,7 @@ def DeleteQuestion(request, id):
     question = Questions.objects.filter(ID=id).first()
     question.delete()
 
-    return redirect('getQuestionDetails')
+    return redirect('questions')
 
 
 def EditUsers(request, id):
@@ -862,14 +862,12 @@ def EditUsers(request, id):
 
         messages.success(request, 'Edit Successful')
 
-        return redirect('edit-user', id=id)
-
     DATA = requests.get(f'http://{request.get_host()}/api/users/{id}').json()
 
     for data in DATA:
         data['MemberSince'] = datetime.datetime.strptime(data['MemberSince'], '%Y-%m-%dT%H:%M:%S.%fZ').strftime("%d %b %Y, %I:%M %p")
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Edit-User.html',
                     {
                         'data': data,
                         'template_type': 'template::edit-user',
@@ -886,8 +884,6 @@ def EditSubject(request, id):
 
         messages.success(request, 'Edit Successful')
 
-        return redirect('edit-subject', id=id)
-
     data = requests.get(f'http://{request.get_host()}/api/subjects/{id}').json()[0]
     data = [
         {
@@ -898,7 +894,7 @@ def EditSubject(request, id):
         }
     ]
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Edit-Subject.html',
                     {
                         'data': data,
                         'template_type':
@@ -907,7 +903,7 @@ def EditSubject(request, id):
             )
 
 
-def AddNewQuestion(request):
+def AddQuestion(request):
     if request.method == 'POST':
         programmeID = Programme.objects.filter(Name=request.POST['Programme']).first()
         SubjectID = Subject.objects.filter(ProgrammeID=programmeID, Name=request.POST['Subject']).first()
@@ -943,7 +939,7 @@ def AddNewQuestion(request):
         }
     ]
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Add-Edit-Questions.html',
                   {
                       'data': data,
                       'template_type': 'template::add-new-question',
@@ -972,7 +968,7 @@ def EditFeedback(request, id):
         }
     ]
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Edit-Feedback.html',
                     {
                         'data': data,
                         'template_type': 'template::edit-feedbacks'
@@ -983,7 +979,7 @@ def EditFeedback(request, id):
 def EditReports(request, id):
     data = requests.get(f'http://{request.get_host()}/api/reports/{id}').json()[0]
 
-    return render(request, 'admin/index.html',
+    return render(request, 'admin/Edit-Report.html',
                     {
                         'data': data,
                         'template_type': 'template::edit-reports',

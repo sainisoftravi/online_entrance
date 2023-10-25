@@ -21,7 +21,7 @@
                 <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
 
                 <div class="row-1-details">
-                    <form action="{% url 'updateprofile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
+                    <form action="{% url 'update-profile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
                         {% csrf_token %}
 
                         <input type="file" accept="image/*" id="changeProfileButton" name="uploaded-profile-image" hidden/>
@@ -54,13 +54,14 @@
         </div>
 
         <div class="row-2">
-            <form action="{% url 'updatepassword' %}" method="POST" id="changePasswordForm">
+            <form action="{% url 'update-password' %}" method="POST" id="changePasswordForm">
                 {% csrf_token %}
 
                 <p>Change Password</p>
 
                 <div class="input-groups">
                     <div class="password-div">
+                        <i class='bx bxs-lock-alt' ></i>
                         <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
                         <i class='bx bxs-hide bxs-show pass-eye0'></i>
                     </div>
@@ -83,6 +84,7 @@
 
                 <div class="input-groups">
                     <div class="password-div">
+                        <i class='bx bxs-lock-alt' ></i>
                         <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
                         <i class='bx bxs-hide bxs-show pass-eye1'></i>
                     </div>
@@ -92,6 +94,7 @@
 
                 <div class="input-groups">
                     <div class="password-div">
+                        <i class='bx bxs-lock-alt' ></i>
                         <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
                         <i class='bx bxs-hide bxs-show pass-eye2'></i>
                     </div>
@@ -108,7 +111,7 @@
         <div class="row-3">
             <p>Danger Zone</p>
 
-            <form action="{% url 'deleteaccount' %}">
+            <form action="{% url 'delete-account' %}">
                 <button type="submit">Delete Account</button>
             </form>
         </div>

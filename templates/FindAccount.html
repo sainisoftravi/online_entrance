@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
     <link rel="stylesheet" href="{% static 'css/FindAccount.css' %}">
 
-    <div class="outer-container">
-        <div class="container">
+    <div class="wrapper">
+        <div class="inner-wrapper">
             <h2>Find Your Account</h2>
 
             <form action="{% url 'password_reset_done' %}" method="post">
@@ -24,7 +24,4 @@
             </form>
         </div>
     </div>
-
-    {% include 'footer.html' %}
-
 {% endblock %}

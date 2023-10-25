@@ -2,7 +2,6 @@
     width: 100wh;
     display: flex;
     overflow: hidden;
-    min-height: 80vh;
     align-items: center;
     flex-direction: column;
     justify-content: center;

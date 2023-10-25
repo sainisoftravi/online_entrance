@@ -1,11 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@500&display=swap');
-
-
 :root{
-    --error-font: "Nunito";
     --p-color: whitesmoke;
-    --font: "Anek Gujarati";
     --placeholder-color: #cccccc;
     --button-color: rgb(72, 46, 145);
     --form-right-color: rgb(34, 2, 95);
@@ -75,7 +69,7 @@ form{
     border: 0;
     width: 100%;
     outline: none;
-    font-family: var(--font);
+    font-family: var(--global-font);
     font-size: 1rem;
     padding: 10px 10px 10px 30px;
 }
@@ -87,6 +81,10 @@ input[type="password"]::placeholder{
 
 .form-item input[type="password"]{
     padding-right: 30px;
+}
+
+input[type="radio"]{
+    display: none;
 }
 
 .bx-login{
@@ -103,7 +101,7 @@ button{
     cursor: pointer;
     border-radius: 5px;
     color: whitesmoke;
-    font-family: var(--font);
+    font-family: var(--global-font);
     background-color: var(--button-color);
 }
 
@@ -112,7 +110,7 @@ button{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    font-family: var(--font);
+    font-family: var(--global-font);
 }
 
 .genders{
@@ -172,19 +170,19 @@ button{
     padding: 40px;
     text-align: center;
     color: var(--p-color);
-    font-family: var(--font);
+    font-family: var(--global-font);
 }
 
 .signup-submit-btn a{
     color: #088395;
     padding-left: 5px;
     font-weight: bolder;
-    font-family: var(--font);
+    font-family: var(--global-font);
 }
 
 .show-error{
     font-size: 20px;
-    font-family: var(--error-font);
+    font-family: var(--global-font);
 }
 
 .selected-gender{
@@ -195,7 +193,7 @@ button{
     top: 23px;
     right: 12px;
     display: none;
-    font-size: 20px;
+    font-size: 1rem;
     cursor: pointer;
     position: absolute;
 }
@@ -214,6 +212,8 @@ i.show-eye{
 
 .upload-profile-image-div p{
     color: var(--p-color);
+    font-family: var(--global-font);
+
 }
 
 .upload-profile-image-div img{
@@ -230,13 +230,13 @@ input[type=file]{
 
 input[type=file]::file-selector-button {
     cursor: pointer;
-    background-color: #fff;
-    color: #000;
     border: 0px;
-    border-right: 1px solid #e5e5e5;
+    color: #000;
+    transition: .5s;
     padding: 10px 15px;
     margin-right: 20px;
-    transition: .5s;
+    background-color: #fff;
+    border-right: 1px solid #e5e5e5;
   }
 
   input[type=file]::file-selector-button:hover {

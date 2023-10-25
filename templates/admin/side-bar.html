@@ -4,10 +4,10 @@
 
 <div class="side-bar">
     {% if template_type == 'template::users' or template_type == 'template::edit-user' %}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'getUserDetails' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'user-details' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'getUserDetails' %}">
+        <a class="side-bar-option" href="{% url 'user-details' %}">
 
     {% endif %}
         <i class='bx bx-group'></i>
@@ -15,10 +15,10 @@
     </a>
 
     {% if template_type == 'template::exams' %}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'getExamDetails' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'exam-details' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'getExamDetails' %}">
+        <a class="side-bar-option" href="{% url 'exam-details' %}">
 
     {% endif %}
         <i class='bx bx-edit-alt'></i>
@@ -37,10 +37,10 @@
     </a>
 
     {% if template_type == 'template::subjects' or template_type == 'template::edit-subject'%}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'getSubjectDetails' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'subject-details' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'getSubjectDetails' %}">
+        <a class="side-bar-option" href="{% url 'subject-details' %}">
 
     {% endif %}
         <i class='bx bxs-book-alt'></i>
@@ -48,10 +48,10 @@
     </a>
 
     {% if template_type == 'template::questions' or template_type == 'template::edit-question' or template_type == 'template::add-new-question' %}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'getQuestionDetails' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'questions' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'getQuestionDetails' %}">
+        <a class="side-bar-option" href="{% url 'questions' %}">
 
     {% endif %}
         <i class='bx bx-data'></i>
@@ -59,10 +59,10 @@
     </a>
 
     {% if template_type == 'template::reports' or template_type == 'template::edit-reports' %}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'getReportsLists' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'report-lists' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'getReportsLists' %}">
+        <a class="side-bar-option" href="{% url 'report-lists' %}">
 
     {% endif %}
         <i class='bx bxs-flag-alt'></i>

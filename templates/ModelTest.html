@@ -10,7 +10,7 @@
         <form action="#" id="read-only-form">
 
     {% else %}
-        <form action="{% url 'getresult' %}" method="POST">
+        <form action="{% url 'get-result' %}" method="POST">
 
     {% endif %}
         {% csrf_token %}
@@ -44,7 +44,7 @@
 
                             {% if request.user.is_superuser is False %}
                                 <a href="{% url 'report-question' question.id %}" target="_blank">
-                                    <i class='bx bxs-flag-alt' title="Report"></i>
+                                    <i class='bx bxs-flag-alt alt-flag' title="Report"></i>
                                 </a>
                             {% endif %}
 
@@ -121,10 +121,5 @@
     {% else %}
         <link rel="stylesheet" href="{% static 'css/admin/modeltest.css' %}">
     {% endif %}
-
-{% if request.user.is_superuser is False %}
-    {% include 'footer.html' %}
-
-{% endif %}
 
 {% endblock %}

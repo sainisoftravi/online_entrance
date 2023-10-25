@@ -1,13 +1,11 @@
-.outer-container{
-    width: 100wh;
-    height: 100vh;
+.wrapper{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-.container{
+.inner-wrapper{
     width: 50%;
     min-height: 50%;
     border-radius: 10px;
@@ -17,8 +15,8 @@
 h2{
     height: 30%;
     display: flex;
-    padding-left: 10px;
     align-items: center;
+    padding: 20px 20px 20px 10px;
     border-bottom: 2px solid #e5e5e5;
 }
 
@@ -61,11 +59,11 @@ input:focus{
 }
 
 .buttons{
-    padding: 5px;
     gap: 10px;
     height: 20%;
     display: flex;
     align-items: center;
+    padding: 5px 5px 10px 5px;
     justify-content: flex-end;
 }
 
@@ -96,17 +94,12 @@ input:focus{
     background-color: #1876f2de;
 }
 
-
-@media screen and (max-width: 1150px) {
-    .outer-container{
-        height: 90vh;
-    }
-
-    .container{
-        width: 70%;
-    }
-}
-
 small{
     width: 100%;
+}
+
+@media screen and (max-width: 1150px) {
+    .inner-wrapper{
+        width: 95%;
+    }
 }

@@ -11,13 +11,11 @@
 
         <div class="program-container">
             {% for program in programs %}
-                <a href="{% url 'modeltest' program=program %}" class="program">{{ program }}</a>
+                <a href="{% url 'model-test' program=program %}" class="program">{{ program }}</a>
             {% endfor %}
         </div>
     </div>
 
     <script src="{% static 'js/ProgramSelector.js' %}"></script>
-
-    {% include 'footer.html' %}
 
 {% endblock %}

@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Pavanam&display=swap');
-
 :root{
     --p-color: black;
-    --font-family: "Pavanam";
     --div-bg-color: whitesmoke;
     --separate-by-color: rgb(163, 163, 163);
 }
@@ -59,7 +56,7 @@ label {
     border-radius: 0.3rem;
     background-color: indigo;
     font-size: 20px;
-    font-family: var(--font-family);
+    font-family: var(--global-font);
   }
 
 .inner-row-2,
@@ -94,6 +91,7 @@ label {
     padding: 20px;
     text-align: center;
     color: var(--p-color);
+    font-family: var(--global-font);
     background-color: var(--div-bg-color);
 }
 
@@ -145,14 +143,16 @@ label {
 .new-password-error,
 .new-password-again-error{
     margin-top: 10px;
+    font-family: var(--global-font);
 }
 
 .input-groups input{
     width: 100%;
     outline: none;
-    padding: 10px;
-    padding-right: 30px;
+    font-size: 1.025rem;
     border: 1px solid black;
+    padding: 10px 20px 10px 20px;
+    font-family: var(--global-font);
 }
 
 .input-groups button{
@@ -165,7 +165,7 @@ label {
     border-radius: 5px;
     font-weight: bolder;
     color: whitesmoke;
-    font-family: var(--font-family);
+    font-family: var(--global-font);
     background-color: rgb(79, 0, 153);
 }
 
@@ -201,7 +201,7 @@ label {
     font-weight: bolder;
     border-radius: 10px;
     background-color: #a40e26;
-    font-family: var(--font-family);
+    font-family: var(--global-font);
 }
 
 .row-3 button:hover{
@@ -235,7 +235,12 @@ small.success-message{
 }
 
 p{
-    font-family: var(--font-family);
+    font-family: var(--global-font);
+}
+
+.bxs-lock-alt{
+    left: 3px;
+    position: absolute;
 }
 
 i.pass-eye0,
@@ -243,7 +248,7 @@ i.pass-eye1,
 i.pass-eye2{
     right: 1px;
     display: none;
-    font-size: 20px;
+    font-size: 1rem;
     cursor: pointer;
     position: absolute;
 }

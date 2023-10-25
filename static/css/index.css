@@ -19,10 +19,10 @@
 
 .quote p{
     width: 50%;
-    padding-top: 50px;
-    text-align: center;
     font-size: 45px;
     color: #ECF9FF;
+    padding-top: 50px;
+    text-align: center;
     font-family: var(--quote-font-family);
 }
 
@@ -48,6 +48,7 @@
     font-size: 25px;
     color: #ECF9FF;
     text-align: justify;
+    font-family: var(--global-font);
 }
 
 .contact{
@@ -70,6 +71,7 @@
 
 .contact-left p{
     display: none;
+    font-family: var(--global-font);
 }
 
 .contact-right{
@@ -89,8 +91,9 @@ textarea{
     padding: 10px;
     outline: none;
     color: #bed7e7;
-    border: 1px solid #bed7e7;
     background: transparent;
+    border: 1px solid #bed7e7;
+    font-family: var(--global-font);
 }
 
 textarea{

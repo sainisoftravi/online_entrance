@@ -11,40 +11,45 @@
     </head>
 
     <body>
-        <div class="nav-bar">
-            <div class="logo">
-                <a href="{% url 'index' %}">
-                    <span id="title">Online Entrance Preparation</span>
+        <div class="container">
+            <div class="nav-bar">
+                <div class="logo">
+                    <a href="{% url 'index' %}">
+                        <span id="title">Online Entrance Preparation</span>
+                    </a>
+                </div>
+
+                <div class="right-panel">
+                    {% if request.user.is_superuser is False %}
+                        <a href="{% url 'program-selector' %}" id="take-test">Take a Test</a>
+                    {% endif %}
+
+                    {% if request.user.is_authenticated %}
+                        <a href="{% url 'go_to' 'dashboard' %}">
+                            <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
+                        </a>
+
+                    {% else %}
+                        {% if request.user.is_superuser is False %}
+                            <a href="{% url 'login' %}" id="login">Login</a>
+                        {% endif %}
+
+                    {% endif %}
+                </div>
+
+                <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
+                    <i class='bx bx-log-out-circle'></i>
+                    <p>Logout</p>
                 </a>
             </div>
 
-            <div class="right-panel">
-                {% if request.user.is_superuser is False %}
-                    <a href="{% url 'programselector' %}" id="take-test">Take a Test</a>
-                {% endif %}
-
-                {% if request.user.is_authenticated %}
-                    <a href="{% url 'go_to' 'dashboard' %}">
-                        <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
-                    </a>
-
-                {% else %}
-                    {% if request.user.is_superuser is False %}
-                        <a href="{% url 'login' %}" id="login">Login</a>
-                    {% endif %}
-
-                {% endif %}
+            <div class="block-content">
+                {% block content %}
+                {% endblock %}
             </div>
 
-            <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
-                <i class='bx bx-log-out-circle'></i>
-                <p>Logout</p>
-            </a>
-        </div>
+            {% include 'footer.html' %}
 
-        <script src="{% static 'js/nav.js' %}"></script>
-
-        {% block content %}
-        {% endblock %}
+            <script src="{% static 'js/nav.js' %}"></script>
     </body>
 </html>

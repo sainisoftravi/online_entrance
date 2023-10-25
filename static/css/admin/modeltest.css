@@ -1,7 +1,10 @@
-.block-content{
+#read-only-form{
+    padding: 0;
+    width: 100%;
+    margin-bottom: 0;
     position: relative;
 }
 
 .marks{
-    top: 2px;
+    top: 10px;
 }

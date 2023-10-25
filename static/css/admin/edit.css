@@ -173,10 +173,6 @@ a.bottom-button:visited{
         width: 95%;
     }
 
-    .id-row p{
-        font-size: 16px;
-    }
-
     .row{
         gap: 10px;
         display: flex;

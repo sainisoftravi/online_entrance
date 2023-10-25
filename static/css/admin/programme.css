@@ -8,15 +8,25 @@
 
 .inner-wrapper-left{
     width: 100%;
+    padding: 2px;
 }
 
 .inner-wrapper-left p{
-    font-size: 30px;
-    text-align: center;
+    font-size: 1.25rem;
+    text-align: center
 }
 
 @media screen and (max-width: 600px){
-    .inner-wrapper-left p{
-        font-size: 40px;
+    .inner-wrapper{
+        width: 80%;
+        height: auto;
+    }
+
+    .inner-wrapper-left{
+        padding: 5px;
+    }
+
+    .container{
+        height: 100%;
     }
 }

@@ -254,20 +254,17 @@
                 <form onsubmit="return changePassword();" action="#" method="POST">
                     {% csrf_token %}
 
-                    <div class="input-group">
-                        <input type="password" placeholder="Old Password" name="old_password">
-                        <small class="old-password-error">This field must not be empty</small>
-                    </div>
+                    {% for placeholder, name in data.items %}
+                        <div class="input-group">
+                            <div class="password-div">
+                                <i class='bx bxs-lock-alt' ></i>
+                                <input type="password" placeholder="{{placeholder}}" name="{{name}}">
+                                <i class='bx bxs-hide pass-eye {{name}}_eye hide-eye'></i>
+                            </div>
 
-                    <div class="input-group">
-                        <input type="password" placeholder="New Password" name="new_password1">
-                        <small class="new-password-error">This field must not be empty</small>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="password" placeholder="Confirm New Password" name="new_password2">
-                        <small class="new-password-again-error">This field must not be empty</small>
-                    </div>
+                            <small class="{{name}}_error">This field must not be empty</small>
+                        </div>
+                    {% endfor %}
 
                     <input type="submit" value="Change Password">
                 </form>

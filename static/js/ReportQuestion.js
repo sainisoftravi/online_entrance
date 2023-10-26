@@ -1,10 +1,3 @@
-backend_message = document.querySelector('.backend-message')
-
-setTimeout(function() {
-    $(backend_message).fadeOut('fast');
-}, 1500);
-
-
 function validateForm(){
     success = true;
 

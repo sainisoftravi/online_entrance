@@ -67,7 +67,14 @@ class CustomUser(AbstractUser):
 
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
 
+    FullName = models.CharField(
+                    max_length=100,
+                    null = True,
+                    blank = False
+                )
+
     email = models.EmailField(_('email address'), unique=True)
+
     Gender = models.CharField(
                 max_length=6,
                 null = True,

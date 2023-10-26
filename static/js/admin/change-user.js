@@ -37,9 +37,9 @@ function validateForm(){
     success = true;
     emailRegex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
 
-    emailArea = document.getElementById('Email');
-    genderArea = document.getElementById('Gender');
+    emailArea = document.getElementById('email');
     dobArea = document.getElementsByName('DOB')[0];
+    genderArea = document.getElementsByName('Gender')[0];
     memberSinceArea = document.getElementById('Member Since');
 
     dobError = document.querySelector('.DOB-error');

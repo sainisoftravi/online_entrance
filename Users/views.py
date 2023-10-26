@@ -32,10 +32,6 @@ def PaginatePage(request, data, number_of_data=100):
 
 
 def SignUp(request):
-    conditions = {
-        'login': False
-    }
-
     if request.method == 'POST':
         email = request.POST['email']
 
@@ -75,7 +71,7 @@ def SignUp(request):
 
         return redirect('/')
 
-    return render(request, 'Signup.html', conditions)
+    return render(request, 'Signup.html')
 
 
 def Login(request):
@@ -85,10 +81,6 @@ def Login(request):
         return redirect('admin-index')
 
     if request.user.id is None:
-        conditions = {
-            'login': True
-        }
-
         if request.method == 'POST':
             email = request.POST['email']
             password = request.POST['new_password1']
@@ -124,7 +116,7 @@ def Login(request):
     else:
         return redirect('go_to', redirect_to=redirect_url)
 
-    return render(request, 'Signup.html', conditions)
+    return render(request, 'login.html')
 
 
 def Index(request):

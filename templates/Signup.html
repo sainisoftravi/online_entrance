@@ -2,31 +2,18 @@
 {% load static %}
 
 {% block content %}
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-<div class="outer-container">
-    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-
-    <div class="form-outer-container">
-        {% if login == False %}
-            <link rel="stylesheet" href="{% static 'css/signup.css' %}">
-
+    <div class="wrapper">
+        <div class="inner-wrapper">
             <div class="form-left signup-left-image">
             </div>
 
-        {% else %}
-            <link rel="stylesheet" href="{% static 'css/login.css' %}">
+            <div class="form-right">
+                <form action="{% url 'signup' %}" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
 
-            <div class="form-left login-left-image">
-            </div>
-
-        {% endif %}
-
-        <div class="form-right">
-            <form action="" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-
-                {% if login == False %}
                     <div class="form-item">
                         <i class='bx bxs-envelope bx-login'></i>
                         <input type="text" placeholder="Email" id="email" name="email">
@@ -102,64 +89,12 @@
                         <button onclick="return validateForm()" type="submit">Sign Up</button>
                         <p>Already a member? <a href="{% url 'login' %}">Sign In</a></p>
                     </div>
-
-                {% else %}
-                    <div class="form-item text-input-groups">
-                        <i class='bx bxs-user bx-login' ></i>
-                        <input type="text" placeholder="Email" id="email", name="email">
-                        <small class="email-error"></small>
-                    </div>
-
-                    <div class="form-item text-input-groups">
-                        <i class='bx bxs-lock-alt bx-login' ></i>
-                        <input type="password" placeholder="Password" id="password" name="new_password1">
-                        <i class='bx bxs-hide bxs-show pass-eye1'></i>
-
-                        {% if messages %}
-                            {% for message in messages %}
-                                <small class="password-error show-error">
-                                    {{message}}
-                                </small>
-                            {% endfor %}
-
-                        {% else %}
-                            <small class="password-error"></small>
-                        {% endif %}
-                    </div>
-
-                    <div class="form-item remember-me">
-                        <div class="remember-me-left">
-                            <input type="checkbox" id="remember-me", name="remember-me">
-                            <label for="remember-me">Remember Me</label>
-                        </div>
-
-                        <div class="remember-me-right">
-                            <a href="{% url 'reset_password' %}">Recovery Password</a>
-                        </div>
-                    </div>
-
-                    <div class="form-item submit-btn login-submit-btn">
-                        <button onclick="return validateForm()" type="submit">Sign In</button>
-                    </div>
-
-                    <div class="form-item create-account">
-                        <p>Don't have an account?</p>
-                        <a href="{% url 'signup' %}">Sign Up</a>
-                    </div>
-                {% endif %}
-            </form>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
-{% if login == False %}
     <script src="{% static 'js/signup.js' %}"></script>
-
-{% else %}
-    <script src="{% static 'js/login.js' %}"></script>
-
-{% endif %}
-
-<script src="{% static 'js/togglePassword.js' %}"></script>
+    <script src="{% static 'js/togglePassword.js' %}"></script>
 
 {% endblock %}

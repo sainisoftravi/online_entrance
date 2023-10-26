@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-.outer-container{
+.wrapper{
     width: 100%;
     display: flex;
     margin-top: 30px;
@@ -22,7 +22,7 @@
     justify-content: center;
 }
 
-.form-outer-container{
+.inner-wrapper{
     width: 80%;
     height: 100%;
     display: flex;
@@ -246,7 +246,7 @@ input[type=file]::file-selector-button {
   }
 
 @media screen and (max-width: 600px) {
-    .form-outer-container{
+    .inner-wrapper{
         width: 95%;
         display: flex;
         justify-content: center;

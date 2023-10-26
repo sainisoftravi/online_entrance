@@ -12,15 +12,14 @@
     box-sizing: border-box;
 }
 
-.outer-container{
-    width: 100%;
+.wrapper{
     display: flex;
     margin-top: 30px;
     margin-bottom: 30px;
     justify-content: center;
 }
 
-.form-outer-container{
+.inner-wrapper{
     width: 80%;
     height: 100%;
     display: flex;
@@ -44,6 +43,7 @@
     min-height: 100vh;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
     background-color: var(--form-right-color);
 }
 
@@ -175,7 +175,7 @@ i.show-eye{
 
 
 @media screen and (max-width: 600px) {
-    .form-outer-container{
+    .inner-wrapper{
         width: 95%;
         display: flex;
         justify-content: center;

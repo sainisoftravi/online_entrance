@@ -13,11 +13,22 @@
 
             <div class="row">
                 <div class="row-left-container">
+                    <label for="full_name">Full Name</label>
+                </div>
+
+                <div class="row-right-container">
+                    <input type="text" value="{{data.FullName}}" id="full_name" name="full_name">
+                    <small class="full-name-error"></small>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="row-left-container">
                     <label for="email">Email</label>
                 </div>
 
                 <div class="row-right-container">
-                    <input type="text" id=email" value="{{data.email}}" name="email" {% if data.is_superuser %}readonly{% endif %}>
+                    <input type="text" id="email" value="{{data.email}}" name="email" {% if data.is_superuser %}readonly{% endif %}>
                     <small class="email-error"></small>
                 </div>
             </div>

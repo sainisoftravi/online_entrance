@@ -840,6 +840,7 @@ def EditUsers(request, id):
 
     if request.method == 'POST':
         user.email = request.POST['Email']
+        user.FullName = request.POST['full_name']
 
         if user.Gender is not None:
             user.Gender = request.POST['Gender']

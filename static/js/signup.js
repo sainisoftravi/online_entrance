@@ -84,18 +84,31 @@ function validateForm(){
     dob_day = document.querySelector('#dob-day');
     dob_year = document.querySelector('#dob-year');
     dob_month = document.querySelector('#dob-month');
+    fullNameArea = document.querySelector('#full_name');
 
     dob_error = document.querySelector('.dob-error');
     gender_error = document.querySelector('.gender-error');
     password_error = document.querySelector('.password-error');
+    fullNameError = document.querySelector('.full-name-error');
     email_error = document.querySelector('.signup-email-error');
 
     password = password_box.value;
+    fullNameValue = fullNameArea.value.trim();
     email = document.querySelector('#email').value;
 
     dob_day_value = dob_day.value;
     dob_year_value = dob_year.value;
     dob_month_value = dob_month.value;
+
+    if(!fullNameValue){
+        success = false;
+        fullNameError.classList.add('show-error');
+        fullNameError.innerText = 'This field must not be empty';
+    }
+
+    else{
+        fullNameError.classList.remove('show-error');
+    }
 
     if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
         success = false;

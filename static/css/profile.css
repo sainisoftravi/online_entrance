@@ -62,7 +62,8 @@ label {
 .inner-row-2,
 .inner-row-3,
 .inner-row-4,
-.inner-row-5{
+.inner-row-5,
+.inner-row-6{
     width: 100%;
     display: flex;
     align-items: center;
@@ -70,7 +71,7 @@ label {
     border-bottom: 3px solid var(--separate-by-color);
 }
 
-.inner-row-5{
+.inner-row-6{
     border-bottom: none;
 }
 

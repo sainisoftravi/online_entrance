@@ -13,7 +13,6 @@
 
 .left-container{
     gap: 10px;
-    width: 15%;
     display: flex;
     flex-direction: column;
     background-color: #1f5d84;
@@ -22,7 +21,7 @@
 
 .right-container{
     gap: 50px;
-    width: 85%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: rgb(233, 233, 233);

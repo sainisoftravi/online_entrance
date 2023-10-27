@@ -4,8 +4,6 @@
     height: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 30px;
-    padding-bottom: 30px;
     justify-content: center;
 }
 
@@ -72,6 +70,10 @@
     color: rgba(8, 0, 27, 0.692);
 }
 
+.jump-to-next-page{
+    width: 100%;
+    padding-top: 30px;
+}
 
 @media screen and (max-width: 600px){
     .each-history{
@@ -90,5 +92,9 @@
 
     .histories{
         gap: 0;
+    }
+
+    .jump-to-next-page{
+        padding-top: 80px;
     }
 }

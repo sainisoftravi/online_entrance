@@ -21,6 +21,17 @@
             </a>
             {% endfor %}
 
+            <div class="jump-to-next-page">
+                {% include 'JumpToNextPage.html' %}
+
+                <style>
+                    .jump-to-page{
+                        padding: 0;
+                        margin: 0;
+                    }
+                </style>
+            </div>
+
         {% else %}
             <p class="no-records">You have no records to display</p>
         {% endif %}

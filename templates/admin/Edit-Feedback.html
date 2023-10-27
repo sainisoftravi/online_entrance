@@ -46,7 +46,7 @@
 
             <div class="buttons">
                 {% if data.0.IsMarked %}
-                    <a href="#" class="Marked" class="bottom-button bottom-button-twenty-percent">Marked</a>
+                    <a href="#" class="bottom-button bottom-button-twenty-percent Marked">Marked</a>
 
                 {% else %}
                     <a href="{% url 'mark-feedback' data.0.ID %}" class="bottom-button bottom-button-twenty-percent">Mark As Read</a>

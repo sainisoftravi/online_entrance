@@ -167,6 +167,12 @@ a.bottom-button:visited{
     width: 20%;
 }
 
+a.Marked{
+    color: whitesmoke;
+    pointer-events: none;
+    background-color: darkgreen;
+}
+
 @media screen and (max-width: 600px){
     form{
         width: 95%;

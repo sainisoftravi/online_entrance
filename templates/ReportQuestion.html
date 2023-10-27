@@ -2,20 +2,14 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
     <link rel="stylesheet" href="{% static 'css/ReportQuestion.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <div class="outer-container">
         <form action="" method="POST">
             {% csrf_token %}
 
-            {% for message in messages %}
-                {% if message %}
-                    <p class="backend-message">{{message}}</p>
-                {% endif %}
-            {% endfor %}
+            {% include 'success-message.html' %}
 
             <div class="row first-row">
                 <p id="row-id">{{data.id}}</p>

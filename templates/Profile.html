@@ -2,19 +2,9 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
-    <link rel="stylesheet" href="{% static 'css/error-message.css' %}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <div class="profile-container">
-        {% if messages %}
-        <div class="success-message-div">
-            {% for message in messages %}
-                {% if message.level == 25 %}
-                    <small class="success-message">{{ message }}</small>
-                {% endif %}
-            {% endfor %}
-        </div>
-        {% endif %}
+        {% include 'success-message.html' %}
 
         <div class="row-1">
             <div class="inner-row-1">

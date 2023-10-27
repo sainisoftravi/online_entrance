@@ -1,12 +1,6 @@
 changeProfileForm = document.getElementById('changeProfileForm');
-successMessageDiv = document.querySelector('.success-message-div');
 changeProfileButton = document.getElementById('changeProfileButton');
 var profile_image_error = document.querySelector('.profile-image-error');
-
-
-setTimeout(function() {
-    $(successMessageDiv).fadeOut('fast');
-}, 1500);
 
 
 changeProfileButton.addEventListener('change', () => {

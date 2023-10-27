@@ -1,6 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-
-
 .outer-container{
     display: flex;
     margin-top: 20px;
@@ -19,7 +16,7 @@ form{
 .row p,
 .row label{
     font-size: 18px;
-    font-family: 'Nunito';
+    font-family: var(--global-font);
 }
 
 .first-row{
@@ -32,7 +29,7 @@ form{
 .second-row p{
     font-size: 20px;
     font-weight: bolder;
-    font-family: 'Nunito';
+    font-family: var(--global-font);
     color: whitesmoke;
 }
 
@@ -60,7 +57,7 @@ textarea{
     resize: none;
     outline: none;
     font-size: 15px;
-    font-family: 'Nunito';
+    font-family: var(--global-font);
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
 
@@ -96,17 +93,6 @@ button.reported{
     color: whitesmoke;
     pointer-events: none;
     background-color: #00a560;
-}
-
-.backend-message{
-    padding: 20px;
-    font-size: 20px;
-    font-weight: bolder;
-    color: darkgreen;
-    font-weight: bolder;
-    font-family: 'Nunito';
-    background-color: rgb(73, 223, 73, 0.623);
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 @media screen and (max-width: 600px) {

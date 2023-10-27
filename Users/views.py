@@ -373,20 +373,10 @@ def Dashboard(request):
     return GoTo(request, 'dashboard')
 
 
-def GetHistories(id):
-    results = []
+def GetHistories(request, id):
+    results = requests.get(f'http://{request.get_host()}/api/histories/{id}').json()
 
-    for result in Exams.objects.filter(UserID=id):
-        res = {
-            'Date': result.Date,
-            'Slug': result.Slug,
-            'mark': result.CorrectCounter,
-            'Program': result.ProgrammeName
-        }
-
-        results.append(res)
-
-    return results
+    return PaginatePage(request, results)
 
 
 def GoTo(request, redirect_to):
@@ -399,6 +389,7 @@ def GoTo(request, redirect_to):
     data = dict()
     data['redirect_to'] = redirect_to
 
+    paginator, page = None, 0
     id = CustomUser.objects.filter(id=request.user.id).first()
 
     if id is None:
@@ -406,12 +397,20 @@ def GoTo(request, redirect_to):
         return redirect('login')
 
     if redirect_to == 'history':
-        data['results'] = GetHistories(id)
+        paginator, page_data, page = GetHistories(request, id)
+        data['results'] = page_data
 
     elif redirect_to == 'dashboard':
         data.update(GetGraphsData(id))
 
-    return render(request, 'Dashboard.html', {'to': data})
+    return render(request, 'Dashboard.html',
+                    {
+                        'to': data,
+                        'paginator': paginator,
+                        'prev_page_index': page - 1,
+                        'next_page_index': page + 1,
+                    }
+            )
 
 
 def GetGraphsData(id):

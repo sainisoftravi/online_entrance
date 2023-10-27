@@ -506,7 +506,7 @@ def ReportQuestions(request, id):
         reportQuestion = ReportQuestion(
             UserID = request.user,
             QuestionID = question,
-            Details = request.POST['message']
+            Issue = request.POST['message']
         )
 
         reportQuestion.save()
@@ -985,6 +985,8 @@ def MarkReport(request, id):
     reportedQuestion.IsMarked = True
     reportedQuestion.save()
 
+    messages.success(request, 'Report has been marked')
+
     return redirect('edit-report', id=id)
 
 
@@ -992,6 +994,8 @@ def MarkFeedBack(request, id):
     feedback = FeedBack.objects.filter(ID=id).first()
     feedback.IsMarked = True
     feedback.save()
+
+    messages.success(request, 'Feedback has been read')
 
     return redirect('edit-feedback', id=id)
 

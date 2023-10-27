@@ -6,6 +6,8 @@
         <form action="#" method="POST">
             {% csrf_token %}
 
+            {% include 'success-message.html' %}
+
             {% for key, value in data.items %}
                 {% if key != "IsMarked" and key != 'QuestionID' %}
                     {% if key == 'ID' %}

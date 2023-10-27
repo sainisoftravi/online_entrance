@@ -7,6 +7,8 @@
         <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
             {% csrf_token %}
 
+            {% include 'success-message.html' %}
+
             <div class="row id-row">
                 <p>{{data.id}}</p>
             </div>
@@ -28,7 +30,7 @@
                 </div>
 
                 <div class="row-right-container">
-                    <input type="text" id="email" value="{{data.email}}" name="email" {% if data.is_superuser %}readonly{% endif %}>
+                    <input type="text" id="email" value="{{data.email}}" name="Email" {% if data.is_superuser %}readonly{% endif %}>
                     <small class="email-error"></small>
                 </div>
             </div>
@@ -43,7 +45,7 @@
                         <input type="text" id="gender" value="-" name="-" readonly>
 
                     {% else %}
-                        <select name="gender" id="select-gender">
+                        <select name="Gender" id="select-gender">
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
                             <option value="Others">Others</option>

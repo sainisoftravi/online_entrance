@@ -9,6 +9,8 @@
         <form action="#" method="POST">
             {% csrf_token %}
 
+            {% include 'success-message.html' %}
+
             {% for key, value in data.0.items %}
                 {% if key == 'ID' %}
                     <div class="row id-row">

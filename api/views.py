@@ -101,3 +101,12 @@ class Feedbacks(APIView):
 
         serialized_feedbacks = FeedbackSerializers(feedbacks, many=True)
         return Response(serialized_feedbacks.data)
+
+
+class Histories(APIView):
+    def get(self, request, get_by):
+        histories = Exams.objects.filter(Q(UserID__id__iexact=get_by) | Q(UserID__email__iexact=get_by))
+
+        serialized_histories = HistorySerializers(histories, many=True)
+
+        return Response(serialized_histories.data)

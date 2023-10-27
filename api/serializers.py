@@ -78,3 +78,18 @@ class FeedbackSerializers(serializers.ModelSerializer):
     class Meta:
         model = FeedBack
         fields = ['ID', 'Name', 'Email', 'Message', 'Date']
+
+
+class HistorySerializers(serializers.ModelSerializer):
+    mark = serializers.SerializerMethodField()
+    Program = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Exams
+        fields = ['Date', 'Slug', 'mark', 'Program']
+
+    def get_mark(self, obj):
+        return obj.CorrectCounter
+
+    def get_Program(self, obj):
+        return obj.ProgrammeName

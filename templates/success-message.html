@@ -1,0 +1,13 @@
+{% load static %}
+
+{% if messages %}
+    <div class="success-message-div">
+        {% for message in messages %}
+            {% if message.level == 25 %}
+                <small class="success-message">{{ message }}</small>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+    <script src="{% static 'js/remove-success-message.js' %}"></script>
+{% endif %}

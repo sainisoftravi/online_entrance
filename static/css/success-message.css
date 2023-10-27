@@ -1,0 +1,15 @@
+.success-message-div{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    font-size: 20px;
+    font-weight: bolder;
+    align-items: center;
+    color: darkgreen;
+    justify-content: space-between;
+    background-color: rgba(73, 223, 73, 0.623);
+}
+
+small.success-message{
+    display: block;
+}

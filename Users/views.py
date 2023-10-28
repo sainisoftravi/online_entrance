@@ -304,7 +304,12 @@ def GetResult(request):
 
         values[0]['CorrectCounter'] = correct_counter
 
-        return render(request, 'ModelTest.html', {'questions': values})
+        return render(request, 'ModelTest.html',
+                        {
+                            'questions': values,
+                            'nav_template': 'nav.html'
+                        }
+                )
 
 
 def DetailedHistory(request, slug):

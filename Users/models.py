@@ -2,11 +2,17 @@ import uuid
 import datetime
 from django.db import models
 from django.dispatch import receiver
+from django.utils.text import slugify
 from django.utils.timezone import now
 from django.db.models.signals import pre_save
 from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.utils.translation import gettext_lazy as _
-from .utils import GenerateRandomURL
+
+
+def GenerateRandomURL(prefix):
+    random_url = f"{prefix}-{uuid.uuid4().hex}"
+
+    return slugify(random_url)
 
 
 def user_directory_path(instance, filename):

@@ -85,12 +85,16 @@ form{
     flex-direction: column;
 }
 
+.contact-form-item input::placeholder{
+    color: #bed7e7;
+}
+
 .contact-form-item input,
 textarea{
     width: 80%;
     padding: 10px;
     outline: none;
-    color: #bed7e7;
+    color: white;
     background: transparent;
     border: 1px solid #bed7e7;
     font-family: var(--global-font);

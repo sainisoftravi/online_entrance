@@ -41,7 +41,7 @@
             {% csrf_token %}
 
             <div class="contact-form-item">
-                <input type="Name" placeholder="Your Name" id="contact-name" name="contact-name">
+                <input type="Name" placeholder="Your Name" id="contact-name" name="contact-name" value="{% if user.is_authenticated %}{{user.FullName}}{% endif %}">
 
                 <div class="error">
                     <small class="name-error"></small>
@@ -49,7 +49,7 @@
             </div>
 
             <div class="contact-form-item">
-                <input type="email" placeholder="Your Email" id="contact-email" name="contact-email">
+                <input type="email" placeholder="Your Email" id="contact-email" name="contact-email" value="{% if user.is_authenticated %}{{user.email}}{% endif %}">
 
                 <div class="error">
                     <small class="email-error"></small>

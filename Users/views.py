@@ -304,12 +304,7 @@ def GetResult(request):
 
         values[0]['CorrectCounter'] = correct_counter
 
-        return render(request, 'ModelTest.html',
-                        {
-                            'questions': values,
-                            'nav_template': 'nav.html'
-                        }
-                )
+        return redirect('detailed-history', slug=ResultObj.Slug)
 
 
 def DetailedHistory(request, slug):

@@ -92,6 +92,11 @@
                                 </div>
                             {% endfor %}
 
+                            {% if question.checked and question.UserAnswer == '-' %}
+                                <p class="no-answer">No option was selected </p>
+
+                            {% endif %}
+
                             <small class="error-message">Must select any one</small>
                         </div>
                     </div>

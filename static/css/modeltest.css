@@ -210,6 +210,15 @@ label{
     margin-bottom: 50px;
 }
 
+p.no-answer{
+    width: 60%;
+    padding: 10px;
+    color: #cf0000;
+    font-size: 1.5rem;
+    border: 2px dashed #cf0000;
+    font-family: var(--global-font);
+}
+
 @media screen and (max-width: 600px) {
     .QuestionContainer{
         overflow: hidden;

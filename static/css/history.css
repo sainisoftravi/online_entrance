@@ -75,6 +75,10 @@
     padding-top: 30px;
 }
 
+.no-records{
+    font-family: var(--global-font);
+}
+
 @media screen and (max-width: 600px){
     .each-history{
         display: flex;
@@ -86,6 +90,7 @@
     .each-history:first-child{
         margin-top: 2cap;
     }
+
     .history{
         width: 90%;
     }
@@ -96,5 +101,9 @@
 
     .jump-to-next-page{
         padding-top: 80px;
+    }
+
+    .no-records{
+        font-size: 25px;
     }
 }

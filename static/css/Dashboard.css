@@ -107,13 +107,18 @@ i.bx-x{
     color: whitesmoke;
 }
 
+.no-records{
+    font-family: var(--global-font);
+}
+
 @media screen and (max-width: 600px) {
     i.bx-menu{
-        left: 5px;
+        left: 15px;
+        top: 15px;
         display: block;
         position: absolute;
         height: fit-content;
-        font-size: 25px;
+        font-size: 35px;
     }
 
     .dashboard-container{
@@ -125,7 +130,6 @@ i.bx-x{
     }
 
     .right-container{
-        margin-top: 10px;
         width: 100%;
     }
 
@@ -142,7 +146,10 @@ i.bx-x{
     }
 
     i.bx-x{
-        font-size: 30px;
         margin-left: 5px;
+    }
+
+    .no-records{
+        font-size: 25px;
     }
 }

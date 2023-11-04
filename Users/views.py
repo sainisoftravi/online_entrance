@@ -39,8 +39,8 @@ def SignUp(request):
             messages.error(request, 'Email already exists')
             return redirect('signup')
 
+        full_name = request.POST['full_name']
         password = request.POST['new_password1']
-
         dob_year = int(request.POST['dob-year'])
         dob_month = int(request.POST['dob-month'])
         dob_day = int(request.POST['dob-day'])
@@ -57,7 +57,8 @@ def SignUp(request):
         newUser = CustomUser(
             email=email,
             Gender=gender,
-            DOB=date
+            DOB=date,
+            FullName=full_name
         )
 
         if profile_image_path:

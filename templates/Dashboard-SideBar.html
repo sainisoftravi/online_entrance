@@ -1,0 +1,47 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/Dashboard-SideBar.css' %}">
+
+<div class="left-container">
+    <i class='bx bx-x'></i>
+
+    {% if redirect_to == 'dashboard' %}
+        <a class="left-links selected-left-link" href="{% url 'user-dashboard' %}">
+
+    {% else %}
+        <a class="left-links" href="{% url 'user-dashboard' %}">
+
+    {% endif %}
+        <i class='bx bxs-dashboard'></i>
+        <p>Dashboard</p>
+    </a>
+
+    {% if redirect_to == 'profile' %}
+        <a class="left-links selected-left-link" href="{% url 'user-profile' %}">
+
+    {% else %}
+        <a class="left-links" href="{% url 'user-profile' %}">
+
+    {% endif %}
+        <i class='bx bx-user'></i>
+        <p>Profile</p>
+    </a>
+
+    {% if redirect_to == 'history' %}
+        <a class="left-links selected-left-link" href="{% url 'user-history' %}">
+
+    {% else %}
+        <a class="left-links" href="{% url 'user-history' %}">
+
+    {% endif %}
+        <i class='bx bx-history' ></i>
+        <p>History</p>
+    </a>
+
+    <a class="left-links" href="{% url 'logout' %}">
+        <i class='bx bx-log-out'></i>
+        <p>Logout</p>
+    </a>
+</div>
+
+<script src="{% static 'js/toggleMenu.js' %}"></script>

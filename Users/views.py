@@ -1,3 +1,4 @@
+import re
 import json
 import random
 import datetime
@@ -11,6 +12,10 @@ from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth import update_session_auth_hash, get_user_model
 from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
 from .search import *
+
+
+URL_NEXT = ''
+uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
 
 
 def PaginatePage(request, data, number_of_data=100):
@@ -76,46 +81,45 @@ def SignUp(request):
 
 
 def Login(request):
-    redirect_url = request.session.get('next')
+    global URL_NEXT
+
+    URL_NEXT = request.GET.get('next', None)
+
+    if URL_NEXT:
+        URL_NEXT = URL_NEXT.strip('/')
 
     if request.user.is_superuser:
         return redirect('admin-index')
 
-    if request.user.id is None:
-        if request.method == 'POST':
-            email = request.POST['email']
-            password = request.POST['new_password1']
-            remember_me = request.POST.get('remember-me', False)
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['new_password1']
+        remember_me = request.POST.get('remember-me', False)
 
-            user = authenticate(request, email=email, password=password)
+        user = authenticate(request, email=email, password=password)
 
-            if user is not None:
-                login(request, user)
+        if user:
+            login(request, user)
 
-                if remember_me is False:
-                    request.session.set_expiry(0)
+            if remember_me is False:
+                request.session.set_expiry(0)
 
-                if user.is_superuser:
-                    return redirect('admin-index')
+            if user.is_superuser:
+                return redirect('admin-index')
 
-                if redirect_url:
-                    del request.session['next'] # Clear the session variable
-                    return redirect('go_to', redirect_to=redirect_url)
+            if URL_NEXT is None:
+                return redirect('user-dashboard')
 
-                elif 'detailed-history-slug' in request.session:
-                    slug = request.session['detailed-history-slug']
+            slug = re.search(uuid_pattern, URL_NEXT)
 
-                    del request.session['detailed-history-slug']
-                    return redirect('detailed-history', slug=slug)
+            if slug:
+                return redirect("detailed-history", slug=slug.group())
 
-                return redirect('go_to', redirect_to='dashboard')
+            return redirect(URL_NEXT)
 
-            else:
-                messages.error(request, 'Email and Password did not match')
-                return redirect('login')
-
-    else:
-        return redirect('go_to', redirect_to=redirect_url)
+        else:
+            messages.error(request, 'Email and Password did not match')
+            return redirect('login')
 
     return render(request, 'login.html')
 
@@ -212,7 +216,7 @@ def UpdateProfile(request):
 
     request.user.ProfileImage = CustomUser.objects.filter(id=request.user.id)[0].ProfileImage
 
-    return redirect('go_to', redirect_to='profile')
+    return redirect('user-profile')
 
 
 def UpdatePassword(request):
@@ -231,7 +235,7 @@ def UpdatePassword(request):
         else:
             messages.error(request, 'Old Password did not matched')
 
-        return redirect('go_to', redirect_to='profile')
+        return redirect('user-profile')
 
 
 def Logout(request):
@@ -371,7 +375,7 @@ def Dashboard(request):
     if request.user.is_superuser:
         return redirect('admin-index')
 
-    return GoTo(request, 'dashboard')
+    return redirect('user-dashboard')
 
 
 def GetHistories(request, id):
@@ -380,34 +384,33 @@ def GetHistories(request, id):
     return PaginatePage(request, results)
 
 
-def GoTo(request, redirect_to):
-    if request.user.is_superuser:
-        return redirect('admin-index')
-
-    if redirect_to not in ['profile', 'history', 'dashboard']:
-        raise Http404
-
-    data = dict()
-    data['redirect_to'] = redirect_to
-
-    paginator, page = None, 0
-    id = CustomUser.objects.filter(id=request.user.id).first()
-
-    if id is None:
-        request.session['next'] = redirect_to
-        return redirect('login')
-
-    if redirect_to == 'history':
-        paginator, page_data, page = GetHistories(request, id)
-        data['results'] = page_data
-
-    elif redirect_to == 'dashboard':
-        data.update(GetGraphsData(id))
+def UserDashboard(request):
+    data = GetGraphsData(request.user.id)
 
     return render(request, 'Dashboard.html',
                     {
                         'to': data,
+                        'redirect_to': 'dashboard'
+                    }
+            )
+
+
+def UserProfile(request):
+    return render(request, 'Profile.html',
+                    {
+                        'redirect_to': 'profile'
+                    }
+            )
+
+
+def UserHistory(request):
+    paginator, page_data, page = GetHistories(request, request.user.id)
+
+    return render(request, 'History.html',
+                    {
+                        'results': page_data,
                         'paginator': paginator,
+                        'redirect_to': 'history',
                         'prev_page_index': page - 1,
                         'next_page_index': page + 1,
                     }

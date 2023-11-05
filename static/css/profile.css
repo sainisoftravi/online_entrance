@@ -8,10 +8,26 @@
     gap: 20px;
     width: 100%;
     display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: rgb(233, 233, 233);
+}
+
+.right-container{
+    gap: 20px;
+    width: 100%;
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     background-color: rgb(233, 233, 233);
+}
+
+i.bx-menu{
+    display: none;
+    font-size: 50px;
+    font-weight: bolder;
+    color: rgb(0, 0, 0);
 }
 
 .row-1{
@@ -156,7 +172,7 @@ label {
     font-family: var(--global-font);
 }
 
-.input-groups button{
+#change-password-btn{
     border: 0;
     padding: 20px;
     outline: none;
@@ -259,6 +275,24 @@ i.show-eye{
 }
 
 @media screen and (max-width: 600px) {
+    .profile-container{
+        gap: 0px;
+        flex-direction: column;
+    }
+
+    .left-container{
+        display: none;
+    }
+
+    i.bx-menu{
+        left: 15px;
+        top: 15px;
+        display: block;
+        position: absolute;
+        height: fit-content;
+        font-size: 35px;
+    }
+
     .row-1,
     .row-2,
     .row-3{
@@ -286,11 +320,17 @@ i.show-eye{
     }
 
     #delete-account-btn{
-        width: 50%;
+        width: fit-content;
         margin-left: 11px;
+        font-size: 15px;
     }
 
     .row-3 p{
         margin-left: 11px;
+    }
+
+    #change-password-btn{
+        padding: 15px;
+        font-size: 15px;
     }
 }

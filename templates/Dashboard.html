@@ -9,87 +9,35 @@
     <div class="dashboard-container">
         <i class="bx bx-menu"></i>
 
-        <div class="left-container">
-            <i class='bx bx-x'></i>
-
-            {% if to.redirect_to == 'dashboard' %}
-                <a class="left-links selected-left-link" href="{% url 'go_to' 'dashboard' %}">
-
-            {% else %}
-                <a class="left-links" href="{% url 'go_to' 'dashboard' %}">
-
-            {% endif %}
-                <i class='bx bxs-dashboard'></i>
-                <p>Dashboard</p>
-            </a>
-
-            {% if to.redirect_to == 'profile' %}
-                <a class="left-links selected-left-link" href="{% url 'go_to' 'profile' %}">
-
-            {% else %}
-                <a class="left-links" href="{% url 'go_to' 'profile' %}">
-
-            {% endif %}
-                <i class='bx bx-user'></i>
-                <p>Profile</p>
-            </a>
-
-            {% if to.redirect_to == 'history' %}
-                <a class="left-links selected-left-link" href="{% url 'go_to' 'history' %}">
-
-            {% else %}
-                <a class="left-links" href="{% url 'go_to' 'history' %}">
-
-            {% endif %}
-                <i class='bx bx-history' ></i>
-                <p>History</p>
-            </a>
-
-            <a class="left-links" href="{% url 'logout' %}">
-                <i class='bx bx-log-out'></i>
-                <p>Logout</p>
-            </a>
-        </div>
+        {% include 'Dashboard-SideBar.html' %}
 
         <div class="right-container">
-            {% if to.redirect_to %}
-                {% if to.redirect_to == 'profile' %}
-                    {% include 'profile.html' %}
+            {% if to.data %}
+                <script>
+                    data = JSON.parse('{{to.data|escapejs}}');
+                </script>
 
-                {% elif to.redirect_to == 'history' %}
-                    {% include 'history.html' with results=to.results %}
+                <div class="pie-charts">
+                    <div class="chart-div">
+                        <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
+                    </div>
 
-                {% else %}
-                    {% if to.data %}
-                        <script>
-                            data = JSON.parse('{{to.data|escapejs}}');
-                        </script>
+                    <div class="chart-div">
+                        <canvas id="Pie-Chart-each-programme"></canvas>
+                    </div>
 
-                        <div class="pie-charts">
-                            <div class="chart-div">
-                                <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
-                            </div>
+                </div>
 
-                            <div class="chart-div">
-                                <canvas id="Pie-Chart-each-programme"></canvas>
-                            </div>
+                <div class="chart-div upside-down-bar-graph">
+                    <canvas id="Stacked-Bar-Chart-Results"></canvas>
+                </div>
 
-                        </div>
+                <script src="{% static 'js/dashboard.js' %}"></script>
 
-                        <div class="chart-div">
-                            <canvas id="Stacked-Bar-Chart-Results"></canvas>
-                        </div>
-
-                        <script src="{% static 'js/dashboard.js' %}"></script>
-
-                    {% else %}
-                        <p class="no-records">You have no records to display</p>
-
-                    {% endif %}
-
-                {% endif %}
-
+            {% else %}
+                <p class="no-records">You have no records to display</p>
             {% endif %}
+
         </div>
     </div>
 

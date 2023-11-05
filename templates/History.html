@@ -1,40 +1,49 @@
+{% extends 'nav.html' %}
 {% load static %}
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/history.css' %}">
 
-    <div class="histories">
-        {% if results %}
-            {% for result in results %}
-            <a href="{% url 'detailed-history' result.Slug %}" class="each-history">
-                <div class="history">
-                    <div class="marks-left-container">
-                        <p id="programme">{{result.Program}}</p>
-                        <p id="date">{{result.Date}}</p>
+    <div class="history-container">
+        <i class="bx bx-menu"></i>
+
+        {% include 'Dashboard-SideBar.html' %}
+
+        <div class="right-container">
+            <div class="histories">
+                {% if results %}
+                    {% for result in results %}
+                    <a href="{% url 'detailed-history' result.Slug %}" class="each-history">
+                        <div class="history">
+                            <div class="marks-left-container">
+                                <p id="programme">{{result.Program}}</p>
+                                <p id="date">{{result.Date}}</p>
+                            </div>
+
+                            <div class="marks-right-container">
+                                <p class="obtained-marks">{{result.mark}}</p>
+                                <p class="total-marks">100</p>
+                            </div>
+                        </div>
+                    </a>
+                    {% endfor %}
+
+                    <div class="jump-to-next-page">
+                        {% include 'JumpToNextPage.html' %}
+
+                        <style>
+                            .jump-to-page{
+                                padding: 0;
+                                margin: 0;
+                            }
+                        </style>
                     </div>
 
-                    <div class="marks-right-container">
-                        <p class="obtained-marks">{{result.mark}}</p>
-                        <p class="total-marks">100</p>
-                    </div>
-                </div>
-            </a>
-            {% endfor %}
-
-            <div class="jump-to-next-page">
-                {% include 'JumpToNextPage.html' %}
-
-                <style>
-                    .jump-to-page{
-                        padding: 0;
-                        margin: 0;
-                    }
-                </style>
+                {% else %}
+                    <p class="no-records">You have no records to display</p>
+                {% endif %}
             </div>
-
-        {% else %}
-            <p class="no-records">You have no records to display</p>
-        {% endif %}
+        </div>
     </div>
 
 {% endblock %}

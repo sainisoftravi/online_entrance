@@ -7,6 +7,7 @@ from django.http import Http404
 from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import PasswordChangeForm
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth import update_session_auth_hash, get_user_model
@@ -371,20 +372,17 @@ def DetailedHistory(request, slug):
             )
 
 
-def Dashboard(request):
-    if request.user.is_superuser:
-        return redirect('admin-index')
-
-    return redirect('user-dashboard')
-
-
 def GetHistories(request, id):
     results = requests.get(f'http://{request.get_host()}/api/histories/{id}').json()
 
     return PaginatePage(request, results)
 
 
+@login_required(login_url='login')
 def UserDashboard(request):
+    if request.user.is_superuser:
+        return redirect('admin-index')
+
     data = GetGraphsData(request.user.id)
 
     return render(request, 'Dashboard.html',
@@ -395,7 +393,11 @@ def UserDashboard(request):
             )
 
 
+@login_required(login_url='login')
 def UserProfile(request):
+    if request.user.is_superuser:
+        return redirect('admin-index')
+
     return render(request, 'Profile.html',
                     {
                         'redirect_to': 'profile'
@@ -403,7 +405,11 @@ def UserProfile(request):
             )
 
 
+@login_required(login_url='login')
 def UserHistory(request):
+    if request.user.is_superuser:
+        return redirect('admin-index')
+
     paginator, page_data, page = GetHistories(request, request.user.id)
 
     return render(request, 'History.html',

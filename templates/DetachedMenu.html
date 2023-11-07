@@ -1,0 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/DetachedMenu.css' %}">
+
+<div class="detached-pop-up hide">
+    <a href="{% url 'user-dashboard' %}">
+        <i class='bx bxs-dashboard'></i>
+        <p>Dashboard</p>
+    </a>
+
+    <a href="{% url 'user-profile' %}">
+        <i class='bx bx-user'></i>
+        <p>Profile</p>
+    </a>
+
+    <a href="{% url 'user-history' %}">
+        <i class='bx bx-history'></i>
+        <p>History</p>
+    </a>
+
+    <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
+        <i class='bx bx-log-out'></i>
+        <p>Logout</p>
+    </a>
+</div>

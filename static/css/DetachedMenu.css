@@ -1,0 +1,59 @@
+.detached-pop-up{
+    top: 2px;
+    right: 5px;
+    display: flex;
+    z-index: 9999;
+    cursor: pointer;
+    position: absolute;
+    width: fit-content;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transform-origin: top center;
+    background-color: rgb(0, 116, 161);
+    animation: growDown 300ms ease-in-out forwards;
+}
+
+.detached-pop-up.hide{
+    display: none;
+}
+
+.detached-pop-up a{
+    gap: 10px;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.detached-pop-up a:hover{
+    color: black;
+    background-color: whitesmoke;
+}
+
+.detached-pop-up i,
+.detached-pop-up p{
+    font-size: 1.125rem;
+}
+
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .detached-pop-up{
+        top: 0;
+        width: 100%;
+        position: relative;
+    }
+}

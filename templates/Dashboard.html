@@ -6,46 +6,36 @@
     <link rel="stylesheet" href="{% static 'css/scroll.css' %}">
     <link rel="stylesheet" href="{% static 'css/Dashboard.css' %}">
 
-    <div class="dashboard-container">
-        <i class="bx bx-menu"></i>
+    {% if to.data %}
+        <script>
+            data = JSON.parse('{{to.data|escapejs}}');
+        </script>
 
-        {% include 'Dashboard-SideBar.html' %}
+        <div class="pie-charts">
+            <div class="chart-div">
+                <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
+            </div>
 
-        <div class="right-container">
-            {% if to.data %}
-                <script>
-                    data = JSON.parse('{{to.data|escapejs}}');
-                </script>
-
-                <div class="pie-charts">
-                    <div class="chart-div">
-                        <canvas id="Pie-Chart-correct-vs-incorrect"></canvas>
-                    </div>
-
-                    <div class="chart-div">
-                        <canvas id="Pie-Chart-each-programme"></canvas>
-                    </div>
-
-                </div>
-
-                <div class="chart-div upside-down-bar-graph">
-                    <canvas id="Stacked-Bar-Chart-Results"></canvas>
-                </div>
-
-                <script src="{% static 'js/dashboard.js' %}"></script>
-
-            {% else %}
-                <p class="no-records">You have no records to display</p>
-            {% endif %}
+            <div class="chart-div">
+                <canvas id="Pie-Chart-each-programme"></canvas>
+            </div>
 
         </div>
-    </div>
+
+        <div class="chart-div upside-down-bar-graph">
+            <canvas id="Stacked-Bar-Chart-Results"></canvas>
+        </div>
+
+        <script src="{% static 'js/dashboard.js' %}"></script>
+
+    {% else %}
+        <p class="no-records">You have no records to display</p>
+    {% endif %}
 
     <a href="#" class="go-to-top">
         <i class='bx bx-up-arrow-alt up-arrow'></i>
     </a>
 
     <script src="{% static 'js/scroll.js' %}"></script>
-    <script src="{% static 'js/toggleMenu.js' %}"></script>
 
 {% endblock %}

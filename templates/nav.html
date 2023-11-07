@@ -29,9 +29,7 @@
                     {% endif %}
 
                     {% if request.user.is_authenticated %}
-                        <a href="{% url 'user-dashboard' %}">
-                            <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
-                        </a>
+                        <img src="{{ request.user.ProfileImage.url }}" alt="" class="profile-img">
 
                     {% else %}
                         {% if request.user.is_superuser is False %}
@@ -40,14 +38,11 @@
 
                     {% endif %}
                 </div>
-
-                <a href="{% url 'logout' %}" class="logout-link hide-logout-link">
-                    <i class='bx bx-log-out-circle'></i>
-                    <p>Logout</p>
-                </a>
             </div>
 
             <div class="block-content">
+                {% include 'DetachedMenu.html' %}
+
                 {% block content %}
                 {% endblock %}
             </div>

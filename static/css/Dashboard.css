@@ -1,16 +1,11 @@
-.dashboard-container{
+.block-content{
+    gap: 30px;
     display: flex;
     min-width: 100wh;
     min-height: 100vh;
-    background-color: #e9e9e9;
-}
-
-.right-container{
-    gap: 50px;
-    width: 100%;
-    display: flex;
     flex-direction: column;
-    background-color: rgb(233, 233, 233);
+    background-color: #e9e9e9;
+    box-shadow: inset rgba(0, 0, 0, 0.61) 0px 3px 8px;
 }
 
 .pie-charts{
@@ -26,14 +21,6 @@
     flex-grow:1;
 }
 
-.logout-link{
-    background-color: rgb(64, 1, 116);
-}
-
-.logout-link:hover{
-    background-color: rgb(85, 3, 153);
-}
-
 .no-records{
     width: 100%;
     display: flex;
@@ -46,40 +33,11 @@
     color: rgba(8, 0, 27, 0.692);
 }
 
-i.bx-menu{
-    display: none;
-    font-size: 50px;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
-}
-
 .no-records{
     font-family: var(--global-font);
 }
 
 @media screen and (max-width: 600px) {
-    i.bx-menu{
-        left: 10px;
-        top: 5px;
-        display: block;
-        position: absolute;
-        height: fit-content;
-        font-size: 35px;
-    }
-
-    .dashboard-container{
-        position: relative;
-    }
-
-    .left-container{
-        display: none;
-    }
-
-    .right-container{
-        width: 100%;
-        margin-top: 30px;
-    }
-
     .pie-charts{
         flex-direction: column;
     }

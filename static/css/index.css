@@ -4,6 +4,10 @@
     --quote-font-family: "Courgette";
 }
 
+.block-content{
+    position: relative;
+}
+
 .show-success-feedback-message{
     padding: 20px;
     font-size: 25px;

@@ -4,123 +4,114 @@
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
 
-    <div class="profile-container">
-        <i class="bx bx-menu"></i>
+    {% include 'success-message.html' %}
 
-        {% include 'Dashboard-SideBar.html' %}
+    <div class="row-1">
+        <div class="inner-row-1">
+            <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
 
-        <div class="right-container">
-            {% include 'success-message.html' %}
-
-            <div class="row-1">
-                <div class="inner-row-1">
-                    <img src="{{ request.user.ProfileImage.url }}" id="main-profile-image" alt="">
-
-                    <div class="row-1-details">
-                        <form action="{% url 'update-profile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
-                            {% csrf_token %}
-
-                            <input type="file" accept="image/*" id="changeProfileButton" name="uploaded-profile-image" hidden/>
-                            <label for="changeProfileButton">Choose File</label>
-                        </form>
-
-                        <small class="profile-image-error">Invalid image file</small>
-                    </div>
-                </div>
-
-                <div class="inner-row-2">
-                    <p class="left-text">Full Name</p>
-                    <p class="right-text">{{ request.user.FullName }}</p>
-                </div>
-
-                <div class="inner-row-3">
-                    <p class="left-text">Email</p>
-                    <p class="right-text">{{ request.user.email }}</p>
-                </div>
-
-                <div class="inner-row-4">
-                    <p id="gender-label" class="left-text">Gender</p>
-                    <p class="right-text">{{ request.user.Gender.upper }}</p>
-                </div>
-
-                <div class="inner-row-5">
-                    <p class="left-text">DOB</p>
-                    <p class="right-text">{{ request.user.DOB }}</p>
-                </div>
-
-                <div class="inner-row-6">
-                    <p class="left-text">Member Since</p>
-                    <p class="right-text">{{ request.user.MemberSince }}</p>
-                </div>
-            </div>
-
-            <div class="row-2">
-                <form action="{% url 'update-password' %}" method="POST" id="changePasswordForm">
+            <div class="row-1-details">
+                <form action="{% url 'update-profile' %}" id="changeProfileForm" enctype="multipart/form-data" method="POST">
                     {% csrf_token %}
 
-                    <p>Change Password</p>
-
-                    <div class="input-groups">
-                        <div class="password-div">
-                            <i class='bx bxs-lock-alt' ></i>
-                            <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
-                            <i class='bx bxs-hide bxs-show pass-eye0'></i>
-                        </div>
-                        {% if messages%}
-                            {% for message in messages %}
-                                {% if message.level == 40 %}
-                                    <small class="old-password-error show-error">
-                                        {{message}}
-                                    </small>
-                                {% else %}
-                                    <small class="old-password-error">This field must not be empty</small>
-                                {% endif %}
-                            {% endfor %}
-
-                        {% else %}
-                            <small class="old-password-error">This field must not be empty</small>
-
-                        {% endif %}
-                    </div>
-
-                    <div class="input-groups">
-                        <div class="password-div">
-                            <i class='bx bxs-lock-alt' ></i>
-                            <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
-                            <i class='bx bxs-hide bxs-show pass-eye1'></i>
-                        </div>
-
-                        <small class="new-password-error">This field must not be empty</small>
-                    </div>
-
-                    <div class="input-groups">
-                        <div class="password-div">
-                            <i class='bx bxs-lock-alt' ></i>
-                            <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
-                            <i class='bx bxs-hide bxs-show pass-eye2'></i>
-                        </div>
-
-                        <small class="new-password-again-error">This field must not be empty</small>
-                    </div>
-
-                    <div class="input-groups">
-                        <button type="submit" id="change-password-btn" onclick="return changePassword()">Change Password</button>
-                    </div>
+                    <input type="file" accept="image/*" id="changeProfileButton" name="uploaded-profile-image" hidden/>
+                    <label for="changeProfileButton">Choose File</label>
                 </form>
-            </div>
 
-            <div class="row-3">
-                <p>Danger Zone</p>
-
-                <form action="{% url 'delete-account' %}">
-                    <button type="submit" id="delete-account-btn">Delete Account</button>
-                </form>
+                <small class="profile-image-error">Invalid image file</small>
             </div>
+        </div>
+
+        <div class="inner-row-2">
+            <p class="left-text">Full Name</p>
+            <p class="right-text">{{ request.user.FullName }}</p>
+        </div>
+
+        <div class="inner-row-3">
+            <p class="left-text">Email</p>
+            <p class="right-text">{{ request.user.email }}</p>
+        </div>
+
+        <div class="inner-row-4">
+            <p id="gender-label" class="left-text">Gender</p>
+            <p class="right-text">{{ request.user.Gender.upper }}</p>
+        </div>
+
+        <div class="inner-row-5">
+            <p class="left-text">DOB</p>
+            <p class="right-text">{{ request.user.DOB }}</p>
+        </div>
+
+        <div class="inner-row-6">
+            <p class="left-text">Member Since</p>
+            <p class="right-text">{{ request.user.MemberSince }}</p>
         </div>
     </div>
 
+    <div class="row-2">
+        <form action="{% url 'update-password' %}" method="POST" id="changePasswordForm">
+            {% csrf_token %}
+
+            <p>Change Password</p>
+
+            <div class="input-groups">
+                <div class="password-div">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="Old Password" name="old_password" id="OldPassword">
+                    <i class='bx bxs-hide bxs-show pass-eye0'></i>
+                </div>
+                {% if messages%}
+                    {% for message in messages %}
+                        {% if message.level == 40 %}
+                            <small class="old-password-error show-error">
+                                {{message}}
+                            </small>
+                        {% else %}
+                            <small class="old-password-error">This field must not be empty</small>
+                        {% endif %}
+                    {% endfor %}
+
+                {% else %}
+                    <small class="old-password-error">This field must not be empty</small>
+
+                {% endif %}
+            </div>
+
+            <div class="input-groups">
+                <div class="password-div">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="New Password" name="new_password1" id="NewPassword">
+                    <i class='bx bxs-hide bxs-show pass-eye1'></i>
+                </div>
+
+                <small class="new-password-error">This field must not be empty</small>
+            </div>
+
+            <div class="input-groups">
+                <div class="password-div">
+                    <i class='bx bxs-lock-alt' ></i>
+                    <input type="password" placeholder="New Password Again" name="new_password2" id="NewPasswordAgain">
+                    <i class='bx bxs-hide bxs-show pass-eye2'></i>
+                </div>
+
+                <small class="new-password-again-error">This field must not be empty</small>
+            </div>
+
+            <div class="input-groups">
+                <button type="submit" id="change-password-btn" onclick="return changePassword()">Change Password</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="row-3">
+        <p>Danger Zone</p>
+
+        <form action="{% url 'delete-account' %}">
+            <button type="submit" id="delete-account-btn">Delete Account</button>
+        </form>
+    </div>
+
     <script src="{% static 'js/Profile.js' %}"></script>
-    <script src="{% static 'js/toggleMenu.js' %}"></script>
     <script src="{% static 'js/togglePassword.js' %}"></script>
 
 {% endblock %}

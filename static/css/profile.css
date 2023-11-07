@@ -4,16 +4,7 @@
     --separate-by-color: rgb(163, 163, 163);
 }
 
-.profile-container{
-    gap: 20px;
-    width: 100%;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    background-color: rgb(233, 233, 233);
-}
-
-.right-container{
+.block-content{
     gap: 20px;
     width: 100%;
     display: flex;
@@ -21,13 +12,7 @@
     flex-direction: column;
     justify-content: center;
     background-color: rgb(233, 233, 233);
-}
-
-i.bx-menu{
-    display: none;
-    font-size: 50px;
-    font-weight: bolder;
-    color: rgb(0, 0, 0);
+    box-shadow: inset rgba(0, 0, 0, 0.61) 0px 3px 8px;
 }
 
 .row-1{
@@ -275,22 +260,9 @@ i.show-eye{
 }
 
 @media screen and (max-width: 600px) {
-    .profile-container{
-        gap: 0px;
+    .block-content{
+        gap: 20px;
         flex-direction: column;
-    }
-
-    .left-container{
-        display: none;
-    }
-
-    i.bx-menu{
-        left: 15px;
-        top: 15px;
-        display: block;
-        position: absolute;
-        height: fit-content;
-        font-size: 35px;
     }
 
     .row-1,

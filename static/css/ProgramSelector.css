@@ -1,7 +1,8 @@
-.outer-div{
-    width: 100wh;
+.block-content{
+    flex-grow: 1;
     display: flex;
     overflow: hidden;
+    position: relative;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +62,7 @@
 }
 
 @media screen and (max-width: 600px) {
-    .outer-div{
+    .block-content{
         min-height: 60vh;
         justify-content: normal;
     }

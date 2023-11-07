@@ -3,17 +3,16 @@
 
 {% block content %}
     <link rel="stylesheet" href="{% static 'css/ProgramSelector.css'%} ">
-    <div class="outer-div">
-        <div class="search-container">
-            <i class='bx bx-search-alt-2 search-icon'></i>
-            <input type="text" placeholder="Select Program (BCA, BIT, etc.)" id="get_program">
-        </div>
 
-        <div class="program-container">
-            {% for program in programs %}
-                <a href="{% url 'model-test' program=program %}" class="program">{{ program }}</a>
-            {% endfor %}
-        </div>
+    <div class="search-container">
+        <i class='bx bx-search-alt-2 search-icon'></i>
+        <input type="text" placeholder="Select Program (BCA, BIT, etc.)" id="get_program">
+    </div>
+
+    <div class="program-container">
+        {% for program in programs %}
+            <a href="{% url 'model-test' program=program %}" class="program">{{ program }}</a>
+        {% endfor %}
     </div>
 
     <script src="{% static 'js/ProgramSelector.js' %}"></script>

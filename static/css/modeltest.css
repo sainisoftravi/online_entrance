@@ -49,6 +49,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--common-background-color);
+    box-shadow: inset rgba(0, 0, 0, 0.31) 0px 3px 8px;
 }
 
 .Questions{
@@ -176,7 +177,7 @@ label{
 
 .marks{
     left:20px;
-    top: 100px;
+    top: 20px;
     width: 125px;
     height: 125px;
     display: flex;

@@ -226,7 +226,7 @@ p.no-answer{
     }
 
     .QuestionAnotherContainer{
-        margin-top: 25px;
+        margin-top: 0px;
     }
 
     .Questions{
@@ -249,7 +249,7 @@ p.no-answer{
     }
 
     .marks{
-        top: 82px;
+        top: 2px;
         width: 40px;
         height: 40px;
         padding: 25px;

@@ -20,6 +20,15 @@ uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0
 
 
 def PaginatePage(request, data, number_of_data=100):
+    """
+    Paginate a page of data based on the specified parameters
+
+    Parameters:
+        request (Request): The HTTP request object.
+        data: The data to be paginated.
+        number_of_data (int): Optional. The number of data items to display per page. Default is 100.
+    """
+
     page = int(request.GET.get('pages', 1))
     paginator = Paginator(data, number_of_data)
 
@@ -38,6 +47,10 @@ def PaginatePage(request, data, number_of_data=100):
 
 
 def SignUp(request):
+    """
+    Handle user sign-up requests
+    """
+
     if request.method == 'POST':
         email = request.POST['email']
 
@@ -82,6 +95,10 @@ def SignUp(request):
 
 
 def Login(request):
+    """
+    Handle user login functionality
+    """
+
     global URL_NEXT
 
     URL_NEXT = request.GET.get('next', None)
@@ -126,14 +143,26 @@ def Login(request):
 
 
 def Index(request):
+    """
+    Process user feedback submitted through a contact form.
+    """
+
     details = {
         'request': request,
     }
 
     if request.user.is_superuser:
+        """
+        Redirect superusers to the admin index.
+        """
+
         return redirect('admin-index')
 
     elif request.method == 'POST':
+        """
+        Process feedback submitted via POST request.
+        """
+
         name = request.POST['contact-name']
         email = request.POST['contact-email']
         message = request.POST['contact-message']
@@ -154,6 +183,10 @@ def Index(request):
 
 
 def TakeModelTest(request, program):
+    """
+    Render a model test page for a specified program
+    """
+
     global values
 
     if request.user.is_superuser:
@@ -190,6 +223,10 @@ def TakeModelTest(request, program):
 
 
 def ProgramSelector(request):
+    """
+    View function for selecting a program.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -208,6 +245,10 @@ def ProgramSelector(request):
 
 
 def UpdateProfile(request):
+    """
+    Handle a request to update user profile information.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -221,6 +262,10 @@ def UpdateProfile(request):
 
 
 def UpdatePassword(request):
+    """
+    Handle a request to update user login password information
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -240,12 +285,20 @@ def UpdatePassword(request):
 
 
 def Logout(request):
+    """
+    Handle user logout
+    """
+
     logout(request)
 
     return redirect('index')
 
 
 def DeleteAccount(request):
+    """
+    Handle the deletion of a user account.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -259,6 +312,10 @@ def DeleteAccount(request):
 
 
 def GetResult(request):
+    """
+    Process and store exam results based on user responses.
+    """
+
     correct_counter = 0
 
     for value in values:
@@ -314,6 +371,14 @@ def GetResult(request):
 
 
 def DetailedHistory(request, slug):
+    """
+    View function for displaying detailed exam history
+
+    Parameters:
+        request (HttpRequest): The HTTP request object.
+        slug (str): The slug identifier for the exam.
+    """
+
     if request.user.is_authenticated is False:
         request.session['detailed-history-slug'] = slug
 
@@ -373,6 +438,10 @@ def DetailedHistory(request, slug):
 
 
 def GetHistories(request, id):
+    """
+    Retrieve history data for a specific user ID from the API.
+    """
+
     results = requests.get(f'http://{request.get_host()}/api/histories/{id}').json()
 
     return PaginatePage(request, results)
@@ -380,6 +449,13 @@ def GetHistories(request, id):
 
 @login_required(login_url='login')
 def UserDashboard(request):
+    """
+    View function for the user dashboard
+
+    If the user is a superuser, redirect to the admin index. Otherwise,
+    retrieve graph data for the user and render the user dashboard.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -395,6 +471,13 @@ def UserDashboard(request):
 
 @login_required(login_url='login')
 def UserProfile(request):
+    """
+    View for rendering the user profile page
+
+    If the user is a superuser, redirects to the admin index. Otherwise,
+    renders the user profile page.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -407,6 +490,13 @@ def UserProfile(request):
 
 @login_required(login_url='login')
 def UserHistory(request):
+    """
+    View for rendering the user history page
+
+    If the user is a superuser, redirects to the admin index. Otherwise,
+    renders the user history page.
+    """
+
     if request.user.is_superuser:
         return redirect('admin-index')
 
@@ -424,6 +514,10 @@ def UserHistory(request):
 
 
 def GetGraphsData(id):
+    """
+    Retrieve exam-related data for generating graphs
+    """
+
     values = dict()
     results = Exams.objects.filter(UserID=id)
 
@@ -479,6 +573,10 @@ def GetGraphsData(id):
 
 
 def GetSpecificQuestions(request, programme, subject):
+    """
+    Retrieve specific questions based on the specified program and subject.
+    """
+
     global values
 
     values = []
@@ -509,6 +607,10 @@ def GetSpecificQuestions(request, programme, subject):
 
 
 def ReportQuestions(request, id):
+    """
+    View for reporting a question
+    """
+
     question = Questions.objects.filter(ID=id).first()
 
     if request.method == 'POST':
@@ -534,6 +636,10 @@ def ReportQuestions(request, id):
 
 
 def DisplayReportedQuestion(request, id):
+    """
+    View for displaying reported question
+    """
+
     reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
 
     data = {
@@ -547,6 +653,10 @@ def DisplayReportedQuestion(request, id):
 
 
 def GetUserLists(request, users=None):
+    """
+    Retrieve user lists based on the provided request and user data.
+    """
+
     drop_down_options = ['Email', 'DOB', 'Gender', 'Member Since', 'Admin', 'Non-Admin', 'Active', 'Non-Active']
 
     if users is None:
@@ -582,6 +692,10 @@ def GetUserLists(request, users=None):
 
 
 def GetExamsLists(request, exams=None):
+    """
+    Retrieve and display a list of exams with optional filtering.
+    """
+
     drop_down_options = ['User', 'Programme Name', 'Total Correct Answered', 'Date']
 
     if exams is None:
@@ -616,6 +730,10 @@ def GetExamsLists(request, exams=None):
 
 
 def GetProgrammeLists(request):
+    """
+    Retrieve a list of programmes from an API and render them on a paginated HTML template.
+    """
+
     DATA = requests.get(f'http://{request.get_host()}/api/programmes').json()
     paginator, data, page = PaginatePage(request, DATA)
 
@@ -632,6 +750,10 @@ def GetProgrammeLists(request):
 
 
 def GetSubjectLists(request, subjects=None):
+    """
+    Retrieve and render a paginated list of subjects
+    """
+
     drop_down_options = ['Programme Name', 'Subject Name', 'Total Questions To Select']
 
     if subjects is None:
@@ -666,6 +788,10 @@ def GetSubjectLists(request, subjects=None):
 
 
 def GetQuestionLists(request, questions=None):
+    """
+    Retrieve and paginate a list of questions.
+    """
+
     drop_down_options = ['Subject', 'Programme', 'Title', 'Answer', 'Options']
 
     if questions is None:
@@ -700,6 +826,10 @@ def GetQuestionLists(request, questions=None):
 
 
 def GetFeedbackLists(request, feedbacks=None):
+    """
+    Retrieve and display feedback lists based on the given parameters.
+    """
+
     drop_down_options = ['Name', 'Email', 'Date', 'Message', 'Marked', 'Not-Marked']
 
     if feedbacks is None:
@@ -734,6 +864,10 @@ def GetFeedbackLists(request, feedbacks=None):
 
 
 def GetReportsLists(request, reports=None):
+    """
+    Retrieve and display a paginated list of reports
+    """
+
     drop_down_options = ['User', 'Issue', 'Date', 'Question', 'Marked', 'Not-Marked']
 
     if reports is None:
@@ -768,6 +902,10 @@ def GetReportsLists(request, reports=None):
 
 
 def AdminChangePassword(request):
+    """
+    View for handling admin password change
+    """
+
     if request.method == 'POST':
         old_password = request.POST['old_password']
         new_password = request.POST['new_password1']
@@ -799,6 +937,10 @@ def AdminChangePassword(request):
 
 
 def EditQuestions(request, id):
+    """
+    View for editing a specific question.
+    """
+
     question = Questions.objects.filter(ID=id).first()
 
     if request.method == 'POST':
@@ -838,6 +980,10 @@ def EditQuestions(request, id):
 
 
 def DeleteQuestion(request, id):
+    """
+    View to delete desired question
+    """
+
     question = Questions.objects.filter(ID=id).first()
     question.delete()
 
@@ -845,6 +991,10 @@ def DeleteQuestion(request, id):
 
 
 def EditUsers(request, id):
+    """
+    View to edit the details of specific user in admin template
+    """
+
     user = CustomUser.objects.filter(id=id).first()
 
     if request.method == 'POST':
@@ -878,6 +1028,10 @@ def EditUsers(request, id):
 
 
 def EditSubject(request, id):
+    """
+    View to edit the details of specific subject in admin template
+    """
+
     subject = Subject.objects.filter(ID=id).first()
 
     if request.method == 'POST':
@@ -906,6 +1060,10 @@ def EditSubject(request, id):
 
 
 def AddQuestion(request):
+    """
+    View to add new question in admin template
+    """
+
     if request.method == 'POST':
         programmeID = Programme.objects.filter(Name=request.POST['Programme']).first()
         SubjectID = Subject.objects.filter(ProgrammeID=programmeID, Name=request.POST['Subject']).first()
@@ -950,6 +1108,10 @@ def AddQuestion(request):
 
 
 def EditFeedback(request, id):
+    """
+    View to edit the details of specific feedback in admin template
+    """
+
     feedback = FeedBack.objects.filter(ID=id).first()
 
     if request.method == 'POST':
@@ -979,6 +1141,10 @@ def EditFeedback(request, id):
 
 
 def EditReports(request, id):
+    """
+    View to edit the details of specific report in admin template
+    """
+
     data = requests.get(f'http://{request.get_host()}/api/reports/{id}').json()[0]
 
     return render(request, 'admin/Edit-Report.html',
@@ -990,6 +1156,10 @@ def EditReports(request, id):
 
 
 def MarkReport(request, id):
+    """
+    View for indicating that a particular report has been flagged or marked
+    """
+
     reportedQuestion = ReportQuestion.objects.filter(ID=id).first()
     reportedQuestion.IsMarked = True
     reportedQuestion.save()
@@ -1000,6 +1170,10 @@ def MarkReport(request, id):
 
 
 def MarkFeedBack(request, id):
+    """
+    View for indicating that a particular feedback has been flagged or marked
+    """
+
     feedback = FeedBack.objects.filter(ID=id).first()
     feedback.IsMarked = True
     feedback.save()
@@ -1010,6 +1184,10 @@ def MarkFeedBack(request, id):
 
 
 def UserSearch(request):
+    """
+    Perform user search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type')
     searching_value = request.GET.get('search-value')
 
@@ -1035,6 +1213,10 @@ def UserSearch(request):
 
 
 def ExamSearch(request):
+    """
+    Perform exam search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type')
     searching_value = request.GET.get('search-value')
 
@@ -1056,6 +1238,10 @@ def ExamSearch(request):
 
 
 def SubjectSearch(request):
+    """
+    Perform subject search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type')
     searching_value = request.GET.get('search-value')
 
@@ -1076,6 +1262,10 @@ def SubjectSearch(request):
 
 
 def QuestionSearch(request):
+    """
+    Perform question search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type').strip()
     searching_value = request.GET.get('search-value').strip()
 
@@ -1098,6 +1288,10 @@ def QuestionSearch(request):
 
 
 def ReportSearch(request):
+    """
+    Perform report search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type').strip()
     searching_value = request.GET.get('search-value').strip()
 
@@ -1121,6 +1315,10 @@ def ReportSearch(request):
 
 
 def FeedbackSearch(request):
+    """
+    Perform feedback search based on specified criteria.
+    """
+
     searching_type = request.GET.get('search-type').strip()
     searching_value = request.GET.get('search-value').strip()
 

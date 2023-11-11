@@ -5,14 +5,6 @@ email_error = document.querySelector('.email-error');
 submit_button = document.querySelector('.submit-btn');
 password_error = document.querySelector('.password-error');
 
-if(submit_button.value == 'Sign Up'){
-    form_right.style = 'none;';
-}
-
-else{
-    form_right.style = 'justify-content: center;';
-}
-
 function validateForm(){
     success = true;
     email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;

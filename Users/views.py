@@ -603,7 +603,18 @@ def GetSpecificQuestions(request, programme, subject):
 
         values.append(details)
 
-    return render(request, 'ModelTest.html', {'questions': values})
+    if request.user.is_superuser:
+        nav_template = 'admin/nav.html'
+
+    else:
+        nav_template = 'nav.html'
+
+    return render(request, 'ModelTest.html',
+                    {
+                        'questions': values,
+                        'nav_template': nav_template
+                    }
+            )
 
 
 def ReportQuestions(request, id):

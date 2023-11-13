@@ -81,10 +81,10 @@
 
                                 {% endif %}
                                     {% if choice == question.UserAnswer and question.checked %}
-                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" checked>
+                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" checked {% if request.user.is_superuser %} disabled {% endif %}>
 
                                     {% else %}
-                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}">
+                                        <input type="radio" class="radio-choices" id="{{forloop.parentloop.counter}}{{forloop.counter}}" name="choices {{forloop.parentloop.counter}}" value="{{forloop.counter}}" {% if request.user.is_superuser %} disabled {% endif %}>
 
                                     {% endif %}
 

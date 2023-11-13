@@ -31,13 +31,14 @@
 .block-content{
     height: 100%;
     display: flex;
-    overflow: scroll;
+    overflow: hidden;
 }
 
 .right-container{
     width: 100%;
     display: flex;
     overflow: scroll;
+    overflow-x: hidden;
     flex-direction: column;
 }
 

@@ -27,7 +27,7 @@
             <div class="QuestionAnotherContainer taking-test">
 
         {% endif %}
-            {% if questions.0.checked is False %}
+            {% if questions.0.checked is False and request.user.is_superuser is False %}
                 <div class="timer">
                     <p id="timer-text">Starts at: 5</p>
                 </div>
@@ -103,7 +103,7 @@
                 </div>
             {% endfor %}
 
-            {% if questions.0.checked is False %}
+            {% if questions.0.checked is False and request.user.is_superuser is False %}
                 <button type="submit" id="submit-button" onclick="return checkForSubmission()">Submit</button>
             {% endif %}
 

@@ -2,8 +2,9 @@
 {% load static %}
 
 {% block content %}
-
     <link rel="stylesheet" href="{% static 'css/admin/subjects.css' %}">
+    <script src="{% static 'js/admin/resize-div-height.js' %}"></script>
+
     <div class="wrapper">
         {% for subject in data %}
             <a class="inner-wrapper" href="{% url 'edit-subject' subject.ID %}">

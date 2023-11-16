@@ -13,6 +13,7 @@
 
 .inner-wrapper-right p{
     font-size: large;
+    font-family: var(--global-font);
 }
 
 .inner-wrapper-left p

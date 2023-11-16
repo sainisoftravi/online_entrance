@@ -36,6 +36,7 @@ form{
 
 .row input{
     width: 100%;
+    font-family: var(--global-font);
 }
 
 textarea{
@@ -43,6 +44,7 @@ textarea{
     resize: none;
     padding: 10px;
     margin-bottom: 3px;
+    font-family: var(--global-font);
 }
 
 .id-row{

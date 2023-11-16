@@ -27,7 +27,7 @@
 }
 
 .inner-wrapper-right-question{
-    font-weight: bold;
+    font-weight: 800;
     font-size: larger;
 }
 
@@ -41,7 +41,7 @@
 
 .correct-answer{
     font-size: 16px;
-    font-weight: bolder;
+    font-weight: 800;
     color: rgb(43, 184, 0);
 }
 

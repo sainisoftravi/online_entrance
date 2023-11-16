@@ -11,6 +11,7 @@ a{
 
 .side-bar-option p{
     font-size: large;
+    font-weight: 200;
     color: whitesmoke;
     text-decoration: none;
     font-family: var(--global-font);
@@ -36,6 +37,7 @@ a{
 .selected-side-bar-option p,
 .selected-side-bar-option i{
     color: black;
+    font-weight: 600;
 }
 
 a.selected-side-bar-option{

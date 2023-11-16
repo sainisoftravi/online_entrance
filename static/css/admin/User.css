@@ -5,7 +5,9 @@
 }
 
 .inner-wrapper-top p{
+    font-weight: 800;
     word-wrap: break-word;
+    font-family: var(--global-font);
 }
 
 .inner-wrapper-bottom{

@@ -36,16 +36,19 @@
 }
 
 .obtained-marks{
-    color: whitesmoke;
     cursor: default;
-    font-size: 30px;
+    font-size: 25px;
+    font-weight: 800;
+    color: whitesmoke;
+    font-family: var(--global-font);
 }
 
 .total-marks{
-    color: whitesmoke;
     cursor: default;
-    font-size: 30px;
-    border-top: 3px solid whitesmoke;
+    font-size: 25px;
+    color: whitesmoke;
+    font-family: var(--global-font);
+    border-top: 2px solid whitesmoke;
 }
 
 #programme,

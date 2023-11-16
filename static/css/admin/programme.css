@@ -12,8 +12,9 @@
 }
 
 .inner-wrapper-left p{
+    font-weight: 200;
+    text-align: center;
     font-size: 1.25rem;
-    text-align: center
 }
 
 @media screen and (max-width: 600px){

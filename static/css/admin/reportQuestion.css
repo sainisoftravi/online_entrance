@@ -4,15 +4,17 @@
 
 #report-email{
     font-size: 14px;
+    font-weight: 200;
 }
 
 #report-issue{
     font-size: 20px;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 #report-date{
     font-size: 12px;
+    font-weight: 200;
 }
 
 .wrapper{

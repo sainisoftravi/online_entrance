@@ -6,12 +6,6 @@
     display: flex;
 }
 
-.inner-wrapper-top p{
-    font-weight: 800;
-    word-break: break-word;
-    font-family: var(--global-font);
-}
-
 .inner-wrapper-left{
     gap: 0;
 }
@@ -23,6 +17,7 @@
 
 .inner-wrapper-right p{
     font-size: 22px;
+    font-weight: 600;
 }
 
 .inner-wrapper-right p:nth-child(2){
@@ -31,13 +26,17 @@
 
 .exam-user{
     font-size: 17px;
-    font-weight: bolder;
+    font-weight: 600;
+    word-break: break-word;
+    font-family: var(--global-font);
 }
 
 .exam-programme{
+    font-weight: 200;
     font-size: small;
 }
 
 .exam-date{
+    font-weight: 200;
     font-size: smaller;
 }

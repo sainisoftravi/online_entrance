@@ -27,7 +27,7 @@
 }
 
 .inner-wrapper-right-question{
-    font-weight: 800;
+    font-weight: 600;
     font-size: larger;
 }
 
@@ -36,6 +36,7 @@
 }
 
 .question-option{
+    font-weight: 200;
     font-size: 16px;
 }
 
@@ -43,6 +44,11 @@
     font-size: 16px;
     font-weight: 800;
     color: rgb(43, 184, 0);
+}
+
+.question-programme,
+.question-subject{
+    font-weight: 200;
 }
 
 p,

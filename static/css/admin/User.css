@@ -5,7 +5,6 @@
 }
 
 .inner-wrapper-top p{
-    font-weight: 800;
     word-wrap: break-word;
     font-family: var(--global-font);
 }
@@ -20,13 +19,14 @@
 
 .user-email{
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .user-gender,
 .user-admin,
 .user-active{
     font-size: 14px;
+    font-weight: 200;
 }
 
 .inner-wrapper-right{

@@ -15,7 +15,7 @@ from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDeta
 from .search import *
 
 
-URL_NEXT = ''
+URL_NEXT = None
 uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
 
 
@@ -91,7 +91,11 @@ def SignUp(request):
 
         return redirect('/')
 
-    return render(request, 'Signup.html')
+    return render(request, 'Signup.html',
+                    {
+                        'page_title': 'Signup',
+                    }
+            )
 
 
 def Login(request):
@@ -101,10 +105,10 @@ def Login(request):
 
     global URL_NEXT
 
-    URL_NEXT = request.GET.get('next', None)
+    url_next = request.GET.get('next', None)
 
-    if URL_NEXT:
-        URL_NEXT = URL_NEXT.strip('/')
+    if url_next:
+        URL_NEXT = url_next.strip('/')
 
     if request.user.is_superuser:
         return redirect('admin-index')
@@ -139,17 +143,17 @@ def Login(request):
             messages.error(request, 'Email and Password did not match')
             return redirect('login')
 
-    return render(request, 'login.html')
+    return render(request, 'login.html',
+                    {
+                        'page_title': 'Login',
+                    }
+            )
 
 
 def Index(request):
     """
-    Process user feedback submitted through a contact form.
+    Handle requests to the index page
     """
-
-    details = {
-        'request': request,
-    }
 
     if request.user.is_superuser:
         """
@@ -179,7 +183,12 @@ def Index(request):
 
         return redirect('index')
 
-    return render(request, 'index.html', details)
+    return render(request, 'index.html',
+                    {
+                        'request': request,
+                        'page_title': 'Online Entrance Preparation'
+                    }
+            )
 
 
 def TakeModelTest(request, program):
@@ -217,11 +226,13 @@ def TakeModelTest(request, program):
     return render(request, 'ModelTest.html',
                     {
                         'questions': values,
-                        'nav_template': 'nav.html'
+                        'nav_template': 'nav.html',
+                        'page_title': f'{program} | Test Ongoing'
                     }
                 )
 
 
+@login_required(login_url='login')
 def ProgramSelector(request):
     """
     View function for selecting a program.
@@ -236,12 +247,12 @@ def ProgramSelector(request):
         for programObj in Programme.objects.all():
             allPrograms.append(programObj.Name)
 
-        return render(request, 'ProgramSelector.html', {'programs': allPrograms})
-
-    else:
-        request.session['next'] = 'program-selector'
-
-        return redirect('login')
+        return render(request, 'ProgramSelector.html',
+                        {
+                            'programs': allPrograms,
+                            'page_title': 'Select Programme'
+                        }
+                )
 
 
 def UpdateProfile(request):
@@ -313,7 +324,7 @@ def DeleteAccount(request):
 
 def GetResult(request):
     """
-    Process and store exam results based on user responses.
+    Display store exam results
     """
 
     correct_counter = 0
@@ -433,7 +444,8 @@ def DetailedHistory(request, slug):
                     {
                         'questions': values,
                         'nav_template': nav_template,
-                        'template_type': 'template::exams'
+                        'page_title': slug.capitalize(),
+                        'template_type': 'template::exams',
                     }
             )
 
@@ -465,6 +477,7 @@ def UserDashboard(request):
     return render(request, 'Dashboard.html',
                     {
                         'to': data,
+                        'page_title': 'DashBoard',
                         'redirect_to': 'dashboard'
                     }
             )
@@ -484,7 +497,8 @@ def UserProfile(request):
 
     return render(request, 'Profile.html',
                     {
-                        'redirect_to': 'profile'
+                        'page_title': 'Profile',
+                        'redirect_to': 'profile',
                     }
             )
 
@@ -507,6 +521,7 @@ def UserHistory(request):
                     {
                         'results': page_data,
                         'paginator': paginator,
+                        'page_title': 'History',
                         'redirect_to': 'history',
                         'prev_page_index': page - 1,
                         'next_page_index': page + 1,
@@ -613,7 +628,8 @@ def GetSpecificQuestions(request, programme, subject):
     return render(request, 'ModelTest.html',
                     {
                         'questions': values,
-                        'nav_template': nav_template
+                        'nav_template': nav_template,
+                        'page_title': 'Specific Test Ongoing'
                     }
             )
 
@@ -644,7 +660,12 @@ def ReportQuestions(request, id):
         'options': [question.OptionOne, question.OptionTwo, question.OptionThree, question.OptionFour]
     }
 
-    return render(request, 'ReportQuestion.html', {'data': data})
+    return render(request, 'ReportQuestion.html',
+                    {
+                        'data': data,
+                        'page_title': 'Report Question'
+                    }
+            )
 
 
 def DisplayReportedQuestion(request, id):
@@ -661,7 +682,12 @@ def DisplayReportedQuestion(request, id):
         'title': reportedQuestion.QuestionID.Title
     }
 
-    return render(request, 'ReportQuestion.html', {'data': data})
+    return render(request, 'ReportQuestion.html',
+                    {
+                        'data': data,
+                        'page_title': 'Reported Question'
+                    }
+            )
 
 
 def GetUserLists(request, users=None):
@@ -677,6 +703,7 @@ def GetUserLists(request, users=None):
     elif len(users) == 0:
         return render(request, 'admin/Users.html',
                         {
+                            'page_title': 'Users',
                             'data_details': 'No data found',
                             'search_form_url': 'user-search',
                             'template_type': 'template::users',
@@ -691,6 +718,7 @@ def GetUserLists(request, users=None):
     return render(request, 'admin/Users.html',
                 {
                     'data': data,
+                    'page_title': 'Users',
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
@@ -716,6 +744,7 @@ def GetExamsLists(request, exams=None):
     elif len(exams) == 0:
         return render(request, 'admin/Exams.html',
                         {
+                            'page_title': 'Exams',
                             'data_details': 'No data found',
                             'search_form_url': 'exam-search',
                             'template_type': 'template::exams',
@@ -729,6 +758,7 @@ def GetExamsLists(request, exams=None):
     return render(request, 'admin/Exams.html',
                 {
                     'data': data,
+                    'page_title': 'Exams',
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
@@ -753,6 +783,7 @@ def GetProgrammeLists(request):
                 {
                     'data': data,
                     'paginator': paginator,
+                    'page_title': 'Programmes',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getProgrammeDetails',
@@ -774,6 +805,7 @@ def GetSubjectLists(request, subjects=None):
     elif len(subjects) == 0:
         return render(request, 'admin/Subjects.html',
                         {
+                            'page_title': 'Subjects',
                             'data_details': 'No data found',
                             'search_form_url': 'subject-search',
                             'template_type': 'template::subjects',
@@ -788,6 +820,7 @@ def GetSubjectLists(request, subjects=None):
                 {
                     'data': data,
                     'paginator': paginator,
+                    'page_title': 'Subjects',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getSubjectDetails',
@@ -812,6 +845,7 @@ def GetQuestionLists(request, questions=None):
     elif len(questions) == 0:
         return render(request, 'admin/Questions.html',
                         {
+                            'page_title': 'Questions',
                             'data_details': 'No data found',
                             'search_form_url': 'question-search',
                             'template_type': 'template::questions',
@@ -826,6 +860,7 @@ def GetQuestionLists(request, questions=None):
                 {
                     'data': data,
                     'paginator': paginator,
+                    'page_title': 'Questions',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getQuestionDetails',
@@ -850,6 +885,7 @@ def GetFeedbackLists(request, feedbacks=None):
     elif len(feedbacks) == 0:
         return render(request, 'admin/Feedbacks.html',
                         {
+                            'page_title': 'FeedBacks',
                             'data_details': 'No data found',
                             'search_form_url': 'feedback-search',
                             'template_type': 'template::feedbacks',
@@ -864,6 +900,7 @@ def GetFeedbackLists(request, feedbacks=None):
                 {
                     'data': data,
                     'paginator': paginator,
+                    'page_title': 'FeedBacks',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getFeedbacks',
@@ -888,6 +925,7 @@ def GetReportsLists(request, reports=None):
     elif len(reports) == 0:
         return render(request, 'admin/Reports.html',
                         {
+                            'page_title': 'Reports',
                             'data_details': 'No data found',
                             'search_form_url': 'report-search',
                             'template_type': 'template::reports',
@@ -902,6 +940,7 @@ def GetReportsLists(request, reports=None):
                 {
                     'data': data,
                     'paginator': paginator,
+                    'page_title': 'Reports',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getReportsLists',
@@ -943,6 +982,7 @@ def AdminChangePassword(request):
     return render(request, 'admin/ChangePassword.html',
                     {
                         'data': data,
+                        'page_title': 'Update Password',
                         'template_type': 'template::change-password'
                     }
             )
@@ -985,6 +1025,7 @@ def EditQuestions(request, id):
     return render(request, 'admin/Add-Edit-Questions.html',
                     {
                         'data': data,
+                        'page_title': f'{data[0]["Title"]}',
                         'template_type': 'template::edit-question',
                     }
 
@@ -1034,6 +1075,7 @@ def EditUsers(request, id):
     return render(request, 'admin/Edit-User.html',
                     {
                         'data': data,
+                        'page_title': f'{data["email"]}',
                         'template_type': 'template::edit-user',
                     }
             )
@@ -1065,8 +1107,8 @@ def EditSubject(request, id):
     return render(request, 'admin/Edit-Subject.html',
                     {
                         'data': data,
-                        'template_type':
-                        'template::edit-subject'
+                        'template_type': 'template::edit-subject',
+                        'page_title': f'{data[0]["Programme"]} > {data[0]["Subject"]}'
                     }
             )
 
@@ -1113,8 +1155,9 @@ def AddQuestion(request):
 
     return render(request, 'admin/Add-Edit-Questions.html',
                   {
-                      'data': data,
-                      'template_type': 'template::add-new-question',
+                    'data': data,
+                    'page_title': 'Add Question',
+                    'template_type': 'template::add-new-question',
                   }
             )
 
@@ -1147,7 +1190,8 @@ def EditFeedback(request, id):
     return render(request, 'admin/Edit-Feedback.html',
                     {
                         'data': data,
-                        'template_type': 'template::edit-feedbacks'
+                        'page_title': f'{data[0]["Message"]}',
+                        'template_type': 'template::edit-feedbacks',
                     }
                 )
 
@@ -1162,7 +1206,8 @@ def EditReports(request, id):
     return render(request, 'admin/Edit-Report.html',
                     {
                         'data': data,
-                        'template_type': 'template::edit-reports',
+                        'page_title': f'{data["Issue"]}',
+                        'template_type': 'template::edit-reports'
                     }
                 )
 

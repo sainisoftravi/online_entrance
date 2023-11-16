@@ -432,7 +432,8 @@ def DetailedHistory(request, slug):
     return render(request, 'ModelTest.html',
                     {
                         'questions': values,
-                        'nav_template': nav_template
+                        'nav_template': nav_template,
+                        'template_type': 'template::exams'
                     }
             )
 

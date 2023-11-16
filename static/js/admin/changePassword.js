@@ -52,7 +52,7 @@ function changePassword(){
 }
 
 
-window.onload = () => {
+wiwindow.addEventListener('load', function() {
     oldPassword = document.getElementsByName('old_password')[0];
     newPassword = document.getElementsByName('new_password1')[0];
     newPasswordAgain = document.getElementsByName('new_password2')[0];
@@ -92,4 +92,4 @@ window.onload = () => {
             }
         });
     });
-}
+});

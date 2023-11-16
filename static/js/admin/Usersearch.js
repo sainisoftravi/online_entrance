@@ -60,7 +60,7 @@ function validateForm(){
     return success == true;
 }
 
-window.onload = () => {
+window.addEventListener('load', function() {
     search_by_select = document.querySelector("#search-by");
     error_element = document.querySelector('.error-message');
     searching_form = document.querySelector('#searching-form');
@@ -86,4 +86,4 @@ window.onload = () => {
             searching_form.submit();
         }
     });
-}
+});

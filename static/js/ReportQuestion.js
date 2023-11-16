@@ -23,3 +23,17 @@ function validateForm(){
 
     return success == true;
 }
+
+
+window.addEventListener('load', function() {
+    reported_textarea = document.getElementsByClassName('reported');
+
+    if(reported_textarea){
+        reported_textarea = reported_textarea[0];
+        console.log(reported_textarea);
+
+        reported_textarea.addEventListener('mousedown', (e) => {
+            e.preventDefault();
+        });
+    }
+});

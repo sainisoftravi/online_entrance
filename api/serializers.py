@@ -1,3 +1,4 @@
+import datetime
 from Users.models import *
 from rest_framework import serializers
 
@@ -225,10 +226,24 @@ class FeedbackSerializers(serializers.ModelSerializer):
                        in the serialized representation.
     """
 
+    Date = serializers.SerializerMethodField()
+
     class Meta:
         model = FeedBack
         fields = ['ID', 'Name', 'Email', 'Message', 'Date']
 
+    def get_Date(self, obj):
+        """
+        Returns the formatted date and time for the provided Feedback instance.
+
+        Args:
+            obj: The Feedback instance for which the date and time should be formatted.
+
+        Returns:
+            str: The formatted date and time string (e.g., 'Jan 01, 2022 12:30:45 PM').
+        """
+
+        return datetime.datetime.strptime(str(obj.Date), "%Y-%m-%d %H:%M:%S.%f%z").strftime('%b %d, %Y %I:%M:%S %p')
 
 class HistorySerializers(serializers.ModelSerializer):
     """

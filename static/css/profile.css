@@ -1,6 +1,6 @@
 :root{
     --p-color: black;
-    --div-bg-color: whitesmoke;
+    --div-bg-color: #ecf4f7;
     --separate-by-color: rgb(163, 163, 163);
 }
 
@@ -11,8 +11,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(233, 233, 233);
-    box-shadow: inset rgba(0, 0, 0, 0.61) 0px 3px 8px;
 }
 
 .row-1{

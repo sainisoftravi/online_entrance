@@ -123,7 +123,6 @@ class CustomUser(AbstractUser):
     ProfileImage = models.ImageField(
                 blank=True,
                 null=True,
-                default='pp-female.jpg',
                 upload_to=user_directory_path
             )
 
@@ -445,5 +444,9 @@ def set_default_profile_picture(sender, instance, **kwargs):
         **kwargs: Additional keyword arguments passed to the function (not used in this context).
     """
 
-    if instance.Gender == 'male' and not instance.ProfileImage:
-        instance.ProfileImage = 'pp-male.jpg'
+    if not instance.ProfileImage:
+        if instance.Gender == 'male':
+            instance.ProfileImage = 'pp-male.jpg'
+
+        else:
+            instance.ProfileImage = 'pp-female.jpg'

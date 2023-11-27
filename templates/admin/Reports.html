@@ -9,9 +9,9 @@
         {% for report in data %}
             <a class="inner-wrapper" href="{% url 'edit-report' report.ID %}">
                 <div class="inner-wrapper-left">
+                    <p id="report-date">{{report.Date}}</p>
                     <p id="report-email">{{report.User}}</p>
                     <p id="report-issue">{{report.Issue}}</p>
-                    <p id="report-date">{{report.Date}}</p>
                     <p></p>
                 </div>
             </a>

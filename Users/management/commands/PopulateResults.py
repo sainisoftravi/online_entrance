@@ -90,7 +90,10 @@ class Command(BaseCommand):
         while True:
             email = input("Enter user's email: ")
 
-            if CustomUser.objects.filter(email=email):
+            if email.lower() == 'all':
+                return email.lower()
+
+            if CustomUser.objects.filter(email__iexact=email):
                 return email
 
             else:
@@ -127,10 +130,20 @@ class Command(BaseCommand):
 
     def _create_tags(self):
         email = self.GetEmail()
-        programme = self.GetProgramme()
-        numberOfResults = self.GetNumberOfResults()
 
-        PopulateResults(programme, email, numberOfResults).Action()
+        if email == 'all':
+            emails = CustomUser.objects.all()[2:]
+
+            for index, email in enumerate(emails):
+                numberOfResults = random.SystemRandom().randint(60, 80)
+
+                print(f"Populating Results for: {email} ... {index + 1}/{len(emails)}")
+                PopulateResults("Random", email, numberOfResults).Action()
+
+        else:
+            programme = self.GetProgramme()
+            numberOfResults = self.GetNumberOfResults()
+            PopulateResults(programme, email, numberOfResults).Action()
 
     def handle(self, *args, **options):
         self._create_tags()

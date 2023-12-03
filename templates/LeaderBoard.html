@@ -1,0 +1,57 @@
+{% extends 'nav.html' %}
+{% load static %}
+
+{% block content %}
+    <script src="{% static 'js/leaderboard.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/LeaderBoard.css' %}">
+
+    <form action="{% url 'leaderboard' %}" method="GET" id="rank-by-form">
+        {% csrf_token %}
+
+        <select name="rank-by" id="rank-by">
+            <option selected disabled hidden>Rank By</option>
+
+            {% for programme in programmes %}
+                <option value="{{programme}}">{{programme}}</option>
+            {% endfor %}
+
+        </select>
+    </form>
+
+    <div class="leadboard-users">
+        <div class="rank-system-info">
+            <p class="rank-system-message">The ranking is determined based on the average scores obtained by the user across all tests taken within the selected program</p>
+            <i class='bx bx-x'></i>
+        </div>
+
+        {% for res in data %}
+
+            <div class="users">
+                <div class="rank-number">
+                    {% if res.rank == 1%}
+                        <img src="{% static 'images/Gold Medal.png' %}" alt="Gold Medal" class="medals">
+
+                    {% elif res.rank == 2 %}
+                        <img src="{% static 'images/Silver Medal.png' %}" alt="Silver Medal" class="medals">
+
+                    {% elif res.rank == 3 %}
+                        <img src="{% static 'images/Bronze Medal.png' %}" alt="Bronze Medal" class="medals">
+
+                    {% else %}
+                        <p class="user-rank">{{res.rank}}</p>
+
+                    {% endif %}
+                </div>
+
+                <div class="user-details">
+                    <p class="user-name">{{res.user_name}}</p>
+                    <img src="{{res.user_img}}" alt="{{res.user_name}}" class="user-profile-image">
+                </div>
+
+                <p class="user-score">{{res.user_score}}</p>
+            </div>
+
+        {% endfor %}
+    </div>
+
+{% endblock %}

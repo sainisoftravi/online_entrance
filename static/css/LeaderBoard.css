@@ -1,0 +1,105 @@
+.block-content{
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form{
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rank-system-info{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #22978d;
+}
+
+.rank-system-message{
+    width: 95%;
+    padding: 20px;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.bx-x{
+    width: 5%;
+    padding: 10px;
+    cursor: pointer;
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: whitesmoke;
+}
+
+select{
+    width: 50%;
+    padding: 10px;
+    outline: none;
+}
+
+.leadboard-users{
+    gap: 10px;
+    display: flex;
+    padding-bottom: 40px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rank-number{
+    width: 40%;
+    display: flex;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+.medals{
+    width: 80px;
+    height: 80px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.users{
+    width: 80%;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    background-color: #227a97
+}
+
+.user-details{
+    gap: 30px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.user-name{
+    width: 50%;
+    text-align: center;
+    font-size: 1.25rem;
+    color: whitesmoke;
+    font-family: var(--global-font);
+}
+
+.user-profile-image{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-score{
+    width: 10%;
+    color: whitesmoke;
+    font-size: 1.5rem;
+}

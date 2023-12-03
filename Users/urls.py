@@ -15,6 +15,7 @@ urlpatterns = [
     path('history/', views.UserHistory, name='user-history'),
     path('user-search/', views.UserSearch, name='user-search'),
     path('exam-search/', views.ExamSearch, name='exam-search'),
+    path('leaderboard/', views.LeaderBoard, name='leaderboard'),
     path('feedbacks/', views.GetFeedbackLists, name='feedback'),
     path('reports/', views.GetReportsLists, name='report-lists'),
     path('questions/', views.GetQuestionLists, name='questions'),

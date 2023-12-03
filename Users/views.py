@@ -588,6 +588,56 @@ def GetGraphsData(id):
     }
 
 
+def LeaderBoard(request):
+    """
+    Generates and renders the leaderboard based on exam scores for
+    non-superuser users.
+
+    This function retrieves exam scores for each non-superuser user,
+    finds their maximum score for a specified program, sorts users based
+    on their average scores, and generates a leaderboard with user ranks,
+    names, profile images, and scores.
+    """
+
+    positions = dict()
+    show_rank_up_to = 50
+    search_by = request.GET.get('rank-by', 'bca')
+
+    for user in CustomUser.objects.all():
+        if user.is_superuser is False:
+            scores = Exams.objects.filter(UserID=user, ProgrammeName__iexact=search_by)
+            avg_score = round(sum([score.CorrectCounter for score in scores]) / len(scores), 2)
+
+            positions.update({user: avg_score})
+
+    positions = sorted(positions.items(), key=lambda position: position[1], reverse=True)
+    LeaderBoardScores = []
+
+    for rank, (user, score) in enumerate(positions):
+        if rank >= show_rank_up_to:
+            break
+
+        LeaderBoardScores.append(
+            {
+                'rank': rank + 1,
+                'user_name': user.FullName,
+                'user_img': user.ProfileImage.url,
+                'user_score': score
+            }
+        )
+
+    programmes = requests.get(f'http://{request.get_host()}/api/programmes').json()
+    programmes = [programme['Name'].upper() for programme in programmes]
+
+    return render(request, 'LeaderBoard.html',
+                    {
+                        'programmes': programmes,
+                        'data': LeaderBoardScores,
+                        'page_title': 'Leader Board',
+                    }
+            )
+
+
 def GetSpecificQuestions(request, programme, subject):
     """
     Retrieve specific questions based on the specified program and subject.

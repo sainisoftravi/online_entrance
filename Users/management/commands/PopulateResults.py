@@ -1,6 +1,7 @@
 import random
+import requests
 from django.core.management.base import BaseCommand
-from Users.models import CustomUser, Programme, Subject, Questions, Exams, ResultDetails
+from Users.models import *
 
 
 class PopulateResults:
@@ -72,6 +73,19 @@ class PopulateResults:
                 results.CorrectCounter = correct_counter
                 results.save()
 
+            resultExtraDetails = ResultsExtraDetails.objects.get(UserID=self.UsersObj)
+
+            data = requests.get(f'http://127.0.0.1:8000/api/users_exams_each_programmes/{self.UsersObj.id}')
+
+            if data.status_code == 200:
+                data = data.json()[0]
+
+                data['TestsTaken'] += 1
+                data[programme.upper()] += 1
+
+                data.pop('UserID')
+                resultExtraDetails.update(commit=True, **data)
+
 
 class Command(BaseCommand):
     def GetAllProgrammes(self):
@@ -132,7 +146,7 @@ class Command(BaseCommand):
         email = self.GetEmail()
 
         if email == 'all':
-            emails = CustomUser.objects.all()[2:]
+            emails = CustomUser.objects.filter(is_superuser=False)
 
             for index, email in enumerate(emails):
                 numberOfResults = random.SystemRandom().randint(60, 80)

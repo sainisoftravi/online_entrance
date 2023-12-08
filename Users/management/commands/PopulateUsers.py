@@ -1,10 +1,9 @@
 import os
 import uuid
-from django.core.files import File
 from django.core.files.base import ContentFile
 from django.core.management.base import BaseCommand
 import requests
-from Users.models import CustomUser
+from Users.models import CustomUser, ResultsExtraDetails
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent.parent
@@ -59,6 +58,9 @@ class Command(BaseCommand):
             user.set_password('root')
             user.ProfileImage.save(ImagePath, contentfile)
             user.save()
+
+            extra_details = ResultsExtraDetails(UserID=user)
+            extra_details.save()
 
         os.remove(ImagePath)
 

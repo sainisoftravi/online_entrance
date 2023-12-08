@@ -41,6 +41,68 @@ class Users(APIView):
         return Response(serialized_user.data)
 
 
+class UsersExams(APIView):
+    """
+    API view to retrieve exams data for non-superuser
+
+    Endpoint:
+        GET api/users_exams/: Retrieve a list of all users containing email, FirstName, ProfileImage, TestsTaken
+
+    Parameters:
+        request: The HTTP request object.
+
+    Returns:
+        Response: A serialized response containing email, FirstName, ProfileImage, TestsTaken for non-superuser
+    """
+
+    def get(self, request):
+        """
+        Retrieves and serializes exams data for non-superuser
+
+        Parameters:
+            request: The HTTP request object.
+
+        Returns:
+            Response: A serialized response containing exams data for non-superuser
+        """
+
+        users = CustomUser.objects.filter(is_superuser=False)
+
+        serialized_exams = UsersExamsSerializers(users, many=True)
+        return Response(serialized_exams.data)
+
+
+class UsersExamsInEachProgramme(APIView):
+    """
+    API View for retrieving exam details for a user.
+
+    Endpoint:
+        GET api/users_exams_each_programmes?user=id: Retrieve a list of all exams or a specific exam by ID
+
+    Parameters:
+        get_by (str): Optional. If provided, retrieves a specific exam by ID.
+
+    Returns:
+        JSON Response: A serialized list of exam information in the response body.
+    """
+
+    def get(self, request, user_id):
+        """
+        Handle GET requests to retrieve exam details for a user.
+
+        Parameters:
+            request (Request): Django request object containing the user ID.
+
+        Returns:
+            Response: Django Response object containing serialized exam details.
+        """
+
+        resultExtraDetails = ResultsExtraDetails.objects.filter(UserID__id=user_id)
+        serialized_resultExtraDetails = UsersExamsInEachProgrammeSerializers(resultExtraDetails, many=True)
+
+        return Response(serialized_resultExtraDetails.data)
+
+
 class Exam(APIView):
     """
     API View for retrieving exam information.
@@ -55,7 +117,7 @@ class Exam(APIView):
         JSON Response: A serialized list of exam information in the response body.
     """
 
-    def get(self, request, get_by=None):
+    def get(self, request, user_id, programme):
         """
         Handle GET requests for retrieving exam information.
 
@@ -67,12 +129,7 @@ class Exam(APIView):
             Response: A JSON response containing serialized exam information.
         """
 
-        if get_by:
-            exams = Exams.objects.filter(Q(ID__iexact=get_by) | Q(ProgrammeName__iexact=get_by) | Q(UserID__email__iexact=get_by))
-
-        else:
-            exams = Exams.objects.all()
-
+        exams = Exams.objects.filter(Q(UserID__id__iexact=user_id) & Q(ProgrammeName__iexact=programme))
         serialized_exams = ExamSerializers(exams, many=True)
         return Response(serialized_exams.data)
 

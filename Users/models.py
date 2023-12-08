@@ -223,6 +223,55 @@ class ResultDetails(models.Model):
                 )
 
 
+class ResultsExtraDetails(models.Model):
+    class Meta:
+        verbose_name_plural = "ResultsExtraDetails"
+
+    ID = models.UUIDField(
+            primary_key=True,
+            default=uuid.uuid4,
+            editable=False
+        )
+
+    UserID = models.ForeignKey(
+            "CustomUser",
+            on_delete = models.CASCADE
+        )
+
+    TestsTaken = models.PositiveIntegerField(
+                    null = False,
+                    blank = False,
+                    default=0
+            )
+    BCA = models.PositiveIntegerField(
+                    null = False,
+                    blank = False,
+                    default=0
+            )
+    BIT = models.PositiveIntegerField(
+                    null = False,
+                    blank = False,
+                    default=0
+            )
+    BIM = models.PositiveIntegerField(
+                    null = False,
+                    blank = False,
+                    default=0
+            )
+    BSCSIT = models.PositiveIntegerField(
+                    null = False,
+                    blank = False,
+                    default=0
+            )
+
+    def update(self, commit=False, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+
+        if commit:
+            self.save()
+
+
 class Programme(models.Model):
     """
     Model representing information about Programme.

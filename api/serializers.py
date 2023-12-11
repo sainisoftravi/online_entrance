@@ -23,6 +23,76 @@ class UserSerializers(serializers.ModelSerializer):
         fields = ['id', 'FullName', 'email', 'DOB', 'ProfileImage', 'MemberSince', 'Gender', 'is_superuser', 'is_active']
 
 
+class UsersExamsSerializers(serializers.ModelSerializer):
+    """
+    Serializes the CustomUser model for representing user information related to exams.
+
+    Attributes:s
+        email (str): The email address of the user.
+        FullName (str): The full name of the user.
+        TestsTaken (int): The number of tests taken by the user.
+        ProfileImage (str): The URL or path to the user's profile image.
+    """
+
+    TestsTaken = serializers.SerializerMethodField()
+
+    class Meta:
+        model = CustomUser
+        fields = ['id', 'email', 'FullName', 'TestsTaken', 'ProfileImage']
+
+    def get_TestsTaken(self, obj):
+        """
+        Get the total number of tests taken by a user.
+
+        Parameters:
+            obj (CustomUser): The CustomUser instance for which total number of tests taken by a user is to be retrieved.
+
+        Returns:
+            str: The total number of tests taken by a user.
+        """
+
+        return ResultsExtraDetails.objects.get(UserID=obj).TestsTaken
+
+
+class UsersExamsInEachProgrammeSerializers(serializers.ModelSerializer):
+    """
+    Serializer for the UsersExamsInEachProgramme model.
+
+    This serializer is designed to represent the ResultsExtraDetails model,
+    providing a customized representation for specific fields.
+
+    Fields:
+        UserID: Represents the user ID associated with the exam results.
+        BCA: Represents the result details for the BCA program.
+        BIT: Represents the result details for the BIT program.
+        BIM: Represents the result details for the BIM program.
+        BSCSIT: Represents the result details for the BSCSIT program.
+
+    Methods:
+        get_UserID(obj): Custom method to retrieve the user ID from the given object.
+
+    """
+
+    UserID = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ResultsExtraDetails
+        fields = ['UserID', 'TestsTaken', 'BCA', 'BIT', 'BIM', 'BSCSIT']
+
+    def get_UserID(self, obj):
+        """
+        Custom method to retrieve the user ID from the given object.
+
+        Parameters:
+            obj: An instance of ResultsExtraDetails representing exam results.
+
+        Returns:
+            The user ID associated with the exam results.
+        """
+
+        return obj.UserID.id
+
+
 class ExamSerializers(serializers.ModelSerializer):
     """
     Serializer for the Exams model, extending the ModelSerializer class.

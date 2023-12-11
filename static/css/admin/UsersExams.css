@@ -1,0 +1,36 @@
+.inner-wrapper{
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-wrapper-top{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+p.user-email{
+    font-size: 1.025rem;
+    font-weight: bolder;
+    font-family: var(--global-font);
+}
+
+p.full-name{
+    font-size: 0.9rem;
+    font-family: var(--global-font);
+}
+
+.inner-wrapper-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user-image{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 50%;
+    object-fit: cover;
+}

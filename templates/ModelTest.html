@@ -16,7 +16,7 @@
         {% csrf_token %}
 
         <div class="marks {% if questions.0.checked == False %}hide-marks{% endif %}">
-            <p class="obtained-marks">{{questions.0.CorrectCounter}}</p>
+            <p class="obtained-marks">{{CorrectCounter}}</p>
             <p class="total-marks">100</p>
         </div>
 

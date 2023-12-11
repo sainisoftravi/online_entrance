@@ -2,9 +2,11 @@
 {% load static %}
 
 {% block content %}
-    <link rel="stylesheet" href="{% static 'css/admin/exams.css' %}">
+    <link rel="stylesheet" href="{% static 'css/admin/DetailedExams.css' %}">
 
     <div class="wrapper">
+        {% include 'admin/search-results-message.html' %}
+
         {% for exam in data %}
             <a class="inner-wrapper" href="{% url 'detailed-history' exam.Slug %}">
                 <div class="inner-wrapper-top">

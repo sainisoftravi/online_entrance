@@ -1,5 +1,25 @@
 import datetime
-from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
+import requests
+from .models import *
+
+
+def compare_date(from_db, from_user, format='%Y-%m-%d'):
+    """
+    Compare two date strings using the specified format.
+    """
+
+    if from_db is None:
+        return False
+
+    try:
+        from_db = datetime.datetime.strptime(from_db, format).date()
+
+    except ValueError:
+        from_db = datetime.datetime.strptime(from_db, "%Y-%m-%dT%H:%M:%S.%fZ").date()
+
+    from_user = datetime.datetime.strptime(from_user, format).date()
+
+    return from_db == from_user
 
 
 class UserFilter:
@@ -7,10 +27,11 @@ class UserFilter:
     Utility class for filtering users based on various criteria.
     """
 
-    def __init__(self, searching_value):
+    def __init__(self, host_url, searching_value):
         self.searching_value = searching_value
+        self.data = requests.get(f'http://{host_url}/api/users').json()
 
-    def SearchByEmail(self):
+    def SearchByEmail(self, search_type):
         """
         Filter users by email.
 
@@ -18,9 +39,9 @@ class UserFilter:
             List: A list of users matching the specified email.
         """
 
-        return CustomUser.objects.filter(email=self.searching_value)
+        return list(filter(lambda value: value[search_type] == self.searching_value, self.data))
 
-    def SearchByDOB(self):
+    def SearchByDOB(self, search_type):
         """
         Filter users by date of birth.
 
@@ -28,18 +49,9 @@ class UserFilter:
             List: A list of users matching the specified date of birth.
         """
 
-        users = []
-        date = datetime.datetime.strptime(self.searching_value, '%Y-%m-%d').date()
+        return list(filter(lambda value: compare_date(value[search_type], self.searching_value), self.data))
 
-        for user in CustomUser.objects.all():
-            dob = user.DOB
-
-            if dob and dob == date:
-                users.append(user)
-
-        return users
-
-    def SearchByGender(self):
+    def SearchByGender(self, search_type):
         """
         Filter users by gender.
 
@@ -47,22 +59,11 @@ class UserFilter:
             List: A list of users matching the specified gender.
         """
 
-        gender = self.searching_value.lower()
+        gender = self.searching_value.lower()[0]
 
-        maps = {
-            'm': 'male',
-            'f': 'female',
-            'o': 'others'
-        }
+        return list(filter(lambda value: value[search_type] and value[search_type][0] == gender, self.data))
 
-        gender = gender.lower()
-
-        if gender in maps:
-            gender = maps[gender]
-
-        return CustomUser.objects.filter(Gender=gender)
-
-    def SearchByMemberSince(self):
+    def SearchByMemberSince(self, search_type):
         """
         Filter users by the date they became members.
 
@@ -70,14 +71,7 @@ class UserFilter:
             List: A list of users who became members on the specified date.
         """
 
-        users = []
-        memberSinceDate = datetime.datetime.strptime(self.searching_value, '%Y-%m-%d').date()
-
-        for user in CustomUser.objects.all():
-            if memberSinceDate == user.MemberSince.date():
-                users.append(user)
-
-        return users
+        return list(filter(lambda value: compare_date(value[search_type], self.searching_value), self.data))
 
     def SearchByAdmin(self, is_admin=True):
         """
@@ -90,7 +84,7 @@ class UserFilter:
             List: A list of users matching the specified admin status.
         """
 
-        return CustomUser.objects.filter(is_superuser=is_admin)
+        return list(filter(lambda value: value['is_superuser'] == is_admin, self.data))
 
     def SearchByActive(self, is_active=True):
         """
@@ -103,51 +97,63 @@ class UserFilter:
             List: A list of users matching the specified active status.
         """
 
-        return CustomUser.objects.filter(is_active=is_active)
+        return list(filter(lambda value: value['is_active'] == is_active, self.data))
 
 
-class ExamFilter:
+class UsersExamsFilter:
     """
     Utility class for filtering exams based on various criteria.
     """
 
-    def __init__(self, searching_value):
+    def __init__(self, host_url, searching_value):
         self.searching_value = searching_value
+        self.data = requests.get(f'http://{host_url}/api/users_exams').json()
 
-    def SearchByUser(self):
+    def SearchByEmail(self, search_type):
         """
-        Filter exams by user.
+        Filter exams by user's email.
 
         Returns:
-            List: A list of exams taken by the specified user.
+            List: A list of exams taken by the specified user's email.
         """
 
-        user = CustomUser.objects.filter(email=self.searching_value).first()
+        return list(filter(lambda value: value[search_type].lower() == self.searching_value.lower(), self.data))
 
-        if user:
-            return Exams.objects.filter(UserID=user.id)
-
-        return []
-
-    def SearchByProgrammeName(self):
+    def SearchByUsername(self, search_type):
         """
-        Filter exams by programme name.
+        Filter exams by user's username.
 
         Returns:
-            List: A list of exams matching the specified programme name.
+            List: A list of exams taken by the specified user's username.
         """
 
-        return Exams.objects.filter(ProgrammeName=self.searching_value)
+        def check_username(from_db):
+            """
+            Check if there is any common word between the provided 'from_db'
+            string and the searching value in the current instance
+            """
 
-    def SearchByTotalCorrectAnswer(self):
+            from_db = set(from_db.lower().split())
+            from_user = set(self.searching_value.lower().split())
+
+            return (from_db & from_user) != set()
+
+        return list(filter(lambda value: check_username(value[search_type].lower()), self.data))
+
+    def SearchByTestsTaken(self, search_type):
         """
-        Filter exams by the total number of correct answers.
+        Filter exams by the total number of tests taken.
 
         Returns:
-            List: A list of exams with the specified total number of correct answers.
+            List: A list of exams with the specified total number of tests taken.
         """
 
-        return Exams.objects.filter(CorrectCounter=self.searching_value)
+        if self.searching_value.isdigit() is False:
+            return []
+
+        self.searching_value = int(self.searching_value)
+
+        return list(filter(lambda value: value[search_type] == self.searching_value, self.data))
 
     def SearchByDate(self):
         """
@@ -165,6 +171,82 @@ class ExamFilter:
                 programmes.append(detail)
 
         return programmes
+
+
+class UsersExamsProgrammeListsFilter:
+    """
+    Utility class for filtering exams based on various criteria.
+    """
+
+    def __init__(self, host, user_id, searching_value):
+        self.searching_value = searching_value
+        self.data = requests.get(f'http://{host}/api/users_exams_each_programmes/{user_id}').json()
+
+    def SearchByProgrammeName(self):
+        """
+        Filter exams by programme name.
+
+        Returns:
+            List: A list of exams matching the specified programme name.
+        """
+
+        if self.data:
+            self.data = self.data[0]
+
+            searching_value = self.searching_value.upper()
+
+            if searching_value in self.data:
+                return [{k:v for k, v in self.data.items() if k in ['UserID', searching_value]}]
+
+    def SearchByTestsTaken(self):
+        """
+        Filter exams by the total number of tests taken.
+
+        Returns:
+            List: A list of exams with the specified total number of tests taken.
+        """
+
+        if self.searching_value.isdigit() is False or not self.data:
+            return []
+
+        self.data = self.data[0]
+        searching_value = int(self.searching_value)
+
+        return [{k:v for k, v in self.data.items() if v == searching_value or k == 'UserID'}]
+
+
+class DetailedExamsFilter:
+    """
+    Utility class for filtering exams based on various criteria.
+    """
+
+    def __init__(self, host, user_id, programme, searching_value):
+        self.searching_value = searching_value.lower()
+        self.data = requests.get(f'http://{host}/api/exams/{user_id}/{programme}').json()
+
+    def SearchByDate(self, search_type):
+        """
+        Filter exams by date
+
+        Returns:
+            List: A list of exams taken on the specified date
+        """
+
+        return list(filter(lambda value: compare_date(value[search_type], self.searching_value), self.data))
+
+    def SearchByTotalCorrectAnswered(self, search_type):
+        """
+        Filter exams by total correct answered by user.
+
+        Returns:
+            List: A list of exams taken on the specified total correct answered by user.
+        """
+
+        if self.searching_value.isdigit() is False:
+            return []
+
+        self.searching_value = int(self.searching_value)
+        return list(filter(lambda value: value[search_type] == self.searching_value, self.data))
 
 
 class SubjectFilter:

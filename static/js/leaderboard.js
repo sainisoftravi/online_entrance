@@ -4,9 +4,11 @@ window.addEventListener('load', () => {
     form = document.querySelector('#rank-by-form');
     rank_div = document.querySelector('.rank-system-info');
 
-    bx_x.addEventListener('click', () => {
-        rank_div.style.display = 'none';
-    });
+    if(bx_x){
+        bx_x.addEventListener('click', () => {
+            $(rank_div).fadeOut(500);
+        });
+    }
 
     select.addEventListener('change', () => {
         form.submit();

@@ -18,40 +18,47 @@
         </select>
     </form>
 
-    <div class="leadboard-users">
-        <div class="rank-system-info">
-            <p class="rank-system-message">The ranking is determined based on the average scores obtained by the user across all tests taken within the selected program</p>
-            <i class='bx bx-x'></i>
-        </div>
-
-        {% for res in data %}
-
-            <div class="users">
-                <div class="rank-number">
-                    {% if res.rank == 1%}
-                        <img src="{% static 'images/Gold Medal.png' %}" alt="Gold Medal" class="medals">
-
-                    {% elif res.rank == 2 %}
-                        <img src="{% static 'images/Silver Medal.png' %}" alt="Silver Medal" class="medals">
-
-                    {% elif res.rank == 3 %}
-                        <img src="{% static 'images/Bronze Medal.png' %}" alt="Bronze Medal" class="medals">
-
-                    {% else %}
-                        <p class="user-rank">{{res.rank}}</p>
-
-                    {% endif %}
-                </div>
-
-                <div class="user-details">
-                    <p class="user-name">{{res.user_name}}</p>
-                    <img src="{{res.user_img}}" alt="{{res.user_name}}" class="user-profile-image">
-                </div>
-
-                <p class="user-score">{{res.user_score}}</p>
+    {% if data %}
+        <div class="leaderboard-users">
+            <div class="rank-system-info">
+                <p class="rank-system-message">The ranking is determined based on the average scores obtained by the user across all tests taken within the selected program ({{ranked_programme}})</p>
+                <i class='bx bx-x'></i>
             </div>
 
-        {% endfor %}
-    </div>
+            {% for res in data %}
+
+                <div class="users">
+                    <div class="rank-number">
+                        {% if res.rank == 1%}
+                            <img src="{% static 'images/Gold Medal.png' %}" alt="Gold Medal" class="medals">
+
+                        {% elif res.rank == 2 %}
+                            <img src="{% static 'images/Silver Medal.png' %}" alt="Silver Medal" class="medals">
+
+                        {% elif res.rank == 3 %}
+                            <img src="{% static 'images/Bronze Medal.png' %}" alt="Bronze Medal" class="medals">
+
+                        {% else %}
+                            <p class="user-rank">{{res.rank}}</p>
+
+                        {% endif %}
+                    </div>
+
+                    <div class="user-details">
+                        <p class="user-name">{{res.user_name}}</p>
+                        <img src="{{res.user_img}}" alt="{{res.user_name}}" class="user-profile-image">
+                    </div>
+
+                    <p class="user-score">{{res.user_score}}</p>
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    {% else %}
+        <p class="no-data">Apologies, no data available for ranking users at the moment. Please check back later or try a different query.</p>
+    {% endif %}
+
 
 {% endblock %}

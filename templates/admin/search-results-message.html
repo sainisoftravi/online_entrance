@@ -1,0 +1,11 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/admin/search-results-message.css' %}">
+<script src="{% static 'js/admin/search-results-message.js' %}"></script>
+
+{% if total_searched %}
+    <div class="searched_number">
+        <p>{{total_searched}} results found</p>
+        <i class="bx bx-x"></i>
+    </div>
+{% endif %}

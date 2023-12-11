@@ -1,0 +1,33 @@
+.searched_number{
+    display: flex;
+    align-items: center;
+    width: calc(100% - 80px);
+    background-color: #def1d8;
+    justify-content: space-between;
+}
+
+.searched_number p{
+    padding: 20px;
+    color: #629b6b;
+    font-size: 1.23rem;
+    font-weight: bolder;
+    font-family: var(--global-font);
+}
+
+.searched_number i:hover{
+    color: darkgreen;
+}
+
+.searched_number i{
+    padding: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #629b6b;
+    font-family: var(--global-font);
+}
+
+@media screen and (max-width: 600px){
+    .searched_number{
+        width: calc(100% - 40px);
+    }
+}

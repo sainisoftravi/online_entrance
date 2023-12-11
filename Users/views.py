@@ -11,11 +11,13 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.contrib.auth import update_session_auth_hash, get_user_model
-from .models import Programme, Subject, Questions, CustomUser, Exams, ResultDetails, ReportQuestion, FeedBack
+from .models import *
 from .search import *
 
 
 URL_NEXT = None
+SEARCH_USER_ID = None
+SEARCH_PROGRAMME = None
 uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
 
 
@@ -88,6 +90,9 @@ def SignUp(request):
 
         user = authenticate(request, email=email, password=password)
         login(request, user)
+
+        extra_details = ResultsExtraDetails(UserID=user)
+        extra_details.save()
 
         return redirect('/')
 
@@ -196,12 +201,12 @@ def TakeModelTest(request, program):
     Render a model test page for a specified program
     """
 
-    global values
+    global model_test_values
 
     if request.user.is_superuser:
         return redirect('admin-index')
 
-    values = []
+    model_test_values = []
     programme = Programme.objects.filter(Name=program)[0]
 
     for subject in Subject.objects.filter(ProgrammeID=programme):
@@ -221,11 +226,11 @@ def TakeModelTest(request, program):
                 'program': program
             }
 
-            values.append(details)
+            model_test_values.append(details)
 
     return render(request, 'ModelTest.html',
                     {
-                        'questions': values,
+                        'questions': model_test_values,
                         'nav_template': 'nav.html',
                         'page_title': f'{program} | Test Ongoing'
                     }
@@ -329,12 +334,12 @@ def GetResult(request):
 
     correct_counter = 0
 
-    for value in values:
+    for value in model_test_values:
         value['checked'] = True
 
     if request.method == 'POST':
         UserObj = CustomUser.objects.get(id=request.user.id)
-        ResultObj = Exams(UserID=UserObj, ProgrammeName=values[0]['program'])
+        ResultObj = Exams(UserID=UserObj, ProgrammeName=model_test_values[0]['program'])
         ResultObj.save()
 
         QuestionNumber = [int(choice.split()[-1]) - 1 for choice in request.POST.keys() if choice.startswith('choices')]
@@ -342,41 +347,54 @@ def GetResult(request):
         for qn in QuestionNumber:
             option = int(request.POST[f'choices {qn + 1}']) - 1
 
-            userAnswer = values[qn]['choices'][option]
-            values[qn]['UserAnswer'] = userAnswer
+            userAnswer = model_test_values[qn]['choices'][option]
+            model_test_values[qn]['UserAnswer'] = userAnswer
 
             ResultDetailsObj = ResultDetails(
                                     ResultID = ResultObj,
-                                    QuestionID = Questions.objects.get(ID=values[qn]['id']),
+                                    QuestionID = Questions.objects.get(ID=model_test_values[qn]['id']),
                                     UserAnswer = userAnswer
                                 )
             ResultDetailsObj.save()
 
-            if userAnswer == values[qn]['answer']:
+            if userAnswer == model_test_values[qn]['answer']:
                 correct_counter += 1
-                values[qn]['is_correct'] = True
+                model_test_values[qn]['is_correct'] = True
 
             else:
-                values[qn]['is_correct'] = False
+                model_test_values[qn]['is_correct'] = False
 
         ResultObj.CorrectCounter = correct_counter
         ResultObj.save()
 
-        remaining = set(range(1, len(values))) - set(QuestionNumber)
+        remaining = set(range(1, len(model_test_values))) - set(QuestionNumber)
 
         for rem in remaining:
             userAnswer = '-'
-            values[rem]['is_correct'] = False
-            values[rem]['UserAnswer'] = userAnswer
+            model_test_values[rem]['is_correct'] = False
+            model_test_values[rem]['UserAnswer'] = userAnswer
 
             ResultDetailsObj = ResultDetails(
                                     ResultID = ResultObj,
-                                    QuestionID = Questions.objects.get(ID=values[rem]['id']),
+                                    QuestionID = Questions.objects.get(ID=model_test_values[rem]['id']),
                                     UserAnswer = userAnswer
                                 )
             ResultDetailsObj.save()
 
-        values[0]['CorrectCounter'] = correct_counter
+        model_test_values[0]['CorrectCounter'] = correct_counter
+
+        resultExtraDetails = ResultsExtraDetails.objects.get(UserID=UserObj)
+
+        data = requests.get(f'http://127.0.0.1:8000/api/users_exams_each_programmes/{UserObj.id}')
+
+        if data.status_code == 200:
+            data = data.json()[0]
+
+            data['TestsTaken'] += 1
+            data[model_test_values[0]['program'].upper()] += 1
+
+            data.pop('UserID')
+            resultExtraDetails.update(commit=True, **data)
 
         return redirect('detailed-history', slug=ResultObj.Slug)
 
@@ -424,15 +442,13 @@ def DetailedHistory(request, slug):
             'question_id': Question.ID
         }
 
-        values.append(details)
-
         if userAnswer == details['answer']:
             details['is_correct'] = True
 
         else:
             details['is_correct'] = False
 
-    values[0]['CorrectCounter'] = Result.CorrectCounter
+        values.append(details)
 
     if request.user.is_superuser:
         nav_template = 'admin/nav.html'
@@ -446,6 +462,7 @@ def DetailedHistory(request, slug):
                         'nav_template': nav_template,
                         'page_title': slug.capitalize(),
                         'template_type': 'template::exams',
+                        'CorrectCounter': Result.CorrectCounter,
                     }
             )
 
@@ -606,9 +623,11 @@ def LeaderBoard(request):
     for user in CustomUser.objects.all():
         if user.is_superuser is False:
             scores = Exams.objects.filter(UserID=user, ProgrammeName__iexact=search_by)
-            avg_score = round(sum([score.CorrectCounter for score in scores]) / len(scores), 2)
+            total_scores = scores.count()
 
-            positions.update({user: avg_score})
+            if total_scores > 0:
+                avg_score = round(sum([score.CorrectCounter for score in scores]) / total_scores, 2)
+                positions.update({user: avg_score})
 
     positions = sorted(positions.items(), key=lambda position: position[1], reverse=True)
     LeaderBoardScores = []
@@ -634,6 +653,7 @@ def LeaderBoard(request):
                         'programmes': programmes,
                         'data': LeaderBoardScores,
                         'page_title': 'Leader Board',
+                        'ranked_programme': search_by.upper(),
                     }
             )
 
@@ -643,9 +663,9 @@ def GetSpecificQuestions(request, programme, subject):
     Retrieve specific questions based on the specified program and subject.
     """
 
-    global values
+    global model_test_values
 
-    values = []
+    model_test_values = []
     programme = Programme.objects.filter(Name=programme).first()
     subject = Subject.objects.filter(ProgrammeID=programme, Name=subject).first()
     questions = list(Questions.objects.filter(SubjectID=subject))
@@ -667,7 +687,7 @@ def GetSpecificQuestions(request, programme, subject):
             'checked': False,
         }
 
-        values.append(details)
+        model_test_values.append(details)
 
     if request.user.is_superuser:
         nav_template = 'admin/nav.html'
@@ -677,7 +697,7 @@ def GetSpecificQuestions(request, programme, subject):
 
     return render(request, 'ModelTest.html',
                     {
-                        'questions': values,
+                        'questions': model_test_values,
                         'nav_template': nav_template,
                         'page_title': 'Specific Test Ongoing'
                     }
@@ -745,25 +765,28 @@ def GetUserLists(request, users=None):
     Retrieve user lists based on the provided request and user data.
     """
 
+    is_searching_being_done = False
     drop_down_options = ['Email', 'DOB', 'Gender', 'Member Since', 'Admin', 'Non-Admin', 'Active', 'Non-Active']
 
     if users is None:
-        users = CustomUser.objects.all()
+        users = requests.get(f'http://{request.get_host()}/api/users').json()
 
-    elif len(users) == 0:
+    else:
+        is_searching_being_done = True
+
+    if len(users) == 0:
         return render(request, 'admin/Users.html',
                         {
                             'page_title': 'Users',
                             'data_details': 'No data found',
-                            'search_form_url': 'user-search',
+                            'data_details': 'No data found',
+                            'search_form_url': 'users-search',
                             'template_type': 'template::users',
                             'drop_down_options': drop_down_options,
-                            'data_details': 'No data found',
                         }
                 )
 
-    DATA = requests.get(f'http://{request.get_host()}/api/users').json()
-    paginator, data, page = PaginatePage(request, DATA)
+    paginator, data, page = PaginatePage(request, users)
 
     return render(request, 'admin/Users.html',
                 {
@@ -772,40 +795,45 @@ def GetUserLists(request, users=None):
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'search_form_url': 'user-search',
                     'jump_to_url': 'getUserDetails',
+                    'search_form_url': 'users-search',
                     'template_type': 'template::users',
                     'js_path': 'js/admin/UserSearch.js',
-                    'drop_down_options': drop_down_options
+                    'drop_down_options': drop_down_options,
+                    'total_searched': len(users) if is_searching_being_done else None,
                 }
             )
 
 
-def GetExamsLists(request, exams=None):
+def GetUsersExamsLists(request, exams=None):
     """
     Retrieve and display a list of exams with optional filtering.
     """
 
-    drop_down_options = ['User', 'Programme Name', 'Total Correct Answered', 'Date']
+    is_searching_being_done = False
+    drop_down_options = ['Email', 'Username', 'Tests Taken']
 
     if exams is None:
-        exams = requests.get(f'http://{request.get_host()}/api/exams').json()
+        exams = requests.get(f'http://{request.get_host()}/api/users_exams').json()
 
-    elif len(exams) == 0:
-        return render(request, 'admin/Exams.html',
+    else:
+        is_searching_being_done = True
+
+    if len(exams) == 0:
+        return render(request, 'admin/UsersExams.html',
                         {
                             'page_title': 'Exams',
                             'data_details': 'No data found',
-                            'search_form_url': 'exam-search',
                             'template_type': 'template::exams',
-                            'js_path': 'js/admin/ExamSearch.js',
-                            'drop_down_options': drop_down_options
+                            'drop_down_options': drop_down_options,
+                            'search_form_url': 'users-exams-search',
+                            'js_path': 'js/admin/UsersExamsSearch.js',
                         }
                     )
 
     paginator, data, page = PaginatePage(request, exams)
 
-    return render(request, 'admin/Exams.html',
+    return render(request, 'admin/UsersExams.html',
                 {
                     'data': data,
                     'page_title': 'Exams',
@@ -813,10 +841,103 @@ def GetExamsLists(request, exams=None):
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'jump_to_url': 'getExamDetails',
-                    'search_form_url': 'exam-search',
+                    'template_type': 'template::exams',
+                    'drop_down_options': drop_down_options,
+                    'search_form_url': 'users-exams-search',
+                    'js_path': 'js/admin/UsersExamsSearch.js',
+                    'total_searched': len(exams) if is_searching_being_done else None,
+                }
+            )
+
+
+def GetUsersExamsProgrammeLists(request, user_id, exams=None):
+    """
+    Retrieve and display a list of exams with optional filtering.
+    """
+
+    global SEARCH_USER_ID
+
+    if SEARCH_USER_ID != user_id:
+        SEARCH_USER_ID = user_id
+
+    is_searching_being_done = False
+    drop_down_options = ['Programme', 'Tests Taken']
+
+    if exams is None:
+        exams = requests.get(f'http://{request.get_host()}/api/users_exams_each_programmes/{user_id}').json()
+
+    else:
+        is_searching_being_done = True
+
+    paginator, data, page = PaginatePage(request, exams)
+
+    return render(request, 'admin/UsersExamsProgrammes.html',
+                {
+                    'data': data,
+                    'page_title': 'Exams',
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'jump_to_url': 'getExamDetails',
+                    'template_type': 'template::exams',
+                    'drop_down_options': drop_down_options,
+                    'search_form_url': 'users-exams-programme-search',
+                    'js_path': 'js/admin/UsersExamsProgrammeSearch.js',
+                    'total_searched': len(exams) if is_searching_being_done else None,
+                }
+            )
+
+
+def GetDetailedExamsLists(request, user_id, programme, exams=None):
+    """
+    Retrieve and display a list of exams with optional filtering.
+    """
+
+    global SEARCH_USER_ID, SEARCH_PROGRAMME
+
+    if SEARCH_USER_ID != user_id:
+        SEARCH_USER_ID = user_id
+
+    if SEARCH_PROGRAMME != programme:
+        SEARCH_PROGRAMME = programme
+
+    is_searching_being_done = False
+    drop_down_options = ['Date', 'Total Correct Answered']
+
+    if exams is None:
+        exams = requests.get(f'http://{request.get_host()}/api/exams/{user_id}/{programme}').json()
+
+    else:
+        is_searching_being_done = True
+
+    if len(exams) == 0:
+        return render(request, 'admin/DetailedExams.html',
+                        {
+                            'page_title': 'Exams',
+                            'data_details': 'No data found',
+                            'template_type': 'template::exams',
+                            'js_path': 'js/admin/ExamSearch.js',
+                            'drop_down_options': drop_down_options,
+                            'search_form_url': 'detailed-exams-search',
+                            'total_searched': len(exams) if is_searching_being_done else None,
+                        }
+                    )
+
+    paginator, data, page = PaginatePage(request, exams)
+
+    return render(request, 'admin/DetailedExams.html',
+                {
+                    'data': data,
+                    'page_title': 'Exams',
+                    'paginator': paginator,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'jump_to_url': 'getExamDetails',
                     'template_type': 'template::exams',
                     'js_path': 'js/admin/ExamSearch.js',
                     'drop_down_options': drop_down_options,
+                    'search_form_url': 'detailed-exams-search',
+                    'total_searched': len(exams) if is_searching_being_done else None,
                 }
             )
 
@@ -1292,23 +1413,23 @@ def MarkFeedBack(request, id):
 
 def UserSearch(request):
     """
-    Perform user search based on specified criteria.
+    Searches for user information based on specified criteria
     """
 
     searching_type = request.GET.get('search-type')
     searching_value = request.GET.get('search-value')
 
-    usrSearch = UserFilter(searching_value)
+    usrSearch = UserFilter(request.get_host(), searching_value)
 
     maps = {
-        'dob': lambda: usrSearch.SearchByDOB(),
-        'email': lambda: usrSearch.SearchByEmail(),
         'admin': lambda: usrSearch.SearchByAdmin(),
-        'gender': lambda: usrSearch.SearchByGender(),
+        'dob': lambda: usrSearch.SearchByDOB('DOB'),
         'active': lambda: usrSearch.SearchByActive(),
-        'member since': lambda: usrSearch.SearchByMemberSince(),
+        'email': lambda: usrSearch.SearchByEmail('email'),
+        'gender': lambda: usrSearch.SearchByGender('Gender'),
         'non-admin': lambda: usrSearch.SearchByAdmin(is_admin=False),
         'non-active': lambda: usrSearch.SearchByActive(is_active=False),
+        'member since': lambda: usrSearch.SearchByMemberSince('MemberSince'),
     }
 
     users = maps.get(searching_type.lower(), None)
@@ -1319,21 +1440,20 @@ def UserSearch(request):
     return GetUserLists(request, users=users)
 
 
-def ExamSearch(request):
+def UsersExamsSearch(request):
     """
-    Perform exam search based on specified criteria.
+    Searches for user exams information based on specified criteria
     """
 
     searching_type = request.GET.get('search-type')
     searching_value = request.GET.get('search-value')
 
-    examSearch = ExamFilter(searching_value)
+    examSearch = UsersExamsFilter(request.get_host(), searching_value)
 
     maps = {
-        'date': lambda: examSearch.SearchByDate(),
-        'user': lambda: examSearch.SearchByUser(),
-        'programme name': lambda: examSearch.SearchByProgrammeName(),
-        'total correct answered': lambda: examSearch.SearchByTotalCorrectAnswer(),
+        'email': lambda: examSearch.SearchByEmail('email'),
+        'username': lambda: examSearch.SearchByUsername('FullName'),
+        'tests taken': lambda: examSearch.SearchByTestsTaken('TestsTaken'),
     }
 
     exams = maps.get(searching_type.lower(), None)
@@ -1341,7 +1461,53 @@ def ExamSearch(request):
     if exams:
         exams = exams()
 
-    return GetExamsLists(request, exams=exams)
+    return GetUsersExamsLists(request, exams)
+
+
+def UsersExamsProgrammeSearch(request):
+    """
+    Searches for user exams or program information based on specified criteria
+    """
+
+    searching_type = request.GET.get('search-type')
+    searching_value = request.GET.get('search-value')
+
+    examSearch = UsersExamsProgrammeListsFilter(request.get_host(), SEARCH_USER_ID, searching_value)
+
+    maps = {
+        'tests taken': examSearch.SearchByTestsTaken,
+        'programme': examSearch.SearchByProgrammeName,
+    }
+
+    exams = maps.get(searching_type.lower(), None)
+
+    if exams:
+        exams = exams()
+
+    return GetUsersExamsProgrammeLists(request, None, exams)
+
+
+def DetailedExamsSearch(request):
+    """
+    Searches for user exams information based on specified criteria
+    """
+
+    searching_type = request.GET.get('search-type')
+    searching_value = request.GET.get('search-value')
+
+    examSearch = DetailedExamsFilter(request.get_host(), SEARCH_USER_ID, SEARCH_PROGRAMME, searching_value)
+
+    maps = {
+        'date': lambda: examSearch.SearchByDate('Date'),
+        'total correct answered': lambda: examSearch.SearchByTotalCorrectAnswered('CorrectCounter'),
+    }
+
+    exams = maps.get(searching_type.lower(), None)
+
+    if exams:
+        exams = exams()
+
+    return GetDetailedExamsLists(request, None, None, exams)
 
 
 def SubjectSearch(request):

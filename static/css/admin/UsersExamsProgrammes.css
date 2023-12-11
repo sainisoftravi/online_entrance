@@ -1,0 +1,19 @@
+.inner-wrapper{
+    gap: 30px;
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.programme{
+    font-weight: bold;
+    font-size: 1.23rem;
+    font-family: var(--global-font);
+}
+
+.total-tests{
+    font-size: 1rem;
+    font-family: var(--global-font);
+}

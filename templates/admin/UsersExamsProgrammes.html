@@ -1,0 +1,22 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/admin/UsersExamsProgrammes.css' %}">
+
+    <div class="wrapper">
+        {% include 'admin/search-results-message.html' %}
+
+        {% for d in data %}
+            {% for programme, total_tests in d.items %}
+                {% if programme != "UserID" and programme != "TestsTaken" %}
+                    <a href="{% url 'users-exams-each-programme' user_id=d.UserID programme=programme %}" class="inner-wrapper">
+                        <p class="programme">{{programme}}</p>
+                        <p class="total-tests">Total tests: {{total_tests}}</p>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+{% endblock %}

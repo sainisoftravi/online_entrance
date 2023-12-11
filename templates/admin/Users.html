@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="{% static 'css/admin/User.css' %}">
 
     <div class="wrapper">
+        {% include 'admin/search-results-message.html' %}
+
         {% for user in data %}
             <a class="inner-wrapper" href="{% url 'edit-user' user.id %}">
                 <div class="inner-wrapper-top">

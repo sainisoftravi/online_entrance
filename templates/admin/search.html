@@ -3,24 +3,26 @@
 <script src="{% static js_path %}"></script>
 <link rel="stylesheet" href="{% static 'css/admin/search.css' %}">
 
-<form action="{% url search_form_url %}" id="searching-form" method="GET" onsubmit="return validateForm()">
-    {% csrf_token %}
+{% if not data_details %}
+    <form action="{% url search_form_url %}" id="searching-form" method="GET" onsubmit="return validateForm()">
+        {% csrf_token %}
 
-    <div class="search-form-row">
-        <input type="text" placeholder="Search ....." id="search-by-input", name="search-value">
+        <div class="search-form-row">
+            <input type="text" placeholder="Search ....." id="search-by-input", name="search-value">
 
-        <div class="select-button-container">
-            <select name="search-type" id="search-by">
-                <option selected disabled hidden>Search by</option>
+            <div class="select-button-container">
+                <select name="search-type" id="search-by">
+                    <option selected disabled hidden>Search by</option>
 
-                {% for value in drop_down_options %}
-                    <option>{{value}}</option>
-                {% endfor %}
-            </select>
+                    {% for value in drop_down_options %}
+                        <option>{{value}}</option>
+                    {% endfor %}
+                </select>
 
-            <input type="submit" value="Search" id="form-submit-button">
+                <input type="submit" value="Search" id="form-submit-button">
+            </div>
         </div>
-    </div>
 
-    <small class="error-message">Error</small>
-</form>
+        <small class="error-message">Error</small>
+    </form>
+{% endif %}

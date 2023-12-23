@@ -6,16 +6,21 @@
     <link rel="stylesheet" href="{% static 'css/admin/reportQuestion.css' %}">
 
     <div class="wrapper">
-        {% for report in data %}
-            <a class="inner-wrapper" href="{% url 'edit-report' report.ID %}">
-                <div class="inner-wrapper-left">
-                    <p id="report-date">{{report.Date}}</p>
-                    <p id="report-email">{{report.User}}</p>
-                    <p id="report-issue">{{report.Issue}}</p>
-                    <p></p>
-                </div>
-            </a>
-        {% endfor %}
+        {% if data_details %}
+            <p class="no-data">{{data_details}</p>
+
+        {% else %}
+            {% for report in data %}
+                <a class="inner-wrapper" href="{% url 'edit-report' report.ID %}">
+                    <div class="inner-wrapper-left">
+                        <p id="report-date">{{report.Date}}</p>
+                        <p id="report-email">{{report.User}}</p>
+                        <p id="report-issue">{{report.Issue}}</p>
+                        <p></p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
     </div>
 
 {% endblock %}

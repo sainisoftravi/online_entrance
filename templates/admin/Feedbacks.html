@@ -5,16 +5,21 @@
     <link rel="stylesheet" href="{% static 'css/admin/feedback.css' %}">
 
     <div class="wrapper">
-        {% for feedback in data %}
-            <a class="inner-wrapper" href="{% url 'edit-feedback' feedback.ID %}">
-                <div class="inner-wrapper-left">
-                    <p id="feedback-name">{{feedback.Name}}</p>
-                    <p id="feedback-email">{{feedback.Email}}</p>
-                    <p id="feedback-msg">{{feedback.Message}}</p>
-                    <p id="feedback-date">{{feedback.Date}}</p>
-                </div>
-            </a>
-        {% endfor %}
+        {% if data_details %}
+            <p class="no-data">{{data_details}</p>
+
+        {% else %}
+            {% for feedback in data %}
+                <a class="inner-wrapper" href="{% url 'edit-feedback' feedback.ID %}">
+                    <div class="inner-wrapper-left">
+                        <p id="feedback-name">{{feedback.Name}}</p>
+                        <p id="feedback-email">{{feedback.Email}}</p>
+                        <p id="feedback-msg">{{feedback.Message}}</p>
+                        <p id="feedback-date">{{feedback.Date}}</p>
+                    </div>
+                </a>
+            {% endfor %}
+        {% endif %}
     </div>
 
 {% endblock %}

@@ -16,18 +16,7 @@
                     <div class="form-item">
                         <i class='bx bxs-user bx-login'></i>
                         <input type="text" placeholder="Full Name" id="full_name" name="full_name">
-
-                        {% if messages %}
-                            {% for message in messages %}
-                                <small class="full-name-error sho-error">
-                                    {{message}}
-                                </small>
-                            {% endfor %}
-
-                        {% else %}
-                            <small class="full-name-error"></small>
-                        {% endif %}
-
+                        <small class="full-name-error"></small>
                     </div>
 
                     <div class="form-item">

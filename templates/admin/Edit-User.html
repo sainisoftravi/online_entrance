@@ -46,9 +46,9 @@
 
                     {% else %}
                         <select name="Gender" id="select-gender">
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                            <option value="Others">Others</option>
+                            <option value="Male" {% if gender == 'male'%}selected{%endif%}>Male</option>
+                            <option value="Female" {% if gender == 'female'%}selected{%endif%}>Female</option>
+                            <option value="Others" {% if gender == 'others'%}selected{%endif%}>Others</option>
                         </select>
                     {% endif %}
 

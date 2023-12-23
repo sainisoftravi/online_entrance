@@ -6,9 +6,10 @@
 .wrapper{
     gap: 20px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
+    padding-bottom: 20px;
     text-decoration: none;
     justify-content: center;
 }

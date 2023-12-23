@@ -38,27 +38,29 @@ window.addEventListener('load', function() {
     searching_form = document.querySelector('#searching-form');
     search_by_input = document.querySelector('#search-by-input');
 
-    search_by_select.addEventListener('change', function(event){
-        value = search_by_select.value;
+    if(search_by_select){
+        search_by_select.addEventListener('change', function(event){
+            value = search_by_select.value;
 
-        if(value == 'User'){
-            search_by_input.placeholder = 'xyz@xyz.com';
-        }
+            if(value == 'User'){
+                search_by_input.placeholder = 'xyz@xyz.com';
+            }
 
-        else if(value == 'Issue'){
-            search_by_input.placeholder = 'Issue';
-        }
+            else if(value == 'Issue'){
+                search_by_input.placeholder = 'Issue';
+            }
 
-        else if(value == 'Date'){
-            search_by_input.placeholder = 'YYYY-MM-DD';
-        }
+            else if(value == 'Date'){
+                search_by_input.placeholder = 'YYYY-MM-DD';
+            }
 
-        else if(value == 'Question'){
-            search_by_input.placeholder = 'Question';
-        }
+            else if(value == 'Question'){
+                search_by_input.placeholder = 'Question';
+            }
 
-        else if(['Marked', 'Not-Marked'].includes(value)){
-            searching_form.submit()
-        }
-    });
+            else if(['Marked', 'Not-Marked'].includes(value)){
+                searching_form.submit()
+            }
+        });
+    }
 });

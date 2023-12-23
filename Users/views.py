@@ -605,6 +605,7 @@ def GetGraphsData(id):
     }
 
 
+@login_required(login_url='login')
 def LeaderBoard(request):
     """
     Generates and renders the leaderboard based on exam scores for
@@ -778,7 +779,6 @@ def GetUserLists(request, users=None):
         return render(request, 'admin/Users.html',
                         {
                             'page_title': 'Users',
-                            'data_details': 'No data found',
                             'data_details': 'No data found',
                             'search_form_url': 'users-search',
                             'template_type': 'template::users',
@@ -1093,7 +1093,7 @@ def GetReportsLists(request, reports=None):
     if reports is None:
         reports = requests.get(f'http://{request.get_host()}/api/reports').json()
 
-    elif len(reports) == 0:
+    if len(reports) == 0:
         return render(request, 'admin/Reports.html',
                         {
                             'page_title': 'Reports',
@@ -1219,14 +1219,14 @@ def EditUsers(request, id):
     View to edit the details of specific user in admin template
     """
 
-    user = CustomUser.objects.filter(id=id).first()
+    user = CustomUser.objects.get(id=id)
 
     if request.method == 'POST':
         user.email = request.POST['Email']
         user.FullName = request.POST['full_name']
 
         if user.Gender is not None:
-            user.Gender = request.POST['Gender']
+            user.Gender = request.POST['Gender'].lower()
 
         if user.DOB is not None:
             user.DOB = datetime.datetime.strptime(request.POST['DOB'], '%Y-%m-%d').date()
@@ -1238,6 +1238,8 @@ def EditUsers(request, id):
 
         messages.success(request, 'Edit Successful')
 
+        return redirect('edit-user', id=id)
+
     DATA = requests.get(f'http://{request.get_host()}/api/users/{id}').json()
 
     for data in DATA:
@@ -1246,6 +1248,7 @@ def EditUsers(request, id):
     return render(request, 'admin/Edit-User.html',
                     {
                         'data': data,
+                        'gender': data['Gender'],
                         'page_title': f'{data["email"]}',
                         'template_type': 'template::edit-user',
                     }
@@ -1264,6 +1267,8 @@ def EditSubject(request, id):
         subject.save()
 
         messages.success(request, 'Edit Successful')
+
+        return redirect('edit-subject', id=id)
 
     data = requests.get(f'http://{request.get_host()}/api/subjects/{id}').json()[0]
     data = [
@@ -1304,6 +1309,8 @@ def AddQuestion(request):
 
         question.save()
         messages.success(request, 'Question Added Successful')
+
+        return redirect('add-question')
 
     select_options = dict()
 
@@ -1346,6 +1353,8 @@ def EditFeedback(request, id):
         feedback.Message = request.POST['Message']
 
         feedback.save()
+
+        return redirect('edit-feedback', id=id)
 
     data = [
         {

@@ -292,6 +292,12 @@ class Programme(models.Model):
             max_length = 10
         )
 
+    TotalQuestions = models.BigIntegerField(
+            null = False,
+            blank = False,
+            default=0
+        )
+
     def __str__(self):
         return self.Name
 
@@ -319,6 +325,12 @@ class Subject(models.Model):
             null = False,
             blank = False,
             max_length = 50
+        )
+
+    TotalQuestions = models.BigIntegerField(
+            null = False,
+            blank = False,
+            default=0
         )
 
     TotalQuestionsToSelect = models.SmallIntegerField(

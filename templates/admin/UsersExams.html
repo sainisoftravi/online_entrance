@@ -8,7 +8,7 @@
         {% include 'admin/search-results-message.html' %}
 
         {% for d in data %}
-            <a href="{% url 'users-exams-programmes' d.id %}" class="inner-wrapper">
+            <a href="{% url 'users-exams-programmes' d.email %}" class="inner-wrapper">
                 <div class="inner-wrapper-top">
                     <p class="user-email">{{d.email}}</p>
                     <p class="full-name">{{d.FullName}}</p>

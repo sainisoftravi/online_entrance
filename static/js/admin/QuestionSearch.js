@@ -15,6 +15,16 @@ function validateForm(){
         error_element.classList.add('show-error');
     }
 
+    else if(type_value == "Total Questions"){
+        num_regex = /^\d+$/;
+
+        if(num_regex.test(search_value) == false){
+            success = false;
+            error_element.innerText = 'Number was expected';
+            error_element.classList.add('show-error');
+        }
+    }
+
     return success == true;
 }
 
@@ -45,6 +55,10 @@ window.addEventListener('load', function() {
 
         else if(value == 'Options'){
             search_by_input.placeholder = 'Options';
+        }
+
+        else if(value == 'Total Questions'){
+            search_by_input.placeholder = '10, 17, 26, ...';
         }
     });
 });

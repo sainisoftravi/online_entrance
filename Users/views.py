@@ -17,6 +17,7 @@ from .search import *
 
 URL_NEXT = None
 SEARCH_USER_ID = None
+SEARCH_SUBJECT = None
 SEARCH_PROGRAMME = None
 uuid_pattern = r'^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
 
@@ -26,9 +27,9 @@ def PaginatePage(request, data, number_of_data=100):
     Paginate a page of data based on the specified parameters
 
     Parameters:
-        request (Request): The HTTP request object.
-        data: The data to be paginated.
-        number_of_data (int): Optional. The number of data items to display per page. Default is 100.
+        request (Request): The HTTP request object
+        data: The data to be paginated
+        number_of_data (int): Optional. The number of data items to display per page. Default is 100
     """
 
     page = int(request.GET.get('pages', 1))
@@ -162,14 +163,14 @@ def Index(request):
 
     if request.user.is_superuser:
         """
-        Redirect superusers to the admin index.
+        Redirect superusers to the admin index
         """
 
         return redirect('admin-index')
 
     elif request.method == 'POST':
         """
-        Process feedback submitted via POST request.
+        Process feedback submitted via POST request
         """
 
         name = request.POST['contact-name']
@@ -240,7 +241,7 @@ def TakeModelTest(request, program):
 @login_required(login_url='login')
 def ProgramSelector(request):
     """
-    View function for selecting a program.
+    View function for selecting a program
     """
 
     if request.user.is_superuser:
@@ -262,7 +263,7 @@ def ProgramSelector(request):
 
 def UpdateProfile(request):
     """
-    Handle a request to update user profile information.
+    Handle a request to update user profile information
     """
 
     if request.user.is_superuser:
@@ -312,7 +313,7 @@ def Logout(request):
 
 def DeleteAccount(request):
     """
-    Handle the deletion of a user account.
+    Handle the deletion of a user account
     """
 
     if request.user.is_superuser:
@@ -404,8 +405,8 @@ def DetailedHistory(request, slug):
     View function for displaying detailed exam history
 
     Parameters:
-        request (HttpRequest): The HTTP request object.
-        slug (str): The slug identifier for the exam.
+        request (HttpRequest): The HTTP request object
+        slug (str): The slug identifier for the exam
     """
 
     if request.user.is_authenticated is False:
@@ -469,7 +470,7 @@ def DetailedHistory(request, slug):
 
 def GetHistories(request, id):
     """
-    Retrieve history data for a specific user ID from the API.
+    Retrieve history data for a specific user ID from the API
     """
 
     results = requests.get(f'http://{request.get_host()}/api/histories/{id}').json()
@@ -483,7 +484,7 @@ def UserDashboard(request):
     View function for the user dashboard
 
     If the user is a superuser, redirect to the admin index. Otherwise,
-    retrieve graph data for the user and render the user dashboard.
+    retrieve graph data for the user and render the user dashboard
     """
 
     if request.user.is_superuser:
@@ -506,7 +507,7 @@ def UserProfile(request):
     View for rendering the user profile page
 
     If the user is a superuser, redirects to the admin index. Otherwise,
-    renders the user profile page.
+    renders the user profile page
     """
 
     if request.user.is_superuser:
@@ -526,7 +527,7 @@ def UserHistory(request):
     View for rendering the user history page
 
     If the user is a superuser, redirects to the admin index. Otherwise,
-    renders the user history page.
+    renders the user history page
     """
 
     if request.user.is_superuser:
@@ -609,12 +610,12 @@ def GetGraphsData(id):
 def LeaderBoard(request):
     """
     Generates and renders the leaderboard based on exam scores for
-    non-superuser users.
+    non-superuser users
 
     This function retrieves exam scores for each non-superuser user,
     finds their maximum score for a specified program, sorts users based
     on their average scores, and generates a leaderboard with user ranks,
-    names, profile images, and scores.
+    names, profile images, and scores
     """
 
     positions = dict()
@@ -661,7 +662,7 @@ def LeaderBoard(request):
 
 def GetSpecificQuestions(request, programme, subject):
     """
-    Retrieve specific questions based on the specified program and subject.
+    Retrieve specific questions based on the specified program and subject
     """
 
     global model_test_values
@@ -763,7 +764,7 @@ def DisplayReportedQuestion(request, id):
 
 def GetUserLists(request, users=None):
     """
-    Retrieve user lists based on the provided request and user data.
+    Retrieve user lists based on the provided request and user data
     """
 
     is_searching_being_done = False
@@ -780,9 +781,7 @@ def GetUserLists(request, users=None):
                         {
                             'page_title': 'Users',
                             'data_details': 'No data found',
-                            'search_form_url': 'users-search',
                             'template_type': 'template::users',
-                            'drop_down_options': drop_down_options,
                         }
                 )
 
@@ -795,7 +794,6 @@ def GetUserLists(request, users=None):
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getUserDetails',
                     'search_form_url': 'users-search',
                     'template_type': 'template::users',
                     'js_path': 'js/admin/UserSearch.js',
@@ -807,7 +805,7 @@ def GetUserLists(request, users=None):
 
 def GetUsersExamsLists(request, exams=None):
     """
-    Retrieve and display a list of exams with optional filtering.
+    Retrieve and display a list of exams with optional filtering
     """
 
     is_searching_being_done = False
@@ -825,9 +823,6 @@ def GetUsersExamsLists(request, exams=None):
                             'page_title': 'Exams',
                             'data_details': 'No data found',
                             'template_type': 'template::exams',
-                            'drop_down_options': drop_down_options,
-                            'search_form_url': 'users-exams-search',
-                            'js_path': 'js/admin/UsersExamsSearch.js',
                         }
                     )
 
@@ -840,7 +835,6 @@ def GetUsersExamsLists(request, exams=None):
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getExamDetails',
                     'template_type': 'template::exams',
                     'drop_down_options': drop_down_options,
                     'search_form_url': 'users-exams-search',
@@ -850,24 +844,25 @@ def GetUsersExamsLists(request, exams=None):
             )
 
 
-def GetUsersExamsProgrammeLists(request, user_id, exams=None):
+def GetUsersExamsProgrammeLists(request, user_email, exams=None):
     """
-    Retrieve and display a list of exams with optional filtering.
+    Retrieve and display a list of exams with optional filtering
     """
 
     global SEARCH_USER_ID
 
-    if SEARCH_USER_ID != user_id:
-        SEARCH_USER_ID = user_id
+    if SEARCH_USER_ID != user_email:
+        SEARCH_USER_ID = user_email
 
     is_searching_being_done = False
     drop_down_options = ['Programme', 'Tests Taken']
 
     if exams is None:
-        exams = requests.get(f'http://{request.get_host()}/api/users_exams_each_programmes/{user_id}').json()
+        exams = requests.get(f'http://{request.get_host()}/api/users_exams_each_programmes/{user_email}').json()
 
     else:
         is_searching_being_done = True
+        user_email = exams[0]['UserEmail']
 
     paginator, data, page = PaginatePage(request, exams)
 
@@ -876,9 +871,9 @@ def GetUsersExamsProgrammeLists(request, user_id, exams=None):
                     'data': data,
                     'page_title': 'Exams',
                     'paginator': paginator,
+                    'url_email': user_email,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getExamDetails',
                     'template_type': 'template::exams',
                     'drop_down_options': drop_down_options,
                     'search_form_url': 'users-exams-programme-search',
@@ -888,15 +883,15 @@ def GetUsersExamsProgrammeLists(request, user_id, exams=None):
             )
 
 
-def GetDetailedExamsLists(request, user_id, programme, exams=None):
+def GetDetailedExamsLists(request, user_email, programme, exams=None):
     """
-    Retrieve and display a list of exams with optional filtering.
+    Retrieve and display a list of exams with optional filtering
     """
 
     global SEARCH_USER_ID, SEARCH_PROGRAMME
 
-    if SEARCH_USER_ID != user_id:
-        SEARCH_USER_ID = user_id
+    if SEARCH_USER_ID != user_email:
+        SEARCH_USER_ID = user_email
 
     if SEARCH_PROGRAMME != programme:
         SEARCH_PROGRAMME = programme
@@ -905,7 +900,7 @@ def GetDetailedExamsLists(request, user_id, programme, exams=None):
     drop_down_options = ['Date', 'Total Correct Answered']
 
     if exams is None:
-        exams = requests.get(f'http://{request.get_host()}/api/exams/{user_id}/{programme}').json()
+        exams = requests.get(f'http://{request.get_host()}/api/exams/{user_email}/{programme}').json()
 
     else:
         is_searching_being_done = True
@@ -916,9 +911,6 @@ def GetDetailedExamsLists(request, user_id, programme, exams=None):
                             'page_title': 'Exams',
                             'data_details': 'No data found',
                             'template_type': 'template::exams',
-                            'js_path': 'js/admin/ExamSearch.js',
-                            'drop_down_options': drop_down_options,
-                            'search_form_url': 'detailed-exams-search',
                             'total_searched': len(exams) if is_searching_being_done else None,
                         }
                     )
@@ -932,7 +924,6 @@ def GetDetailedExamsLists(request, user_id, programme, exams=None):
                     'paginator': paginator,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getExamDetails',
                     'template_type': 'template::exams',
                     'js_path': 'js/admin/ExamSearch.js',
                     'drop_down_options': drop_down_options,
@@ -944,7 +935,7 @@ def GetDetailedExamsLists(request, user_id, programme, exams=None):
 
 def GetProgrammeLists(request):
     """
-    Retrieve a list of programmes from an API and render them on a paginated HTML template.
+    Retrieve a list of programmes from an API and render them on a paginated HTML template
     """
 
     DATA = requests.get(f'http://{request.get_host()}/api/programmes').json()
@@ -957,7 +948,6 @@ def GetProgrammeLists(request):
                     'page_title': 'Programmes',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getProgrammeDetails',
                     'template_type': 'template::programmes'
                 }
             )
@@ -973,15 +963,12 @@ def GetSubjectLists(request, subjects=None):
     if subjects is None:
         subjects = requests.get(f'http://{request.get_host()}/api/subjects').json()
 
-    elif len(subjects) == 0:
+    if len(subjects) == 0:
         return render(request, 'admin/Subjects.html',
                         {
                             'page_title': 'Subjects',
                             'data_details': 'No data found',
-                            'search_form_url': 'subject-search',
                             'template_type': 'template::subjects',
-                            'js_path': 'js/admin/SubjectSearch.js',
-                            'drop_down_options': drop_down_options
                         }
                 )
 
@@ -994,7 +981,6 @@ def GetSubjectLists(request, subjects=None):
                     'page_title': 'Subjects',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getSubjectDetails',
                     'search_form_url': 'subject-search',
                     'template_type': 'template::subjects',
                     'drop_down_options': drop_down_options,
@@ -1003,25 +989,120 @@ def GetSubjectLists(request, subjects=None):
             )
 
 
-def GetQuestionLists(request, questions=None):
+def GetQuestionsProgrammes(request, questions=None):
     """
-    Retrieve and paginate a list of questions.
+    Retrieve a list of programmes for questions from an API and render
+    them on a paginated HTML template
     """
 
-    drop_down_options = ['Subject', 'Programme', 'Title', 'Answer', 'Options']
+    is_searching_being_done = False
+    drop_down_options = ['Programme', 'Total Questions']
 
     if questions is None:
         questions = requests.get(f'http://{request.get_host()}/api/questions').json()
 
-    elif len(questions) == 0:
+    else:
+        is_searching_being_done = True
+
+    if len(questions) == 0:
+        return render(request, 'admin/QuestionsProgramme.html',
+                        {
+                            'page_title': 'Questions',
+                            'data_details': 'No data found',
+                            'template_type': 'template::questions',
+                        }
+                )
+
+    paginator, data, page = PaginatePage(request, questions)
+
+    return render(request, 'admin/QuestionsProgramme.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'page_title': 'Questions',
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'template_type': 'template::questions',
+                    'js_path': 'js/admin/QuestionSearch.js',
+                    'drop_down_options': drop_down_options,
+                    'search_form_url': 'question-programme-search',
+                    'total_searched': len(questions) if is_searching_being_done else None,
+                }
+            )
+
+
+def GetQuestionsPerProgram(request, programme, questions=None):
+    """
+    Retrieve a list of subjects of selected programmes for questions from
+    an API and render them on a paginated HTML template
+    """
+
+    global SEARCH_PROGRAMME
+
+    SEARCH_PROGRAMME = programme
+    is_searching_being_done = False
+
+    drop_down_options = ['Subjects', 'Total Questions']
+
+    if questions is None:
+        questions = requests.get(f'http://{request.get_host()}/api/questions/{programme}').json()
+
+    else:
+        is_searching_being_done = True
+
+    if len(questions) == 0:
+        return render(request, 'admin/QuestionsPerProgramme.html',
+                        {
+                            'page_title': 'Questions',
+                            'data_details': 'No data found',
+                            'template_type': 'template::questions',
+                        }
+                )
+
+    paginator, data, page = PaginatePage(request, questions)
+
+    return render(request, 'admin/QuestionsPerProgramme.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'page_title': 'Questions',
+                    'url_programme': programme,
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'template_type': 'template::questions',
+                    'drop_down_options': drop_down_options,
+                    'js_path': 'js/admin/QuestionSearch.js',
+                    'search_form_url': 'question-per-programme-search',
+                    'total_searched': len(questions) if is_searching_being_done else None,
+                }
+            )
+
+def GetQuestionLists(request, programme=None, subject=None, questions=None):
+    """
+    Retrieve a list of questions of selected subjects and programmes for
+    questions from an API and render them on a paginated HTML template
+    """
+
+    global SEARCH_PROGRAMME, SEARCH_SUBJECT
+
+    SEARCH_SUBJECT = subject
+    SEARCH_PROGRAMME = programme
+
+    is_searching_being_done = False
+    drop_down_options = ['Title', 'Answer', 'Options']
+
+    if questions is None:
+        questions = requests.get(f'http://{request.get_host()}/api/questions/{programme}/{subject}').json()
+
+    else:
+        is_searching_being_done = True
+
+    if len(questions) == 0:
         return render(request, 'admin/Questions.html',
                         {
                             'page_title': 'Questions',
                             'data_details': 'No data found',
-                            'search_form_url': 'question-search',
                             'template_type': 'template::questions',
-                            'js_path': 'js/admin/QuestionSearch.js',
-                            'drop_down_options': drop_down_options
                         }
                 )
 
@@ -1034,18 +1115,18 @@ def GetQuestionLists(request, questions=None):
                     'page_title': 'Questions',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getQuestionDetails',
                     'search_form_url': 'question-search',
                     'template_type': 'template::questions',
                     'js_path': 'js/admin/QuestionSearch.js',
-                    'drop_down_options': drop_down_options
+                    'drop_down_options': drop_down_options,
+                    'total_searched': len(questions) if is_searching_being_done else None,
                 }
             )
 
 
 def GetFeedbackLists(request, feedbacks=None):
     """
-    Retrieve and display feedback lists based on the given parameters.
+    Retrieve and display feedback lists based on the given parameters
     """
 
     drop_down_options = ['Name', 'Email', 'Date', 'Message', 'Marked', 'Not-Marked']
@@ -1058,10 +1139,7 @@ def GetFeedbackLists(request, feedbacks=None):
                         {
                             'page_title': 'FeedBacks',
                             'data_details': 'No data found',
-                            'search_form_url': 'feedback-search',
                             'template_type': 'template::feedbacks',
-                            'js_path': 'js/admin/FeedbackSearch.js',
-                            'drop_down_options': drop_down_options
                         }
                 )
 
@@ -1074,7 +1152,6 @@ def GetFeedbackLists(request, feedbacks=None):
                     'page_title': 'FeedBacks',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getFeedbacks',
                     'search_form_url': 'feedback-search',
                     'template_type': 'template::feedbacks',
                     'js_path': 'js/admin/FeedbackSearch.js',
@@ -1098,10 +1175,7 @@ def GetReportsLists(request, reports=None):
                         {
                             'page_title': 'Reports',
                             'data_details': 'No data found',
-                            'search_form_url': 'report-search',
                             'template_type': 'template::reports',
-                            'js_path': 'js/admin/ReportSearch.js',
-                            'drop_down_options': drop_down_options
                         }
                 )
 
@@ -1114,7 +1188,6 @@ def GetReportsLists(request, reports=None):
                     'page_title': 'Reports',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
-                    'jump_to_url': 'getReportsLists',
                     'search_form_url': 'report-search',
                     'template_type': 'template::reports',
                     'js_path': 'js/admin/ReportSearch.js',
@@ -1161,7 +1234,7 @@ def AdminChangePassword(request):
 
 def EditQuestions(request, id):
     """
-    View for editing a specific question.
+    View for editing a specific question
     """
 
     question = Questions.objects.filter(ID=id).first()
@@ -1521,7 +1594,7 @@ def DetailedExamsSearch(request):
 
 def SubjectSearch(request):
     """
-    Perform subject search based on specified criteria.
+    Perform subject search based on specified criteria
     """
 
     searching_type = request.GET.get('search-type')
@@ -1543,19 +1616,63 @@ def SubjectSearch(request):
     return GetSubjectLists(request, subjects=subjects)
 
 
-def QuestionSearch(request):
+def QuestionProgrammeSearch(request):
     """
-    Perform question search based on specified criteria.
+    Perform question search based on specified criteria
     """
 
     searching_type = request.GET.get('search-type').strip()
     searching_value = request.GET.get('search-value').strip()
 
-    questionSearch = QuestionFilter(searching_value)
+    questionProgrammeSearch = QuestionProgrammeFilter(request.get_host(), searching_value)
 
     maps = {
-        'subject': lambda: questionSearch.SearchBySubject(),
-        'programme': lambda: questionSearch.SearchByProgramme(),
+        'programme': lambda: questionProgrammeSearch.SearchByProgramme(),
+        'total questions': lambda: questionProgrammeSearch.SearchByTotalQuestions(),
+    }
+
+    questions = maps.get(searching_type.lower(), None)
+
+    if questions:
+        questions = questions()
+
+    return GetQuestionsProgrammes(request, questions)
+
+
+def QuestionPerProgrammeSearch(request):
+    """
+    Perform question search based on specified criteria
+    """
+
+    searching_type = request.GET.get('search-type').strip()
+    searching_value = request.GET.get('search-value').strip()
+
+    questionPerProgrammeSearch = QuestionPerProgrammeFilter(request.get_host(), SEARCH_PROGRAMME, searching_value)
+
+    maps = {
+        'subjects': lambda: questionPerProgrammeSearch.SearchBySubject(),
+        'total questions': lambda: questionPerProgrammeSearch.SearchByTotalQuestions(),
+    }
+
+    questions = maps.get(searching_type.lower(), None)
+
+    if questions:
+        questions = questions()
+
+    return GetQuestionsPerProgram(request, SEARCH_PROGRAMME, questions)
+
+
+def QuestionSearch(request):
+    """
+    Perform question search based on specified criteria
+    """
+
+    searching_type = request.GET.get('search-type').strip()
+    searching_value = request.GET.get('search-value').strip()
+
+    questionSearch = QuestionFilter(request.get_host(), SEARCH_PROGRAMME, SEARCH_SUBJECT, searching_value)
+
+    maps = {
         'title': lambda: questionSearch.SearchByTitle(),
         'answer': lambda: questionSearch.SearchByAnswer(),
         'options': lambda: questionSearch.SearchByOptions()
@@ -1571,7 +1688,7 @@ def QuestionSearch(request):
 
 def ReportSearch(request):
     """
-    Perform report search based on specified criteria.
+    Perform report search based on specified criteria
     """
 
     searching_type = request.GET.get('search-type').strip()
@@ -1598,7 +1715,7 @@ def ReportSearch(request):
 
 def FeedbackSearch(request):
     """
-    Perform feedback search based on specified criteria.
+    Perform feedback search based on specified criteria
     """
 
     searching_type = request.GET.get('search-type').strip()

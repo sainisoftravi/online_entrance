@@ -5,7 +5,7 @@ from .models import *
 
 def compare_date(from_db, from_user, format='%Y-%m-%d'):
     """
-    Compare two date strings using the specified format.
+    Compare two date strings using the specified format
     """
 
     if from_db is None:
@@ -24,7 +24,7 @@ def compare_date(from_db, from_user, format='%Y-%m-%d'):
 
 class UserFilter:
     """
-    Utility class for filtering users based on various criteria.
+    Utility class for filtering users based on various criteria
     """
 
     def __init__(self, host_url, searching_value):
@@ -33,30 +33,30 @@ class UserFilter:
 
     def SearchByEmail(self, search_type):
         """
-        Filter users by email.
+        Filter users by email
 
         Returns:
-            List: A list of users matching the specified email.
+            List: A list of users matching the specified email
         """
 
         return list(filter(lambda value: value[search_type] == self.searching_value, self.data))
 
     def SearchByDOB(self, search_type):
         """
-        Filter users by date of birth.
+        Filter users by date of birth
 
         Returns:
-            List: A list of users matching the specified date of birth.
+            List: A list of users matching the specified date of birth
         """
 
         return list(filter(lambda value: compare_date(value[search_type], self.searching_value), self.data))
 
     def SearchByGender(self, search_type):
         """
-        Filter users by gender.
+        Filter users by gender
 
         Returns:
-            List: A list of users matching the specified gender.
+            List: A list of users matching the specified gender
         """
 
         gender = self.searching_value.lower()[0]
@@ -65,36 +65,36 @@ class UserFilter:
 
     def SearchByMemberSince(self, search_type):
         """
-        Filter users by the date they became members.
+        Filter users by the date they became members
 
         Returns:
-            List: A list of users who became members on the specified date.
+            List: A list of users who became members on the specified date
         """
 
         return list(filter(lambda value: compare_date(value[search_type], self.searching_value), self.data))
 
     def SearchByAdmin(self, is_admin=True):
         """
-        Filter users by admin status.
+        Filter users by admin status
 
         Parameters:
-            is_admin (bool): If True, filter for admin users; if False, filter for non-admin users.
+            is_admin (bool): If True, filter for admin users; if False, filter for non-admin users
 
         Returns:
-            List: A list of users matching the specified admin status.
+            List: A list of users matching the specified admin status
         """
 
         return list(filter(lambda value: value['is_superuser'] == is_admin, self.data))
 
     def SearchByActive(self, is_active=True):
         """
-        Filter users by active status.
+        Filter users by active status
 
         Parameters:
-            is_active (bool): If True, filter for active users; if False, filter for inactive users.
+            is_active (bool): If True, filter for active users; if False, filter for inactive users
 
         Returns:
-            List: A list of users matching the specified active status.
+            List: A list of users matching the specified active status
         """
 
         return list(filter(lambda value: value['is_active'] == is_active, self.data))
@@ -102,7 +102,7 @@ class UserFilter:
 
 class UsersExamsFilter:
     """
-    Utility class for filtering exams based on various criteria.
+    Utility class for filtering exams based on various criteria
     """
 
     def __init__(self, host_url, searching_value):
@@ -111,20 +111,20 @@ class UsersExamsFilter:
 
     def SearchByEmail(self, search_type):
         """
-        Filter exams by user's email.
+        Filter exams by user's email
 
         Returns:
-            List: A list of exams taken by the specified user's email.
+            List: A list of exams taken by the specified user's email
         """
 
         return list(filter(lambda value: value[search_type].lower() == self.searching_value.lower(), self.data))
 
     def SearchByUsername(self, search_type):
         """
-        Filter exams by user's username.
+        Filter exams by user's username
 
         Returns:
-            List: A list of exams taken by the specified user's username.
+            List: A list of exams taken by the specified user's username
         """
 
         def check_username(from_db):
@@ -142,10 +142,10 @@ class UsersExamsFilter:
 
     def SearchByTestsTaken(self, search_type):
         """
-        Filter exams by the total number of tests taken.
+        Filter exams by the total number of tests taken
 
         Returns:
-            List: A list of exams with the specified total number of tests taken.
+            List: A list of exams with the specified total number of tests taken
         """
 
         if self.searching_value.isdigit() is False:
@@ -157,10 +157,10 @@ class UsersExamsFilter:
 
     def SearchByDate(self):
         """
-        Filter exams by date.
+        Filter exams by date
 
         Returns:
-            List: A list of exams taken on the specified date.
+            List: A list of exams taken on the specified date
         """
 
         programmes = []
@@ -175,7 +175,7 @@ class UsersExamsFilter:
 
 class UsersExamsProgrammeListsFilter:
     """
-    Utility class for filtering exams based on various criteria.
+    Utility class for filtering exams based on various criteria
     """
 
     def __init__(self, host, user_id, searching_value):
@@ -184,10 +184,10 @@ class UsersExamsProgrammeListsFilter:
 
     def SearchByProgrammeName(self):
         """
-        Filter exams by programme name.
+        Filter exams by programme name
 
         Returns:
-            List: A list of exams matching the specified programme name.
+            List: A list of exams matching the specified programme name
         """
 
         if self.data:
@@ -196,14 +196,14 @@ class UsersExamsProgrammeListsFilter:
             searching_value = self.searching_value.upper()
 
             if searching_value in self.data:
-                return [{k:v for k, v in self.data.items() if k in ['UserID', searching_value]}]
+                return [{k:v for k, v in self.data.items() if k in ['UserID', 'UserEmail', searching_value]}]
 
     def SearchByTestsTaken(self):
         """
-        Filter exams by the total number of tests taken.
+        Filter exams by the total number of tests taken
 
         Returns:
-            List: A list of exams with the specified total number of tests taken.
+            List: A list of exams with the specified total number of tests taken
         """
 
         if self.searching_value.isdigit() is False or not self.data:
@@ -212,12 +212,12 @@ class UsersExamsProgrammeListsFilter:
         self.data = self.data[0]
         searching_value = int(self.searching_value)
 
-        return [{k:v for k, v in self.data.items() if v == searching_value or k == 'UserID'}]
+        return [{k:v for k, v in self.data.items() if v == searching_value or k in ['UserID', 'UserEmail']}]
 
 
 class DetailedExamsFilter:
     """
-    Utility class for filtering exams based on various criteria.
+    Utility class for filtering exams based on various criteria
     """
 
     def __init__(self, host, user_id, programme, searching_value):
@@ -236,10 +236,10 @@ class DetailedExamsFilter:
 
     def SearchByTotalCorrectAnswered(self, search_type):
         """
-        Filter exams by total correct answered by user.
+        Filter exams by total correct answered by user
 
         Returns:
-            List: A list of exams taken on the specified total correct answered by user.
+            List: A list of exams taken on the specified total correct answered by user
         """
 
         if self.searching_value.isdigit() is False:
@@ -251,7 +251,7 @@ class DetailedExamsFilter:
 
 class SubjectFilter:
     """
-    Utility class for filtering subjects based on various criteria.
+    Utility class for filtering subjects based on various criteria
     """
 
     def __init__(self, searching_value):
@@ -259,10 +259,10 @@ class SubjectFilter:
 
     def SearchByProgrammeName(self):
         """
-        Filter subjects by program name.
+        Filter subjects by program name
 
         Returns:
-            List: A list of subjects matching the specified program name.
+            List: A list of subjects matching the specified program name
         """
 
         programmeID = Programme.objects.filter(Name=self.searching_value).first()
@@ -271,10 +271,10 @@ class SubjectFilter:
 
     def SearchBySubjectName(self):
         """
-        Filter subjects by subject name.
+        Filter subjects by subject name
 
         Returns:
-            List: A list of subjects matching the specified subject name.
+            List: A list of subjects matching the specified subject name
         """
 
         data = []
@@ -291,122 +291,122 @@ class SubjectFilter:
 
     def SearchByTotalQuestionsToSelect(self):
         """
-        Filter subjects by the total number of questions to select.
+        Filter subjects by the total number of questions to select
 
         Returns:
-            List: A list of subjects matching the specified total number of questions to select.
+            List: A list of subjects matching the specified total number of questions to select
         """
 
         return Subject.objects.filter(TotalQuestionsToSelect=self.searching_value)
 
 
-class QuestionFilter:
+class QuestionProgrammeFilter:
     """
-    Utility class for filtering questions based on various criteria.
+    Utility class for filtering questions based on various criteria
     """
 
-    def __init__(self, searching_value):
+    def __init__(self, host, searching_value):
         self.searching_value = searching_value
-
-    def SearchBySubject(self):
-        """
-        Filter questions by subject.
-
-        Returns:
-            List: A list of questions matching the specified subject.
-        """
-
-        questions = []
-
-        for question in Questions.objects.all():
-            subject = question.SubjectID.Name.lower()
-
-            if subject == self.searching_value.lower():
-                questions.append(question)
-
-        return questions
+        self.data = requests.get(f'http://{host}/api/questions').json()
 
     def SearchByProgramme(self):
         """
-        Filter questions by programme.
+        Filter programme by programme name
 
         Returns:
-            List: A list of questions matching the specified programme.
+            List: A list of programme matching the specified programme name
         """
 
-        questions = []
+        return [data for data in self.data if data['Name'].lower() == self.searching_value.lower()]
 
-        for question in Questions.objects.all():
-            programme = question.SubjectID.ProgrammeID.Name.lower()
+    def SearchByTotalQuestions(self):
+        """
+        Filter programme by total question
 
-            if programme == self.searching_value.lower():
-                questions.append(question)
+        Returns:
+            List: A list of programme matching the specified total question
+        """
 
-        return questions
+        searching_value = int(self.searching_value)
+
+        return [data for data in self.data if data['TotalQuestions'] == searching_value]
+
+
+class QuestionPerProgrammeFilter:
+    """
+    Utility class for filtering questions based on various criteria
+    """
+
+    def __init__(self, host, programme, searching_value):
+        self.searching_value = searching_value
+        self.data = requests.get(f'http://{host}/api/questions/{programme}').json()
+
+    def SearchBySubject(self):
+        """
+        Filter subjects by subject name
+
+        Returns:
+            List: A list of subjects matching the specified subject name
+        """
+
+        return [data for data in self.data if data['Name'].lower() == self.searching_value.lower()]
+
+    def SearchByTotalQuestions(self):
+        """
+        Filter programme by total question
+
+        Returns:
+            List: A list of programme matching the specified total question
+        """
+
+        searching_value = int(self.searching_value)
+
+        return [data for data in self.data if data['TotalQuestions'] == searching_value]
+
+
+class QuestionFilter:
+    """
+    Utility class for filtering questions based on various criteria
+    """
+
+    def __init__(self, host, programme, subject, searching_value):
+        self.searching_value = searching_value
+        self.data = requests.get(f'http://{host}/api/questions/{programme}/{subject}').json()
 
     def SearchByTitle(self):
         """
-        Filter questions by title.
+        Filter questions by title
 
         Returns:
-            List: A list of questions matching the specified title.
+            List: A list of questions matching the specified title
         """
 
-        questions = []
-
-        for question in Questions.objects.all():
-            ques = question.Title.lower()
-
-            if ques == self.searching_value.lower():
-                questions.append(question)
-
-        return questions
+        return list(filter(lambda question: question['Title'].lower() == self.searching_value.lower(), self.data))
 
     def SearchByAnswer(self):
         """
-        Filter questions by answer.
+        Filter questions by answer
 
         Returns:
-            List: A list of questions matching the specified answer.
+            List: A list of questions matching the specified answer
         """
 
-        questions = []
-
-        for question in Questions.objects.all():
-            ans = question.Answer.lower()
-
-            if ans == self.searching_value.lower():
-                questions.append(question)
-
-        return questions
+        return list(filter(lambda question: question['Answer'].lower() == self.searching_value.lower(), self.data))
 
     def SearchByOptions(self):
         """
-        Filter questions by options.
+        Filter questions by options
 
         Returns:
-            List: A list of questions matching the specified options.
+            List: A list of questions matching the specified options
         """
 
-        questions = []
-
-        for question in Questions.objects.all():
-            optionOne = question.OptionOne.lower()
-            optionTwo = question.OptionTwo.lower()
-            optionFour = question.OptionFour.lower()
-            optionThree = question.OptionThree.lower()
-
-            options = [optionOne, optionTwo, optionThree, optionFour]
-
-            if self.searching_value.lower() in options:
-                questions.append(question)
-
-        return questions
+        return list(filter(lambda question: self.searching_value.lower() in question['Options'].lower(), self.data))
 
 
 class ReportFilter:
     """
-    Utility class for filtering reports based on various criteria.
+    Utility class for filtering reports based on various criteria
     """
 
     def __init__(self, searching_value):
@@ -414,10 +414,10 @@ class ReportFilter:
 
     def SearchByUser(self):
         """
-        Filter reports by user.
+        Filter reports by user
 
         Returns:
-            List: A list of reports related to the specified user.
+            List: A list of reports related to the specified user
         """
 
         user = CustomUser.objects.filter(email=self.searching_value).first()
@@ -430,10 +430,10 @@ class ReportFilter:
 
     def SearchByQuestion(self):
         """
-        Filter reports by question.
+        Filter reports by question
 
         Returns:
-            List: A list of reports related to the specified question.
+            List: A list of reports related to the specified question
         """
 
         issues = []
@@ -446,10 +446,10 @@ class ReportFilter:
 
     def SearchByIssue(self):
         """
-        Filter reports by issue.
+        Filter reports by issue
 
         Returns:
-            List: A list of reports related to the specified issue.
+            List: A list of reports related to the specified issue
         """
 
         issues = []
@@ -462,10 +462,10 @@ class ReportFilter:
 
     def SearchByDate(self):
         """
-        Filter reports by date.
+        Filter reports by date
 
         Returns:
-            List: A list of reports related to the specified date.
+            List: A list of reports related to the specified date
         """
 
         date = datetime.datetime.strptime(self.searching_value, '%Y-%m-%d').date()
@@ -474,13 +474,13 @@ class ReportFilter:
 
     def SearchByMarked(self, is_marked=True):
         """
-        Filter reports by marked status.
+        Filter reports by marked status
 
         Parameters:
-            is_marked (bool): If True, filter for marked reports; if False, filter for unmarked reports.
+            is_marked (bool): If True, filter for marked reports; if False, filter for unmarked reports
 
         Returns:
-            List: A list of reports matching the specified marked status.
+            List: A list of reports matching the specified marked status
         """
 
         return ReportQuestion.objects.filter(IsMarked=is_marked)
@@ -488,7 +488,7 @@ class ReportFilter:
 
 class FeedbackFilter:
     """
-    Utility class for filtering feedback based on various criteria.
+    Utility class for filtering feedback based on various criteria
     """
 
     def __init__(self, searching_value):
@@ -496,10 +496,10 @@ class FeedbackFilter:
 
     def SearchByName(self):
         """
-        Filter feedback by name.
+        Filter feedback by name
 
         Returns:
-            List: A list of feedback matching the specified name.
+            List: A list of feedback matching the specified name
         """
 
         feedbacks = []
@@ -512,20 +512,20 @@ class FeedbackFilter:
 
     def SearchByEmail(self):
         """
-        Filter feedback by email.
+        Filter feedback by email
 
         Returns:
-            List: A list of feedback matching the specified email.
+            List: A list of feedback matching the specified email
         """
 
         return FeedBack.objects.filter(Email=self.searching_value)
 
     def SearchByMessage(self):
         """
-        Filter feedback by message content.
+        Filter feedback by message content
 
         Returns:
-            List: A list of feedback matching the specified message content.
+            List: A list of feedback matching the specified message content
         """
 
         feedbacks = []
@@ -538,23 +538,23 @@ class FeedbackFilter:
 
     def SearchByMarked(self, is_marked=True):
         """
-        Filter feedback by marked status.
+        Filter feedback by marked status
 
         Parameters:
-            is_marked (bool): If True, filter for marked feedback; if False, filter for unmarked feedback.
+            is_marked (bool): If True, filter for marked feedback; if False, filter for unmarked feedback
 
         Returns:
-            List: A list of feedback matching the specified marked status.
+            List: A list of feedback matching the specified marked status
         """
 
         return FeedBack.objects.filter(IsMarked=is_marked)
 
     def SearchByDate(self):
         """
-        Filter feedback by date.
+        Filter feedback by date
 
         Returns:
-            List: A list of feedback matching the specified date.
+            List: A list of feedback matching the specified date
         """
 
         date = datetime.datetime.strptime(self.searching_value, '%Y-%m-%d').date()

@@ -1,0 +1,19 @@
+.wrapper{
+    padding-top: 20px;
+}
+
+.inner-wrapper{
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font-size: 1.5rem;
+    font-family: var(--global-font);
+}
+
+.total-questions{
+    font-family: var(--global-font);
+}

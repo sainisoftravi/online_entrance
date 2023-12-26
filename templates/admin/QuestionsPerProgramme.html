@@ -1,0 +1,17 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/admin/questions-programmes-subjects.css' %}">
+
+    <div class="wrapper">
+        {% include 'admin/search-results-message.html' %}
+
+        {% for subject in data %}
+            <a class="inner-wrapper" href="{% url 'questions-per-subject' programme=url_programme subject=subject.Name %}">
+                <p class="title">{{subject.Name}}</p>
+                <p class="total-questions">Total Questions: {{subject.TotalQuestions}}</p>
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

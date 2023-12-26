@@ -48,10 +48,10 @@
     </a>
 
     {% if template_type == 'template::questions' or template_type == 'template::edit-question' or template_type == 'template::add-new-question' %}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'questions' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'questions-programmes' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'questions' %}">
+        <a class="side-bar-option" href="{% url 'questions-programmes' %}">
 
     {% endif %}
         <i class='bx bx-data'></i>

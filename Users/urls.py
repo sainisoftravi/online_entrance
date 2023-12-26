@@ -34,8 +34,10 @@ urlpatterns = [
     path('detailed-exams-search/', views.DetailedExamsSearch, name='detailed-exams-search'),
     path('questions/<str:programme>', views.GetQuestionsPerProgram, name='questions-per-programme'),
     path('exams/<str:user_email>', views.GetUsersExamsProgrammeLists, name='users-exams-programmes'),
+    path('question-programme-search/', views.QuestionProgrammeSearch, name='question-programme-search'),
     path('questions/<str:programme>/<str:subject>', views.GetQuestionLists, name='questions-per-subject'),
     path('users-exams-programme-search/', views.UsersExamsProgrammeSearch, name='users-exams-programme-search'),
+    path('question-per-programme-search/', views.QuestionPerProgrammeSearch, name='question-per-programme-search'),
     path('exams/<str:user_email>/<str:programme>', views.GetDetailedExamsLists, name='users-exams-each-programme'),
 
     path('', views.Index, name='index'),

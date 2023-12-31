@@ -155,25 +155,50 @@ class ProgrammeSerializers(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class SubjectSerializers(serializers.ModelSerializer):
+class SubjectProgrammesSerializers(serializers.ModelSerializer):
     """
-    Serializer for the 'Subject' model
+    Serializer for the 'Programme' model
 
     This serializer extends the 'ModelSerializer' provided by the
-    Django REST framework and includes a custom field 'programme_name'
+    Django REST framework and includes a custom field 'TotalQuestions'
     using 'SerializerMethodField'
 
     Attributes:
-        programme_name: A custom serializer method field that retrieves
-                        the 'Name' attribute of the related 'Programme'
-                        object associated with the 'Subject'
+        TotalSubjects: A custom serializer method field that counts the number
+                       of subjects within given programme
+    """
+
+    TotalQuestions = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Programme
+        fields = ['Name', 'TotalQuestions']
+
+    def get_TotalQuestions(self, obj):
+        """
+        Custom serializer method to retrieve the total number of
+        questions of 'Programme' object associated with the 'Subject'
+
+        Parameters:
+            obj: The 'Programme' instance being serialized
+
+        Returns:
+            str: Total number of the associated 'Subject' object
+        """
+
+        return Subject.objects.filter(ProgrammeID__Name__iexact=obj.Name).count()
+
+
+class SubjectProgrammeSerializers(serializers.ModelSerializer):
+    """
+    Serializer for the 'Subject' model
     """
 
     programme_name = serializers.SerializerMethodField()
 
     class Meta:
         model = Subject
-        fields = '__all__'
+        fields = ['ID', 'Name', 'TotalQuestionsToSelect', 'programme_name']
 
     def get_programme_name(self, obj):
         """

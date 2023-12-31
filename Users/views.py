@@ -953,18 +953,70 @@ def GetProgrammeLists(request):
             )
 
 
-def GetSubjectLists(request, subjects=None):
+def GetSubjectPrograms(request, programme=None):
+    """
+    Retrieve and render a paginated list of subject programmes
+    """
+
+    is_searching_being_done = False
+    drop_down_options = ['Programme', 'Total Subjects']
+
+    if programme is None:
+        programme = requests.get(f'http://{request.get_host()}/api/subject-programmes').json()
+
+    else:
+        is_searching_being_done = True
+
+    if len(programme) == 0:
+        return render(request, 'admin/QuestionsProgrammesSubjects.html',
+                        {
+                            'page_title': 'Subjects',
+                            'data_details': 'No data found',
+                            'template_type': 'template::subjects',
+                        }
+                )
+
+    paginator, data, page = PaginatePage(request, programme)
+
+    return render(request, 'admin/QuestionsProgrammesSubjects.html',
+                {
+                    'data': data,
+                    'paginator': paginator,
+                    'page_title': 'Subjects',
+                    'next___url': 'subjects',
+                    'prev_page_index': page - 1,
+                    'next_page_index': page + 1,
+                    'sub__text': 'Total Subjects: ',
+                    'search_form_url': 'subject-search',
+                    'template_type': 'template::subjects',
+                    'drop_down_options': drop_down_options,
+                    'js_path': 'js/admin/SubjectSearch.js',
+                    'total_searched': len(programme) if is_searching_being_done else None,
+                }
+            )
+
+
+def GetSubjectLists(request, programme, subjects=None):
     """
     Retrieve and render a paginated list of subjects
     """
 
-    drop_down_options = ['Programme Name', 'Subject Name', 'Total Questions To Select']
+    global SEARCH_PROGRAMME
+
+    if programme and SEARCH_PROGRAMME != programme:
+        SEARCH_PROGRAMME = programme
+
+    is_searching_being_done = False
+    drop_down_options = ['Subject', 'Total Questions To Select']
 
     if subjects is None:
-        subjects = requests.get(f'http://{request.get_host()}/api/subjects').json()
+        subjects = requests.get(f'http://{request.get_host()}/api/subjects/{programme}').json()
+
+    else:
+        is_searching_being_done = True
 
     if len(subjects) == 0:
-        return render(request, 'admin/Subjects.html',
+        return render(request, 'admin/QuestionsProgrammesSubjects.html',
                         {
                             'page_title': 'Subjects',
                             'data_details': 'No data found',
@@ -974,17 +1026,21 @@ def GetSubjectLists(request, subjects=None):
 
     paginator, data, page = PaginatePage(request, subjects)
 
-    return render(request, 'admin/Subjects.html',
+    return render(request, 'admin/QuestionsProgrammesSubjects.html',
                 {
                     'data': data,
+                    'to_edit': True,
                     'paginator': paginator,
                     'page_title': 'Subjects',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
                     'search_form_url': 'subject-search',
                     'template_type': 'template::subjects',
+                    'next___url': f'subjects/{programme}',
                     'drop_down_options': drop_down_options,
                     'js_path': 'js/admin/SubjectSearch.js',
+                    'sub__text': 'Total Questions To Select: ',
+                    'total_searched': len(subjects) if is_searching_being_done else None,
                 }
             )
 
@@ -1015,13 +1071,15 @@ def GetQuestionsProgrammes(request, questions=None):
 
     paginator, data, page = PaginatePage(request, questions)
 
-    return render(request, 'admin/QuestionsProgramme.html',
+    return render(request, 'admin/QuestionsProgrammesSubjects.html',
                 {
                     'data': data,
                     'paginator': paginator,
                     'page_title': 'Questions',
+                    'next___url': 'questions',
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
+                    'sub__text': 'Total Questions: ',
                     'template_type': 'template::questions',
                     'js_path': 'js/admin/QuestionSearch.js',
                     'drop_down_options': drop_down_options,
@@ -1051,7 +1109,7 @@ def GetQuestionsPerProgram(request, programme, questions=None):
         is_searching_being_done = True
 
     if len(questions) == 0:
-        return render(request, 'admin/QuestionsPerProgramme.html',
+        return render(request, 'admin/QuestionsProgrammesSubjects.html',
                         {
                             'page_title': 'Questions',
                             'data_details': 'No data found',
@@ -1061,7 +1119,7 @@ def GetQuestionsPerProgram(request, programme, questions=None):
 
     paginator, data, page = PaginatePage(request, questions)
 
-    return render(request, 'admin/QuestionsPerProgramme.html',
+    return render(request, 'admin/QuestionsProgrammesSubjects.html',
                 {
                     'data': data,
                     'paginator': paginator,
@@ -1069,6 +1127,8 @@ def GetQuestionsPerProgram(request, programme, questions=None):
                     'url_programme': programme,
                     'prev_page_index': page - 1,
                     'next_page_index': page + 1,
+                    'sub__text': 'Total Questions: ',
+                    'next___url': f'questions/{programme}',
                     'template_type': 'template::questions',
                     'drop_down_options': drop_down_options,
                     'js_path': 'js/admin/QuestionSearch.js',
@@ -1328,12 +1388,12 @@ def EditUsers(request, id):
             )
 
 
-def EditSubject(request, id):
+def EditSubject(request, programme, subject):
     """
     View to edit the details of specific subject in admin template
     """
 
-    subject = Subject.objects.filter(ID=id).first()
+    subject = Subject.objects.get(ProgrammeID__Name__iexact=programme, Name__iexact=subject)
 
     if request.method == 'POST':
         subject.TotalQuestionsToSelect = request.POST['Total Questions To Select']
@@ -1341,9 +1401,9 @@ def EditSubject(request, id):
 
         messages.success(request, 'Edit Successful')
 
-        return redirect('edit-subject', id=id)
+        return redirect('edit-subject', programme=programme, subject=subject)
 
-    data = requests.get(f'http://{request.get_host()}/api/subjects/{id}').json()[0]
+    data = requests.get(f'http://{request.get_host()}/api/subjects/{programme}/{subject}').json()[0]
     data = [
         {
             'ID': data['ID'],
@@ -1603,9 +1663,10 @@ def SubjectSearch(request):
     subjectSearch = SubjectFilter(searching_value)
 
     maps = {
-        'subject name': lambda: subjectSearch.SearchBySubjectName(),
-        'programme name': lambda: subjectSearch.SearchByProgrammeName(),
-        'total questions to select': lambda: subjectSearch.SearchByTotalQuestionsToSelect()
+        'subject': lambda: subjectSearch.SearchBySubjectName(request.get_host(), SEARCH_PROGRAMME),
+        'programme': lambda: subjectSearch.SearchByProgrammeName(request.get_host(), 'subject-programmes'),
+        'total subjects': lambda: subjectSearch.SearchByTotalSubjects(request.get_host(), 'subject-programmes'),
+        'total questions to select': lambda: subjectSearch.SearchByTotalQuestionsToSelect(request.get_host(), SEARCH_PROGRAMME, 'subjects'),
     }
 
     subjects = maps.get(searching_type.lower(), None)
@@ -1613,7 +1674,14 @@ def SubjectSearch(request):
     if subjects:
         subjects = subjects()
 
-    return GetSubjectLists(request, subjects=subjects)
+    redirect_maps = {
+        'programme': lambda: GetSubjectPrograms(request, programme=subjects),
+        'total subjects': lambda: GetSubjectPrograms(request, programme=subjects),
+        'subject': lambda: GetSubjectLists(request, SEARCH_PROGRAMME, subjects=subjects),
+        'total questions to select': lambda: GetSubjectLists(request, SEARCH_PROGRAMME, subjects=subjects),
+    }
+
+    return redirect_maps[searching_type.lower()]()
 
 
 def QuestionProgrammeSearch(request):

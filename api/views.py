@@ -170,6 +170,34 @@ class Programmes(APIView):
         return Response(serialized_programmes.data)
 
 
+class SubjectProgrammes(APIView):
+    """
+    API View for retrieving subject information
+
+    Endpoint:
+        GET api/subject-programmes/: Retrieve a list of all subject programmes list
+
+    Returns:
+        JSON Response: A serialized list of subject information in the response body
+    """
+
+    def get(self, request):
+        """
+        Handle GET requests for retrieving subject information
+
+        Parameters:
+            request (Request): The HTTP request object
+
+        Returns:
+            Response: A JSON response containing serialized subject information
+        """
+
+        subject_programmes = Programme.objects.all()
+        serialized_subjects = SubjectProgrammesSerializers(subject_programmes, many=True)
+
+        return Response(serialized_subjects.data)
+
+
 class Subjects(APIView):
     """
     API View for retrieving subject information
@@ -184,25 +212,26 @@ class Subjects(APIView):
         JSON Response: A serialized list of subject information in the response body
     """
 
-    def get(self, request, get_by=None):
+    def get(self, request, programme, subject=None):
         """
         Handle GET requests for retrieving subject information
 
         Parameters:
             request (Request): The HTTP request object
-            get_by (str): Optional. If provided, retrieves a specific subject by ID, Program Name, or Subject Name
+            subject (str): Optional. If provided, retrieves a specific subject Subject Name
+            programme (str): Optional. If provided, retrieves a specific subject programme Name
 
         Returns:
             Response: A JSON response containing serialized subject information
         """
 
-        if get_by:
-            subjects = Subject.objects.filter(Q(ID__iexact=get_by) | Q(ProgrammeID__Name__iexact=get_by) | Q(Name__iexact=get_by))
+        if subject:
+            subjects = Subject.objects.filter(ProgrammeID__Name__iexact=programme, Name__iexact=subject)
 
         else:
-            subjects = Subject.objects.all()
+            subjects = Subject.objects.filter(ProgrammeID__Name__iexact=programme)
 
-        serialized_subjects = SubjectSerializers(subjects, many=True)
+        serialized_subjects = SubjectProgrammeSerializers(subjects, many=True)
         return Response(serialized_subjects.data)
 
 

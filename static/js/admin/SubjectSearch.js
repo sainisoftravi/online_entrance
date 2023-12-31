@@ -15,22 +15,8 @@ function validateForm(){
         error_element.classList.add('show-error');
     }
 
-    else if(type_value == "User"){
-        email_regex = /[a-z0-9]+@[a-z]+[.][a-z]+/i
-
-        if(email_regex.test(search_value)){
-            error_element.classList.remove('show-error');
-        }
-
-        else{
-            success = false;
-            error_element.innerText = 'Invalid Email Address';
-            error_element.classList.add('show-error');
-        }
-    }
-
-    else if(type_value == 'Total Questions To Select'){
-        validator = /^-?[\d.]+(?:e-?\d+)?$/
+    else if(['Total Questions To Select', 'Total Subjects'].includes(type_value)){
+        validator = /^\d+$/
 
         if(validator.test(search_value)){
             error_element.classList.remove('show-error');
@@ -55,15 +41,15 @@ window.addEventListener('load', function() {
     search_by_select.addEventListener('change', function(event){
         value = search_by_select.value;
 
-        if(value == 'Programme Name'){
+        if(value == 'Programme'){
             search_by_input.placeholder = 'BCA, BIT, BIM ...';
         }
 
-        else if(value == 'Subject Name'){
+        else if(value == 'Subject'){
             search_by_input.placeholder = 'English, Math, ...';
         }
 
-        else if(value == 'Total Questions To Select'){
+        else if(['Total Questions To Select', 'Total Subjects'].includes(value)){
             search_by_input.placeholder = 'Any number';
         }
     });

@@ -1,0 +1,26 @@
+{% extends 'admin/nav.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'css/admin/questions-programmes-subjects.css' %}">
+
+    <div class="wrapper">
+        {% include 'admin/search-results-message.html' %}
+
+        {% for programme in data %}
+            <a class="inner-wrapper" href="/{{next___url}}/{{programme.Name}}{% if to_edit %}/edit{% endif %}">
+                <p class="title">{{programme.Name}}</p>
+
+                {% if sub__text %}
+                    {% if programme.TotalQuestions %}
+                        <p class="total-questions">{{sub__text}}{{programme.TotalQuestions}}</p>
+
+                    {% elif programme.TotalQuestionsToSelect %}
+                        <p class="total-questions">{{sub__text}}{{programme.TotalQuestionsToSelect}}</p>
+
+                    {% endif %}
+                {% endif %}
+            </a>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -257,7 +257,7 @@ class SubjectFilter:
     def __init__(self, searching_value):
         self.searching_value = searching_value
 
-    def SearchByProgrammeName(self):
+    def SearchByProgrammeName(self, host, api_url):
         """
         Filter subjects by program name
 
@@ -265,11 +265,26 @@ class SubjectFilter:
             List: A list of subjects matching the specified program name
         """
 
-        programmeID = Programme.objects.filter(Name=self.searching_value).first()
+        programmes = requests.get(f'http://{host}/api/{api_url}').json()
+        programmes = filter(lambda programme: programme['Name'].lower() == self.searching_value.lower(), programmes)
 
-        return Subject.objects.filter(ProgrammeID=programmeID)
+        return list(programmes)
 
-    def SearchBySubjectName(self):
+    def SearchByTotalSubjects(self, host, api_url):
+        """
+        Filter subjects by total number of subjects
+
+        Returns:
+            List: A list of subjects matching the total number of subjects
+        """
+
+        searching_value = int(self.searching_value)
+        programmes = requests.get(f'http://{host}/api/{api_url}').json()
+        programmes = filter(lambda programme: programme['TotalQuestions'] == searching_value, programmes)
+
+        return list(programmes)
+
+    def SearchBySubjectName(self, host, programme):
         """
         Filter subjects by subject name
 
@@ -277,19 +292,12 @@ class SubjectFilter:
             List: A list of subjects matching the specified subject name
         """
 
-        data = []
-        subjects = Subject.objects.all()
-        sub = self.searching_value.lower()
+        subjects = requests.get(f'http://{host}/api/subjects/{programme}').json()
+        subjects = list(filter(lambda subject: subject['Name'].lower() == self.searching_value.lower(), subjects))
 
-        for subject in subjects:
-            subject_name = subject.Name.lower()
+        return subjects
 
-            if sub in subject_name:
-                data.append(subject)
-
-        return data
-
-    def SearchByTotalQuestionsToSelect(self):
+    def SearchByTotalQuestionsToSelect(self, host, programme, api_url):
         """
         Filter subjects by the total number of questions to select
 
@@ -297,7 +305,10 @@ class SubjectFilter:
             List: A list of subjects matching the specified total number of questions to select
         """
 
-        return Subject.objects.filter(TotalQuestionsToSelect=self.searching_value)
+        programmes = requests.get(f'http://{host}/api/{api_url}/{programme}').json()
+        programmes = filter(lambda programme: programme['TotalQuestionsToSelect'] == int(self.searching_value), programmes)
+
+        return list(programmes)
 
 
 class QuestionProgrammeFilter:

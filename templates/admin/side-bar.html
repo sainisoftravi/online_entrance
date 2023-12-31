@@ -37,10 +37,10 @@
     </a>
 
     {% if template_type == 'template::subjects' or template_type == 'template::edit-subject'%}
-        <a class="side-bar-option selected-side-bar-option" href="{% url 'subject-details' %}">
+        <a class="side-bar-option selected-side-bar-option" href="{% url 'subject-programmes-details' %}">
 
     {% else %}
-        <a class="side-bar-option" href="{% url 'subject-details' %}">
+        <a class="side-bar-option" href="{% url 'subject-programmes-details' %}">
 
     {% endif %}
         <i class='bx bxs-book-alt'></i>

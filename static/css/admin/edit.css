@@ -62,15 +62,30 @@ textarea{
     font-family: var(--global-font);
 }
 
-.bottom-button{
+.save-button,
+.delete-button,
+.mark-as-read,
+.marked-as-read{
     width: 30%;
     padding: 10px;
     font-size: 15px;
+    cursor: pointer;
     border-radius: 5px;
     text-align: center;
     border: 1px solid #8f8f9d;
     background-color: #e9e9ed;
     font-family: var(--global-font);
+}
+
+.mark-as-read{
+    width: 20%;
+    color: black;
+}
+
+.marked-as-read{
+    width: 15%;
+    color: black;
+    pointer-events: none;
 }
 
 .upload-profile-image-div{
@@ -156,12 +171,12 @@ input[type=file]::file-selector-button:hover {
     background-color: rgb(204, 53, 26)
 }
 
-a.bottom-button,
-a.bottom-button:visited{
+a.bottom-button{
     color: black;
 }
 
-.bottom-button-fifteen-percent{
+.save-button,
+a.delete-button{
     width: 15%;
 }
 
@@ -173,6 +188,22 @@ a.Marked{
     color: whitesmoke;
     pointer-events: none;
     background-color: darkgreen;
+}
+
+a.delete-button:hover{
+    border: none;
+    cursor: pointer;
+    color: whitesmoke;
+    font-weight: normal;
+    background-color: red;
+}
+
+.deleted-button:read-only{
+    border: none;
+    user-select: none;
+    color: whitesmoke;
+    pointer-events: none;
+    background-color: crimson;
 }
 
 @media screen and (max-width: 600px){
@@ -192,6 +223,11 @@ a.Marked{
     }
 
     .bottom-button-twenty-percent{
+        width: 30%;
+    }
+
+    .save-button,
+    a.delete-button{
         width: 30%;
     }
 }

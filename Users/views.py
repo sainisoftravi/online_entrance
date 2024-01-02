@@ -311,15 +311,28 @@ def Logout(request):
     return redirect('index')
 
 
+def DeleteAccountFromAdmin(request, id):
+    """
+    Handle the deletion of a user account
+    """
+
+    user = CustomUser.objects.get(id=id)
+
+    user.is_active = False
+    user.save()
+
+    messages.success(request, 'User Deleted Successfully', extra_tags='user_delete')
+
+    return redirect('admin-index')
+
+
 def DeleteAccount(request):
     """
     Handle the deletion of a user account
     """
 
-    if request.user.is_superuser:
-        return redirect('admin-index')
-
     user = CustomUser.objects.get(id=request.user.id)
+
     user.is_active = False
     user.save()
 
@@ -1356,6 +1369,7 @@ def EditUsers(request, id):
 
     if request.method == 'POST':
         user.email = request.POST['Email']
+        password = request.POST['password']
         user.FullName = request.POST['full_name']
 
         if user.Gender is not None:
@@ -1363,6 +1377,9 @@ def EditUsers(request, id):
 
         if user.DOB is not None:
             user.DOB = datetime.datetime.strptime(request.POST['DOB'], '%Y-%m-%d').date()
+
+        if password:
+            user.set_password(password)
 
         if 'uploaded-profile-image' in request.FILES:
             user.ProfileImage = request.FILES['uploaded-profile-image']

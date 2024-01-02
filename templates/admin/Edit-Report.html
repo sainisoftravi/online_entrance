@@ -49,10 +49,10 @@
 
             <div class="buttons">
                 {% if data.IsMarked %}
-                    <a href="#" class="Marked bottom-button bottom-button-twenty-percent">Fixed</a>
+                    <a href="#" class="marked-as-read">Fixed</a>
 
                 {% else %}
-                    <a href="{% url 'mark-report' data.ID %}" class="bottom-button bottom-button-twenty-percent">Mark As Fixed</a>
+                    <a href="{% url 'mark-report' data.ID %}" class="mark-as-read">Mark As Fixed</a>
 
                 {% endif %}
             </div>

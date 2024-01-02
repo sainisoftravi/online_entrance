@@ -33,6 +33,7 @@ urlpatterns = [
     path('admin-change-password/', views.AdminChangePassword, name='admin-change-password'),
     path('detailed-exams-search/', views.DetailedExamsSearch, name='detailed-exams-search'),
     path('subjects/<str:programme>/<str:subject>/edit', views.EditSubject, name='edit-subject'),
+    path('delete-account/<str:id>', views.DeleteAccountFromAdmin, name='delete-account-from-admin'),
     path('questions/<str:programme>', views.GetQuestionsPerProgram, name='questions-per-programme'),
     path('exams/<str:user_email>', views.GetUsersExamsProgrammeLists, name='users-exams-programmes'),
     path('question-programme-search/', views.QuestionProgrammeSearch, name='question-programme-search'),

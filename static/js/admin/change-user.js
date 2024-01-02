@@ -36,15 +36,18 @@ function updateImageDisplay() {
 function validateForm(){
     success = true;
     emailRegex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
+    passRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     emailArea = document.getElementById('email');
     dobArea = document.getElementsByName('DOB')[0];
+    newPassword = document.getElementById('password');
     genderArea = document.getElementsByName('Gender')[0];
     memberSinceArea = document.getElementById('Member Since');
 
     dobError = document.querySelector('.DOB-error');
     emailError = document.querySelector('.Email-error');
     genderError = document.querySelector('.Gender-error');
+    newPasswordError = document.querySelector('.password-error');
 
     emailValue = emailArea.value.trim();
     genderValue = genderArea.value.trim();
@@ -80,6 +83,14 @@ function validateForm(){
 
         else{
             genderError.classList.remove('show-error');
+        }
+
+        if(newPassword.value.trim().length > 0){
+            if(!passRegex.test(newPassword.value)){
+                success = false;
+                newPasswordError.classList.add('show-error');
+                newPasswordError.innerText = 'Password must be a combination of letters, numbers, and special characters, with a minimum length of 8 characters';
+            }
         }
 
         currentDate = new Date();

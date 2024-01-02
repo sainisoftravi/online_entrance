@@ -3,111 +3,135 @@
 
 {% block content %}
 
-    <div class="input-groups">
-        <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
-            {% csrf_token %}
+<div class="input-groups">
+    <form action="#" method="POST" enctype="multipart/form-data" id="edit-user-form">
+        {% csrf_token %}
 
-            {% include 'success-message.html' %}
+        {% include 'success-message.html' %}
 
-            <div class="row id-row">
-                <p>{{data.id}}</p>
+        <div class="row id-row">
+            <p>{{data.id}}</p>
+        </div>
+
+        <div class="row">
+            <div class="row-left-container">
+                <label for="full_name">Full Name</label>
             </div>
 
+            <div class="row-right-container">
+                <input type="text" value="{{data.FullName}}" id="full_name" name="full_name">
+                <small class="full-name-error"></small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-left-container">
+                <label for="email">Email</label>
+            </div>
+
+            <div class="row-right-container">
+                <input type="text" id="email" value="{{data.email}}" name="Email" {% if data.is_superuser %}readonly{% endif %}>
+                <small class="email-error"></small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-left-container">
+                <label for="gender">Gender</label>
+            </div>
+
+            <div class="row-right-container">
+                {% if data.is_superuser %}
+                    <input type="text" id="gender" value="-" name="-" readonly>
+
+                {% else %}
+                    <select name="Gender" id="select-gender">
+                        <option value="Male" {% if gender == 'male'%}selected{%endif%}>Male</option>
+                        <option value="Female" {% if gender == 'female'%}selected{%endif%}>Female</option>
+                        <option value="Others" {% if gender == 'others'%}selected{%endif%}>Others</option>
+                    </select>
+                {% endif %}
+
+                <small class="gender-error"></small>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="row-left-container">
+                <label for="dob">DOB</label>
+            </div>
+
+            <div class="row-right-container">
+                <input type="date" value="{{data.DOB}}" name="DOB" id="dob" {% if data.is_superuser %}readonly{% endif %}>
+                <small class="dob-error"></small>
+            </div>
+        </div>
+
+        {% if data.is_superuser is False %}
             <div class="row">
                 <div class="row-left-container">
-                    <label for="full_name">Full Name</label>
+                    <label for="password">New Password</label>
                 </div>
 
-                <div class="row-right-container">
-                    <input type="text" value="{{data.FullName}}" id="full_name" name="full_name">
-                    <small class="full-name-error"></small>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="row-left-container">
-                    <label for="email">Email</label>
-                </div>
-
-                <div class="row-right-container">
-                    <input type="text" id="email" value="{{data.email}}" name="Email" {% if data.is_superuser %}readonly{% endif %}>
-                    <small class="email-error"></small>
+                <div class="row-right-container password-container">
+                    <input type="password" name="password" id="password" placeholder="New Password Here">
+                    <small class="password-error"></small>
                 </div>
             </div>
+        {% endif %}
 
-            <div class="row">
-                <div class="row-left-container">
-                    <label for="gender">Gender</label>
-                </div>
-
-                <div class="row-right-container">
-                    {% if data.is_superuser %}
-                        <input type="text" id="gender" value="-" name="-" readonly>
-
-                    {% else %}
-                        <select name="Gender" id="select-gender">
-                            <option value="Male" {% if gender == 'male'%}selected{%endif%}>Male</option>
-                            <option value="Female" {% if gender == 'female'%}selected{%endif%}>Female</option>
-                            <option value="Others" {% if gender == 'others'%}selected{%endif%}>Others</option>
-                        </select>
-                    {% endif %}
-
-                    <small class="gender-error"></small>
-                </div>
+        <div class="row">
+            <div class="row-left-container">
+                <label for="profileImage">ProfileImage</label>
             </div>
 
-            <div class="row">
-                <div class="row-left-container">
-                    <label for="dob">DOB</label>
-                </div>
-
-                <div class="row-right-container">
-                    <input type="date" value="{{data.DOB}}" name="DOB" id="dob" {% if data.is_superuser %}readonly{% endif %}>
-                    <small class="dob-error"></small>
+            <div class="row-right-container">
+                <div class="upload-profile-image-div">
+                    <img src="{{data.ProfileImage}}" alt="" class="user-image">
+                    <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
+                    <small class="profile-image-error">Invalid image file</small>
                 </div>
             </div>
+        </div>
 
-            <div class="row">
-                <div class="row-left-container">
-                    <label for="profileImage">ProfileImage</label>
-                </div>
-
-                <div class="row-right-container">
-                    <div class="upload-profile-image-div">
-                        <img src="{{data.ProfileImage}}" alt="" class="user-image">
-                        <input type="file" accept="image/*" name="uploaded-profile-image" id="upload-profile-button">
-                        <small class="profile-image-error">Invalid image file</small>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="row-left-container">
+                <label for="memberSince">Member Since</label>
             </div>
 
-            <div class="row">
-                <div class="row-left-container">
-                    <label for="memberSince">Member Since</label>
-                </div>
-
-                <div class="row-right-container">
-                    <input type="input" id="memberSince" value="{{data.MemberSince}}" name="MemberSince" readonly>
-                </div>
-
-                <small class="member-since-error"></small>
+            <div class="row-right-container">
+                <input type="input" id="memberSince" value="{{data.MemberSince}}" name="MemberSince" readonly>
             </div>
 
-            {% if data.0.is_superuser %}
-                <script>
-                    is_superuser = true;
-                </script>
+            <small class="member-since-error"></small>
+        </div>
+
+        {% if data.0.is_superuser %}
+            <script>
+                is_superuser = true;
+            </script>
+
+        {% else %}
+            <script>
+                is_superuser = false;
+            </script>
+
+        {% endif %}
+
+        <script src="{% static 'js/admin/change-user.js' %}"></script>
+
+        <div class="buttons">
+            <button type="submit" class="save-button" onclick="return validateForm()">Save</button>
+
+            {% if data.is_active %}
+                <a href="{% url 'delete-account-from-admin' data.id %}" class="delete-button">Delete</a>
 
             {% else %}
-                <script>
-                    is_superuser = false;
-                </script>
+                <a class="delete-button deleted-button">Deleted</a>
 
             {% endif %}
-
-            <script src="{% static 'js/admin/change-user.js' %}"></script>
-            <button type="submit" class="bottom-button bottom-button-fifteen-percent" onclick="return validateForm()">Save</button>
-        </form>
-    </div>
+        </div>
+    </form>
+</div>
 
 {% endblock %}

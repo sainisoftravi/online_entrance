@@ -270,7 +270,7 @@ i.show-eye{
     }
 
     .row-1{
-        margin-top: 5px;
+        margin-top: 20px;
     }
 
     .left-text{
@@ -302,5 +302,14 @@ i.show-eye{
     #change-password-btn{
         padding: 15px;
         font-size: 15px;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .row-1,
+    .row-2,
+    .row-3{
+        width: 95%;
     }
 }

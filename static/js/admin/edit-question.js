@@ -126,15 +126,7 @@ function onProgrammeChange(){
         subject_element.remove(0);
     }
 
-    newOption = document.createElement('option');
-    newOption.text = 'Select Subjects';
-    subject_element.add(newOption);
-
     if(program_element != "Select Programme"){
-        if(default_element){
-            default_element.remove();
-        }
-
         subjects = select_options[program_element];
 
         for(subject of subjects){

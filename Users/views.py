@@ -1458,7 +1458,7 @@ def AddQuestion(request):
         question.OptionFour = request.POST['Option Four']
 
         question.save()
-        messages.success(request, 'Question Added Successful')
+        messages.success(request, 'Question Added Successful', extra_tags='question_added')
 
         return redirect('add-question')
 

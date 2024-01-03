@@ -3,6 +3,7 @@
 
 {% block content %}
     <script src="{% static 'js/admin/edit-question.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/admin/add-edit-questions.css' %}">
 
     <div class="input-groups">
         {% if data.0.SelectOptions %}
@@ -10,6 +11,13 @@
                 select_options = JSON.parse('{{data.0.SelectOptions|escapejs}}');
             </script>
         {% endif %}
+
+        {% for message in messages %}
+            {% if 'question_added' in message.extra_tags %}
+                {% include 'success-message.html' %}
+            {% endif %}
+
+        {% endfor %}
 
         <form onsubmit="return validateForm();" action="#" method="POST">
             {% csrf_token %}
@@ -23,7 +31,7 @@
 
                         <div class="row-right-container">
                             <select name="Programme" class="selection-select" id="programme-select" onchange="onProgrammeChange()">
-                                <option id="programme-default">Select Programme</option>
+                                <option id="programme-default" selected disabled hidden>Select Programme</option>
                             </select>
                             <small class="programme-error">Must select any programme</small>
                         </div>
@@ -36,7 +44,7 @@
 
                         <div class="row-right-container">
                             <select name="Subject" class="selection-select" id="subject-select" onchange="onSubjectChange()">
-                                <option id="subject-default">Select Subject</option>
+                                <option id="subject-default" selected disabled hidden>Select Subject</option>
                             </select>
                             <small class="subject-error">Must select any subject</small>
                         </div>
@@ -74,10 +82,10 @@
             {% endfor %}
 
             <div class="buttons">
-                <button type="submit" class="bottom-button bottom-button-fifteen-percent">Save</button>
+                <button type="submit" class="save-button">Save</button>
 
                 {% if template_type == "template::edit-question" %}
-                    <a href="{% url 'delete-question' data.0.ID %}" class="bottom-button bottom-button-fifteen-percent">Delete</a>
+                    <a href="{% url 'delete-question' data.0.ID %}" class="save-button">Delete</a>
                 {% endif %}
 
             </div>

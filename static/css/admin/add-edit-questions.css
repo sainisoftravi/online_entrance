@@ -1,0 +1,15 @@
+.input-groups{
+    display: flex;
+    flex-direction: column;
+}
+
+.success-message-div{
+    width: 60%;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 600px){
+    .success-message-div{
+        width: 95%;
+    }
+}

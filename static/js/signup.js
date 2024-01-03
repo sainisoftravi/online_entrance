@@ -78,7 +78,7 @@ function updateImageDisplay() {
 
 function validateForm(){
     success = true;
-    email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
+    email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
     password_regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
     dob_day = document.querySelector('#dob-day');
@@ -110,13 +110,7 @@ function validateForm(){
         fullNameError.classList.remove('show-error');
     }
 
-    if(email.indexOf('@') != -1 && email.indexOf(' ') != -1){
-        success = false;
-        email_error.classList.add('show-error');
-        email_error.innerText = 'Email must not contain spaces(s)';
-    }
-
-    else if(email_regex.test(email) === false){
+    if(!email_regex.test(email)){
         success = false;
         email_error.classList.add('show-error');
         email_error.innerText = "Invalid Email";

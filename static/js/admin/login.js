@@ -1,6 +1,6 @@
 function validateForm(){
     success = true;
-    email_regex = /[a-z0-9]+@[a-z]+[.][a-z]/i;
+    email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
 
     emailValue = document.getElementsByName('email')[0].value.trim();
     passwordValue = document.getElementsByName('new_password1')[0].value.trim();

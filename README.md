@@ -6,7 +6,9 @@ Online Entrance Preparation System is a 4th Semester / 2nd year University Proje
 
 The online entrance preparation system includes practice questions, mock tests, and interactive quizzes aligned with popular exam syllabuses. It adopts a personalized learning approach, enabling students to identify strengths and weaknesses for targeted improvements. The platform also facilitates online access for self-paced study, fostering an engaging learning environment to maximize potential and boost confidence for entrance exams."
 
-## Installation
+## Getting Started
+
+If you are new to the project, here are some initial steps to get started:
 
 **1. Clone the project**
 
